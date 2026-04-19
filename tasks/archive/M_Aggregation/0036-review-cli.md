@@ -2,7 +2,7 @@
 id: "0036"
 title: "Implement scripts/review.ts (human review CLI for flagged_for_review)"
 type: task
-status: open
+status: done
 priority: high
 created: 2026-04-19
 milestone: M_Aggregation

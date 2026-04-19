@@ -17,6 +17,7 @@
     "consolidate": "tsx scripts/consolidate.ts",
     "analyze": "tsx scripts/analyze.ts",
     "aggregate": "tsx scripts/aggregate.ts",
+    "review": "tsx scripts/review.ts",
     "publish": "tsx scripts/publish.ts",
     "scaffold-candidate": "tsx scripts/scaffold-candidate.ts"
   },
