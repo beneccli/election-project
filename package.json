@@ -1,0 +1,44 @@
+{
+  "name": "election-2027",
+  "version": "0.1.0",
+  "description": "Transparent multi-AI analysis of French presidential candidate programs",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:schema": "vitest run --reporter=verbose -t schema",
+    "test:pipeline": "vitest run --config vitest.integration.config.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "consolidate": "tsx scripts/consolidate.ts",
+    "analyze": "tsx scripts/analyze.ts",
+    "aggregate": "tsx scripts/aggregate.ts",
+    "review": "tsx scripts/review.ts",
+    "publish": "tsx scripts/publish.ts",
+    "diff": "tsx scripts/diff.ts",
+    "scaffold-candidate": "tsx scripts/scaffold-candidate.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "@google/generative-ai": "^0.24.1",
+    "@mistralai/mistralai": "^2.2.0",
+    "commander": "^13.1.0",
+    "openai": "^6.34.0",
+    "pino": "^9.6.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.25.0",
+    "pino-pretty": "^13.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.30.0",
+    "vitest": "^3.1.0"
+  }
+}
