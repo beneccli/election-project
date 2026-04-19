@@ -10,6 +10,7 @@ import { SyntheseSection } from "@/components/sections/SyntheseSection";
 import { PositionnementSection } from "@/components/sections/PositionnementSection";
 import { DomainesSection } from "@/components/sections/DomainesSection";
 import { IntergenSection } from "@/components/sections/IntergenSection";
+import { RisquesSection } from "@/components/sections/RisquesSection";
 
 interface RouteParams {
   params: Promise<{ id: string }>;
@@ -51,25 +52,9 @@ export default async function CandidatePage({ params }: RouteParams) {
         <PositionnementSection aggregated={aggregated} />
         <DomainesSection aggregated={aggregated} />
         <IntergenSection aggregated={aggregated} />
-        <SectionPlaceholder id="risques" title="Risques" />
+        <RisquesSection aggregated={aggregated} />
       </main>
       <TransparencyFooter versionMeta={versionMeta} />
     </>
-  );
-}
-
-function SectionPlaceholder({ id, title }: { id: string; title: string }) {
-  return (
-    <section
-      id={id}
-      className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] py-14"
-    >
-      <h2 className="mb-4 font-display text-3xl font-bold tracking-[-0.01em] text-text">
-        {title}
-      </h2>
-      <p className="text-sm text-text-secondary">
-        Section en construction.
-      </p>
-    </section>
   );
 }
