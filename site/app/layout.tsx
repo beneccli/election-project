@@ -2,6 +2,8 @@
 import type { ReactNode } from "react";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { ThemeToggle } from "../components/chrome/ThemeToggle";
+import { LanguageToggle } from "../components/chrome/LanguageToggle";
+import { LangProvider } from "../lib/lang-context";
 import { THEME_INIT_SCRIPT } from "../lib/theme-init";
 import "../styles/globals.css";
 
@@ -37,10 +39,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="bg-bg text-text font-sans">
-        <header className="flex items-center justify-end border-b border-rule px-6 py-2">
-          <ThemeToggle />
-        </header>
-        {children}
+        <LangProvider>
+          <header className="flex items-center justify-end gap-3 border-b border-rule px-6 py-2">
+            <LanguageToggle />
+            <ThemeToggle />
+          </header>
+          {children}
+        </LangProvider>
       </body>
     </html>
   );
