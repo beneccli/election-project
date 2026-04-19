@@ -45,7 +45,7 @@ Format: `M_<FeatureCluster>`
 |-----------|--------|-------------|
 | M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
 | M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
-| M_AnalysisPrompts | 📋 Planned (spike needed) | The analysis prompt, schema, adversarial pass |
+| M_AnalysisPrompts | � In progress | The analysis prompt, schema, inline adversarial pass |
 | M_Aggregation | 📋 Planned (spike needed) | Aggregator prompt, agreement_map, dissent preservation |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
 
@@ -141,22 +141,39 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_DataPipeline
 
+**Status:** 🚧 In progress. Spike `0020` archived 2026-04-19. Six backlog tasks (`0021`–`0026`) queued in `tasks/backlog/M_AnalysisPrompts/`.
+
 **Spike produces:**
-- `docs/specs/analysis/analysis-prompt.md` (prompt design)
-- `docs/specs/analysis/output-schema.md` (Zod schema and JSON structure)
-- `docs/specs/analysis/political-positioning.md`
-- `docs/specs/analysis/intergenerational-audit.md`
-- `docs/specs/analysis/dimensions.md`
-- Actual prompt file in `prompts/analyze-candidate.md`
-- Actual schema in `scripts/lib/schema.ts`
-- Adversarial pass prompt in `prompts/adversarial-pass.md`
+- `docs/specs/analysis/analysis-prompt.md` (prompt design) — promoted Draft → **Stable** via task `0021`
+- `docs/specs/analysis/output-schema.md` (Zod schema and JSON structure) — promoted Draft → **Stable** via task `0021`
+- `docs/specs/analysis/political-positioning.md` — promoted Draft → **Stable** via task `0021`
+- `docs/specs/analysis/intergenerational-audit.md` — promoted Draft → **Stable** via task `0021`
+- `docs/specs/analysis/dimensions.md` — promoted Draft → **Stable** via task `0021`
+- Actual prompt file in `prompts/analyze-candidate.md` — task `0023`
+- Actual schema in `scripts/lib/schema.ts` — task `0022`
+- Adversarial pass **inlined as §8 of `prompts/analyze-candidate.md`** (see spike decision Q1; no separate `adversarial-pass.md` in v1)
 
 **Non-negotiables:**
 - Single prompt per candidate (not multi-turn)
 - Structured JSON output
 - Every claim has evidence citations back to `sources.md`
 - Self-confidence scores per section
-- Adversarial pass included
+- Adversarial pass included (inline)
+
+**Key design decisions (spike `0020`):**
+- Adversarial pass is inline in the main call (Q1) — revisit if quality suffers
+- Schema-retry count: 2 (3 total attempts), persistent failure → `<model>.FAILED.json`
+- Positioning scores: integers only in `[-5, +5]`, never cardinally averaged
+- Fixed anchor set of 4 figures/parties per axis, shared across all candidates
+- Intergenerational horizon: 2027–2047 central
+- Temperature 0, single-shot (no clarification requests)
+- Grades reflect coherence + evidence-support, not ideology
+
+**Scope boundary (what this milestone does NOT cover):**
+- Aggregation across models (→ M_Aggregation)
+- Separate second-call adversarial pass (deferred; may revisit after first real run)
+- Live candidate data / actual runs (→ M_FirstCandidate)
+- Website rendering of analysis output (→ M_WebsiteCore)
 
 ---
 
