@@ -54,7 +54,7 @@ export default async function CandidatePage({ params }: RouteParams) {
         <IntergenSection aggregated={aggregated} />
         <RisquesSection aggregated={aggregated} />
       </main>
-      <TransparencyFooter versionMeta={versionMeta} />
+      <TransparencyFooter id={id} versionMeta={versionMeta} />
     </>
   );
 }
