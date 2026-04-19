@@ -2,7 +2,7 @@
 id: "0035"
 title: "Prompt-contract tests for prompts/aggregate-analyses.md"
 type: task
-status: open
+status: done
 priority: medium
 created: 2026-04-19
 milestone: M_Aggregation
