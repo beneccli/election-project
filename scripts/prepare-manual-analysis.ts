@@ -9,13 +9,31 @@
  */
 import { Command } from "commander";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { createLogger } from "./lib/logger";
 import { hashString } from "./lib/hash";
 import * as paths from "./lib/paths";
 import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "prepare-manual-analysis" });
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+/**
+ * Load the valid-full analysis fixture as a pretty-printed JSON string.
+ * The fixture is resolved relative to this script so it works regardless
+ * of where the CLI is invoked from.
+ */
+async function loadReferenceExample(): Promise<string> {
+  const fixturePath = resolve(
+    __dirname,
+    "lib/fixtures/analysis-output/valid-full.json",
+  );
+  const raw = await readFile(fixturePath, "utf-8");
+  // Reparse + reserialize to normalize whitespace and catch accidental drift.
+  return JSON.stringify(JSON.parse(raw), null, 2);
+}
 
 export interface PrepareManualAnalysisOptions {
   candidate: string;
@@ -37,9 +55,10 @@ export function buildBundle(opts: {
   promptSha256: string;
   sourcesMd: string;
   generatedAt: string;
+  referenceExampleJson?: string;
 }): string {
   const divider = "=".repeat(60);
-  return [
+  const base = [
     divider,
     "ÉLECTION 2027 — ANALYSIS PROMPT BUNDLE",
     `Generated: ${opts.generatedAt}`,
@@ -57,6 +76,23 @@ export function buildBundle(opts: {
     "JSON structure described — no commentary, no markdown fences, no",
     "prefatory text.",
     "",
+    "IMPORTANT — the 'Compact shape' in the prompt is a summary, not the",
+    "full schema. The REFERENCE EXAMPLE appended at the end of this bundle",
+    "shows every required field, including the exact shape of nested",
+    "objects in `dimensions.*.problems_addressed[]` (objects, not strings),",
+    "`intergenerational.magnitude_estimate` (object with",
+    "`value`/`units`/`confidence`/`caveats`),",
+    "`intergenerational.impact_on_25yo_in_2027` / `impact_on_65yo_in_2027`",
+    "(objects with per-theme cells + `narrative_summary`),",
+    "`unsolved_problems[]` (keys: `problem`, `why_unsolved`,",
+    "`severity_if_unsolved`, `source_refs`, `reasoning`, `confidence`),",
+    "and `downside_scenarios[]` (keys: `scenario`, `trigger`, `probability`,",
+    "`severity`, `reasoning`, `source_refs`, `confidence`).",
+    "",
+    "Match the REFERENCE EXAMPLE's structure EXACTLY. Your values must",
+    "be grounded in the candidate's sources.md below — do not copy the",
+    "example's content.",
+    "",
     divider,
     `PROMPT (verbatim from ${opts.promptPath})`,
     divider,
@@ -69,11 +105,31 @@ export function buildBundle(opts: {
     "",
     opts.sourcesMd,
     "",
+  ];
+
+  if (opts.referenceExampleJson) {
+    base.push(
+      divider,
+      "REFERENCE EXAMPLE — valid output shape",
+      divider,
+      "",
+      "The following JSON validates against AnalysisOutputSchema. Use it as",
+      "a structural template. Replace every value with analysis of THIS",
+      "candidate's program — do not reuse the example's content. Keep the",
+      "same keys and the same nesting.",
+      "",
+      opts.referenceExampleJson,
+      "",
+    );
+  }
+
+  base.push(
     divider,
     "END OF BUNDLE — return JSON only",
     divider,
     "",
-  ].join("\n");
+  );
+  return base.join("\n");
 }
 
 const README_TEMPLATE = (candidate: string, version: string, promptSha256: string) =>
@@ -204,6 +260,14 @@ export async function prepareManualAnalysis(
   const promptBody = stripFrontmatter(promptRaw);
   const sourcesMd = await readFile(sourcesPath, "utf-8");
 
+  // Load the valid-full fixture as a REFERENCE EXAMPLE so chat models
+  // see the exact nested shape (dimensions.*.problems_addressed[] as
+  // objects, intergenerational.magnitude_estimate as an object, etc.).
+  // The canonical prompt's "Compact shape" is too lossy on its own.
+  // This does not modify the canonical prompt hash — it only enriches
+  // the manual-webchat wrapper.
+  const referenceExampleJson = await loadReferenceExample();
+
   const bundle = buildBundle({
     candidate,
     version,
@@ -212,6 +276,7 @@ export async function prepareManualAnalysis(
     promptSha256,
     sourcesMd,
     generatedAt: new Date().toISOString(),
+    referenceExampleJson,
   });
 
   await mkdir(bundleDir, { recursive: true });

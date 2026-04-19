@@ -84,20 +84,28 @@ mv candidates/test-omega/versions/2027-11-01/sources.md.draft \
 
 ## 3. Analyze — two models via manual webchat
 
-For each of your two chat UIs, bundle the analysis prompt + sources:
+Generate the copy-pasteable bundle once — it is model-agnostic and
+reusable across every chat UI you drive:
 
 ```bash
 npm run prepare-manual-analysis -- \
   --candidate test-omega \
-  --version 2027-11-01 \
-  --model claude-manual \
-  --out _manual/claude-omega.md
+  --version 2027-11-01
 ```
 
-Paste the bundle content into the web chat. Ask for the reply as a
-single JSON object. Save the reply to `_manual/claude-omega.json`
-(strip code fences if your chat UI adds them — `ingest-raw-output`
-handles fenced output too).
+This writes `candidates/test-omega/versions/2027-11-01/_manual/`
+containing:
+
+- `prompt-bundle.txt` — the full prompt + `sources.md` + a valid
+  reference example showing the exact schema shape.
+- `sources.md` — a copy, in case your UI prefers file attachments.
+- `README.md` — per-UI paste instructions (ChatGPT, Claude.ai, Gemini).
+- `expected-filenames.txt` — suggested raw-output slugs.
+
+For each of your two web-chat models: paste `prompt-bundle.txt` into
+the chat UI, ask for the reply as a single JSON object, save the reply
+to e.g. `_manual/claude-omega.json` (the ingest script strips a single
+layer of ` ```json ` fences automatically).
 
 Ingest it:
 
@@ -109,10 +117,16 @@ npm run ingest-raw-output -- \
   --mode manual-webchat \
   --attested-version claude-opus-4-1-20250514 \
   --attested-by "$(whoami)" \
-  --file _manual/claude-omega.json
+  --file candidates/test-omega/versions/2027-11-01/_manual/claude-omega.json
 ```
 
 Repeat for your second web-chat model (e.g. `gpt-manual`).
+
+> **If ingest fails with schema validation errors**, the chat model did
+> not match the reference example structure. Re-run the prompt in the
+> chat, point the model at the `REFERENCE EXAMPLE` section of the bundle,
+> and ask for strict JSON matching its keys exactly. Do **not** hand-edit
+> the output file.
 
 `_manual/` is gitignored — nothing leaks.
 
@@ -150,9 +164,11 @@ Bundle the aggregation prompt + the three raw outputs:
 ```bash
 npm run prepare-manual-aggregation -- \
   --candidate test-omega \
-  --version 2027-11-01 \
-  --out _manual-aggregation/omega-bundle.md
+  --version 2027-11-01
 ```
+
+This writes
+`candidates/test-omega/versions/2027-11-01/_manual-aggregation/bundle.txt`.
 
 Run the prompt file `.github/prompts/aggregate-analyses-via-copilot.prompt.md`
 in Copilot. It will produce `aggregated.draft.json`. Then ingest:

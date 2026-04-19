@@ -174,6 +174,44 @@ describe("prepareManualAnalysis", () => {
     expect(expected).toContain("claude-opus");
   });
 
+  test("bundle_embeds_valid_reference_example_matching_schema", async () => {
+    // Regression: chat models could not infer the nested schema (arrays of
+    // objects for problems_*, object-shaped magnitude_estimate, etc.) from
+    // the prompt's "Compact shape" alone. The bundle now appends the
+    // valid-full fixture as a REFERENCE EXAMPLE.
+    const { AnalysisOutputSchema } = await import("./lib/schema");
+
+    await scaffoldTempProject({
+      candidate: "test-gamma",
+      version: "2027-03-01",
+    });
+
+    const { bundlePath } = await prepareManualAnalysis({
+      candidate: "test-gamma",
+      version: "2027-03-01",
+    });
+    const bundle = await readFile(bundlePath, "utf-8");
+
+    expect(bundle).toContain("REFERENCE EXAMPLE");
+    expect(bundle).toContain("problems_addressed");
+    expect(bundle).toContain("magnitude_estimate");
+    expect(bundle).toContain("unsolved_problems");
+    expect(bundle).toContain("downside_scenarios");
+
+    // Extract the JSON example and assert it validates. This is what
+    // makes the test a true regression guard: if the fixture drifts
+    // from the schema, this test fails.
+    const marker = "REFERENCE EXAMPLE — valid output shape";
+    const idx = bundle.indexOf(marker);
+    expect(idx).toBeGreaterThan(0);
+    const after = bundle.slice(idx);
+    const jsonStart = after.indexOf("{");
+    const jsonEnd = after.lastIndexOf("}");
+    const jsonText = after.slice(jsonStart, jsonEnd + 1);
+    const parsed = JSON.parse(jsonText);
+    expect(() => AnalysisOutputSchema.parse(parsed)).not.toThrow();
+  });
+
   test("refuses_overwrite_without_force", async () => {
     await scaffoldTempProject({
       candidate: "test-beta",
