@@ -233,6 +233,8 @@ export async function aggregate(opts: AggregateOptions): Promise<void> {
       provider: provider.id,
       exact_version: result.model,
       run_at: new Date().toISOString(),
+      execution_mode: "api",
+      provider_metadata_available: true,
     },
     human_review_completed: false,
   };

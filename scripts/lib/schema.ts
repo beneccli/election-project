@@ -41,6 +41,13 @@ export const CandidateMetadataSchema = z.object({
   official_website: z.string().url().optional(),
   created: isoDateString,
   updated: isoDateString,
+  /**
+   * When true, this candidate is a synthetic test candidate (see
+   * docs/specs/data-pipeline/analysis-modes.md "Test-candidate
+   * scaffolding"). Publish refuses such candidates unless
+   * `--allow-fictional` is passed. Absence means false.
+   */
+  is_fictional: z.boolean().optional(),
 });
 
 export type CandidateMetadata = z.infer<typeof CandidateMetadataSchema>;
@@ -61,23 +68,133 @@ export const SourceMetaSchema = z.object({
 export type SourceMeta = z.infer<typeof SourceMetaSchema>;
 
 // ---------------------------------------------------------------------------
-// VersionMetadataSchema — versions/<date>/metadata.json
-// See docs/specs/candidates/repository-structure.md
+// Execution modes (see docs/specs/data-pipeline/analysis-modes.md)
 // ---------------------------------------------------------------------------
 
-const ModelRunEntrySchema = z.object({
-  provider: z.string().min(1),
-  exact_version: z.string().min(1),
-  temperature: z.number().min(0).max(2),
-  run_at: isoDatetime,
-  tokens_in: z.number().int().nonnegative(),
-  tokens_out: z.number().int().nonnegative(),
-  cost_estimate_usd: z.number().nonnegative(),
-  duration_ms: z.number().int().nonnegative().optional(),
-  status: z.enum(["success", "failed"]),
-});
+export const ExecutionModeSchema = z.enum([
+  "api",
+  "manual-webchat",
+  "copilot-agent",
+]);
+
+export type ExecutionMode = z.infer<typeof ExecutionModeSchema>;
+
+// ---------------------------------------------------------------------------
+// VersionMetadataSchema — versions/<date>/metadata.json
+// See docs/specs/candidates/repository-structure.md
+// See docs/specs/data-pipeline/analysis-modes.md (execution_mode fields)
+// ---------------------------------------------------------------------------
+
+const ModelRunEntrySchema = z
+  .object({
+    provider: z.string().min(1),
+    exact_version: z.string().min(1),
+    temperature: z.number().min(0).max(2),
+    run_at: isoDatetime,
+    tokens_in: z.number().int().nonnegative().optional(),
+    tokens_out: z.number().int().nonnegative().optional(),
+    cost_estimate_usd: z.number().nonnegative().optional(),
+    duration_ms: z.number().int().nonnegative().optional(),
+    status: z.enum(["success", "failed"]),
+    execution_mode: ExecutionModeSchema,
+    attested_by: z.string().min(1).optional(),
+    attested_model_version: z.string().min(1).optional(),
+    provider_metadata_available: z.boolean(),
+  })
+  .superRefine((entry, ctx) => {
+    // Non-api rows require attestation of who ran the model and what
+    // model version they claim. See analysis-modes.md §2.
+    if (entry.execution_mode !== "api") {
+      if (!entry.attested_by) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["attested_by"],
+          message: `attested_by is required when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+      if (!entry.attested_model_version) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["attested_model_version"],
+          message: `attested_model_version is required when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+      if (entry.provider_metadata_available) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["provider_metadata_available"],
+          message: `provider_metadata_available must be false when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+    }
+    // api rows must have provider metadata available AND the numeric
+    // provider-reported fields required for cost tracking.
+    if (entry.execution_mode === "api") {
+      if (!entry.provider_metadata_available) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["provider_metadata_available"],
+          message: "provider_metadata_available must be true for api mode",
+        });
+      }
+      for (const field of ["tokens_in", "tokens_out", "cost_estimate_usd"] as const) {
+        if (entry[field] === undefined) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: [field],
+            message: `${field} is required for api mode`,
+          });
+        }
+      }
+    }
+  });
 
 export type ModelRunEntry = z.infer<typeof ModelRunEntrySchema>;
+
+const AggregatorModelSchema = z
+  .object({
+    provider: z.string().min(1),
+    exact_version: z.string().min(1),
+    run_at: isoDatetime,
+    execution_mode: ExecutionModeSchema,
+    attested_by: z.string().min(1).optional(),
+    attested_model_version: z.string().min(1).optional(),
+    provider_metadata_available: z.boolean(),
+  })
+  .superRefine((entry, ctx) => {
+    if (entry.execution_mode !== "api") {
+      if (!entry.attested_by) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["attested_by"],
+          message: `attested_by is required when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+      if (!entry.attested_model_version) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["attested_model_version"],
+          message: `attested_model_version is required when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+      if (entry.provider_metadata_available) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["provider_metadata_available"],
+          message: `provider_metadata_available must be false when execution_mode is "${entry.execution_mode}"`,
+        });
+      }
+    }
+    if (entry.execution_mode === "api" && !entry.provider_metadata_available) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["provider_metadata_available"],
+        message: "provider_metadata_available must be true for api mode",
+      });
+    }
+  });
+
+export type AggregatorModel = z.infer<typeof AggregatorModelSchema>;
 
 export const VersionMetadataSchema = z.object({
   candidate_id: z.string().regex(candidateIdPattern),
@@ -106,11 +223,7 @@ export const VersionMetadataSchema = z.object({
       prompt_file: z.string().min(1),
       prompt_sha256: z.string().regex(sha256Pattern),
       prompt_version: z.string().min(1),
-      aggregator_model: z.object({
-        provider: z.string().min(1),
-        exact_version: z.string().min(1),
-        run_at: isoDatetime,
-      }),
+      aggregator_model: AggregatorModelSchema,
       human_review_completed: z.boolean(),
       reviewer: z.string().optional(),
       reviewed_at: isoDatetime.optional(),

@@ -244,6 +244,8 @@ export async function analyze(opts: AnalyzeOptions): Promise<ModelRunResult[]> {
       duration_ms: r.durationMs ?? 0,
       status: r.status,
       run_at: new Date().toISOString(),
+      execution_mode: "api",
+      provider_metadata_available: true,
     };
   }
 

@@ -215,6 +215,8 @@ describe("review — end-to-end with filesystem", () => {
             provider: "anthropic",
             exact_version: "claude-opus-4-0-20250514",
             run_at: new Date().toISOString(),
+            execution_mode: "api",
+            provider_metadata_available: true,
           },
           human_review_completed: false,
         },
