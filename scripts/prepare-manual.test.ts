@@ -210,6 +210,27 @@ describe("prepareManualAnalysis", () => {
     const jsonText = after.slice(jsonStart, jsonEnd + 1);
     const parsed = JSON.parse(jsonText);
     expect(() => AnalysisOutputSchema.parse(parsed)).not.toThrow();
+
+    // Regression: the prose guidance MUST list only fields that exist in
+    // the raw analysis schema (not the aggregated extension). Previously
+    // it advertised `reasoning`/`confidence` on `unsolved_problems` and
+    // `source_refs`/`confidence` on `downside_scenarios`, which caused
+    // chat models to emit extra keys that the strict schema rejected.
+    // Restrict to the INSTRUCTIONS block (before the PROMPT divider) so
+    // we don't match on the canonical prompt or sources.md content.
+    const promptDivider = bundle.indexOf("PROMPT (verbatim from");
+    expect(promptDivider).toBeGreaterThan(0);
+    const instructionSlice = bundle.slice(0, promptDivider);
+    const downsideStart = instructionSlice.indexOf("`downside_scenarios[]`");
+    expect(downsideStart).toBeGreaterThan(0);
+    const unsolvedStart = instructionSlice.indexOf("`unsolved_problems[]`");
+    expect(unsolvedStart).toBeGreaterThan(0);
+    const unsolvedBlock = instructionSlice.slice(unsolvedStart, downsideStart);
+    const downsideBlock = instructionSlice.slice(downsideStart);
+    expect(unsolvedBlock).not.toMatch(/`reasoning`/);
+    expect(unsolvedBlock).not.toMatch(/`confidence`/);
+    expect(downsideBlock).not.toMatch(/`source_refs`/);
+    expect(downsideBlock).not.toMatch(/`confidence`/);
   });
 
   test("refuses_overwrite_without_force", async () => {
