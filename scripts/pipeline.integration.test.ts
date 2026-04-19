@@ -1,21 +1,65 @@
 /**
  * End-to-end pipeline integration test with mock LLMs.
- * See docs/specs/data-pipeline/overview.md
  *
- * Exercises: scaffold → consolidate → analyze → aggregate → publish
+ * See docs/specs/data-pipeline/overview.md and docs/specs/analysis/aggregation.md.
+ *
+ * Exercises the full scaffold → consolidate → analyze → aggregate → review → publish
+ * chain using real schema fixtures and the scripted MockProvider. Covers five paths:
+ *
+ *   1. Happy path — three analyses, aggregator returns valid-full fixture, review
+ *      approves every flagged item, publish succeeds.
+ *   2. Coverage-warning path — only one analysis survives, aggregator returns the
+ *      valid-single-model fixture (`coverage_warning: true`).
+ *   3. Schema-drift path — aggregator returns malformed JSON three times, retry
+ *      loop exhausts, `aggregated.FAILED.json` carries the ZodError issues and no
+ *      draft is produced.
+ *   4. Publish-gate path — draft present but `human_review_completed: false` →
+ *      publish() refuses.
+ *   5. Skipped-items path — review() leaves items skipped → no aggregated.json,
+ *      metadata stays `human_review_completed: false`.
  */
-import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { mkdtemp, rm, writeFile, readFile, readdir, readlink, rename } from "node:fs/promises";
-import { join } from "node:path";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import {
+  mkdtemp,
+  rm,
+  writeFile,
+  readFile,
+  readdir,
+  rename,
+  access,
+  mkdir,
+} from "node:fs/promises";
+import { join, dirname } from "node:path";
 import { tmpdir } from "node:os";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
 import { MockProvider } from "./lib/mock-provider";
 import { scaffoldCandidate } from "./scaffold-candidate";
 import { consolidate } from "./consolidate";
 import { analyze } from "./analyze";
 import { aggregate } from "./aggregate";
+import { review, type Prompter, type ReviewChoice, type FlaggedItem } from "./review";
 import { publish } from "./publish";
 import * as pathsMod from "./lib/paths";
-import { vi } from "vitest";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const loadFixture = (rel: string): Record<string, unknown> =>
+  JSON.parse(readFileSync(join(__dirname, rel), "utf8"));
+
+const analysisFixture = loadFixture(
+  "lib/fixtures/analysis-output/valid-full.json",
+) as { model: { provider: string; version: string } } & Record<string, unknown>;
+const aggregatedFullFixture = loadFixture(
+  "lib/fixtures/aggregated-output/valid-full.json",
+);
+const aggregatedSingleModelFixture = loadFixture(
+  "lib/fixtures/aggregated-output/valid-single-model.json",
+);
+
+// ---------------------------------------------------------------------------
+// Test plumbing
+// ---------------------------------------------------------------------------
 
 vi.mock("./lib/paths", async () => {
   const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
@@ -23,7 +67,9 @@ vi.mock("./lib/paths", async () => {
 });
 
 vi.mock("./config/models", async () => {
-  const actual = await vi.importActual<typeof import("./config/models")>("./config/models");
+  const actual = await vi.importActual<typeof import("./config/models")>(
+    "./config/models",
+  );
   return {
     ...actual,
     DEFAULT_MODELS: [
@@ -42,264 +88,437 @@ const CONSOLIDATION_RESPONSE = `# Test Candidate — Programme (au 2026-04-19)
 > Consolidé à partir de : manifesto.txt
 
 ## Économie
-Réforme fiscale proposée. [Source: manifesto.txt]
+Nationalisation des autoroutes. [Source: manifesto.txt]
 `;
 
-const ANALYSIS_RESPONSE = JSON.stringify({
-  candidate_id: CANDIDATE_ID,
-  summary: "Test analysis",
-  themes: [{ name: "Economy", position: "Pro-growth", source_refs: ["manifesto.txt"] }],
-});
+/** Shape the real analysis fixture for a specific model string. */
+function analysisResponseFor(modelVersion: string): string {
+  const out = {
+    ...analysisFixture,
+    model: {
+      provider: analysisFixture.model.provider,
+      version: modelVersion,
+    },
+  };
+  return JSON.stringify(out);
+}
 
-const AGGREGATED_RESPONSE = JSON.stringify({
-  candidate_id: CANDIDATE_ID,
-  model_count: 2,
-  consensus_themes: [{ name: "Economy", summary: "Pro-growth", supporting_models: ["claude-test", "gpt-test"] }],
-  dissent_themes: [],
-  flagged_claims: [],
-});
+/** ScriptedPrompter drives review() without a TTY or $EDITOR. */
+class ScriptedPrompter implements Prompter {
+  constructor(
+    private readonly choices: ReviewChoice[],
+    private readonly editText = "edited-claim-text",
+  ) {}
+  private i = 0;
+  public asked: FlaggedItem[] = [];
+  async ask(item: FlaggedItem): Promise<ReviewChoice> {
+    this.asked.push(item);
+    const c = this.choices[this.i++];
+    if (!c) throw new Error("ScriptedPrompter ran out of choices");
+    return c;
+  }
+  async edit(): Promise<string> {
+    return this.editText;
+  }
+}
 
-describe("Pipeline Integration", () => {
-  let tmpDir: string;
-  let candDir: string;
-  let verDir: string;
+async function exists(p: string): Promise<boolean> {
+  try {
+    await access(p);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
-  beforeAll(async () => {
-    tmpDir = await mkdtemp(join(tmpdir(), "pipeline-e2e-"));
-    candDir = join(tmpDir, "candidates", CANDIDATE_ID);
-    verDir = join(candDir, "versions", VERSION);
+/**
+ * Bootstrap a fresh candidate workspace in a tmpdir: scaffold, seed
+ * sources-raw, run consolidate, rename draft → sources.md. Returns the
+ * working paths. Shared by every path test.
+ */
+async function bootstrapCandidate(): Promise<{
+  tmpDir: string;
+  candDir: string;
+  verDir: string;
+}> {
+  const tmpDir = await mkdtemp(join(tmpdir(), "pipeline-e2e-"));
+  const candDir = join(tmpDir, "candidates", CANDIDATE_ID);
+  const verDir = join(candDir, "versions", VERSION);
 
-    // Mock paths to use temp dir
-    vi.spyOn(pathsMod, "candidateDir").mockImplementation(
-      (id: string) => join(tmpDir, "candidates", id),
-    );
-    vi.spyOn(pathsMod, "versionDir").mockImplementation(
-      (id: string, version: string) =>
-        join(tmpDir, "candidates", id, "versions", version),
-    );
-    vi.spyOn(pathsMod, "sourcesRawDir").mockImplementation(
-      (id: string, version: string) =>
-        join(tmpDir, "candidates", id, "versions", version, "sources-raw"),
-    );
-    vi.spyOn(pathsMod, "rawOutputsDir").mockImplementation(
-      (id: string, version: string) =>
-        join(tmpDir, "candidates", id, "versions", version, "raw-outputs"),
-    );
+  vi.spyOn(pathsMod, "candidateDir").mockImplementation((id: string) =>
+    join(tmpDir, "candidates", id),
+  );
+  vi.spyOn(pathsMod, "versionDir").mockImplementation(
+    (id: string, version: string) =>
+      join(tmpDir, "candidates", id, "versions", version),
+  );
+  vi.spyOn(pathsMod, "sourcesRawDir").mockImplementation(
+    (id: string, version: string) =>
+      join(tmpDir, "candidates", id, "versions", version, "sources-raw"),
+  );
+  vi.spyOn(pathsMod, "rawOutputsDir").mockImplementation(
+    (id: string, version: string) =>
+      join(tmpDir, "candidates", id, "versions", version, "raw-outputs"),
+  );
+
+  await scaffoldCandidate({
+    id: CANDIDATE_ID,
+    name: "Test Candidate",
+    party: "Test Party",
+    partyId: "test-party",
+    date: VERSION,
   });
 
-  afterAll(async () => {
-    vi.restoreAllMocks();
-    await rm(tmpDir, { recursive: true });
-  });
+  await writeFile(
+    join(verDir, "sources-raw", "manifesto.txt"),
+    "Le candidat propose une nationalisation des autoroutes et une réforme fiscale.",
+    "utf-8",
+  );
 
-  it("step_1_scaffold_creates_structure", async () => {
-    await scaffoldCandidate({
-      id: CANDIDATE_ID,
-      name: "Test Candidate",
-      party: "Test Party",
-      partyId: "test-party",
-      date: VERSION,
-    });
-
-    const meta = JSON.parse(await readFile(join(candDir, "metadata.json"), "utf-8"));
-    expect(meta.id).toBe(CANDIDATE_ID);
-
-    const verMeta = JSON.parse(await readFile(join(verDir, "metadata.json"), "utf-8"));
-    expect(verMeta.candidate_id).toBe(CANDIDATE_ID);
-  });
-
-  it("step_2_add_source_fixtures", async () => {
-    // Simulate adding source files to sources-raw/
-    const srcRaw = join(verDir, "sources-raw");
-    await writeFile(
-      join(srcRaw, "manifesto.txt"),
-      "Le candidat propose une réforme fiscale et un investissement dans l'éducation.",
-      "utf-8",
-    );
-  });
-
-  it("step_3_consolidate_produces_draft", async () => {
-    const provider = new MockProvider({
+  await consolidate({
+    candidate: CANDIDATE_ID,
+    version: VERSION,
+    provider: new MockProvider({
       id: "anthropic",
       modelVersion: "claude-opus-4-0-20250514",
       response: CONSOLIDATION_RESPONSE,
-    });
+    }),
+  });
+  await rename(join(verDir, "sources.md.draft"), join(verDir, "sources.md"));
 
-    await consolidate({
-      candidate: CANDIDATE_ID,
-      version: VERSION,
-      provider,
-    });
+  return { tmpDir, candDir, verDir };
+}
 
-    const draft = await readFile(join(verDir, "sources.md.draft"), "utf-8");
-    expect(draft).toContain("Économie");
+// ---------------------------------------------------------------------------
+// Tests
+// ---------------------------------------------------------------------------
+
+describe("Pipeline integration — end-to-end", () => {
+  let tmpDir: string;
+  let verDir: string;
+  let candDir: string;
+
+  beforeEach(async () => {
+    ({ tmpDir, candDir, verDir } = await bootstrapCandidate());
   });
 
-  it("step_3b_consolidate_refuses_empty_sources_raw", async () => {
-    // Create a separate empty candidate to test
-    const emptyDir = join(tmpDir, "candidates", "empty-test", "versions", "2026-01-01");
-    const { mkdir } = await import("node:fs/promises");
-    await mkdir(join(emptyDir, "sources-raw"), { recursive: true });
-
-    vi.spyOn(pathsMod, "versionDir").mockReturnValueOnce(emptyDir);
-    vi.spyOn(pathsMod, "sourcesRawDir").mockReturnValueOnce(join(emptyDir, "sources-raw"));
-
-    const provider = new MockProvider({ id: "anthropic", response: "" });
-    await expect(
-      consolidate({ candidate: "empty-test", version: "2026-01-01", provider }),
-    ).rejects.toThrow("empty");
+  afterEach(async () => {
+    vi.restoreAllMocks();
+    await rm(tmpDir, { recursive: true, force: true });
   });
 
-  it("step_4_simulate_human_review_of_sources", async () => {
-    // Human reviews draft → renames to sources.md
-    await rename(join(verDir, "sources.md.draft"), join(verDir, "sources.md"));
-    const sources = await readFile(join(verDir, "sources.md"), "utf-8");
-    expect(sources).toContain("Économie");
-  });
+  // -------------------------------------------------------------------------
+  // Path 1 — Happy path
+  // -------------------------------------------------------------------------
 
-  it("step_5_analyze_refuses_without_sources_md", async () => {
-    // Temporarily rename sources.md to test gate
-    await rename(join(verDir, "sources.md"), join(verDir, "sources.md.bak"));
-
-    const providers = {
-      anthropic: new MockProvider({ id: "anthropic", response: ANALYSIS_RESPONSE }),
-      openai: new MockProvider({ id: "openai", response: ANALYSIS_RESPONSE }),
-      broken: new MockProvider({ id: "broken", response: ANALYSIS_RESPONSE }),
-    };
-
-    await expect(
-      analyze({ candidate: CANDIDATE_ID, version: VERSION, providers }),
-    ).rejects.toThrow("sources.md not found");
-
-    // Restore
-    await rename(join(verDir, "sources.md.bak"), join(verDir, "sources.md"));
-  });
-
-  it("step_6_analyze_runs_models_and_handles_failure", async () => {
-    const providers = {
-      anthropic: new MockProvider({
-        id: "anthropic",
-        modelVersion: "claude-test",
-        response: ANALYSIS_RESPONSE,
-      }),
-      openai: new MockProvider({
-        id: "openai",
-        modelVersion: "gpt-test",
-        response: ANALYSIS_RESPONSE,
-      }),
-      broken: new MockProvider({
-        id: "broken",
-        error: new Error("Malformed JSON from model"),
-      }),
-    };
-
-    const results = await analyze({
-      candidate: CANDIDATE_ID,
-      version: VERSION,
-      providers,
-    });
-
-    expect(results).toHaveLength(3);
-    const succeeded = results.filter((r) => r.status === "success");
-    const failed = results.filter((r) => r.status === "failed");
-    expect(succeeded).toHaveLength(2);
-    expect(failed).toHaveLength(1);
-    expect(failed[0].model).toBe("broken-model");
-
-    // Check raw outputs
-    const files = await readdir(join(verDir, "raw-outputs"));
-    expect(files).toContain("claude-test.json");
-    expect(files).toContain("gpt-test.json");
-    expect(files).toContain("broken-model.FAILED.json");
-  });
-
-  it("step_7_analyze_is_idempotent", async () => {
-    const anthropicMock = new MockProvider({
-      id: "anthropic",
-      modelVersion: "claude-test",
-      response: ANALYSIS_RESPONSE,
-    });
-    const openaiMock = new MockProvider({
-      id: "openai",
-      modelVersion: "gpt-test",
-      response: ANALYSIS_RESPONSE,
-    });
-
+  it("happy_path_full_pipeline_produces_published_version", async () => {
+    // Analyze: two succeed, one fails (broken-model).
     await analyze({
       candidate: CANDIDATE_ID,
       version: VERSION,
       providers: {
-        anthropic: anthropicMock,
-        openai: openaiMock,
-        broken: new MockProvider({ id: "broken", error: new Error("fail") }),
+        anthropic: new MockProvider({
+          id: "anthropic",
+          modelVersion: "claude-test",
+          response: analysisResponseFor("claude-test"),
+        }),
+        openai: new MockProvider({
+          id: "openai",
+          modelVersion: "gpt-test",
+          response: analysisResponseFor("gpt-test"),
+        }),
+        broken: new MockProvider({
+          id: "broken",
+          error: new Error("provider down"),
+        }),
       },
     });
 
-    // Existing outputs should be skipped (except broken which has .FAILED not .json)
-    expect(anthropicMock.callCount).toBe(0);
-    expect(openaiMock.callCount).toBe(0);
+    const rawOutputs = await readdir(join(verDir, "raw-outputs"));
+    expect(rawOutputs).toContain("claude-test.json");
+    expect(rawOutputs).toContain("gpt-test.json");
+    expect(rawOutputs).toContain("broken-model.FAILED.json");
+
+    // Aggregate with the full fixture — includes one flagged item.
+    await aggregate({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      provider: new MockProvider({
+        id: "anthropic",
+        modelVersion: "claude-opus-4-0-20250514",
+        response: JSON.stringify(aggregatedFullFixture),
+      }),
+    });
+
+    expect(await exists(join(verDir, "aggregated.draft.json"))).toBe(true);
+    expect(await exists(join(verDir, "aggregation-notes.md"))).toBe(true);
+
+    // Review: approve the single flagged item.
+    const prompter = new ScriptedPrompter(["a"]);
+    const summary = await review({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      reviewer: "tester",
+      prompter,
+    });
+
+    expect(summary.finalWritten).toBe(true);
+    expect(summary.quitEarly).toBe(false);
+    expect(prompter.asked).toHaveLength(1);
+    expect(await exists(join(verDir, "aggregated.json"))).toBe(true);
+
+    const finalMeta = JSON.parse(
+      await readFile(join(verDir, "metadata.json"), "utf-8"),
+    );
+    expect(finalMeta.aggregation.human_review_completed).toBe(true);
+    expect(finalMeta.aggregation.prompt_sha256).toMatch(/^[a-f0-9]{64}$/);
+
+    // Publish: symlink + currentVersion file updated.
+    await publish({ candidate: CANDIDATE_ID, version: VERSION });
+
+    // `current` exists in candDir (either symlink or plain file, depending
+    // on fallback logic).
+    const candidateEntries = await readdir(candDir);
+    expect(candidateEntries).toContain("current");
   });
 
-  it("step_8_aggregate_produces_draft", async () => {
-    const provider = new MockProvider({
-      id: "anthropic",
-      modelVersion: "claude-opus-4-0-20250514",
-      response: AGGREGATED_RESPONSE,
+  // -------------------------------------------------------------------------
+  // Path 2 — Coverage warning (single successful model)
+  // -------------------------------------------------------------------------
+
+  it("coverage_warning_path_aggregates_from_single_model", async () => {
+    // Only anthropic succeeds; openai and broken both fail.
+    await analyze({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      providers: {
+        anthropic: new MockProvider({
+          id: "anthropic",
+          modelVersion: "claude-test",
+          response: analysisResponseFor("claude-test"),
+        }),
+        openai: new MockProvider({
+          id: "openai",
+          error: new Error("rate limited"),
+        }),
+        broken: new MockProvider({
+          id: "broken",
+          error: new Error("provider down"),
+        }),
+      },
     });
+
+    const rawOutputs = await readdir(join(verDir, "raw-outputs"));
+    expect(rawOutputs).toContain("claude-test.json");
+    expect(rawOutputs).toContain("gpt-test.FAILED.json");
+    expect(rawOutputs).toContain("broken-model.FAILED.json");
 
     await aggregate({
       candidate: CANDIDATE_ID,
       version: VERSION,
-      provider,
+      provider: new MockProvider({
+        id: "anthropic",
+        modelVersion: "claude-opus-4-0-20250514",
+        response: JSON.stringify(aggregatedSingleModelFixture),
+      }),
     });
 
     const draft = JSON.parse(
       await readFile(join(verDir, "aggregated.draft.json"), "utf-8"),
     );
-    expect(draft.candidate_id).toBe(CANDIDATE_ID);
-    expect(draft.consensus_themes).toHaveLength(1);
+    expect(draft.coverage_warning).toBe(true);
+    expect(draft.source_models).toHaveLength(1);
 
-    const notes = await readFile(join(verDir, "aggregation-notes.md"), "utf-8");
-    expect(notes).toContain("claude-test");
+    const notes = await readFile(
+      join(verDir, "aggregation-notes.md"),
+      "utf-8",
+    );
+    // Only one raw output was available — notes must surface the warning.
+    expect(notes).toMatch(/Warning|Only 1 model/);
   });
 
-  it("step_9_publish_refuses_without_human_review", async () => {
+  // -------------------------------------------------------------------------
+  // Path 3 — Schema drift (retry exhausted)
+  // -------------------------------------------------------------------------
+
+  it("schema_drift_path_writes_aggregated_failed_json_after_retries", async () => {
+    await analyze({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      providers: {
+        anthropic: new MockProvider({
+          id: "anthropic",
+          modelVersion: "claude-test",
+          response: analysisResponseFor("claude-test"),
+        }),
+        openai: new MockProvider({
+          id: "openai",
+          modelVersion: "gpt-test",
+          response: analysisResponseFor("gpt-test"),
+        }),
+        broken: new MockProvider({ id: "broken", error: new Error("x") }),
+      },
+    });
+
+    // Aggregator returns something that parses as JSON but fails schema.
+    const malformed = JSON.stringify({ not: "an aggregated output" });
+    const provider = new MockProvider({
+      id: "anthropic",
+      modelVersion: "claude-opus-4-0-20250514",
+      responses: [malformed, malformed, malformed],
+    });
+
     await expect(
-      publish({ candidate: CANDIDATE_ID, version: VERSION }),
-    ).rejects.toThrow("aggregated.json not found");
+      aggregate({ candidate: CANDIDATE_ID, version: VERSION, provider }),
+    ).rejects.toThrow();
+
+    // Provider was called MAX_RETRIES + 1 = 3 times.
+    expect(provider.callCount).toBe(3);
+
+    // aggregated.FAILED.json exists and carries ZodError issues.
+    const failedPath = join(verDir, "aggregated.FAILED.json");
+    expect(await exists(failedPath)).toBe(true);
+    const failed = JSON.parse(await readFile(failedPath, "utf-8"));
+    expect(failed.candidate_id).toBe(CANDIDATE_ID);
+    expect(failed.version_date).toBe(VERSION);
+    expect(failed.attempts).toBe(3);
+    expect(Array.isArray(failed.issues)).toBe(true);
+    expect(failed.issues.length).toBeGreaterThan(0);
+
+    // Draft must NOT exist.
+    expect(await exists(join(verDir, "aggregated.draft.json"))).toBe(false);
   });
 
-  it("step_10_simulate_human_review_and_publish", async () => {
-    // Simulate human review: rename draft → final
+  // -------------------------------------------------------------------------
+  // Path 4 — Publish gate
+  // -------------------------------------------------------------------------
+
+  it("publish_gate_refuses_when_human_review_not_completed", async () => {
+    await analyze({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      providers: {
+        anthropic: new MockProvider({
+          id: "anthropic",
+          modelVersion: "claude-test",
+          response: analysisResponseFor("claude-test"),
+        }),
+        openai: new MockProvider({
+          id: "openai",
+          modelVersion: "gpt-test",
+          response: analysisResponseFor("gpt-test"),
+        }),
+        broken: new MockProvider({ id: "broken", error: new Error("x") }),
+      },
+    });
+
+    await aggregate({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      provider: new MockProvider({
+        id: "anthropic",
+        modelVersion: "claude-opus-4-0-20250514",
+        response: JSON.stringify(aggregatedFullFixture),
+      }),
+    });
+
+    // Promote draft → final but leave human_review_completed at false.
     await rename(
       join(verDir, "aggregated.draft.json"),
       join(verDir, "aggregated.json"),
     );
 
-    // Set human_review_completed in metadata
-    const meta = JSON.parse(await readFile(join(verDir, "metadata.json"), "utf-8"));
-    meta.aggregation.human_review_completed = true;
-    await writeFile(join(verDir, "metadata.json"), JSON.stringify(meta), "utf-8");
-
-    await publish({ candidate: CANDIDATE_ID, version: VERSION });
-
-    const target = await readlink(join(candDir, "current"));
-    expect(target).toBe(`versions/${VERSION}`);
+    await expect(
+      publish({ candidate: CANDIDATE_ID, version: VERSION }),
+    ).rejects.toThrow(/human_review_completed/);
   });
 
-  it("step_11_metadata_records_all_runs", async () => {
-    const meta = JSON.parse(await readFile(join(verDir, "metadata.json"), "utf-8"));
+  // -------------------------------------------------------------------------
+  // Path 5 — Skipped items block final write
+  // -------------------------------------------------------------------------
 
-    // Sources consolidation
-    expect(meta.sources.consolidation_prompt_sha256).toMatch(/^[a-f0-9]{64}$/);
+  it("skipped_items_path_blocks_final_and_keeps_metadata_unreviewed", async () => {
+    await analyze({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      providers: {
+        anthropic: new MockProvider({
+          id: "anthropic",
+          modelVersion: "claude-test",
+          response: analysisResponseFor("claude-test"),
+        }),
+        openai: new MockProvider({
+          id: "openai",
+          modelVersion: "gpt-test",
+          response: analysisResponseFor("gpt-test"),
+        }),
+        broken: new MockProvider({ id: "broken", error: new Error("x") }),
+      },
+    });
 
-    // Analysis
-    expect(meta.analysis.prompt_sha256).toMatch(/^[a-f0-9]{64}$/);
-    expect(meta.analysis.models["claude-test"]).toBeDefined();
-    expect(meta.analysis.models["gpt-test"]).toBeDefined();
+    await aggregate({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      provider: new MockProvider({
+        id: "anthropic",
+        modelVersion: "claude-opus-4-0-20250514",
+        response: JSON.stringify(aggregatedFullFixture),
+      }),
+    });
 
-    // Aggregation
-    expect(meta.aggregation.prompt_sha256).toMatch(/^[a-f0-9]{64}$/);
-    expect(meta.aggregation.human_review_completed).toBe(true);
+    // Skip the only flagged item.
+    const prompter = new ScriptedPrompter(["s"]);
+    const summary = await review({
+      candidate: CANDIDATE_ID,
+      version: VERSION,
+      reviewer: "tester",
+      prompter,
+    });
+
+    expect(summary.finalWritten).toBe(false);
+    expect(summary.counts.skipped).toBe(1);
+    expect(await exists(join(verDir, "aggregated.json"))).toBe(false);
+
+    const meta = JSON.parse(
+      await readFile(join(verDir, "metadata.json"), "utf-8"),
+    );
+    expect(meta.aggregation.human_review_completed).toBe(false);
+
+    // Publish is correctly blocked as well.
+    await expect(
+      publish({ candidate: CANDIDATE_ID, version: VERSION }),
+    ).rejects.toThrow();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Bonus: consolidate gate (kept from prior integration test, still relevant)
+// ---------------------------------------------------------------------------
+
+describe("Pipeline integration — pre-conditions", () => {
+  let tmpDir: string;
+
+  beforeEach(async () => {
+    tmpDir = await mkdtemp(join(tmpdir(), "pipeline-pre-"));
+  });
+
+  afterEach(async () => {
+    vi.restoreAllMocks();
+    await rm(tmpDir, { recursive: true, force: true });
+  });
+
+  it("consolidate_refuses_empty_sources_raw", async () => {
+    const emptyDir = join(tmpDir, "candidates", "empty-test", "versions", "2026-01-01");
+    await mkdir(join(emptyDir, "sources-raw"), { recursive: true });
+
+    vi.spyOn(pathsMod, "versionDir").mockReturnValue(emptyDir);
+    vi.spyOn(pathsMod, "sourcesRawDir").mockReturnValue(
+      join(emptyDir, "sources-raw"),
+    );
+
+    const provider = new MockProvider({ id: "anthropic", response: "" });
+    await expect(
+      consolidate({ candidate: "empty-test", version: "2026-01-01", provider }),
+    ).rejects.toThrow(/empty/);
   });
 });

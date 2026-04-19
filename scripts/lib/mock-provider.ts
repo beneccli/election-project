@@ -16,6 +16,12 @@ export interface MockProviderOptions {
   modelVersion?: string;
   /** Content to return (simulated LLM response) */
   response?: string;
+  /**
+   * Scripted sequence of responses. When set, successive calls pop responses
+   * from the front of the queue. Once exhausted, falls back to `response`.
+   * Useful for testing retry loops where the provider should fail then succeed.
+   */
+  responses?: string[];
   /** If set, the call will reject with this error */
   error?: Error;
   /** Simulated token counts */
@@ -29,10 +35,12 @@ export class MockProvider implements LLMProvider {
   readonly id: string;
   private options: MockProviderOptions;
   private _calls: MockCall[] = [];
+  private _responseQueue: string[];
 
   constructor(options: MockProviderOptions = {}) {
     this.id = options.id ?? "mock";
     this.options = options;
+    this._responseQueue = [...(options.responses ?? [])];
   }
 
   /** All calls made to this provider. */
@@ -48,6 +56,7 @@ export class MockProvider implements LLMProvider {
   /** Reset call tracking. */
   reset(): void {
     this._calls = [];
+    this._responseQueue = [...(this.options.responses ?? [])];
   }
 
   async call(params: LLMCallParams): Promise<LLMCallResult> {
@@ -60,8 +69,12 @@ export class MockProvider implements LLMProvider {
     const tokensIn = this.options.tokensIn ?? 1000;
     const tokensOut = this.options.tokensOut ?? 500;
 
+    const queued = this._responseQueue.shift();
+    const content =
+      queued ?? this.options.response ?? '{"mock": true}';
+
     return {
-      content: this.options.response ?? '{"mock": true}',
+      content,
       model: this.options.modelVersion ?? params.model,
       tokensIn,
       tokensOut,

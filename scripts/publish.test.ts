@@ -4,6 +4,7 @@ import { mkdtemp, rm, mkdir, writeFile, readFile, readlink, lstat } from "node:f
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import * as pathsMod from "./lib/paths";
+import { buildValidAggregatedOutput } from "./lib/fixtures/aggregated-output/builder";
 
 vi.mock("./lib/paths", async () => {
   const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
@@ -23,7 +24,11 @@ describe("publish", () => {
 
     // Create required artifacts
     await writeFile(join(verDir, "sources.md"), "# Sources", "utf-8");
-    await writeFile(join(verDir, "aggregated.json"), "{}", "utf-8");
+    await writeFile(
+      join(verDir, "aggregated.json"),
+      JSON.stringify(buildValidAggregatedOutput()),
+      "utf-8",
+    );
     await writeFile(
       join(verDir, "metadata.json"),
       JSON.stringify({

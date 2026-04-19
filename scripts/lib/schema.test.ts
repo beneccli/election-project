@@ -1,11 +1,13 @@
 import { describe, it, expect } from "vitest";
 import {
+  AggregatedOutputSchema,
   AnalysisOutputSchema,
   CandidateMetadataSchema,
   SourceMetaSchema,
   VersionMetadataSchema,
 } from "./schema";
 import { buildValidAnalysisOutput } from "./fixtures/analysis-output/builder";
+import { buildValidAggregatedOutput } from "./fixtures/aggregated-output/builder";
 
 // ---------------------------------------------------------------------------
 // CandidateMetadataSchema
@@ -472,5 +474,184 @@ describe("schema AnalysisOutputSchema", () => {
     fixture.run_metadata.prompt_sha256 = "not-a-sha";
     const result = AnalysisOutputSchema.safeParse(fixture);
     expect(result.success).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// AggregatedOutputSchema
+// See docs/specs/analysis/aggregation.md (Stable)
+// ---------------------------------------------------------------------------
+
+describe("schema AggregatedOutputSchema", () => {
+  it("aggregated_schema_validates_fully_populated_fixture", () => {
+    const result = AggregatedOutputSchema.safeParse(buildValidAggregatedOutput());
+    expect(result.success).toBe(true);
+  });
+
+  it("aggregated_schema_accepts_single_model_coverage_warning", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.coverage_warning = true;
+    fixture.source_models = [fixture.source_models[0]];
+    const onlyModel = fixture.source_models[0].version;
+    fixture.agreement_map.coverage = {
+      [onlyModel]: "complete",
+      "gpt-4.1-2025-04-14": "failed",
+      "gemini-2.5-pro": "failed",
+    };
+    fixture.agreement_map.high_confidence_claims = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+  });
+
+  it("aggregated_schema_allows_empty_source_refs_on_problems_ignored", () => {
+    // Inherit the absence-finding carve-out from the per-model schema.
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.problems_ignored[0].source_refs = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+  });
+
+  // --- Guardrail: no cardinal positioning --------------------------------
+
+  it("aggregated_schema_rejects_positioning_score_field", () => {
+    // The cardinal-averaging guardrail. If this test ever fails to reject,
+    // the editorial principle "positioning is never cardinally averaged"
+    // has silently been weakened. See docs/specs/analysis/aggregation.md §Q5.
+    const fixture = buildValidAggregatedOutput();
+    const rogue = {
+      ...fixture,
+      positioning: {
+        ...fixture.positioning,
+        economic: {
+          ...fixture.positioning.economic,
+          score: -2.5,
+        },
+      },
+    };
+    const result = AggregatedOutputSchema.safeParse(rogue);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_non_integer_modal_score", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.economic.modal_score = 2.5 as unknown as number;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_modal_score_out_of_range", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.economic.modal_score = 6;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_reversed_consensus_interval", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.economic.consensus_interval = [3, 1];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_consensus_interval_out_of_range", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.economic.consensus_interval = [
+      -6, 2,
+    ] as unknown as [number, number];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  // --- Guardrail: provenance is mandatory --------------------------------
+
+  it("aggregated_schema_rejects_claim_with_empty_supported_by", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.problems_addressed[0].supported_by = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_missing_source_refs_on_problem_addressed", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.problems_addressed[0].source_refs = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  // --- Other structural rejections ---------------------------------------
+
+  it("aggregated_schema_rejects_flagged_item_missing_issue", () => {
+    const fixture = buildValidAggregatedOutput();
+    const flagged = fixture.flagged_for_review[0] as unknown as Record<
+      string,
+      unknown
+    >;
+    delete flagged.issue;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_unknown_top_level_field", () => {
+    const fixture = {
+      ...buildValidAggregatedOutput(),
+      rogue_field: "should not be accepted",
+    };
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_empty_source_models", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.source_models = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_confidence_out_of_range", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.summary_agreement = 1.5;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_invalid_grade_consensus", () => {
+    const fixture = buildValidAggregatedOutput();
+    (
+      fixture.dimensions.economic_fiscal.grade as { consensus: string }
+    ).consensus = "A+";
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_invalid_aggregation_method_type", () => {
+    const fixture = buildValidAggregatedOutput();
+    (
+      fixture.aggregation_method as unknown as { type: string }
+    ).type = "deterministic";
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_invalid_resolution_enum", () => {
+    const fixture = buildValidAggregatedOutput();
+    (
+      fixture.flagged_for_review[0] as unknown as { resolution: string }
+    ).resolution = "maybe";
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_accepts_resolution_enum_values", () => {
+    for (const resolution of [
+      "approved",
+      "rejected",
+      "edited",
+      "skipped",
+    ] as const) {
+      const fixture = buildValidAggregatedOutput();
+      fixture.flagged_for_review[0].resolution = resolution;
+      const result = AggregatedOutputSchema.safeParse(fixture);
+      expect(result.success).toBe(true);
+    }
   });
 });

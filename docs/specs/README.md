@@ -17,7 +17,7 @@ specs/
 │   ├── dimensions.md               # Analytical dimensions covered            [Stable]
 │   ├── analysis-prompt.md          # Design of the per-model analysis prompt  [Stable]
 │   ├── output-schema.md            # JSON schema for analysis output          [Stable]
-│   ├── aggregation.md              # How per-model outputs merge              [Draft]
+│   ├── aggregation.md              # How per-model outputs merge              [Stable]
 │   ├── political-positioning.md    # 5-axis methodology                      [Stable]
 │   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Stable]
 │
