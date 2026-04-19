@@ -27,7 +27,8 @@
     "validate-raw": "tsx scripts/validate-raw.ts",
     "site:dev": "pnpm --filter @election-2027/site dev",
     "site:build": "pnpm --filter @election-2027/site build",
-    "test:site-build": "pnpm --filter @election-2027/site build"
+    "test:site-build": "pnpm --filter @election-2027/site build",
+    "test:site-smoke": "pnpm --filter @election-2027/site run verify-build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.90.0",

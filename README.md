@@ -89,15 +89,23 @@ election-2027/
 
 ## 🚀 Getting started
 
-Foundation phase. No executable code yet. The next step is the `M_DataPipeline` spike.
-
 ```bash
-# When pipeline is implemented:
-npm install
-npm run ingest -- <candidate-id>     # gather sources, produce sources.md
+pnpm install
 npm run analyze -- <candidate-id>    # fan out to all models in parallel
 npm run aggregate -- <candidate-id>  # produce aggregated.json
-npm run build                        # static site build
+npm run site:build                   # static site build → site/out/
+```
+
+### Testing & Lint
+
+```bash
+npm run test                 # Vitest (pipeline + site unit tests)
+npm run test:schema          # JSON schema validation
+npm run test:pipeline        # pipeline integration tests
+npm run test:site-build      # full static export (runs site/prebuild + next build)
+npm run test:site-smoke      # post-build smoke check against site/out/
+npm run lint                 # ESLint
+npm run typecheck            # tsc --noEmit
 ```
 
 ---
