@@ -43,8 +43,8 @@ Format: `M_<FeatureCluster>`
 
 | Milestone | Status | Description |
 |-----------|--------|-------------|
-| M_Foundation | 🚧 Active | Repo scaffolding, docs, tickets-as-code system |
-| M_DataPipeline | 📋 Planned (spike needed) | Candidate folder structure, versioning, script skeletons |
+| M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
+| M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
 | M_AnalysisPrompts | 📋 Planned (spike needed) | The analysis prompt, schema, adversarial pass |
 | M_Aggregation | 📋 Planned (spike needed) | Aggregator prompt, agreement_map, dissent preservation |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
@@ -101,17 +101,37 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_Foundation
 
-**Spike produces:**
-- `docs/specs/data-pipeline/overview.md` (complete)
-- `docs/specs/candidates/repository-structure.md` (complete)
-- Refinement of script signatures and error handling
-- Backlog tasks in `tasks/backlog/M_DataPipeline/`
+**Status:** ✅ Done (2026-04-19). All 9 tasks (0011–0019) implemented and archived.
 
-**Key design decisions to validate:**
-- Symlink vs. manifest file for `current` version
-- Should `consolidate.ts` call an LLM or purely concatenate? (likely: LLM with mandatory human review)
-- Prompt hash calculation method
-- Where structured metadata (model versions, timestamps) lives
+**Specs produced:**
+- `docs/specs/data-pipeline/overview.md` (**Stable**)
+- `docs/specs/data-pipeline/source-gathering.md` (**Stable**)
+- `docs/specs/candidates/repository-structure.md` (**Stable**)
+
+**Backlog tasks** (`tasks/backlog/M_DataPipeline/`):
+- `0011` — Bootstrap project (package.json, tsconfig, tooling)
+- `0012` — Zod schemas for pipeline JSON artifacts
+- `0013` — Utility library (hash, logger, validation, file helpers)
+- `0014` — LLM provider abstraction layer
+- `0015` — Script skeleton: consolidate.ts
+- `0016` — Script skeleton: analyze.ts
+- `0017` — Script skeleton: aggregate.ts
+- `0018` — Script skeleton: publish.ts + candidate scaffolding
+- `0019` — End-to-end pipeline integration test with mock LLMs
+
+**Key design decisions (validated by spike):**
+- **Symlink** for `current` version (not manifest file) — filesystem tools resolve naturally
+- **`consolidate.ts` calls an LLM** with mandatory human review of the draft
+- **Prompt hash:** SHA256 of prompt file content at call time (`crypto.createHash('sha256')`)
+- **Metadata** lives in per-version `metadata.json` with full model/prompt/cost tracking
+- **Plain git** for source files (v1); migrate to git-lfs if >100MB per candidate
+- **Idempotent scripts** — re-running is safe, `--force` to override
+
+**Scope boundary (what this milestone does NOT cover):**
+- Real prompt content (→ M_AnalysisPrompts)
+- Aggregation logic and schema (→ M_Aggregation)
+- Analysis output schema beyond placeholder (→ M_AnalysisPrompts)
+- Website integration (→ M_WebsiteCore)
 
 ---
 

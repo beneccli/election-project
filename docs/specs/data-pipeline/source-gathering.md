@@ -1,7 +1,7 @@
 # Source Gathering
 
-> **Version:** 1.0
-> **Status:** Draft — to be finalized by M_DataPipeline spike
+> **Version:** 1.1
+> **Status:** Stable — finalized by M_DataPipeline spike (2026-04-19)
 
 ---
 
@@ -152,12 +152,12 @@ If a dimension is not addressed by any captured source, the analysis will report
 
 ---
 
-## Open questions (for spike)
+## Open Questions (Resolved — M_DataPipeline spike 2026-04-19)
 
-- Should we also capture recent debate transcripts? (Probably yes for debates the candidate participated in officially.)
-- How do we handle candidates whose "program" is primarily their party's platform? (Link to party platform; note this relationship.)
-- What about positions expressed only in interviews — are these program positions? (Yes if consistent with manifesto; use with care if contradictory.)
-- Should we version-control `sources-raw/` content in git or use git-lfs for large PDFs? (Default: plain git for v1; migrate if size becomes an issue.)
+- **Debate transcripts:** Yes, include transcripts of official debates the candidate participated in. These are primary sources of the candidate’s stated positions.
+- **Party-platform candidates:** Include the party platform as a primary source. Note the relationship in the candidate’s `metadata.json` (e.g., `"program_source": "party_platform"`). The consolidated `sources.md` should note which positions come from the party platform vs. the candidate’s own statements.
+- **Interview positions:** Include as primary sources. If contradictory to the manifesto, include both — the contradiction is itself an analytical finding. Mark interview-only positions with lower prominence in `sources.md` consolidation.
+- **Git vs. git-lfs:** Plain git for v1. Migrate to git-lfs if any candidate’s `sources-raw/` exceeds 100MB total. The pipeline does not depend on git-lfs tooling.
 
 ---
 

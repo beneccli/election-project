@@ -1,7 +1,7 @@
 # Data Pipeline Overview
 
-> **Version:** 1.0
-> **Status:** Draft — to be finalized by M_DataPipeline spike
+> **Version:** 1.1
+> **Status:** Stable — finalized by M_DataPipeline spike (2026-04-19)
 
 ---
 
@@ -209,6 +209,57 @@ Every script that produces JSON validates its output against a Zod schema in `sc
 - `metadata.json` (per-version) → `VersionMetadataSchema`
 
 Schema violations halt the pipeline. No silent acceptance of malformed data.
+
+---
+
+## Implementation Notes (added by M_DataPipeline spike)
+
+### Project bootstrap
+
+The pipeline is a TypeScript project:
+- Node 20+ LTS, ES modules (`"type": "module"`)
+- TypeScript strict mode, compiled via `tsx` for scripts
+- Zod for runtime schema validation
+- Commander.js (or similar) for CLI argument parsing
+- pino for structured logging
+- Vitest for testing
+
+### CLI convention
+
+All pipeline scripts accept `--candidate <id>` and `--version <YYYY-MM-DD>` as required arguments. Optional flags:
+- `--force` — re-run even if output already exists
+- `--dry-run` — validate inputs without executing
+- `--verbose` — debug-level logging
+
+### Prompt hashing
+
+SHA256 of the prompt file's raw content (UTF-8 bytes), computed at call time using Node.js `crypto.createHash('sha256')`. The hash is recorded in `metadata.json` for the version.
+
+### Cost tracking
+
+Every LLM call logs:
+- `tokens_in`, `tokens_out` (from provider response)
+- `cost_estimate_usd` (computed from per-model pricing config)
+- `duration_ms`
+
+Per-run totals are written to `metadata.json`.
+
+### Idempotency rules
+
+| Script | Re-run behavior |
+|--------|----------------|
+| ingest | Safe — skips existing files unless `--force` |
+| consolidate | Safe — produces `.draft`, does not overwrite `sources.md` |
+| analyze | Skips models with existing output unless `--force` |
+| aggregate | Overwrites `.draft.json` (safe, pre-review) |
+| publish | Updates symlink (idempotent) |
+
+### Error handling
+
+- Schema validation failures halt the script with a non-zero exit code and a structured error log.
+- LLM call failures trigger up to 2 retries with exponential backoff.
+- After max retries, the model is marked as `failed` in metadata and a `<model>.FAILED.json` is written.
+- The pipeline continues with remaining models (analyze stage) or fails (consolidate/aggregate stages).
 
 ---
 

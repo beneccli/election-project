@@ -13,26 +13,26 @@ Code references specs, not tasks.
 ```
 specs/
 ├── analysis/           # Editorial principles, prompts, output schema
-│   ├── editorial-principles.md     # Non-negotiable editorial stance
-│   ├── dimensions.md               # Analytical dimensions covered per candidate
-│   ├── analysis-prompt.md          # Design of the per-model analysis prompt
-│   ├── output-schema.md            # JSON schema for analysis output
-│   ├── aggregation.md              # How per-model outputs merge
-│   ├── political-positioning.md    # 5-axis methodology
-│   └── intergenerational-audit.md  # Measurement-not-indictment approach
+│   ├── editorial-principles.md     # Non-negotiable editorial stance          [Stable]
+│   ├── dimensions.md               # Analytical dimensions covered            [Draft]
+│   ├── analysis-prompt.md          # Design of the per-model analysis prompt  [Draft]
+│   ├── output-schema.md            # JSON schema for analysis output          [Draft]
+│   ├── aggregation.md              # How per-model outputs merge              [Draft]
+│   ├── political-positioning.md    # 5-axis methodology                      [Draft]
+│   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Draft]
 │
 ├── candidates/         # Candidate data layout
-│   └── repository-structure.md     # Per-candidate folder + versioning
+│   └── repository-structure.md     # Per-candidate folder + versioning        [Stable]
 │
 ├── data-pipeline/      # Ingestion and orchestration
-│   ├── overview.md                 # End-to-end pipeline
-│   ├── source-gathering.md         # Primary-source fetching + consolidation
-│   └── update-workflow.md          # "One week later" flow
+│   ├── overview.md                 # End-to-end pipeline                      [Stable]
+│   ├── source-gathering.md         # Primary-source fetching + consolidation  [Stable]
+│   └── update-workflow.md          # "One week later" flow                    [Draft]
 │
 └── website/            # Site structure and components
-    ├── structure.md                # Page architecture
-    ├── visual-components.md        # Signature charts/widgets
-    └── transparency.md             # Transparency drawer
+    ├── structure.md                # Page architecture                        [Draft]
+    ├── visual-components.md        # Signature charts/widgets                 [Draft]
+    └── transparency.md             # Transparency drawer                      [Draft]
 ```
 
 ---
