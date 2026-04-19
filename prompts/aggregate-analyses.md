@@ -187,17 +187,16 @@ For each of the five dimension clusters
   entry carrying inline provenance (§4.1) and merging numeric fields
   according to §4.6.
 
-### 4.6 Numeric fields — intervals, not means
+### 4.6 Numeric fields — median, not mean
 
 When a numeric field (`strength`, `severity`, `probability`, `confidence`)
-appears on the same claim across multiple models:
+appears on the same claim across multiple source models, emit the **median**
+across the supporting models as the single aggregated value.
 
-- Report an interval: emit `<field>_range: [min, max]` as a tuple.
-- Emit `<field>_consensus: number` as the median across the supporting
-  models. Use median, not mean — it resists outlier influence without
-  inventing a sharper estimate than the inputs justify.
-- If only one model addressed the claim, set both range endpoints to the
-  same value and `<field>_consensus` to that value.
+Median resists outlier influence without inventing a sharper estimate than
+the inputs justify. Do not emit arithmetic mean. When models disagree
+meaningfully on magnitude, the claim belongs in
+`agreement_map.contested_claims[]` in addition to its inline location.
 
 ### 4.7 Intergenerational aggregation
 
@@ -222,11 +221,11 @@ appears on the same claim across multiple models:
 
 Synthesize `counterfactual` across models:
 
-- `direction_of_change.consensus` is the modal value; preserve dissent in
-  `contested_claims[]` when models differ.
+- `direction_of_change` is the modal value across models; preserve dissent
+  in `agreement_map.contested_claims[]` when models differ.
 - `dimensions_changed` and `dimensions_unchanged` are unions.
 - `reasoning` is a concise factual synthesis.
-- `confidence_range` and `confidence_consensus` follow §4.6.
+- `confidence` is the median across source models (§4.6).
 - Inline provenance (`supported_by`, `dissenters`) applies.
 
 ### 4.9 Coverage
@@ -357,8 +356,7 @@ Compact shape:
   //   problems_worsened:  [ <AggregatedProblem>, ... ],
   //   execution_risks:    [ <AggregatedExecutionRisk>, ... ],
   //   key_measures:       [ <AggregatedKeyMeasure>, ... ],
-  //   confidence_range: [num, num],
-  //   confidence_consensus: <[0,1]>
+  //   confidence: <[0,1]>               // median across source models
   // }
 
   intergenerational: {
@@ -368,8 +366,7 @@ Compact shape:
     impact_on_65yo_in_2027: <string>,
     reasoning: <string>,
     source_refs: [<string>, ...],
-    confidence_range: [num, num],
-    confidence_consensus: <[0,1]>,
+    confidence: <[0,1]>,
     supported_by: [<model>, ...],
     dissenters:   [<model>, ...],
     agreement: {

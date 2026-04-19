@@ -1,0 +1,749 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "test-candidate",
+  "version_date": "2026-04-19",
+  "source_models": [
+    {
+      "provider": "anthropic",
+      "version": "claude-opus-4-0-20250514"
+    },
+    {
+      "provider": "openai",
+      "version": "gpt-4.1-2025-04-14"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-2.5-pro"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "anthropic",
+      "version": "claude-opus-4-0-20250514"
+    },
+    "prompt_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "prompt_version": "1.0",
+    "run_at": "2026-04-19T11:00:00Z"
+  },
+  "summary": "Three models converged on the program's fiscal direction while differing on execution risk magnitude.",
+  "summary_agreement": 0.8,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        3,
+        1
+      ],
+      "modal_score": -2,
+      "anchor_narrative": "Positioning distilled from three models. Placement is more interventionist than Macron 2017 and less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": []
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        0,
+        1
+      ],
+      "modal_score": 0,
+      "anchor_narrative": "Positioning distilled from three models. Placement is more interventionist than Macron 2017 and less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": []
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        1,
+        2
+      ],
+      "modal_score": 1,
+      "anchor_narrative": "Positioning distilled from three models. Placement is more interventionist than Macron 2017 and less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": [
+        {
+          "model": "gemini-2.5-pro",
+          "position": 3,
+          "reasoning": "Model C read the sovereignty rhetoric as more assertive based on specific program passages."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        -1,
+        0
+      ],
+      "modal_score": -1,
+      "anchor_narrative": "Positioning distilled from three models. Placement is more interventionist than Macron 2017 and less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": []
+    },
+    "ecological": {
+      "consensus_interval": [
+        1,
+        3
+      ],
+      "modal_score": 2,
+      "anchor_narrative": "Positioning distilled from three models. Placement is more interventionist than Macron 2017 and less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": []
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gemini-2.5-pro": "C"
+        }
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "confidence": 0.65
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {}
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "confidence": 0.65
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "confidence": 0.65
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {}
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "confidence": 0.65
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {}
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "confidence": 0.65
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "approximately €1,200/person/year",
+      "units": "€/person/year",
+      "confidence": 0.5,
+      "caveats": "Central scenario assumes stable interest rates."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher effective tax burden.",
+        "quantified": "+€600/year"
+      },
+      "housing": {
+        "summary": "No supply-side relief; affordability declines.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Replacement rate trending down.",
+        "quantified": "~52% vs current 60%"
+      },
+      "labor_market": {
+        "summary": "Entry-wage compression.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Transition deferred, costs concentrated post-2035.",
+        "quantified": null
+      },
+      "narrative_summary": "Net negative distributional impact on under-35s."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension indexation preserved.",
+        "quantified": "+€0/year"
+      },
+      "pension": {
+        "summary": "Replacement rate stable near current 74%.",
+        "quantified": "~74%"
+      },
+      "healthcare": {
+        "summary": "Access unchanged under central assumptions.",
+        "quantified": null
+      },
+      "narrative_summary": "Net neutral-to-positive for current retirees."
+    },
+    "reasoning": "Aggregated from three models reading the same intergenerational fiscal signals.",
+    "source_refs": [
+      "sources.md#retraites",
+      "sources.md#finances-publiques"
+    ],
+    "confidence": 0.6,
+    "agreement": {
+      "direction_consensus": true,
+      "magnitude_consensus": "interval",
+      "dissenting_views": []
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Debt rises toward 120% of GDP, housing access continues to decline.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "institutional_democratic"
+    ],
+    "reasoning": "Fiscal path bends, institutional arrangements unchanged.",
+    "confidence": 0.7,
+    "supported_by": [
+      "claude-opus-4-0-20250514",
+      "gpt-4.1-2025-04-14",
+      "gemini-2.5-pro"
+    ],
+    "dissenters": []
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Regional inequality in medical-desert districts",
+      "why_unsolved": "Program does not propose incentive structures.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-0-20250514",
+        "gpt-4.1-2025-04-14",
+        "gemini-2.5-pro"
+      ],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Market-rate spike triggers debt-service crisis.",
+      "trigger": "10-year OAT yield above 4.5%.",
+      "probability": 0.3,
+      "severity": 0.8,
+      "reasoning": "Debt-service capacity is tight under central assumptions.",
+      "supported_by": [
+        "claude-opus-4-0-20250514",
+        "gpt-4.1-2025-04-14",
+        "gemini-2.5-pro"
+      ],
+      "dissenters": []
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "economic_fiscal.problems_addressed.0",
+        "models": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "positioning.sovereignty",
+        "positions": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "position": "+1"
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "position": "+2"
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "position": "+3"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "claude-opus-4-0-20250514": "complete",
+      "gpt-4.1-2025-04-14": "complete",
+      "gemini-2.5-pro": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          -3,
+          -1
+        ],
+        "modal": -2,
+        "dissent_count": 0
+      },
+      "social_cultural": {
+        "interval": [
+          0,
+          1
+        ],
+        "modal": 0,
+        "dissent_count": 0
+      },
+      "sovereignty": {
+        "interval": [
+          1,
+          3
+        ],
+        "modal": 1,
+        "dissent_count": 1
+      },
+      "institutional": {
+        "interval": [
+          -1,
+          0
+        ],
+        "modal": -1,
+        "dissent_count": 0
+      },
+      "ecological": {
+        "interval": [
+          1,
+          3
+        ],
+        "modal": 2,
+        "dissent_count": 0
+      }
+    }
+  },
+  "coverage_warning": false,
+  "flagged_for_review": [
+    {
+      "claim": "A numeric claim about subsidies that sources.md does not support.",
+      "claimed_by": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "issue": "claim not supported by sources.md",
+      "suggested_action": "human review required"
+    }
+  ]
+}
