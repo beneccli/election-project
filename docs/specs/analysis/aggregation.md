@@ -1,7 +1,7 @@
 # Aggregation Spec
 
 > **Version:** 1.0
-> **Status:** Draft — to be finalized by M_Aggregation spike
+> **Status:** Draft — decisions finalized by M_Aggregation spike `0030` (2026-04-19); promotion to **Stable** tracked by task `0031`.
 
 ---
 
@@ -241,3 +241,119 @@ A human-readable companion to `aggregated.json` that records:
 - [`analysis-prompt.md`](analysis-prompt.md)
 - [`political-positioning.md`](political-positioning.md)
 - [`../data-pipeline/overview.md`](../data-pipeline/overview.md)
+
+---
+
+## Decisions finalized by spike `0030` (2026-04-19)
+
+These decisions freeze the design surface for implementation tasks `0031`–`0037`. They supersede any drift in the prose above.
+
+### Aggregator model (Q1)
+
+- A single designated aggregator model lives in `scripts/config/models.ts` as `AGGREGATOR_MODEL`.
+- Default: `claude-opus-4-0-20250514` (matches the hardcoded value currently in `scripts/aggregate.ts`; made explicit via config).
+- v1 permits overlap between the aggregator and an analyst model. Per-run metadata records all model versions so overlap is always auditable.
+- A stricter "aggregator disjoint from analysts" rule is deferred pending empirical signal from M_FirstCandidate.
+
+### Schema retry (Q2)
+
+- Aggregator call retries up to 2 times (3 total attempts) on schema validation failure, mirroring `analyze.ts`.
+- On persistent failure: write `aggregated.FAILED.json` with `ZodError.issues[]`; do **not** fall back to programmatic averaging; the pipeline fails loudly.
+
+### Minimum models (Q3)
+
+- Hard minimum: 1 successful per-model output (0 → `aggregate.ts` throws, as today).
+- Soft minimum: 3. Below this, `aggregated.json` is produced but carries a `coverage_warning` flag rendered on-site as a visible notice.
+
+### `agreement_map` structure (Q4)
+
+- **Inline per-claim provenance** on every aggregated claim:
+  - `supported_by: string[]` (model version strings)
+  - `dissenters: string[]` (empty when unanimous)
+- **Top-level `agreement_map`** summary:
+  - `high_confidence_claims: { claim_id, models }[]` — claims supported by ≥ N-1 successful models
+  - `contested_claims: { claim_id, positions }[]` — claims with ≥1 dissenter
+  - `coverage: Record<modelVersion, "complete" | "partial" | "failed">`
+  - `positioning_consensus: Record<axis, { interval: [int, int], modal: int | null, dissent_count: number }>`
+
+### Positioning aggregation (Q5 / Q6)
+
+- Per axis, aggregated output contains:
+  - `consensus_interval: [int, int]` (min and max across all successful models)
+  - `modal_score: int | null` (integer in `[-5, +5]`, or `null` if no plurality)
+  - `anchor_narrative: string`
+  - `evidence: EvidenceRef[]` (union across models)
+  - `confidence: number` in `[0, 1]`
+  - `dissent: { model: string, position: int, reasoning: string }[]`
+- **There is no aggregated `score` field.** The per-model integer `score` lives only in `raw-outputs/`.
+- Dissent threshold: a model's `score` is flagged as dissent when it falls outside the modal-centred plurality OR when its anchor-narrative genuinely disagrees. The dissenting reasoning is preserved verbatim — `consensus_interval` is not silently narrowed.
+
+### Source contradiction flagging (Q7)
+
+- Every aggregated claim must carry at least one `source_ref` unioned from per-model outputs.
+- A claim made by ≥1 model but unsupported by any quote the aggregator can locate in `sources.md` goes to `flagged_for_review[]` with `issue: "claim not supported by sources.md"`. It is neither silently dropped nor auto-published.
+- This rule applies even when **all** per-model outputs agree on the unsupported claim (correlated hallucination).
+
+### Human review CLI (Q8)
+
+`scripts/review.ts --candidate <id> --version <date> [--reviewer <id>]` implements the second human gate.
+
+Behavior:
+
+1. Loads `aggregated.draft.json`.
+2. Iterates `flagged_for_review[]`. For each item, displays the claim, `issue`, `claimed_by`, and relevant `sources.md` excerpts.
+3. Accepts per-item input: `[a]pprove / [r]eject / [e]dit / [s]kip / [q]uit`.
+4. On completion, if no item is still `skipped`, writes:
+   - `aggregated.json` (final): approved items merged, rejected items removed, edited items carry `human_edit: true`.
+   - `aggregation-notes.md`: "Flagged item resolutions" section appended with reviewer id and ISO timestamp per item.
+   - `metadata.json`: `aggregation.human_review_completed: true`, `aggregation.review_at`, `aggregation.reviewer_id`.
+5. Idempotent: re-running after partial progress resumes at the first unresolved item.
+6. Refuses to write `aggregated.json` while any flagged item remains `skipped`.
+
+`scripts/publish.ts` **hard-fails** (non-zero exit, no symlink update, no commit) when `metadata.aggregation.human_review_completed !== true`.
+
+### `aggregation-notes.md` structure (Q9)
+
+Canonical section order written by `aggregate.ts` (with placeholders filled by `review.ts` on exit):
+
+```markdown
+# Aggregation Notes — <candidate> (<version>)
+
+## Run metadata
+(models aggregated, aggregator model, prompt hash, run duration, cost)
+
+## Coverage
+(per-model: complete / partial / failed)
+
+## Notable consensus
+(3–5 bullets with cross-model support counts)
+
+## Notable dissent
+(positioning dissent, dimension grade disagreements, contested factual claims)
+
+## Flagged items
+(written by aggregate.ts — one row per flagged_for_review entry)
+
+## Flagged item resolutions
+(written by review.ts on exit)
+```
+
+### Schema versioning (Q10)
+
+- Aggregated output carries its own `schema_version: "1.0"` independent of per-model `output-schema.md`.
+- Bumping per-model schema does not automatically bump aggregated schema. Cross-references are tracked in each spec's "Schema versioning" section.
+
+### Fixtures (Q11)
+
+Shipped in `scripts/lib/fixtures/aggregated-output/`:
+
+- `valid-full.json` — three synthetic per-model inputs produce one aggregated output with populated consensus, dissent, and flagged items.
+- `valid-single-model.json` — only one per-model output succeeded; `coverage` shows failed siblings; `agreement_map.high_confidence_claims` empty; `coverage_warning: true`.
+- `invalid-cardinal-positioning.json` — regression fixture: positioning contains a `"score": -2.5` float; schema **must** reject at the type level. Guards against future accidental cardinal averaging.
+
+### Deferred (Q12)
+
+- Cross-candidate symmetry audit tooling — deferred.
+- Aggregator-rotation rule to enforce disjointness from the analyst set — deferred.
+- Self-evaluation (running aggregator on itself for bias detection) — deferred.
+- Deterministic aggregation fallback (Option B) — deferred; listed in `## Future considerations` above.

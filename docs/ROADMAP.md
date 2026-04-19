@@ -46,7 +46,7 @@ Format: `M_<FeatureCluster>`
 | M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
 | M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
 | M_AnalysisPrompts | ✅ Done | The analysis prompt, schema, inline adversarial pass |
-| M_Aggregation | 📋 Planned (spike needed) | Aggregator prompt, agreement_map, dissent preservation |
+| M_Aggregation | � In Progress | Aggregator prompt, agreement_map, dissent preservation, human review CLI |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
 
 ### 📅 Phase 2: Website (planned)
@@ -183,16 +183,35 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_AnalysisPrompts
 
+**Status:** 🚧 In Progress. Spike `0030` archived (2026-04-19); implementation tasks `0031`–`0037` in `tasks/backlog/M_Aggregation/`.
+
 **Spike produces:**
-- `docs/specs/analysis/aggregation.md`
-- Aggregator prompt in `prompts/aggregate-analyses.md`
-- Aggregation script `scripts/aggregate.ts`
-- `agreement_map` schema extension
+- `docs/specs/analysis/aggregation.md` (finalized by spike `0030`; promoted Draft → Stable by task `0031`)
+- Aggregator prompt in `prompts/aggregate-analyses.md` (task `0033`)
+- Aggregation script `scripts/aggregate.ts` (already scaffolded by M_DataPipeline; consumes the real schema via task `0032`)
+- `agreement_map` schema extension — inline per-claim `supported_by`/`dissenters` plus top-level summary (task `0032`)
+- Human review CLI `scripts/review.ts` + hard publish-gate (task `0036`)
 
 **Non-negotiables:**
-- Positioning is never cardinally averaged
-- Dissent is shown, not averaged away
-- Contradictions against `sources.md` flagged for human review, not auto-published
+- Positioning is never cardinally averaged — **aggregated output has no `score` field** (regression fixture enforces this)
+- Dissent is shown, not averaged away — structural fields (`dissent[]`, `supported_by`, `dissenters`), not prose hedging
+- Contradictions against `sources.md` flagged for human review, not auto-published — including correlated hallucination
+- Publish blocks on `metadata.aggregation.human_review_completed === true`
+
+**Key design decisions (spike `0030`):**
+- Meta-LLM aggregation (Option A). Single designated aggregator model; overlap with analyst set permitted in v1 but audited.
+- 2 retries on aggregator schema failure → `aggregated.FAILED.json`; no deterministic averaging fallback.
+- Hard minimum 1 successful analysis; soft minimum 3 → `coverage_warning: true` below that.
+- Review CLI is minimal (readline + `$EDITOR`); skipped items block final publish.
+- Aggregated output schema carries its own `schema_version: "1.0"` independent of per-model schema.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Live LLM aggregation on a real candidate (→ M_FirstCandidate)
+- Self-aggregation bias measurement / aggregator-disjoint rule (→ post-M_FirstCandidate follow-up)
+- Web UI for human review (CLI only in v1)
+- Cross-candidate symmetry audit tooling
+- Deterministic aggregation fallback (Option B)
+- Website rendering of `agreement_map` / positioning intervals (→ M_VisualComponents + M_Transparency)
 
 ---
 
