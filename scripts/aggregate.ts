@@ -144,17 +144,59 @@ export async function aggregate(opts: AggregateOptions): Promise<void> {
     modelInputs,
   ].join("\n\n");
 
-  // Call aggregator LLM
-  const result = await provider.call({
-    model: "claude-opus-4-0-20250514",
-    prompt: promptContent,
-    sourceContent,
-    temperature: 0,
-  });
+  // Call aggregator LLM with retry-on-schema-drift.
+  const MAX_RETRIES = 2;
+  let parsed: unknown;
+  let lastError: Error | null = null;
+  let lastResult: Awaited<ReturnType<typeof provider.call>> | null = null;
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    if (attempt > 0) {
+      log.info({ attempt }, "Retrying aggregator");
+    }
+    try {
+      lastResult = await provider.call({
+        model: "claude-opus-4-0-20250514",
+        prompt: promptContent,
+        sourceContent,
+        temperature: 0,
+      });
+      parsed = JSON.parse(lastResult.content);
+      AggregatedOutputSchema.parse(parsed);
+      lastError = null;
+      break;
+    } catch (err) {
+      lastError = err as Error;
+      log.warn({ attempt, error: lastError.message }, "Aggregator attempt failed");
+      parsed = undefined;
+    }
+  }
 
-  // Parse and validate
-  const parsed = JSON.parse(result.content);
-  AggregatedOutputSchema.parse(parsed);
+  if (lastError || !parsed || !lastResult) {
+    const failedPath = join(verDir, "aggregated.FAILED.json");
+    const failedOutput: {
+      candidate_id: string;
+      version_date: string;
+      attempts: number;
+      last_error: string;
+      issues?: unknown;
+    } = {
+      candidate_id: candidate,
+      version_date: version,
+      attempts: MAX_RETRIES + 1,
+      last_error: lastError?.message ?? "unknown",
+    };
+    if (lastError && "issues" in lastError) {
+      failedOutput.issues = (lastError as { issues: unknown }).issues;
+    }
+    await writeFile(failedPath, JSON.stringify(failedOutput, null, 2), "utf-8");
+    log.error(
+      { path: failedPath },
+      "Aggregator exhausted retries, wrote aggregated.FAILED.json",
+    );
+    throw lastError ?? new Error("Aggregator failed");
+  }
+
+  const result = lastResult;
 
   // Write draft
   await writeFile(draftPath, JSON.stringify(parsed, null, 2), "utf-8");

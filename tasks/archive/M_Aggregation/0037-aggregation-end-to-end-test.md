@@ -2,7 +2,7 @@
 id: "0037"
 title: "End-to-end mock-provider test: analyze → aggregate → review → publish"
 type: task
-status: open
+status: done
 priority: medium
 created: 2026-04-19
 milestone: M_Aggregation
