@@ -31,7 +31,8 @@ specs/
 │   └── update-workflow.md          # "One week later" flow                    [Draft]
 │
 └── website/            # Site structure and components
-    ├── structure.md                # Page architecture                        [Draft]
+    ├── structure.md                # Page architecture                        [Stable]
+    ├── nextjs-architecture.md      # Next.js package, loader, derivations     [Stable]
     ├── visual-components.md        # Signature charts/widgets                 [Draft]
     └── transparency.md             # Transparency drawer                      [Draft]
 ```

@@ -24,7 +24,11 @@
     "prepare-manual-aggregation": "tsx scripts/prepare-manual-aggregation.ts",
     "ingest-raw-output": "tsx scripts/ingest-raw-output.ts",
     "ingest-aggregated": "tsx scripts/ingest-aggregated.ts",
-    "validate-raw": "tsx scripts/validate-raw.ts"
+    "validate-raw": "tsx scripts/validate-raw.ts",
+    "site:dev": "pnpm --filter @election-2027/site dev",
+    "site:build": "pnpm --filter @election-2027/site build",
+    "test:site-build": "pnpm --filter @election-2027/site build",
+    "test:site-smoke": "pnpm --filter @election-2027/site run verify-build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.90.0",

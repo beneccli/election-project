@@ -13,6 +13,9 @@ out/
 build/
 dist/
 
+# Generated static artifacts (copied from candidates/ at build time)
+site/public/candidates/
+
 # Environment
 .env
 .env.local

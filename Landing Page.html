@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Élection 2027 — Analyse IA des programmes présidentiels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg:             oklch(0.975 0.007 75);
+  --bg-subtle:      oklch(0.955 0.010 78);
+  --bg-card:        oklch(0.985 0.005 75);
+  --text:           oklch(0.14 0.015 260);
+  --text-secondary: oklch(0.44 0.015 260);
+  --text-tertiary:  oklch(0.62 0.01 260);
+  --accent:         oklch(0.44 0.18 264);
+  --accent-light:   oklch(0.44 0.18 264 / 0.08);
+  --risk-red:       oklch(0.50 0.18 25);
+  --rule:           oklch(0.86 0.008 260);
+  --rule-light:     oklch(0.91 0.006 260);
+}
+[data-theme="dark"] {
+  --bg:             oklch(0.11 0.015 260);
+  --bg-subtle:      oklch(0.155 0.018 260);
+  --bg-card:        oklch(0.13 0.016 260);
+  --text:           oklch(0.94 0.006 75);
+  --text-secondary: oklch(0.68 0.012 260);
+  --text-tertiary:  oklch(0.50 0.010 260);
+  --accent:         oklch(0.65 0.18 264);
+  --accent-light:   oklch(0.65 0.18 264 / 0.1);
+  --risk-red:       oklch(0.65 0.18 25);
+  --rule:           oklch(0.22 0.015 260);
+  --rule-light:     oklch(0.19 0.012 260);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s, color 0.25s;
+}
+::selection { background: var(--accent-light); }
+
+/* ── Nav ── */
+nav.topnav {
+  position: sticky; top: 0; z-index: 80;
+  background: var(--bg); border-bottom: 1px solid var(--rule);
+  height: 56px; display: flex; align-items: center;
+}
+.topnav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 40px;
+  width: 100%; display: flex; align-items: center; gap: 20px;
+}
+.wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 21px; font-weight: 700;
+  color: var(--accent); text-decoration: none; letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+.wordmark span { font-weight: 400; }
+.nav-tagline {
+  font-size: 12px; color: var(--text-secondary);
+  border-left: 1px solid var(--rule); padding-left: 20px;
+  display: none;
+}
+@media(min-width:640px){ .nav-tagline { display: block; } }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+.lang-toggle {
+  display: flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
+}
+.lang-toggle button {
+  padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; background: none; color: var(--text-secondary);
+  border: none; cursor: pointer; font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-toggle button.active { background: var(--accent); color: #fff; }
+
+/* ── Hero ── */
+.hero {
+  border-bottom: 1px solid var(--rule);
+  padding: 80px 40px 72px;
+  max-width: 1200px; margin: 0 auto;
+}
+.hero-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 52px;
+}
+.hero-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.02em; color: var(--text);
+  text-wrap: pretty; max-width: 640px;
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+.hero-body {
+  font-size: 15px; color: var(--text-secondary);
+  line-height: 1.65; max-width: 580px;
+  margin-top: 20px; text-wrap: pretty;
+}
+
+/* ── Stats ── */
+.stats-row {
+  display: flex; gap: 0; border: 1px solid var(--rule); border-radius: 8px;
+  overflow: hidden; align-self: start; flex-shrink: 0; min-width: 240px;
+  flex-direction: column;
+}
+.stat-item {
+  padding: 16px 20px; border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.stat-item:last-child { border-bottom: none; }
+.stat-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px; font-weight: 700; line-height: 1;
+  letter-spacing: -0.01em; color: var(--text); margin-bottom: 3px;
+}
+.stat-number.bad  { color: var(--risk-red); }
+.stat-number.warn { color: oklch(0.55 0.15 60); }
+.stat-label { font-size: 10px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-tertiary); }
+.stat-note  { font-size: 10px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* ── Hero Charts ── */
+.hero-charts {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+}
+.chart-panel {
+  padding: 18px 20px 14px;
+  position: relative;
+}
+.chart-panel:first-child { border-right: 1px solid var(--rule); }
+.chart-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-tertiary); margin-bottom: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.chart-title span { font-size: 13px; font-family: "Cormorant Garamond",Georgia,serif; font-weight: 700; letter-spacing: -0.01em; color: var(--text); text-transform: none; }
+.chart-svg { width: 100%; display: block; }
+.chart-anno { font-size: 9px; fill: var(--text-tertiary); }
+
+/* Horizontal rule under hero-top */
+.hero-divider {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center; gap: 24px;
+}
+.hero-divider-rule { height: 1px; background: var(--rule-light); }
+
+/* ── Filters ── */
+.filters {
+  padding: 32px 40px 0;
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-tertiary);
+}
+.filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-pill {
+  padding: 5px 12px; border-radius: 20px; border: 1px solid var(--rule);
+  font-size: 11px; font-weight: 600; cursor: pointer;
+  background: none; color: var(--text-secondary); font-family: inherit;
+  transition: all 0.15s;
+}
+.filter-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.filter-pill:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+/* ── Candidate Grid ── */
+.grid-section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 36px 40px 80px;
+}
+.candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media(max-width:1024px){ .candidate-grid { grid-template-columns: repeat(3,1fr); } }
+@media(max-width:720px)  { .candidate-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:440px)  { .candidate-grid { grid-template-columns: 1fr; } }
+
+/* ── Candidate Card ── */
+.ccard {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex; flex-direction: column;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s cubic-bezier(0.16,1,0.3,1),
+    transform 0.55s cubic-bezier(0.16,1,0.3,1),
+    box-shadow 0.2s ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+.ccard.revealed {
+  opacity: 1; transform: translateY(0);
+}
+.ccard:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  transform: translateY(-5px) !important;
+  border-color: var(--rule);
+  z-index: 2;
+}
+.ccard.not-analyzed {
+  opacity: 0.55 !important;
+  pointer-events: none;
+}
+.ccard.not-analyzed.revealed { opacity: 0.45; }
+
+/* Party accent stripe */
+.card-stripe { height: 3px; width: 100%; flex-shrink: 0; }
+
+.card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 14px; }
+
+.card-party {
+  display: flex; align-items: center; gap: 7px;
+}
+.card-party-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.card-party-name { font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-tertiary); }
+
+.card-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px; font-weight: 700; line-height: 1.1;
+  letter-spacing: -0.01em; color: var(--text);
+}
+
+.card-position { font-size: 11px; color: var(--text-secondary); }
+
+/* Grade + axis row */
+.card-metrics {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: auto;
+}
+.card-grade {
+  width: 40px; height: 40px; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; position: relative;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px; font-weight: 700;
+}
+.card-grade-sub {
+  position: absolute; top: 2px; right: 4px;
+  font-size: 9px; font-weight: 700; line-height: 1;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Axis mini bar */
+.card-axis-wrap { flex: 1; }
+.card-axis-label {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--text-tertiary);
+  margin-bottom: 5px; display: flex; justify-content: space-between;
+}
+.card-axis-track {
+  position: relative; height: 4px;
+  background: var(--rule-light); border-radius: 2px;
+}
+.card-axis-track::after {
+  content: ''; position: absolute; top: -2px; left: 50%;
+  width: 1px; height: 8px; background: var(--rule); opacity: 0.6;
+}
+.card-axis-dot {
+  position: absolute; top: 50%;
+  width: 10px; height: 10px; border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--bg-card);
+}
+
+.card-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--rule-light);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-date { font-size: 10px; color: var(--text-tertiary); }
+.card-cta {
+  font-size: 11px; font-weight: 600; color: var(--accent);
+  display: flex; align-items: center; gap: 4px;
+  transition: gap 0.15s;
+}
+.ccard:hover .card-cta { gap: 7px; }
+.card-soon {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-tertiary);
+  background: var(--bg-subtle); padding: 3px 8px; border-radius: 3px;
+}
+
+/* ── Compare CTA ── */
+.compare-section {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 48px 40px;
+  background: var(--bg-subtle);
+}
+.compare-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  flex-wrap: wrap;
+}
+.compare-text h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px; font-weight: 700; color: var(--text);
+  margin-bottom: 8px;
+}
+.compare-text p { font-size: 13px; color: var(--text-secondary); max-width: 460px; line-height: 1.6; }
+.compare-btn {
+  padding: 14px 28px; background: var(--accent); color: #fff;
+  border: none; border-radius: 8px; font-size: 13px; font-weight: 600;
+  cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 8px;
+  white-space: nowrap; transition: opacity 0.15s;
+}
+.compare-btn:hover { opacity: 0.88; }
+.compare-btn-soon {
+  font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase;
+  background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 3px;
+}
+
+/* ── Methodology ── */
+.method-section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 72px 40px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media(max-width:640px){ .method-section { grid-template-columns: 1fr; gap: 32px; } }
+.method-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+  padding-top: 4px;
+}
+.method-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px; font-weight: 700; color: var(--text);
+  margin-bottom: 16px; line-height: 1.2;
+}
+.method-content p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; max-width: 640px; text-wrap: pretty; }
+.method-content p:last-child { margin-bottom: 0; }
+.method-pills {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px;
+}
+.method-pill {
+  padding: 5px 12px; border: 1px solid var(--rule); border-radius: 4px;
+  font-size: 11px; color: var(--text-secondary); font-weight: 500;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 32px 40px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 6px;
+}
+.footer-brand span { font-weight: 400; }
+.footer-note { font-size: 11px; color: var(--text-tertiary); max-width: 380px; line-height: 1.6; }
+.footer-links { display: flex; gap: 20px; font-size: 11px; color: var(--text-tertiary); }
+.footer-links a { text-decoration: none; color: inherit; }
+
+/* ── Tweaks panel ── */
+#tweaks-panel {
+  display: none; position: fixed; bottom: 24px; right: 24px;
+  background: var(--bg); border: 1px solid var(--rule);
+  border-radius: 10px; padding: 20px; width: 240px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14); z-index: 200; font-family: "DM Sans", sans-serif;
+}
+#tweaks-panel.open { display: block; }
+#tweaks-panel h3 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 16px; }
+.tweak-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.tweak-label { font-size: 12px; color: var(--text-secondary); }
+.tweak-toggle { display: flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.tweak-toggle button { padding: 5px 11px; font-size: 11px; font-weight: 600; background: none; border: none; cursor: pointer; color: var(--text-secondary); transition: background 0.15s, color 0.15s; font-family: inherit; }
+.tweak-toggle button.active { background: var(--accent); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────── -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a class="wordmark" href="#">é<span>lection</span> 2027</a>
+    <span class="nav-tagline" id="nav-tagline">L'analyse IA des programmes présidentiels</span>
+    <div class="nav-right">
+      <a href="Candidate Page.html" style="font-size:12px;color:var(--text-secondary);text-decoration:none;font-weight:500;" id="nav-candidate-link">Candidat test →</a>
+      <a href="#" style="font-size:12px;color:var(--text-secondary);text-decoration:none;font-weight:500;" id="nav-method">Méthode</a>
+      <div class="lang-toggle">
+        <button id="t-fr" class="active" onclick="setLang('fr')">FR</button>
+        <button id="t-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<div style="border-bottom:1px solid var(--rule)">
+<div class="hero">
+  <div class="hero-top">
+    <div>
+      <div class="hero-label" id="hero-label">Présidentielle française</div>
+      <h1 class="hero-title" id="hero-title">Que proposent<br/><em>vraiment</em> les candidats<br/>à l'Élysée&nbsp;?</h1>
+      <p class="hero-body" id="hero-body">Chaque programme analysé par 4 à 5 grands modèles d'IA sur des dimensions identiques. Les désaccords entre modèles sont préservés. Les sources, prompts et sorties brutes sont publics. L'objectif&nbsp;: l'analyse, pas l'advocacy.</p>
+    </div>
+    <!-- Stats panel -->
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-number bad" id="s1">112%</div>
+        <div class="stat-label" id="s1l">Dette publique / PIB</div>
+        <div class="stat-note" id="s1n">2025 · Eurostat</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number warn" id="s2">−5,5%</div>
+        <div class="stat-label" id="s2l">Déficit budgétaire</div>
+        <div class="stat-note" id="s2n">2024 · INSEE</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="s3">2050</div>
+        <div class="stat-label" id="s3l">Neutralité carbone</div>
+        <div class="stat-note" id="s3n">Objectif légal</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts row -->
+  <div class="hero-charts" id="hero-charts"></div>
+
+  <!-- Divider row -->
+  <div class="hero-divider">
+    <div class="hero-divider-rule"></div>
+    <span id="candidate-count-label" style="font-size:12px;color:var(--text-tertiary);white-space:nowrap">
+      5 candidats analysés · 3 à venir
+    </span>
+  </div>
+</div>
+</div>
+
+<!-- ── Filters ───────────────────────────────────────────────── -->
+<div class="filters">
+  <span class="filter-label" id="filter-label">Famille politique</span>
+  <div class="filter-pills" id="filter-pills">
+    <button class="filter-pill active" data-filter="all" id="fp-all">Tous</button>
+    <button class="filter-pill" data-filter="gauche" id="fp-gauche">Gauche</button>
+    <button class="filter-pill" data-filter="centre" id="fp-centre">Centre</button>
+    <button class="filter-pill" data-filter="droite" id="fp-droite">Droite</button>
+    <button class="filter-pill" data-filter="ecologie" id="fp-ecologie">Écologie</button>
+  </div>
+</div>
+
+<!-- ── Candidate Grid ─────────────────────────────────────────── -->
+<div class="grid-section">
+  <div class="candidate-grid" id="candidate-grid"></div>
+</div>
+
+<!-- ── Compare CTA ───────────────────────────────────────────── -->
+<div class="compare-section">
+  <div class="compare-inner">
+    <div class="compare-text">
+      <h2 id="compare-title">Comparer les candidats</h2>
+      <p id="compare-body">Sélectionnez 2 à 4 candidats analysés pour les confronter dimension par dimension — positionnement, finances publiques, impact intergénérationnel.</p>
+    </div>
+    <button class="compare-btn" onclick="location.href='Comparison Page.html'">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="6" height="10" rx="1.5" stroke="white" strokeWidth="1.3"/><rect x="9" y="3" width="6" height="10" rx="1.5" stroke="white" strokeWidth="1.3"/><line x1="7" y1="8" x2="9" y2="8" stroke="white" strokeWidth="1.3"/></svg>
+      <span id="compare-btn-label">Comparer</span>
+      <span class="compare-btn-soon">Bientôt</span>
+    </button>
+  </div>
+</div>
+
+<!-- ── Methodology ────────────────────────────────────────────── -->
+<div style="border-top:1px solid var(--rule)">
+<div class="method-section" id="methode">
+  <div class="method-label" id="method-label">Méthode</div>
+  <div class="method-content">
+    <h2 id="method-title">Une analyse rigoureuse, sans agenda</h2>
+    <p id="method-p1">Chaque programme est soumis au <em>même</em> prompt à 4 ou 5 modèles frontières (GPT-4o, Claude, Gemini, Mistral, Llama). Les scores de positionnement politique ne sont jamais moyennés — les désaccords entre modèles sont affichés tels quels.</p>
+    <p id="method-p2">Un modèle agrégateur produit une synthèse, relue systématiquement par un humain avant publication. Le site ne recommande aucun candidat. Aucun financement partisan. Tous les prompts, sources et sorties JSON brutes sont accessibles dans le dépôt public.</p>
+    <div class="method-pills">
+      <span class="method-pill" id="mp1">Prompt unique & public</span>
+      <span class="method-pill" id="mp2">Désaccords préservés</span>
+      <span class="method-pill" id="mp3">Relecture humaine</span>
+      <span class="method-pill" id="mp4">Aucune recommandation</span>
+      <span class="method-pill" id="mp5">Sources citées</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">é<span>lection</span> 2027</div>
+      <p class="footer-note" id="footer-note">Analyse multi-IA des programmes présidentiels. Aucune recommandation de vote. Sources, prompts et sorties brutes publics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#methode" id="fl-method">Méthode</a>
+      <a href="#" id="fl-repo">Dépôt</a>
+      <a href="#" id="fl-legal">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Tweaks ──────────────────────────────────────────────────── -->
+<div id="tweaks-panel">
+  <h3>Tweaks</h3>
+  <div class="tweak-row">
+    <span class="tweak-label">Thème</span>
+    <div class="tweak-toggle">
+      <button id="tw-light" class="active" onclick="setTheme('light')">Clair</button>
+      <button id="tw-dark" onclick="setTheme('dark')">Sombre</button>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <span class="tweak-label">Langue</span>
+    <div class="tweak-toggle">
+      <button id="tw-fr" class="active" onclick="setLang('fr')">FR</button>
+      <button id="tw-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════
+const CANDIDATES = [
+  { id:"sophie-villeneuve", name:"Sophie Villeneuve", partyShort:"RD",  party:"Renouveau Démocratique", partyColor:"#3B6FD4", family:"centre", position:{fr:"Centre-gauche",en:"Centre-left"},   grade:"B", gradeSub:"+", ecoPos:-2, analyzed:true,  date:"19 avr. 2026", models:5, summary:{fr:"Programme social cohérent, financement économique insuffisant.",en:"Coherent social programme, insufficient economic funding."} },
+  { id:"eric-bertrand",     name:"Éric Bertrand",     partyShort:"CPR", party:"Cap pour la République", partyColor:"#E8A020", family:"centre", position:{fr:"Centre",      en:"Centre"},          grade:"B", gradeSub:"",  ecoPos: 1, analyzed:true,  date:"14 avr. 2026", models:4, summary:{fr:"Vision libérale avec garde-fous sociaux. Politique étrangère forte.",en:"Liberal vision with social safeguards. Strong foreign policy."} },
+  { id:"antoine-delacroix", name:"Antoine Delacroix",  partyShort:"LC",  party:"Les Conservateurs",     partyColor:"#2A7A4B", family:"droite", position:{fr:"Centre-droit",en:"Centre-right"},   grade:"B", gradeSub:"-", ecoPos: 3, analyzed:true,  date:"11 avr. 2026", models:5, summary:{fr:"Solide sur les institutions et la sécurité. Écologie en retrait.",en:"Solid on institutions and security. Ecology sidelined."} },
+  { id:"claire-fontaine",   name:"Claire Fontaine",    partyShort:"UGP", party:"Union de la Gauche",    partyColor:"#C02535", family:"gauche", position:{fr:"Gauche",      en:"Left"},            grade:"C", gradeSub:"+", ecoPos:-4, analyzed:true,  date:"8 avr. 2026",  models:4, summary:{fr:"Ambitions redistributives fortes, financement non détaillé.",en:"Strong redistributive ambitions, funding not detailed."} },
+  { id:"lucie-arnaud",      name:"Lucie Arnaud",       partyShort:"MEP", party:"Mouvement Écologiste",  partyColor:"#4DA840", family:"ecologie",position:{fr:"Écologiste",en:"Ecologist"},       grade:"C", gradeSub:"",  ecoPos:-3, analyzed:true,  date:"5 avr. 2026",  models:4, summary:{fr:"Cohérent sur le climat, lacunes marquées en sécurité et finances.",en:"Coherent on climate, notable gaps in security and finance."} },
+  { id:"jean-tessier",      name:"Jean-Paul Tessier",  partyShort:"RF",  party:"République Forte",      partyColor:"#1A2E6E", family:"droite", position:{fr:"Droite",      en:"Right"},           grade:"C", gradeSub:"-", ecoPos: 4, analyzed:false, date:"—",            models:0, summary:{fr:"",en:""} },
+  { id:"isabelle-marchand", name:"Isabelle Marchand",  partyShort:"GS",  party:"Gauche Socialiste",     partyColor:"#E05090", family:"gauche", position:{fr:"Centre-gauche",en:"Centre-left"},   grade:"C", gradeSub:"+", ecoPos:-2, analyzed:false, date:"—",            models:0, summary:{fr:"",en:""} },
+  { id:"pierre-moreau",     name:"Pierre Moreau",      partyShort:"MNP", party:"Mouvement Nat. Pop.",   partyColor:"#8B1A1A", family:"droite", position:{fr:"Droite nationale",en:"Nat. Right"}, grade:"D", gradeSub:"+", ecoPos: 5, analyzed:false, date:"—",            models:0, summary:{fr:"",en:""} },
+];
+
+const GRADE_COLORS = { A:"#2a6f3e", B:"#1a5ca8", C:"#c47d00", D:"#b53a1e", F:"#7a0000" };
+const gc = g => GRADE_COLORS[g?.[0]] || "#555";
+
+// ═══════════════════════════════════════════════════════
+// I18N
+// ═══════════════════════════════════════════════════════
+const T = {
+  fr: {
+    heroLabel: "Présidentielle française",
+    heroTitle: "Que proposent<br/><em>vraiment</em> les candidats<br/>à l'Élysée\u00a0?",
+    heroBody: "Chaque programme analysé par 4 à 5 grands modèles d'IA sur des dimensions identiques. Les désaccords entre modèles sont préservés. Les sources, prompts et sorties brutes sont publics. L'objectif\u00a0: l'analyse, pas l'advocacy.",
+    s1l:"Dette publique / PIB", s1n:"2025 · Eurostat",
+    s2l:"Déficit budgétaire",   s2n:"2024 · INSEE",
+    s3l:"Neutralité carbone",   s3n:"Objectif légal",
+    candidateCount: n => `${n} candidats analysés · ${8-n} à venir`,
+    filterLabel: "Famille politique",
+    fpAll:"Tous", fpGauche:"Gauche", fpCentre:"Centre", fpDroite:"Droite", fpEco:"Écologie",
+    compareTitle: "Comparer les candidats",
+    compareBody: "Sélectionnez 2 à 4 candidats analysés pour les confronter dimension par dimension — positionnement, finances publiques, impact intergénérationnel.",
+    compareBtn: "Comparer",
+    methodLabel: "Méthode",
+    methodTitle: "Une analyse rigoureuse, sans agenda",
+    methodP1: "Chaque programme est soumis au <em>même</em> prompt à 4 ou 5 modèles frontières (GPT-4o, Claude, Gemini, Mistral, Llama). Les scores de positionnement politique ne sont jamais moyennés — les désaccords entre modèles sont affichés tels quels.",
+    methodP2: "Un modèle agrégateur produit une synthèse, relue systématiquement par un humain avant publication. Le site ne recommande aucun candidat. Aucun financement partisan. Tous les prompts, sources et sorties JSON brutes sont accessibles dans le dépôt public.",
+    mp1:"Prompt unique & public", mp2:"Désaccords préservés", mp3:"Relecture humaine", mp4:"Aucune recommandation", mp5:"Sources citées",
+    footerNote: "Analyse multi-IA des programmes présidentiels. Aucune recommandation de vote. Sources, prompts et sorties brutes publics.",
+    flMethod:"Méthode", flRepo:"Dépôt", flLegal:"Mentions légales",
+    navCandidate:"Candidat test →", navMethod:"Méthode",
+    navTagline: "L'analyse IA des programmes présidentiels",
+    cardCta: "Voir l'analyse →", cardSoon: "Analyse à venir",
+    gauche:"gauche", droite:"droite",
+  },
+  en: {
+    heroLabel: "French Presidential Election",
+    heroTitle: "What are the candidates<br/>actually <em>proposing</em><br/>for France\u00a0?",
+    heroBody: "Every programme analysed by 4–5 frontier AI models on identical dimensions. Disagreement between models preserved. Sources, prompts and raw outputs are public. The goal: analysis, not advocacy.",
+    s1l:"Public debt / GDP", s1n:"2025 · Eurostat",
+    s2l:"Budget deficit",    s2n:"2024 · INSEE",
+    s3l:"Carbon neutrality", s3n:"Legal target",
+    candidateCount: n => `${n} candidates analysed · ${8-n} coming soon`,
+    filterLabel: "Political family",
+    fpAll:"All", fpGauche:"Left", fpCentre:"Centre", fpDroite:"Right", fpEco:"Ecology",
+    compareTitle: "Compare candidates",
+    compareBody: "Select 2–4 analysed candidates to compare them dimension by dimension — positioning, public finance, intergenerational impact.",
+    compareBtn: "Compare",
+    methodLabel: "Method",
+    methodTitle: "Rigorous analysis, no agenda",
+    methodP1: "Every programme is submitted to the <em>same</em> prompt across 4–5 frontier models (GPT-4o, Claude, Gemini, Mistral, Llama). Political positioning scores are never averaged — model disagreements are shown as-is.",
+    methodP2: "An aggregator model produces a synthesis, reviewed by a human before publication. The site recommends no candidate. No partisan funding. All prompts, sources and raw JSON outputs are in the public repository.",
+    mp1:"Single public prompt", mp2:"Dissent preserved", mp3:"Human review", mp4:"No endorsement", mp5:"Sources cited",
+    footerNote: "Multi-AI analysis of presidential programmes. No voting recommendation. Sources, prompts and raw outputs are public.",
+    flMethod:"Method", flRepo:"Repository", flLegal:"Legal",
+    navCandidate:"Test candidate →", navMethod:"Method",
+    navTagline: "AI analysis of presidential programmes",
+    cardCta: "View analysis →", cardSoon: "Coming soon",
+    gauche:"left", droite:"right",
+  }
+};
+
+// ═══════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════
+const TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "lang": "fr"
+}/*EDITMODE-END*/;
+let currentLang = TWEAK_DEFAULS.lang;
+let currentFilter = "all";
+
+// ═══════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════
+function renderGrid() {
+  const t = T[currentLang];
+  const grid = document.getElementById("candidate-grid");
+  const filtered = currentFilter === "all"
+    ? CANDIDATES
+    : CANDIDATES.filter(c => c.family === currentFilter);
+
+  grid.innerHTML = "";
+  filtered.forEach((c, i) => {
+    const col = i % 4;
+    const delay = col * 90;
+    const color = gc(c.grade);
+    const axisLeft = ((c.ecoPos + 5) / 10) * 100;
+
+    const el = document.createElement("a");
+    el.className = "ccard" + (c.analyzed ? "" : " not-analyzed");
+    el.href = c.analyzed ? "Candidate Page.html" : "#";
+    el.style.transitionDelay = delay + "ms";
+
+    el.innerHTML = `
+      <div class="card-stripe" style="background:${c.partyColor}"></div>
+      <div class="card-body">
+        <div class="card-party">
+          <div class="card-party-dot" style="background:${c.partyColor}"></div>
+          <span class="card-party-name">${c.partyShort} · ${c.party}</span>
+        </div>
+        <div class="card-name">${c.name}</div>
+        <div class="card-position">${c.position[currentLang]}</div>
+        ${c.analyzed && c.summary[currentLang] ? `<div style="font-size:11px;color:var(--text-secondary);line-height:1.5;text-wrap:pretty">${c.summary[currentLang]}</div>` : ''}
+        <div class="card-metrics">
+          ${c.analyzed ? `
+            <div class="card-grade" style="background:${color}12;border:2px solid ${color}">
+              <span style="color:${color};font-size:20px;font-weight:700;font-family:'Cormorant Garamond',serif;line-height:1">${c.grade}</span>
+              <span class="card-grade-sub" style="color:${color}">${c.gradeSub}</span>
+            </div>
+            <div class="card-axis-wrap">
+              <div class="card-axis-label">
+                <span>${t.gauche}</span><span>${t.droite}</span>
+              </div>
+              <div class="card-axis-track">
+                <div class="card-axis-dot" style="left:${axisLeft}%;background:${c.partyColor}"></div>
+              </div>
+            </div>
+          ` : `<div style="height:40px;display:flex;align-items:center"><span class="card-soon">${t.cardSoon}</span></div>`}
+        </div>
+      </div>
+      <div class="card-footer">
+        <span class="card-date">${c.analyzed ? (currentLang==='fr'?'Mis à jour':'Updated') + ' ' + c.date : '—'}</span>
+        ${c.analyzed ? `<span class="card-cta">${t.cardCta}</span>` : ''}
+      </div>
+    `;
+    grid.appendChild(el);
+  });
+
+  // Scroll reveal with IntersectionObserver
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("revealed");
+        obs.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -60px 0px", threshold: 0.05 });
+
+  grid.querySelectorAll(".ccard").forEach(el => obs.observe(el));
+}
+
+function applyTranslations() {
+  const t = T[currentLang];
+  const analyzed = CANDIDATES.filter(c => c.analyzed).length;
+  const set = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
+
+  set("hero-label", t.heroLabel);
+  set("hero-title", t.heroTitle);
+  set("hero-body", t.heroBody);
+  set("s1l", t.s1l); set("s1n", t.s1n);
+  set("s2l", t.s2l); set("s2n", t.s2n);
+  set("s3l", t.s3l); set("s3n", t.s3n);
+  set("candidate-count-label", t.candidateCount(analyzed));
+  set("filter-label", t.filterLabel);
+  set("fp-all", t.fpAll); set("fp-gauche", t.fpGauche);
+  set("fp-centre", t.fpCentre); set("fp-droite", t.fpDroite); set("fp-ecologie", t.fpEco);
+  set("compare-title", t.compareTitle);
+  set("compare-body", t.compareBody);
+  set("compare-btn-label", t.compareBtn);
+  set("method-label", t.methodLabel);
+  set("method-title", t.methodTitle);
+  set("method-p1", t.methodP1);
+  set("method-p2", t.methodP2);
+  set("mp1", t.mp1); set("mp2", t.mp2); set("mp3", t.mp3); set("mp4", t.mp4); set("mp5", t.mp5);
+  set("footer-note", t.footerNote);
+  set("fl-method", t.flMethod); set("fl-repo", t.flRepo); set("fl-legal", t.flLegal);
+  set("nav-candidate-link", t.navCandidate);
+  set("nav-method", t.navMethod);
+  set("nav-tagline", t.navTagline);
+
+  // Lang toggle sync
+  ["fr","en"].forEach(l => {
+    const b = document.getElementById("t-"+l);
+    const b2 = document.getElementById("tw-"+l);
+    if (b)  b.classList.toggle("active", l === currentLang);
+    if (b2) b2.classList.toggle("active", l === currentLang);
+  });
+
+  renderGrid();
+}
+
+// ═══════════════════════════════════════════════════════
+// FILTERS
+// ═══════════════════════════════════════════════════════
+document.getElementById("filter-pills").addEventListener("click", e => {
+  const btn = e.target.closest(".filter-pill");
+  if (!btn) return;
+  currentFilter = btn.dataset.filter;
+  document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+  btn.classList.add("active");
+  renderGrid();
+});
+
+// ═══════════════════════════════════════════════════════
+// TWEAKS & THEME
+// ═══════════════════════════════════════════════════════
+function setTheme(t) {
+  document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "");
+  ["light","dark"].forEach(v => {
+    const b = document.getElementById("tw-"+v);
+    if (b) b.classList.toggle("active", v === t);
+  });
+  window.parent.postMessage({ type:"__edit_mode_set_keys", edits: { theme:t } }, "*");
+  renderHeroCharts();
+}
+function setLang(l) {
+  currentLang = l;
+  try { localStorage.setItem("e27-lang", l); } catch {}
+  applyTranslations();
+  renderHeroCharts();
+  window.parent.postMessage({ type:"__edit_mode_set_keys", edits: { lang:l } }, "*");
+}
+
+window.addEventListener("message", e => {
+  if (e.data && e.data.type === "__activate_edit_mode")   document.getElementById("tweaks-panel").classList.add("open");
+  if (e.data && e.data.type === "__deactivate_edit_mode") document.getElementById("tweaks-panel").classList.remove("open");
+});
+window.parent.postMessage({ type:"__edit_mode_available" }, "*");
+
+// ═══════════════════════════════════════════════════════
+// HERO CHARTS
+// ═══════════════════════════════════════════════════════
+function renderHeroCharts() {
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  const col = {
+    rule:      isDark ? "oklch(0.22 0.015 260)" : "oklch(0.86 0.008 260)",
+    ruleLight: isDark ? "oklch(0.19 0.012 260)" : "oklch(0.91 0.006 260)",
+    text:      isDark ? "oklch(0.50 0.010 260)" : "oklch(0.62 0.01 260)",
+    accent:    isDark ? "oklch(0.65 0.18 264)"  : "oklch(0.44 0.18 264)",
+    red:       isDark ? "oklch(0.65 0.18 25)"   : "oklch(0.50 0.18 25)",
+    green:     isDark ? "oklch(0.58 0.15 145)"  : "oklch(0.42 0.16 145)",
+    bg:        isDark ? "oklch(0.13 0.016 260)" : "oklch(0.985 0.005 75)",
+  };
+  const lang = currentLang;
+
+  // ── Debt chart data ──
+  const debtData = [
+    [2000,57],[2001,56],[2002,59],[2003,63],[2004,65],[2005,67],[2006,64],
+    [2007,64],[2008,68],[2009,83],[2010,82],[2011,85],[2012,90],[2013,93],
+    [2014,95],[2015,95],[2016,98],[2017,98],[2018,98],[2019,97],[2020,115],
+    [2021,113],[2022,112],[2023,110],[2024,112],[2025,112]
+  ];
+
+  // ── Demographics data (65+ % of pop, with projections) ──
+  const demoData = [
+    [2000,16.1],[2005,16.6],[2010,17.0],[2015,18.8],[2020,20.8],
+    [2025,22.2],[2030,24.0],[2035,25.6],[2040,27.0],[2045,27.9],[2050,28.8]
+  ];
+
+  function makeAreaChart({ data, W=520, H=88, yMin, yMax, color, fillColor, refY, refLabel, annotations, yearLabels, projectionFrom }) {
+    const PAD = { t:8, r:8, b:24, l:8 };
+    const cw = W - PAD.l - PAD.r;
+    const ch = H - PAD.t - PAD.b;
+
+    const years = data.map(d => d[0]);
+    const vals  = data.map(d => d[1]);
+    const xMin = years[0], xMax = years[years.length-1];
+    const xScale = y => PAD.l + ((y - xMin) / (xMax - xMin)) * cw;
+    const yScale = v => PAD.t + ch - ((v - yMin) / (yMax - yMin)) * ch;
+
+    // Build path
+    const pts = data.map(([yr, v]) => `${xScale(yr).toFixed(1)},${yScale(v).toFixed(1)}`);
+    const linePath = `M${pts.join(" L")}`;
+    // Area path - split at projection line if needed
+    const solidEnd = projectionFrom ? data.findIndex(d => d[0] >= projectionFrom) : data.length;
+    const solidPts = data.slice(0, solidEnd + 1);
+    const solidArea = solidPts.length > 1
+      ? `M${solidPts.map(([yr,v]) => `${xScale(yr).toFixed(1)},${yScale(v).toFixed(1)}`).join(" L")} L${xScale(solidPts[solidPts.length-1][0]).toFixed(1)},${(PAD.t+ch).toFixed(1)} L${xScale(solidPts[0][0]).toFixed(1)},${(PAD.t+ch).toFixed(1)} Z`
+      : "";
+
+    const projPts = projectionFrom ? data.slice(Math.max(0, solidEnd-1)) : [];
+    const projArea = projPts.length > 1
+      ? `M${projPts.map(([yr,v]) => `${xScale(yr).toFixed(1)},${yScale(v).toFixed(1)}`).join(" L")} L${xScale(projPts[projPts.length-1][0]).toFixed(1)},${(PAD.t+ch).toFixed(1)} L${xScale(projPts[0][0]).toFixed(1)},${(PAD.t+ch).toFixed(1)} Z`
+      : "";
+
+    // Year labels
+    const labelYears = yearLabels || [xMin, 2008, 2020, xMax];
+    const labelEls = labelYears.map(yr => {
+      const x = xScale(yr).toFixed(1);
+      return `<text x="${x}" y="${H-4}" text-anchor="middle" font-size="8" fill="${col.text}" font-family="DM Sans,sans-serif">${yr}</text>`;
+    }).join("");
+
+    // Reference line
+    const refEl = refY != null ? `
+      <line x1="${PAD.l}" y1="${yScale(refY).toFixed(1)}" x2="${W-PAD.r}" y2="${yScale(refY).toFixed(1)}"
+        stroke="${col.ruleLight}" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="${W-PAD.r-2}" y="${(yScale(refY)-3).toFixed(1)}" text-anchor="end" font-size="8" fill="${col.text}" font-family="DM Sans,sans-serif">${refLabel}</text>
+    ` : "";
+
+    // Projection separator
+    const projEl = projectionFrom ? `
+      <line x1="${xScale(projectionFrom).toFixed(1)}" y1="${PAD.t}" x2="${xScale(projectionFrom).toFixed(1)}" y2="${PAD.t+ch}"
+        stroke="${col.ruleLight}" stroke-width="1" stroke-dasharray="2,3"/>
+      <text x="${(xScale(projectionFrom)+4).toFixed(1)}" y="${(PAD.t+10).toFixed(1)}" font-size="8" fill="${col.text}" font-family="DM Sans,sans-serif">${lang==='fr'?'projection →':'projection →'}</text>
+    ` : "";
+
+    // Annotations
+    const annoEls = (annotations||[]).map(({yr, label, dy=0}) => {
+      const x = xScale(yr).toFixed(1), y = yScale(data.find(d=>d[0]===yr)?.[1]??yMin);
+      return `
+        <circle cx="${x}" cy="${y.toFixed(1)}" r="2.5" fill="${color}"/>
+        <text x="${x}" y="${(y-6+dy).toFixed(1)}" text-anchor="middle" font-size="8" fill="${col.text}" font-family="DM Sans,sans-serif">${label}</text>
+      `;
+    }).join("");
+
+    return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="grad-${color.replace(/[^a-z]/gi,'')}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${fillColor}" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="${fillColor}" stop-opacity="0.02"/>
+        </linearGradient>
+        <linearGradient id="gradp-${color.replace(/[^a-z]/gi,'')}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${fillColor}" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="${fillColor}" stop-opacity="0.01"/>
+        </linearGradient>
+      </defs>
+      ${solidArea ? `<path d="${solidArea}" fill="url(#grad-${color.replace(/[^a-z]/gi,'')})" />` : ""}
+      ${projArea  ? `<path d="${projArea}"  fill="url(#gradp-${color.replace(/[^a-z]/gi,'')})" />` : ""}
+      <path d="${linePath}" fill="none" stroke="${color}" stroke-width="1.5"/>
+      ${refEl}${projEl}${annoEls}${labelEls}
+    </svg>`;
+  }
+
+  const debtChart = makeAreaChart({
+    data: debtData, W: 520, H: 88, yMin: 40, yMax: 125,
+    color: col.red, fillColor: col.red,
+    refY: 60, refLabel: lang==='fr'?'Critère 60% (Maastricht)':'Maastricht 60% criterion',
+    annotations: [
+      { yr: 2009, label: lang==='fr'?'Crise':'Crisis', dy: -2 },
+      { yr: 2020, label: 'COVID', dy: -2 }
+    ],
+    yearLabels: [2000, 2008, 2020, 2025]
+  });
+
+  const demoChart = makeAreaChart({
+    data: demoData, W: 520, H: 88, yMin: 13, yMax: 32,
+    color: col.accent, fillColor: col.accent,
+    projectionFrom: 2025,
+    annotations: [],
+    yearLabels: [2000, 2025, 2050]
+  });
+
+  const debtNow = `112%`;
+  const demoNow = `22%`;
+
+  document.getElementById("hero-charts").innerHTML = `
+    <div class="chart-panel">
+      <div class="chart-title">
+        ${lang==='fr'?'Dette publique / PIB':'Public debt / GDP'}
+        <span class="bad" style="color:${col.red}">${debtNow}</span>
+      </div>
+      ${debtChart}
+    </div>
+    <div class="chart-panel">
+      <div class="chart-title">
+        ${lang==='fr'?'Population 65 ans et plus':'Population aged 65+'}
+        <span style="color:${col.accent}">${demoNow} → 29%</span>
+      </div>
+      ${demoChart}
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════
+try { const l = localStorage.getItem("e27-lang"); if (l) currentLang = l; } catch {}
+setTheme(TWEAK_DEFAULS.theme);
+applyTranslations();
+renderHeroCharts();
+</script>
+</body>
+</html>

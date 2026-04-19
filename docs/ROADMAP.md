@@ -47,14 +47,14 @@ Format: `M_<FeatureCluster>`
 | M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
 | M_AnalysisPrompts | ✅ Done | The analysis prompt, schema, inline adversarial pass |
 | M_Aggregation | ✅ Done | Aggregator prompt, agreement_map, dissent preservation, human review CLI |
-| M_AnalysisModes | 🚧 Spike active | Manual web-chat + Copilot-agent execution modes, test-candidate scaffolding, publish guard |
+| M_AnalysisModes | ✅ Done | Manual web-chat + Copilot-agent execution modes, test-candidate scaffolding, publish guard |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
 
 ### 📅 Phase 2: Website (planned)
 
 | Milestone | Status | Description |
 |-----------|--------|-------------|
-| M_WebsiteCore | 📋 Planned (spike needed) | Next.js app, candidate page, data loading |
+| M_WebsiteCore | � In progress | Next.js (App Router + static export), candidate page, build-time data loading |
 | M_VisualComponents | 📋 Planned (spike needed) | Radar chart, intergenerational split, risk heatmap, trajectory chart |
 | M_Transparency | 📋 Planned (spike needed) | Transparency drawer — raw outputs, prompts, sources exposed |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
@@ -271,15 +271,41 @@ Format: `M_<FeatureCluster>`
 
 ### M_WebsiteCore
 
-**Goal:** Next.js app reading from `candidates/` at build time, rendering a basic candidate page.
+**Goal:** Next.js app reading from `candidates/` at build time, rendering a complete candidate page matching the `Candidate Page.html` prototype.
 
-**Depends on:** M_FirstCandidate (need real data to build against)
+**Depends on:** M_FirstCandidate (real data); in the meantime, iterates against `candidates/test-omega`.
+
+**Status:** 🚧 In Progress. Spike `0050` active (2026-04-19); implementation tasks `0051`–`0064` in `tasks/backlog/M_WebsiteCore/`.
 
 **Spike produces:**
-- `docs/specs/website/structure.md` (complete)
-- Component architecture
-- Data loading strategy (filesystem at build time)
-- Backlog tasks
+- `docs/specs/website/nextjs-architecture.md` (finalized Stable via task `0051`)
+- `docs/specs/website/structure.md` promoted Draft → **Stable** (task `0051`)
+- `site/` package scaffold with App Router + `output: "export"` + Tailwind + OKLCH token port (tasks `0052`–`0053`)
+- Build-time data loader with Zod re-validation (task `0054`)
+- Derivation library — top-level grade, synthèse selection, radar shape (task `0055`)
+- Candidate page route `/candidat/[id]` with all five sections matching the prototype (tasks `0057`–`0062`)
+- Minimal transparency footer with metadata + prompt hashes (task `0063` — full drawer deferred to M_Transparency)
+- End-to-end build smoke test against test-omega (task `0064`)
+
+**Key design decisions (spike `0050`):**
+- App Router + `output: "export"` (no API routes, no ISR)
+- `site/` is a pnpm workspace sibling of `candidates/` and `scripts/`
+- Schema re-exported from pipeline via `@pipeline/*` TS path alias (single source of truth)
+- OKLCH CSS variables ported verbatim from prototype; Tailwind references them via `theme.extend.colors`
+- All derived view-model fields are pure functions tested against test-omega
+- Risk heatmap rebuilt per-risk (probability + severity dots) to avoid cardinal aggregation — deliberate divergence from prototype
+- Top-level grade modifier (`+`/`-`) describes consensus strength, never substantive judgement
+- FR is canonical; EN toggle is cosmetic (aggregated content stays in source language)
+
+**Scope boundary (what this milestone does NOT cover):**
+- Landing page (→ M_Landing)
+- Comparison page (→ M_Comparison)
+- Methodology, Changelog, About pages
+- Full transparency drawer with raw-output viewer, agreement map UI, sources.md rendering (→ M_Transparency)
+- Polished signature visuals — animated radar bands, trajectory chart, interactive risk heatmap, intergen hover affordances (→ M_VisualComponents)
+- Accessibility audit / lighthouse budget (→ M_Accessibility)
+- Real i18n infrastructure (→ M_I18n, under consideration)
+- Deployment pipeline (Vercel / Cloudflare config, preview envs)
 
 ---
 

@@ -14,12 +14,24 @@ export default tseslint.config(
     },
   },
   {
+    // Site files: React/Next.js rules run via `next lint` inside site/.
+    // At the root level we only apply base + TS rules, relaxed for JSX/React.
+    files: ["site/**/*.ts", "site/**/*.tsx"],
+    rules: {
+      "no-console": "off",
+    },
+  },
+  {
     ignores: [
       "node_modules/",
-      "site/",
+      "site/node_modules/",
+      "site/.next/",
+      "site/out/",
+      "site/next-env.d.ts",
       "scripts/logs/",
       "*.js",
       "!eslint.config.js",
     ],
   },
 );
+

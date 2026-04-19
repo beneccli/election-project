@@ -1,7 +1,7 @@
 # Website Structure
 
 > **Version:** 1.0
-> **Status:** Draft — to be finalized by M_WebsiteCore spike
+> **Status:** Stable
 
 ---
 
@@ -349,6 +349,7 @@ Detailed specs in [`visual-components.md`](visual-components.md). Summary:
 
 ## Related Specs
 
+- [`nextjs-architecture.md`](nextjs-architecture.md) — package layout, build-time loader, derivation rules, component inventory
 - [`visual-components.md`](visual-components.md)
 - [`transparency.md`](transparency.md)
 - [`../analysis/dimensions.md`](../analysis/dimensions.md)
