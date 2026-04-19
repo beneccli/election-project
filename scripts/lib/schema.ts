@@ -408,6 +408,286 @@ export const AnalysisOutputSchema = z
 
 export type AnalysisOutput = z.infer<typeof AnalysisOutputSchema>;
 
-/** Placeholder — real schema defined in M_Aggregation */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const AggregatedOutputSchema: z.ZodType<any> = z.any();
+// ---------------------------------------------------------------------------
+// AggregatedOutputSchema — aggregated.draft.json / aggregated.json
+// See docs/specs/analysis/aggregation.md (Stable)
+//
+// NON-NEGOTIABLE GUARDRAILS encoded here:
+//   1. Aggregated positioning has NO `score` field. The per-model integer
+//      `score` lives only in raw-outputs/. Aggregated positioning is an
+//      ordinal interval + modal + dissent list. Cardinal averaging is
+//      prohibited by editorial principle 4 and enforced by `.strict()`.
+//   2. Every aggregated claim carries inline provenance
+//      (`supported_by`, `dissenters`). `supported_by` is non-empty; a claim
+//      with no supporting model is a schema error.
+//   3. `consensus_interval` tuples satisfy `min <= max` via `.refine`.
+//   4. Absence findings (`problems_ignored`, `unsolved_problems`) inherit
+//      the per-model carve-out allowing empty `source_refs` — the analytical
+//      content is the absence itself.
+// ---------------------------------------------------------------------------
+
+/** A model version string identifier (e.g. "claude-opus-4-0-20250514"). */
+const ModelIdentifierSchema = z.string().min(1);
+
+/**
+ * Inline provenance attached to every aggregated claim.
+ * `supported_by` must be non-empty. Claims with no supporting model are
+ * routed to `flagged_for_review[]`, not published.
+ */
+const supportedBySchema = z.array(ModelIdentifierSchema).min(1);
+const dissentersSchema = z.array(ModelIdentifierSchema);
+
+/** Ordered integer interval in [-5, +5] with min <= max. */
+const ConsensusIntervalSchema = z
+  .tuple([PositioningScoreSchema, PositioningScoreSchema])
+  .refine((t) => t[0] <= t[1], {
+    message: "consensus_interval must satisfy min <= max",
+  });
+
+/** Per-axis dissent entry — verbatim model reasoning preserved. */
+const PositioningDissentSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    position: PositioningScoreSchema,
+    reasoning: z.string().min(1),
+  })
+  .strict();
+
+/**
+ * Aggregated per-axis positioning.
+ * NOTE: no `score` field. `.strict()` enforces this — any `score` key in
+ * input is an unknown key and rejected. This is the cardinal-averaging
+ * guardrail. See docs/specs/analysis/political-positioning.md.
+ */
+const AggregatedPositioningAxisSchema = z
+  .object({
+    consensus_interval: ConsensusIntervalSchema,
+    modal_score: PositioningScoreSchema.nullable(),
+    anchor_narrative: z.string().min(1),
+    evidence: z.array(EvidenceRefSchema),
+    confidence: ConfidenceSchema,
+    dissent: z.array(PositioningDissentSchema),
+  })
+  .strict();
+
+const AggregatedPositioningSchema = z
+  .object({
+    economic: AggregatedPositioningAxisSchema,
+    social_cultural: AggregatedPositioningAxisSchema,
+    sovereignty: AggregatedPositioningAxisSchema,
+    institutional: AggregatedPositioningAxisSchema,
+    ecological: AggregatedPositioningAxisSchema,
+  })
+  .strict();
+
+/** Claim-shape extensions — per-model shape + inline provenance. */
+
+const AggregatedProblemAddressedSchema = ProblemAddressedSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedProblemIgnoredSchema = ProblemIgnoredSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedProblemWorsenedSchema = ProblemWorsenedSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedExecutionRiskSchema = ExecutionRiskSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedKeyMeasureSchema = KeyMeasureSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedUnsolvedProblemSchema = UnsolvedProblemSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+const AggregatedDownsideScenarioSchema = DownsideScenarioSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+/** Per-dimension grade: consensus + per-model dissent map. */
+const AggregatedGradeSchema = z
+  .object({
+    consensus: DimensionGradeSchema,
+    dissent: z.record(ModelIdentifierSchema, DimensionGradeSchema),
+  })
+  .strict();
+
+const AggregatedDimensionSchema = z
+  .object({
+    grade: AggregatedGradeSchema,
+    summary: z.string().min(1),
+    problems_addressed: z.array(AggregatedProblemAddressedSchema),
+    problems_ignored: z.array(AggregatedProblemIgnoredSchema),
+    problems_worsened: z.array(AggregatedProblemWorsenedSchema),
+    execution_risks: z.array(AggregatedExecutionRiskSchema),
+    key_measures: z.array(AggregatedKeyMeasureSchema),
+    confidence: ConfidenceSchema,
+  })
+  .strict();
+
+const AggregatedDimensionsSchema = z
+  .object({
+    economic_fiscal: AggregatedDimensionSchema,
+    social_demographic: AggregatedDimensionSchema,
+    security_sovereignty: AggregatedDimensionSchema,
+    institutional_democratic: AggregatedDimensionSchema,
+    environmental_long_term: AggregatedDimensionSchema,
+  })
+  .strict();
+
+const MagnitudeConsensusSchema = z.enum(["interval", "point", "contested"]);
+
+const IntergenerationalAgreementSchema = z
+  .object({
+    direction_consensus: z.boolean(),
+    magnitude_consensus: MagnitudeConsensusSchema,
+    dissenting_views: z.array(
+      z
+        .object({
+          model: ModelIdentifierSchema,
+          view: z.string().min(1),
+        })
+        .strict(),
+    ),
+  })
+  .strict();
+
+const AggregatedIntergenerationalSchema = IntergenerationalSchema.extend({
+  agreement: IntergenerationalAgreementSchema,
+}).strict();
+
+const AggregatedCounterfactualSchema = CounterfactualSchema.extend({
+  supported_by: supportedBySchema,
+  dissenters: dissentersSchema,
+  human_edit: z.boolean().optional(),
+}).strict();
+
+/** Agreement map — top-level synthesis of provenance. */
+const HighConfidenceClaimSchema = z
+  .object({
+    claim_id: z.string().min(1),
+    models: z.array(ModelIdentifierSchema).min(1),
+  })
+  .strict();
+
+const ContestedPositionSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    position: z.string().min(1),
+  })
+  .strict();
+
+const ContestedClaimSchema = z
+  .object({
+    claim_id: z.string().min(1),
+    positions: z.array(ContestedPositionSchema).min(1),
+  })
+  .strict();
+
+const CoverageStatusSchema = z.enum(["complete", "partial", "failed"]);
+
+const PositioningConsensusEntrySchema = z
+  .object({
+    interval: ConsensusIntervalSchema,
+    modal: PositioningScoreSchema.nullable(),
+    dissent_count: z.number().int().nonnegative(),
+  })
+  .strict();
+
+const AgreementMapSchema = z
+  .object({
+    high_confidence_claims: z.array(HighConfidenceClaimSchema),
+    contested_claims: z.array(ContestedClaimSchema),
+    coverage: z.record(ModelIdentifierSchema, CoverageStatusSchema),
+    positioning_consensus: z.record(
+      z.string().min(1),
+      PositioningConsensusEntrySchema,
+    ),
+  })
+  .strict();
+
+const ResolutionSchema = z.enum([
+  "approved",
+  "rejected",
+  "edited",
+  "skipped",
+]);
+
+const FlaggedForReviewSchema = z
+  .object({
+    claim: z.string().min(1),
+    claimed_by: z.array(ModelIdentifierSchema).min(1),
+    issue: z.string().min(1),
+    suggested_action: z.string().min(1),
+    resolution: ResolutionSchema.nullable().optional(),
+    reviewed_at: isoDatetime.optional(),
+    reviewer_id: z.string().min(1).optional(),
+    human_edit: z.boolean().optional(),
+    edited_text: z.string().min(1).optional(),
+  })
+  .strict();
+
+const AggregationMethodSchema = z
+  .object({
+    type: z.literal("meta_llm"),
+    model: z
+      .object({
+        provider: z.string().min(1),
+        version: z.string().min(1),
+      })
+      .strict(),
+    prompt_sha256: z.string().regex(sha256Pattern),
+    prompt_version: z.string().min(1),
+    run_at: isoDatetime,
+  })
+  .strict();
+
+const SourceModelEntrySchema = z
+  .object({
+    provider: z.string().min(1),
+    version: z.string().min(1),
+  })
+  .strict();
+
+export const AggregatedOutputSchema = z
+  .object({
+    schema_version: z.string().min(1),
+    candidate_id: z.string().regex(candidateIdPattern),
+    version_date: isoDateString,
+    source_models: z.array(SourceModelEntrySchema).min(1),
+    aggregation_method: AggregationMethodSchema,
+    summary: z.string().min(1).max(2000),
+    summary_agreement: ConfidenceSchema,
+    positioning: AggregatedPositioningSchema,
+    dimensions: AggregatedDimensionsSchema,
+    intergenerational: AggregatedIntergenerationalSchema,
+    counterfactual: AggregatedCounterfactualSchema,
+    unsolved_problems: z.array(AggregatedUnsolvedProblemSchema),
+    downside_scenarios: z.array(AggregatedDownsideScenarioSchema),
+    agreement_map: AgreementMapSchema,
+    coverage_warning: z.boolean(),
+    flagged_for_review: z.array(FlaggedForReviewSchema),
+  })
+  .strict();
+
+export type AggregatedOutput = z.infer<typeof AggregatedOutputSchema>;

@@ -5,19 +5,14 @@ import { mkdtemp, rm, mkdir, writeFile, readFile, access } from "node:fs/promise
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import * as pathsMod from "./lib/paths";
+import { buildValidAggregatedOutput } from "./lib/fixtures/aggregated-output/builder";
 
 vi.mock("./lib/paths", async () => {
   const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 
-const VALID_AGGREGATED = JSON.stringify({
-  candidate_id: "test-candidate",
-  model_count: 2,
-  consensus_themes: [{ name: "Economy", summary: "Pro-growth", supporting_models: ["model-a", "model-b"] }],
-  dissent_themes: [],
-  flagged_claims: [],
-});
+const VALID_AGGREGATED = JSON.stringify(buildValidAggregatedOutput());
 
 describe("aggregate", () => {
   let tmpDir: string;
