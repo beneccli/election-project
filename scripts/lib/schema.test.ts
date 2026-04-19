@@ -5,7 +5,7 @@ import {
   SourceMetaSchema,
   VersionMetadataSchema,
 } from "./schema";
-import { buildValidAnalysisOutput } from "./fixtures/analysis-output";
+import { buildValidAnalysisOutput } from "./fixtures/analysis-output/builder";
 
 // ---------------------------------------------------------------------------
 // CandidateMetadataSchema

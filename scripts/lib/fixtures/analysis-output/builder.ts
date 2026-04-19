@@ -14,7 +14,7 @@
  *
  * See docs/specs/analysis/output-schema.md (Stable).
  */
-import type { AnalysisOutput } from "../schema";
+import type { AnalysisOutput } from "../../schema";
 
 export function buildValidAnalysisOutput(): AnalysisOutput {
   const positioningAxis = {
