@@ -128,4 +128,41 @@ describe("publish", () => {
     );
     expect(candMeta.updated).toBe("2026-04-19");
   });
+
+  it("publish_refuses_fictional_candidate_without_allow_flag", async () => {
+    const candMeta = JSON.parse(
+      await readFile(join(candDir, "metadata.json"), "utf-8"),
+    );
+    candMeta.is_fictional = true;
+    await writeFile(
+      join(candDir, "metadata.json"),
+      JSON.stringify(candMeta),
+      "utf-8",
+    );
+
+    await expect(
+      publish({ candidate: "test-candidate", version: "2026-04-19" }),
+    ).rejects.toThrow(/is_fictional|fictional/i);
+  });
+
+  it("publish_allows_fictional_candidate_with_allow_flag", async () => {
+    const candMeta = JSON.parse(
+      await readFile(join(candDir, "metadata.json"), "utf-8"),
+    );
+    candMeta.is_fictional = true;
+    await writeFile(
+      join(candDir, "metadata.json"),
+      JSON.stringify(candMeta),
+      "utf-8",
+    );
+
+    await publish({
+      candidate: "test-candidate",
+      version: "2026-04-19",
+      allowFictional: true,
+    });
+
+    const target = await readlink(join(candDir, "current"));
+    expect(target).toBe("versions/2026-04-19");
+  });
 });

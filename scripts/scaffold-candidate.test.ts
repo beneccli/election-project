@@ -123,4 +123,59 @@ describe("scaffold-candidate", () => {
       }),
     ).rejects.toThrow("already exists");
   });
+
+  it("scaffold_rejects_is_fictional_without_test_prefix", async () => {
+    await expect(
+      scaffoldCandidate({
+        id: "jean-dupont",
+        name: "Jean Dupont",
+        party: "Parti Test",
+        date: "2026-04-19",
+        isFictional: true,
+      }),
+    ).rejects.toThrow(/test-/);
+  });
+
+  it("scaffold_rejects_test_prefix_without_is_fictional", async () => {
+    await expect(
+      scaffoldCandidate({
+        id: "test-jean",
+        name: "Jean Test",
+        party: "Parti Test",
+        date: "2026-04-19",
+      }),
+    ).rejects.toThrow(/is-fictional/);
+  });
+
+  it("scaffold_creates_fictional_candidate_with_banner", async () => {
+    await scaffoldCandidate({
+      id: "test-jean",
+      name: "Jean Test",
+      party: "Parti Fictif",
+      date: "2026-04-19",
+      isFictional: true,
+    });
+
+    const meta = JSON.parse(
+      await readFile(
+        join(tmpDir, "candidates", "test-jean", "metadata.json"),
+        "utf-8",
+      ),
+    );
+    expect(meta.is_fictional).toBe(true);
+
+    const draft = await readFile(
+      join(
+        tmpDir,
+        "candidates",
+        "test-jean",
+        "versions",
+        "2026-04-19",
+        "sources.md.draft",
+      ),
+      "utf-8",
+    );
+    expect(draft).toContain("PROGRAMME FICTIF");
+    expect(draft).toContain("Jean Test");
+  });
 });

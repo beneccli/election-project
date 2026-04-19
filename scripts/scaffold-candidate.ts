@@ -21,10 +21,20 @@ export interface ScaffoldOptions {
   party: string;
   partyId?: string;
   date?: string;
+  isFictional?: boolean;
 }
 
+const FICTIONAL_BANNER = `> ⚠️ **PROGRAMME FICTIF — TEST CANDIDATE**
+>
+> This candidate is synthetic. It was generated for pipeline testing
+> and does not represent any real person, party, or political program.
+> Any resemblance to real policy is coincidental. This document must
+> never be cited outside a test context.
+
+`;
+
 export async function scaffoldCandidate(opts: ScaffoldOptions): Promise<void> {
-  const { id, name, party } = opts;
+  const { id, name, party, isFictional = false } = opts;
   const date = opts.date ?? new Date().toISOString().slice(0, 10);
   const partyId = opts.partyId ?? id;
 
@@ -32,6 +42,22 @@ export async function scaffoldCandidate(opts: ScaffoldOptions): Promise<void> {
   if (!CANDIDATE_ID_PATTERN.test(id)) {
     throw new Error(
       `Invalid candidate ID "${id}". Must be lowercase kebab-case: ${CANDIDATE_ID_PATTERN}`,
+    );
+  }
+
+  // Symmetric fictional-prefix guard. The `test-` prefix and the
+  // --is-fictional flag must always agree. This keeps visual
+  // distinction reliable and prevents silent laundering.
+  const hasTestPrefix = id.startsWith("test-");
+  if (isFictional && !hasTestPrefix) {
+    throw new Error(
+      `--is-fictional requires the candidate ID to start with "test-". Got "${id}".`,
+    );
+  }
+  if (hasTestPrefix && !isFictional) {
+    throw new Error(
+      `Candidate ID "${id}" starts with "test-" but --is-fictional was not set. ` +
+        `Either drop the "test-" prefix or pass --is-fictional.`,
     );
   }
 
@@ -61,6 +87,7 @@ export async function scaffoldCandidate(opts: ScaffoldOptions): Promise<void> {
     party_id: partyId,
     created: date,
     updated: date,
+    ...(isFictional ? { is_fictional: true } : {}),
   };
   await validateAndWrite(CandidateMetadataSchema, candMetadata, join(candDir, "metadata.json"));
   log.info("Candidate metadata created");
@@ -78,6 +105,18 @@ export async function scaffoldCandidate(opts: ScaffoldOptions): Promise<void> {
   );
   log.info("Version metadata skeleton created");
 
+  // Fictional candidates get a banner in a sources.md.draft so the
+  // fictional nature is visible to any human reviewing the program.
+  if (isFictional) {
+    const draftPath = join(versionDir(id, date), "sources.md.draft");
+    await writeFile(
+      draftPath,
+      FICTIONAL_BANNER + `# ${name} — programme (fictional)\n\n_\u00c0 remplir par le script de génération ou par l'opérateur._\n`,
+      "utf-8",
+    );
+    log.info({ draftPath }, "Fictional sources.md.draft seeded");
+  }
+
   log.info({ id }, "Candidate scaffolded successfully");
 }
 
@@ -91,6 +130,11 @@ program
   .requiredOption("--party <party>", "Party name")
   .option("--party-id <partyId>", "Party ID (defaults to candidate ID)")
   .option("--date <date>", "Initial version date (YYYY-MM-DD, defaults to today)")
+  .option(
+    "--is-fictional",
+    "Mark this candidate as a fictional test candidate (requires test- prefix)",
+    false,
+  )
   .action(async (_opts) => {
     log.error("Direct CLI execution not yet wired.");
     process.exit(1);
