@@ -2,11 +2,13 @@
 // The real landing page ships with milestone M_Landing.
 export default function HomePage() {
   return (
-    <main style={{ padding: "4rem 2rem", fontFamily: "system-ui, sans-serif" }}>
-      <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: "1rem" }}>
+    <main className="mx-auto max-w-content px-6 py-16">
+      <h1 className="font-display text-4xl font-bold text-text">
         Élection 2027
       </h1>
-      <p>Site en construction — milestone M_WebsiteCore.</p>
+      <p className="mt-4 text-text-secondary">
+        Site en construction — milestone M_WebsiteCore.
+      </p>
     </main>
   );
 }

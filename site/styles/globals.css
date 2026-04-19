@@ -1,0 +1,62 @@
+/* See docs/specs/website/nextjs-architecture.md §5 */
+/* OKLCH tokens ported verbatim from Candidate Page.html :root / [data-theme="dark"] */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: oklch(0.975 0.007 75);
+  --bg-subtle: oklch(0.955 0.010 78);
+  --text: oklch(0.14 0.015 260);
+  --text-secondary: oklch(0.44 0.015 260);
+  --text-tertiary: oklch(0.62 0.01 260);
+  --accent: oklch(0.44 0.18 264);
+  --accent-subtle: oklch(0.44 0.18 264 / 0.1);
+  --risk-red: oklch(0.50 0.18 25);
+  --rule: oklch(0.86 0.008 260);
+  --rule-light: oklch(0.91 0.006 260);
+  --nav-h: 56px;
+  --section-nav-h: 48px;
+  --content-max: 920px;
+}
+
+[data-theme="dark"] {
+  --bg: oklch(0.11 0.015 260);
+  --bg-subtle: oklch(0.155 0.018 260);
+  --text: oklch(0.94 0.006 75);
+  --text-secondary: oklch(0.68 0.012 260);
+  --text-tertiary: oklch(0.50 0.010 260);
+  --accent: oklch(0.65 0.18 264);
+  --accent-subtle: oklch(0.65 0.18 264 / 0.12);
+  --risk-red: oklch(0.65 0.18 25);
+  --rule: oklch(0.22 0.015 260);
+  --rule-light: oklch(0.19 0.012 260);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-text), "DM Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s, color 0.25s;
+}
+
+::selection {
+  background: var(--accent-subtle);
+  color: var(--text);
+}
