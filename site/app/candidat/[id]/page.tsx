@@ -9,6 +9,7 @@ import { TransparencyFooter } from "@/components/chrome/TransparencyFooter";
 import { SyntheseSection } from "@/components/sections/SyntheseSection";
 import { PositionnementSection } from "@/components/sections/PositionnementSection";
 import { DomainesSection } from "@/components/sections/DomainesSection";
+import { IntergenSection } from "@/components/sections/IntergenSection";
 
 interface RouteParams {
   params: Promise<{ id: string }>;
@@ -49,10 +50,7 @@ export default async function CandidatePage({ params }: RouteParams) {
         <SyntheseSection aggregated={aggregated} />
         <PositionnementSection aggregated={aggregated} />
         <DomainesSection aggregated={aggregated} />
-        <SectionPlaceholder
-          id="intergen"
-          title="Impact intergénérationnel"
-        />
+        <IntergenSection aggregated={aggregated} />
         <SectionPlaceholder id="risques" title="Risques" />
       </main>
       <TransparencyFooter versionMeta={versionMeta} />
