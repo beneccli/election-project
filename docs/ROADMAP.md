@@ -225,7 +225,7 @@ Format: `M_<FeatureCluster>`
 **Status:** 🚧 In Progress. Spike `0040` active (2026-04-19); implementation tasks `0041`–`0048` in `tasks/backlog/M_AnalysisModes/`.
 
 **Spike produces:**
-- `docs/specs/data-pipeline/analysis-modes.md` (Draft → Stable via task `0041`)
+- `docs/specs/data-pipeline/analysis-modes.md` (finalized Stable by task `0041`)
 - Metadata schema extensions: `execution_mode` + `attested_by` + `attested_model_version` + `provider_metadata_available` per run; `is_fictional` on candidate metadata (task `0042`)
 - `prepare-manual-analysis` / `prepare-manual-aggregation` bundle scripts (task `0043`)
 - `ingest-raw-output` / `ingest-aggregated` drop-in scripts (task `0044`)

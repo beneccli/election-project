@@ -1,8 +1,8 @@
 # Analysis Execution Modes
 
-> **Version:** 1.0 (Draft — to be promoted to Stable by task `0041`)
-> **Status:** Draft
-> **Produced by:** spike `0040-spike-analysis-modes`
+> **Version:** 1.0
+> **Status:** Stable
+> **Produced by:** spike `0040-spike-analysis-modes`; finalized by task `0041`
 
 ---
 
@@ -376,22 +376,36 @@ candidate can still reach `aggregated.json` — it just cannot become
 
 ---
 
-## Open questions
+## Resolved design decisions
 
-1. **Should `provider: "manual"` be a fully separate enum value, or
-   should we preserve the original provider name (`anthropic`,
-   `openai`, …) with `execution_mode` carrying the mode signal?**
-   Current proposal: preserve the original provider name where
-   unambiguous (e.g. `provider: "anthropic"` when the operator uses
-   Claude.ai). Only when the operator refuses to disclose the provider
-   (uncommon) do we fall back to `provider: "manual"`. Decision to be
-   finalized by task `0042`.
-2. **Copilot model identification ambiguity** — if Copilot silently
-   switches models mid-session, our attestation is wrong. Mitigation:
-   prompt tells Copilot to halt if uncertain. Longer-term: rely on
-   Copilot's session metadata when available. Accept residual risk.
-3. **Fictional candidates in the website build** — M_WebsiteCore will
-   need a filter. Flagged as a dependency note there.
+1. **`provider` field for manual/copilot modes (resolved by task `0041`).**
+   The `provider` field is a **free-form string** (not enumerated). By
+   convention, operators record the underlying provider where
+   unambiguous (`anthropic`, `openai`, `google`, `mistral`, `xai`) so
+   that cross-mode aggregation remains easy to slice by provider. Two
+   sentinel values are accepted when the provider is unknown or
+   irrelevant:
+   - `"manual"` — operator declines to disclose which web chat UI
+     produced the output.
+   - `"copilot"` — Copilot routed through an undisclosed backing model.
+
+   The transparency signal lives in `execution_mode`; `provider` is an
+   analytical convenience field. The schema does **not** enforce the
+   enum — this keeps future providers addable without a schema bump.
+
+2. **Copilot model identification ambiguity (accepted as residual
+   risk).** If Copilot silently switches models mid-session, the
+   attestation is wrong. Mitigation in the Copilot agent prompt: the
+   agent halts and asks for human confirmation if it cannot determine
+   the active model. Longer-term (deferred until Copilot exposes
+   session metadata programmatically): capture the model from session
+   metadata automatically. Revisit after M_FirstCandidate.
+
+3. **Fictional candidates in the website build (deferred to
+   M_WebsiteCore).** Any candidate with `is_fictional: true` in
+   `metadata.json` must be filtered out of the default site build.
+   Dependency noted in the M_WebsiteCore spike when that milestone
+   starts.
 
 ---
 
