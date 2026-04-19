@@ -118,10 +118,10 @@ function DimensionTile({
       ].join(" ")}
     >
       <GradeBadge grade={grade} size="sm" />
-      <div className="text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+      <div className="text-xs font-bold uppercase tracking-wider text-text-secondary">
         {label}
       </div>
-      <div className="flex items-center gap-2 text-[10px] text-text-tertiary">
+      <div className="flex items-center gap-2 text-xs text-text-tertiary">
         <ConfidenceDots value={confidence} label="Confiance" />
         {dissentCount > 0 ? (
           <span className="font-semibold text-risk-red">
@@ -149,7 +149,7 @@ function DimensionDeepDive({
       <h3 className="mb-3 font-display text-2xl font-bold text-text">
         {DIMENSION_LABELS[dimKey]}
       </h3>
-      <p className="mb-6 max-w-[640px] text-[13px] leading-[1.55] text-text-secondary [text-wrap:pretty]">
+      <p className="mb-6 text-sm leading-[1.55] text-text-secondary [text-wrap:pretty]">
         {dim.summary}
       </p>
 
@@ -197,20 +197,20 @@ function DimensionDeepDive({
 
       {dim.execution_risks.length > 0 ? (
         <div className="mb-6">
-          <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
             Risques d&apos;exécution
           </div>
           <ul className="m-0 flex list-none flex-col gap-2 p-0">
             {dim.execution_risks.map((r, i) => (
               <li
                 key={`${r.risk}-${i}`}
-                className="flex flex-wrap items-center gap-3 text-[12px] text-text"
+                className="flex flex-wrap items-center gap-3 text-sm text-text"
               >
                 <span className="flex-1 min-w-[12rem]">{r.risk}</span>
-                <span className="inline-flex items-center gap-1 text-[11px] text-text-tertiary">
+                <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
                   Prob. <ConfidenceDots value={r.probability} label="Probabilité" />
                 </span>
-                <span className="inline-flex items-center gap-1 text-[11px] text-text-tertiary">
+                <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
                   Sév. <ConfidenceDots value={r.severity} label="Sévérité" />
                 </span>
               </li>
@@ -221,17 +221,17 @@ function DimensionDeepDive({
 
       {dim.key_measures.length > 0 ? (
         <div className="mb-6">
-          <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
             Mesures clés
           </div>
           <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
             {dim.key_measures.map((m, i) => (
               <li
                 key={`${m.measure}-${i}`}
-                className="text-[12px] leading-[1.5] text-text"
+                className="text-sm leading-[1.5] text-text"
               >
                 <span>{m.measure}</span>
-                <span className="ml-2 text-[11px] text-text-tertiary">
+                <span className="ml-2 text-xs text-text-tertiary">
                   {m.quantified && m.magnitude
                     ? `— ${m.magnitude}`
                     : "— non quantifié"}
@@ -243,10 +243,10 @@ function DimensionDeepDive({
       ) : null}
 
       <div>
-        <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-text-secondary">
+        <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
           Notes par modèle
         </div>
-        <div className="flex flex-wrap gap-2 text-[11px]">
+        <div className="flex flex-wrap gap-2 text-xs">
           <span className="rounded-sm border border-accent/30 bg-accent-subtle px-2 py-1 font-semibold text-accent">
             Consensus → {dim.grade.consensus}
           </span>
@@ -299,21 +299,21 @@ function ProblemBlock({
         >
           {icon}
         </span>
-        <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-text-secondary">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-text-secondary">
           {heading}
         </span>
       </div>
       {items.length === 0 ? (
-        <p className="text-[12px] italic text-text-tertiary">{empty}</p>
+        <p className="text-sm italic text-text-tertiary">{empty}</p>
       ) : (
         <ul className="m-0 flex list-none flex-col gap-2 p-0">
           {items.map((item, i) => (
             <li
               key={`${item.text}-${i}`}
-              className="text-[12px] leading-[1.5] text-text [text-wrap:pretty]"
+              className="text-sm leading-[1.5] text-text [text-wrap:pretty]"
             >
               <span>{item.text}</span>
-              <div className="mt-0.5 text-[10px] text-text-tertiary">
+              <div className="mt-0.5 text-xs text-text-tertiary">
                 {item.supportedBy.length > 0
                   ? `Soutenu par ${item.supportedBy.join(", ")}`
                   : null}
@@ -331,7 +331,7 @@ function ProblemBlock({
             </li>
           ))}
           {overflow > 0 ? (
-            <li className="cursor-not-allowed text-[11px] italic text-text-tertiary">
+            <li className="cursor-not-allowed text-xs italic text-text-tertiary">
               + {overflow} autre{overflow > 1 ? "s" : ""}
             </li>
           ) : null}

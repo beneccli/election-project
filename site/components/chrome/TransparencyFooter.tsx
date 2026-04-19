@@ -31,7 +31,7 @@ export function TransparencyFooter({
   return (
     <footer className="mt-24 border-t border-rule bg-bg-subtle">
       <div className="mx-auto max-w-content px-8 py-12 text-sm text-text-secondary">
-        <div className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-accent">
+        <div className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-accent">
           Transparence
         </div>
 
@@ -192,7 +192,7 @@ function StatusBadge({ status }: { status: string }) {
   const ok = status === "success";
   return (
     <span
-      className="rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+      className="rounded px-1.5 py-0.5 text-xs font-semibold uppercase tracking-wider"
       style={
         ok
           ? {
@@ -234,12 +234,12 @@ function HashBlock({
         ) : null}
       </div>
       {file ? (
-        <div className="mb-1 font-mono text-[11px] text-text-tertiary">
+        <div className="mb-1 font-mono text-xs text-text-tertiary">
           {file}
         </div>
       ) : null}
       {hash ? (
-        <code className="block break-all font-mono text-[11px] leading-relaxed text-text">
+        <code className="block break-all font-mono text-xs leading-relaxed text-text">
           {hash}
         </code>
       ) : (

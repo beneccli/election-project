@@ -24,7 +24,7 @@ export function Hero({
 }) {
   const p = meta as PartyMeta;
   const partyShort = p.party_short ?? meta.party.slice(0, 2).toUpperCase();
-  const partyColor = p.party_color ?? "var(--accent)";
+  const partyColor = p.party_color ?? "#3B6FD4";
   const grade = deriveTopLevelGrade(aggregated);
   const modelIds = Object.keys(versionMeta.analysis?.models ?? {});
 
@@ -46,7 +46,7 @@ export function Hero({
           <div>
             <div className="mb-2.5 flex items-center gap-2.5">
               <span
-                className="inline-flex items-center gap-1.5 rounded-sm px-2.5 py-[3px] text-[11px] font-bold uppercase tracking-wider"
+                className="inline-flex items-center gap-1.5 rounded px-2.5 py-[3px] text-xs font-bold uppercase tracking-wider"
                 style={{
                   background: `${partyColor}18`,
                   border: `1px solid ${partyColor}40`,
@@ -64,7 +64,7 @@ export function Hero({
               <div className="flex items-center gap-3">
                 <GradeBadge grade={grade.letter} modifier={grade.modifier} size="md" />
                 <div>
-                  <div className="mb-0.5 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
+                  <div className="mb-0.5 text-xs font-bold uppercase tracking-wider text-text-tertiary">
                     Note globale
                   </div>
                   <div className="text-xs text-text-secondary">
@@ -74,14 +74,14 @@ export function Hero({
               </div>
               <div className="h-9 w-px flex-shrink-0 bg-rule" />
               <div>
-                <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
+                <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
                   Modèles IA
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {modelIds.map((id) => (
                     <span
                       key={id}
-                      className="inline-flex items-center gap-1 text-[11px] text-text-secondary"
+                      className="inline-flex items-center gap-1 text-xs text-text-secondary"
                     >
                       <span
                         className="inline-block h-1.5 w-1.5 rounded-full bg-accent"
@@ -94,7 +94,7 @@ export function Hero({
               </div>
               <div className="h-9 w-px flex-shrink-0 bg-rule" />
               <div>
-                <div className="mb-0.5 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
+                <div className="mb-0.5 text-xs font-bold uppercase tracking-wider text-text-tertiary">
                   Mis à jour
                 </div>
                 <div className="text-xs text-text-secondary">

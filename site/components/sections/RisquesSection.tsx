@@ -36,7 +36,7 @@ export function RisquesSection({
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
       <SectionHead label="Risques d'exécution" />
-      <p className="mb-8 max-w-[640px] text-[13px] leading-[1.6] text-text-secondary">
+      <p className="mb-8 text-base leading-[1.6] text-text-secondary">
         Chaque ligne est un risque d&apos;exécution individuel identifié par au
         moins un modèle. Les axes <strong>Probabilité</strong> et{" "}
         <strong>Sévérité</strong> sont rapportés séparément — aucun score

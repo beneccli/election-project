@@ -32,7 +32,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(next)}
       aria-label={label}
-      className="inline-flex items-center gap-1.5 rounded-md border border-rule px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-text-secondary transition-colors hover:border-accent hover:text-accent"
+      className="inline-flex items-center gap-1.5 rounded-md border border-rule px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-text-secondary transition-colors hover:border-accent hover:text-accent"
     >
       {theme === "dark" ? "☀︎" : "☾"}
       <span className="hidden sm:inline">{label}</span>

@@ -75,7 +75,7 @@ function Column({
 }) {
   return (
     <div className="rounded-md border border-rule-light bg-bg-subtle p-5">
-      <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.08em] text-text-secondary">
+      <div className="mb-4 text-xs font-bold uppercase tracking-[0.08em] text-text-secondary">
         {title}
       </div>
       <ul className="m-0 flex list-none flex-col gap-3 p-0">
@@ -85,17 +85,17 @@ function Column({
             className="flex flex-col gap-1 border-b border-rule-light pb-2 last:border-b-0"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-[11px] font-semibold text-text-secondary">
+              <span className="text-sm font-semibold text-text-secondary">
                 {label}
               </span>
               <ConfidenceDots value={confidence} label="Confiance" />
             </div>
-            <div className="text-[13px] text-text">
+            <div className="text-sm text-text">
               {cell.quantified ?? (
                 <span className="italic text-text-tertiary">Non quantifié</span>
               )}
             </div>
-            <div className="text-[11px] leading-[1.5] text-text-secondary [text-wrap:pretty]">
+            <div className="text-xs leading-[1.5] text-text-secondary [text-wrap:pretty]">
               {cell.summary}
             </div>
           </li>
@@ -108,9 +108,15 @@ function Column({
           ),
         )}
       </ul>
-      <p className="mt-4 text-[12px] leading-[1.55] text-text [text-wrap:pretty]">
-        {narrative}
-      </p>
+
+      <div className="mt-12">
+        <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
+            Résumé
+        </div>
+        <p className="text-sm leading-[1.55] text-text [text-wrap:pretty]">
+            {narrative}
+        </p>
+      </div>
     </div>
   );
 }

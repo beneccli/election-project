@@ -7,6 +7,8 @@ import type { AggregatedOutput } from "@/lib/schema";
 import { AXIS_KEYS, type AxisKey } from "@/lib/derived/keys";
 import { AXES } from "@/lib/anchors";
 import { t, type Lang } from "@/lib/i18n";
+import { Tooltip } from "./Tooltip";
+import { modelColor } from "@/lib/model-color";
 
 const MIN = -5;
 const MAX = 5;
@@ -24,7 +26,7 @@ export function AxisAgreementBars({
   lang?: Lang;
 }) {
   return (
-    <div className="flex flex-col gap-3.5">
+    <div className="flex flex-col gap-6">
       {AXIS_KEYS.map((key) => (
         <AxisRow key={key} axis={key} data={positioning[key]} lang={lang} />
       ))}
@@ -52,12 +54,12 @@ function AxisRow({
   return (
     <div>
       <div className="mb-1.5 flex justify-between">
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
+        <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
           {label}
         </span>
         <span
           className={[
-            "text-[11px]",
+            "text-xs",
             hasDissent
               ? "font-semibold text-risk-red"
               : "font-normal text-text-secondary",
@@ -78,13 +80,14 @@ function AxisRow({
         {/* Anchor ticks */}
         {meta
           ? meta.anchors.map((a) => (
-              <div
+              <Tooltip
                 key={a.position}
-                aria-hidden="true"
-                className="absolute bottom-0 top-0 w-px bg-rule opacity-40"
+                content={t(a.label, lang)}
+                className="!absolute bottom-0 top-0 w-px bg-rule opacity-40"
                 style={{ left: `${pct(a.position)}%` }}
-                title={t(a.label, lang)}
-              />
+              >
+                <span aria-hidden="true" className="block h-full w-full" />
+              </Tooltip>
             ))
           : null}
         {/* Consensus interval band */}
@@ -100,25 +103,39 @@ function AxisRow({
         />
         {/* Modal marker (filled) */}
         {data.modal_score !== null ? (
-          <div
-            className="absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-bg bg-accent"
+          <Tooltip
+            content={`Modal : ${data.modal_score}`}
+            className="!absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-bg bg-accent"
             style={{ left: `${pct(data.modal_score)}%` }}
-            title={`Modal : ${data.modal_score}`}
-            aria-label={`Score modal ${data.modal_score}`}
-          />
+          >
+            <span aria-label={`Score modal ${data.modal_score}`} />
+          </Tooltip>
         ) : null}
-        {/* Dissenting-model markers (hollow) */}
-        {data.dissent.map((d, i) => (
-          <div
-            key={`${d.model}-${i}`}
-            className="absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-risk-red bg-bg"
-            style={{ left: `${pct(d.position)}%` }}
-            title={`${d.model}: ${d.position} — ${d.reasoning}`}
-            aria-label={`${d.model} en désaccord à la position ${d.position}`}
-          />
-        ))}
+        {/* Dissenting-model markers (hollow, colored per model) */}
+        {data.dissent.map((d, i) => {
+          const col = modelColor(d.model);
+          return (
+            <Tooltip
+              key={`${d.model}-${i}`}
+              content={
+                <>
+                  <strong>{d.model}</strong> — position {d.position}
+                  <br />
+                  {d.reasoning}
+                </>
+              }
+              className="!absolute top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] bg-bg"
+              style={{ left: `${pct(d.position)}%`, borderColor: col }}
+            >
+              <span
+                aria-label={`${d.model} en désaccord à la position ${d.position}`}
+              />
+            </Tooltip>
+          );
+        })}
+        {/* end markers */}
       </div>
-      <div className="mt-1 flex justify-between text-[9px] text-text-tertiary">
+      <div className="mt-1 flex justify-between text-sm text-text-tertiary">
         <span>{polarLow} (−5)</span>
         <span>{polarHigh} (+5)</span>
       </div>
