@@ -15,6 +15,7 @@ import { AnalysisOutputSchema } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
 import type { LLMProvider, LLMCallResult } from "./lib/providers";
 import { DEFAULT_MODELS, type ModelConfig } from "./config/models";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "analyze" });
 
@@ -244,6 +245,8 @@ export async function analyze(opts: AnalyzeOptions): Promise<ModelRunResult[]> {
       duration_ms: r.durationMs ?? 0,
       status: r.status,
       run_at: new Date().toISOString(),
+      execution_mode: "api",
+      provider_metadata_available: true,
     };
   }
 
@@ -289,5 +292,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/analyze.ts") ||
     process.argv[1].endsWith("/analyze.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

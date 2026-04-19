@@ -102,6 +102,32 @@ describe("schema CandidateMetadataSchema", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("schema_validates_candidate_with_is_fictional_true", () => {
+    const result = CandidateMetadataSchema.safeParse({
+      ...validCandidate,
+      id: "test-dupont",
+      is_fictional: true,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_validates_candidate_with_is_fictional_false", () => {
+    const result = CandidateMetadataSchema.safeParse({
+      ...validCandidate,
+      is_fictional: false,
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_validates_candidate_with_is_fictional_absent_treated_as_false", () => {
+    const { ...noFlag } = validCandidate;
+    const result = CandidateMetadataSchema.safeParse(noFlag);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.is_fictional).toBeUndefined();
+    }
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -210,6 +236,8 @@ describe("schema VersionMetadataSchema", () => {
           cost_estimate_usd: 1.23,
           duration_ms: 45000,
           status: "success" as const,
+          execution_mode: "api" as const,
+          provider_metadata_available: true,
         },
       },
     },
@@ -222,6 +250,8 @@ describe("schema VersionMetadataSchema", () => {
         provider: "anthropic",
         exact_version: "claude-opus-4-7",
         run_at: "2026-04-19T16:00:00Z",
+        execution_mode: "api" as const,
+        provider_metadata_available: true,
       },
       human_review_completed: true,
       reviewer: "human-reviewer",
@@ -653,5 +683,211 @@ describe("schema AggregatedOutputSchema", () => {
       const result = AggregatedOutputSchema.safeParse(fixture);
       expect(result.success).toBe(true);
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Execution modes on ModelRunEntry / aggregator_model
+// See docs/specs/data-pipeline/analysis-modes.md
+// ---------------------------------------------------------------------------
+
+describe("schema ModelRunEntry execution_mode", () => {
+  const baseApiRow = {
+    provider: "anthropic",
+    exact_version: "claude-opus-4-7",
+    temperature: 0,
+    run_at: "2026-04-19T15:00:00Z",
+    tokens_in: 42000,
+    tokens_out: 8500,
+    cost_estimate_usd: 1.23,
+    duration_ms: 45000,
+    status: "success" as const,
+  };
+
+  const versionWith = (model: Record<string, unknown>) => ({
+    candidate_id: "jane-dupont",
+    version_date: "2026-04-19",
+    schema_version: "1.0",
+    analysis: {
+      prompt_file: "prompts/analyze-candidate.md",
+      prompt_sha256:
+        "c3d4e5f678901234567890abcdef1234567890abcdef1234567890abcdef1234",
+      prompt_version: "1.0",
+      models: { "claude-opus-4-7": model },
+    },
+  });
+
+  it("schema_accepts_api_row_with_execution_mode_explicit", () => {
+    const row = {
+      ...baseApiRow,
+      execution_mode: "api",
+      provider_metadata_available: true,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_rejects_row_missing_execution_mode", () => {
+    const result = VersionMetadataSchema.safeParse(versionWith(baseApiRow));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_row_missing_provider_metadata_available", () => {
+    const row = { ...baseApiRow, execution_mode: "api" } as Record<
+      string,
+      unknown
+    >;
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_accepts_manual_webchat_row_with_attestation", () => {
+    const row = {
+      provider: "anthropic",
+      exact_version: "claude-opus-4-1 (web chat)",
+      temperature: 0,
+      run_at: "2026-04-19T15:00:00Z",
+      status: "success" as const,
+      execution_mode: "manual-webchat",
+      attested_by: "benoit",
+      attested_model_version: "claude-opus-4-1 (web chat)",
+      provider_metadata_available: false,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_accepts_copilot_agent_row_with_attestation", () => {
+    const row = {
+      provider: "copilot",
+      exact_version: "claude-opus-4-1 via copilot",
+      temperature: 0,
+      run_at: "2026-04-19T15:00:00Z",
+      status: "success" as const,
+      execution_mode: "copilot-agent",
+      attested_by: "benoit",
+      attested_model_version: "claude-opus-4-1 via copilot",
+      provider_metadata_available: false,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_rejects_manual_webchat_row_missing_attested_by", () => {
+    const row = {
+      provider: "anthropic",
+      exact_version: "claude-opus-4-1",
+      temperature: 0,
+      run_at: "2026-04-19T15:00:00Z",
+      status: "success" as const,
+      execution_mode: "manual-webchat",
+      attested_model_version: "claude-opus-4-1 (web chat)",
+      provider_metadata_available: false,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_manual_webchat_row_missing_attested_model_version", () => {
+    const row = {
+      provider: "anthropic",
+      exact_version: "claude-opus-4-1",
+      temperature: 0,
+      run_at: "2026-04-19T15:00:00Z",
+      status: "success" as const,
+      execution_mode: "manual-webchat",
+      attested_by: "benoit",
+      provider_metadata_available: false,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_manual_webchat_row_with_provider_metadata_available_true", () => {
+    const row = {
+      ...baseApiRow,
+      execution_mode: "manual-webchat",
+      attested_by: "benoit",
+      attested_model_version: "claude-opus-4-1",
+      provider_metadata_available: true,
+    };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_api_row_missing_tokens_in", () => {
+    const row = { ...baseApiRow } as Record<string, unknown>;
+    delete row.tokens_in;
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_api_row_with_provider_metadata_available_false", () => {
+    const row = { ...baseApiRow, provider_metadata_available: false };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+
+  it("schema_rejects_invalid_execution_mode_enum", () => {
+    const row = { ...baseApiRow, execution_mode: "oracle" };
+    const result = VersionMetadataSchema.safeParse(versionWith(row));
+    expect(result.success).toBe(false);
+  });
+});
+
+describe("schema aggregator_model execution_mode", () => {
+  const versionWithAggregator = (aggregator_model: Record<string, unknown>) => ({
+    candidate_id: "jane-dupont",
+    version_date: "2026-04-19",
+    schema_version: "1.0",
+    aggregation: {
+      prompt_file: "prompts/aggregate-analyses.md",
+      prompt_sha256:
+        "d4e5f678901234567890abcdef1234567890abcdef1234567890abcdef123456",
+      prompt_version: "1.0",
+      aggregator_model,
+      human_review_completed: false,
+    },
+  });
+
+  it("schema_accepts_api_aggregator_model", () => {
+    const result = VersionMetadataSchema.safeParse(
+      versionWithAggregator({
+        provider: "anthropic",
+        exact_version: "claude-opus-4-7",
+        run_at: "2026-04-19T16:00:00Z",
+        execution_mode: "api",
+        provider_metadata_available: true,
+      }),
+    );
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_accepts_manual_webchat_aggregator_with_attestation", () => {
+    const result = VersionMetadataSchema.safeParse(
+      versionWithAggregator({
+        provider: "openai",
+        exact_version: "gpt-5-thinking (web chat)",
+        run_at: "2026-04-19T16:00:00Z",
+        execution_mode: "manual-webchat",
+        attested_by: "benoit",
+        attested_model_version: "gpt-5-thinking (web chat)",
+        provider_metadata_available: false,
+      }),
+    );
+    expect(result.success).toBe(true);
+  });
+
+  it("schema_rejects_copilot_aggregator_missing_attestation", () => {
+    const result = VersionMetadataSchema.safeParse(
+      versionWithAggregator({
+        provider: "copilot",
+        exact_version: "claude-opus via copilot",
+        run_at: "2026-04-19T16:00:00Z",
+        execution_mode: "copilot-agent",
+        provider_metadata_available: false,
+      }),
+    );
+    expect(result.success).toBe(false);
   });
 });

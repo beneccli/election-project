@@ -18,6 +18,7 @@ import {
   CandidateMetadataSchema,
 } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "publish" });
 
@@ -26,6 +27,7 @@ export interface PublishOptions {
   version: string;
   dryRun?: boolean;
   verbose?: boolean;
+  allowFictional?: boolean;
 }
 
 export async function publish(opts: PublishOptions): Promise<void> {
@@ -34,6 +36,27 @@ export async function publish(opts: PublishOptions): Promise<void> {
   const candDir = candidateDir(candidate);
 
   log.info({ candidate, version }, "Starting publish validation");
+
+  // 0. Fictional-candidate guard. Fictional candidates can never
+  //    become `current` without an explicit --allow-fictional override.
+  const candMetadataPath = join(candDir, "metadata.json");
+  if (await pathExists(candMetadataPath)) {
+    const candMeta = CandidateMetadataSchema.parse(
+      JSON.parse(await readFile(candMetadataPath, "utf-8")),
+    );
+    if (candMeta.is_fictional) {
+      if (!opts.allowFictional) {
+        throw new Error(
+          `Candidate "${candidate}" is marked is_fictional: true. ` +
+            `Refusing to publish. Pass --allow-fictional if this is an intentional test publish.`,
+        );
+      }
+      log.warn(
+        { candidate },
+        "Publishing a FICTIONAL candidate (--allow-fictional was set). This must not happen in production.",
+      );
+    }
+  }
 
   // 1. Validate sources.md exists (not draft)
   const sourcesPath = join(verDir, "sources.md");
@@ -92,11 +115,11 @@ export async function publish(opts: PublishOptions): Promise<void> {
   log.info({ symlink: symlinkPath, target: targetRelative }, "Symlink updated");
 
   // 5. Update candidate metadata.json `updated` field
-  const candMetadataPath = join(candDir, "metadata.json");
-  if (await pathExists(candMetadataPath)) {
-    const candMetadata = JSON.parse(await readFile(candMetadataPath, "utf-8"));
+  const candMetadataPathFinal = join(candDir, "metadata.json");
+  if (await pathExists(candMetadataPathFinal)) {
+    const candMetadata = JSON.parse(await readFile(candMetadataPathFinal, "utf-8"));
     candMetadata.updated = version;
-    await validateAndWrite(CandidateMetadataSchema, candMetadata, candMetadataPath);
+    await validateAndWrite(CandidateMetadataSchema, candMetadata, candMetadataPathFinal);
     log.info("Candidate metadata updated");
   }
 
@@ -115,9 +138,27 @@ program
   .requiredOption("--version <date>", "Version date (YYYY-MM-DD)")
   .option("--dry-run", "Validate without modifying filesystem", false)
   .option("--verbose", "Verbose output", false)
-  .action(async (_opts) => {
-    log.error("Direct CLI execution not yet wired. Use the pipeline orchestrator.");
-    process.exit(1);
+  .option(
+    "--allow-fictional",
+    "Permit publishing a candidate flagged is_fictional (testing only)",
+    false,
+  )
+  .action(async (cliOpts) => {
+    try {
+      await publish({
+        candidate: cliOpts.candidate,
+        version: cliOpts.version,
+        dryRun: cliOpts.dryRun,
+        verbose: cliOpts.verbose,
+        allowFictional: cliOpts.allowFictional,
+      });
+    } catch (err) {
+      log.error(
+        { error: err instanceof Error ? err.message : String(err) },
+        "Publish failed",
+      );
+      process.exit(1);
+    }
   });
 
 const isDirectRun =
@@ -125,5 +166,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/publish.ts") ||
     process.argv[1].endsWith("/publish.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

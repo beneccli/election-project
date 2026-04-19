@@ -43,6 +43,7 @@ import {
   type VersionMetadata,
 } from "./lib/schema";
 import { validateAndWrite, validateOrThrow } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "review" });
 
@@ -407,5 +408,5 @@ const isDirectRun =
     process.argv[1].endsWith("/review.js"));
 
 if (isDirectRun) {
-  program.parse(process.argv);
+  program.parse(normalizeArgv(process.argv));
 }

@@ -36,5 +36,14 @@ yarn-error.log*
 candidates/**/versions/*/sources.md.draft
 candidates/**/versions/*/aggregated.draft.json
 
+# Manual-mode bundles (regenerated, should not be committed)
+candidates/**/versions/*/_manual/*
+!candidates/**/versions/*/_manual/README.md
+candidates/**/versions/*/_manual-aggregation/*
+!candidates/**/versions/*/_manual-aggregation/README.md
+candidates/**/current
+
 # TypeScript
 *.tsbuildinfo
+
+

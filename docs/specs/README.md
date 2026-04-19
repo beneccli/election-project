@@ -27,6 +27,7 @@ specs/
 ├── data-pipeline/      # Ingestion and orchestration
 │   ├── overview.md                 # End-to-end pipeline                      [Stable]
 │   ├── source-gathering.md         # Primary-source fetching + consolidation  [Stable]
+│   ├── analysis-modes.md           # API / web-chat / Copilot execution modes [Stable]
 │   └── update-workflow.md          # "One week later" flow                    [Draft]
 │
 └── website/            # Site structure and components

@@ -108,6 +108,7 @@ npm run build                        # static site build
 |----------|---------|
 | [`docs/README.md`](docs/README.md) | Documentation index |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | Milestones and project plan |
+| [`docs/quick-start-zero-api.md`](docs/quick-start-zero-api.md) | End-to-end pipeline run without API calls (fictional candidates, testing) |
 | [`docs/specs/`](docs/specs/) | Permanent design documents |
 | [`AGENTS.md`](AGENTS.md) | AI coding agent instructions |
 | [`tasks/README.md`](tasks/README.md) | How the tickets-as-code system works |

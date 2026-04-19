@@ -46,7 +46,8 @@ Format: `M_<FeatureCluster>`
 | M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
 | M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
 | M_AnalysisPrompts | ✅ Done | The analysis prompt, schema, inline adversarial pass |
-| M_Aggregation | � In Progress | Aggregator prompt, agreement_map, dissent preservation, human review CLI |
+| M_Aggregation | ✅ Done | Aggregator prompt, agreement_map, dissent preservation, human review CLI |
+| M_AnalysisModes | 🚧 Spike active | Manual web-chat + Copilot-agent execution modes, test-candidate scaffolding, publish guard |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
 
 ### 📅 Phase 2: Website (planned)
@@ -215,11 +216,50 @@ Format: `M_<FeatureCluster>`
 
 ---
 
+### M_AnalysisModes
+
+**Goal:** Allow the pipeline to run without paid LLM API calls by introducing two additional execution modes alongside the existing API path: **manual web-chat** (copy-paste into ChatGPT/Claude/Gemini subscriptions) and **Copilot-agent** (Copilot itself acts as the analyst model, writing files via its tools). Also deliver test-candidate scaffolding so the pipeline can be exercised end-to-end on fictional input before touching real candidates.
+
+**Depends on:** M_DataPipeline + M_AnalysisPrompts + M_Aggregation
+
+**Status:** 🚧 In Progress. Spike `0040` active (2026-04-19); implementation tasks `0041`–`0048` in `tasks/backlog/M_AnalysisModes/`.
+
+**Spike produces:**
+- `docs/specs/data-pipeline/analysis-modes.md` (finalized Stable by task `0041`)
+- Metadata schema extensions: `execution_mode` + `attested_by` + `attested_model_version` + `provider_metadata_available` per run; `is_fictional` on candidate metadata (task `0042`)
+- `prepare-manual-analysis` / `prepare-manual-aggregation` bundle scripts (task `0043`)
+- `ingest-raw-output` / `ingest-aggregated` drop-in scripts (task `0044`)
+- `.github/prompts/analyze-candidate-via-copilot.prompt.md` + `.github/prompts/aggregate-analyses-via-copilot.prompt.md` (task `0045`)
+- Test-candidate scaffold prompt + `is_fictional` flag + publish guard (task `0046`)
+- `prompts/fixtures/generate-test-sources.md` web-chat program generator (task `0047`)
+- Quick-start zero-API docs + mixed-mode integration test (task `0048`)
+
+**Non-negotiables:**
+- All three modes send `prompts/analyze-candidate.md` bytes **verbatim** — no per-mode prompt editing
+- Every run records `execution_mode` + prompt SHA256 + attested model version
+- Fictional candidates cannot reach `current` without `--allow-fictional`
+- Aggregation human-review gate is mode-agnostic (still required)
+
+**Key design decisions (spike `0040`):**
+- Single canonical prompt file, loaded by all three modes — no duplication
+- Manual/Copilot modes mark `provider_metadata_available: false`; token counts and cost become optional for those rows
+- Symmetric ID-prefix guard: `test-*` IDs require `is_fictional: true` and vice versa
+- `_manual/` working directory is `.gitignore`'d (except README) to prevent chat-transcript leakage
+- Residual risk on Copilot model identification accepted and documented
+
+**Scope boundary (what this milestone does NOT cover):**
+- New analytical prompts (reuse existing `prompts/analyze-candidate.md` and `prompts/aggregate-analyses.md`)
+- Website rendering of `execution_mode` (→ M_Transparency)
+- Automated detection of prompt editing (SHA256 mismatch is visible in metadata; detection is downstream)
+- Running a real candidate end-to-end (→ M_FirstCandidate)
+
+---
+
 ### M_FirstCandidate
 
 **Goal:** Execute the full pipeline on one declared candidate end-to-end. This is the proof that the system works before scaling.
 
-**Depends on:** M_DataPipeline + M_AnalysisPrompts + M_Aggregation
+**Depends on:** M_DataPipeline + M_AnalysisPrompts + M_Aggregation + M_AnalysisModes
 
 **Deliverables:**
 - `candidates/<first-candidate-id>/versions/<date>/` fully populated
