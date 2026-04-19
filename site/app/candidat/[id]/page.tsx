@@ -7,6 +7,7 @@ import { Hero } from "@/components/chrome/Hero";
 import { SectionNav } from "@/components/chrome/SectionNav";
 import { TransparencyFooter } from "@/components/chrome/TransparencyFooter";
 import { SyntheseSection } from "@/components/sections/SyntheseSection";
+import { PositionnementSection } from "@/components/sections/PositionnementSection";
 
 interface RouteParams {
   params: Promise<{ id: string }>;
@@ -45,7 +46,7 @@ export default async function CandidatePage({ params }: RouteParams) {
       <SectionNav />
       <main className="mx-auto max-w-content px-8 pb-32">
         <SyntheseSection aggregated={aggregated} />
-        <SectionPlaceholder id="positionnement" title="Positionnement" />
+        <PositionnementSection aggregated={aggregated} />
         <SectionPlaceholder id="dimensions" title="Domaines" />
         <SectionPlaceholder
           id="intergen"
