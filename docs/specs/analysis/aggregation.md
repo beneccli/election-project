@@ -1,7 +1,8 @@
 # Aggregation Spec
 
 > **Version:** 1.0
-> **Status:** Draft — decisions finalized by M_Aggregation spike `0030` (2026-04-19); promotion to **Stable** tracked by task `0031`.
+> **Status:** Stable (finalized by M_Aggregation spike `0030`, 2026-04-19)
+> **Source of truth:** `scripts/lib/schema.ts` (Zod) — the "Decisions finalized by spike `0030`" section below is the authoritative design; the prose above is a human-readable companion.
 
 ---
 
@@ -27,35 +28,40 @@ Averaging destroys signal. We preserve signal.
 
 ### 1. Identify convergence
 
-Claims that appear across ≥N-1 models (where N is the number of successful analyses) are treated as **high-confidence** and marked as such. Their wording is synthesized from the best-supported phrasings.
+Claims that appear across ≥ N-1 models (where N is the number of successful analyses) are treated as **high-confidence** and listed in `agreement_map.high_confidence_claims`. Their wording is synthesized from the best-supported phrasings.
 
-### 2. Preserve divergence
+### 2. Preserve divergence inline and at the top level
 
-Claims where models genuinely disagree produce an **`agreement_map`** entry showing:
-- Which models hold which position
-- Brief summary of the disagreement
-- Whether disagreement is factual (should converge with better data) or value-laden (reflects genuine interpretive difference)
+Every aggregated claim carries inline provenance:
+- `supported_by: string[]` — model version strings that supported the claim
+- `dissenters: string[]` — model version strings that disagreed (empty when unanimous)
+
+Claims with any dissenter also surface in `agreement_map.contested_claims[]`, which records the competing positions.
 
 ### 3. Flag source contradictions
 
-A claim made by any model but **not supported by `sources.md`** is flagged for human review in `flagged_for_review`, not auto-published.
+A claim made by any model but **not supported by `sources.md`** is routed to `flagged_for_review[]` with `issue: "claim not supported by sources.md"`, not auto-published. This rule applies even when **all** per-model outputs agree on the unsupported claim (correlated hallucination).
 
 ### 4. Never average positioning
 
-The 5-axis political positioning is explicitly ordinal (see [`political-positioning.md`](political-positioning.md)). Aggregation uses:
+The 5-axis political positioning is explicitly ordinal (see [`political-positioning.md`](political-positioning.md)). Aggregated output contains per axis:
 
-- **Consensus interval**: the range of scores across models, plus modal value if clear
-- **Anchor comparison synthesis**: the aggregator distills a combined anchor narrative
-- **Evidence merger**: all evidence quotes from all models union'd
-- **Disagreement note**: when one model's placement differs significantly, the dissenting view is preserved alongside
+- `consensus_interval: [int, int]` — min and max integer scores across all successful models, each in `[-5, +5]`
+- `modal_score: int | null` — integer plurality in `[-5, +5]`, or `null` if no mode
+- `anchor_narrative: string` — synthesized across models
+- `evidence: EvidenceRef[]` — union of per-model evidence quotes
+- `confidence: number` in `[0, 1]`
+- `dissent: { model, position: int, reasoning }[]` — models placing outside the modal plurality, with reasoning preserved verbatim
+
+**There is no aggregated `score` field.** The per-model integer `score` lives only in `raw-outputs/<model>.json`. This prevents any downstream consumer from misreading an aggregate score as cardinal.
 
 ### 5. Citations survive aggregation
 
-Every aggregated claim retains its `source_refs` (unioned across models). A claim with no source_refs in any source model does not appear in aggregated output — it is a bug flagged for review.
+Every aggregated claim retains its `source_refs` (unioned across models). A claim with no `source_refs` in any source model does not appear in aggregated output — it is routed to `flagged_for_review[]`.
 
 ### 6. Model identity preserved
 
-Every aggregated claim records which models contributed. This is the raw material of the `agreement_map`.
+Every aggregated claim records which models contributed via inline `supported_by`. This is the raw material of `agreement_map`.
 
 ---
 
@@ -101,8 +107,11 @@ Same top-level structure as per-model output (see [`output-schema.md`](output-sc
         }
       ]
     },
-    ...
+    "...": {}
   },
+
+  // NOTE: there is no `score` field anywhere under `positioning`.
+  // See §"Positioning aggregation (Q5 / Q6)" below — aggregated positioning is ordinal-only.
 
   "dimensions": {
     "economic_fiscal": {
@@ -142,15 +151,22 @@ Same top-level structure as per-model output (see [`output-schema.md`](output-sc
       "gemini-ultra": "partial",
       "mistral-large": "complete",
       "grok": "failed"
+    },
+    "positioning_consensus": {
+      "economic": { "interval": [-4, -2], "modal": -3, "dissent_count": 1 },
+      "...": {}
     }
   },
+
+  "coverage_warning": false,
 
   "flagged_for_review": [
     {
       "claim": "...",
       "claimed_by": ["gpt-5"],
       "issue": "claim not supported by sources.md",
-      "suggested_action": "human review required"
+      "suggested_action": "human review required",
+      "resolution": null
     }
   ]
 }
@@ -180,7 +196,7 @@ Same schema validation rules apply as for per-model output.
 
 ### A model failed / produced invalid JSON
 
-Aggregation proceeds with remaining valid outputs. `agreement_map.coverage` records the failure. A single-model analysis is still published (with a visible "only 1 model contributed" notice on the site); a zero-model analysis triggers a build failure.
+Aggregation proceeds with remaining valid outputs. `agreement_map.coverage` records the failure. A single-model analysis is still produced (with `coverage_warning: true` surfaced as a visible "only 1 model contributed" notice on the site); a zero-model run triggers a build failure (`aggregate.ts` throws).
 
 ### All models agree on something contradicted by `sources.md`
 
