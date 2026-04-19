@@ -1,8 +1,7 @@
 # Next.js Architecture (M_WebsiteCore)
 
 > **Version:** 1.0
-> **Status:** Draft — finalized by spike `0050`, promoted to **Stable** by
-> task `0051`
+> **Status:** Stable
 > **Scope:** Candidate page and the Next.js app shell. Landing, comparison,
 > methodology, changelog are **out of scope** for this spec (see their own
 > milestones).

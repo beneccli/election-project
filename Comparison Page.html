@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Comparer les candidats — Élection 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg:             oklch(0.975 0.007 75);
+  --bg-subtle:      oklch(0.955 0.010 78);
+  --bg-card:        oklch(0.985 0.005 75);
+  --text:           oklch(0.14 0.015 260);
+  --text-secondary: oklch(0.44 0.015 260);
+  --text-tertiary:  oklch(0.62 0.01 260);
+  --accent:         oklch(0.44 0.18 264);
+  --accent-subtle:  oklch(0.44 0.18 264 / 0.08);
+  --risk-red:       oklch(0.50 0.18 25);
+  --rule:           oklch(0.86 0.008 260);
+  --rule-light:     oklch(0.91 0.006 260);
+  --nav-h: 56px;
+}
+[data-theme="dark"] {
+  --bg:             oklch(0.11 0.015 260);
+  --bg-subtle:      oklch(0.155 0.018 260);
+  --bg-card:        oklch(0.13 0.016 260);
+  --text:           oklch(0.94 0.006 75);
+  --text-secondary: oklch(0.68 0.012 260);
+  --text-tertiary:  oklch(0.50 0.010 260);
+  --accent:         oklch(0.65 0.18 264);
+  --accent-subtle:  oklch(0.65 0.18 264 / 0.12);
+  --risk-red:       oklch(0.65 0.18 25);
+  --rule:           oklch(0.22 0.015 260);
+  --rule-light:     oklch(0.19 0.012 260);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "DM Sans", system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; transition: background 0.25s, color 0.25s; }
+::selection { background: var(--accent-subtle); }
+
+#tweaks-panel { display:none; position:fixed; bottom:24px; right:24px; background:var(--bg); border:1px solid var(--rule); border-radius:10px; padding:20px; width:220px; box-shadow:0 8px 32px rgba(0,0,0,0.14); z-index:200; font-family:"DM Sans",sans-serif; }
+#tweaks-panel.open { display:block; }
+#tweaks-panel h3 { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-secondary); margin-bottom:16px; }
+.tweak-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.tweak-label { font-size:12px; color:var(--text-secondary); }
+.tweak-toggle { display:flex; border:1px solid var(--rule); border-radius:6px; overflow:hidden; }
+.tweak-toggle button { padding:5px 11px; font-size:11px; font-weight:600; background:none; border:none; cursor:pointer; color:var(--text-secondary); transition:background 0.15s,color 0.15s; font-family:inherit; }
+.tweak-toggle button.active { background:var(--accent); color:#fff; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<div id="tweaks-panel">
+  <h3>Tweaks</h3>
+  <div class="tweak-row">
+    <span class="tweak-label">Thème</span>
+    <div class="tweak-toggle">
+      <button id="tw-light" class="active" onclick="setTheme('light')">Clair</button>
+      <button id="tw-dark" onclick="setTheme('dark')">Sombre</button>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <span class="tweak-label">Langue</span>
+    <div class="tweak-toggle">
+      <button id="tw-fr" class="active" onclick="setLang('fr')">FR</button>
+      <button id="tw-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "lang": "fr"
+}/*EDITMODE-END*/;
+function setTheme(t) {
+  document.documentElement.setAttribute("data-theme", t==="dark"?"dark":"");
+  ["light","dark"].forEach(v => { const b=document.getElementById("tw-"+v); if(b) b.classList.toggle("active", v===t); });
+  window.parent.postMessage({type:"__edit_mode_set_keys",edits:{theme:t}},"*");
+}
+function setLang(l) {
+  window.__setLang && window.__setLang(l);
+  ["fr","en"].forEach(v => { const b=document.getElementById("tw-"+v); if(b) b.classList.toggle("active", v===l); });
+  window.parent.postMessage({type:"__edit_mode_set_keys",edits:{lang:l}},"*");
+}
+window.addEventListener("message", e => {
+  if (e.data && e.data.type==="__activate_edit_mode")   document.getElementById("tweaks-panel").classList.add("open");
+  if (e.data && e.data.type==="__deactivate_edit_mode") document.getElementById("tweaks-panel").classList.remove("open");
+});
+window.parent.postMessage({type:"__edit_mode_available"},"*");
+setTheme(TWEAK_DEFAULS.theme);
+</script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+// ═══════════════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════════════
+const GRADE_COLORS = { A:"#2a6f3e", B:"#1a5ca8", C:"#c47d00", D:"#b53a1e", F:"#7a0000" };
+const gc = g => GRADE_COLORS[g?.[0]] || "#555";
+
+const CANDIDATE_COLORS = [
+  "oklch(0.44 0.18 264)", // blue
+  "oklch(0.50 0.18 25)",  // red
+  "oklch(0.42 0.17 145)", // green
+  "oklch(0.44 0.18 300)", // purple
+];
+
+const AXES = [
+  { id:"eco", label:{ fr:"Économique",    en:"Economic"    }, lp:{ fr:"Gauche",      en:"Left"         }, rp:{ fr:"Droite",        en:"Right"       } },
+  { id:"soc", label:{ fr:"Sociétal",      en:"Social"      }, lp:{ fr:"Progressiste",en:"Progressive"  }, rp:{ fr:"Conservateur",  en:"Conservative"} },
+  { id:"env", label:{ fr:"Écologique",    en:"Ecological"  }, lp:{ fr:"Transformatif",en:"Transformative"}, rp:{ fr:"Modéré",      en:"Moderate"    } },
+  { id:"ins", label:{ fr:"Institutionnel",en:"Institutional"}, lp:{ fr:"Fédéraliste", en:"Federalist"  }, rp:{ fr:"Souverainiste", en:"Sovereignist"} },
+  { id:"sec", label:{ fr:"Sécuritaire",   en:"Security"    }, lp:{ fr:"Libertaire",  en:"Libertarian"  }, rp:{ fr:"Autoritaire",   en:"Authoritarian"} },
+];
+
+const DIMS = [
+  { id:"finance",   label:{ fr:"Finances publiques",  en:"Public Finance"       } },
+  { id:"travail",   label:{ fr:"Emploi & Travail",    en:"Employment & Labour"  } },
+  { id:"sante",     label:{ fr:"Santé & Hôpital",     en:"Health & Hospitals"   } },
+  { id:"ecologie",  label:{ fr:"Écologie & Énergie",  en:"Ecology & Energy"     } },
+  { id:"education", label:{ fr:"Éducation & Recherche",en:"Education & Research"} },
+  { id:"securite",  label:{ fr:"Sécurité & Justice",  en:"Security & Justice"   } },
+  { id:"demo",      label:{ fr:"Institutions",        en:"Institutions"         } },
+];
+
+const RISK_TYPES = [
+  { key:"fiscal",         label:{ fr:"Budgétaire",    en:"Fiscal"         } },
+  { key:"implementation", label:{ fr:"Mise en œuvre", en:"Implementation" } },
+  { key:"dependency",     label:{ fr:"Dépendance",    en:"Dependency"     } },
+  { key:"reversal",       label:{ fr:"Réversibilité", en:"Reversal"       } },
+];
+
+const ALL_CANDIDATES = [
+  {
+    id:"sophie-villeneuve", name:"Sophie Villeneuve", party:"Renouveau Démocratique", partyShort:"RD",
+    partyColor:"#3B6FD4", position:{ fr:"Centre-gauche", en:"Centre-left" },
+    grade:"B", gradeSub:"+", analyzed:true,
+    positioning:[-2,-3,-2,1,-1],
+    dimGrades:{ finance:"C+", travail:"B-", sante:"B+", ecologie:"B", education:"B-", securite:"C+", demo:"A-" },
+    risks:{ finance:[4,3,2,2], social:[2,2,3,1], env:[3,4,1,2], sante:[3,2,2,1], sec:[2,3,1,3], inst:[1,2,1,4] },
+    intergen:[-1,-1,1,2,1],
+  },
+  {
+    id:"eric-bertrand", name:"Éric Bertrand", party:"Cap pour la République", partyShort:"CPR",
+    partyColor:"#E8A020", position:{ fr:"Centre", en:"Centre" },
+    grade:"B", gradeSub:"", analyzed:true,
+    positioning:[1,-1,-1,2,0],
+    dimGrades:{ finance:"B", travail:"C+", sante:"B-", ecologie:"C+", education:"B", securite:"B-", demo:"B-" },
+    risks:{ finance:[2,2,1,2], social:[2,3,2,2], env:[2,3,2,3], sante:[2,2,2,2], sec:[2,2,1,2], inst:[2,3,2,2] },
+    intergen:[0,-1,0,1,1],
+  },
+  {
+    id:"antoine-delacroix", name:"Antoine Delacroix", party:"Les Conservateurs", partyShort:"LC",
+    partyColor:"#2A7A4B", position:{ fr:"Centre-droit", en:"Centre-right" },
+    grade:"B", gradeSub:"-", analyzed:true,
+    positioning:[2,-2,1,3,2],
+    dimGrades:{ finance:"B+", travail:"C+", sante:"C+", ecologie:"C", education:"B-", securite:"B+", demo:"C+" },
+    risks:{ finance:[2,2,2,3], social:[3,3,3,2], env:[1,2,1,4], sante:[2,3,2,3], sec:[2,2,1,2], inst:[2,3,3,3] },
+    intergen:[1,0,-1,0,0],
+  },
+  {
+    id:"claire-fontaine", name:"Claire Fontaine", party:"Union de la Gauche", partyShort:"UGP",
+    partyColor:"#C02535", position:{ fr:"Gauche", en:"Left" },
+    grade:"C", gradeSub:"+", analyzed:true,
+    positioning:[-4,-4,-3,0,-1],
+    dimGrades:{ finance:"D+", travail:"B+", sante:"B", ecologie:"B-", education:"B-", securite:"C-", demo:"B" },
+    risks:{ finance:[5,3,4,2], social:[2,2,2,2], env:[3,3,2,2], sante:[3,3,3,2], sec:[2,3,1,3], inst:[2,2,2,3] },
+    intergen:[1,0,1,1,2],
+  },
+  {
+    id:"lucie-arnaud", name:"Lucie Arnaud", party:"Mouvement Écologiste", partyShort:"MEP",
+    partyColor:"#4DA840", position:{ fr:"Écologiste", en:"Ecologist" },
+    grade:"C", gradeSub:"", analyzed:true,
+    positioning:[-3,-3,-4,1,-1],
+    dimGrades:{ finance:"D+", travail:"C+", sante:"B-", ecologie:"A-", education:"B-", securite:"D+", demo:"B-" },
+    risks:{ finance:[4,3,3,2], social:[2,2,2,2], env:[3,4,2,2], sante:[3,3,2,2], sec:[2,3,1,3], inst:[2,2,2,3] },
+    intergen:[1,1,3,1,2],
+  },
+];
+
+const RISK_DIMS = [
+  { id:"finance", label:{ fr:"Économie",      en:"Economy"      } },
+  { id:"social",  label:{ fr:"Social",        en:"Social"       } },
+  { id:"env",     label:{ fr:"Environnement", en:"Environment"  } },
+  { id:"sante",   label:{ fr:"Santé",         en:"Health"       } },
+  { id:"sec",     label:{ fr:"Sécurité",      en:"Security"     } },
+  { id:"inst",    label:{ fr:"Institutions",  en:"Institutions" } },
+];
+
+const INTERGEN_DIMS = [
+  { id:0, label:{ fr:"Retraites",     en:"Pensions"    } },
+  { id:1, label:{ fr:"Dette",         en:"Debt"        } },
+  { id:2, label:{ fr:"Climat",        en:"Climate"     } },
+  { id:3, label:{ fr:"Santé",         en:"Health"      } },
+  { id:4, label:{ fr:"Éducation",     en:"Education"   } },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// RADAR CHART (multi-candidate overlay)
+// ═══════════════════════════════════════════════════════════════
+function ComparisonRadar({ candidates, candidateColors, lang }) {
+  const SIZE=300, CX=150, CY=150, R=110, N=AXES.length;
+  const angle = i => (Math.PI*2*i)/N - Math.PI/2;
+  const toXY = (i,val) => { const r=((val+5)/10)*R; return [CX+r*Math.cos(angle(i)), CY+r*Math.sin(angle(i))]; };
+  const polyPath = vals => vals.map((v,i)=>{ const [x,y]=toXY(i,v); return `${i===0?"M":"L"}${x.toFixed(1)},${y.toFixed(1)}`; }).join(" ")+" Z";
+
+  return (
+    <svg width={SIZE} height={SIZE} viewBox={`0 0 ${SIZE} ${SIZE}`} style={{ overflow:"visible", width:"100%", maxWidth:SIZE }}>
+      {[0,0.25,0.5,0.75,1].map((t,ri) => (
+        <polygon key={ri} points={AXES.map((_,i)=>{ const r=t*R; return `${CX+r*Math.cos(angle(i))},${CY+r*Math.sin(angle(i))}`; }).join(" ")}
+          fill="none" stroke="var(--rule)" strokeWidth={ri===2?1.5:0.75} strokeDasharray={ri===2?"none":"3,3"} />
+      ))}
+      {AXES.map((_,i)=>{ const [x1,y1]=toXY(i,-5),[x2,y2]=toXY(i,5); return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--rule)" strokeWidth={0.75}/>; })}
+      {candidates.map((c,ci) => (
+        <path key={c.id} d={polyPath(c.positioning)} fill={candidateColors[ci]} fillOpacity={0.12}
+          stroke={candidateColors[ci]} strokeWidth={2} />
+      ))}
+      {AXES.map((ax,i)=>{
+        const lr=R+22, lx=CX+lr*Math.cos(angle(i)), ly=CY+lr*Math.sin(angle(i));
+        const ta=Math.abs(Math.cos(angle(i)))<0.1?"middle":lx<CX?"end":"start";
+        return <text key={i} x={lx} y={ly+4} textAnchor={ta} fontSize={9} fontFamily="DM Sans,sans-serif" fill="var(--text-secondary)" fontWeight={500} letterSpacing="0.04em" style={{textTransform:"uppercase"}}>{ax.label[lang]}</text>;
+      })}
+      <circle cx={CX} cy={CY} r={2.5} fill="var(--rule)" />
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// GRADE BADGE
+// ═══════════════════════════════════════════════════════════════
+function GradeBadge({ grade, sub, size="md" }) {
+  const sz = { sm:{outer:32,font:14,sf:8}, md:{outer:44,font:20,sf:10}, lg:{outer:56,font:26,sf:12} }[size];
+  const col = gc(grade);
+  return (
+    <div style={{ width:sz.outer, height:sz.outer, border:`2px solid ${col}`, borderRadius:4, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, position:"relative", background:`${col}12` }}>
+      <span style={{ fontSize:sz.font, fontFamily:"Cormorant Garamond,Georgia,serif", fontWeight:600, color:col, lineHeight:1 }}>{grade}</span>
+      {sub && <span style={{ position:"absolute", top:2, right:3, fontSize:sz.sf, color:col, fontWeight:700, lineHeight:1 }}>{sub}</span>}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SECTION WRAPPER
+// ═══════════════════════════════════════════════════════════════
+function Section({ id, label, children }) {
+  return (
+    <section id={id} data-screen-label={label} style={{ padding:"56px 0 40px", borderTop:"1px solid var(--rule)" }}>
+      <div style={{ display:"flex", alignItems:"center", gap:16, marginBottom:36 }}>
+        <span style={{ fontSize:11, fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase", color:"var(--accent)", whiteSpace:"nowrap" }}>{label}</span>
+        <div style={{ flex:1, height:1, background:"var(--rule-light)" }} />
+      </div>
+      {children}
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CANDIDATE SELECTOR
+// ═══════════════════════════════════════════════════════════════
+function CandidateSelector({ selected, onToggle, lang, maxReached }) {
+  return (
+    <div style={{ overflowX:"auto" }}>
+      <div style={{ display:"flex", gap:10, minWidth:"max-content", padding:"2px 2px 4px" }}>
+        {ALL_CANDIDATES.map((c, i) => {
+          const isSel = selected.includes(c.id);
+          const isDisabled = !c.analyzed || (!isSel && maxReached);
+          return (
+            <button key={c.id} onClick={() => !isDisabled && onToggle(c.id)}
+              style={{
+                display:"flex", flexDirection:"column", gap:8, padding:"14px 16px",
+                background: isSel ? "var(--bg-card)" : "var(--bg-subtle)",
+                border: isSel ? `2px solid ${CANDIDATE_COLORS[selected.indexOf(c.id)]}` : "2px solid var(--rule-light)",
+                borderRadius:8, cursor:isDisabled?"not-allowed":"pointer", opacity:isDisabled?0.45:1,
+                transition:"border-color 0.15s, opacity 0.15s", textAlign:"left", minWidth:160,
+                fontFamily:"inherit"
+              }}>
+              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8 }}>
+                <div style={{ width:6, height:6, borderRadius:"50%", background:c.partyColor, marginTop:2, flexShrink:0 }} />
+                {isSel && <GradeBadge grade={c.grade} sub={c.gradeSub} size="sm" />}
+              </div>
+              <div style={{ fontSize:13, fontFamily:"Cormorant Garamond,Georgia,serif", fontWeight:700, lineHeight:1.15, color:"var(--text)" }}>{c.name}</div>
+              <div style={{ fontSize:10, color:"var(--text-tertiary)", letterSpacing:"0.04em" }}>{c.position[lang]}</div>
+              {isSel && (
+                <div style={{ width:"100%", height:3, borderRadius:2, background:CANDIDATE_COLORS[selected.indexOf(c.id)], marginTop:2 }} />
+              )}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// POSITIONING SECTION
+// ═══════════════════════════════════════════════════════════════
+function PositionnementComp({ candidates, candidateColors, lang }) {
+  return (
+    <Section id="pos" label={lang==="fr"?"Positionnement politique":"Political Positioning"}>
+      <div style={{ display:"grid", gridTemplateColumns:"auto 1fr", gap:48, alignItems:"start" }}>
+        <ComparisonRadar candidates={candidates} candidateColors={candidateColors} lang={lang} />
+        <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+          {AXES.map((ax,i) => {
+            const vals = candidates.map(c => c.positioning[i]);
+            const spread = Math.max(...vals) - Math.min(...vals);
+            return (
+              <div key={ax.id}>
+                <div style={{ display:"flex", justifyContent:"space-between", marginBottom:6, fontSize:11, fontWeight:600, letterSpacing:"0.06em", textTransform:"uppercase", color:"var(--text-secondary)" }}>
+                  <span>{ax.label[lang]}</span>
+                  {spread >= 2 && <span style={{ color:"var(--risk-red)", fontWeight:600 }}>⚡ ±{spread}</span>}
+                </div>
+                <div style={{ position:"relative", height:20, background:"var(--bg-subtle)", borderRadius:2 }}>
+                  <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1, background:"var(--rule)", opacity:0.5 }} />
+                  {candidates.map((c,ci) => (
+                    <div key={c.id} title={`${c.name}: ${c.positioning[i]}`} style={{
+                      position:"absolute", top:"50%", left:`${((c.positioning[i]+5)/10)*100}%`,
+                      transform:"translate(-50%,-50%)", width:9, height:9, borderRadius:"50%",
+                      background:candidateColors[ci], border:"2px solid var(--bg)", cursor:"default", zIndex:ci+1
+                    }} />
+                  ))}
+                </div>
+                <div style={{ display:"flex", justifyContent:"space-between", marginTop:3, fontSize:9, color:"var(--text-tertiary)" }}>
+                  <span>{ax.lp[lang]} (−5)</span><span>{ax.rp[lang]} (+5)</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DOMAIN GRADES TABLE
+// ═══════════════════════════════════════════════════════════════
+function DomainesComp({ candidates, candidateColors, lang }) {
+  const gradeVal = g => ({ "A":9,"A-":8,"B+":7,"B":6,"B-":5,"C+":4,"C":3,"C-":2,"D+":1,"D":0 }[g] ?? 3);
+
+  return (
+    <Section id="dim" label={lang==="fr"?"Analyse par domaine":"Domain Analysis"}>
+      <div style={{ overflowX:"auto" }}>
+        <table style={{ borderCollapse:"collapse", width:"100%", minWidth:480 }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign:"left", padding:"0 20px 16px 0", fontSize:10, fontWeight:600, letterSpacing:"0.06em", textTransform:"uppercase", color:"var(--text-secondary)", width:200 }}>
+                {lang==="fr"?"Domaine":"Domain"}
+              </th>
+              {candidates.map((c,ci) => (
+                <th key={c.id} style={{ textAlign:"center", padding:"0 8px 16px", minWidth:120 }}>
+                  <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:6 }}>
+                    <div style={{ width:24, height:3, borderRadius:2, background:candidateColors[ci] }} />
+                    <div style={{ fontSize:11, fontWeight:600, color:"var(--text)", lineHeight:1.2, textAlign:"center" }}>{c.name.split(" ")[0]}</div>
+                  </div>
+                </th>
+              ))}
+              {candidates.length > 1 && <th style={{ textAlign:"center", padding:"0 0 16px 16px", fontSize:10, fontWeight:600, letterSpacing:"0.06em", textTransform:"uppercase", color:"var(--text-secondary)", width:80 }}>{lang==="fr"?"Écart":"Spread"}</th>}
+            </tr>
+          </thead>
+          <tbody>
+            {DIMS.map((dim,di) => {
+              const grades = candidates.map(c => c.dimGrades[dim.id]);
+              const vals   = grades.map(gradeVal);
+              const spread = Math.max(...vals) - Math.min(...vals);
+              const winner = vals.indexOf(Math.max(...vals));
+              return (
+                <tr key={dim.id} style={{ borderTop:"1px solid var(--rule-light)" }}>
+                  <td style={{ padding:"12px 20px 12px 0", fontSize:13, fontWeight:500, color:"var(--text)" }}>{dim.label[lang]}</td>
+                  {candidates.map((c,ci) => {
+                    const g = c.dimGrades[dim.id];
+                    const isBest = ci === winner && vals.filter(v=>v===vals[winner]).length===1;
+                    return (
+                      <td key={c.id} style={{ textAlign:"center", padding:"12px 8px" }}>
+                        <div style={{ display:"inline-flex", alignItems:"center", justifyContent:"center" }}>
+                          <GradeBadge grade={g[0]} sub={g[1]} size="sm" />
+                          {isBest && <span style={{ marginLeft:4, fontSize:10, color:"var(--text-tertiary)" }}>↑</span>}
+                        </div>
+                      </td>
+                    );
+                  })}
+                  {candidates.length > 1 && (
+                    <td style={{ textAlign:"center", padding:"12px 0 12px 16px" }}>
+                      <span style={{ fontSize:11, fontWeight:600, color:spread>=3?"var(--risk-red)":spread>=2?"oklch(0.55 0.15 60)":"var(--text-tertiary)" }}>
+                        {spread >= 2 ? `⚡ ${spread}` : spread}
+                      </span>
+                    </td>
+                  )}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </Section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// INTERGENERATIONAL COMPARISON
+// ═══════════════════════════════════════════════════════════════
+function IntergenComp({ candidates, candidateColors, lang }) {
+  const sc = s => s>=2?"oklch(0.44 0.17 145)":s===1?"oklch(0.60 0.12 145)":s===0?"var(--text-tertiary)":s===-1?"oklch(0.60 0.13 30)":"oklch(0.46 0.19 20)";
+
+  return (
+    <Section id="intergen" label={lang==="fr"?"Impact intergénérationnel":"Intergenerational Impact"}>
+      <p style={{ fontSize:13, color:"var(--text-secondary)", lineHeight:1.6, marginBottom:28, maxWidth:620 }}>
+        {lang==="fr"
+          ? "Impact net estimé sur les générations futures (−3 très négatif, +3 très positif) à l'horizon 2047."
+          : "Estimated net impact on future generations (−3 very negative, +3 very positive) to 2047."}
+      </p>
+      <div style={{ overflowX:"auto" }}>
+        <table style={{ borderCollapse:"collapse", width:"100%", minWidth:420 }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign:"left", padding:"0 20px 14px 0", fontSize:10, fontWeight:600, letterSpacing:"0.06em", textTransform:"uppercase", color:"var(--text-secondary)", width:140 }}>{lang==="fr"?"Domaine":"Domain"}</th>
+              {candidates.map((c,ci) => (
+                <th key={c.id} style={{ textAlign:"center", padding:"0 8px 14px", minWidth:100 }}>
+                  <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:5 }}>
+                    <div style={{ width:20, height:3, borderRadius:2, background:candidateColors[ci] }} />
+                    <div style={{ fontSize:10, fontWeight:600, color:"var(--text)" }}>{c.name.split(" ")[0]}</div>
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {INTERGEN_DIMS.map(dim => (
+              <tr key={dim.id} style={{ borderTop:"1px solid var(--rule-light)" }}>
+                <td style={{ padding:"10px 20px 10px 0", fontSize:13, fontWeight:500, color:"var(--text)" }}>{dim.label[lang]}</td>
+                {candidates.map((c,ci) => {
+                  const s = c.intergen[dim.id];
+                  return (
+                    <td key={c.id} style={{ padding:"10px 8px", textAlign:"center" }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:5, justifyContent:"center" }}>
+                        <div style={{ width:Math.max(Math.abs(s)*12,2), height:5, borderRadius:3, background:sc(s), opacity:s===0?0.3:1 }} />
+                        <span style={{ fontSize:10, fontWeight:700, color:sc(s) }}>{s>0?`+${s}`:s}</span>
+                      </div>
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RISK COMPARISON
+// ═══════════════════════════════════════════════════════════════
+function RisquesComp({ candidates, candidateColors, lang }) {
+  const rc = v => ["","oklch(0.88 0.06 145)","oklch(0.82 0.10 90)","oklch(0.74 0.15 60)","oklch(0.60 0.19 30)","oklch(0.50 0.20 20)"][v] || "";
+  const rl = (v,l) => ({ fr:["","Faible","Limité","Modéré","Élevé","Critique"], en:["","Low","Limited","Moderate","High","Critical"] }[l])[v] || "";
+
+  return (
+    <Section id="risk" label={lang==="fr"?"Risques":"Risks"}>
+      {candidates.map((c,ci) => (
+        <div key={c.id} style={{ marginBottom: ci < candidates.length-1 ? 40 : 0 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
+            <div style={{ width:16, height:3, borderRadius:2, background:candidateColors[ci] }} />
+            <span style={{ fontSize:13, fontWeight:600, color:"var(--text)" }}>{c.name}</span>
+          </div>
+          <div style={{ overflowX:"auto" }}>
+            <table style={{ borderCollapse:"collapse", width:"100%", minWidth:400 }}>
+              <thead><tr>
+                <th style={{ textAlign:"left", padding:"0 12px 8px 0", fontSize:10, fontWeight:600, letterSpacing:"0.05em", textTransform:"uppercase", color:"var(--text-secondary)", width:120 }}>{lang==="fr"?"Domaine":"Domain"}</th>
+                {RISK_TYPES.map(rt => <th key={rt.key} style={{ textAlign:"center", padding:"0 4px 8px", fontSize:10, fontWeight:600, letterSpacing:"0.05em", textTransform:"uppercase", color:"var(--text-secondary)" }}>{rt.label[lang]}</th>)}
+              </tr></thead>
+              <tbody>
+                {RISK_DIMS.map((dim,ri) => (
+                  <tr key={dim.id}>
+                    <td style={{ padding:"3px 12px 3px 0", fontSize:12, fontWeight:500, color:"var(--text)", whiteSpace:"nowrap" }}>{dim.label[lang]}</td>
+                    {RISK_TYPES.map((rt,ti) => { const v = c.risks[dim.id][ti]; return (
+                      <td key={rt.key} style={{ padding:"3px 4px", textAlign:"center" }}>
+                        <div style={{ background:rc(v), borderRadius:3, padding:"4px 3px", fontSize:9, fontWeight:600, color:v>=3?"#fff":"#333", minWidth:60 }}>{rl(v,lang)}</div>
+                      </td>
+                    ); })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+    </Section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// APP
+// ═══════════════════════════════════════════════════════════════
+function App() {
+  const [lang, setLang]       = useState(TWEAK_DEFAULS.lang || "fr");
+  const [selected, setSelected] = useState(["sophie-villeneuve","eric-bertrand"]);
+
+  window.__setLang = setLang;
+
+  // Persist
+  useEffect(() => { try { localStorage.setItem("e27-lang", lang); } catch {} }, [lang]);
+  useEffect(() => { try { const l=localStorage.getItem("e27-lang"); if(l) setLang(l); } catch {} }, []);
+  useEffect(() => { try { const s=localStorage.getItem("e27-compare"); if(s) setSelected(JSON.parse(s)); } catch {} }, []);
+  useEffect(() => { try { localStorage.setItem("e27-compare", JSON.stringify(selected)); } catch {} }, [selected]);
+
+  const toggle = id => {
+    setSelected(prev => prev.includes(id)
+      ? prev.filter(x => x!==id)
+      : prev.length < 4 ? [...prev, id] : prev
+    );
+  };
+
+  const selectedCandidates = selected.map(id => ALL_CANDIDATES.find(c => c.id===id)).filter(Boolean);
+  const candidateColors = selected.map((_,i) => CANDIDATE_COLORS[i]);
+  const maxReached = selected.length >= 4;
+
+  return (
+    <>
+      {/* Nav */}
+      <header style={{ position:"sticky", top:0, zIndex:80, background:"var(--bg)", borderBottom:"1px solid var(--rule)", height:"var(--nav-h)", display:"flex", alignItems:"center" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 40px", width:"100%", display:"flex", alignItems:"center", gap:16 }}>
+          <a href="Landing Page.html" style={{ fontFamily:"Cormorant Garamond,Georgia,serif", fontSize:21, fontWeight:700, color:"var(--accent)", textDecoration:"none", letterSpacing:"-0.01em", flexShrink:0 }}>
+            é<span style={{ fontWeight:400 }}>27</span>
+          </a>
+          <span style={{ color:"var(--rule)", fontSize:18 }}>·</span>
+          <span style={{ fontSize:13, color:"var(--text-secondary)", fontWeight:500 }}>
+            {lang==="fr"?"Comparaison":"Comparison"}
+          </span>
+          <div style={{ flex:1 }} />
+          <a href="Landing Page.html" style={{ fontSize:12, color:"var(--text-secondary)", textDecoration:"none", fontWeight:500 }}>
+            ← {lang==="fr"?"Tous les candidats":"All candidates"}
+          </a>
+          <div style={{ display:"flex", border:"1px solid var(--rule)", borderRadius:6, overflow:"hidden" }}>
+            {["fr","en"].map(l => (
+              <button key={l} onClick={() => setLang(l)} style={{ padding:"5px 10px", fontSize:11, fontWeight:700, letterSpacing:"0.06em", textTransform:"uppercase", background:lang===l?"var(--accent)":"none", color:lang===l?"#fff":"var(--text-secondary)", border:"none", cursor:"pointer", fontFamily:"inherit", transition:"background 0.15s,color 0.15s" }}>{l}</button>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      <main style={{ maxWidth:1100, margin:"0 auto", padding:"0 40px 100px" }}>
+        {/* Page header */}
+        <div style={{ padding:"48px 0 36px", borderBottom:"1px solid var(--rule)" }}>
+          <div style={{ fontSize:11, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"var(--accent)", marginBottom:12 }}>
+            {lang==="fr"?"Comparaison":"Comparison"}
+          </div>
+          <h1 style={{ fontFamily:"Cormorant Garamond,Georgia,serif", fontSize:"clamp(28px,4vw,48px)", fontWeight:700, lineHeight:1.05, letterSpacing:"-0.02em", color:"var(--text)", marginBottom:16 }}>
+            {lang==="fr"?"Confronter les programmes":"Side-by-side programme analysis"}
+          </h1>
+          <p style={{ fontSize:14, color:"var(--text-secondary)", lineHeight:1.6, maxWidth:560 }}>
+            {lang==="fr"
+              ? "Sélectionnez jusqu'à 4 candidats pour les comparer sur les mêmes dimensions."
+              : "Select up to 4 candidates to compare on identical dimensions."}
+          </p>
+        </div>
+
+        {/* Candidate selector */}
+        <div style={{ padding:"32px 0 0" }}>
+          <div style={{ fontSize:11, fontWeight:700, letterSpacing:"0.08em", textTransform:"uppercase", color:"var(--text-secondary)", marginBottom:16 }}>
+            {lang==="fr"
+              ? `Candidats sélectionnés (${selected.length}/4)`
+              : `Selected candidates (${selected.length}/4)`}
+          </div>
+          <CandidateSelector selected={selected} onToggle={toggle} lang={lang} maxReached={maxReached} />
+        </div>
+
+        {selectedCandidates.length < 2 ? (
+          <div style={{ padding:"80px 0", textAlign:"center" }}>
+            <div style={{ fontSize:32, marginBottom:16, opacity:0.2 }}>◻</div>
+            <p style={{ fontSize:14, color:"var(--text-secondary)" }}>
+              {lang==="fr"?"Sélectionnez au moins 2 candidats.":"Select at least 2 candidates."}
+            </p>
+          </div>
+        ) : (
+          <>
+            {/* Sticky comparison header */}
+            <div style={{ position:"sticky", top:"var(--nav-h)", zIndex:60, background:"var(--bg)", borderBottom:"1px solid var(--rule)", marginTop:32, padding:"12px 0" }}>
+              <div style={{ display:"flex", gap:20, alignItems:"center", overflowX:"auto" }}>
+                {selectedCandidates.map((c,ci) => (
+                  <div key={c.id} style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0 }}>
+                    <div style={{ width:12, height:12, borderRadius:"50%", background:candidateColors[ci] }} />
+                    <GradeBadge grade={c.grade} sub={c.gradeSub} size="sm" />
+                    <div>
+                      <div style={{ fontSize:13, fontWeight:600, color:"var(--text)", lineHeight:1 }}>{c.name}</div>
+                      <div style={{ fontSize:10, color:"var(--text-secondary)", marginTop:2 }}>{c.position[lang]}</div>
+                    </div>
+                    {ci < selectedCandidates.length-1 && <div style={{ width:1, height:28, background:"var(--rule-light)", marginLeft:10 }} />}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <PositionnementComp candidates={selectedCandidates} candidateColors={candidateColors} lang={lang} />
+            <DomainesComp       candidates={selectedCandidates} candidateColors={candidateColors} lang={lang} />
+            <IntergenComp       candidates={selectedCandidates} candidateColors={candidateColors} lang={lang} />
+            <RisquesComp        candidates={selectedCandidates} candidateColors={candidateColors} lang={lang} />
+          </>
+        )}
+      </main>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
