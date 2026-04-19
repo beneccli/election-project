@@ -2,7 +2,7 @@
 id: "0026"
 title: "End-to-end mock-provider test for analyze.ts against real schema"
 type: task
-status: open
+status: done
 priority: medium
 created: 2026-04-19
 milestone: M_AnalysisPrompts

@@ -45,7 +45,7 @@ Format: `M_<FeatureCluster>`
 |-----------|--------|-------------|
 | M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
 | M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
-| M_AnalysisPrompts | � In progress | The analysis prompt, schema, inline adversarial pass |
+| M_AnalysisPrompts | ✅ Done | The analysis prompt, schema, inline adversarial pass |
 | M_Aggregation | 📋 Planned (spike needed) | Aggregator prompt, agreement_map, dissent preservation |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
 
@@ -141,7 +141,7 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_DataPipeline
 
-**Status:** 🚧 In progress. Spike `0020` archived 2026-04-19. Six backlog tasks (`0021`–`0026`) queued in `tasks/backlog/M_AnalysisPrompts/`.
+**Status:** ✅ Done (2026-04-19). Spike `0020` and all six tasks (`0021`–`0026`) implemented and archived.
 
 **Spike produces:**
 - `docs/specs/analysis/analysis-prompt.md` (prompt design) — promoted Draft → **Stable** via task `0021`
