@@ -1,9 +1,11 @@
 import { describe, it, expect } from "vitest";
 import {
+  AnalysisOutputSchema,
   CandidateMetadataSchema,
   SourceMetaSchema,
   VersionMetadataSchema,
 } from "./schema";
+import { buildValidAnalysisOutput } from "./fixtures/analysis-output/builder";
 
 // ---------------------------------------------------------------------------
 // CandidateMetadataSchema
@@ -327,6 +329,148 @@ describe("schema VersionMetadataSchema", () => {
         prompt_sha256: "not-a-hash",
       },
     });
+    expect(result.success).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// AnalysisOutputSchema
+// See docs/specs/analysis/output-schema.md
+// ---------------------------------------------------------------------------
+
+describe("schema AnalysisOutputSchema", () => {
+  it("analysis_schema_validates_fully_populated_fixture", () => {
+    const result = AnalysisOutputSchema.safeParse(buildValidAnalysisOutput());
+    expect(result.success).toBe(true);
+  });
+
+  it("analysis_schema_accepts_each_valid_grade", () => {
+    for (const grade of ["A", "B", "C", "D", "F", "NOT_ADDRESSED"] as const) {
+      const fixture = buildValidAnalysisOutput();
+      fixture.dimensions.economic_fiscal.grade = grade;
+      const result = AnalysisOutputSchema.safeParse(fixture);
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it("analysis_schema_accepts_boundary_positioning_scores", () => {
+    for (const score of [-5, -4, 0, 4, 5]) {
+      const fixture = buildValidAnalysisOutput();
+      fixture.positioning.economic.score = score;
+      const result = AnalysisOutputSchema.safeParse(fixture);
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it("analysis_schema_accepts_each_net_transfer_direction", () => {
+    for (const dir of ["young_to_old", "old_to_young", "neutral", "mixed"] as const) {
+      const fixture = buildValidAnalysisOutput();
+      fixture.intergenerational.net_transfer_direction = dir;
+      const result = AnalysisOutputSchema.safeParse(fixture);
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it("analysis_schema_allows_empty_source_refs_on_problems_ignored", () => {
+    // Absence findings are permitted to carry empty source_refs.
+    // See docs/specs/analysis/editorial-principles.md (principle 2).
+    const fixture = buildValidAnalysisOutput();
+    fixture.dimensions.economic_fiscal.problems_ignored[0].source_refs = [];
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+  });
+
+  it("analysis_schema_rejects_missing_source_refs_on_problem_addressed", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.dimensions.economic_fiscal.problems_addressed[0].source_refs = [];
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_positioning_score_above_range", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.economic.score = 6;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_positioning_score_below_range", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.economic.score = -6;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_non_integer_positioning_score", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.economic.score = 2.5 as unknown as number;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_invalid_grade", () => {
+    const fixture = buildValidAnalysisOutput();
+    (fixture.dimensions.economic_fiscal as { grade: string }).grade = "A+";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_confidence_above_one", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.economic.confidence = 1.5;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_negative_confidence", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.confidence_self_assessment = -0.1;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_unknown_top_level_field", () => {
+    const fixture = {
+      ...buildValidAnalysisOutput(),
+      rogue_field: "should not be accepted",
+    };
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_missing_required_dimension_cluster", () => {
+    const fixture = buildValidAnalysisOutput();
+    delete (fixture.dimensions as Partial<typeof fixture.dimensions>)
+      .environmental_long_term;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_missing_positioning_axis", () => {
+    const fixture = buildValidAnalysisOutput();
+    delete (fixture.positioning as Partial<typeof fixture.positioning>).ecological;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_empty_positioning_evidence", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.economic.evidence = [];
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_invalid_candidate_id", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.candidate_id = "Test Candidate";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_invalid_prompt_sha256", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.run_metadata.prompt_sha256 = "not-a-sha";
+    const result = AnalysisOutputSchema.safeParse(fixture);
     expect(result.success).toBe(false);
   });
 });

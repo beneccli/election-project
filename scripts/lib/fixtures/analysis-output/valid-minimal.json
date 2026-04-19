@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "test-candidate",
+  "version_date": "2026-04-19",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-19T10:32:00Z",
+    "prompt_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "temperature": 0
+  },
+  "summary": "A synthetic program used to validate the schema shape end-to-end.",
+  "positioning": {
+    "economic": {
+      "score": -2,
+      "anchor_comparison": "More interventionist than Macron 2017, less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Program contains several structural public-sector expansions."
+    },
+    "social_cultural": {
+      "score": 0,
+      "anchor_comparison": "More interventionist than Macron 2017, less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Program contains several structural public-sector expansions."
+    },
+    "sovereignty": {
+      "score": 1,
+      "anchor_comparison": "More interventionist than Macron 2017, less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Program contains several structural public-sector expansions."
+    },
+    "institutional": {
+      "score": -1,
+      "anchor_comparison": "More interventionist than Macron 2017, less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Program contains several structural public-sector expansions."
+    },
+    "ecological": {
+      "score": 2,
+      "anchor_comparison": "More interventionist than Macron 2017, less than Mélenchon 2022.",
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Program contains several structural public-sector expansions."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "confidence": 0.65
+    },
+    "social_demographic": {
+      "grade": "C",
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "confidence": 0.65
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "confidence": 0.65
+    },
+    "institutional_democratic": {
+      "grade": "NOT_ADDRESSED",
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "confidence": 0.65
+    },
+    "environmental_long_term": {
+      "grade": "D",
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "confidence": 0.65
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "approximately €1,200/person/year",
+      "units": "€/person/year",
+      "confidence": 0.5,
+      "caveats": "Central scenario assumes stable interest rates."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher effective tax burden.",
+        "quantified": "+€600/year"
+      },
+      "housing": {
+        "summary": "No supply-side relief; affordability declines.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Replacement rate trending down.",
+        "quantified": "~52% vs current 60%"
+      },
+      "labor_market": {
+        "summary": "Entry-wage compression.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Transition deferred, costs concentrated post-2035.",
+        "quantified": null
+      },
+      "narrative_summary": "Net negative distributional impact on under-35s."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension indexation preserved.",
+        "quantified": "+€0/year"
+      },
+      "pension": {
+        "summary": "Replacement rate stable near current 74%.",
+        "quantified": "~74%"
+      },
+      "healthcare": {
+        "summary": "Access unchanged under central assumptions.",
+        "quantified": null
+      },
+      "narrative_summary": "Net neutral-to-positive for current retirees."
+    },
+    "reasoning": "Program preserves indexation for current cohorts while deferring transition costs.",
+    "source_refs": [
+      "sources.md#retraites",
+      "sources.md#finances-publiques"
+    ],
+    "confidence": 0.6
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Debt rises toward 120% of GDP, housing access continues to decline.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "institutional_democratic"
+    ],
+    "reasoning": "Fiscal path bends, institutional arrangements unchanged.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [],
+  "downside_scenarios": [],
+  "adversarial_pass": {
+    "weakest_claims": [],
+    "potential_bias": "Model may under-weight sovereignty-coded signals.",
+    "evidence_gaps": "Limited source material on long-run rate assumptions.",
+    "confidence_in_critique": 0.6
+  },
+  "confidence_self_assessment": 0.65
+}

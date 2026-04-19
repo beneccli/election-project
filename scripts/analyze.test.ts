@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { analyze } from "./analyze";
 import { MockProvider } from "./lib/mock-provider";
+import { buildValidAnalysisOutput } from "./lib/fixtures/analysis-output/builder";
 import { mkdtemp, rm, mkdir, writeFile, readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -24,11 +25,7 @@ vi.mock("./config/models", async () => {
   };
 });
 
-const VALID_JSON_RESPONSE = JSON.stringify({
-  candidate_id: "test-candidate",
-  summary: "Test summary",
-  themes: [{ name: "Economy", position: "Pro-growth", source_refs: ["p.1"] }],
-});
+const VALID_JSON_RESPONSE = JSON.stringify(buildValidAnalysisOutput());
 
 describe("analyze", () => {
   let tmpDir: string;
@@ -219,5 +216,101 @@ describe("analyze", () => {
     expect(results[0].model).toBe("claude-test");
     expect(anthropicMock.callCount).toBe(1);
     expect(openaiMock.callCount).toBe(0);
+  });
+
+  it("analyze_uses_real_AnalysisOutputSchema_not_zAny", async () => {
+    const { AnalysisOutputSchema } = await import("./lib/schema");
+    // ZodAny has typeName "ZodAny"; the real schema is ZodObject (with .strict()).
+    // Assert we're not shipping the placeholder.
+    const def = (AnalysisOutputSchema as unknown as { _def: { typeName: string } })._def;
+    expect(def.typeName).not.toBe("ZodAny");
+    expect(def.typeName).toBe("ZodObject");
+  });
+
+  it("analyze_happy_path_roundtrips_valid_fixture_unchanged", async () => {
+    await analyze({
+      candidate: "test-candidate",
+      version: "2026-04-19",
+      providers: providers(),
+    });
+
+    const onDisk = JSON.parse(
+      await readFile(join(tmpDir, "raw-outputs", "claude-test.json"), "utf-8"),
+    );
+    const expected = buildValidAnalysisOutput();
+    expect(onDisk).toEqual(expected);
+  });
+
+  it("analyze_retries_on_schema_drift_and_writes_structured_failed_file", async () => {
+    // Build a JSON that parses but violates the schema (empty source_refs
+    // on a problems_addressed entry).
+    const drifted = buildValidAnalysisOutput();
+    drifted.dimensions.economic_fiscal.problems_addressed[0].source_refs = [];
+    const driftedJson = JSON.stringify(drifted);
+
+    const driftMock = new MockProvider({
+      id: "anthropic",
+      modelVersion: "claude-test",
+      response: driftedJson,
+    });
+
+    const results = await analyze({
+      candidate: "test-candidate",
+      version: "2026-04-19",
+      providers: { anthropic: driftMock, openai: openaiMock },
+    });
+
+    // 3 total attempts (1 initial + 2 retries)
+    expect(driftMock.callCount).toBe(3);
+
+    const failed = results.find((r) => r.model === "claude-test");
+    expect(failed?.status).toBe("failed");
+
+    const failedFile = JSON.parse(
+      await readFile(
+        join(tmpDir, "raw-outputs", "claude-test.FAILED.json"),
+        "utf-8",
+      ),
+    );
+    expect(failedFile.error_kind).toBe("zod_validation");
+    expect(Array.isArray(failedFile.issues)).toBe(true);
+    expect(failedFile.issues.length).toBeGreaterThan(0);
+    // Issue path should surface the offending field.
+    const paths = (failedFile.issues as Array<{ path: Array<string | number> }>).map(
+      (i) => i.path.join("."),
+    );
+    expect(paths.some((p) => p.includes("problems_addressed"))).toBe(true);
+
+    // Partial success: openai still succeeded in the same run.
+    const ok = results.find((r) => r.model === "gpt-test");
+    expect(ok?.status).toBe("success");
+    const files = await readdir(join(tmpDir, "raw-outputs"));
+    expect(files).toContain("gpt-test.json");
+    expect(files).toContain("claude-test.FAILED.json");
+  });
+
+  it("analyze_retries_on_parse_error_and_writes_parse_error_failed_file", async () => {
+    const nonJsonMock = new MockProvider({
+      id: "anthropic",
+      modelVersion: "claude-test",
+      response: "not json at all {{{",
+    });
+
+    await analyze({
+      candidate: "test-candidate",
+      version: "2026-04-19",
+      providers: { anthropic: nonJsonMock, openai: openaiMock },
+    });
+
+    expect(nonJsonMock.callCount).toBe(3);
+
+    const failedFile = JSON.parse(
+      await readFile(
+        join(tmpDir, "raw-outputs", "claude-test.FAILED.json"),
+        "utf-8",
+      ),
+    );
+    expect(failedFile.error_kind).toBe("parse_error");
+    expect(failedFile.issues).toBeUndefined();
   });
 });

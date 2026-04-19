@@ -1,7 +1,7 @@
 # Analytical Dimensions
 
 > **Version:** 1.0
-> **Status:** Draft — to be refined by M_AnalysisPrompts spike
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
 
 ---
 
@@ -103,12 +103,16 @@ See [`../website/structure.md`](../website/structure.md). Dimensions render as a
 
 ---
 
-## Open questions (for spike refinement)
+## Resolved decisions (spike `0020`)
 
-- Should we split "Economic & Fiscal" into two clusters (economy / fiscal) given its size?
-- Is "media & speech" a separate cluster or part of "Institutional"?
-- Agriculture: standalone or under "Environmental"?
-- How to handle dimensions where the candidate has no stated position but has a voting record? (The voting record is evidence even without a program statement.)
+- **Six clusters kept as listed** (Economic & Fiscal, Social & Demographic, Security & Sovereignty, Institutional & Democratic, Environmental & Long-term, Intergenerational cross-cutting). Splitting "Economic & Fiscal" was considered and rejected for v1: sub-dimension nesting already provides the granularity, and splitting would force website layout changes out of scope for M_AnalysisPrompts.
+- **Agriculture stays under Environmental & Long-term** (sub-dimension) in v1.
+- **Media & speech** are part of the Institutional & Democratic cluster (under "press and speech" signals), not a separate cluster.
+- **Voting record is evidence** when the candidate's program does not state a position on a dimension, at a lower confidence level. The finding is not "not addressed" in that case — it is "addressed via prior conduct" with confidence discount.
+
+### Deferred
+
+Revisions to cluster boundaries may be revisited after the first real candidate run (M_FirstCandidate) if a dimension is systematically ambiguous across candidates.
 
 ---
 

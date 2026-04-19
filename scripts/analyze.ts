@@ -6,6 +6,7 @@
 import { Command } from "commander";
 import { readFile, writeFile, access, mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { ZodError } from "zod";
 import { createLogger } from "./lib/logger";
 import { hashString } from "./lib/hash";
 import { versionDir, rawOutputsDir, PROJECT_ROOT } from "./lib/paths";
@@ -112,13 +113,32 @@ async function analyzeWithModel(
   }
 
   // All retries exhausted
-  const failedOutput = {
+  const failedOutput: {
+    model: string;
+    provider: string;
+    error: string;
+    error_kind: "zod_validation" | "parse_error" | "provider_error" | "unknown";
+    issues?: ZodError["issues"];
+    retries: number;
+    timestamp: string;
+  } = {
     model: config.model,
     provider: config.provider,
     error: lastError?.message ?? "Unknown error",
+    error_kind:
+      lastError instanceof ZodError
+        ? "zod_validation"
+        : lastError instanceof SyntaxError
+          ? "parse_error"
+          : lastError
+            ? "provider_error"
+            : "unknown",
     retries: MAX_RETRIES,
     timestamp: new Date().toISOString(),
   };
+  if (lastError instanceof ZodError) {
+    failedOutput.issues = lastError.issues;
+  }
   await writeFile(failedPath, JSON.stringify(failedOutput, null, 2), "utf-8");
   log.error({ model: config.model }, "All retries exhausted, wrote FAILED file");
 

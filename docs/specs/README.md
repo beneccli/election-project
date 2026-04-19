@@ -14,12 +14,12 @@ Code references specs, not tasks.
 specs/
 ├── analysis/           # Editorial principles, prompts, output schema
 │   ├── editorial-principles.md     # Non-negotiable editorial stance          [Stable]
-│   ├── dimensions.md               # Analytical dimensions covered            [Draft]
-│   ├── analysis-prompt.md          # Design of the per-model analysis prompt  [Draft]
-│   ├── output-schema.md            # JSON schema for analysis output          [Draft]
+│   ├── dimensions.md               # Analytical dimensions covered            [Stable]
+│   ├── analysis-prompt.md          # Design of the per-model analysis prompt  [Stable]
+│   ├── output-schema.md            # JSON schema for analysis output          [Stable]
 │   ├── aggregation.md              # How per-model outputs merge              [Draft]
-│   ├── political-positioning.md    # 5-axis methodology                      [Draft]
-│   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Draft]
+│   ├── political-positioning.md    # 5-axis methodology                      [Stable]
+│   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Stable]
 │
 ├── candidates/         # Candidate data layout
 │   └── repository-structure.md     # Per-candidate folder + versioning        [Stable]

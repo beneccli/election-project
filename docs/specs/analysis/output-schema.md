@@ -1,7 +1,7 @@
 # Output Schema
 
 > **Version:** 1.0
-> **Status:** Draft — to be validated by M_AnalysisPrompts spike
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
 > **Source of truth:** `scripts/lib/schema.ts` (Zod)
 
 ---
@@ -134,7 +134,7 @@ One entry per dimension cluster from [`dimensions.md`](dimensions.md). Every clu
 }
 ```
 
-**Grade semantics:** grades reflect "how well does this program address the problems in this dimension?" They are **not** ideological verdicts. A program that addresses economic problems through different means than another program can still be graded A if its approach is internally coherent and evidence-supported.
+**Grade semantics:** grades reflect **coherence + evidence-support** on the dimension's problems. They are **not** ideological verdicts. A program that addresses economic problems through different means than another program can still be graded A if its approach is internally coherent and evidence-supported. The grade enum is `A | B | C | D | F | NOT_ADDRESSED`.
 
 ---
 
