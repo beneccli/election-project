@@ -45,6 +45,12 @@ npm run publish     -- --candidate <id> --version <date>
 npm run diff        -- --candidate <id> --from <date> --to <date>
 ```
 
+For zero-API runs (manual webchat or Copilot agent playing the role of
+a model), see the operator walkthrough in
+[`../docs/quick-start-zero-api.md`](../docs/quick-start-zero-api.md)
+and the underlying spec in
+[`../docs/specs/data-pipeline/analysis-modes.md`](../docs/specs/data-pipeline/analysis-modes.md).
+
 ---
 
 ## Design constraints

@@ -74,6 +74,27 @@ The pipeline **does not proceed** to analysis until `sources.md` exists and has 
 
 ---
 
+## Execution modes
+
+Stages 3 (Analyze) and 4 (Aggregate) can be driven in any of three
+**execution modes**, depending on what accounts and budget an
+operator has available:
+
+| Mode | Driver | When to use |
+|---|---|---|
+| `api` | `scripts/analyze.ts` / `aggregate.ts` calling provider SDKs | Production. Default. Requires paid API keys. |
+| `manual-webchat` | `prepare-manual-analysis.ts` bundles the prompt; operator pastes into a web chat and ingests the reply via `ingest-raw-output.ts` | Zero-API testing, or when a model is only available via a subscription chat interface. |
+| `copilot-agent` | The Copilot agent itself fills the role of a model, using `.github/prompts/analyze-candidate-via-copilot.prompt.md` | Agent self-runs, dogfooding the pipeline on a fictional candidate. |
+
+Every raw output records its `execution_mode`, attested model
+version, and attester ID in `metadata.json`. Mixing modes across
+models within a single version is supported and common in tests.
+
+Full specification: [`analysis-modes.md`](analysis-modes.md).
+Operator walkthrough: [`../../quick-start-zero-api.md`](../../quick-start-zero-api.md).
+
+---
+
 ## Stage 3: Analyze
 
 **Script:** `scripts/analyze.ts <candidate-id> <version-date>`
