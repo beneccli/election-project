@@ -19,7 +19,9 @@
     "aggregate": "tsx scripts/aggregate.ts",
     "review": "tsx scripts/review.ts",
     "publish": "tsx scripts/publish.ts",
-    "scaffold-candidate": "tsx scripts/scaffold-candidate.ts"
+    "scaffold-candidate": "tsx scripts/scaffold-candidate.ts",
+    "prepare-manual-analysis": "tsx scripts/prepare-manual-analysis.ts",
+    "prepare-manual-aggregation": "tsx scripts/prepare-manual-aggregation.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.90.0",
