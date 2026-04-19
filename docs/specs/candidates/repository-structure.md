@@ -1,7 +1,7 @@
 # Candidate Repository Structure
 
-> **Version:** 1.0
-> **Status:** Draft — to be finalized by M_DataPipeline spike
+> **Version:** 1.1
+> **Status:** Stable — finalized by M_DataPipeline spike (2026-04-19)
 
 ---
 
