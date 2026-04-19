@@ -1,7 +1,7 @@
 # Analysis Prompt Design
 
 > **Version:** 1.0
-> **Status:** Draft — to be finalized by M_AnalysisPrompts spike
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
 
 ---
 
@@ -130,17 +130,23 @@ Every run records in the version's `metadata.json`:
 }
 ```
 
-`temperature: 0` (or provider equivalent) is used for all analysis runs to maximize reproducibility. Adversarial passes may use slightly higher temperature — to be decided in the spike.
+`temperature: 0` (or provider equivalent) is used for all analysis runs to maximize reproducibility. The adversarial pass runs inline at the same temperature (spike decision — no separate call in v1).
 
 ---
 
-## Open questions (for spike)
+## Resolved decisions (spike `0020`)
 
-- Should the adversarial pass be a separate LLM call, or part of the same prompt? (Same prompt is cheaper but less adversarial; separate call is more independent but more expensive.)
-- How do we handle models that don't support structured JSON output mode? (Likely: wrap with a strict JSON extractor + retry.)
-- Should we allow the model to request clarification? (Probably no — this makes outputs non-deterministic.)
-- How many retries on schema validation? (Default: 2.)
-- What if a model's output is valid JSON but obviously low-quality (e.g., boilerplate-heavy)? (Flag for human review, do not auto-reject — we don't want to hide real divergence.)
+- **Adversarial pass is inline** in the same model call (§8 of this prompt). No separate `adversarial-pass.md` in v1. Rationale: doubles cost otherwise, and the structured `adversarial_pass` output field provides a checkable contract. Revisit if quality suffers in practice.
+- **Structured JSON output mode** is preferred where the provider exposes it; otherwise a strict JSON extractor wraps the response and the schema-validation retry loop catches malformed output.
+- **No clarification requests.** Single-shot call. Deterministic inputs. If the program is too thin to answer a dimension, the finding is `grade: "NOT_ADDRESSED"`.
+- **Retries on schema validation: 2** (3 attempts total). Persistent failure produces `<model>.FAILED.json` with structured Zod issues; aggregation proceeds without that model.
+- **Low-quality but valid output** is not auto-rejected — it is flagged for human review. Hiding divergence would violate editorial principle 4 (dissent preserved).
+- **Temperature: 0** (or provider equivalent) for the entire call, including the adversarial section.
+
+### Deferred to future milestones
+
+- Separate-call adversarial pass (may revisit after first real candidate run in M_FirstCandidate)
+- Fine-grained quality-gate heuristics beyond schema validity (deferred to M_Aggregation review queue)
 
 ---
 

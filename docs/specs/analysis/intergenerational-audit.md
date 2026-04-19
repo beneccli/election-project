@@ -1,7 +1,7 @@
 # Intergenerational Audit
 
 > **Version:** 1.0
-> **Status:** Draft — to be refined by M_AnalysisPrompts spike
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
 
 ---
 
@@ -171,12 +171,16 @@ See the `counterfactual` field in [`output-schema.md`](output-schema.md).
 
 ---
 
-## Open questions (for spike)
+## Resolved decisions (spike `0020`)
 
-- Should we define specific reference years (2027-2047) vs. rolling horizons?
-- How to handle programs with insufficient math? (Draft: low-confidence qualitative findings, never invented numbers.)
-- Should we additionally analyze impact on a 45-year-old for completeness? (Draft: yes if it adds clarity, but 25 and 65 are the primary lenses.)
-- Exchange-rate / inflation normalization for multi-decade projections?
+- **Central horizon: 2027–2047** (20 years post-election). Shorter-horizon claims (2027–2032) are permitted as secondary framing; longer-horizon claims require explicit confidence caveats.
+- **Primary lenses: 25-year-old and 65-year-old in 2027.** Impact on a 45-year-old may be added by the model where it materially clarifies the distributional picture, but is optional.
+- **Insufficient program math → qualitative finding with low confidence.** Never invented numbers. "Program does not specify" is itself a finding.
+- **Inflation / exchange-rate normalization:** all monetary claims in constant 2027 euros unless explicitly labelled nominal. Long-horizon projections carry assumption caveats in `magnitude_estimate.caveats`.
+
+### Deferred
+
+- Formal macro model integration (AMECO / INSEE projections) — v1 relies on the program's own figures plus model reasoning with explicit caveats.
 
 ---
 

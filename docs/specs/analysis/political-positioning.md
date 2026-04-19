@@ -1,7 +1,7 @@
 # Political Positioning Methodology
 
 > **Version:** 1.0
-> **Status:** Draft — to be refined by M_AnalysisPrompts spike
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
 
 ---
 
@@ -113,18 +113,58 @@ Scoring is based on **proposals**, with rhetoric noted as additional context.
 
 ---
 
-## Anchoring
+## Canonical anchor sets
 
-Because models have different internal scales, absolute scores across models are not comparable. Anchoring solves this:
+Anchors are **fixed across all candidate analyses** to enable comparability. Four anchors per axis, each a concrete public figure or party with an example score. These example scores are reference points — the candidate's own placement is derived from evidence, not inferred by proximity alone.
 
-- The prompt requires comparison to known reference points.
-- Reference points are drawn from French and European politics — both current and historical.
-- Multiple anchors per axis (not just a single reference).
+### Economic axis anchors
 
-Example for the economic axis:
-> "Anchors: Macron (2017 program, centrist-liberal, ~+1), Hollande (2012 program, moderate left, ~-2), Mélenchon (LFI 2022, strongly interventionist, ~-4), Fillon (2017, market-oriented right, ~+3)."
+| Score | Anchor | Note |
+|------:|--------|------|
+| `-4` | Mélenchon (LFI 2022 program) | Strongly interventionist |
+| `-2` | Hollande (2012 program) | Moderate left |
+| `+1` | Macron (2017 program) | Centrist-liberal |
+| `+3` | Fillon (2017 program) | Market-oriented right |
 
-Anchors are **shared across all candidate analyses** to enable comparison.
+### Social/cultural axis anchors
+
+| Score | Anchor | Note |
+|------:|--------|------|
+| `-3` | EELV (2022 platform) | Progressive on rights, inclusive laicity |
+| `-1` | Macron (2017 program) | Liberal-progressive centrist |
+| `+2` | LR (2022 platform) | Traditional-conservative mainstream |
+| `+4` | Zemmour (Reconquête 2022) | Strong cultural-identity emphasis |
+
+### Sovereignty axis anchors
+
+| Score | Anchor | Note |
+|------:|--------|------|
+| `-3` | Glucksmann / Place publique | EU-federalist |
+| `-1` | Macron (2017 program) | Pro-integration pragmatist |
+| `+2` | LR (2022 platform) | Sovereigntist conservative |
+| `+4` | RN (2022 program) | Strong national-sovereignty stance |
+
+### Institutional axis anchors
+
+| Score | Anchor | Note |
+|------:|--------|------|
+| `-3` | Classical liberal-democratic baseline (Fifth Republic consensus pre-2017) | Strong institutional checks |
+| `-1` | Macron (2017 program) | Executive-forward but within institutional norms |
+| `+2` | LFI (referendum-heavy proposals, executive bypass framing) | Majoritarian populist tendencies |
+| `+3` | RN (judicial and media reform proposals) | Illiberal tendencies on specific institutions |
+
+*This axis is orthogonal to left–right; both left-populist and right-populist programs can score high on the illiberal pole.*
+
+### Ecological axis anchors
+
+| Score | Anchor | Note |
+|------:|--------|------|
+| `-3` | RN (2022 program on climate) | Productivist, skeptical of transition constraints |
+| `-1` | LR (2022 platform) | Moderate, growth-prioritized |
+| `+1` | Macron (2017 program) | Mainstream transition commitments |
+| `+4` | EELV (2022 platform) | Strongly ecologist, transition-prioritized |
+
+Anchors may evolve between versions of the positioning spec. When they do, it is a **breaking change** to analysis comparability and must be versioned with a new `schema_version` on positioning outputs.
 
 ---
 
@@ -189,12 +229,17 @@ This is the implementation of the "RN is not far-right because the media says so
 
 ---
 
-## Open questions (for spike)
+## Resolved decisions (spike `0020`)
 
-- How many anchors per axis? (Draft: 3–5)
-- Do we allow half-integer scores? (Draft: no — integers only, simpler for aggregation and display)
-- How do we handle candidates without legislative records or prior programs? (Draft: rely on program text plus rhetoric with lower confidence marker)
-- Should the institutional axis be broken into sub-axes (independent judiciary / press / checks)? (Tentatively no for v1, may revisit)
+- **4 anchors per axis**, fixed across all candidate analyses (see section above).
+- **Integer scores only** in `[-5, +5]`. No half-integers. Uncertainty is carried by the `confidence` field, not by score granularity.
+- **Institutional axis is not sub-divided** in v1 (no split into independent-judiciary / press-freedom / checks). May be revisited if candidates cluster in ways that obscure signal.
+- **Candidates without legislative records:** rely on program text plus rhetoric, with `confidence ≤ 0.6` on each axis unless the program explicitly supports the placement with concrete measures.
+- **Rhetoric vs. proposals:** scoring is based on **proposals**. Rhetoric is noted as additional context in the `reasoning` field but does not drive placement.
+
+### Deferred
+
+- Sub-axis breakdown of the institutional axis — revisit if needed after first real run.
 
 ---
 
