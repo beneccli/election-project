@@ -8,6 +8,7 @@ import { SectionNav } from "@/components/chrome/SectionNav";
 import { TransparencyFooter } from "@/components/chrome/TransparencyFooter";
 import { SyntheseSection } from "@/components/sections/SyntheseSection";
 import { PositionnementSection } from "@/components/sections/PositionnementSection";
+import { DomainesSection } from "@/components/sections/DomainesSection";
 
 interface RouteParams {
   params: Promise<{ id: string }>;
@@ -47,7 +48,7 @@ export default async function CandidatePage({ params }: RouteParams) {
       <main className="mx-auto max-w-content px-8 pb-32">
         <SyntheseSection aggregated={aggregated} />
         <PositionnementSection aggregated={aggregated} />
-        <SectionPlaceholder id="dimensions" title="Domaines" />
+        <DomainesSection aggregated={aggregated} />
         <SectionPlaceholder
           id="intergen"
           title="Impact intergénérationnel"

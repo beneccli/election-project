@@ -6,6 +6,7 @@ import type {
   VersionMetadata,
 } from "@/lib/schema";
 import { deriveTopLevelGrade } from "@/lib/derived/top-level-grade";
+import { GradeBadge } from "@/components/widgets/GradeBadge";
 
 type PartyMeta = CandidateMetadata & {
   party_short?: string;
@@ -61,7 +62,7 @@ export function Hero({
             </h1>
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-3">
-                <GradeBadge grade={grade.letter} modifier={grade.modifier} />
+                <GradeBadge grade={grade.letter} modifier={grade.modifier} size="md" />
                 <div>
                   <div className="mb-0.5 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
                     Note globale
@@ -108,23 +109,5 @@ export function Hero({
   );
 }
 
-// Inline minimal grade badge. The richer version lands with the Synthèse
-// section in 0058.
-function GradeBadge({
-  grade,
-  modifier,
-}: {
-  grade: string;
-  modifier: "+" | "-" | null;
-}) {
-  return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-md border border-rule bg-bg-subtle font-display text-[28px] font-bold leading-none text-text">
-      {grade}
-      {modifier ? (
-        <span className="ml-0.5 text-base font-normal text-text-secondary">
-          {modifier}
-        </span>
-      ) : null}
-    </div>
-  );
-}
+// Inline grade badge previously defined here was replaced by the shared
+// `@/components/widgets/GradeBadge` component in task 0060.
