@@ -12,6 +12,7 @@ import { versionDir, rawOutputsDir, PROJECT_ROOT } from "./lib/paths";
 import { VersionMetadataSchema, AggregatedOutputSchema, type VersionMetadata } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
 import type { LLMProvider } from "./lib/providers";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "aggregate" });
 
@@ -263,5 +264,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/aggregate.ts") ||
     process.argv[1].endsWith("/aggregate.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

@@ -10,6 +10,7 @@ import { createLogger } from "./lib/logger";
 import { candidateDir, versionDir, sourcesRawDir, pathExists } from "./lib/paths";
 import { CandidateMetadataSchema, VersionMetadataSchema } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "scaffold-candidate" });
 
@@ -135,9 +136,23 @@ program
     "Mark this candidate as a fictional test candidate (requires test- prefix)",
     false,
   )
-  .action(async (_opts) => {
-    log.error("Direct CLI execution not yet wired.");
-    process.exit(1);
+  .action(async (cliOpts) => {
+    try {
+      await scaffoldCandidate({
+        id: cliOpts.id,
+        name: cliOpts.name,
+        party: cliOpts.party,
+        partyId: cliOpts.partyId,
+        date: cliOpts.date,
+        isFictional: cliOpts.isFictional,
+      });
+    } catch (err) {
+      log.error(
+        { error: err instanceof Error ? err.message : String(err) },
+        "Scaffold failed",
+      );
+      process.exit(1);
+    }
   });
 
 const isDirectRun =
@@ -145,5 +160,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/scaffold-candidate.ts") ||
     process.argv[1].endsWith("/scaffold-candidate.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

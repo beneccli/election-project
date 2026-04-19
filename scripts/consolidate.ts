@@ -14,6 +14,7 @@ import { VersionMetadataSchema } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
 import { PROJECT_ROOT } from "./lib/paths";
 import type { LLMProvider } from "./lib/providers";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "consolidate" });
 
@@ -140,7 +141,7 @@ const isDirectExecution =
   process.argv[1]?.endsWith("consolidate.js");
 
 if (isDirectExecution) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
   const opts = program.opts();
   consolidate({
     candidate: opts.candidate,

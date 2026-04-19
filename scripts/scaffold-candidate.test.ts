@@ -1,9 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { scaffoldCandidate } from "./scaffold-candidate";
 import { mkdtemp, rm, readFile, access } from "node:fs/promises";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
 import { tmpdir } from "node:os";
+import { fileURLToPath } from "node:url";
+import { spawnSync } from "node:child_process";
 import * as pathsMod from "./lib/paths";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 vi.mock("./lib/paths", async () => {
   const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
@@ -178,4 +182,119 @@ describe("scaffold-candidate", () => {
     expect(draft).toContain("PROGRAMME FICTIF");
     expect(draft).toContain("Jean Test");
   });
+});
+
+// ---------------------------------------------------------------------------
+// CLI-level smoke test. Spawns the actual script as a subprocess to catch
+// bugs the programmatic test cannot (unwired action handler, broken argv
+// parsing under pnpm-style `--` forwarding, required-option wiring).
+// ---------------------------------------------------------------------------
+describe("scaffold-candidate CLI", () => {
+  let cliTmpDir: string;
+
+  beforeEach(async () => {
+    cliTmpDir = await mkdtemp(join(tmpdir(), "scaffold-cli-"));
+  });
+
+  afterEach(async () => {
+    await rm(cliTmpDir, { recursive: true, force: true });
+  });
+
+  const scriptPath = join(__dirname, "scaffold-candidate.ts");
+
+  function runCli(args: string[]): { status: number; stdout: string; stderr: string } {
+    const result = spawnSync("npx", ["tsx", scriptPath, ...args], {
+      cwd: cliTmpDir,
+      encoding: "utf-8",
+      env: {
+        ...process.env,
+        NO_COLOR: "1",
+        ELECTION_PROJECT_ROOT: cliTmpDir,
+      },
+    });
+    return {
+      status: result.status ?? -1,
+      stdout: result.stdout ?? "",
+      stderr: result.stderr ?? "",
+    };
+  }
+
+  it("cli_runs_action_and_scaffolds_candidate", async () => {
+    const res = runCli([
+      "--id",
+      "marie-dupont",
+      "--name",
+      "Marie Dupont",
+      "--party",
+      "Parti Test",
+      "--date",
+      "2027-01-01",
+    ]);
+
+    expect(res.status, `stderr: ${res.stderr}`).toBe(0);
+    expect(res.stderr).not.toMatch(/not yet wired/i);
+
+    const metaPath = join(
+      cliTmpDir,
+      "candidates",
+      "marie-dupont",
+      "metadata.json",
+    );
+    const meta = JSON.parse(await readFile(metaPath, "utf-8"));
+    expect(meta.display_name).toBe("Marie Dupont");
+  }, 30_000);
+
+  it("cli_strips_leading_double_dash_pnpm_style", async () => {
+    // pnpm forwards a literal `--` to the child script. Commander treats
+    // `--` as end-of-options, so without normalizeArgv this invocation
+    // would fail with "required option '--id <id>' not specified".
+    const res = runCli([
+      "--",
+      "--id",
+      "pierre-martin",
+      "--name",
+      "Pierre Martin",
+      "--party",
+      "Parti Test",
+      "--date",
+      "2027-01-01",
+    ]);
+
+    expect(res.status, `stderr: ${res.stderr}`).toBe(0);
+    const metaPath = join(
+      cliTmpDir,
+      "candidates",
+      "pierre-martin",
+      "metadata.json",
+    );
+    const meta = JSON.parse(await readFile(metaPath, "utf-8"));
+    expect(meta.display_name).toBe("Pierre Martin");
+  }, 30_000);
+
+  it("cli_accepts_is_fictional_flag_end_to_end", async () => {
+    const res = runCli([
+      "--",
+      "--id",
+      "test-omega",
+      "--name",
+      "Omega Synthétique",
+      "--party",
+      "Parti Placeholder",
+      "--party-id",
+      "test-omega",
+      "--date",
+      "2027-11-01",
+      "--is-fictional",
+    ]);
+
+    expect(res.status, `stderr: ${res.stderr}`).toBe(0);
+    const metaPath = join(
+      cliTmpDir,
+      "candidates",
+      "test-omega",
+      "metadata.json",
+    );
+    const meta = JSON.parse(await readFile(metaPath, "utf-8"));
+    expect(meta.is_fictional).toBe(true);
+  }, 30_000);
 });

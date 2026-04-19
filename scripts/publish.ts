@@ -18,6 +18,7 @@ import {
   CandidateMetadataSchema,
 } from "./lib/schema";
 import { validateAndWrite } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "publish" });
 
@@ -142,9 +143,22 @@ program
     "Permit publishing a candidate flagged is_fictional (testing only)",
     false,
   )
-  .action(async (_opts) => {
-    log.error("Direct CLI execution not yet wired. Use the pipeline orchestrator.");
-    process.exit(1);
+  .action(async (cliOpts) => {
+    try {
+      await publish({
+        candidate: cliOpts.candidate,
+        version: cliOpts.version,
+        dryRun: cliOpts.dryRun,
+        verbose: cliOpts.verbose,
+        allowFictional: cliOpts.allowFictional,
+      });
+    } catch (err) {
+      log.error(
+        { error: err instanceof Error ? err.message : String(err) },
+        "Publish failed",
+      );
+      process.exit(1);
+    }
   });
 
 const isDirectRun =
@@ -152,5 +166,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/publish.ts") ||
     process.argv[1].endsWith("/publish.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

@@ -6,13 +6,15 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { accessSync, readlinkSync } from "node:fs";
 
-/** Project root directory (two levels up from scripts/lib/) */
-const PROJECT_ROOT = resolve(
-  fileURLToPath(import.meta.url),
-  "..",
-  "..",
-  "..",
-);
+/** Project root directory (two levels up from scripts/lib/).
+ *
+ * Tests that spawn a CLI subprocess can override this by setting the
+ * `ELECTION_PROJECT_ROOT` environment variable to point at a sandbox
+ * directory. Production runs never set this variable.
+ */
+const PROJECT_ROOT = process.env.ELECTION_PROJECT_ROOT
+  ? resolve(process.env.ELECTION_PROJECT_ROOT)
+  : resolve(fileURLToPath(import.meta.url), "..", "..", "..");
 
 export { PROJECT_ROOT };
 

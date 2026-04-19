@@ -13,6 +13,7 @@ import { join, resolve } from "node:path";
 import { createLogger } from "./lib/logger";
 import { hashString } from "./lib/hash";
 import * as paths from "./lib/paths";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "prepare-manual-analysis" });
 
@@ -264,5 +265,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/prepare-manual-analysis.ts") ||
     process.argv[1].endsWith("/prepare-manual-analysis.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

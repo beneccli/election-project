@@ -23,6 +23,7 @@ import {
 } from "./lib/schema";
 import { stripJsonFence } from "./ingest-raw-output";
 import { validateAndWrite, validateOrThrow } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "ingest-aggregated" });
 
@@ -225,5 +226,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/ingest-aggregated.ts") ||
     process.argv[1].endsWith("/ingest-aggregated.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }

@@ -23,6 +23,7 @@ import {
   type VersionMetadata,
 } from "./lib/schema";
 import { validateAndWrite, validateOrThrow } from "./lib/validate";
+import { normalizeArgv } from "./lib/cli-args";
 
 const log = createLogger({ script: "ingest-raw-output" });
 
@@ -265,5 +266,5 @@ const isDirectRun =
   (process.argv[1].endsWith("/ingest-raw-output.ts") ||
     process.argv[1].endsWith("/ingest-raw-output.js"));
 if (isDirectRun) {
-  program.parse();
+  program.parse(normalizeArgv(process.argv));
 }
