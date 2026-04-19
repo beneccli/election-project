@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { analyze } from "./analyze";
 import { MockProvider } from "./lib/mock-provider";
+import { buildValidAnalysisOutput } from "./lib/fixtures/analysis-output";
 import { mkdtemp, rm, mkdir, writeFile, readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -24,11 +25,7 @@ vi.mock("./config/models", async () => {
   };
 });
 
-const VALID_JSON_RESPONSE = JSON.stringify({
-  candidate_id: "test-candidate",
-  summary: "Test summary",
-  themes: [{ name: "Economy", position: "Pro-growth", source_refs: ["p.1"] }],
-});
+const VALID_JSON_RESPONSE = JSON.stringify(buildValidAnalysisOutput());
 
 describe("analyze", () => {
   let tmpDir: string;
