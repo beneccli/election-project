@@ -2,7 +2,7 @@
 id: "0033"
 title: "Write full prompts/aggregate-analyses.md (replace placeholder)"
 type: task
-status: open
+status: done
 priority: high
 created: 2026-04-19
 milestone: M_Aggregation
