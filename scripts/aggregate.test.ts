@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { aggregate } from "./aggregate.js";
-import { MockProvider } from "./lib/mock-provider.js";
+import { aggregate } from "./aggregate";
+import { MockProvider } from "./lib/mock-provider";
 import { mkdtemp, rm, mkdir, writeFile, readFile, access } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import * as pathsMod from "./lib/paths.js";
+import * as pathsMod from "./lib/paths";
 
-vi.mock("./lib/paths.js", async () => {
-  const actual = await vi.importActual<typeof pathsMod>("./lib/paths.js");
+vi.mock("./lib/paths", async () => {
+  const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 

@@ -4,9 +4,9 @@
  * See docs/specs/data-pipeline/overview.md
  */
 import OpenAI from "openai";
-import type { LLMProvider, LLMCallParams, LLMCallResult } from "./providers.js";
-import { estimateCost } from "./providers.js";
-import { MODEL_PRICING } from "../config/models.js";
+import type { LLMProvider, LLMCallParams, LLMCallResult } from "./providers";
+import { estimateCost } from "./providers";
+import { MODEL_PRICING } from "../config/models";
 
 export class GrokProvider implements LLMProvider {
   readonly id = "xai";

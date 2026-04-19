@@ -1,12 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { estimateCost } from "./providers.js";
+import { estimateCost } from "./providers";
 import {
   MockProvider,
   createSuccessMock,
   createFailureMock,
   createMalformedMock,
-} from "./mock-provider.js";
-import type { LLMCallParams } from "./providers.js";
+} from "./mock-provider";
+import type { LLMCallParams } from "./providers";
 
 const defaultParams: LLMCallParams = {
   model: "test-model-v1",

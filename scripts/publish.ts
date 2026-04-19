@@ -6,18 +6,18 @@
 import { Command } from "commander";
 import { readFile, symlink, unlink, lstat } from "node:fs/promises";
 import { join, relative } from "node:path";
-import { createLogger } from "./lib/logger.js";
+import { createLogger } from "./lib/logger";
 import {
   candidateDir,
   versionDir,
   pathExists,
-} from "./lib/paths.js";
+} from "./lib/paths";
 import {
   VersionMetadataSchema,
   AggregatedOutputSchema,
   CandidateMetadataSchema,
-} from "./lib/schema.js";
-import { validateAndWrite } from "./lib/validate.js";
+} from "./lib/schema";
+import { validateAndWrite } from "./lib/validate";
 
 const log = createLogger({ script: "publish" });
 

@@ -6,14 +6,14 @@
 import { Command } from "commander";
 import { readFile, writeFile, access, mkdir } from "node:fs/promises";
 import { join } from "node:path";
-import { createLogger } from "./lib/logger.js";
-import { hashString } from "./lib/hash.js";
-import { versionDir, rawOutputsDir, PROJECT_ROOT } from "./lib/paths.js";
-import { VersionMetadataSchema, type VersionMetadata } from "./lib/schema.js";
-import { AnalysisOutputSchema } from "./lib/schema.js";
-import { validateAndWrite } from "./lib/validate.js";
-import type { LLMProvider, LLMCallResult } from "./lib/providers.js";
-import { DEFAULT_MODELS, type ModelConfig } from "./config/models.js";
+import { createLogger } from "./lib/logger";
+import { hashString } from "./lib/hash";
+import { versionDir, rawOutputsDir, PROJECT_ROOT } from "./lib/paths";
+import { VersionMetadataSchema, type VersionMetadata, type ModelRunEntry } from "./lib/schema";
+import { AnalysisOutputSchema } from "./lib/schema";
+import { validateAndWrite } from "./lib/validate";
+import type { LLMProvider, LLMCallResult } from "./lib/providers";
+import { DEFAULT_MODELS, type ModelConfig } from "./config/models";
 
 const log = createLogger({ script: "analyze" });
 
@@ -212,7 +212,7 @@ export async function analyze(opts: AnalyzeOptions): Promise<ModelRunResult[]> {
     };
   }
 
-  const modelsRecord: Record<string, unknown> = {};
+  const modelsRecord: Record<string, ModelRunEntry> = {};
   for (const r of runResults) {
     modelsRecord[r.model] = {
       provider: r.provider,
@@ -231,7 +231,7 @@ export async function analyze(opts: AnalyzeOptions): Promise<ModelRunResult[]> {
     prompt_file: "prompts/analyze-candidate.md",
     prompt_sha256: promptSha256,
     prompt_version: "0.1",
-    models: modelsRecord as VersionMetadata["analysis"] extends { models: infer M } ? M : never,
+    models: modelsRecord,
   };
 
   await validateAndWrite(VersionMetadataSchema, metadata, metadataPath);

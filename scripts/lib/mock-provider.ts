@@ -2,7 +2,7 @@
  * Mock LLM provider for testing.
  * See docs/specs/data-pipeline/overview.md — test with fixtures, not live APIs.
  */
-import type { LLMProvider, LLMCallParams, LLMCallResult } from "./providers.js";
+import type { LLMProvider, LLMCallParams, LLMCallResult } from "./providers";
 
 export interface MockCall {
   params: LLMCallParams;

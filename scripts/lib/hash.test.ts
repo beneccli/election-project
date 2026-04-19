@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { hashFile, hashString } from "./hash.js";
+import { hashFile, hashString } from "./hash";
 import { writeFile, mkdtemp, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";

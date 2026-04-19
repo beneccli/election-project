@@ -6,7 +6,7 @@ import {
   sourcesRawDir,
   pathExists,
   PROJECT_ROOT,
-} from "./paths.js";
+} from "./paths";
 import { mkdtemp, rm, mkdir, symlink } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";

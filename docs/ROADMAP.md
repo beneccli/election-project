@@ -44,7 +44,7 @@ Format: `M_<FeatureCluster>`
 | Milestone | Status | Description |
 |-----------|--------|-------------|
 | M_Foundation | ✅ Done | Repo scaffolding, docs, tickets-as-code system |
-| M_DataPipeline | � Spike complete | Candidate folder structure, versioning, script skeletons |
+| M_DataPipeline | ✅ Done | Candidate folder structure, versioning, script skeletons |
 | M_AnalysisPrompts | 📋 Planned (spike needed) | The analysis prompt, schema, adversarial pass |
 | M_Aggregation | 📋 Planned (spike needed) | Aggregator prompt, agreement_map, dissent preservation |
 | M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
@@ -101,7 +101,7 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_Foundation
 
-**Status:** Spike complete (2026-04-19). Specs finalized, backlog tasks created.
+**Status:** ✅ Done (2026-04-19). All 9 tasks (0011–0019) implemented and archived.
 
 **Specs produced:**
 - `docs/specs/data-pipeline/overview.md` (**Stable**)

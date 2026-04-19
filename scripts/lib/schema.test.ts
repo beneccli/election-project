@@ -3,7 +3,7 @@ import {
   CandidateMetadataSchema,
   SourceMetaSchema,
   VersionMetadataSchema,
-} from "./schema.js";
+} from "./schema";
 
 // ---------------------------------------------------------------------------
 // CandidateMetadataSchema

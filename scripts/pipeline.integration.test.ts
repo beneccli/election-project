@@ -8,22 +8,22 @@ import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import { mkdtemp, rm, writeFile, readFile, readdir, readlink, rename } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import { MockProvider } from "./lib/mock-provider.js";
-import { scaffoldCandidate } from "./scaffold-candidate.js";
-import { consolidate } from "./consolidate.js";
-import { analyze } from "./analyze.js";
-import { aggregate } from "./aggregate.js";
-import { publish } from "./publish.js";
-import * as pathsMod from "./lib/paths.js";
+import { MockProvider } from "./lib/mock-provider";
+import { scaffoldCandidate } from "./scaffold-candidate";
+import { consolidate } from "./consolidate";
+import { analyze } from "./analyze";
+import { aggregate } from "./aggregate";
+import { publish } from "./publish";
+import * as pathsMod from "./lib/paths";
 import { vi } from "vitest";
 
-vi.mock("./lib/paths.js", async () => {
-  const actual = await vi.importActual<typeof pathsMod>("./lib/paths.js");
+vi.mock("./lib/paths", async () => {
+  const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 
-vi.mock("./config/models.js", async () => {
-  const actual = await vi.importActual<typeof import("./config/models.js")>("./config/models.js");
+vi.mock("./config/models", async () => {
+  const actual = await vi.importActual<typeof import("./config/models")>("./config/models");
   return {
     ...actual,
     DEFAULT_MODELS: [

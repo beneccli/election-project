@@ -1,16 +1,16 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { consolidate } from "./consolidate.js";
-import { MockProvider } from "./lib/mock-provider.js";
+import { consolidate } from "./consolidate";
+import { MockProvider } from "./lib/mock-provider";
 import { mkdtemp, rm, mkdir, writeFile, readFile, access } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import * as pathsMod from "./lib/paths.js";
+import * as pathsMod from "./lib/paths";
 import { vi } from "vitest";
-import { hashString } from "./lib/hash.js";
+import { hashString } from "./lib/hash";
 
 // Mock the paths module to use temp directories
-vi.mock("./lib/paths.js", async () => {
-  const actual = await vi.importActual<typeof pathsMod>("./lib/paths.js");
+vi.mock("./lib/paths", async () => {
+  const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 

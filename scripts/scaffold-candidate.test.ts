@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { scaffoldCandidate } from "./scaffold-candidate.js";
+import { scaffoldCandidate } from "./scaffold-candidate";
 import { mkdtemp, rm, readFile, access } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import * as pathsMod from "./lib/paths.js";
+import * as pathsMod from "./lib/paths";
 
-vi.mock("./lib/paths.js", async () => {
-  const actual = await vi.importActual<typeof pathsMod>("./lib/paths.js");
+vi.mock("./lib/paths", async () => {
+  const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 

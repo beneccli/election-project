@@ -1,20 +1,20 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { analyze } from "./analyze.js";
-import { MockProvider } from "./lib/mock-provider.js";
+import { analyze } from "./analyze";
+import { MockProvider } from "./lib/mock-provider";
 import { mkdtemp, rm, mkdir, writeFile, readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import * as pathsMod from "./lib/paths.js";
+import * as pathsMod from "./lib/paths";
 
 
-vi.mock("./lib/paths.js", async () => {
-  const actual = await vi.importActual<typeof pathsMod>("./lib/paths.js");
+vi.mock("./lib/paths", async () => {
+  const actual = await vi.importActual<typeof pathsMod>("./lib/paths");
   return { ...actual };
 });
 
 // Mock DEFAULT_MODELS to use only 2 models for faster tests
-vi.mock("./config/models.js", async () => {
-  const actual = await vi.importActual<typeof import("./config/models.js")>("./config/models.js");
+vi.mock("./config/models", async () => {
+  const actual = await vi.importActual<typeof import("./config/models")>("./config/models");
   return {
     ...actual,
     DEFAULT_MODELS: [

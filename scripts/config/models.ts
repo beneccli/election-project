@@ -2,7 +2,7 @@
  * Model configuration for the analysis pipeline.
  * See docs/specs/data-pipeline/overview.md
  */
-import type { ModelPricing } from "../lib/providers.js";
+import type { ModelPricing } from "../lib/providers";
 
 /** A configured model for the analysis pipeline. */
 export interface ModelConfig {

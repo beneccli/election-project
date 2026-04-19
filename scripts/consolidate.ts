@@ -6,14 +6,14 @@
 import { Command } from "commander";
 import { readFile, writeFile, access } from "node:fs/promises";
 import { join } from "node:path";
-import { createLogger } from "./lib/logger.js";
-import { hashString } from "./lib/hash.js";
-import { versionDir, sourcesRawDir } from "./lib/paths.js";
-import { extractSourcesFromDir, formatSourcesForPrompt } from "./lib/sources.js";
-import { VersionMetadataSchema } from "./lib/schema.js";
-import { validateAndWrite } from "./lib/validate.js";
-import { PROJECT_ROOT } from "./lib/paths.js";
-import type { LLMProvider } from "./lib/providers.js";
+import { createLogger } from "./lib/logger";
+import { hashString } from "./lib/hash";
+import { versionDir, sourcesRawDir } from "./lib/paths";
+import { extractSourcesFromDir, formatSourcesForPrompt } from "./lib/sources";
+import { VersionMetadataSchema } from "./lib/schema";
+import { validateAndWrite } from "./lib/validate";
+import { PROJECT_ROOT } from "./lib/paths";
+import type { LLMProvider } from "./lib/providers";
 
 const log = createLogger({ script: "consolidate" });
 

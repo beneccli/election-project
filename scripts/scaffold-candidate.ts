@@ -6,10 +6,10 @@
 import { Command } from "commander";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { createLogger } from "./lib/logger.js";
-import { candidateDir, versionDir, sourcesRawDir, pathExists } from "./lib/paths.js";
-import { CandidateMetadataSchema, VersionMetadataSchema } from "./lib/schema.js";
-import { validateAndWrite } from "./lib/validate.js";
+import { createLogger } from "./lib/logger";
+import { candidateDir, versionDir, sourcesRawDir, pathExists } from "./lib/paths";
+import { CandidateMetadataSchema, VersionMetadataSchema } from "./lib/schema";
+import { validateAndWrite } from "./lib/validate";
 
 const log = createLogger({ script: "scaffold-candidate" });
 

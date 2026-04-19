@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { logger, createLogger } from "./logger.js";
+import { logger, createLogger } from "./logger";
 
 describe("logger", () => {
   it("logger_exists_and_has_expected_methods", () => {

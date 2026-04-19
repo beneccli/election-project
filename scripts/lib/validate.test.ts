@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { validateOrThrow, validateAndWrite, ValidationError } from "./validate.js";
+import { validateOrThrow, validateAndWrite, ValidationError } from "./validate";
 import { z } from "zod";
 import { readFile, mkdtemp, rm } from "node:fs/promises";
 import { join } from "node:path";
