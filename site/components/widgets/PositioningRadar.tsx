@@ -1,13 +1,19 @@
+"use client";
 // See docs/specs/website/nextjs-architecture.md §4.3
 // See docs/specs/website/visual-components.md §4.1
-// Pure-SVG static radar + DOM overlay for per-axis hover tooltips.
+// See docs/specs/website/candidate-page-polish.md §5.1
+// Client-rendered SVG radar + DOM overlay for per-axis hover tooltips
+// and optional per-model polygon overlays.
 //
 // EDITORIAL: `radarValue` is a SHAPE input only — never surfaced as a
 // numeric score to the reader. See positioning-shape.ts.
+import { useMemo } from "react";
 import type { RadarShape } from "@/lib/derived/positioning-shape";
 import { AXES } from "@/lib/anchors";
+import { AXIS_KEYS } from "@/lib/derived/keys";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
+import { modelColor } from "@/lib/model-color";
 import { Tooltip } from "./Tooltip";
 
 const SIZE = 280;
@@ -27,9 +33,13 @@ function toXY(i: number, val: number, n: number): [number, number] {
 export function PositioningRadar({
   shape,
   lang = "fr",
+  enabledModels,
 }: {
   shape: RadarShape;
   lang?: Lang;
+  /** Set of model ids whose overlay polygon should be rendered. When
+   * absent or empty, only the consensus polygon is drawn. */
+  enabledModels?: ReadonlySet<string>;
 }) {
   const n = shape.axes.length;
   const consensusPoints = shape.axes
@@ -38,6 +48,22 @@ export function PositioningRadar({
       return `${x.toFixed(1)},${y.toFixed(1)}`;
     })
     .join(" ");
+
+  // Per-model overlay polygon points — memoized so repeated enable/disable
+  // doesn't re-compute unchanged polygons. See candidate-page-polish.md §5.1.
+  const modelPolygons = useMemo(() => {
+    return shape.models.map((m) => {
+      const points = AXIS_KEYS.map((axisKey, i) => {
+        const [x, y] = toXY(i, m.values[axisKey], n);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(" ");
+      return {
+        id: m.id,
+        points,
+        color: modelColor(m.id),
+      };
+    });
+  }, [shape.models, n]);
 
   // Axis labels from canonical anchor definitions (identical across
   // candidates). Fall back to axis key if anchors missing.
@@ -111,6 +137,24 @@ export function PositioningRadar({
         stroke="var(--accent)"
         strokeWidth={2}
       />
+      {/* Per-model overlays. Rendered after consensus so toggled polygons
+          sit on top, but visibly secondary (thinner stroke, no fill). */}
+      {enabledModels && enabledModels.size > 0
+        ? modelPolygons
+            .filter((m) => enabledModels.has(m.id))
+            .map((m) => (
+              <polygon
+                key={`model-${m.id}`}
+                points={m.points}
+                fill="none"
+                stroke={m.color}
+                strokeWidth={1.25}
+                strokeOpacity={0.85}
+                strokeLinejoin="round"
+                data-model={m.id}
+              />
+            ))
+        : null}
       {/* Axis labels + dissent badges */}
       {shape.axes.map((ax, i) => {
         const { x: lx, y: ly } = labelCoords[i];

@@ -79,4 +79,57 @@ describe("deriveRadarShape", () => {
     )!;
     expect(axis.hasDissent).toBe(false);
   });
+
+  it("emits a per-model shape for every model present in per_model", () => {
+    const agg = loadFixture();
+    const { models } = deriveRadarShape(agg.positioning);
+    // test-omega has 3 source models; all must appear in the union.
+    expect(models.length).toBe(3);
+    const ids = models.map((m) => m.id).sort();
+    expect(ids).toEqual(
+      [
+        "Claude Opus 4.6 High",
+        "GPT-5.4 Thinking",
+        "gemini-1.5-pro",
+      ].sort(),
+    );
+    for (const m of models) {
+      expect(Object.keys(m.values).sort()).toEqual(
+        [
+          "economic",
+          "social_cultural",
+          "sovereignty",
+          "institutional",
+          "ecological",
+        ].sort(),
+      );
+      // Every value is an integer in [-5, +5].
+      for (const v of Object.values(m.values)) {
+        expect(Number.isInteger(v)).toBe(true);
+        expect(v).toBeGreaterThanOrEqual(-5);
+        expect(v).toBeLessThanOrEqual(5);
+      }
+    }
+  });
+
+  it("backfills missing axis entries from the axis modal value", () => {
+    const agg = loadFixture();
+    // Remove one model from one axis and confirm the value still closes
+    // the polygon using the axis's modal/midpoint.
+    const originalLen = agg.positioning.economic.per_model.length;
+    const droppedModel = agg.positioning.economic.per_model[0].model;
+    agg.positioning.economic.per_model =
+      agg.positioning.economic.per_model.slice(1);
+    const shape = deriveRadarShape(agg.positioning);
+    expect(agg.positioning.economic.per_model.length).toBe(originalLen - 1);
+    const dropped = shape.models.find((m) => m.id === droppedModel);
+    // The model still appears because it is present on the other 4 axes.
+    expect(dropped).toBeDefined();
+    const expected =
+      agg.positioning.economic.modal_score ??
+      (agg.positioning.economic.consensus_interval[0] +
+        agg.positioning.economic.consensus_interval[1]) /
+        2;
+    expect(dropped!.values.economic).toBe(expected);
+  });
 });

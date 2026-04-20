@@ -1,9 +1,10 @@
 // See docs/specs/website/nextjs-architecture.md §5.2, §4.3
 // See docs/specs/analysis/political-positioning.md (positioning is ordinal).
+// See docs/specs/website/candidate-page-polish.md §5.1 — per-model overlay.
 import type { AggregatedOutput } from "@/lib/schema";
 import { deriveRadarShape } from "@/lib/derived/positioning-shape";
 import { SectionHead } from "@/components/chrome/SectionHead";
-import { PositioningRadar } from "@/components/widgets/PositioningRadar";
+import { InteractivePositioningRadar } from "@/components/widgets/InteractivePositioningRadar";
 import { AxisAgreementBars } from "@/components/widgets/AxisAgreementBars";
 import { PositioningLegend } from "@/components/widgets/PositioningLegend";
 
@@ -33,12 +34,12 @@ export function PositionnementSection({
           {/* Radar hidden below sm: at narrow widths the 280x280 SVG
               is unreadably small; the axis list below (AxisAgreementBars)
               is the mobile fallback. See visual-components.md §4.1. */}
-          <div className="hidden sm:block">
-            <PositioningRadar shape={shape} />
-          </div>
+          <InteractivePositioningRadar shape={shape} />
+        </div>
+        <div>
+          <AxisAgreementBars positioning={aggregated.positioning} />
           <PositioningLegend positioning={aggregated.positioning} />
         </div>
-        <AxisAgreementBars positioning={aggregated.positioning} />
       </div>
     </section>
   );
