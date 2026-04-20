@@ -1,9 +1,9 @@
 ---
 name: aggregate-analyses
-version: "1.0"
+version: "1.1"
 status: stable
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-20
 used_by: scripts/aggregate.ts
 related_specs:
   - docs/specs/analysis/aggregation.md
@@ -11,11 +11,13 @@ related_specs:
   - docs/specs/analysis/editorial-principles.md
   - docs/specs/analysis/political-positioning.md
   - docs/specs/analysis/intergenerational-audit.md
+  - docs/specs/website/candidate-page-polish.md
 description: >
   Meta-LLM aggregation prompt for the Élection 2027 project. Synthesizes N
   per-model analyses of a single candidate into a structured
-  AggregatedOutput JSON that preserves dissent, flags source contradictions,
-  and never averages ordinal positioning scores.
+  AggregatedOutput JSON (schema_version 1.1) that preserves dissent, flags
+  source contradictions, and never averages ordinal positioning,
+  risk-profile levels, or horizon-matrix impact scores.
 ---
 
 # Multi-Model Aggregation
@@ -132,6 +134,12 @@ Political positioning is ordinal, not cardinal. For each of the five axes
 - Record `dissent[]` for every model whose score differs from the modal
   score. Each dissent entry carries `{ model, position, reasoning }` with
   reasoning preserved verbatim from the source model.
+- Emit `per_model[]` with one entry **per source model that addressed the
+  axis**, carrying `{ model, score, reasoning }` with the integer score
+  and reasoning copied verbatim from that model's analysis. This is the
+  complete per-axis roll-call the website uses to plot a per-model radar
+  overlay. Models that did not address the axis are omitted from
+  `per_model[]` (they are already reflected in `agreement_map.coverage`).
 - `confidence` is the minimum of the per-model confidences for that axis.
 
 **There is no aggregated `score` field.** The per-model integer score
@@ -237,6 +245,78 @@ the program being silent), or `"failed"` (the model did not produce valid
 output). When fewer than three models returned `"complete"`, set
 `coverage_warning` to `true`.
 
+### 4.10 Headline synthesis (v1.1)
+
+Each per-model analysis now carries a `headline` (max 140 characters) on
+every dimension. Aggregate as follows:
+
+- Pick `text` as the plurality headline wording among the source models.
+  When there is no unique plurality (all distinct), pick the headline from
+  the model whose overall dimension wording the aggregated `summary` most
+  closely tracks, and list the others as `dissenters`.
+- `supported_by` = models whose headline matches `text` (same factual
+  claim; minor punctuation differences allowed).
+- `dissenters` = models whose headline makes a materially different claim.
+- `per_model[]` = every source model's headline copied verbatim with its
+  exact version string. Empty only when no model produced a headline for
+  this dimension.
+- Never invent a headline. If no source model emitted one for a dimension,
+  emit an empty `text: ""` and route a `flagged_for_review[]` entry.
+
+### 4.11 Risk-profile aggregation (v1.1)
+
+Each per-model analysis now emits a `risk_profile` on every dimension
+with four fixed categories: `budgetary`, `implementation`, `dependency`,
+`reversibility`. Each category has a `level` on the ordered scale
+`low < limited < moderate < high`. Aggregate per category:
+
+- `modal_level` = plurality `level` across models that rated the
+  category. When there is no unique plurality (all distinct, or tied
+  modes), set `modal_level` to `null`.
+- `level_interval = [min, max]` where `min` and `max` are the lowest and
+  highest levels on the ordered scale across source models. Must satisfy
+  `min <= max`.
+- `note` = synthesized one-sentence rationale using the shared claims.
+- `per_model[]` = every source model's `{ level, note }` for that
+  category, copied verbatim with its exact version string.
+- `supported_by` and `dissenters` follow §4.1, keyed on whether the
+  per-model `level` matches `modal_level`.
+
+**Do not compute arithmetic mean of levels.** Risk levels are ordinal; a
+numeric composite would misrepresent the scale. Use the interval plus
+modal plus per-model list. All four categories must be present in every
+dimension's aggregated `risk_profile`.
+
+### 4.12 Horizon-matrix aggregation (v1.1)
+
+Each per-model analysis now carries a `horizon_matrix` inside
+`intergenerational`: six fixed rows (`pensions`, `public_debt`, `climate`,
+`health`, `education`, `housing`), each with three horizon cells
+(`h_2027_2030`, `h_2031_2037`, `h_2038_2047`). Each cell has an integer
+`impact_score` in `[-3, +3]` where `0` means no change and `±3` is
+reserved for transformative effects. Aggregate the matrix per row and
+per cell:
+
+- For each cell, `modal_score` = integer plurality of `impact_score`
+  across models that filled the cell; `null` when no unique plurality.
+- `score_interval = [min, max]` of per-model `impact_score`, each in
+  `[-3, +3]`, with `min <= max`.
+- `note` = synthesized one-sentence rationale referring to the measure
+  shaping that horizon; no moral framing (see §7).
+- `per_model[]` = every source model's `{ score, note }` for the cell,
+  copied verbatim with its exact version string.
+- `supported_by` / `dissenters` follow §4.1.
+- `row.dimension_note` = short synthesis (≤200 chars) of the row; use
+  neutral measurement vocabulary.
+- `row_supported_by` / `row_dissenters` aggregate across the three cells.
+- The matrix must contain exactly one row per `HorizonRowKey`, in the
+  fixed order above.
+
+**Impact scores are ordinal — never average.** Emit the interval, the
+modal, and the per-model list. If a cell is silent across every source
+model, emit `modal_score: null`, `score_interval: [0, 0]`,
+`note: "Not addressed."`, and empty `per_model[]`.
+
 ## 5. Dissent vs consensus — structural rules
 
 Dissent lives in fields, not in prose.
@@ -307,7 +387,7 @@ Compact shape:
 
 ```
 {
-  schema_version: "1.0",
+  schema_version: "1.1",
   candidate_id: <string>,
   version_date: "YYYY-MM-DD",
   source_models: [ { provider, version }, ... ],
@@ -315,7 +395,7 @@ Compact shape:
     type: "meta_llm",
     model: { provider, version },
     prompt_sha256: <string>,          // injected by the runner
-    prompt_version: "1.0",
+    prompt_version: "1.1",
     run_at: <ISO-8601>                 // injected by the runner
   },
 
@@ -336,7 +416,8 @@ Compact shape:
   //   anchor_narrative: <string>,
   //   evidence: [ { quote, source_ref } ],
   //   confidence: <[0,1]>,
-  //   dissent: [ { model, position: int, reasoning } ]
+  //   dissent:   [ { model, position: int, reasoning } ],
+  //   per_model: [ { model, score: int, reasoning } ]   // v1.1 — complete list
   // }
   // NO score field.
 
@@ -350,13 +431,33 @@ Compact shape:
   // <AggregatedDimension>: {
   //   grade: { consensus: A|B|C|D|F|NOT_ADDRESSED,
   //            dissent: { <model>: <grade>, ... } },
+  //   headline: {                             // v1.1
+  //     text: <string ≤140>,
+  //     supported_by: [<model>, ...],
+  //     dissenters:   [<model>, ...],
+  //     per_model: [ { model, text }, ... ]
+  //   },
   //   summary: <string>,
   //   problems_addressed: [ <AggregatedProblem>, ... ],
   //   problems_ignored:   [ <AggregatedProblem>, ... ],
   //   problems_worsened:  [ <AggregatedProblem>, ... ],
   //   execution_risks:    [ <AggregatedExecutionRisk>, ... ],
   //   key_measures:       [ <AggregatedKeyMeasure>, ... ],
+  //   risk_profile: {                         // v1.1 — all four categories required
+  //     budgetary:      <AggregatedRiskCategory>,
+  //     implementation: <AggregatedRiskCategory>,
+  //     dependency:     <AggregatedRiskCategory>,
+  //     reversibility:  <AggregatedRiskCategory>
+  //   },
   //   confidence: <[0,1]>               // median across source models
+  // }
+  // <AggregatedRiskCategory>: {
+  //   modal_level: "low"|"limited"|"moderate"|"high" | null,
+  //   level_interval: [<level>, <level>],     // ordered low<=limited<=moderate<=high
+  //   note: <string ≤180>,
+  //   supported_by: [<model>, ...],
+  //   dissenters:   [<model>, ...],
+  //   per_model: [ { model, level, note }, ... ]
   // }
 
   intergenerational: {
@@ -369,12 +470,35 @@ Compact shape:
     confidence: <[0,1]>,
     supported_by: [<model>, ...],
     dissenters:   [<model>, ...],
+    horizon_matrix: [                         // v1.1 — exactly 6 rows, fixed order
+      {
+        row: "pensions" | "public_debt" | "climate"
+           | "health" | "education" | "housing",
+        dimension_note: <string ≤200>,
+        cells: {
+          h_2027_2030: <AggregatedHorizonCell>,
+          h_2031_2037: <AggregatedHorizonCell>,
+          h_2038_2047: <AggregatedHorizonCell>
+        },
+        row_supported_by: [<model>, ...],
+        row_dissenters:   [<model>, ...]
+      },
+      ... // one row per HorizonRowKey, no duplicates
+    ],
     agreement: {
       direction_consensus: <bool>,
       magnitude_consensus: "interval" | "point" | "contested",
       dissenting_views: [ { model, direction, reasoning }, ... ]
     }
   },
+  // <AggregatedHorizonCell>: {
+  //   modal_score: int in [-3,+3] | null,
+  //   score_interval: [int, int],            // min <= max, both in [-3,+3]
+  //   note: <string ≤160>,
+  //   supported_by: [<model>, ...],
+  //   dissenters:   [<model>, ...],
+  //   per_model: [ { model, score: int, note }, ... ]
+  // }
 
   counterfactual: <AggregatedCounterfactual>,
   unsolved_problems: [ <AggregatedUnsolvedProblem>, ... ],
@@ -416,6 +540,17 @@ Compact shape:
   an integer in `[-5, +5]`. Never emit halves or decimals.
 - Every `consensus_interval` satisfies `min <= max`.
 - `grade.consensus` is one of `A | B | C | D | F | NOT_ADDRESSED`.
+- Every `risk_profile` category `level` (and both endpoints of every
+  `level_interval`) is one of `low | limited | moderate | high`. Intervals
+  satisfy `min <= max` on that ordered scale.
+- Every `horizon_matrix` cell `modal_score`, every per-model `score`, and
+  both endpoints of every `score_interval` is an integer in `[-3, +3]`.
+  `score_interval` satisfies `min <= max`. The matrix has exactly six
+  rows, one per HorizonRowKey, no duplicates.
+- Every dimension `headline.text` is a non-empty string ≤140 characters;
+  every `risk_profile` `note` is ≤180 characters; every horizon cell
+  `note` is ≤160 characters; every horizon row `dimension_note` is ≤200
+  characters.
 - `net_transfer_direction` is one of `young_to_old | old_to_young | neutral | mixed`.
 - `direction_of_change.consensus` is one of `improvement | worsening | neutral | mixed`.
 - All `confidence` / `strength` / `severity` / `probability` values are in
