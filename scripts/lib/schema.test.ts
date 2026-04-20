@@ -687,6 +687,161 @@ describe("schema AggregatedOutputSchema", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Schema v1.1: headline, risk_profile, horizon_matrix, positioning per_model
+// See docs/specs/website/candidate-page-polish.md §3
+// ---------------------------------------------------------------------------
+
+describe("schema v1.1 analysis output extensions", () => {
+  it("analysis_schema_rejects_schema_version_1_0", () => {
+    const fixture = buildValidAnalysisOutput() as unknown as {
+      schema_version: string;
+    };
+    fixture.schema_version = "1.0";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_headline_longer_than_140_chars", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.dimensions.economic_fiscal.headline = "a".repeat(141);
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_missing_risk_profile_category", () => {
+    const fixture = buildValidAnalysisOutput();
+    delete (fixture.dimensions.economic_fiscal.risk_profile as Partial<
+      typeof fixture.dimensions.economic_fiscal.risk_profile
+    >).dependency;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_invalid_risk_level_enum", () => {
+    const fixture = buildValidAnalysisOutput();
+    (
+      fixture.dimensions.economic_fiscal.risk_profile.budgetary as {
+        level: string;
+      }
+    ).level = "extreme";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_horizon_matrix_with_missing_row", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.intergenerational.horizon_matrix =
+      fixture.intergenerational.horizon_matrix.slice(0, 5);
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_horizon_matrix_with_duplicate_row", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.intergenerational.horizon_matrix[0] = {
+      ...fixture.intergenerational.horizon_matrix[1],
+    };
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_horizon_cell_missing_horizon_key", () => {
+    const fixture = buildValidAnalysisOutput();
+    const row = fixture.intergenerational.horizon_matrix[0];
+    delete (row.cells as Partial<typeof row.cells>).h_2038_2047;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_impact_score_above_range", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.intergenerational.horizon_matrix[0].cells.h_2027_2030.impact_score =
+      4;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_impact_score_below_range", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.intergenerational.horizon_matrix[0].cells.h_2027_2030.impact_score =
+      -4;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_non_integer_impact_score", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.intergenerational.horizon_matrix[0].cells.h_2027_2030.impact_score =
+      1.5 as unknown as number;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+});
+
+describe("schema v1.1 aggregated output extensions", () => {
+  it("aggregated_schema_rejects_schema_version_1_0", () => {
+    const fixture = buildValidAggregatedOutput() as unknown as {
+      schema_version: string;
+    };
+    fixture.schema_version = "1.0";
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_reversed_level_interval", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.risk_profile.budgetary.level_interval = [
+      "high",
+      "low",
+    ];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_reversed_score_interval", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.intergenerational.horizon_matrix[0].cells.h_2027_2030.score_interval =
+      [3, -2];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_headline_missing_supported_by", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.headline.supported_by = [];
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_positioning_per_model_entry_missing_reasoning", () => {
+    const fixture = buildValidAggregatedOutput();
+    const entry = fixture.positioning.economic.per_model[0] as unknown as {
+      reasoning?: string;
+    };
+    delete entry.reasoning;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_positioning_per_model_score_out_of_range", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.economic.per_model[0].score = 6;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_accepts_null_modal_level_and_null_modal_score", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.dimensions.economic_fiscal.risk_profile.budgetary.modal_level =
+      null;
+    fixture.intergenerational.horizon_matrix[0].cells.h_2027_2030.modal_score =
+      null;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // Execution modes on ModelRunEntry / aggregator_model
 // See docs/specs/data-pipeline/analysis-modes.md
 // ---------------------------------------------------------------------------

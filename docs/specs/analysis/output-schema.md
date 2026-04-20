@@ -1,7 +1,7 @@
 # Output Schema
 
-> **Version:** 1.0
-> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
+> **Version:** 1.1
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19; v1.1 additive fields from M_CandidatePagePolish spike `0080`, 2026-04-20)
 > **Source of truth:** `scripts/lib/schema.ts` (Zod)
 
 ---
@@ -18,7 +18,7 @@ The canonical implementation is `scripts/lib/schema.ts` using Zod. This markdown
 
 ```json
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "candidate_id": "string",
   "version_date": "YYYY-MM-DD",
   "model": {
@@ -81,6 +81,7 @@ One entry per dimension cluster from [`dimensions.md`](dimensions.md). Every clu
 "dimensions": {
   "economic_fiscal": {
     "grade": "A | B | C | D | F | NOT_ADDRESSED",
+    "headline": "string ≤140 chars — concise policy-claim distillation (v1.1)",
     "summary": "string — 2-3 sentences",
     "problems_addressed": [
       {
@@ -125,6 +126,12 @@ One entry per dimension cluster from [`dimensions.md`](dimensions.md). Every clu
         "magnitude": "string or null — e.g. '€5bn/year'"
       }
     ],
+    "risk_profile": {
+      "budgetary":      { "level": "low | limited | moderate | high", "note": "≤180 chars", "source_refs": [...] },
+      "implementation": { "level": "...", "note": "...", "source_refs": [...] },
+      "dependency":     { "level": "...", "note": "...", "source_refs": [...] },
+      "reversibility":  { "level": "...", "note": "...", "source_refs": [...] }
+    },
     "confidence": 0.75
   },
   "social_demographic": { ... same shape ... },
@@ -135,6 +142,10 @@ One entry per dimension cluster from [`dimensions.md`](dimensions.md). Every clu
 ```
 
 **Grade semantics:** grades reflect **coherence + evidence-support** on the dimension's problems. They are **not** ideological verdicts. A program that addresses economic problems through different means than another program can still be graded A if its approach is internally coherent and evidence-supported. The grade enum is `A | B | C | D | F | NOT_ADDRESSED`.
+
+**v1.1 additive fields:**
+- `headline` (≤140 chars) distills the central policy claim in one line, for the candidate-page dimension list. It is **not** a substitute for `summary`. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.1.
+- `risk_profile` is a fixed-shape 4-category ordinal summary (budgetary, implementation, dependency, reversibility) distinct from the free-form `execution_risks[]`. Levels are `low | limited | moderate | high`; they are never composed into a single score. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.2.
 
 ---
 
@@ -167,9 +178,23 @@ Dedicated cross-cutting section. See [`intergenerational-audit.md`](intergenerat
   },
   "reasoning": "string — the analytical path from source material to these findings",
   "source_refs": [...],
-  "confidence": 0.6
+  "confidence": 0.6,
+  "horizon_matrix": [
+    {
+      "row": "pensions | public_debt | climate | health | education | housing",
+      "dimension_note": "string ≤200 chars — row-level mechanism",
+      "cells": {
+        "h_2027_2030": { "impact_score": -3..3, "note": "≤160 chars", "source_refs": [...] },
+        "h_2031_2037": { "impact_score": -3..3, "note": "...", "source_refs": [...] },
+        "h_2038_2047": { "impact_score": -3..3, "note": "...", "source_refs": [...] }
+      }
+    }
+    // ... exactly 6 rows, one per fixed key, any order
+  ]
 }
 ```
+
+**v1.1:** `horizon_matrix` is a fixed 6×3 matrix (domain × horizon) of ordinal integer scores in `[−3, +3]`. Symmetry is enforced by Zod: all 6 row keys and all 3 horizon keys must be present, no duplicates. See [`intergenerational-audit.md`](intergenerational-audit.md) §"Horizon bands and cohort framing" and [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.3.
 
 **Language constraint:** every field in this section must use measurement framing, not moral framing. See editorial principle 3. The schema does not mechanically enforce this — the prompt does.
 
