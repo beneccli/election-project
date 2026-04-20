@@ -30,7 +30,12 @@ export function PositionnementSection({
       </p>
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[340px_1fr]">
         <div className="flex flex-col items-center lg:items-start">
-          <PositioningRadar shape={shape} />
+          {/* Radar hidden below sm: at narrow widths the 280x280 SVG
+              is unreadably small; the axis list below (AxisAgreementBars)
+              is the mobile fallback. See visual-components.md §4.1. */}
+          <div className="hidden sm:block">
+            <PositioningRadar shape={shape} />
+          </div>
           <PositioningLegend positioning={aggregated.positioning} />
         </div>
         <AxisAgreementBars positioning={aggregated.positioning} />

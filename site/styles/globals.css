@@ -60,3 +60,16 @@ body {
   background: var(--accent-subtle);
   color: var(--text);
 }
+
+/* Accessibility: honor prefers-reduced-motion system setting.
+ * See docs/specs/website/visual-components.md §7. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
