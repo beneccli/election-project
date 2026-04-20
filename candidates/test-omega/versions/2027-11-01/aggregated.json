@@ -1,0 +1,3070 @@
+{
+  "schema_version": "1.1",
+  "candidate_id": "test-omega",
+  "version_date": "2027-11-01",
+  "source_models": [
+    {
+      "provider": "copilot",
+      "version": "claude-opus-4-6"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-1.5-pro"
+    },
+    {
+      "provider": "openai",
+      "version": "gpt-5.4-thinking"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "copilot",
+      "version": "claude-opus-4-6"
+    },
+    "prompt_sha256": "732ab4ca06b3c3e68fb7a1e07d954b9cb720c2df26eb1aa2f8c2030ec613429b",
+    "prompt_version": "1.1",
+    "run_at": "2026-04-20T18:00:00Z"
+  },
+  "summary": "Le programme d'Omega Synthétique propose un techno-progressisme écologique et décentralisateur articulé autour d'un investissement public massif (50 Mds €/an) dans la transition verte, d'un filet de sécurité universel inconditionnel (RBU à 750 €/mois), et d'une rupture institutionnelle transférant 30 % du budget national aux régions. Le financement repose sur une fiscalité redistributive (ISF-C, suppression d'aides inefficaces) et une hypothèse de croissance à 1,2 %/an, mais l'écart entre dépenses annoncées et recettes identifiées constitue la fragilité structurelle centrale. Les trois modèles convergent sur un profil interventionniste, écologiste et progressiste, mais divergent sur l'intensité du positionnement économique, le grade de certaines dimensions, et la direction du contrefactuel.",
+  "summary_agreement": 0.8,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        -4,
+        -3
+      ],
+      "modal_score": -3,
+      "anchor_narrative": "Le programme se situe entre Hollande 2012 et Mélenchon 2022 sur l'axe économique, combinant nationalisations, investissement public massif et RBU inconditionnel avec des mécanismes de marché résiduels (crédits d'impôt, statut d'entreprise verte, discipline budgétaire via règle d'or verte).",
+      "evidence": [
+        {
+          "quote": "Lancement d'un grand plan d'investissement de 50 milliards d'euros par an sur le quinquennat, dédié à la relocalisation des industries critiques",
+          "source_ref": "sources.md#13-croissance-et-réindustrialisation-fictif"
+        },
+        {
+          "quote": "Nationalisation complète du parc de production électrique pour l'isoler des logiques de marché de court terme",
+          "source_ref": "sources.md#34-souveraineté-énergétique-fictif"
+        },
+        {
+          "quote": "Instauration d'un Revenu de Base Unifié de 750 €/mois dès 18 ans",
+          "source_ref": "sources.md#24-inégalités-fictif"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        {
+          "model": "gemini-1.5-pro",
+          "position": -4,
+          "reasoning": "Gemini places the program closer to LFI 2022 due to explicit nationalizations, unconditional UBI, 32-hour week, and 90% marginal inheritance tax, viewing the residual market mechanisms as insufficient to moderate the overall interventionist posture."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "score": -3,
+          "reasoning": "Plus interventionniste que Hollande 2012 par l'ampleur des investissements publics et la nationalisation, mais moins que Mélenchon 2022 en raison du maintien d'incitations de marché et d'une discipline budgétaire via la règle d'or verte."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": -4,
+          "reasoning": "Explicit nationalizations, unconditional UBI, 32-hour workweek, and 90% marginal inheritance tax indicate a highly interventionist economic stance similar to LFI 2022."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "score": -3,
+          "reasoning": "Concrete proposals expand public spending, ownership, and transfers, but market mechanisms remain in some sectors, keeping the program short of the most state-directed anchor."
+        }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        -3,
+        -2
+      ],
+      "modal_score": -3,
+      "anchor_narrative": "Le programme est nettement progressiste, comparable à EELV 2022, combinant RBU inconditionnel, légalisation de l'aide à mourir, vote à 16 ans, régularisation des sans-papiers et congé parental paritaire. La composante d'obligations collectives (service civique, obligation médicale) est républicaine plutôt que conservatrice.",
+      "evidence": [
+        {
+          "quote": "Légalisation encadrée et remboursement de l'assistance médicale à mourir (fin de vie)",
+          "source_ref": "sources.md#21-santé-fictif"
+        },
+        {
+          "quote": "Régularisation automatique des travailleurs sans papiers justifiant d'un an de fiches de paie",
+          "source_ref": "sources.md#32-immigration-fictif"
+        },
+        {
+          "quote": "Droit de vote abaissé à 16 ans pour toutes les élections locales et nationales",
+          "source_ref": "sources.md#42-référendum-et-système-électoral-fictif"
+        }
+      ],
+      "confidence": 0.8,
+      "dissent": [
+        {
+          "model": "gpt-5.4-thinking",
+          "position": -2,
+          "reasoning": "GPT rates the program as progressive but scores it -2 rather than -3, noting it is not centered on culture-war rhetoric and the score is based more on policy content than explicit ideological framing."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "score": -3,
+          "reasoning": "Comparable à EELV 2022 par la combinaison RBU + fin de vie + vote à 16 ans + régularisation immigration."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": -3,
+          "reasoning": "Aligns with EELV 2022 on societal issues, including end-of-life legalization and youth enfranchisement."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "score": -2,
+          "reasoning": "More progressive than Macron 2017 but less culturally explicit than EELV 2022 on identity topics; clearly progressive through concrete policy measures."
+        }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        -1,
+        1
+      ],
+      "modal_score": 1,
+      "anchor_narrative": "Le profil souveraineté est mixte et contesté entre les modèles. Le programme combine un fédéralisme institutionnel européen (fin de l'unanimité, initiative parlementaire) avec un souverainisme sectoriel (sortie OTAN, nationalisation énergétique, bouclier douanier). La tension entre ces deux orientations n'est pas résolue dans les sources.",
+      "evidence": [
+        {
+          "quote": "Demande formelle de suppression de la règle de l'unanimité au Conseil européen",
+          "source_ref": "sources.md#44-relation-à-lue-fictif"
+        },
+        {
+          "quote": "sortie progressive et coordonnée du commandement intégré de l'OTAN d'ici 2035",
+          "source_ref": "sources.md#33-défense-fictif"
+        },
+        {
+          "quote": "Nationalisation complète du parc de production électrique",
+          "source_ref": "sources.md#34-souveraineté-énergétique-fictif"
+        }
+      ],
+      "confidence": 0.7,
+      "dissent": [
+        {
+          "model": "claude-opus-4-6",
+          "position": -1,
+          "reasoning": "Claude considers the dominant orientation fédéraliste on institutions but souverainiste on strategic capacities, yielding a net -1 that leans slightly toward integration."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "score": -1,
+          "reasoning": "Dominante fédéraliste sur les institutions mais souverainiste sur les capacités stratégiques. La tension résulte en -1."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 1,
+          "reasoning": "Mixed: protectionist and military independence aligns with sovereignty, but EU QMV proposals align with integration."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "score": 1,
+          "reasoning": "Sovereignty-forward in defense, energy, and customs, but framed at EU scale rather than unilateral national retrenchment."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        1,
+        2
+      ],
+      "modal_score": 1,
+      "anchor_narrative": "Le programme déplace le pouvoir vers la démocratie directe (RIC, vote blanc invalidant) tout en maintenant des garde-fous institutionnels (prime majoritaire, HATVP, protection des lanceurs d'alerte). Les trois modèles le placent du côté participatif/populiste de l'axe, mais à une intensité modérée.",
+      "evidence": [
+        {
+          "quote": "Instauration du Référendum d'Initiative Citoyenne (RIC) abrogatoire et législatif, déclenchable automatiquement dès le recueil de 1 million de signatures vérifiées",
+          "source_ref": "sources.md#42-référendum-et-système-électoral-fictif"
+        },
+        {
+          "quote": "Reconnaissance du vote blanc : si le vote blanc arrive en tête, l'élection est annulée",
+          "source_ref": "sources.md#42-référendum-et-système-électoral-fictif"
+        },
+        {
+          "quote": "Protection constitutionnelle des lanceurs d'alerte et renforcement des pouvoirs d'investigation de la HATVP",
+          "source_ref": "sources.md#45-capacité-exécutive-de-létat-fictif"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": [
+        {
+          "model": "gemini-1.5-pro",
+          "position": 2,
+          "reasoning": "Gemini scores +2, aligning the program more strongly with LFI-style direct democracy due to RIC and blank-vote invalidation mechanisms."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "score": 1,
+          "reasoning": "Légère inclinaison vers le pôle participatif/populiste, compensée par les garde-fous institutionnels (HATVP, prime majoritaire)."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 2,
+          "reasoning": "Proposals fundamentally alter representative dynamics by allowing immediate popular overrides (RIC) and invalidating elections."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "score": 1,
+          "reasoning": "More plebiscitary than Macron 2017 baseline but not illiberal-populist; no proposals for executive control over courts or media."
+        }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [
+        3,
+        4
+      ],
+      "modal_score": 4,
+      "anchor_narrative": "Le programme est très écologiste, proche d'EELV 2022, avec des objectifs contraignants constitutionnels (-60 % GES d'ici 2035), des interdictions (vols, pesticides), et des investissements massifs (fret ferroviaire, rénovation thermique). Le choix pro-nucléaire (8 EPR, mix 50/50) le distingue de l'ancre EELV classique.",
+      "evidence": [
+        {
+          "quote": "Fixation dans la Constitution d'un objectif contraignant de baisse de 60 % des émissions de gaz à effet de serre d'ici 2035",
+          "source_ref": "sources.md#51-climat-fictif"
+        },
+        {
+          "quote": "Programmation d'un mix électrique équilibré visant 50 % de nucléaire (lancement immédiat de 8 réacteurs EPR) et 50 % d'énergies renouvelables",
+          "source_ref": "sources.md#34-souveraineté-énergétique-fictif"
+        },
+        {
+          "quote": "Classement de 30 % de la surface terrestre et maritime française en « zone de protection forte »",
+          "source_ref": "sources.md#52-biodiversité-et-eau-fictif"
+        }
+      ],
+      "confidence": 0.87,
+      "dissent": [
+        {
+          "model": "claude-opus-4-6",
+          "position": 3,
+          "reasoning": "Claude scores +3, noting the pro-nuclear stance (8 EPR, mix 50/50) moderates alignment with the fully anti-nuclear EELV anchor."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "score": 3,
+          "reasoning": "Très écologiste dans ses objectifs et moyens, modéré par le choix pro-nucléaire qui le distingue d'EELV."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 4,
+          "reasoning": "Matches EELV 2022 anchor with stringent bans and constitutional emissions targets."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "score": 4,
+          "reasoning": "Close to EELV 2022 with a more pro-nuclear and techno-industrial pathway that does not reduce ecological policy intensity."
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Investissement vert 50 Mds €/an, RBU 750 €/mois, ISF-C et revue des aides ; écart recettes-dépenses non bouclé.",
+        "supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-6",
+            "text": "Investissement public de 50 Mds €/an et RBU à 750 €/mois financés par ISF-C, avec un écart recettes-dépenses non bouclé."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Objectif de 110% de dette d'ici 2032 via une hausse massive de la fiscalité ciblée sur les hauts patrimoines et le carbone."
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "text": "Déficit d'investissement vert autorisé jusqu'à 2,5 % du PIB avec 50 Md€/an d'investissement et dette visée à 110 % du PIB en 2032."
+          }
+        ]
+      },
+      "summary": "Les trois modèles s'accordent sur le diagnostic central : un programme économique articulé autour d'un investissement massif dans la réindustrialisation verte (50 Mds €/an), d'une refonte fiscale (ISF-C, suppression d'aides inefficaces, fiscalité confiscatoire sur les successions), et d'un filet social universel (RBU 750 €/mois). La discipline budgétaire est recherchée via la règle d'or verte (2,5 % PIB). Consensus sur le risque budgétaire élevé : les recettes identifiées (~23 Mds €/an) sont insuffisantes face aux dépenses agrégées. La réforme des retraites par points (âge pivot 63, minimum contributif 1 200 €) est détaillée mais son coût de transition n'est pas chiffré.",
+      "problems_addressed": [
+        {
+          "problem": "Financement de la transition écologique",
+          "approach": "Plan d'investissement dédié de 50 Mds €/an, conditionné à des contrats de trajectoire carbone, financé en partie par l'ISF-C (8 Mds €) et la revue des aides aux entreprises (15 Mds €).",
+          "strength": 0.77,
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-réindustrialisation-fictif"
+          ],
+          "reasoning": "Mécanisme de financement explicitement chiffré mais couvrant moins de la moitié de l'enveloppe annoncée. La conditionnalité carbone est un levier concret.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Précarité du travail de plateforme",
+          "approach": "Interdiction des clauses d'exclusivité et présomption de salariat pour livreurs et chauffeurs VTC.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#14-marché-du-travail-fictif"
+          ],
+          "reasoning": "Mesure directe et juridiquement opérationnelle reposant sur un renversement de la charge de la preuve.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Insuffisance du minimum retraite et fragmentation du système",
+          "approach": "Retraite universelle par points, âge pivot 63 ans, minimum contributif à 1 200 € nets mensuels pour carrière complète au SMIC.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#15-retraites-fictif"
+          ],
+          "reasoning": "Objectif chiffré et clair. Le coût de la revalorisation et la transition depuis les régimes spéciaux ne sont pas détaillés.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pénurie de logements sociaux et passoires thermiques",
+          "approach": "Construction de 200 000 logements sociaux éco-conçus par an, gel des loyers conditionné à la rénovation énergétique, expropriation simplifiée des immeubles vacants.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#16-logement-fictif"
+          ],
+          "reasoning": "Volume ambitieux avec conditionnalité claire. La capacité du secteur à absorber 200 000 unités/an reste un risque d'exécution.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Compétitivité des entreprises et fuite des capitaux face à la hausse de la fiscalité",
+          "significance": "L'ISF-C, la surtaxe sur les écarts salariaux, et la fiscalité confiscatoire sur les successions pourraient provoquer des délocalisations. Le programme ne mentionne pas de mesure anti-évasion compensatoire.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Sensibilité de la trajectoire de dette aux taux d'intérêt",
+          "significance": "La stabilisation de la dette à 110 % du PIB d'ici 2032 est présentée sans tests de résistance pour des coûts de refinancement plus élevés.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Coût net consolidé du RBU combiné aux dépenses sectorielles",
+          "significance": "Le programme ne publie pas de tableau de bord unifié liant dépenses récurrentes et recettes récurrentes.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.4-thinking",
+            "claude-opus-4-6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Inflation importée par les barrières douanières",
+          "mechanism": "La taxe kilométrique, le tarif carbone extérieur et le bouclier douanier agricole augmenteront mécaniquement le prix des biens importés.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#12-structure-fiscale-fictif",
+            "sources.md#17-cadre-budgétaire-européen-fictif"
+          ],
+          "reasoning": "Le programme reconnaît une « inflation verte » de 2,5 % mais ne distingue pas la part due aux barrières commerciales. Effet régressif sans le RBU comme amortisseur.",
+          "supported_by": [
+            "claude-opus-4-6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Contraintes sur l'offre de travail (semaine de 32h + RBU)",
+          "mechanism": "La réduction du temps de travail combinée au RBU peut réduire l'offre de travail dans les secteurs à faibles marges.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#14-marché-du-travail-fictif"
+          ],
+          "reasoning": "Réduction mécanique du volume de travail sans gains de productivité correspondants documentés.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Exposition budgétaire de court terme si la croissance sous-performe",
+          "mechanism": "Les engagements de dépenses sont front-loaded tandis que les recettes de la croissance et de la réindustrialisation arrivent plus lentement.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#sources-internes-au-programme-fictif"
+          ],
+          "reasoning": "Le cadre macro suppose 1,2 % de croissance et 5 % de chômage structurel ; une livraison plus faible élargit le déficit de financement.",
+          "supported_by": [
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Écart entre recettes identifiées (~23 Mds €/an) et dépenses annoncées (50 Mds €/an + RBU)",
+          "probability": 0.72,
+          "severity": 0.8,
+          "reasoning": "Les trois modèles identifient un sous-financement structurel. Le RBU seul dépasse 150 Mds €/an en coût brut. L'hypothèse de croissance à 1,2 % ne génère pas les recettes suffisantes.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#sources-internes-au-programme-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Négociation de l'exclusion des dépenses vertes du déficit des 3 % au niveau européen",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "La modification requiert l'unanimité des 27 États membres. Résistance historique des pays frugaux.",
+          "source_refs": [
+            "sources.md#17-cadre-budgétaire-européen-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Économies de la revue des aides aux entreprises inférieures aux 15 Mds €/an projetés",
+          "probability": 0.56,
+          "severity": 0.67,
+          "reasoning": "Le programme ne précise pas quelles lignes d'aide sont supprimées ni les défis juridiques associés.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif"
+          ],
+          "supported_by": [
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Règle d'or verte : déficit d'investissement plafonné à 2,5 % du PIB",
+          "source_ref": "sources.md#11-finances-publiques-fictif",
+          "quantified": true,
+          "magnitude": "2,5 % du PIB",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "ISF-Climat sur actifs fortement émetteurs",
+          "source_ref": "sources.md#11-finances-publiques-fictif",
+          "quantified": true,
+          "magnitude": "8 milliards €/an",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan de réindustrialisation verte",
+          "source_ref": "sources.md#13-croissance-et-réindustrialisation-fictif",
+          "quantified": true,
+          "magnitude": "50 milliards €/an sur le quinquennat",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Retraite universelle par points, âge pivot 63 ans, minimum 1 200 € nets",
+          "source_ref": "sources.md#15-retraites-fictif",
+          "quantified": true,
+          "magnitude": "Minimum contributif 1 200 € nets, départ dès 60 ans avec décote",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revue des aides inefficaces aux entreprises",
+          "source_ref": "sources.md#11-finances-publiques-fictif",
+          "quantified": true,
+          "magnitude": "15 milliards €/an d'économies estimées",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Recettes identifiées (~23 Mds €/an) couvrent moins de la moitié des dépenses. Le RBU crée une dépense structurelle rigide.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Recettes identifiées couvrent moins de la moitié de l'investissement annoncé, hors RBU."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Revenues rely on highly mobile tax bases; UBI creates rigid structural expenditure."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Large recurring transfers and investment rely on optimistic growth and new tax yields without consolidated budget table."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Réforme des retraites, nationalisation électrique, 200 000 logements/an, revue des aides : cumul de chantiers lourds.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Chaque chantier est lourd individuellement : retraites, nationalisation, logement, suppression départements."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Points-based pension and 32-hour week require complex tripartite negotiations."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Pensions, housing, retraining rights, and industrial conditionality require multi-ministry redesign."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Exclusion des dépenses vertes du calcul de déficit et tarif carbone extérieur requièrent un accord UE unanime.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "Exclusion dépenses vertes requiert unanimité UE. Hypothèse de croissance à 1,2%/an."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Carbon tariffs and deficit exemptions require agreement from EU partners."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Fiscal framework partly depends on EU treaty-rule changes and private-actor responses."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Réformes fiscales réversibles par loi de finances, mais système de retraite par points et expropriation logement plus durables.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "low",
+              "note": "Règle d'or verte, système par points et ISF-C réversibles par majorité parlementaire simple."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Tax rates and business aids can be modified by subsequent finance laws."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Tax rates are reversible but pension system and housing rules are stickier."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gemini-1.5-pro": "A"
+        }
+      },
+      "headline": {
+        "text": "RBU à 750 €/mois, service médical obligatoire en déserts, revalorisation enseignants +15 %, financement agrégé non consolidé.",
+        "supported_by": [
+          "claude-opus-4-6",
+          "gpt-5.4-thinking"
+        ],
+        "dissenters": [
+          "gemini-1.5-pro"
+        ],
+        "per_model": [
+          {
+            "model": "claude-opus-4-6",
+            "text": "Filet social universel (RBU 750 €/mois) et investissement massif en santé, éducation et petite enfance, avec un coût agrégé non consolidé."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Refonte des filets de sécurité avec un RBU à 750€ et contrainte d'installation pour les médecins."
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "text": "Hausse des salaires hospitaliers et enseignants, revenu de base à 750 €/mois, service civique obligatoire et nouveaux droits familiaux financés par redéploiements fiscaux."
+          }
+        ]
+      },
+      "summary": "Les trois modèles reconnaissent un programme social d'ampleur exceptionnelle : RBU à 750 €/mois, obligation de service médical de 3 ans, revalorisation enseignants +15 %, 150 000 places en crèche, service civique obligatoire, congé parental paritaire. Gemini accorde un A en raison de la portée directe des mesures (RBU, placement médical), tandis que Claude et GPT donnent un B en soulignant que le financement agrégé n'est pas consolidé et que les pipelines de recrutement (enseignants, soignants, petite enfance) ne sont pas détaillés.",
+      "problems_addressed": [
+        {
+          "problem": "Déserts médicaux",
+          "approach": "Obligation de service médical de 3 ans en zone sous-dotée pour tout jeune médecin, accompagnée d'une hausse de 5 % du budget hospitalier.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#21-santé-fictif"
+          ],
+          "reasoning": "Les trois modèles identifient cette mesure. Gemini insiste sur l'efficacité directe, Claude et GPT soulèvent le risque de résistance et d'expatriation.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Rémunération des enseignants et taille des classes",
+          "approach": "Revalorisation salariale de 15 % dès la première année, plafond de 20 élèves par classe en primaire.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#22-éducation-fictif"
+          ],
+          "reasoning": "Mesure quantifiée et immédiate. Consensus des trois modèles sur sa force. GPT soulève le besoin de recrutement massif non détaillé.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pauvreté et inégalités de revenus",
+          "approach": "RBU à 750 €/mois fusionnant RSA et prime d'activité, plafonnement des écarts 1/20, fiscalité confiscatoire sur successions >10 M€.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ],
+          "reasoning": "Triple mécanisme : plancher (RBU), plafond (écarts), transmission (successions). Coût brut du RBU identifié comme fragilité principale.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Accueil de la petite enfance",
+          "approach": "150 000 places en crèche publique d'ici 2030, congé parental 6 mois (dont 2 non transférables) à 80 % du salaire.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#23-politique-familiale-fictif"
+          ],
+          "reasoning": "Volume quantifié et mécanisme de partage obligatoire. Les trois modèles identifient le risque de capacité de recrutement.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Dépendance et vieillissement (5e risque)",
+          "significance": "Le programme ne mentionne pas de réforme spécifique de la prise en charge de la dépendance au-delà du service civique.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pipelines de recrutement pour les services publics élargis",
+          "significance": "Le programme étend les services à forte intensité de personnel sans détailler les capacités de formation et recrutement.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Attractivité de la profession médicale",
+          "mechanism": "L'obligation de service de 3 ans pourrait dissuader des vocations ou encourager l'expatriation.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#21-santé-fictif"
+          ],
+          "reasoning": "Mécanisme coercitif identifié par les trois modèles. Gemini insiste sur le risque de grève et de fuite des cerveaux.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Réduction potentielle de l'offre de travail sous RBU inconditionnel",
+          "mechanism": "Le transfert de 750 €/mois peut réduire l'offre de travail à la marge extensive pour les emplois à faible salaire.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ],
+          "reasoning": "Le programme ne fournit pas d'estimations d'offre de travail. Mécanisme plausible mais non démontré dans les sources.",
+          "supported_by": [
+            "gpt-5.4-thinking",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Coût brut du RBU à 750 €/mois pour tous les adultes",
+          "probability": 0.78,
+          "severity": 0.8,
+          "reasoning": "Avec ~52 millions d'adultes, le coût brut dépasse 460 Mds €/an. Après recyclage RSA/prime d'activité (~30 Mds €), le solde net reste considérable.",
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Résistance des jeunes médecins à l'obligation de service",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "Le placement coercitif déclenche historiquement résistance et émigration. Le programme ne décrit pas les sanctions ni les compensations.",
+          "source_refs": [
+            "sources.md#21-santé-fictif"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Recrutement pour 150 000 places en crèche en 5 ans",
+          "probability": 0.57,
+          "severity": 0.51,
+          "reasoning": "Le secteur souffre déjà de pénurie. Le programme ne détaille pas de plan de recrutement spécifique.",
+          "source_refs": [
+            "sources.md#23-politique-familiale-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Revenu de Base Unifié à 750 €/mois dès 18 ans",
+          "source_ref": "sources.md#24-inégalités-fictif",
+          "quantified": true,
+          "magnitude": "750 €/mois par adulte, sans condition",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Obligation de service médical de 3 ans en désert médical",
+          "source_ref": "sources.md#21-santé-fictif",
+          "quantified": true,
+          "magnitude": "3 ans pour tout jeune médecin",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revalorisation enseignants de 15 %",
+          "source_ref": "sources.md#22-éducation-fictif",
+          "quantified": true,
+          "magnitude": "+15 % immédiat",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "150 000 places en crèche publique d'ici 2030",
+          "source_ref": "sources.md#23-politique-familiale-fictif",
+          "quantified": true,
+          "magnitude": "150 000 places en 5 ans",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "RBU à 750 €/mois (>460 Mds € bruts/an) plus engagements sectoriels : financement agrégé non consolidé.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Le RBU seul dépasse 460 Mds € bruts/an. Le financement agrégé n'est pas consolidé."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "UBI and class-size reductions represent permanent structural costs."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Teacher pay, hospital wages, childcare, free school goods, and €750 transfer create large recurring obligations."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Déploiement simultané du RBU, 150 000 crèches, service civique, réforme médicale : charge administrative très élevée.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Déploiement simultané RBU, crèches, service civique, réforme médicale."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Creating 150k creche spots and deploying doctors requires heavy local coordination."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Class-size caps, medical-posting obligations, childcare, civic service all require major execution capacity."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Mesures sociales principalement nationales. Dépendance limitée aux hypothèses macroéconomiques.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "limited",
+              "note": "Dépendance limitée aux hypothèses macro."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Largely internal domestic policy."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "limited",
+              "note": "Domestic tools, but delivery depends on local authorities and professional compliance."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Le RBU crée une dépendance politique rendant toute réversion socialement coûteuse. Le service par points est techniquement réversible.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "RBU crée une dépendance politique forte. Système par points réversible."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "UBI creates strong immediate entitlements that are politically difficult to revoke."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Transfer amounts reversible in later budgets, but rights and mandatory service are stickier."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Police de proximité, 8 EPR, sortie OTAN d'ici 2035, nationalisation électrique, réserves stratégiques 6 mois.",
+        "supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-6",
+            "text": "Réorientation sécuritaire vers la proximité et le cyber, avec sortie progressive de l'OTAN intégré et nationalisation énergétique."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Nationalisation électrique et nucléaire, avec un retrait planifié de l'OTAN d'ici 2035."
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "text": "Police de proximité, justice accélérée, quotas migratoires ciblés, défense à 2,5 % du PIB et souverainetés renforcées."
+          }
+        ]
+      },
+      "summary": "Les trois modèles s'accordent sur un B. Le programme est inhabituellement large en souveraineté : police de proximité (10 000 agents), doublement du budget justice, carte Talents de la transition (50 000/an), défense à 2,5 % du PIB avec pivot cyber/espace, nationalisation du parc électrique (8 EPR + 50 % renouvelables), réserves stratégiques de 6 mois. Le consensus porte sur la cohérence du programme autour de l'autonomie stratégique, mais les dépendances à l'accord européen (OTAN, tarif carbone) et les risques industriels (8 EPR) limitent le grade.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance énergétique aux hydrocarbures",
+          "approach": "Nationalisation du parc électrique, mix 50/50 nucléaire/renouvelables (8 EPR), interdiction GNL non conforme.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ],
+          "reasoning": "Le programme articule production, gouvernance et horizon de planification. Identifié par les trois modèles comme un des volets les plus détaillés.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Défiance envers la police et tensions urbaines",
+          "approach": "Police de proximité de 10 000 agents non armés léthalement, évaluation par enquêtes de victimation.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#31-sécurité-intérieure-fictif"
+          ],
+          "reasoning": "Changement doctrinal clair. L'absence de mesures sur le terrorisme et le trafic est notée par Claude.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Ruptures d'approvisionnement en métaux rares et médicaments",
+          "approach": "Réserves stratégiques nationales de 6 mois.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"
+          ],
+          "reasoning": "Objectif précis. Coût de stockage et périmètre non détaillés.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Terrorisme et radicalisation",
+          "significance": "Aucune mesure spécifique ne cible la prévention ni la lutte contre le terrorisme.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Main-d'œuvre nucléaire spécialisée pour 8 EPR simultanés",
+          "significance": "Le programme ne détaille pas de stratégie de formation pour les ingénieurs et soudeurs spécialisés nécessaires.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Positionnement stratégique dans l'OTAN",
+          "mechanism": "La sortie progressive du commandement intégré réduit l'interopérabilité avec les alliés sans garantie que le Commandement Européen soit opérationnel.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#33-défense-fictif"
+          ],
+          "reasoning": "Période de transition 2027-2035 avec risque de lacune capacitaire. Consensus des trois modèles.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Construction de 8 EPR avec le retour d'expérience de Flamanville (12 ans de retard)",
+          "probability": 0.65,
+          "severity": 0.73,
+          "reasoning": "Risques de dérive calendaire et budgétaire systémiques sur les EPR. Identifié par les trois modèles.",
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Adhésion des partenaires européens au Commandement Stratégique Européen",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "Plusieurs pays considèrent le commandement OTAN comme indispensable. Consensus difficile.",
+          "source_refs": [
+            "sources.md#33-défense-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Police de Proximité : 10 000 agents non armés léthalement",
+          "source_ref": "sources.md#31-sécurité-intérieure-fictif",
+          "quantified": true,
+          "magnitude": "10 000 agents",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Carte « Talents de la transition » : 50 000/an",
+          "source_ref": "sources.md#32-immigration-fictif",
+          "quantified": true,
+          "magnitude": "50 000 par an",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Budget défense à 2,5 % du PIB avec pivot cyber/espace",
+          "source_ref": "sources.md#33-défense-fictif",
+          "quantified": true,
+          "magnitude": "2,5 % du PIB",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Nationalisation du parc de production électrique et 8 EPR",
+          "source_ref": "sources.md#34-souveraineté-énergétique-fictif",
+          "quantified": true,
+          "magnitude": "8 réacteurs EPR",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Défense 2,5 % PIB, nationalisation électrique non chiffrée, réserves stratégiques : exposition significative.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "Défense à 2,5 % du PIB, nationalisation non chiffrée, réserves 6 mois."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Nuclear construction carries high historical risk of cost overruns."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Defense, justice, police, reserves, and nationalization imply large fiscal exposure."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "8 EPR, nationalisation, sortie OTAN, réforme policière, doublement budget justice : cumul de chantiers lourds.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Cumul de chantiers administratifs et industriels lourds."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Deploying 8 EPRs and nationalizing power generation is highly complex."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Nuclear buildout, police recruitment, asylum speed targets, and reserves require multi-year execution."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Sortie OTAN, tarif carbone extérieur et bouclier douanier requièrent un consensus UE.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Sortie OTAN requiert adhésion des partenaires. Bouclier douanier nécessite consensus UE."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "European Strategic Command requires willing EU partners."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Many levers depend on EU agreement, allied coordination, and supply chains."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Nationalisation et réacteurs EPR créent des faits accomplis difficiles à inverser. Police et budget réversibles.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "Nationalisation coûteuse à inverser. Sortie OTAN réversible mais politiquement difficile."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Nuclear infrastructure decisions lock in capital for decades."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Policing reversible, while nationalization and reactor shifts are harder to unwind."
+            }
+          ]
+        }
+      },
+      "confidence": 0.77
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gemini-1.5-pro": "A"
+        }
+      },
+      "headline": {
+        "text": "Rupture girondine (30 % budget aux régions), RIC, proportionnelle intégrale, septennat unique non renouvelable.",
+        "supported_by": [
+          "claude-opus-4-6",
+          "gpt-5.4-thinking"
+        ],
+        "dissenters": [
+          "gemini-1.5-pro"
+        ],
+        "per_model": [
+          {
+            "model": "claude-opus-4-6",
+            "text": "Rupture girondine (30 % du budget aux régions) et démocratie directe (RIC, vote blanc, proportionnelle intégrale)."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Rupture girondine transférant 30% du budget aux régions et proportionnelle intégrale."
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "text": "Proportionnelle avec prime limitée, RIC à 1 million de signatures, forte régionalisation et réduction du recours aux cabinets privés."
+          }
+        ]
+      },
+      "summary": "Les trois modèles identifient une transformation institutionnelle profonde : proportionnelle intégrale avec prime 15 %, septennat unique, suppression quasi-totale du 49.3, RIC, vote blanc invalidant, vote à 16 ans, décentralisation radicale (30 % budget aux régions), suppression des départements. Gemini accorde un A pour la portée des réformes, tandis que Claude et GPT donnent un B en soulignant les risques de gouvernabilité et le nombre de révisions constitutionnelles nécessaires.",
+      "problems_addressed": [
+        {
+          "problem": "Hyper-présidentialisme et centralisme",
+          "approach": "Septennat unique, suppression du 49.3 (sauf finances), proportionnelle intégrale, 30 % du budget aux régions.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#43-décentralisation-fictif"
+          ],
+          "reasoning": "Architecture cohérente identifiée par les trois modèles. La combinaison des leviers est à la fois la force et le risque principal.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Crise de la représentation",
+          "approach": "RIC abrogatoire et législatif à 1 million de signatures, reconnaissance du vote blanc invalidant, vote à 16 ans.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#42-référendum-et-système-électoral-fictif"
+          ],
+          "reasoning": "Réponse directe à la demande de participation. Effet sur l'abstention incertain.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Indépendance de la justice et réforme du parquet",
+          "significance": "Le budget justice est doublé mais la réforme du statut du parquet et du CSM n'est pas mentionnée.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Mécanismes de résolution de conflits entre régions renforcées et État",
+          "significance": "Le transfert de 30 % du budget n'est pas accompagné de mécanismes d'arbitrage ou d'égalisation détaillés.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Gouvernabilité sous proportionnelle intégrale",
+          "mechanism": "Même avec prime de 15 %, les majorités absolues sont très improbables. Combiné au RIC, le risque d'instabilité institutionnelle augmente.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#42-référendum-et-système-électoral-fictif"
+          ],
+          "reasoning": "Consensus des trois modèles sur ce risque structurel.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Nombre de révisions constitutionnelles nécessaires",
+          "probability": 0.65,
+          "severity": 0.7,
+          "reasoning": "Le Congrès doit réunir les 3/5 pour chaque révision. Plusieurs mesures seront activement combattues.",
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#42-référendum-et-système-électoral-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Suppression des départements face à l'opposition des élus locaux",
+          "probability": 0.65,
+          "severity": 0.55,
+          "reasoning": "Tentée sous Hollande et abandonnée. Bloc d'opposition puissant des élus et employés territoriaux.",
+          "source_refs": [
+            "sources.md#43-décentralisation-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Proportionnelle intégrale avec prime majoritaire de 15 %",
+          "source_ref": "sources.md#41-réforme-institutionnelle-fictif",
+          "quantified": true,
+          "magnitude": "Prime de 15 %",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "RIC abrogatoire et législatif à 1 million de signatures",
+          "source_ref": "sources.md#42-référendum-et-système-électoral-fictif",
+          "quantified": true,
+          "magnitude": "1 million de signatures",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Décentralisation : 30 % du budget national aux régions",
+          "source_ref": "sources.md#43-décentralisation-fictif",
+          "quantified": true,
+          "magnitude": "30 % du budget",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Réformes institutionnelles à coût direct faible. Décentralisation implique un transfert fiscal, pas une dépense nette.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "limited",
+              "note": "Coût direct faible. Décentralisation = transfert, pas dépense nette."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Institutional changes carry minimal direct fiscal costs."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Regionalization and relocation carry transition costs not fully quantified."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Au moins 4 révisions constitutionnelles, suppression d'un échelon, transfert de 30 % du budget, déménagement de 50 % des directions centrales.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "4+ révisions constitutionnelles, suppression départements, transfert 30 %, déménagement 50 % directions."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Abolishing departments and moving 50% of central admin is administratively massive."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Constitutional reform, new election rules, regional fiscal transfers, state-relocation targets."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Réformes domestiques substantielles. Propositions UE dépendent de l'accord des 26 autres États.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "Réformes UE requièrent accord des 26 autres États. Révisions : majorité 3/5 au Congrès."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Purely domestic constitutional matters."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Domestic reforms substantial, EU governance proposals depend on partner agreement."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Septennat et RIC réversibles par révision constitutionnelle, mais décentralisation budgétaire difficile à inverser.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "Septennat, RIC réversibles. Décentralisation budgétaire difficilement réversible."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Future majorities could repeal PR or regional laws if constitutional locks not secured."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Consulting caps reversible. Constitutional redesign and territorial restructuring harder to reverse."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Objectif constitutionnel -60 % GES d'ici 2035, 30 % du territoire protégé, 50 % SAU bio, 8 EPR, 15 Mds € fret.",
+        "supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-6",
+            "text": "Objectif constitutionnel de -60 % GES d'ici 2035, comptabilité carbone en loi de finances, 30 % du territoire en protection forte."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Objectif contraignant de -60% GES d'ici 2035, avec 50% d'agriculture bio et fin de l'étalement routier."
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "text": "Contrainte constitutionnelle sur le climat, rénovation obligatoire des passoires, 8 EPR, 15 Md€ pour le fret ferroviaire et 50 % de SAU bio d'ici 2035."
+          }
+        ]
+      },
+      "summary": "Les trois modèles s'accordent unanimement sur un A. Le programme environnemental est le plus détaillé et contraignant : objectifs constitutionnels (-60 % GES d'ici 2035), comptabilité carbone en loi de finances avec provision automatique, interdictions (vols <4h, glyphosate, néonicotinoïdes), investissements massifs (fret 15 Mds €, rénovation thermique, conversion bio 5 Mds €/an), transformation agricole (50 % SAU bio d'ici 2035). Le risque principal est la faisabilité technique : rénovation de ~5 millions de passoires en 3 ans, 8 EPR, conversion bio, tout simultanément.",
+      "problems_addressed": [
+        {
+          "problem": "Émissions de gaz à effet de serre",
+          "approach": "Objectif constitutionnel -60 % d'ici 2035, comptabilité carbone en loi de finances, provision budgétaire automatique en cas de dépassement.",
+          "strength": 0.87,
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#65-dette-environnementale-fictif"
+          ],
+          "reasoning": "Triple mécanisme de crédibilité (constitutionnel, institutionnel, financier). L'objectif de -60 % en 8 ans est extrêmement ambitieux.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Passoires thermiques et précarité énergétique",
+          "approach": "Rénovation obligatoire de tous les logements F et G d'ici 2030, prise en charge à 100 % pour ménages modestes.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#51-climat-fictif"
+          ],
+          "reasoning": "Obligation de rénovation globale (pas par gestes) avec financement complet pour ménages modestes. Volume de ~5 millions de logements en 3 ans.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Perte de biodiversité et pollution de l'eau",
+          "approach": "30 % du territoire en protection forte, moratoire méga-bassines, interdiction glyphosate et néonicotinoïdes dès 2028.",
+          "strength": 0.83,
+          "source_refs": [
+            "sources.md#52-biodiversité-et-eau-fictif"
+          ],
+          "reasoning": "Aligné sur le cadre mondial Kunming-Montréal. Interdictions datées avec fonds d'indemnisation.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Transition agricole",
+          "approach": "50 % SAU en bio d'ici 2035, 100 000 nouveaux paysans, 5 Mds €/an pour conversion, réorientation PAC vers l'agroécologie.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#53-transition-agricole-fictif"
+          ],
+          "reasoning": "Objectif quantifié avec calendrier, budget dédié et plan d'installation. Réorientation PAC requiert négociation européenne.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Adaptation au changement climatique (canicules, inondations, submersion)",
+          "significance": "Le programme est centré sur l'atténuation, pas sur l'adaptation des infrastructures et systèmes aux effets climatiques inévitables.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Baisse de rendements lors de la conversion à l'agriculture biologique",
+          "significance": "La transition de 50 % de la SAU vers le bio réduira mécaniquement la production brute, impactant les balances exportatrices.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coût de l'alimentation",
+          "mechanism": "Interdictions pesticides, bouclier douanier, conversion bio massive augmenteront mécaniquement les prix agricoles et alimentaires.",
+          "severity": 0.47,
+          "source_refs": [
+            "sources.md#52-biodiversité-et-eau-fictif",
+            "sources.md#53-transition-agricole-fictif"
+          ],
+          "reasoning": "Coût transmis au consommateur. Le RBU peut servir d'amortisseur mais n'est pas explicitement articulé comme tel.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Goulots d'étranglement en matière de construction et rénovation",
+          "mechanism": "Rénovation obligatoire, fret ferroviaire, bornes de recharge, déploiement renouvelables et EPR simultanés dépassent les capacités actuelles.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#54-infrastructures-fictif"
+          ],
+          "reasoning": "Le programme empile plusieurs transitions capitalistiques sur le même horizon.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité du BTP à rénover ~5 millions de passoires thermiques en 3 ans",
+          "probability": 0.7,
+          "severity": 0.68,
+          "reasoning": "Multiplication par 15-20 de la capacité actuelle requise. Formation et recrutement dépassent les flux existants.",
+          "source_refs": [
+            "sources.md#51-climat-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Résistance sociale aux interdictions (vols, pesticides, moratoire autoroutier)",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "Secteurs employeurs directement affectés. Mobilisations sectorielles prévisibles.",
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#52-biodiversité-et-eau-fictif"
+          ],
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Objectif constitutionnel de -60 % GES d'ici 2035",
+          "source_ref": "sources.md#51-climat-fictif",
+          "quantified": true,
+          "magnitude": "-60 % par rapport à 1990",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "30 % du territoire en protection forte",
+          "source_ref": "sources.md#52-biodiversité-et-eau-fictif",
+          "quantified": true,
+          "magnitude": "30 % surface terrestre et maritime",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "50 % SAU en bio d'ici 2035, 5 Mds €/an conversion",
+          "source_ref": "sources.md#53-transition-agricole-fictif",
+          "quantified": true,
+          "magnitude": "50 % SAU, 5 Mds €/an",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan fret ferroviaire de 15 milliards d'euros sur 10 ans",
+          "source_ref": "sources.md#54-infrastructures-fictif",
+          "quantified": true,
+          "magnitude": "15 Mds €",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Rénovation thermique 100 % modestes, conversion bio 5 Mds/an, fret 15 Mds, EPR : engagements pluriannuels très lourds.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "Chaque poste chiffré mais total excède le plan de 50 Mds €/an."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "100% state funding for low-income home renovations is highly capital intensive."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Retrofits, rail, charging, agroecology, compensation, nationalization, nuclear: very large commitments."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "x15 capacité rénovation, 50 % SAU bio, 8 EPR, fret : capacités industrielles au plafond.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gemini-1.5-pro",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "high",
+              "note": "×15 sur la capacité de rénovation, 50 % SAU bio, 8 EPR, fret ferroviaire."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Requires mobilizing hundreds of thousands of construction workers rapidly."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "high",
+              "note": "Housing retrofits, land-use change, infrastructure works, and electricity assets on overlapping deadlines."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Réorientation PAC et tarif carbone requièrent accord UE. Technologies EPR dépendent de chaînes d'approvisionnement.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "moderate",
+              "note": "PAC et tarif carbone requièrent accord UE. EPR dépendent de chaînes mondiales."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Primarily domestic regulations and subsidies."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "moderate",
+              "note": "Domestic law can start much, but delivery depends on supply chains and EU interaction."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Objectif constitutionnel réversible par révision, mais interdictions, aires protégées et infrastructures (EPR, fret) créent des faits accomplis.",
+          "supported_by": [
+            "claude-opus-4-6",
+            "gpt-5.4-thinking"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-6",
+              "level": "low",
+              "note": "Interdictions et infrastructures créent des faits accomplis."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Infrastructure moratoria can be reversed, but protected areas are harder to undo."
+            },
+            {
+              "model": "gpt-5.4-thinking",
+              "level": "limited",
+              "note": "Some subsidies reversible, but protected areas, upgrades, rail, reactors create durable changes."
+            }
+          ]
+        }
+      },
+      "confidence": 0.84
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "old_to_young",
+    "magnitude_estimate": {
+      "value": "~500 €/personne/an réalloués vers les moins de 25 ans via désindexation partielle des pensions >2 500 € nets",
+      "units": "€/personne/an",
+      "confidence": 0.7,
+      "caveats": "Le chiffre de 500 €/personne/an provient de la seule désindexation. Le transfert net réel est plus large via RBU, PTZ, bail Jeune Actif et cantonnement de la dette Covid sur les 10 % les plus riches. Ce chiffre ne constitue pas une mesure cardinale robuste."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Bénéfice net via le RBU à 750 €/mois et cantonnement de la dette Covid sur les 10 % les plus riches.",
+        "quantified": "RBU : 9 000 €/an"
+      },
+      "housing": {
+        "summary": "PTZ sans apport pour primo-accédants <35 ans, bail Jeune Actif plafonné à -20 % du prix médian.",
+        "quantified": "Loyer plafonné à 80 % du prix médian"
+      },
+      "pension_outlook": {
+        "summary": "Système par points avec ouverture dès 60 ans, 43 annuités pour le taux plein, taux de remplacement net garanti de 65 %.",
+        "quantified": "65 % taux de remplacement net"
+      },
+      "labor_market": {
+        "summary": "RBU, reconversion tous les 10 ans, semaine de 32h, présomption de salariat plateformes. Service civique obligatoire 6 mois.",
+        "quantified": "750 €/mois dès 18 ans"
+      },
+      "environmental_debt": {
+        "summary": "Comptabilité carbone constitutionnelle avec provision automatique. L'objectif -60 % GES réduit le report de dette écologique.",
+        "quantified": "Provision automatique en N+1"
+      },
+      "narrative_summary": "Pour un·e Français·e de 25 ans en 2027, le programme opère un transfert net en sa faveur : RBU, logement facilité, reconversion garantie, retraite par points dès 60 ans et réduction de la dette écologique. En contrepartie, 6 mois de service civique et transition vers des emplois verts."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Désindexation partielle des pensions >2 500 € nets. Contribution de 1 % sur le capital des 10 % les plus riches pour cantonnement dette Covid.",
+        "quantified": "Seuil de désindexation : 2 500 € nets/mois"
+      },
+      "pension": {
+        "summary": "Les retraités actuels ne sont pas concernés par le système par points. La désindexation partielle au-dessus de 2 500 € est la seule mesure directe.",
+        "quantified": "Seuil : 2 500 € nets mensuels"
+      },
+      "healthcare": {
+        "summary": "Budget hospitalier +5 % réel. Légalisation aide à mourir. Pas de plan dépendance spécifique.",
+        "quantified": "+5 % réel budget hospitalier"
+      },
+      "narrative_summary": "Effets mixtes : amélioration des soins (+5 % budget), mais désindexation des pensions >2 500 € nets et contribution sur le capital des 10 % les plus riches. Absence de plan dépendance."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Passage au système par points pour les nouveaux entrants ; désindexation partielle des pensions >2 500 € ; minimum contributif à 1 200 €.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Transition technique. Désindexation >2 500 € commence. Effets principalement sur nouveaux entrants.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 0,
+                "note": "Transition technique, effets principalement sur les nouveaux entrants."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": -1,
+                "note": "De-indexation of pensions >€2,500 reduces real income for upper quintile."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Pension floor rises to €1,200 net and desindexation shifts transfer growth."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Minimum contributif à 1 200 € bénéficie aux primo-retraités. Premiers départs anticipés à 60 ans.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Minimum contributif à 1 200 € pour carrière complète SMIC. Premiers départs à 60 ans."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Minimum contributory pension reaches €1,200 net for full careers."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Effects persist if points accrual and equilibrium age remain in force."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Système par points en régime. Taux de remplacement de 65 % pour les 25 ans de 2027.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Système en régime, taux de remplacement 65 %."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Guaranteed 65% replacement rate stabilizes long-term expectations."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "65% replacement-rate commitment remains positive if fiscally maintained."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Cantonnement dette Covid sur 40 ans. Règle d'or verte plafonne le déficit d'investissement à 2,5 % PIB. Stabilisation visée à 110 % PIB.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Cantonnement s'active mais déficit d'investissement autorisé et engagements majeurs de dépenses. Stabilisation visée 110 % PIB d'ici 2032.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 0,
+                "note": "Cantonnement mais déficit d'investissement autorisé ajoute de la dette. Stabilisation visée 110 % PIB."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": -2,
+                "note": "Debt rises to ~110% GDP to finance €50B/yr green investments."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 0,
+                "note": "Green deficits and major spending offset debt ring-fencing in the short run."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Si la trajectoire 110 % PIB est atteinte, le stock se stabilise. Cantonnement Covid produit ses effets.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Trajectoire 110 % PIB atteinte, cantonnement Covid produit ses effets."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Targeted stabilization of debt at 110% GDP."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "If debt stabilizes near 110% and 40-year amortization holds, pressure eases."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Cantonnement Covid à mi-parcours. Investissements verts commencent à générer des retours.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Cantonnement Covid à mi-parcours, retours des investissements verts."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Carbon accounting rules force N+1 repayment of ecological deficits."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Long-horizon benefit depends on durability of ring-fenced debt service."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Objectif constitutionnel -60 % GES d'ici 2035, comptabilité carbone en loi de finances, provision automatique.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [
+              2,
+              2
+            ],
+            "note": "Phase d'accélération : rénovation obligatoire F/G, interdiction vols <4h, moratoire autoroutier, lancement EPR.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 2,
+                "note": "Rénovation F/G, interdiction vols, moratoire autoroutier, lancement 8 EPR."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Bans on neonics, short flights, mandatory F/G renovations."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 2,
+                "note": "Mandatory retrofits, flight restrictions, carbon budgeting, protected areas."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              2,
+              3
+            ],
+            "note": "Objectif -60 % GES atteint. 50 % SAU bio. Premiers EPR en service. Effets cumulés des rénovations.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 2,
+                "note": "Premiers EPR en service, 50 % SAU bio, effets cumulés rénovations."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 3,
+                "note": "-60% GHG target reached by 2035; 50% organic agriculture."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 3,
+                "note": "This horizon captures 2035 emissions target, 50% organic, cumulative infrastructure effects."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              2,
+              2
+            ],
+            "note": "Régime de croisière post-objectif 2035. 8 EPR en service. Comptabilité carbone contraint les budgets.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 2,
+                "note": "Régime croisière post-2035, 8 EPR en service."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "New EPR fleet online alongside offshore wind."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 2,
+                "note": "Lower locked-in emissions and infrastructure stock persist."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Budget hospitalier +5 % réel, obligation service médical 3 ans, légalisation aide à mourir.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Hausse immédiate budget hospitalier +5 % réel. Premiers médecins en service obligatoire.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Hausse immédiate du budget hospitalier et premiers médecins en service obligatoire."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "+5% hospital budget and mandatory rural placement."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Hospital budgets rise 5% above inflation, new doctors in deserts."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Effets cumulatifs du service médical sur la couverture des déserts. Stabilisation effectifs paramédicaux.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Effets cumulatifs du service obligatoire, stabilisation paramédicaux."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Full geographic coverage as initial cohorts complete 3-year mandates."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Staffing retention and retrofit policies reduce cold-home exposure."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Pas de mesure structurelle de long terme au-delà du budget et du service. Pas de plan dépendance.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 0,
+                "note": "Pas de mesures de long terme au-delà du budget et service. Pas de plan dépendance."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "System adjusted to regional management."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Long-run health gains plausible through lower emissions and better housing stock."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Revalorisation enseignants +15 %, classes à 20 élèves, module IA et esprit critique.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Revalorisation immédiate +15 %. Déploiement progressif du plafond 20 élèves. Introduction module IA.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Revalorisation 15 %, déploiement progressif 20 élèves, module IA."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Immediate 15% pay bump and class sizes capped at 20."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 2,
+                "note": "Teacher pay rises 15%, classes cap at 20, free meals and supplies."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Plein effet des classes à 20. Cohortes du module IA entrent sur le marché du travail.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Plein effet classes 20, cohortes module IA sur le marché."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "AI modules integrated across secondary curriculum."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Learning effects persist if smaller classes and teacher retention funded."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Effets de long terme sur le capital humain. Pas de réforme structurelle de l'enseignement supérieur.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Effets de long terme, pas de réforme de l'enseignement supérieur."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program lacks specific long-horizon educational targets beyond 2030s structures."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Long-run earnings and productivity effects positive but thinly quantified."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "200 000 logements sociaux éco-conçus/an, PTZ <35 ans, bail Jeune Actif à -20 %, gel loyers sous condition rénovation.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "PTZ jeunes, bail Jeune Actif, montée en puissance logements sociaux vers 200 000/an.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Lancement PTZ et bail Jeune Actif, montée en puissance construction."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Rent freezes and zero-down PTZ for under-35s."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 2,
+                "note": "200,000 social units/year, PTZ for under-35, youth rents capped 20% below median."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              2,
+              2
+            ],
+            "note": "Effet cumulé : 600 000 à 1 million de logements sociaux. Gel loyers + rénovation améliorent le parc.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 2,
+                "note": "600 000 à 1 million logements sociaux. Gel loyers + rénovation."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Cumulation of 200,000 eco-social homes per year."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 2,
+                "note": "Social construction persists and renovated stock expands."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Stock accru. Effet sur les prix dépend de la poursuite du rythme après le mandat.",
+            "supported_by": [
+              "claude-opus-4-6",
+              "gemini-1.5-pro",
+              "gpt-5.4-thinking"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-6",
+                "score": 1,
+                "note": "Stock considérablement accru, effet prix conditionnel."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Housing stock price-capped under Jeune Actif leases."
+              },
+              {
+                "model": "gpt-5.4-thinking",
+                "score": 1,
+                "note": "Long-run gains persist through higher efficient-housing stock."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ],
+        "row_dissenters": []
+      }
+    ],
+    "reasoning": "Les trois modèles s'accordent sur la direction old_to_young, portée par la désindexation des pensions >2 500 €, le RBU, le PTZ jeunes, le bail Jeune Actif, et le cantonnement de la dette Covid. L'estimation de 500 €/personne/an est citée par les trois modèles mais provient des sources du programme, sans vérification indépendante. La comptabilité carbone constitutionnelle est identifiée comme mécanisme anti-report de dette écologique.",
+    "source_refs": [
+      "sources.md#61-transferts-nets-entre-cohortes-fictif",
+      "sources.md#62-service-de-la-dette-fictif",
+      "sources.md#63-accès-au-logement-des-moins-de-35-ans-fictif",
+      "sources.md#64-retraite-pour-une-française-de-25-ans-aujourdhui-fictif",
+      "sources.md#65-dette-environnementale-fictif"
+    ],
+    "confidence": 0.75,
+    "agreement": {
+      "direction_consensus": true,
+      "magnitude_consensus": "interval",
+      "dissenting_views": []
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Sans intervention programmatique, la France poursuit une trajectoire de dette croissante (>110 % PIB), de retard sur les objectifs climat, de tensions logement, de vieillissement pesant sur les retraites, et d'érosion de la confiance institutionnelle.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal: passage à un modèle d'investissement public massif en transition verte",
+      "social_demographic: universalisation du filet social",
+      "institutional_democratic: transformation du modèle de gouvernance",
+      "environmental_long_term: accélération radicale de la trajectoire climat",
+      "intergenerational: inversion de la direction des transferts nets"
+    ],
+    "dimensions_unchanged": [
+      "security_sovereignty: budget défense maintenu, dissuasion nucléaire préservée — le pivot OTAN→UE ne change pas fondamentalement le niveau de protection"
+    ],
+    "reasoning": "Le programme change la trajectoire sur l'ensemble des dimensions. La direction est 'mixed' car les améliorations environnementales et intergénérationnelles sont contrebalancées par des risques budgétaires (financement non bouclé), d'exécution (multiplication des chantiers), et de stabilité institutionnelle (proportionnelle, suppression départements). Deux modèles sur trois codent 'mixed', un modèle (GPT) code 'improvement' en mettant l'accent sur les mécanismes explicites de changement.",
+    "confidence": 0.75,
+    "supported_by": [
+      "claude-opus-4-6",
+      "gemini-1.5-pro",
+      "gpt-5.4-thinking"
+    ],
+    "dissenters": [
+      "gpt-5.4-thinking"
+    ]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Financement agrégé : écart non résolu entre recettes nouvelles et dépenses totales",
+      "why_unsolved": "Le programme identifie ~23 Mds €/an de recettes nouvelles pour un investissement de 50 Mds €/an et un RBU dont le coût brut excède 150 Mds €/an. Pas de tableau de bord unifié.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#11-finances-publiques-fictif",
+        "sources.md#sources-internes-au-programme-fictif"
+      ],
+      "supported_by": [
+        "claude-opus-4-6",
+        "gemini-1.5-pro",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Prise en charge de la dépendance des personnes âgées (5e risque)",
+      "why_unsolved": "Le vieillissement démographique rend le financement de la dépendance incontournable. Le programme ne propose aucune mesure structurelle dédiée.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-6",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Pipelines opérationnels de recrutement pour les services publics élargis",
+      "why_unsolved": "Le programme étend les services à forte intensité de personnel (enseignants, soignants, crèches, police, BTP) sans détailler les filières de recrutement.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gemini-1.5-pro",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Adaptation au changement climatique (vs atténuation)",
+      "why_unsolved": "Le programme est centré sur l'atténuation. L'adaptation des infrastructures aux effets climatiques inévitables n'est pas traitée.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-6",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Main-d'œuvre nucléaire spécialisée pour 8 EPR",
+      "why_unsolved": "Le programme lance immédiatement 8 EPR sans stratégie de formation pour les ingénieurs et soudeurs nécessaires.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gemini-1.5-pro"
+      ],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Fuite des capitaux et rétrécissement de l'assiette fiscale",
+      "trigger": "ISF-C, fiscalité confiscatoire à 90 % sur successions, plafonnement 1/20, nationalisation énergie provoquent exode des sièges sociaux et grandes fortunes.",
+      "probability": 0.45,
+      "severity": 0.75,
+      "reasoning": "L'expérience de l'ISF français (supprimé 2018) montre des flux de capitaux. L'ISF-C est plus ciblé mais la fiscalité confiscatoire ajoute des motifs de délocalisation. Identifié par les trois modèles.",
+      "supported_by": [
+        "claude-opus-4-6",
+        "gemini-1.5-pro",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Blocage institutionnel par incapacité à réunir les révisions constitutionnelles",
+      "trigger": "Le Congrès ne réunit pas les 3/5 pour le septennat, le RIC, la comptabilité carbone constitutionnelle. Le programme perd ses leviers contraignants.",
+      "probability": 0.55,
+      "severity": 0.65,
+      "reasoning": "Les sénateurs bloqueraient probablement la suppression des départements et le RIC. Identifié par les trois modèles.",
+      "supported_by": [
+        "claude-opus-4-6",
+        "gemini-1.5-pro",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Sous-performance macroéconomique ouvrant un déficit de financement",
+      "trigger": "Croissance <1,2 % et chômage >5 % tandis que les engagements de dépenses sont déjà actifs.",
+      "probability": 0.42,
+      "severity": 0.85,
+      "reasoning": "La cohérence fiscale repose sur des hypothèses macro optimistes. Dépenses front-loaded, recettes back-loaded.",
+      "supported_by": [
+        "claude-opus-4-6",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Crise d'approvisionnement durant la transition énergétique",
+      "trigger": "Interdiction GNL + retards EPR créent un déficit de production électrique aux heures de pointe.",
+      "probability": 0.4,
+      "severity": 0.75,
+      "reasoning": "France importatrice nette en 2022 lors d'arrêts réacteurs. Interdiction GNL réduit les options. EPR Flamanville : 12 ans de retard.",
+      "supported_by": [
+        "claude-opus-4-6",
+        "gpt-5.4-thinking"
+      ],
+      "dissenters": []
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "economic_fiscal.grade.B",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "environmental_long_term.grade.A",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "security_sovereignty.grade.B",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "intergenerational.direction.old_to_young",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "counterfactual.trajectory_changed",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "risk.budgetary.high",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      },
+      {
+        "claim_id": "ecological_positioning.high",
+        "models": [
+          "claude-opus-4-6",
+          "gemini-1.5-pro",
+          "gpt-5.4-thinking"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "social_demographic.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-6",
+            "position": "B — financement non consolidé"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "A — portée directe des mesures"
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "position": "B — pipelines de recrutement non détaillés"
+          }
+        ]
+      },
+      {
+        "claim_id": "institutional_democratic.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-6",
+            "position": "B — risque de gouvernabilité"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "A — portée des réformes"
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "position": "B — risques d'exécution constitutionnelle"
+          }
+        ]
+      },
+      {
+        "claim_id": "positioning.economic.score",
+        "positions": [
+          {
+            "model": "claude-opus-4-6",
+            "position": "-3"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "-4"
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "position": "-3"
+          }
+        ]
+      },
+      {
+        "claim_id": "counterfactual.direction_of_change",
+        "positions": [
+          {
+            "model": "claude-opus-4-6",
+            "position": "mixed"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "mixed"
+          },
+          {
+            "model": "gpt-5.4-thinking",
+            "position": "improvement"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "claude-opus-4-6": "complete",
+      "gemini-1.5-pro": "complete",
+      "gpt-5.4-thinking": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          -4,
+          -3
+        ],
+        "modal": -3,
+        "dissent_count": 1
+      },
+      "social_cultural": {
+        "interval": [
+          -3,
+          -2
+        ],
+        "modal": -3,
+        "dissent_count": 1
+      },
+      "sovereignty": {
+        "interval": [
+          -1,
+          1
+        ],
+        "modal": 1,
+        "dissent_count": 1
+      },
+      "institutional": {
+        "interval": [
+          1,
+          2
+        ],
+        "modal": 1,
+        "dissent_count": 1
+      },
+      "ecological": {
+        "interval": [
+          3,
+          4
+        ],
+        "modal": 4,
+        "dissent_count": 1
+      }
+    }
+  },
+  "coverage_warning": false,
+  "flagged_for_review": [
+    {
+      "claim": "Gemini uses candidate_id 'omega-synthetique' and version_date '2026-04-20' instead of 'test-omega' and '2027-11-01'",
+      "claimed_by": [
+        "gemini-1.5-pro"
+      ],
+      "issue": "Metadata mismatch: Gemini's raw output uses different candidate_id and version_date than the canonical values",
+      "suggested_action": "Verify that the Gemini analysis was run against the correct sources. The content appears consistent with the same program, so this may be a metadata error during manual ingestion.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-20T05:25:33.080Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "GPT codes counterfactual direction as 'improvement' while Claude and Gemini code 'mixed'",
+      "claimed_by": [
+        "gpt-5.4-thinking"
+      ],
+      "issue": "Dissent on counterfactual direction: GPT emphasizes explicit mechanisms of change, while Claude and Gemini weight downside risks more heavily",
+      "suggested_action": "Review whether 'mixed' or 'improvement' better captures the aggregate view. Aggregation uses 'mixed' (2/3 majority) but the dissent is preserved in the counterfactual block.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-20T05:25:36.824Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "Magnitude estimate of ~500 €/person/year intergenerational transfer",
+      "claimed_by": [
+        "claude-opus-4-6",
+        "gemini-1.5-pro",
+        "gpt-5.4-thinking"
+      ],
+      "issue": "All three models cite the program's own figure without independent verification. The actual transfer depends on demographic cohort sizes and pension distribution.",
+      "suggested_action": "Flag for reviewer: this figure should be treated as program-claimed, not independently validated.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-20T05:25:37.875Z",
+      "reviewer_id": "benoit"
+    }
+  ]
+}

@@ -22,7 +22,7 @@
         "provider": "manual",
         "exact_version": "gpt-5.4-thinking-standard",
         "temperature": 0,
-        "run_at": "2026-04-19T09:35:18.083Z",
+        "run_at": "2026-04-20T04:41:19.464Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
@@ -48,15 +48,15 @@
     "prompt_version": "1.1",
     "aggregator_model": {
       "provider": "copilot",
-      "exact_version": "claude-opus-4-1",
-      "run_at": "2026-04-19T10:05:40.918Z",
+      "exact_version": "claude-opus-4-6",
+      "run_at": "2026-04-20T05:24:40.859Z",
       "execution_mode": "copilot-agent",
       "attested_by": "copilot-aggregator",
-      "attested_model_version": "claude-opus-4-1",
+      "attested_model_version": "claude-opus-4-6",
       "provider_metadata_available": false
     },
     "human_review_completed": true,
     "reviewer": "benoit",
-    "reviewed_at": "2026-04-19T10:06:02.989Z"
+    "reviewed_at": "2026-04-20T05:25:37.884Z"
   }
 }

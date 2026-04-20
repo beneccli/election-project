@@ -32,3 +32,9 @@ archival).
 
 ## Flagged item resolutions
 
+
+## Flagged item resolutions
+
+- **approved** — Gemini uses candidate_id 'omega-synthetique' and version_date '2026-04-20' instead of 'test-omega' and '2027-11-01' (reviewer: benoit, at: 2026-04-20T05:25:33.080Z)
+- **approved** — GPT codes counterfactual direction as 'improvement' while Claude and Gemini code 'mixed' (reviewer: benoit, at: 2026-04-20T05:25:36.824Z)
+- **approved** — Magnitude estimate of ~500 €/person/year intergenerational transfer (reviewer: benoit, at: 2026-04-20T05:25:37.875Z)
