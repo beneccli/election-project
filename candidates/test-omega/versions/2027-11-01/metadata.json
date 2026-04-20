@@ -1,11 +1,11 @@
 {
   "candidate_id": "test-omega",
   "version_date": "2027-11-01",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "analysis": {
     "prompt_file": "prompts/analyze-candidate.md",
-    "prompt_sha256": "6838918439fd1b3b711af245ffd40c5813b729cdd2db7880856b854edc1f29b1",
-    "prompt_version": "0.1",
+    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
+    "prompt_version": "1.1",
     "models": {
       "gemini-manual": {
         "provider": "manual",
@@ -44,8 +44,8 @@
   },
   "aggregation": {
     "prompt_file": "prompts/aggregate-analyses.md",
-    "prompt_sha256": "61157e4e8f22590dca831b248d030349a65c2aa3404cc71a829a9e01135e0153",
-    "prompt_version": "0.1",
+    "prompt_sha256": "732ab4ca06b3c3e68fb7a1e07d954b9cb720c2df26eb1aa2f8c2030ec613429b",
+    "prompt_version": "1.1",
     "aggregator_model": {
       "provider": "copilot",
       "exact_version": "claude-opus-4-1",

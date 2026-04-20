@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "candidate_id": "omega-synthetique",
   "version_date": "2026-04-19",
   "model": {
@@ -8,7 +8,7 @@
   },
   "run_metadata": {
     "run_at": "2026-04-19T09:20:00Z",
-    "prompt_sha256": "6838918439fd1b3b711af245ffd40c5813b729cdd2db7880856b854edc1f29b1",
+    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
     "temperature": 0
   },
   "summary": "The program proposes a highly interventionist, decentralized, and ecologically-driven state model. It combines massive wealth redistribution via a Universal Basic Income and green investments with strict carbon accounting, funded through heavy capital taxation and structural shifts in the energy and labor markets.",
@@ -85,6 +85,7 @@
   "dimensions": {
     "economic_fiscal": {
       "grade": "C",
+      "headline": "Plan de 50 Mds €/an et ISF-C compatibles avec l'objectif 3 %, mais exécution exposée au risque d'aléa de mise en œuvre.",
       "summary": "Proposes massive structural changes combining high taxation on capital and fossil fuels with extensive universal benefits, resting on optimistic macroeconomic assumptions.",
       "problems_addressed": [
         {
@@ -141,10 +142,45 @@
           "magnitude": "€50bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Trajectoire atteignable si la croissance qualitative se matérialise; sinon dérive probable.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-reindustrialisation-fictif"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Déploiement de la nationalisation électrique requiert 3-5 ans de transition opérationnelle.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-reindustrialisation-fictif"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Exposition aux prix mondiaux des matières premières pour la relocalisation.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-reindustrialisation-fictif"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "RBU et encadrement 1:20 ajustables via la loi de finances.",
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-reindustrialisation-fictif"
+          ]
+        }
+      },
       "confidence": 0.7
     },
     "social_demographic": {
       "grade": "B",
+      "headline": "Universalisation du RBU et réforme santé publique; exécution dépendante de la refonte administrative CAF.",
       "summary": "Aims to drastically reduce inequality and improve social cohesion through universal income, enhanced public services, and strict wealth capping.",
       "problems_addressed": [
         {
@@ -200,10 +236,45 @@
           "magnitude": "+15%"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Soutenable à condition de concentrer la suppression d'aides annoncée sur 15 Mds €.",
+          "source_refs": [
+            "sources.md#21-sante-fictif",
+            "sources.md#24-inegalites-fictif"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Refonte des systèmes CAF/impôts sur le revenu requiert une fenêtre de 2-3 ans.",
+          "source_refs": [
+            "sources.md#21-sante-fictif",
+            "sources.md#24-inegalites-fictif"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Aucune dépendance supra-nationale structurante.",
+          "source_refs": [
+            "sources.md#21-sante-fictif",
+            "sources.md#24-inegalites-fictif"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les paramètres du RBU (montant, âge d'entrée) sont ajustables par loi annuelle.",
+          "source_refs": [
+            "sources.md#21-sante-fictif",
+            "sources.md#24-inegalites-fictif"
+          ]
+        }
+      },
       "confidence": 0.8
     },
     "security_sovereignty": {
       "grade": "B",
+      "headline": "Régularisation sur critère d'emploi et réorientation stratégique OTAN; mise en œuvre administrative lourde.",
       "summary": "Shifts security focus toward proximity and justice efficiency, while reorienting defense toward cyber capabilities and strategic economic protectionism.",
       "problems_addressed": [
         {
@@ -259,10 +330,45 @@
           "magnitude": "8 reactors"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Coût additionnel défense compensé partiellement par réallocation OTAN.",
+          "source_refs": [
+            "sources.md#32-immigration-fictif",
+            "sources.md#33-defense-fictif"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Régularisation automatique requiert un système de vérification des fiches de paie à grande échelle.",
+          "source_refs": [
+            "sources.md#32-immigration-fictif",
+            "sources.md#33-defense-fictif"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Coopération intégrée avec partenaires européens indispensable.",
+          "source_refs": [
+            "sources.md#32-immigration-fictif",
+            "sources.md#33-defense-fictif"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les décisions OTAN restent négociables de gouvernement à gouvernement.",
+          "source_refs": [
+            "sources.md#32-immigration-fictif",
+            "sources.md#33-defense-fictif"
+          ]
+        }
+      },
       "confidence": 0.75
     },
     "institutional_democratic": {
       "grade": "B",
+      "headline": "Décentralisation et proportionnelle; risque de fragmentation parlementaire en cas d'absence de prime majoritaire.",
       "summary": "Proposes a radical decentralization of state power and funding, coupled with direct democracy mechanisms and proportional representation.",
       "problems_addressed": [
         {
@@ -313,10 +419,45 @@
           "magnitude": "30% of national budget"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Transferts vers collectivités à iso-enveloppe.",
+          "source_refs": [
+            "sources.md#43-decentralisation-fictif",
+            "sources.md#42-referendum-et-systeme-electoral-fictif"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Loi organique proportionnelle exécutable en un an; RIC nécessite référendum.",
+          "source_refs": [
+            "sources.md#43-decentralisation-fictif",
+            "sources.md#42-referendum-et-systeme-electoral-fictif"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Pas de dépendance extérieure.",
+          "source_refs": [
+            "sources.md#43-decentralisation-fictif",
+            "sources.md#42-referendum-et-systeme-electoral-fictif"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Un RIC gravé dans la Constitution difficilement supprimable ensuite.",
+          "source_refs": [
+            "sources.md#43-decentralisation-fictif",
+            "sources.md#42-referendum-et-systeme-electoral-fictif"
+          ]
+        }
+      },
       "confidence": 0.8
     },
     "environmental_long_term": {
       "grade": "A",
+      "headline": "Objectif de décarbonation ambitieux; pilotage dépendant de l'adoption par la filière industrielle.",
       "summary": "Comprehensive, coercive environmental framework integrating strict constitutional carbon limits, major infrastructure shifts, and chemical bans.",
       "problems_addressed": [
         {
@@ -372,6 +513,40 @@
           "magnitude": "€15bn"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Soutenable sous scénario taxe carbone 100 €/t CO2.",
+          "source_refs": [
+            "sources.md#51-climat-et-transition-fictif",
+            "sources.md#34-souverainete-energetique-fictif"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Le calendrier 2035 suppose une cadence jamais atteinte historiquement.",
+          "source_refs": [
+            "sources.md#51-climat-et-transition-fictif",
+            "sources.md#34-souverainete-energetique-fictif"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance forte aux métaux critiques et à la chaîne européenne de production.",
+          "source_refs": [
+            "sources.md#51-climat-et-transition-fictif",
+            "sources.md#34-souverainete-energetique-fictif"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Investissements d'infrastructure peu réversibles une fois engagés.",
+          "source_refs": [
+            "sources.md#51-climat-et-transition-fictif",
+            "sources.md#34-souverainete-energetique-fictif"
+          ]
+        }
+      },
       "confidence": 0.85
     }
   },
@@ -421,6 +596,167 @@
       },
       "narrative_summary": "Net negative financial impact for higher-income retirees utilized as a funding mechanism, but neutral for low-to-medium income pensioners."
     },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Indexation maintenue sur les prix et départ à 62 ans; taux de remplacement érodé pour les cohortes jeunes sur long horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Indexation prix maintenue, effet cohorte non perceptible.",
+            "source_refs": [
+              "sources.md#31-retraites-et-transferts-fictif"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Érosion progressive liée à la démographie.",
+            "source_refs": [
+              "sources.md#31-retraites-et-transferts-fictif"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -2,
+            "note": "Indexation prix sans indexation salariale pénalise les jeunes cohortes.",
+            "source_refs": [
+              "sources.md#31-retraites-et-transferts-fictif"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Trajectoire publique tendue sur 2027-2030; retour sous 3 % de déficit dépend d'une croissance qualitative à 1,2 %.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Besoin de financement du plan 50 Mds € pèse initialement.",
+            "source_refs": [
+              "sources.md#11-finances-publiques-fictif"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Trajectoire décrite compatible avec un retour à 105 % PIB.",
+            "source_refs": [
+              "sources.md#11-finances-publiques-fictif"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Pas d'écart significatif avec scénario de base.",
+            "source_refs": [
+              "sources.md#11-finances-publiques-fictif"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Nationalisation électrique et plan 50 Mds €/an accélèrent la décarbonation; pleine dépendance à la filière européenne.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Mobilisation industrielle amorcée.",
+            "source_refs": [
+              "sources.md#51-climat-et-transition-fictif",
+              "sources.md#34-souverainete-energetique-fictif"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Capacités nucléaires et renouvelables opérationnelles.",
+            "source_refs": [
+              "sources.md#51-climat-et-transition-fictif",
+              "sources.md#34-souverainete-energetique-fictif"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Objectif -55 % GES en ligne pour 2040 sous conditions.",
+            "source_refs": [
+              "sources.md#51-climat-et-transition-fictif",
+              "sources.md#34-souverainete-energetique-fictif"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Refonte CAF et légalisation de l'aide à mourir cadrée; tension démographique sur la demande hospitalière en 2038-2047.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Déploiement du congé parental paritaire améliore la santé périnatale.",
+            "source_refs": [
+              "sources.md#21-sante-fictif"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Investissements santé corrélés au plan 50 Mds €.",
+            "source_refs": [
+              "sources.md#21-sante-fictif"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Bénéfices de long terme du renforcement de la prévention.",
+            "source_refs": [
+              "sources.md#21-sante-fictif"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Programme peu étoffé sur l'éducation; levier de formation indirect via plan industriel.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Pas de réforme structurelle annoncée.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Besoin d'adéquation emploi-formation; dispositif non spécifié.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Non adressé dans sources.md.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Encadrement des loyers et plan de construction décrit mais à intensité moyenne; effet redistribution local.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Calendrier de construction non détaillé.",
+            "source_refs": [
+              "sources.md#22-logement-fictif"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Bénéfices cumulatifs du plan logement.",
+            "source_refs": [
+              "sources.md#22-logement-fictif"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Effet cumulatif positif si l'offre suit la demande.",
+            "source_refs": [
+              "sources.md#22-logement-fictif"
+            ]
+          }
+        }
+      }
+    ],
     "reasoning": "The program explicitly states a rebalancing of the social pact to decrease pro-senior transfers and heavily tax capital/wealth to fund youth integration, housing, and ecological transition.",
     "source_refs": [
       "sources.md#61-transferts-nets-entre-cohortes-fictif",
