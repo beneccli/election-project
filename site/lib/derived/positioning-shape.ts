@@ -13,6 +13,9 @@ export interface RadarAxisShape {
    */
   radarValue: number;
   hasDissent: boolean;
+  /** Number of models whose score differs from the modal — surfaced in
+   * the per-axis hover tooltip. See docs/specs/website/visual-components.md §4.1. */
+  dissentCount: number;
 }
 
 export interface RadarShape {
@@ -35,6 +38,7 @@ export function deriveRadarShape(
         modal: axis.modal_score,
         radarValue,
         hasDissent: axis.dissent.length > 0,
+        dissentCount: axis.dissent.length,
       };
     }),
   };

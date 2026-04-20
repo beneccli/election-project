@@ -54,8 +54,8 @@ Format: `M_<FeatureCluster>`
 
 | Milestone | Status | Description |
 |-----------|--------|-------------|
-| M_WebsiteCore | � In progress | Next.js (App Router + static export), candidate page, build-time data loading |
-| M_VisualComponents | 📋 Planned (spike needed) | Radar chart, intergenerational split, risk heatmap, trajectory chart |
+| M_WebsiteCore | ✅ Done | Next.js (App Router + static export), candidate page, build-time data loading |
+| M_VisualComponents | � In Progress | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
 | M_Transparency | 📋 Planned (spike needed) | Transparency drawer — raw outputs, prompts, sources exposed |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
@@ -311,14 +311,35 @@ Format: `M_<FeatureCluster>`
 
 ### M_VisualComponents
 
-**Goal:** The signature visual components that make the site screenshot-worthy: 5-axis positioning radar, intergenerational split panel, risk heatmap, trajectory chart.
+**Goal:** The signature visual components that make the site screenshot-worthy: 5-axis positioning radar, intergenerational split panel, per-risk table, counterfactual direction signal.
 
 **Depends on:** M_WebsiteCore
 
+**Status:** 🚧 In Progress. Spike `0070` active (2026-04-20); implementation tasks `0071`–`0074` in `tasks/backlog/M_VisualComponents/`. Most of the milestone already shipped during M_WebsiteCore and its polish pass; remaining work is hover-interaction depth and mobile fallback.
+
 **Spike produces:**
-- `docs/specs/website/visual-components.md`
-- Component specs (props, states, accessibility)
-- Backlog tasks per component
+- `docs/specs/website/visual-components.md` promoted Draft → **Stable** (v1.1) — reconciled with implementation
+- Backlog tasks `0071`–`0074`
+
+**Already shipped under M_WebsiteCore (documented in v1.1 spec):**
+- `<PositioningRadar>`, `<AxisAgreementBars>`, `<PositioningLegend>`
+- `<IntergenSplitPanel>`, `<RiskHeatmap>` (per-risk expandable table — deliberate divergence from the 2D-scatter draft)
+- `<DimensionTile>`, `<ProblemsColumns>`, `<CounterfactualBlock>`
+- `<Tooltip>`, `<ConfidenceDots>`, `<GradeBadge>`
+
+**Key design decisions (spike `0070`):**
+- **No charting library in v1.** Pure SVG + DOM is sufficient for every visual currently in scope.
+- **`<RiskHeatmap>` is a per-risk expandable table, not a 2D scatter.** Rationale: a scatter invites composing probability × severity into a single cardinal score — exactly what we refuse for positioning. Both axes are reported independently as `ConfidenceDots`.
+- **`<CounterfactualBlock>`** is the qualitative stand-in for a trajectory chart: direction + confidence + changed dimensions, using only data that exists.
+- **`<TrajectoryChart>` is explicitly deferred.** The current aggregated schema has no year-by-year trajectory values, and fabricating them (or interpolating) would violate transparency. Future work likely lives in a new milestone provisionally called `M_TrajectoryData` — a schema + prompt extension, not a visual change.
+- **`<SourceRef>` and `<TransparencyDrawer>`** are owned by M_Transparency. Components that have `source_refs` (IntergenSplitPanel, ProblemsColumns) display them as plain text in v1 and become drawer anchors under M_Transparency.
+
+**Scope boundary (what this milestone does NOT cover):**
+- `TrajectoryChart` and any time-series visual (→ future `M_TrajectoryData`)
+- `SourceRef` / `TransparencyDrawer` / raw-output viewer (→ M_Transparency)
+- Landing-page and comparison-page visuals (→ M_Landing, M_Comparison)
+- Print stylesheet, full WCAG audit (→ M_Accessibility)
+- Animation choreography beyond simple CSS transitions
 
 ---
 

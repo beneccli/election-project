@@ -1,5 +1,6 @@
 // See docs/specs/website/nextjs-architecture.md §4.3
-// Pure-SVG static radar. Server component.
+// See docs/specs/website/visual-components.md §4.1
+// Pure-SVG static radar + DOM overlay for per-axis hover tooltips.
 //
 // EDITORIAL: `radarValue` is a SHAPE input only — never surfaced as a
 // numeric score to the reader. See positioning-shape.ts.
@@ -7,6 +8,7 @@ import type { RadarShape } from "@/lib/derived/positioning-shape";
 import { AXES } from "@/lib/anchors";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
+import { Tooltip } from "./Tooltip";
 
 const SIZE = 280;
 const CX = SIZE / 2;
@@ -48,8 +50,20 @@ export function PositioningRadar({
     .map((ax, i) => `${axisLabels[i]}: ${ax.interval[0]} à ${ax.interval[1]}${ax.hasDissent ? " (désaccord)" : ""}`)
     .join(". ");
 
+  // Pre-compute label coordinates — reused for label text AND for
+  // overlay hit-areas.
+  const labelCoords = shape.axes.map((_, i) => {
+    const lr = R + 22;
+    const a = angle(i, n);
+    return {
+      x: CX + lr * Math.cos(a),
+      y: CY + lr * Math.sin(a),
+    };
+  });
+
   return (
-    <svg
+    <div className="relative" style={{ width: SIZE, height: SIZE }}>
+      <svg
       width={SIZE}
       height={SIZE}
       viewBox={`0 0 ${SIZE} ${SIZE}`}
@@ -99,10 +113,8 @@ export function PositioningRadar({
       />
       {/* Axis labels + dissent badges */}
       {shape.axes.map((ax, i) => {
-        const lr = R + 22;
+        const { x: lx, y: ly } = labelCoords[i];
         const a = angle(i, n);
-        const lx = CX + lr * Math.cos(a);
-        const ly = CY + lr * Math.sin(a);
         const ta =
           Math.abs(Math.cos(a)) < 0.1 ? "middle" : lx < CX ? "end" : "start";
         return (
@@ -139,5 +151,79 @@ export function PositioningRadar({
       })}
       <circle cx={CX} cy={CY} r={2.5} fill="var(--rule)" />
     </svg>
+      {/* DOM overlay — one hit-area per axis carries hover + focus.
+          Positioned at the axis label with a 24×24 (minimum) touch target.
+          The SVG is decorative for pointer users; interaction lives here. */}
+      {shape.axes.map((ax, i) => {
+        const { x: lx, y: ly } = labelCoords[i];
+        const a = angle(i, n);
+        // Let the tooltip escape away from the radar body: axes in the
+        // upper half open upward, lower half open downward.
+        const tooltipSide: "top" | "bottom" = ly < CY ? "top" : "bottom";
+        // Align the hit-area horizontally with the label based on anchor.
+        const anchor =
+          Math.abs(Math.cos(a)) < 0.1
+            ? "middle"
+            : lx < CX
+              ? "end"
+              : "start";
+        const HIT_W = 72;
+        const HIT_H = 28;
+        const left =
+          anchor === "middle"
+            ? lx - HIT_W / 2
+            : anchor === "end"
+              ? lx - HIT_W + 4
+              : lx - 4;
+        const top = ly - HIT_H / 2 + 4;
+        return (
+          <Tooltip
+            key={`hit-${ax.key}`}
+            as="button"
+            side={tooltipSide}
+            className="!absolute cursor-help rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            style={{
+              left,
+              top,
+              width: HIT_W,
+              height: HIT_H,
+              background: "transparent",
+              border: "none",
+              padding: 0,
+            }}
+            content={
+              <div className="space-y-0.5">
+                <div className="text-[11px] font-semibold uppercase tracking-wider">
+                  {axisLabels[i]}
+                </div>
+                <div>
+                  Intervalle de consensus : {formatSigned(ax.interval[0])} à{" "}
+                  {formatSigned(ax.interval[1])}
+                </div>
+                {ax.modal !== null ? (
+                  <div>Valeur modale : {formatSigned(ax.modal)}</div>
+                ) : (
+                  <div>Valeur modale : non résolue (milieu d&apos;intervalle)</div>
+                )}
+                <div>
+                  {ax.hasDissent
+                    ? `Désaccord : ${ax.dissentCount} modèle${ax.dissentCount > 1 ? "s" : ""}`
+                    : "Consensus"}
+                </div>
+              </div>
+            }
+          >
+            <span
+              aria-label={`${axisLabels[i]}: intervalle ${formatSigned(ax.interval[0])} à ${formatSigned(ax.interval[1])}${ax.hasDissent ? `, désaccord ${ax.dissentCount} modèles` : ", consensus"}`}
+              className="block h-full w-full"
+            />
+          </Tooltip>
+        );
+      })}
+    </div>
   );
+}
+
+function formatSigned(n: number): string {
+  return n > 0 ? `+${n}` : `${n}`;
 }
