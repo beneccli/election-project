@@ -33,7 +33,7 @@ specs/
 └── website/            # Site structure and components
     ├── structure.md                # Page architecture                        [Stable]
     ├── nextjs-architecture.md      # Next.js package, loader, derivations     [Stable]
-    ├── visual-components.md        # Signature charts/widgets                 [Draft]
+    ├── visual-components.md        # Signature charts/widgets                 [Stable]
     └── transparency.md             # Transparency drawer                      [Draft]
 ```
 
