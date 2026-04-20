@@ -63,6 +63,24 @@ export function IntergenSection({
           {ig.reasoning}
         </p>
       ) : null}
+
+      {ig.source_refs.length > 0 ? (
+        <div className="mt-4">
+          <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
+            Sources ({ig.source_refs.length})
+          </div>
+          <ul className="m-0 flex flex-wrap list-none gap-1 p-0">
+            {ig.source_refs.map((ref, i) => (
+              <li
+                key={`${ref}-${i}`}
+                className="inline-flex items-center rounded-sm border border-rule-light bg-bg px-1.5 py-[2px] font-mono text-[10px] text-text-tertiary"
+              >
+                {ref}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </section>
   );
 }

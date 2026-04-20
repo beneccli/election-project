@@ -171,18 +171,24 @@ column on mobile.
 **Data.** `aggregated.json > intergenerational`:
 - `impact_on_25yo_in_2027 > {fiscal, housing, pension_outlook, labor_market, environmental_debt, narrative_summary}`
 - `impact_on_65yo_in_2027 > {fiscal, pension, healthcare, narrative_summary}`
-- Each cell: `{quantified_finding?, qualitative_description, reasoning, source_refs, confidence}`
-- Top-level `confidence`
+- Each cell: `{summary, quantified}` where `quantified` may be `null`.
+  Per-cell `reasoning` / `source_refs` do **not** exist on the cell —
+  they live at the block level (`intergenerational.reasoning`,
+  `intergenerational.source_refs`).
+- Top-level `confidence`, `magnitude_estimate`, `net_transfer_direction`,
+  `reasoning`, `source_refs`.
 
 **Required behavior.**
-- Every cell shows: sub-dimension label, `ConfidenceDots` (cell-level
-  confidence), quantified finding or qualitative description.
-- Both columns padded to equal row count; empty rows render "Non
-  quantifié" in the tertiary text color. Neither column is ever hidden.
-- **Per-cell hover** opens a `<Tooltip>` showing the full `reasoning` and
-  the raw `source_refs` strings (e.g. `REF:social:42`). Tasks `0072`.
-  - Source-ref strings are shown as plain text for now; navigation into
-    `sources.md` is implemented by M_Transparency's drawer.
+- Every cell shows: sub-dimension label, `ConfidenceDots` (block-level
+  confidence, since per-cell confidence is not carried by the schema),
+  quantified value (or "Non quantifié"), and `summary`. Cells are not
+  hover-wrapped — all their content is visible.
+- Both columns padded to equal row count; empty rows render as
+  invisible spacers. Neither column is ever hidden.
+- Top-level `source_refs` must be surfaced by the owning section
+  (`IntergenSection`) as a plain-text pill list, under the
+  `intergenerational.reasoning` paragraph. Navigation into `sources.md`
+  is M_Transparency's responsibility.
 - Narrative summary at the bottom of each column.
 
 **Editorial rules (enforced by design review, not code).**
