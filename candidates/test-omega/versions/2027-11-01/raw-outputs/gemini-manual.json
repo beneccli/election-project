@@ -1,272 +1,277 @@
 {
   "schema_version": "1.1",
   "candidate_id": "omega-synthetique",
-  "version_date": "2026-04-19",
+  "version_date": "2026-04-20",
   "model": {
     "provider": "google",
     "version": "gemini-1.5-pro"
   },
   "run_metadata": {
-    "run_at": "2026-04-19T09:20:00Z",
+    "run_at": "2026-04-20T12:15:27Z",
     "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
     "temperature": 0
   },
-  "summary": "The program proposes a highly interventionist, decentralized, and ecologically-driven state model. It combines massive wealth redistribution via a Universal Basic Income and green investments with strict carbon accounting, funded through heavy capital taxation and structural shifts in the energy and labor markets.",
+  "summary": "The Omega Synthétique program proposes a state-led ecological transition funded by heavy wealth and carbon taxation, alongside a massive decentralization of political power to regions. It pairs a universal basic income and reduced working hours with protectionist trade policies and targeted public investments in green industry and nuclear energy.",
   "positioning": {
     "economic": {
       "score": -4,
-      "anchor_comparison": "Similar to Mélenchon 2022 in interventionism, utilizing nationalizations and structural labor market interventions, but integrates techno-centric growth assumptions.",
+      "anchor_comparison": "Similar to Mélenchon LFI 2022 in state intervention and taxation, but with explicit emphasis on nuclear and green industrial policy.",
       "evidence": [
         {
           "quote": "Nationalisation complète du parc de production électrique pour l'isoler des logiques de marché de court terme",
-          "source_ref": "sources.md#34-souverainete-energetique-fictif"
+          "source_ref": "sources.md#3.4 Souveraineté énergétique (fictif)"
         },
         {
           "quote": "Instauration d'un Revenu de Base Unifié de 750 €/mois dès 18 ans",
-          "source_ref": "sources.md#24-inegalites-fictif"
+          "source_ref": "sources.md#2.4 Inégalités (fictif)"
         }
       ],
       "confidence": 0.9,
-      "reasoning": "The combination of UBI, state-directed industrial policy, energy nationalization, and a 32-hour work week represents a profound expansion of state economic control and wealth redistribution."
+      "reasoning": "Explicit nationalizations, universal basic income without conditions, 32-hour workweek, and 90% marginal inheritance tax over €10M indicate a highly interventionist economic stance."
     },
     "social_cultural": {
       "score": -3,
-      "anchor_comparison": "Aligns with the progressive pole represented by EELV 2022 and LFI, emphasizing unconditional welfare and individual rights.",
+      "anchor_comparison": "Aligns with EELV 2022 on societal issues, including end-of-life legalization and youth enfranchisement.",
       "evidence": [
         {
-          "quote": "Légalisation encadrée et remboursement de l'assistance médicale à mourir (fin de vie)",
-          "source_ref": "sources.md#21-sante-fictif"
-        }
-      ],
-      "confidence": 0.8,
-      "reasoning": "Measures such as legalizing assisted dying, instituting unconditional basic income, and enforcing shared parental leave are strong progressive markers."
-    },
-    "sovereignty": {
-      "score": 0,
-      "anchor_comparison": "A hybrid approach: incorporates nationalist elements (NATO withdrawal, protectionist tariffs) alongside deep EU-federalist proposals (majority voting).",
-      "evidence": [
-        {
-          "quote": "Demande formelle de suppression de la règle de l'unanimité au Conseil européen pour les questions de fiscalité... en faveur du vote à la majorité qualifiée.",
-          "source_ref": "sources.md#44-relation-a-lue-fictif"
+          "quote": "Légalisation encadrée et remboursement de l'assistance médicale à mourir",
+          "source_ref": "sources.md#2.1 Santé (fictif)"
         },
         {
-          "quote": "sortie progressive et coordonnée du commandement intégré de l'OTAN d'ici 2035.",
-          "source_ref": "sources.md#33-defense-fictif"
+          "quote": "Régularisation automatique des travailleurs sans papiers justifiant d'un an de fiches de paie",
+          "source_ref": "sources.md#3.2 Immigration (fictif)"
         }
       ],
       "confidence": 0.8,
-      "reasoning": "The program balances federalist institutional reforms at the EU level with strict national security and trade autonomy measures, resulting in a neutral net score on the sovereignty axis."
+      "reasoning": "Measures explicitly expand individual social rights and immigration regularizations, characteristic of the progressive anchor."
+    },
+    "sovereignty": {
+      "score": 1,
+      "anchor_comparison": "Mixed: protectionist and military independence aligns with LR/RN, but EU qualified majority voting aligns with Macron 2017.",
+      "evidence": [
+        {
+          "quote": "sortie progressive et coordonnée du commandement intégré de l'OTAN d'ici 2035",
+          "source_ref": "sources.md#3.3 Défense (fictif)"
+        },
+        {
+          "quote": "Demande formelle de suppression de la règle de l'unanimité au Conseil européen",
+          "source_ref": "sources.md#4.4 Relation à l'UE (fictif)"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "The program blends external protectionism (carbon tariffs, NATO exit) with internal EU integration (qualified majority voting, European Strategic Command)."
     },
     "institutional": {
       "score": 2,
-      "anchor_comparison": "Shares populist/direct-democracy elements with LFI and RN (RIC, PR) but combines them with massive decentralization uncommon in standard Jacobin populism.",
+      "anchor_comparison": "Matches LFI referendum framing with the introduction of RIC and blank vote invalidation.",
       "evidence": [
         {
           "quote": "Instauration du Référendum d'Initiative Citoyenne (RIC) abrogatoire et législatif",
-          "source_ref": "sources.md#42-referendum-et-systeme-electoral-fictif"
+          "source_ref": "sources.md#4.2 Référendum et système électoral (fictif)"
         }
       ],
       "confidence": 0.8,
-      "reasoning": "Proportional representation, lowering the voting age, abolishing the 49.3, and instituting the RIC constitute a clear break from the centralized, executive-heavy Fifth Republic baseline."
+      "reasoning": "Proposals fundamentally alter representative dynamics by allowing immediate popular overrides (RIC) and invalidating elections based on blank votes."
     },
     "ecological": {
       "score": 4,
-      "anchor_comparison": "Matches the ambition of EELV 2022 but diverges technologically by heavily incorporating next-generation nuclear power.",
+      "anchor_comparison": "Matches EELV 2022 anchor with stringent bans and constitutional emissions targets.",
       "evidence": [
         {
           "quote": "Fixation dans la Constitution d'un objectif contraignant de baisse de 60 % des émissions de gaz à effet de serre d'ici 2035",
-          "source_ref": "sources.md#51-climat-fictif"
+          "source_ref": "sources.md#5.1 Climat (fictif)"
         }
       ],
       "confidence": 0.9,
-      "reasoning": "Constitutional climate targets, massive green investment, carbon-based trade tariffs, and mandatory housing renovations place this program firmly at the ecologist pole."
+      "reasoning": "Measures prioritize ecological metrics above standard economic activity, enforcing binding carbon constraints and bans on intensive agriculture/short flights."
     }
   },
   "dimensions": {
     "economic_fiscal": {
-      "grade": "C",
-      "headline": "Plan de 50 Mds €/an et ISF-C compatibles avec l'objectif 3 %, mais exécution exposée au risque d'aléa de mise en œuvre.",
-      "summary": "Proposes massive structural changes combining high taxation on capital and fossil fuels with extensive universal benefits, resting on optimistic macroeconomic assumptions.",
+      "grade": "B",
+      "headline": "Objectif de 110% de dette d'ici 2032 via une hausse massive de la fiscalité ciblée sur les hauts patrimoines et le carbone.",
+      "summary": "The program offsets large structural spending increases (UBI, 32-hour week, €50B green investments) with aggressive new revenue streams from a climate wealth tax and 90% top-tier inheritance tax. It relies on a 1.2% growth assumption fueled by public investment.",
       "problems_addressed": [
         {
-          "problem": "Unproductive corporate subsidies",
-          "approach": "Elimination of inefficient business aid to generate budget savings.",
-          "strength": 0.7,
+          "problem": "Unfunded ecological transition",
+          "approach": "€50B annual investment plan backed by a 'green golden rule' permitting targeted deficit.",
+          "strength": 0.8,
           "source_refs": [
-            "sources.md#11-finances-publiques-fictif"
+            "sources.md#1.1 Finances publiques (fictif)",
+            "sources.md#1.3 Croissance et réindustrialisation (fictif)"
           ],
-          "reasoning": "Identifies a specific funding source with a quantified target to offset new expenditures."
+          "reasoning": "Directly allocates a quantified capital envelope with a dedicated financing mechanism (ISF-C and corporate aid reallocation)."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Capital flight risk",
-          "significance": "A 90% marginal inheritance tax and wealth tax on a single national jurisdiction historically triggers tax base erosion, which is not modeled in the program's revenues.",
+          "problem": "Capital flight and revenue shortfall",
+          "significance": "A 90% inheritance tax and highly progressive wealth tax frequently yield less revenue than static models project.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Labor market participation incentives",
-          "mechanism": "Combining a €750 unconditional UBI with a 32-hour work week at maintained pay may compress labor supply in critical non-automated sectors.",
+          "problem": "Labor supply constraints",
+          "mechanism": "Implementation of a 32-hour workweek without corresponding productivity increases will mechanically reduce total labor volume.",
           "severity": 0.7,
           "source_refs": [
-            "sources.md#14-marche-du-travail-fictif",
-            "sources.md#24-inegalites-fictif"
+            "sources.md#1.4 Marché du travail (fictif)"
           ],
-          "reasoning": "Unconditional income mathematically increases the reservation wage, potentially tightening labor constraints in low-margin industries."
+          "reasoning": "Reduced hours combined with UBI disincentives may exacerbate shortages in sectors not covered by the targeted immigration visas."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Revenue shortfall for UBI and investments",
-          "probability": 0.6,
-          "severity": 0.9,
-          "reasoning": "Funding €50bn/year investments plus UBI strictly from wealth taxes and structural employment gains assumes no friction and high tax compliance.",
+          "risk": "EU treaty violation on budget deficits",
+          "probability": 0.8,
+          "severity": 0.6,
+          "reasoning": "The program explicitly states it will negotiate exclusions from the 3% rule, which requires unanimous EU consent that is highly unlikely.",
           "source_refs": [
-            "sources.md#sources-internes-au-programme-fictif"
+            "sources.md#1.7 Cadre budgétaire européen (fictif)"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Revue drastique des aides inefficaces aux entreprises",
-          "source_ref": "sources.md#11-finances-publiques-fictif",
+          "measure": "Reallocation of €15B/year in corporate aid",
+          "source_ref": "sources.md#1.1 Finances publiques (fictif)",
           "quantified": true,
           "magnitude": "€15bn/year"
         },
         {
-          "measure": "Grand plan d'investissement pour la relocalisation",
-          "source_ref": "sources.md#13-croissance-et-reindustrialisation-fictif",
+          "measure": "Creation of an ISF-Climat wealth tax",
+          "source_ref": "sources.md#1.1 Finances publiques (fictif)",
           "quantified": true,
-          "magnitude": "€50bn/year"
+          "magnitude": "€8bn/year"
         }
       ],
       "risk_profile": {
         "budgetary": {
-          "level": "moderate",
-          "note": "Trajectoire atteignable si la croissance qualitative se matérialise; sinon dérive probable.",
+          "level": "high",
+          "note": "Revenues rely heavily on highly mobile tax bases; UBI creates a rigid structural expenditure.",
           "source_refs": [
-            "sources.md#11-finances-publiques-fictif",
-            "sources.md#13-croissance-et-reindustrialisation-fictif"
+            "sources.md#2.4 Inégalités (fictif)"
           ]
         },
         "implementation": {
-          "level": "high",
-          "note": "Déploiement de la nationalisation électrique requiert 3-5 ans de transition opérationnelle.",
+          "level": "moderate",
+          "note": "Points-based pension and 32-hour week require complex tripartite negotiations.",
           "source_refs": [
-            "sources.md#11-finances-publiques-fictif",
-            "sources.md#13-croissance-et-reindustrialisation-fictif"
+            "sources.md#1.4 Marché du travail (fictif)",
+            "sources.md#1.5 Retraites (fictif)"
           ]
         },
         "dependency": {
-          "level": "moderate",
-          "note": "Exposition aux prix mondiaux des matières premières pour la relocalisation.",
+          "level": "high",
+          "note": "Carbon tariffs and deficit exemptions require agreement from EU partners.",
           "source_refs": [
-            "sources.md#11-finances-publiques-fictif",
-            "sources.md#13-croissance-et-reindustrialisation-fictif"
+            "sources.md#1.7 Cadre budgétaire européen (fictif)"
           ]
         },
         "reversibility": {
           "level": "moderate",
-          "note": "RBU et encadrement 1:20 ajustables via la loi de finances.",
+          "note": "Tax rates and business aids can be modified by subsequent finance laws.",
           "source_refs": [
-            "sources.md#11-finances-publiques-fictif",
-            "sources.md#13-croissance-et-reindustrialisation-fictif"
+            "sources.md#1.1 Finances publiques (fictif)"
           ]
         }
       },
-      "confidence": 0.7
+      "confidence": 0.75
     },
     "social_demographic": {
-      "grade": "B",
-      "headline": "Universalisation du RBU et réforme santé publique; exécution dépendante de la refonte administrative CAF.",
-      "summary": "Aims to drastically reduce inequality and improve social cohesion through universal income, enhanced public services, and strict wealth capping.",
+      "grade": "A",
+      "headline": "Refonte des filets de sécurité avec un RBU à 750€ et contrainte d'installation pour les médecins.",
+      "summary": "Introduces universal baseline entitlements, notably a €750/month Universal Basic Income at age 18, and standardizes primary class sizes to 20. It enforces coercive measures to address systemic imbalances, such as mandatory medical service in underserved areas.",
       "problems_addressed": [
         {
           "problem": "Medical deserts",
-          "approach": "Mandatory 3-year deployment for young doctors in underserved areas.",
-          "strength": 0.8,
+          "approach": "Mandatory 3-year public service for new doctors in under-served areas.",
+          "strength": 0.9,
           "source_refs": [
-            "sources.md#21-sante-fictif"
+            "sources.md#2.1 Santé (fictif)"
           ],
-          "reasoning": "Direct, coercive policy that mathematically guarantees practitioner presence in target zones, though it risks reducing overall medical school enrollments."
+          "reasoning": "Directly forces geographic distribution of medical personnel, overriding market incentives."
+        },
+        {
+          "problem": "Youth poverty",
+          "approach": "Implementation of an unconditional Universal Basic Income from age 18.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#2.4 Inégalités (fictif)"
+          ],
+          "reasoning": "Provides a guaranteed income floor independent of family resources or employment status."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Cost-disease in expanded public services",
-          "significance": "Increasing teacher pay by 15% and capping class sizes at 20 permanently elevates the structural operating cost of the state without corresponding productivity gains.",
+          "problem": "Teacher recruitment pipeline",
+          "significance": "While pay increases by 15%, reducing class sizes to 20 requires a massive influx of new teachers that the program does not plan for.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Inter-generational wealth transfer liquidity",
-          "mechanism": "A 90% confiscatory tax on inheritances above €10M may force the liquidation of family-owned mid-cap businesses.",
-          "severity": 0.6,
+          "problem": "Corporate wage compression",
+          "mechanism": "A 1-to-20 salary cap limits competitive executive compensation, potentially driving corporate headquarters abroad.",
+          "severity": 0.5,
           "source_refs": [
-            "sources.md#24-inegalites-fictif"
+            "sources.md#2.4 Inégalités (fictif)"
           ],
-          "reasoning": "Illiquid assets (businesses, land) cannot easily be divided to pay a 90% tax rate without changing ownership structures."
+          "reasoning": "Strict caps may trigger avoidance via relocation or off-balance-sheet compensation."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Administrative bottleneck in Universal Basic Income rollout",
-          "probability": 0.3,
-          "severity": 0.5,
-          "reasoning": "Replacing RSA and Prime d'Activité requires migrating millions of records without payment disruption.",
+          "risk": "Medical student strikes and brain drain",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Coercive placement historically triggers massive resistance and potential emigration of newly qualified doctors.",
           "source_refs": [
-            "sources.md#24-inegalites-fictif"
+            "sources.md#2.1 Santé (fictif)"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Revenu de Base Unifié",
-          "source_ref": "sources.md#24-inegalites-fictif",
+          "measure": "Universal Basic Income implementation",
+          "source_ref": "sources.md#2.4 Inégalités (fictif)",
           "quantified": true,
-          "magnitude": "€750/month"
+          "magnitude": "750 €/month"
         },
         {
-          "measure": "Revalorisation salariale des enseignants",
-          "source_ref": "sources.md#22-education-fictif",
+          "measure": "Teacher salary increase",
+          "source_ref": "sources.md#2.2 Éducation (fictif)",
           "quantified": true,
-          "magnitude": "+15%"
+          "magnitude": "+15% year one"
         }
       ],
       "risk_profile": {
         "budgetary": {
-          "level": "moderate",
-          "note": "Soutenable à condition de concentrer la suppression d'aides annoncée sur 15 Mds €.",
+          "level": "high",
+          "note": "UBI and class-size reductions represent permanent structural costs.",
           "source_refs": [
-            "sources.md#21-sante-fictif",
-            "sources.md#24-inegalites-fictif"
+            "sources.md#2.4 Inégalités (fictif)",
+            "sources.md#2.2 Éducation (fictif)"
           ]
         },
         "implementation": {
-          "level": "high",
-          "note": "Refonte des systèmes CAF/impôts sur le revenu requiert une fenêtre de 2-3 ans.",
+          "level": "moderate",
+          "note": "Creating 150k creche spots and deploying doctors requires heavy local coordination.",
           "source_refs": [
-            "sources.md#21-sante-fictif",
-            "sources.md#24-inegalites-fictif"
+            "sources.md#2.3 Politique familiale (fictif)"
           ]
         },
         "dependency": {
           "level": "low",
-          "note": "Aucune dépendance supra-nationale structurante.",
-          "source_refs": [
-            "sources.md#21-sante-fictif",
-            "sources.md#24-inegalites-fictif"
-          ]
+          "note": "Largely internal domestic policy.",
+          "source_refs": []
         },
         "reversibility": {
           "level": "moderate",
-          "note": "Les paramètres du RBU (montant, âge d'entrée) sont ajustables par loi annuelle.",
+          "note": "UBI creates strong immediate entitlements that are politically difficult to revoke.",
           "source_refs": [
-            "sources.md#21-sante-fictif",
-            "sources.md#24-inegalites-fictif"
+            "sources.md#2.4 Inégalités (fictif)"
           ]
         }
       },
@@ -274,276 +279,296 @@
     },
     "security_sovereignty": {
       "grade": "B",
-      "headline": "Régularisation sur critère d'emploi et réorientation stratégique OTAN; mise en œuvre administrative lourde.",
-      "summary": "Shifts security focus toward proximity and justice efficiency, while reorienting defense toward cyber capabilities and strategic economic protectionism.",
+      "headline": "Nationalisation électrique et nucléaire, avec un retrait planifié de l'OTAN d'ici 2035.",
+      "summary": "Pairs internal de-escalation (unarmed proximity police, mass regularization) with robust industrial and energy sovereignty (8 new EPRs, strategic reserves). The defense posture remains heavily funded but shifts toward European autonomy over Atlantic integration.",
       "problems_addressed": [
         {
-          "problem": "Judicial backlogs",
-          "approach": "Doubling the justice budget to cap trial delays at six months.",
+          "problem": "Energy intermittency and market volatility",
+          "approach": "Nationalization of the grid and immediate launch of 8 new nuclear reactors.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#3.4 Souveraineté énergétique (fictif)"
+          ],
+          "reasoning": "Removes price formation from marginal gas costs and secures baseload capacity."
+        },
+        {
+          "problem": "Supply chain vulnerabilities",
+          "approach": "Mandatory 6-month national reserves for rare metals and essential medicines.",
           "strength": 0.7,
           "source_refs": [
-            "sources.md#31-securite-interieure-fictif"
+            "sources.md#3.5 Souveraineté alimentaire et industrielle (fictif)"
           ],
-          "reasoning": "Allocates substantial resources to a quantified performance metric."
+          "reasoning": "Provides a physical buffer against global logistics shocks."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Violent crime response",
-          "significance": "Deploying 10,000 unarmed agents does not address the upper spectrum of organized crime or armed violence.",
+          "problem": "Nuclear workforce bottlenecks",
+          "significance": "Building 8 EPRs simultaneously requires a specialized engineering and welding workforce currently lacking in France.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Supply chain flexibility",
-          "mechanism": "Mandating 6 months of reserves for metals/drugs and 40% local fresh produce freezes vast amounts of working capital and restricts adaptive sourcing.",
+          "problem": "Short-term alliance friction",
+          "mechanism": "Announcing a NATO exit by 2035 removes France from near-term integrated planning.",
           "severity": 0.5,
           "source_refs": [
-            "sources.md#35-souverainete-alimentaire-et-industrielle-fictif"
+            "sources.md#3.3 Défense (fictif)"
           ],
-          "reasoning": "Hard quotas on supply chains reduce efficiency and increase consumer costs."
+          "reasoning": "Creates a 8-year lame-duck status within western security architecture."
         }
       ],
       "execution_risks": [
         {
-          "risk": "EU law violation on agricultural shielding",
-          "probability": 0.8,
-          "severity": 0.7,
-          "reasoning": "Unilateral import blocks and strict local quotas violate the EU Single Market framework unless renegotiated.",
+          "risk": "Agricultural trade retaliation",
+          "probability": 0.6,
+          "severity": 0.5,
+          "reasoning": "Implementing unilateral border shields on pesticide-treated imports violates current WTO and EU single-market rules.",
           "source_refs": [
-            "sources.md#35-souverainete-alimentaire-et-industrielle-fictif"
+            "sources.md#3.5 Souveraineté alimentaire et industrielle (fictif)"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Recrutement Police de Proximité",
-          "source_ref": "sources.md#31-securite-interieure-fictif",
+          "measure": "Green industry visa quota",
+          "source_ref": "sources.md#3.2 Immigration (fictif)",
           "quantified": true,
-          "magnitude": "10,000 agents"
+          "magnitude": "50,000/year"
         },
         {
-          "measure": "Construction réacteurs EPR",
-          "source_ref": "sources.md#34-souverainete-energetique-fictif",
+          "measure": "Defense budget floor",
+          "source_ref": "sources.md#3.3 Défense (fictif)",
           "quantified": true,
-          "magnitude": "8 reactors"
+          "magnitude": "2.5% of GDP"
         }
       ],
       "risk_profile": {
         "budgetary": {
           "level": "moderate",
-          "note": "Coût additionnel défense compensé partiellement par réallocation OTAN.",
+          "note": "Nuclear construction carries high historical risk of cost overruns.",
           "source_refs": [
-            "sources.md#32-immigration-fictif",
-            "sources.md#33-defense-fictif"
+            "sources.md#3.4 Souveraineté énergétique (fictif)"
           ]
         },
         "implementation": {
           "level": "high",
-          "note": "Régularisation automatique requiert un système de vérification des fiches de paie à grande échelle.",
+          "note": "Deploying 8 EPRs and nationalizing power generation is highly complex.",
           "source_refs": [
-            "sources.md#32-immigration-fictif",
-            "sources.md#33-defense-fictif"
+            "sources.md#3.4 Souveraineté énergétique (fictif)"
           ]
         },
         "dependency": {
           "level": "moderate",
-          "note": "Coopération intégrée avec partenaires européens indispensable.",
+          "note": "European Strategic Command requires willing EU partners.",
           "source_refs": [
-            "sources.md#32-immigration-fictif",
-            "sources.md#33-defense-fictif"
+            "sources.md#3.3 Défense (fictif)"
           ]
         },
         "reversibility": {
-          "level": "moderate",
-          "note": "Les décisions OTAN restent négociables de gouvernement à gouvernement.",
-          "source_refs": [
-            "sources.md#32-immigration-fictif",
-            "sources.md#33-defense-fictif"
-          ]
-        }
-      },
-      "confidence": 0.75
-    },
-    "institutional_democratic": {
-      "grade": "B",
-      "headline": "Décentralisation et proportionnelle; risque de fragmentation parlementaire en cas d'absence de prime majoritaire.",
-      "summary": "Proposes a radical decentralization of state power and funding, coupled with direct democracy mechanisms and proportional representation.",
-      "problems_addressed": [
-        {
-          "problem": "Over-centralization (Mille-feuille administratif)",
-          "approach": "Suppression of departments and transfer of 30% of the national budget to regions.",
-          "strength": 0.9,
-          "source_refs": [
-            "sources.md#43-decentralisation-fictif"
-          ],
-          "reasoning": "A structural, quantified transfer of financial and regulatory authority directly addresses the core issue."
-        }
-      ],
-      "problems_ignored": [
-        {
-          "problem": "Regional inequality exacerbation",
-          "significance": "Transferring tax authority to regions typically benefits wealthier areas (e.g., Île-de-France) unless a robust horizontal equalization mechanism is detailed, which is absent.",
-          "source_refs": []
-        }
-      ],
-      "problems_worsened": [
-        {
-          "problem": "Executive stability",
-          "mechanism": "Full proportional representation (even with a 15% bonus) combined with automatic RICs lowers the threshold for systemic legislative gridlock.",
-          "severity": 0.6,
-          "source_refs": [
-            "sources.md#41-reforme-institutionnelle-fictif",
-            "sources.md#42-referendum-et-systeme-electoral-fictif"
-          ],
-          "reasoning": "Increases veto points and coalition fragility compared to the current majority system."
-        }
-      ],
-      "execution_risks": [
-        {
-          "risk": "Constitutional reform blockage",
-          "probability": 0.7,
-          "severity": 0.8,
-          "reasoning": "Abolishing departments and the 49.3 requires constitutional amendments, demanding a 3/5ths Congressional majority or a successful referendum.",
-          "source_refs": [
-            "sources.md#41-reforme-institutionnelle-fictif"
-          ]
-        }
-      ],
-      "key_measures": [
-        {
-          "measure": "Transfert de budget aux régions",
-          "source_ref": "sources.md#43-decentralisation-fictif",
-          "quantified": true,
-          "magnitude": "30% of national budget"
-        }
-      ],
-      "risk_profile": {
-        "budgetary": {
           "level": "low",
-          "note": "Transferts vers collectivités à iso-enveloppe.",
+          "note": "Nuclear infrastructure decisions lock in capital for decades.",
           "source_refs": [
-            "sources.md#43-decentralisation-fictif",
-            "sources.md#42-referendum-et-systeme-electoral-fictif"
-          ]
-        },
-        "implementation": {
-          "level": "moderate",
-          "note": "Loi organique proportionnelle exécutable en un an; RIC nécessite référendum.",
-          "source_refs": [
-            "sources.md#43-decentralisation-fictif",
-            "sources.md#42-referendum-et-systeme-electoral-fictif"
-          ]
-        },
-        "dependency": {
-          "level": "low",
-          "note": "Pas de dépendance extérieure.",
-          "source_refs": [
-            "sources.md#43-decentralisation-fictif",
-            "sources.md#42-referendum-et-systeme-electoral-fictif"
-          ]
-        },
-        "reversibility": {
-          "level": "limited",
-          "note": "Un RIC gravé dans la Constitution difficilement supprimable ensuite.",
-          "source_refs": [
-            "sources.md#43-decentralisation-fictif",
-            "sources.md#42-referendum-et-systeme-electoral-fictif"
+            "sources.md#3.4 Souveraineté énergétique (fictif)"
           ]
         }
       },
       "confidence": 0.8
     },
-    "environmental_long_term": {
+    "institutional_democratic": {
       "grade": "A",
-      "headline": "Objectif de décarbonation ambitieux; pilotage dépendant de l'adoption par la filière industrielle.",
-      "summary": "Comprehensive, coercive environmental framework integrating strict constitutional carbon limits, major infrastructure shifts, and chemical bans.",
+      "headline": "Rupture girondine transférant 30% du budget aux régions et proportionnelle intégrale.",
+      "summary": "Proposes a fundamental rewriting of the Fifth Republic, diminishing central executive power through full proportional representation, single presidential terms, and citizen referendums, while transferring massive fiscal control to regional governments.",
       "problems_addressed": [
         {
-          "problem": "Intergenerational climate debt deferral",
-          "approach": "Constitutional carbon accounting requiring immediate financial provisioning for real-world emissions deficits.",
+          "problem": "Executive overreach",
+          "approach": "Abolition of 49.3 (except budget), single 7-year term, and full PR with a 15% stability bonus.",
           "strength": 0.9,
           "source_refs": [
-            "sources.md#65-dette-environnementale-fictif"
+            "sources.md#4.1 Réforme institutionnelle (fictif)"
           ],
-          "reasoning": "Transforms abstract climate goals into hard fiscal constraints on an annual basis."
+          "reasoning": "Directly removes the primary tools of presidential dominance."
+        },
+        {
+          "problem": "Administrative centralization",
+          "approach": "Transferring 30% of the national budget to regions and abolishing departments.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#4.3 Décentralisation (fictif)"
+          ],
+          "reasoning": "Forces massive fiscal and regulatory decentralization."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Yield drop in transition agriculture",
-          "significance": "Transitioning 50% of land to organic and banning key pesticides typically reduces total caloric output per hectare, impacting export balances.",
+          "problem": "Regional capability disparities",
+          "significance": "Transferring health and education to regions may exacerbate service quality differences between wealthy and poorer regions.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Short-term mobility access for low-income rural households",
-          "mechanism": "Halting highway projects and aggressively expanding ultra-fast charging taxes may isolate populations dependent on legacy internal combustion vehicles before rail scales.",
-          "severity": 0.5,
+          "problem": "Legislative gridlock",
+          "mechanism": "Full proportional representation combined with RIC allows constant challenges to parliamentary majorities.",
+          "severity": 0.6,
           "source_refs": [
-            "sources.md#54-infrastructures-fictif"
+            "sources.md#4.1 Réforme institutionnelle (fictif)",
+            "sources.md#4.2 Référendum et système électoral (fictif)"
           ],
-          "reasoning": "Infrastructure shifts take a decade to materialize, leaving a gap in transport utility."
+          "reasoning": "The 15% stability bonus may not prevent fragmented coalitions."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Renovation sector capacity failure",
-          "probability": 0.6,
-          "severity": 0.7,
-          "reasoning": "Mandating global thermal renovation of all F and G properties by 2030 exceeds the current labor force capacity of the French construction sector.",
+          "risk": "Constitutional reform failure",
+          "probability": 0.5,
+          "severity": 0.8,
+          "reasoning": "Requires a 3/5ths majority in Congress or a successful referendum to alter the presidency and voting systems.",
           "source_refs": [
-            "sources.md#51-climat-fictif"
+            "sources.md#4.1 Réforme institutionnelle (fictif)"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Objectif de baisse des émissions de GES d'ici 2035",
-          "source_ref": "sources.md#51-climat-fictif",
+          "measure": "Regional budget share target",
+          "source_ref": "sources.md#4.3 Décentralisation (fictif)",
           "quantified": true,
-          "magnitude": "-60%"
+          "magnitude": "30% of National Budget"
         },
         {
-          "measure": "Plan de relance du fret ferroviaire",
-          "source_ref": "sources.md#54-infrastructures-fictif",
+          "measure": "Consultancy spending cap",
+          "source_ref": "sources.md#4.5 Capacité exécutive de l'État (fictif)",
           "quantified": true,
-          "magnitude": "€15bn"
+          "magnitude": "€50M/year"
         }
       ],
       "risk_profile": {
         "budgetary": {
-          "level": "moderate",
-          "note": "Soutenable sous scénario taxe carbone 100 €/t CO2.",
+          "level": "low",
+          "note": "Institutional changes carry minimal direct fiscal costs.",
           "source_refs": [
-            "sources.md#51-climat-et-transition-fictif",
-            "sources.md#34-souverainete-energetique-fictif"
+            "sources.md#4.1 Réforme institutionnelle (fictif)"
           ]
         },
         "implementation": {
           "level": "high",
-          "note": "Le calendrier 2035 suppose une cadence jamais atteinte historiquement.",
+          "note": "Abolishing departments and moving 50% of central admin out of Paris is administratively massive.",
           "source_refs": [
-            "sources.md#51-climat-et-transition-fictif",
-            "sources.md#34-souverainete-energetique-fictif"
+            "sources.md#4.3 Décentralisation (fictif)",
+            "sources.md#4.5 Capacité exécutive de l'État (fictif)"
           ]
         },
         "dependency": {
-          "level": "high",
-          "note": "Dépendance forte aux métaux critiques et à la chaîne européenne de production.",
-          "source_refs": [
-            "sources.md#51-climat-et-transition-fictif",
-            "sources.md#34-souverainete-energetique-fictif"
-          ]
+          "level": "low",
+          "note": "Purely domestic constitutional matters.",
+          "source_refs": []
         },
         "reversibility": {
-          "level": "low",
-          "note": "Investissements d'infrastructure peu réversibles une fois engagés.",
+          "level": "high",
+          "note": "Future majorities could repeal PR or regional laws if constitutional locks are not secured.",
           "source_refs": [
-            "sources.md#51-climat-et-transition-fictif",
-            "sources.md#34-souverainete-energetique-fictif"
+            "sources.md#4.1 Réforme institutionnelle (fictif)"
+          ]
+        }
+      },
+      "confidence": 0.85
+    },
+    "environmental_long_term": {
+      "grade": "A",
+      "headline": "Objectif contraignant de -60% GES d'ici 2035, avec 50% d'agriculture bio et fin de l'étalement routier.",
+      "summary": "Embeds strict environmental limits into law, banning neonicotinoids and short flights while subsidizing organic conversion and rail infrastructure. It relies heavily on regulatory bans to force market transitions.",
+      "problems_addressed": [
+        {
+          "problem": "Agricultural chemical runoff",
+          "approach": "Total ban on glyphosate and neonicotinoids by 2028 with compensation funds.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#5.2 Biodiversité et eau (fictif)"
+          ],
+          "reasoning": "Sets a hard legal deadline paired with financial mitigation."
+        },
+        {
+          "problem": "Thermal efficiency in housing",
+          "approach": "Mandatory global renovation of F and G rated homes by 2030, 100% funded for modest incomes.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#5.1 Climat (fictif)"
+          ],
+          "reasoning": "Pairs an aggressive mandate with direct state assumption of capital costs."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Yield drops in organic agriculture",
+          "significance": "Transitioning 50% of land to organic by 2035 will mechanically reduce gross agricultural output, impacting export balances.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Rural mobility",
+          "mechanism": "Moratoriums on road infrastructure and progressive water pricing may penalize exurban populations disproportionately.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#5.4 Infrastructures (fictif)",
+            "sources.md#5.2 Biodiversité et eau (fictif)"
+          ],
+          "reasoning": "Alternatives like rail freight do not cover granular rural passenger transport needs."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Construction sector capacity",
+          "probability": 0.8,
+          "severity": 0.6,
+          "reasoning": "Renovating all F/G homes by 2030 exceeds current building sector labor capacity.",
+          "source_refs": [
+            "sources.md#5.1 Climat (fictif)"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Target for organic agricultural land",
+          "source_ref": "sources.md#5.3 Transition agricole (fictif)",
+          "quantified": true,
+          "magnitude": "50% by 2035"
+        },
+        {
+          "measure": "Rail freight investment",
+          "source_ref": "sources.md#5.4 Infrastructures (fictif)",
+          "quantified": true,
+          "magnitude": "€15bn over 10 years"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "100% state funding for low-income home renovations is highly capital intensive.",
+          "source_refs": [
+            "sources.md#5.1 Climat (fictif)"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Requires mobilizing hundreds of thousands of construction workers rapidly.",
+          "source_refs": [
+            "sources.md#5.1 Climat (fictif)"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Primarily domestic regulations and subsidies.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Infrastructure moratoria can be reversed, but protected areas (30%) are harder to undo.",
+          "source_refs": [
+            "sources.md#5.2 Biodiversité et eau (fictif)",
+            "sources.md#5.4 Infrastructures (fictif)"
           ]
         }
       },
@@ -553,270 +578,283 @@
   "intergenerational": {
     "net_transfer_direction": "old_to_young",
     "magnitude_estimate": {
-      "value": "approximately €500/person/year redirected to insertion policies, plus indirect structural benefits",
+      "value": "approximately €500/person/year reallocated to under-25s",
       "units": "€/person/year",
       "confidence": 0.8,
-      "caveats": "Calculation relies on the effective yield of the partial pension de-indexation and Covid debt wealth tax."
+      "caveats": "Calculated via direct extraction from high pensions; relies on inflation remaining stable to preserve real values."
     },
     "impact_on_25yo_in_2027": {
       "fiscal": {
-        "summary": "Major net positive due to Unconditional Basic Income.",
-        "quantified": "+€9,000/year (UBI base)"
+        "summary": "Receives UBI and structural investment; shielded from Covid debt via wealth tax.",
+        "quantified": "+€750/month UBI"
       },
       "housing": {
-        "summary": "Substantial intervention via targeted zero-rate loans and subsidized young-worker leases.",
-        "quantified": "-20% below median rent"
+        "summary": "Direct demand-side subsidies via PTZ without deposit and rent caps.",
+        "quantified": "20% below median rent"
       },
       "pension_outlook": {
-        "summary": "Clear parameters established early, favoring fast labor entry but requiring long careers.",
-        "quantified": "65% replacement rate at 43 years"
+        "summary": "Retirement possible at 60 with a state-guaranteed replacement rate.",
+        "quantified": "65% replacement rate after 43 years"
       },
       "labor_market": {
-        "summary": "Favorable conditions via 32-hour work week and state-funded retraining.",
-        "quantified": null
+        "summary": "Reduced working hours (32h) with maintained salary and state-funded retraining.",
+        "quantified": "32h/week"
       },
       "environmental_debt": {
-        "summary": "Strict protection via constitutional accounting, preventing cost offloading.",
+        "summary": "State legally blocked from deferring carbon repair costs to future budgets.",
         "quantified": null
       },
-      "narrative_summary": "Highly favorable distributional impact, heavily subsidizing the entry phase into adult economic life via direct transfers and structural housing supports."
+      "narrative_summary": "Net highly positive material transfer to the under-35 cohort across housing, income, and carbon accounting."
     },
     "impact_on_65yo_in_2027": {
       "fiscal": {
-        "summary": "Increased burden on wealthy retirees via 1% Covid debt contribution on top decile.",
-        "quantified": null
+        "summary": "Top 10% bear the entire Covid debt burden via a 1% capital levy.",
+        "quantified": "-1% capital for top 10%"
       },
       "pension": {
-        "summary": "Purchasing power erosion for upper-middle and high pensions due to partial de-indexation.",
-        "quantified": "De-indexation above €2,500/mo"
+        "summary": "Pensions above €2,500 partially de-indexed from inflation.",
+        "quantified": null
       },
       "healthcare": {
-        "summary": "Enhanced funding for paramedical staff and new end-of-life rights.",
-        "quantified": "+5% hospital budget"
+        "summary": "Access improved in rural areas via mandatory medical service deployments.",
+        "quantified": null
       },
-      "narrative_summary": "Net negative financial impact for higher-income retirees utilized as a funding mechanism, but neutral for low-to-medium income pensioners."
+      "narrative_summary": "Net negative transfer for affluent retirees, neutral-to-positive for modest retirees requiring healthcare access."
     },
     "horizon_matrix": [
       {
         "row": "pensions",
-        "dimension_note": "Indexation maintenue sur les prix et départ à 62 ans; taux de remplacement érodé pour les cohortes jeunes sur long horizon.",
+        "dimension_note": "Rebalancing of indexation immediately affects higher incomes, while structural points reform phases in.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Indexation prix maintenue, effet cohorte non perceptible.",
+            "impact_score": -1,
+            "note": "De-indexation of pensions >€2,500 reduces real income for upper quintile.",
             "source_refs": [
-              "sources.md#31-retraites-et-transferts-fictif"
+              "sources.md#6.1 Transferts nets entre cohortes (fictif)"
             ]
           },
           "h_2031_2037": {
-            "impact_score": -1,
-            "note": "Érosion progressive liée à la démographie.",
+            "impact_score": 1,
+            "note": "Minimum contributory pension reaches €1,200 net for full careers.",
             "source_refs": [
-              "sources.md#31-retraites-et-transferts-fictif"
+              "sources.md#1.5 Retraites (fictif)"
             ]
           },
           "h_2038_2047": {
-            "impact_score": -2,
-            "note": "Indexation prix sans indexation salariale pénalise les jeunes cohortes.",
+            "impact_score": 1,
+            "note": "Guaranteed 65% replacement rate stabilizes long-term expectations for younger cohorts.",
             "source_refs": [
-              "sources.md#31-retraites-et-transferts-fictif"
+              "sources.md#6.4 Retraite pour un·e Français·e de 25 ans aujourd'hui (fictif)"
             ]
           }
         }
       },
       {
         "row": "public_debt",
-        "dimension_note": "Trajectoire publique tendue sur 2027-2030; retour sous 3 % de déficit dépend d'une croissance qualitative à 1,2 %.",
+        "dimension_note": "Debt increases near-term to fund transition, stabilizing via wealth taxation.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": -1,
-            "note": "Besoin de financement du plan 50 Mds € pèse initialement.",
+            "impact_score": -2,
+            "note": "Debt rises to ~110% GDP to finance €50B/yr green investments.",
             "source_refs": [
-              "sources.md#11-finances-publiques-fictif"
+              "sources.md#1.1 Finances publiques (fictif)"
             ]
           },
           "h_2031_2037": {
             "impact_score": 0,
-            "note": "Trajectoire décrite compatible avec un retour à 105 % PIB.",
+            "note": "Targeted stabilization of debt at 110% GDP.",
             "source_refs": [
-              "sources.md#11-finances-publiques-fictif"
+              "sources.md#1.1 Finances publiques (fictif)"
             ]
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Pas d'écart significatif avec scénario de base.",
+            "impact_score": 1,
+            "note": "Carbon accounting rules force N+1 repayment of ecological deficits.",
             "source_refs": [
-              "sources.md#11-finances-publiques-fictif"
+              "sources.md#6.5 Dette environnementale (fictif)"
             ]
           }
         }
       },
       {
         "row": "climate",
-        "dimension_note": "Nationalisation électrique et plan 50 Mds €/an accélèrent la décarbonation; pleine dépendance à la filière européenne.",
+        "dimension_note": "Strict constitutional constraints and bans front-load ecological transitions.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 1,
-            "note": "Mobilisation industrielle amorcée.",
+            "impact_score": 2,
+            "note": "Bans on neonics, short flights, and mandatory F/G renovations force immediate shifts.",
             "source_refs": [
-              "sources.md#51-climat-et-transition-fictif",
-              "sources.md#34-souverainete-energetique-fictif"
+              "sources.md#5.1 Climat (fictif)",
+              "sources.md#5.2 Biodiversité et eau (fictif)"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 2,
-            "note": "Capacités nucléaires et renouvelables opérationnelles.",
+            "impact_score": 3,
+            "note": "-60% GHG emissions target reached by 2035; 50% organic agriculture.",
             "source_refs": [
-              "sources.md#51-climat-et-transition-fictif",
-              "sources.md#34-souverainete-energetique-fictif"
+              "sources.md#5.1 Climat (fictif)",
+              "sources.md#5.3 Transition agricole (fictif)"
             ]
           },
           "h_2038_2047": {
             "impact_score": 2,
-            "note": "Objectif -55 % GES en ligne pour 2040 sous conditions.",
+            "note": "New EPR nuclear fleet comes online alongside offshore wind capacity.",
             "source_refs": [
-              "sources.md#51-climat-et-transition-fictif",
-              "sources.md#34-souverainete-energetique-fictif"
+              "sources.md#3.4 Souveraineté énergétique (fictif)"
             ]
           }
         }
       },
       {
         "row": "health",
-        "dimension_note": "Refonte CAF et légalisation de l'aide à mourir cadrée; tension démographique sur la demande hospitalière en 2038-2047.",
+        "dimension_note": "Coercive placement and hospital funding aim to solve access disparities.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 1,
-            "note": "Déploiement du congé parental paritaire améliore la santé périnatale.",
+            "note": "+5% hospital budget and mandatory rural placement for new doctors.",
             "source_refs": [
-              "sources.md#21-sante-fictif"
+              "sources.md#2.1 Santé (fictif)"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 1,
-            "note": "Investissements santé corrélés au plan 50 Mds €.",
+            "impact_score": 2,
+            "note": "Full geographic coverage expected as initial cohorts complete 3-year mandates.",
             "source_refs": [
-              "sources.md#21-sante-fictif"
+              "sources.md#2.1 Santé (fictif)"
             ]
           },
           "h_2038_2047": {
             "impact_score": 1,
-            "note": "Bénéfices de long terme du renforcement de la prévention.",
+            "note": "System structurally adjusted to regional management.",
             "source_refs": [
-              "sources.md#21-sante-fictif"
+              "sources.md#4.3 Décentralisation (fictif)"
             ]
           }
         }
       },
       {
         "row": "education",
-        "dimension_note": "Programme peu étoffé sur l'éducation; levier de formation indirect via plan industriel.",
+        "dimension_note": "Massive near-term salary boosts and structural class-size caps.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Pas de réforme structurelle annoncée.",
-            "source_refs": []
+            "impact_score": 2,
+            "note": "Immediate 15% pay bump for teachers and class sizes capped at 20.",
+            "source_refs": [
+              "sources.md#2.2 Éducation (fictif)"
+            ]
           },
           "h_2031_2037": {
-            "impact_score": 0,
-            "note": "Besoin d'adéquation emploi-formation; dispositif non spécifié.",
-            "source_refs": []
+            "impact_score": 1,
+            "note": "AI modules integrated across secondary curriculum.",
+            "source_refs": [
+              "sources.md#2.2 Éducation (fictif)"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 0,
-            "note": "Non adressé dans sources.md.",
+            "note": "Program lacks specific long-horizon educational targets beyond 2030s structures.",
             "source_refs": []
           }
         }
       },
       {
         "row": "housing",
-        "dimension_note": "Encadrement des loyers et plan de construction décrit mais à intensité moyenne; effet redistribution local.",
+        "dimension_note": "Aggressive interventions to subvert market pricing for youth and penalize vacancy.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Calendrier de construction non détaillé.",
+            "impact_score": 2,
+            "note": "Rent freezes linked to D-ratings and zero-down PTZ for under-35s.",
             "source_refs": [
-              "sources.md#22-logement-fictif"
+              "sources.md#1.6 Logement (fictif)",
+              "sources.md#6.3 Accès au logement des moins de 35 ans (fictif)"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 1,
-            "note": "Bénéfices cumulatifs du plan logement.",
+            "impact_score": 2,
+            "note": "Cumulation of 200,000 eco-social homes built per year.",
             "source_refs": [
-              "sources.md#22-logement-fictif"
+              "sources.md#1.6 Logement (fictif)"
             ]
           },
           "h_2038_2047": {
             "impact_score": 1,
-            "note": "Effet cumulatif positif si l'offre suit la demande.",
+            "note": "Housing stock heavily subsidized and price-capped under 'Jeune Actif' leases.",
             "source_refs": [
-              "sources.md#22-logement-fictif"
+              "sources.md#6.3 Accès au logement des moins de 35 ans (fictif)"
             ]
           }
         }
       }
     ],
-    "reasoning": "The program explicitly states a rebalancing of the social pact to decrease pro-senior transfers and heavily tax capital/wealth to fund youth integration, housing, and ecological transition.",
+    "reasoning": "The program explicitly states a rebalancing of the social pact to decrease pro-senior transfers and fund youth insertion and green capital.",
     "source_refs": [
-      "sources.md#61-transferts-nets-entre-cohortes-fictif",
-      "sources.md#62-service-de-la-dette-fictif",
-      "sources.md#63-acces-au-logement-des-moins-de-35-ans-fictif"
+      "sources.md#6.1 Transferts nets entre cohortes (fictif)",
+      "sources.md#6.2 Service de la dette (fictif)",
+      "sources.md#6.5 Dette environnementale (fictif)"
     ],
     "confidence": 0.85
   },
   "counterfactual": {
-    "status_quo_trajectory": "Continued structural deficits without strict green accounting, centralized governance, and demographic pressure eroding the pension replacement rate.",
+    "status_quo_trajectory": "Emissions reduction pace misses 2035 targets, debt drifts above 110%, wealth inequality slowly compounds, and executive centralization remains high.",
     "does_program_change_trajectory": true,
-    "direction_of_change": "improvement",
+    "direction_of_change": "mixed",
     "dimensions_changed": [
       "economic_fiscal",
-      "environmental_long_term",
-      "institutional_democratic"
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
     ],
     "dimensions_unchanged": [],
-    "reasoning": "The program alters the fundamental mechanisms of the state, changing how debt is accounted for (carbon budget), how governance operates (regionalization), and how wealth is distributed (UBI).",
-    "confidence": 0.8
+    "reasoning": "The program proposes a radical divergence from current baselines across all dimensions, fundamentally altering the constitution, tax base, alliances, and energy generation model.",
+    "confidence": 0.9
   },
   "unsolved_problems": [
     {
-      "problem": "Erosion of the tax base",
-      "why_unsolved": "Program assumes static capital behavior in response to a 90% marginal inheritance tax and severe wealth taxes.",
+      "problem": "Revenue shortfall if wealth relocates",
+      "why_unsolved": "Program relies on static taxation models (90% over 10M, ISF-C) but lacks mechanisms to prevent capital flight before EU harmonized taxes are agreed.",
       "severity_if_unsolved": "high",
       "source_refs": []
     },
     {
-      "problem": "Implementation gap in construction/renovation",
-      "why_unsolved": "Aggressive housing and renovation targets lack a credible pathway for recruiting and training the requisite manual labor force.",
-      "severity_if_unsolved": "medium",
+      "problem": "Nuclear workforce deficit",
+      "why_unsolved": "Declares the immediate launch of 8 EPRs but provides no specific training or pipeline strategy for the specialized engineers and welders required.",
+      "severity_if_unsolved": "high",
       "source_refs": []
     }
   ],
   "downside_scenarios": [
     {
-      "scenario": "Macroeconomic stagflation loop",
-      "trigger": "Growth falls below the 1.2% target while 'green inflation' exceeds the 2.5% target.",
+      "scenario": "Stagflation and capital strike",
+      "trigger": "Wealth taxes and 32-hour week lead to corporate exits and suppressed output, missing the 1.2% growth target.",
       "probability": 0.4,
       "severity": 0.9,
-      "reasoning": "The €50bn investment and €750 UBI require continuous robust revenue. Lower growth combined with high inflation would force a choice between abandoning the green rule or cutting the UBI."
+      "reasoning": "High fixed costs (UBI, investments) without corresponding tax receipts would force either austerity or a sovereign debt crisis."
+    },
+    {
+      "scenario": "Institutional gridlock",
+      "trigger": "Abolition of 49.3 and implementation of full PR prevents the passage of the budget.",
+      "probability": 0.5,
+      "severity": 0.7,
+      "reasoning": "Without majority-forcing mechanisms, a fragmented parliament could repeatedly fail to form coalitions."
     }
   ],
   "adversarial_pass": {
     "weakest_claims": [
       {
-        "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
-        "critique": "Assigning a strength of 0.7 to cutting 'inefficient business aid' takes political rhetoric at face value; identifying €15bn in actual cuts usually proves mathematically difficult.",
-        "alternative_interpretation": "The €15bn figure is a balancing item for the budget rather than an actionable line-item review."
+        "claim_location": "dimensions.economic_fiscal.risk_profile.budgetary",
+        "critique": "Rating budgetary risk as 'high' may under-value the stated reallocation of €15B in corporate aids.",
+        "alternative_interpretation": "If corporate aid cuts are executed swiftly, the near-term deficit might be tightly controlled, making the risk 'moderate'."
       },
       {
-        "claim_location": "dimensions.environmental_long_term.grade",
-        "critique": "Giving an 'A' grade based on ambition ignores the severe execution risks of transitioning 50% of agriculture to organic and renovating all F/G buildings by 2030.",
-        "alternative_interpretation": "The grade reflects ideological coherence rather than technical feasibility."
+        "claim_location": "intergenerational.magnitude_estimate.value",
+        "critique": "A precise estimate of €500/person/year is accepted verbatim from the program without independent verification of demographic cohorts.",
+        "alternative_interpretation": "The actual transfer value depends heavily on the specific distribution of high-pension retirees vs the youth population in 2027."
       }
     ],
-    "potential_bias": "The analysis may lean slightly toward penalizing the program on standard macroeconomic risk (capital flight, labor supply) while being overly credulous regarding the structural feasibility of its environmental accounting mechanisms.",
-    "evidence_gaps": "The program lacks detailed mechanics on how the carbon budget deficit is priced and paid for in 'Year N+1'.",
+    "potential_bias": "The analysis may lean towards fiscal conservatism by inherently framing 32-hour work weeks and UBI primarily as supply constraints and budgetary risks, rather than pure productivity/welfare enhancements.",
+    "evidence_gaps": "The program lacks concrete macroeconomic bridging (how exactly 1.2% growth is achieved mathematically given hour reductions) making the debt trajectory analysis speculative.",
     "confidence_in_critique": 0.8
   },
-  "confidence_self_assessment": 0.75
+  "confidence_self_assessment": 0.8
 }

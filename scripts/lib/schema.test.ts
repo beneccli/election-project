@@ -701,11 +701,18 @@ describe("schema v1.1 analysis output extensions", () => {
     expect(result.success).toBe(false);
   });
 
-  it("analysis_schema_rejects_headline_longer_than_140_chars", () => {
+  it("analysis_schema_accepts_headline_overshoot_up_to_280_chars", () => {
+    // The prompt targets ≤140 chars, but ingest tolerates up to 2×
+    // overshoot so that a 160-char headline from a verbose model does
+    // not reject an otherwise-valid raw output. See schema.ts comment
+    // above RiskProfileCategorySchema.
     const fixture = buildValidAnalysisOutput();
-    fixture.dimensions.economic_fiscal.headline = "a".repeat(141);
-    const result = AnalysisOutputSchema.safeParse(fixture);
-    expect(result.success).toBe(false);
+    fixture.dimensions.economic_fiscal.headline = "a".repeat(280);
+    const okAtBoundary = AnalysisOutputSchema.safeParse(fixture);
+    expect(okAtBoundary.success).toBe(true);
+    fixture.dimensions.economic_fiscal.headline = "a".repeat(281);
+    const failsAboveBoundary = AnalysisOutputSchema.safeParse(fixture);
+    expect(failsAboveBoundary.success).toBe(false);
   });
 
   it("analysis_schema_rejects_missing_risk_profile_category", () => {

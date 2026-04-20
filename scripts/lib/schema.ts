@@ -355,11 +355,18 @@ export const HORIZON_KEYS: ReadonlyArray<HorizonKey> = [
 const ImpactScoreSchema = z.number().int().min(-3).max(3);
 
 // -------- Per-model (analysis-output) risk & horizon cell shapes ----------
+//
+// Length caps on analyst prose fields are deliberately loose: the prompt
+// targets (140 / 160 / 180 / 200 chars) stay in prompts/analyze-candidate.md
+// §10 so the LLM writes toward them, but ingest tolerates ~2× overshoot so
+// that a 160-character headline does not reject an otherwise-valid raw
+// output. The aggregator synthesizes its own tighter prose — see the
+// Aggregated* schemas below.
 
 const RiskProfileCategorySchema = z
   .object({
     level: RiskLevelSchema,
-    note: z.string().min(1).max(180),
+    note: z.string().min(1).max(360),
     source_refs: z.array(SourceRefSchema),
   })
   .strict();
@@ -377,7 +384,7 @@ const RiskProfileSchema = z
 const HorizonCellSchema = z
   .object({
     impact_score: ImpactScoreSchema,
-    note: z.string().min(1).max(160),
+    note: z.string().min(1).max(320),
     source_refs: z.array(SourceRefSchema),
   })
   .strict();
@@ -393,7 +400,7 @@ const HorizonCellsSchema = z
 const HorizonRowSchema = z
   .object({
     row: HorizonRowKeySchema,
-    dimension_note: z.string().min(1).max(200),
+    dimension_note: z.string().min(1).max(400),
     cells: HorizonCellsSchema,
   })
   .strict();
@@ -486,7 +493,7 @@ const KeyMeasureSchema = z
 const DimensionSchema = z
   .object({
     grade: DimensionGradeSchema,
-    headline: z.string().min(1).max(140),
+    headline: z.string().min(1).max(280),
     summary: z.string().min(1),
     problems_addressed: z.array(ProblemAddressedSchema),
     problems_ignored: z.array(ProblemIgnoredSchema),
@@ -794,10 +801,13 @@ const AggregatedGradeSchema = z
 
 // -------- v1.1 aggregated additions: headline, risk_profile, horizon ------
 
+// Per-model headline inside aggregated.json mirrors the analyst cap (280)
+// because it stores each model's raw text verbatim. The synthesized
+// AggregatedHeadlineSchema.text below keeps the tight 140 target.
 const HeadlinePerModelSchema = z
   .object({
     model: ModelIdentifierSchema,
-    text: z.string().min(1).max(140),
+    text: z.string().min(1).max(280),
   })
   .strict();
 
@@ -822,7 +832,7 @@ const RiskProfilePerModelSchema = z
   .object({
     model: ModelIdentifierSchema,
     level: RiskLevelSchema,
-    note: z.string().min(1).max(180),
+    note: z.string().min(1).max(360),
   })
   .strict();
 
@@ -857,7 +867,7 @@ const HorizonCellPerModelSchema = z
   .object({
     model: ModelIdentifierSchema,
     score: ImpactScoreSchema,
-    note: z.string().min(1).max(160),
+    note: z.string().min(1).max(320),
   })
   .strict();
 

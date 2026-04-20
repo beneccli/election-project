@@ -9,13 +9,13 @@
     "models": {
       "gemini-manual": {
         "provider": "manual",
-        "exact_version": "gemini-pro",
+        "exact_version": "gemini-3-pro",
         "temperature": 0,
-        "run_at": "2026-04-19T09:22:06.650Z",
+        "run_at": "2026-04-20T04:19:52.703Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
-        "attested_model_version": "gemini-pro",
+        "attested_model_version": "gemini-3-pro",
         "provider_metadata_available": false
       },
       "gpt-manual": {
@@ -31,13 +31,13 @@
       },
       "claude-opus-4-6": {
         "provider": "copilot",
-        "exact_version": "Claude Opus 4.6 High",
+        "exact_version": "claude opus 4.6 high",
         "temperature": 0,
-        "run_at": "2026-04-19T09:48:47.190Z",
+        "run_at": "2026-04-20T04:29:27.910Z",
         "status": "success",
         "execution_mode": "copilot-agent",
         "attested_by": "benoit",
-        "attested_model_version": "Claude Opus 4.6 High",
+        "attested_model_version": "claude opus 4.6 high",
         "provider_metadata_available": false
       }
     }

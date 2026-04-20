@@ -144,8 +144,8 @@ One entry per dimension cluster from [`dimensions.md`](dimensions.md). Every clu
 **Grade semantics:** grades reflect **coherence + evidence-support** on the dimension's problems. They are **not** ideological verdicts. A program that addresses economic problems through different means than another program can still be graded A if its approach is internally coherent and evidence-supported. The grade enum is `A | B | C | D | F | NOT_ADDRESSED`.
 
 **v1.1 additive fields:**
-- `headline` (≤140 chars) distills the central policy claim in one line, for the candidate-page dimension list. It is **not** a substitute for `summary`. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.1.
-- `risk_profile` is a fixed-shape 4-category ordinal summary (budgetary, implementation, dependency, reversibility) distinct from the free-form `execution_risks[]`. Levels are `low | limited | moderate | high`; they are never composed into a single score. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.2.
+- `headline` (prompt target: ≤140 chars; ingest accepts up to 280 chars to tolerate LLM overshoot) distills the central policy claim in one line, for the candidate-page dimension list. It is **not** a substitute for `summary`. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.1.
+- `risk_profile` is a fixed-shape 4-category ordinal summary (budgetary, implementation, dependency, reversibility) distinct from the free-form `execution_risks[]`. Levels are `low | limited | moderate | high`; they are never composed into a single score. Prompt targets: `note` ≤180 chars, `dimension_note` ≤200 chars, horizon cell `note` ≤160 chars. Ingest accepts 2× those caps (360 / 400 / 320) so that modest overshoot does not reject an otherwise-valid raw output. The aggregator resynthesizes to the tight targets. See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.2.
 
 ---
 
