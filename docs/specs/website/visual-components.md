@@ -1,7 +1,8 @@
 # Visual Components
 
-> **Version:** 1.1
-> **Status:** Stable (promoted from Draft by spike `0070`, 2026-04-20)
+> **Version:** 1.2
+> **Status:** Stable (promoted from Draft by spike `0070`, 2026-04-20;
+> amended by milestone `M_CandidatePagePolish`, 2026-04-20).
 > **Scope:** Signature visual components of the candidate page.
 > **Out of scope:** Source-ref linking, transparency drawer, raw-output
 > viewer (see [`transparency.md`](transparency.md)). Landing and comparison
@@ -62,6 +63,10 @@ This spec covers widgets. Section composition is in
 | `CounterfactualBlock` | within `sections/SyntheseSection.tsx` | `counterfactual` | §4.9 |
 | `ConfidenceDots` | `widgets/ConfidenceDots.tsx` | any `confidence` ∈ [0, 1] | §4.10 |
 | `Tooltip` | `widgets/Tooltip.tsx` | — (infrastructure) | §4.11 |
+| `ConfidenceBar` | `widgets/ConfidenceBar.tsx` | any `confidence` ∈ [0, 1] | §4.12 |
+| `IntergenHorizonTable` | `widgets/IntergenHorizonTable.tsx` | `intergenerational.horizon_matrix` | §4.13 |
+| `RiskSummaryMatrix` | `widgets/RiskSummaryMatrix.tsx` | `dimensions.*.risk_profile` | §4.14 |
+| `Drawer` | `chrome/Drawer.tsx` | — (infrastructure) | §4.15 |
 
 Components out of scope here:
 
@@ -99,6 +104,15 @@ consensus interval `[min, max]`, modal `radarValue` in `[-5, +5]`,
 **Responsive.** Below `sm` breakpoint (<640 px), the radar is replaced by
 a compact vertical list of axes (reuses `AxisAgreementBars`) — avoids
 unreadably small SVG. Task `0074`.
+
+**Per-model overlays (v1.2).** An `InteractivePositioningRadar` wrapper
+(client component) exposes a model-selection control beneath the SVG.
+When a model id is toggled on, its ordinal scores are rendered as an
+additional unfilled polygon stroked with `modelColor(id)` from
+`site/lib/model-color.ts` — the same palette entry used by dissent dots
+in `AxisAgreementBars`. Consensus remains the primary polygon; overlays
+are additive and never hide the consensus fill. See
+[`candidate-page-polish.md`](candidate-page-polish.md) §5.1.
 
 **Never.**
 - Never display a single "average score". Positioning is ordinal.
@@ -243,6 +257,14 @@ dimension header row.
 wrapper; no other mobile treatment is needed because the column widths
 are already content-driven.
 
+**Composition note (v1.2).** In the polished candidate page,
+`RiskHeatmap` is no longer the primary surface of the **Risques**
+section — it is rendered inside a `Drawer` (§4.15) opened by the
+"Voir tous les risques identifiés" button below the
+`RiskSummaryMatrix` (§4.14). The component itself is unchanged; only
+its host changes. See
+[`candidate-page-polish.md`](candidate-page-polish.md) §5.4.
+
 **Never.**
 - Never synthesize a single risk score.
 - Never hide rows with low values; measurement includes "we looked and
@@ -278,6 +300,18 @@ supplementary. Sizes: `sm`, `md`, `lg`.
 ### 4.7 `<DimensionTile>`
 
 **Purpose.** One tile per dimension on the domain scorecard grid.
+
+> **v1.2 status — superseded by list row.** Since
+> `M_CandidatePagePolish`, `DomainesSection` no longer renders a tile
+> grid; each dimension is a full-width list row (button) that toggles an
+> inline deep-dive panel. The composition change is specified in
+> [`candidate-page-polish.md`](candidate-page-polish.md) §5.2. The
+> underlying building blocks described below — `GradeBadge`,
+> `ConfidenceBar` (replacing the per-tile `ConfidenceDots`), and the
+> per-model dissent indicator — are preserved verbatim inside the row.
+> The tile component itself is retained for use by smaller scorecard
+> surfaces (e.g. comparison page, landing preview) that are not part of
+> this polish pass.
 
 **Rendering.** `<button>` element (keyboard + a11y), expands the
 `DimensionDeepDive` panel below the grid. Five tiles, responsive grid
@@ -399,6 +433,193 @@ information, don't wrap — Tooltip implies the hover carries content.
 
 ---
 
+### 4.12 `<ConfidenceBar>`
+
+**Purpose.** Linear, compact restatement of `ConfidenceDots` (§4.10),
+designed to fit inside a dimension row alongside grade + label + dissent
+chip without visual clutter. Shipped with task `0085`.
+
+**Rendering.** Pure DOM `<span role="img">` with a 96×4 px track
+(`bg-rule`) and a `var(--accent)` fill. The inline caption reads
+`N% <label>` (default label: "confiance"). Numeric value always
+round-trips the input percentage.
+
+**Data.** `value: number` in `[0, 1]` (clamped). Optional
+`label?: string`, `showValue?: boolean`.
+
+**Required behavior.**
+- `aria-label` always includes the numeric percentage — the value is
+  the signal, color is reinforcement.
+- Clamping is silent (no warning) — callers are responsible for passing
+  schema-valid inputs.
+- Neutral track (`bg-rule`) so the bar reads correctly in both light and
+  dark themes without palette swaps.
+
+**Editorial rule.** Same as `ConfidenceDots`: never used for
+"agreement" counts; those use the `k/n` pill form instead.
+
+**Never.**
+- Never colorize the fill by thresholds (no red/green at cutoffs). The
+  bar encodes magnitude, not judgment.
+
+---
+
+### 4.13 `<IntergenHorizonTable>`
+
+**Purpose.** Primary visual of the **Impact intergénérationnel** section.
+Shows, for each of six long-horizon domains, the ordinal direction and
+magnitude of the program's effect across three time windows. Replaces
+the `IntergenSplitPanel` as the headline surface; the split panel
+remains as the "Comparaison individuelle" secondary block. Shipped with
+task `0086`.
+
+**Rendering.** Server component. Semantic `<table>` with `<thead>` /
+`<tbody>`, sticky first column (row labels), one row per domain (6),
+three columns per horizon (`2027–2030`, `2031–2037`, `2038–2047`).
+
+**Data.** `aggregated.json > intergenerational.horizon_matrix[]`:
+- `row`: one of `pensions | public_debt | climate | health | education | housing`.
+- `dimension_note: string`.
+- `cells.<horizon_key>`: `{ modal_score: int ∈ [-3, 3] | null,
+  score_interval: [number, number], note: string, supported_by: string[],
+  dissenters?: string[], per_model: Record<modelId, number> }`.
+
+**Required behavior.**
+- Each cell shows a signed integer pill (`+3 … −3`, or `?` when
+  `modal_score === null`) — the **score text is the primary signal**.
+- A length-only mini-bar (width `|modal_score|/3`) sits beneath the
+  pill, never colored to imply "good/bad" — only magnitude.
+- Cell background uses a symmetric 7-step OKLCH palette keyed by
+  `modal_score`: red-ish for negatives, neutral for 0, green-ish for
+  positives. Saturation is capped so that text-on-background contrast
+  stays AA.
+- Per-cell `⚡` dissent badge appears when `dissenters?.length > 0`.
+- Hover / focus opens a `<Tooltip>` containing: `note`,
+  `score_interval` rendered as `[min, max]`, and a per-model table
+  sorted by model id.
+- Row label column is `sticky left-0` so horizontal overflow on narrow
+  viewports keeps the domain name visible.
+- `aria-label` on the outer `<table>` summarizes the purpose:
+  `"Matrice d'impact intergénérationnel par domaine et horizon"`.
+- Row order and horizon order are fixed by schema — never re-sorted by
+  value (would introduce asymmetric rendering between candidates).
+- Bottom legend shows the 7-step swatches with their score labels.
+
+**Editorial rules.**
+- Cell language is measurement (ordinal score + mechanism note); the
+  `note` never uses advocacy framing. Editorial review at the prompt
+  level is the enforcement point; this widget only displays what the
+  schema carries.
+- Column headers label the time window **and** the approximate cohort
+  (e.g. "2038–2047 · Génération Z & Alpha") so readers interpret the
+  score in cohort terms.
+
+**Never.**
+- Never average scores across rows or horizons into a single figure.
+- Never hide a null-score cell — rendering `?` is the signal that the
+  model collective did not converge, which is itself a finding.
+
+---
+
+### 4.14 `<RiskSummaryMatrix>`
+
+**Purpose.** Primary visual of the **Risques** section. A compact
+5 × 4 grid that lets the reader scan, at a glance, where the program
+carries the heaviest execution, budgetary, dependency, and
+reversibility risks across every dimension. Shipped with task `0087`.
+
+**Rendering.** Server component. Semantic `<table>`; five rows (one per
+dimension key) × four category columns (`budgetary`,
+`implementation`, `dependency`, `reversibility`). Each cell is a level
+pill with text label + 4-step OKLCH background tint.
+
+**Data.** `aggregated.json > dimensions.<k>.risk_profile.<category>`:
+- `modal_level: "low" | "limited" | "moderate" | "high" | null`.
+- `level_interval: [min, max]` (ordinal, on the 4-step scale).
+- `note: string`.
+- `supported_by: string[]`, `dissenters?: string[]`,
+  `per_model: Record<modelId, level>`.
+
+**Required behavior.**
+- Level label in French (`Faible` / `Limité` / `Modéré` / `Élevé`) is
+  the primary signal inside each cell.
+- 4-step OKLCH palette: green (`low`) → sand (`limited`) → orange
+  (`moderate`) → red (`high`). Null → neutral tertiary tint.
+- `⚡` dissent badge appears when `dissenters?.length > 0`.
+- Hover / focus opens a `<Tooltip>` containing: `note`, ordinal
+  `level_interval`, and a per-model breakdown sorted by model id.
+- Bottom legend renders all four level swatches with their labels.
+- `aria-label` on the outer `<table>`:
+  `"Matrice des risques par domaine et catégorie"`.
+- Row and column order are fixed by schema.
+
+**Editorial rules.**
+- No composite "risk score" — categories are independent and reported
+  separately. Aggregating them would reintroduce the exact cardinal
+  composition that `RiskHeatmap` (§4.5) deliberately avoids.
+- A `low` cell is still rendered (not blanked) — measurement includes
+  "we looked and this is not a risk".
+
+**Never.**
+- Never encode the level with color alone; the text label is
+  non-negotiable.
+
+---
+
+### 4.15 `<Drawer>`
+
+**Purpose.** Reusable right-side modal surface used by the polished
+candidate page (and future transparency / comparison flows) to host
+overflow content that would otherwise dominate the primary scroll.
+Lives under `components/chrome/` because it is a page-level affordance,
+not a data-bound widget. Shipped with task `0087`.
+
+**Rendering.** Client component (`"use client"`) wrapping
+`@radix-ui/react-dialog`. The overlay is a full-viewport 40% black tint
+with a 2 px backdrop blur; the panel slides in from the right at
+`w-[min(90vw,640px)]`.
+
+**Props (framework-agnostic).**
+- `open: boolean`, `onOpenChange: (open: boolean) => void` — caller
+  owns state.
+- `title: string` — required; rendered as `Dialog.Title`.
+- `description?: string` — optional; rendered as `Dialog.Description`.
+- `children: React.ReactNode`.
+
+**Required behavior.**
+- Radix primitives (`Dialog.Root / Portal / Overlay / Content / Title /
+  Description / Close`) provide focus trap, `Esc` to close, and
+  `aria-modal` semantics — do not re-implement them.
+- Close button has `aria-label="Fermer"` (the `✕` glyph is
+  decorative).
+- Motion uses `data-state=open|closed` variants with
+  `motion-safe:animate-in` / `animate-out`; `motion-reduce` falls back
+  to a crossfade.
+- The content region is `flex-1 overflow-y-auto` so long drawers
+  scroll inside the panel, not the page.
+
+**Usage in M_CandidatePagePolish.**
+- `RisquesSection` opens a drawer titled "Tous les risques identifiés"
+  hosting the unchanged `RiskHeatmap` (§4.5) when the user clicks
+  "Voir tous les risques identifiés".
+- Future milestones (M_Transparency, M_Comparison) are expected to
+  reuse this primitive rather than shipping a parallel modal.
+
+**Accessibility.**
+- SSR renders to nothing when `open === false` (Radix portals are
+  client-only). Tests for the closed state therefore assert no modal
+  chrome is emitted at all.
+- When open, the drawer is an `aria-modal="true"` dialog with
+  labelled title / description and a visible focus ring on the close
+  button.
+
+**Never.**
+- Never use the Drawer to hide primary content — it is reserved for
+  overflow or supplementary views. The page must remain scannable
+  without opening any drawer.
+
+---
+
 ## 5. Shared helpers
 
 | Helper | File | Purpose |
@@ -483,6 +704,15 @@ point the choice is made in that milestone's spike.
 
 ## Change log
 
+- **v1.2 (2026-04-20)** — Amended by `M_CandidatePagePolish`. Added
+  four new components (`ConfidenceBar` §4.12, `IntergenHorizonTable`
+  §4.13, `RiskSummaryMatrix` §4.14, `Drawer` §4.15). Documented the
+  per-model overlay affordance on `PositioningRadar` (§4.1).
+  `RiskHeatmap` (§4.5) is now hosted inside a `Drawer`; the component
+  itself is unchanged. `DimensionTile` (§4.7) is superseded in
+  `DomainesSection` by a list-row composition while preserving its
+  building blocks. Composition details live in
+  [`candidate-page-polish.md`](candidate-page-polish.md).
 - **v1.1 (2026-04-20)** — Promoted to Stable by spike `0070`. Reconciled
   with implementation: RiskHeatmap is a per-risk expandable table (not
   2D scatter), new widgets (Tooltip, PositioningLegend,

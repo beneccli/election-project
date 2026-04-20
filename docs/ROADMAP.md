@@ -56,7 +56,7 @@ Format: `M_<FeatureCluster>`
 |-----------|--------|-------------|
 | M_WebsiteCore | ✅ Done | Next.js (App Router + static export), candidate page, build-time data loading |
 | M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
-| M_CandidatePagePolish | 🚧 Planned (spike `0080` archived) | Screenshot-worthy sections: per-model radar selector, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
+| M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
 | M_Transparency | 📋 Planned (spike needed) | Transparency drawer — raw outputs, prompts, sources exposed |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |

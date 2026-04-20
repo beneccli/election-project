@@ -293,26 +293,27 @@ is deferred.
 
 | Widget | Data source | Scope |
 |---|---|---|
-| Radar (5-axis pentagon with consensus-interval bands) | `deriveRadarShape` | **baseline** — static SVG, no animation; polished version → M_VisualComponents |
+| Radar (5-axis pentagon with consensus-interval bands) | `deriveRadarShape` | full — polished by `M_VisualComponents`; `M_CandidatePagePolish` wraps it in `InteractivePositioningRadar` so readers can toggle per-model overlay polygons. See [`visual-components.md`](visual-components.md) §4.1. |
 | Per-axis agreement bar row | `aggregated.positioning.<axis>.dissent`, `consensus_interval`, `modal_score` | full |
 | Anchor labels | `site/lib/anchors.ts` | full |
-| Hover tooltip on dissent marker | dissent reasoning | **deferred** to M_VisualComponents |
+| Hover tooltip on dissent marker | dissent reasoning | full (shipped in `M_VisualComponents`) |
 
 ### 4.4 Domaines section
 
 | Widget | Data source | Scope |
 |---|---|---|
-| `DimensionTile` grid (5 tiles) | `aggregated.dimensions.<dim>.grade.consensus` + dissent count | full |
-| Expand → deep-dive panel | dimension summary, problems_addressed / problems_ignored / problems_worsened, execution_risks, key_measures, per-model grade map | full (collapsible via `<details>` or client component) |
+| Dimension **list row** (one per dimension) | `aggregated.dimensions.<dim>.grade.consensus`, `headline`, `confidence`, per-model grade map | full — replaces the 5-tile grid. Each row is a `<button aria-expanded aria-controls>` composing `GradeBadge` + label + dissent chip + verbatim `headline` + `ConfidenceBar` + per-model micro-row. Multi-expand (`Set<DimensionKey>`); deep-link `#dim=<key>` hydrates the expansion. See [`candidate-page-polish.md`](candidate-page-polish.md) §5.2. |
+| Inline deep-dive panel | dimension summary, problems_addressed / problems_ignored / problems_worsened, execution_risks, key_measures | full — reparented inside the row (was previously below the grid); `DimensionDeepDive` contents preserved verbatim. |
 
 Note: the Zod schema grades are `A..F` / `NOT_ADDRESSED` only — no
-`+`/`-` gradations. The tile renders the letter verbatim.
+`+`/`-` gradations. The row renders the letter verbatim.
 
 ### 4.5 Impact intergénérationnel section
 
 | Widget | Data source | Scope |
 |---|---|---|
-| Two-column split panel | `aggregated.intergenerational.impact_on_25yo_in_2027` and `impact_on_65yo_in_2027` | full (static, no hover; hover affordances → M_VisualComponents) |
+| **`IntergenHorizonTable` (primary)** | `aggregated.intergenerational.horizon_matrix` | full — 6 domains × 3 horizons ordinal matrix; each cell shows signed integer score pill + length-only mini-bar + dissent badge + tooltip with note / `score_interval` / per-model breakdown. See [`visual-components.md`](visual-components.md) §4.13. |
+| `IntergenSplitPanel` (secondary, "Comparaison individuelle") | `aggregated.intergenerational.impact_on_25yo_in_2027` / `impact_on_65yo_in_2027` | full — retained verbatim under an `<h3>` subheading below the horizon matrix. |
 | Net transfer direction header | `aggregated.intergenerational.net_transfer_direction` + `magnitude_estimate` | full |
 | Narrative summaries | `*.narrative_summary` | full |
 
@@ -320,10 +321,9 @@ Note: the Zod schema grades are `A..F` / `NOT_ADDRESSED` only — no
 
 | Widget | Data source | Scope |
 |---|---|---|
-| Per-risk rows grouped by dimension | `aggregated.dimensions.<dim>.execution_risks[]` | full |
-| Columns: probability, severity (confidence dots) | `execution_risks[*].probability`, `.severity` | full |
-| Dimension group header | dimension label | full |
-| Color scale (background tint on cells) | `max(probability, severity)` | full |
+| **`RiskSummaryMatrix` (primary)** | `aggregated.dimensions.<k>.risk_profile` | full — 5 dimensions × 4 categories (`budgetary`, `implementation`, `dependency`, `reversibility`). Level labels (`Faible` / `Limité` / `Modéré` / `Élevé`) as primary signal; 4-step OKLCH palette supplementary; dissent badge + tooltip with note / `level_interval` / per-model breakdown. See [`visual-components.md`](visual-components.md) §4.14. |
+| "Voir tous les risques identifiés" trigger | — | full — opens a `Drawer` (§4.15) hosting the full `RiskHeatmap` per-risk expandable table. |
+| `RiskHeatmap` (inside Drawer) | `aggregated.dimensions.<dim>.execution_risks[]` | full — unchanged; only its host changes from inline section to drawer surface. |
 | Interactive filtering / sorting | — | **deferred** |
 
 ### 4.7 Transparency footer (stub)
