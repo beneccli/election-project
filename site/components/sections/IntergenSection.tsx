@@ -1,10 +1,12 @@
 // See docs/specs/website/nextjs-architecture.md §5.2, §4.5
+// See docs/specs/website/candidate-page-polish.md §5.3
 // See docs/specs/analysis/intergenerational-audit.md
 //
 // EDITORIAL: measurement, not indictment. No advocacy language.
 import type { AggregatedOutput } from "@/lib/schema";
 import { SectionHead } from "@/components/chrome/SectionHead";
 import { IntergenSplitPanel } from "@/components/widgets/IntergenSplitPanel";
+import { IntergenHorizonTable } from "@/components/widgets/IntergenHorizonTable";
 
 const DIRECTION_LABELS: Record<string, string> = {
   young_to_old: "Des jeunes vers les aînés",
@@ -19,7 +21,8 @@ export function IntergenSection({
   aggregated: AggregatedOutput;
 }) {
   const ig = aggregated.intergenerational;
-  const direction = DIRECTION_LABELS[ig.net_transfer_direction] ?? ig.net_transfer_direction;
+  const direction =
+    DIRECTION_LABELS[ig.net_transfer_direction] ?? ig.net_transfer_direction;
 
   return (
     <section
@@ -28,10 +31,22 @@ export function IntergenSection({
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
       <SectionHead label="Impact intergénérationnel" />
-      <p className="mb-6 text-base text-text-secondary">
-        Impact net estimé du programme sur les deux cohortes suivantes —
-        mesure, non jugement. Les valeurs quantifiées reprennent les
-        estimations des modèles, vérifiées par revue humaine.
+      <p className="mb-6 max-w-3xl text-base leading-[1.6] text-text-secondary">
+        Effet net estimé du programme sur chaque domaine, à trois horizons
+        budgétaires. Les scores sont ordinaux (de −3 à +3) et mesurent la
+        direction de l&apos;impact, pas son caractère désirable. Les
+        libellés de cohortes sont des repères narratifs approximatifs
+        qui recouvrent imparfaitement les horizons calendaires.
+      </p>
+
+      <IntergenHorizonTable matrix={ig.horizon_matrix} />
+
+      <h3 className="mt-10 mb-2 font-display text-xl font-semibold text-text">
+        Comparaison individuelle
+      </h3>
+      <p className="mb-6 max-w-3xl text-sm leading-[1.6] text-text-secondary">
+        Projection du programme sur deux cohortes individuelles typiques :
+        personne de 25 ans et personne de 65 ans.
       </p>
 
       <div className="mb-8 rounded-md border border-rule-light bg-bg-subtle p-4">
@@ -84,8 +99,3 @@ export function IntergenSection({
     </section>
   );
 }
-
-// text-[14px] => text-base
-// text-sm => text-sm
-// text-xs => text-xs
-// text-xs => text-xs
