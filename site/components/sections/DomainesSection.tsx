@@ -8,6 +8,7 @@ import { DIMENSION_KEYS, type DimensionKey } from "@/lib/derived/keys";
 import { SectionHead } from "@/components/chrome/SectionHead";
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import { ConfidenceDots } from "@/components/widgets/ConfidenceDots";
+import { Tooltip } from "@/components/widgets/Tooltip";
 import type { GradeLetter } from "@/lib/grade-color";
 
 const DIMENSION_LABELS: Record<DimensionKey, string> = {
@@ -69,6 +70,7 @@ export function DomainesSection({
               label={DIMENSION_LABELS[key]}
               grade={dim.grade.consensus}
               dissentCount={dissentCount}
+              dissentMap={dim.grade.dissent}
               confidence={dim.confidence}
               isActive={active === key}
               onToggle={() => toggle(key)}
@@ -92,6 +94,7 @@ function DimensionTile({
   label,
   grade,
   dissentCount,
+  dissentMap,
   confidence,
   isActive,
   onToggle,
@@ -100,6 +103,7 @@ function DimensionTile({
   label: string;
   grade: GradeLetter;
   dissentCount: number;
+  dissentMap: Record<string, GradeLetter>;
   confidence: number;
   isActive: boolean;
   onToggle: () => void;
@@ -124,12 +128,61 @@ function DimensionTile({
       <div className="flex items-center gap-2 text-xs text-text-tertiary">
         <ConfidenceDots value={confidence} label="Confiance" />
         {dissentCount > 0 ? (
-          <span className="font-semibold text-risk-red">
-            ⚡ {dissentCount}
+          // Click must not toggle the tile — tooltip is informational only.
+          <span onClick={(e) => e.stopPropagation()}>
+            <Tooltip
+              as="span"
+              content={
+                <GradeDissentList
+                  consensus={grade}
+                  dissent={dissentMap}
+                />
+              }
+            >
+              <span className="font-semibold text-risk-red">
+                ⚡ {dissentCount}
+              </span>
+            </Tooltip>
           </span>
         ) : null}
       </div>
     </button>
+  );
+}
+
+function GradeDissentList({
+  consensus,
+  dissent,
+}: {
+  consensus: GradeLetter;
+  dissent: Record<string, GradeLetter>;
+}) {
+  // Stable ordering by model id; consensus row pinned first.
+  const rows = Object.entries(dissent).sort(([a], [b]) => a.localeCompare(b));
+  return (
+    <div className="space-y-1">
+      <div className="mb-1 text-[10px] font-bold uppercase tracking-wider opacity-70">
+        Notes par modèle
+      </div>
+      <div className="flex items-center justify-between gap-3">
+        <span className="font-mono text-[11px] opacity-70">consensus</span>
+        <span className="font-semibold">{consensus}</span>
+      </div>
+      {rows.map(([modelId, g]) => {
+        const diverges = g !== consensus;
+        return (
+          <div
+            key={modelId}
+            className="flex items-center justify-between gap-3"
+          >
+            <span className="font-mono text-[11px]">{modelId}</span>
+            <span className={diverges ? "font-bold" : "opacity-80"}>
+              {g}
+            </span>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
