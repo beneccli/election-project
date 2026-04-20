@@ -34,6 +34,7 @@ specs/
     ├── structure.md                # Page architecture                        [Stable]
     ├── nextjs-architecture.md      # Next.js package, loader, derivations     [Stable]
     ├── visual-components.md        # Signature charts/widgets                 [Stable]
+    ├── candidate-page-polish.md    # Screenshot-worthy section redesigns      [Stable]
     └── transparency.md             # Transparency drawer                      [Draft]
 ```
 
