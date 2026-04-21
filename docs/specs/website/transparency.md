@@ -1,297 +1,416 @@
 # Transparency Drawer
 
-> **Version:** 1.0
-> **Status:** Draft — to be finalized by M_Transparency spike
+> **Version:** 1.1
+> **Status:** Stable (finalized by M_Transparency spike `0090`, 2026-04-21; promoted by task `0098`)
+> **Milestone:** M_Transparency
+> **Scope:** Right-side drawer exposing every artifact used to produce a
+> candidate's analysis — primary sources, consolidated document, exact
+> prompt bytes, raw per-model outputs, aggregation notes, agreement map.
+> **Out of scope:** Syntax highlighting, custom PDF viewer, version
+> history, cross-candidate or cross-version diffs, bulk zip download,
+> schema changes — see §13.
 
 ---
 
-## Overview
+## 1. Purpose
 
-The transparency drawer is the UI affordance that exposes every artifact used to produce the analysis on a candidate page: primary sources, the consolidated source document, the exact prompts used, each model's raw output, and the aggregation notes.
+The transparency drawer is the single UI affordance that turns "trust
+us" into "check us". Every other outlet says "our journalists
+investigated"; this site says "here are the bytes, run the aggregation
+yourself". If the drawer is hidden, shallow, or unlinkable from claims,
+the project loses its differentiator.
 
-**This is the core mechanism that distinguishes this project from any other political analysis site.** Every other outlet says "trust us"; this site says "check us".
-
----
-
-## Design principles
-
-1. **Always one click away.** From any claim, the reader can reach the evidence that produced it.
-2. **No content hidden behind logins or paywalls.** Everything is public.
-3. **Download affordances throughout.** Users who want to audit or run their own aggregation can download the raw outputs.
-4. **Readable, not just accessible.** Syntax highlighting for JSON, structure-aware rendering for markdown, proper PDF embeds.
-5. **Linkable sections.** Every artifact has a stable URL so specific items can be shared.
+All artifacts that ever touched the analysis — primary-source PDFs,
+consolidated markdown, prompt bytes, raw per-model JSON, aggregation
+notes, the agreement map — are reachable in at most two clicks from
+any claim on the candidate page.
 
 ---
 
-## Drawer structure
+## 2. Design principles (non-negotiables)
 
-The drawer slides in from the right side of the viewport, covering roughly 60% of the width on desktop and 100% on mobile.
+Defers to [`editorial-principles.md`](../analysis/editorial-principles.md).
+The drawer is **read-only artifact exposure**. It never synthesizes
+prose, never averages scores, never rewrites anything it displays.
 
-### Top-level tabs
+1. **Always one click away.** Every claim's `source_refs` become
+   `<SourceRef>` chips that open the drawer on the relevant tab and
+   anchor.
+2. **No paywall, no login, no JS requirement for artifact access.**
+   The drawer is interactive (`"use client"`), but every artifact it
+   exposes also has a direct-URL fallback under
+   `/candidates/<id>/<version>/…` or `/prompts/<sha>.md`. A reader
+   with JS disabled can still reach every file via the existing
+   `<TransparencyFooter>` download list.
+3. **No silent lies.** Prompt-byte integrity is verified by SHA256:
+   if the prompt on disk has drifted since the version ran, the
+   drawer refuses to show the current (wrong) bytes under the
+   historic SHA, and renders a "prompt not available in current
+   repository" state with a git-history link.
+4. **Downloads throughout.** Every artifact view has an adjacent
+   "télécharger" link.
+5. **Linkable sections.** Every drawer state has a stable
+   `#transparence=...` hash fragment (see §8).
+
+---
+
+## 3. Drawer anatomy
+
+Built on the existing `<Drawer>` primitive
+(`site/components/chrome/Drawer.tsx`) at `size="xl"` (≤960px on
+desktop; 92vw on mobile).
+
+Top-level tabs:
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│  Sources  │  Document consolidé  │  Prompts  │  Résultats IA │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│                    [Content area]                            │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│ Eyebrow: TRANSPARENCE                                           ✕   │
+│ Title:   <Nom du candidat> — analyse du <date>                      │
+├─────────────────────────────────────────────────────────────────────┤
+│ [Sources] [Document consolidé] [Prompts] [Résultats IA]             │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│                       <active tab content>                          │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-Tabs:
+An always-visible summary row beneath the tabs (pulled from
+`metadata.json` — no new fields):
 
-1. **Sources** — primary source files from `sources-raw/`
-2. **Document consolidé** — the human-reviewed `sources.md`
-3. **Prompts** — the exact prompt files used (consolidation, analysis, aggregation) with SHA256 hashes
-4. **Résultats IA** — per-model raw JSON outputs + aggregation notes
+```
+<n> modèles · <k> succès / <m> échecs · revue humaine <✓|✗> par <reviewer> le <date>
+```
 
 ---
 
-## Tab 1: Sources
+## 4. Tab 1 — Sources
 
-### Content
+**Data source:** `candidates/<id>/<version>/sources-raw/` as exposed
+under `/candidates/<id>/<version>/sources-raw/` by
+`site/scripts/copy-candidate-artifacts.ts`.
 
-A list of all files in `candidates/<id>/current/sources-raw/`:
+### Index
 
+A new build-time artifact `sources-raw/manifest.json` lists the
+primary-source files with metadata:
+
+```jsonc
+{
+  "files": [
+    {
+      "filename": "manifesto.pdf",
+      "byte_length": 1847320,
+      "sha256": "a7b3…",
+      "origin_url": "https://example.com/manifesto.pdf",
+      "accessed_at": "2026-04-15"
+    }
+  ]
+}
 ```
-📄 manifesto.pdf                   Téléchargé le 2026-04-15 depuis example.com
-                                   SHA256: a7b3...
-                                   [Voir] [Télécharger]
 
-📝 speech-2026-09-12-rally.txt     Retranscrit depuis vie-publique.fr
-                                   SHA256: c9d1...
-                                   [Voir] [Télécharger]
+The manifest is generated by the copy script from any sidecar
+`<filename>.meta.json` files present in `sources-raw/`. Files without
+sidecar metadata still appear with just `filename`, `byte_length`, and
+`sha256`.
 
-📊 voting-record-2024-2026.json    Depuis data.assemblee-nationale.fr
-                                   [Voir] [Télécharger]
-```
+### Viewing behavior
 
-Each entry:
-- File icon by type
-- Filename
-- Origin URL + access date (from `.meta.json`)
-- SHA256 hash
-- View + download affordances
+| File type | Viewer |
+|---|---|
+| `.pdf` | `<iframe>` with `sandbox` — native browser PDF viewer |
+| `.md`, `.txt` | inline fetch → `<pre>` (markdown not rendered here; that is Tab 2) |
+| `.json` | inline fetch → pretty-printed `<pre>` |
+| `.html` | link-out only (no sandboxed iframe in v1) |
+| other | download link only |
 
-### Viewing
+### Empty state
 
-- PDFs: inline embed (browser PDF viewer)
-- Text / markdown: inline rendered
-- JSON (voting records): syntax-highlighted tree view
-- HTML captures: sandboxed iframe or rendered preview
+When `sources-raw/` is empty or missing (e.g. current `test-omega`),
+the tab renders:
+
+> Les sources primaires archivées ne sont pas encore disponibles pour
+> cette version. Voir le document consolidé pour le contenu du
+> programme tel qu'il a été soumis aux modèles.
+
+with a button switching to Tab 2.
 
 ---
 
-## Tab 2: Document consolidé (`sources.md`)
+## 5. Tab 2 — Document consolidé
 
-### Content
+**Data source:** `candidates/<id>/<version>/sources.md`.
 
-The full `sources.md` for the current version, rendered with markdown formatting. Section anchors match the structure of the analysis dimensions so claims in the main page can deep-link to specific sections.
-
-### Header metadata
-
-```
-Document consolidé — <candidate name>
-Version du <date>
-Revu par <reviewer> le <date>
-SHA256: a7b3...
-Sources utilisées: 5 fichiers (voir onglet Sources)
-```
-
-### Deep-linking
-
-When a user clicks a `<SourceRef>` in the main page, the drawer opens on this tab and scrolls to the cited section.
-
-URL format: `/candidat/<id>#source=<section-anchor>`
+- Fetched client-side when the tab activates, rendered with
+  `react-markdown` (GFM only — no extra remark plugins in v1).
+- Every `<h2>` / `<h3>` gets a slug anchor (minimal inline slug
+  function; no heavy library).
+- Deep-link: `#transparence=document&anchor=<slug>` scrolls the
+  heading into view on mount.
+- Header metadata panel at the top:
+  - candidate name + version date
+  - `human_review_completed` badge (from `metadata.json`)
+  - a computed SHA256 of the `sources.md` bytes (client-side on
+    fetch — trivial for documents of this size)
+  - download link
 
 ---
 
-## Tab 3: Prompts
+## 6. Tab 3 — Prompts
 
-### Content
+**Data source:** `site/public/prompts/<sha256>.md` generated by a new
+build script `site/scripts/copy-prompts.ts`.
 
-The three (or four, with adversarial pass) prompt files used:
+### Build-time contract
 
-```
-📝 consolidate-sources.md          Version 1.0
-                                   Hash: 3fa1... (vérifié contre run)
-                                   [Voir le texte complet]
+`copy-prompts.ts` reads every `*.md` under `prompts/`, computes
+SHA256 of the bytes, and writes each file to
+`site/public/prompts/<sha256>.md`. It also emits
+`site/public/prompts/manifest.json`:
 
-📝 analyze-candidate.md            Version 1.0
-                                   Hash: 8cb2...
-                                   [Voir le texte complet]
-
-📝 aggregate-analyses.md           Version 1.0
-                                   Hash: 1de4...
-                                   [Voir le texte complet]
+```jsonc
+{
+  "files": [
+    { "logical_name": "analyze-candidate.md",    "sha256": "bf09…", "byte_length": 18234 },
+    { "logical_name": "aggregate-analyses.md",   "sha256": "732a…", "byte_length": 12987 },
+    { "logical_name": "consolidate-sources.md",  "sha256": "1de4…", "byte_length":  9123 }
+  ]
+}
 ```
 
-### Why this matters
+Content addressing guarantees that a file served under
+`/prompts/<sha>.md` has that exact SHA — misattributing content is
+physically impossible.
 
-Reading the prompts is the most direct way a skeptical reader can assess bias. If the prompt framing is loaded, the analysis is compromised — and we make it easy to check.
+### Drawer behavior
 
-### Prompt display
+For a given candidate version, the drawer reads from `metadata.json`:
 
-- Full text rendered in a monospace-friendly view
-- Copy button for each
-- Link to the git commit of the prompt file
+- `analysis.prompt_sha256` + `analysis.prompt_file`
+- `aggregation.prompt_sha256` + `aggregation.prompt_file`
+- optionally `consolidation.prompt_sha256` + `consolidation.prompt_file`
+  (not currently written by the pipeline; rendered only if present)
+
+For each, the drawer attempts to fetch `/prompts/<recorded-sha>.md`:
+
+- **Match found** → render the content in a monospace-friendly view;
+  show the logical name, version label, and SHA256 in full (never
+  truncated); provide copy + download affordances.
+- **Not found** (current disk content has drifted) → render a badge:
+  > Ce prompt n'est pas disponible dans l'état courant du dépôt.
+  > Voir l'historique git du fichier <code>{prompt_file}</code> pour
+  > la version exacte utilisée.
+
+This policy deliberately refuses to render current disk content under
+a historic SHA — doing so would make the "check us" promise a lie.
 
 ---
 
-## Tab 4: Résultats IA
+## 7. Tab 4 — Résultats IA
 
-### Content
+Three sub-views, selected by a secondary `results.view` parameter:
 
-This is where the editorial transparency lives.
+### 7.1 `view=notes` — Aggregation notes
 
-#### Sub-tab 4a: Aggregation notes
+**Data source:** `candidates/<id>/<version>/aggregation-notes.md`.
+Rendered with `react-markdown` using the same configuration as Tab 2.
 
-Renders `aggregation-notes.md`:
-- Which models ran, succeeded, failed
-- Notable disagreements and how aggregation preserved them
-- Flagged items and their human-review resolutions
-- Reviewer name and review date
+### 7.2 `view=per-model` — Per-model raw outputs
 
-#### Sub-tab 4b: Per-model outputs
+Driven by `metadata.json > analysis.models`. One card per model:
 
-A list, one entry per model:
+- model id + provider + `exact_version`
+- `status` badge (`success` | `failed` | `partial`)
+- `execution_mode` (`api` | `manual-webchat` | `copilot-agent`)
+- `attested_by` + `attested_model_version` when present
+- `run_at`
+- token counts and cost **only when**
+  `provider_metadata_available !== false` (manual + Copilot modes
+  hide these — they do not exist)
+- inline expansion: pretty-printed `<pre>` rendering of the raw JSON
+  fetched from `/candidates/<id>/<version>/raw-outputs/<id>.json`
+- `<a download>` link to the raw JSON
 
+Failed runs: if `<id>.FAILED.json` exists, link to it; do not attempt
+to pretty-print on-page.
+
+### 7.3 `view=agreement` — Agreement map
+
+**Read-only display of `aggregated.agreement_map`** — no cardinal
+recomputation. Three stacked sections:
+
+1. **Consensus (`high_confidence_claims[]`)**
+   - Each row: the claim string, `supported_by` badges, the
+     `source_ref` as a `<SourceRef>` chip.
+
+2. **Dissent (`contested_claims[]`)**
+   - Each row: claim text, two columns (`supported_by` vs.
+     `dissenters`), any `resolution_note` rendered verbatim.
+   - Filter button "Afficher seulement les désaccords non résolus"
+     filters on absence of `resolution_note`.
+
+3. **Positionnement (`positioning_consensus`)**
+   - One row per axis: axis FR label (from `dimension-labels.ts`),
+     `modal` value as text (e.g. "–2"), `dissent_count`.
+   - **Forbidden:** a gradient bar, a numeric mean, a cardinal
+     composite. Integer-as-text only.
+
+### Coverage warnings
+
+When `aggregated.json > coverage_warning === true`, the Résultats tab
+shows a warning ribbon:
+
+> Couverture réduite : moins de 3 modèles ont produit une analyse
+> complète pour cette version. Les désaccords peuvent refléter un
+> échantillon incomplet plutôt qu'un vrai débat entre modèles.
+
+When `metadata.json > aggregation.human_review_completed === false`,
+the entire drawer shows a warning ribbon at the top (publish gate
+normally blocks this, but the UI is defensive).
+
+---
+
+## 8. Deep-linking (URL scheme)
+
+All drawer state is encoded in the URL **hash fragment** — safe for
+`output: "export"`, free of full re-renders:
+
+| Fragment | Drawer state |
+|---|---|
+| `#transparence=sources` | Sources tab |
+| `#transparence=sources&file=<filename>` | Sources tab, viewer opened |
+| `#transparence=document` | Document tab |
+| `#transparence=document&anchor=<slug>` | Document tab, scroll to heading |
+| `#transparence=prompts` | Prompts tab |
+| `#transparence=prompts&sha=<sha256>` | Prompts tab, focus prompt |
+| `#transparence=results` | Results tab, default `view=notes` |
+| `#transparence=results&view=notes` | Aggregation notes |
+| `#transparence=results&view=per-model` | Per-model list |
+| `#transparence=results&view=per-model&model=<id>` | Specific model expanded |
+| `#transparence=results&view=agreement` | Agreement map |
+| `#transparence=results&view=agreement&claim=<id>` | Agreement map focus |
+
+Closing the drawer replaces `window.location` (via
+`history.replaceState`) to remove the `#transparence=...` fragment so
+the back button does not reopen it.
+
+---
+
+## 9. `<SourceRef>` component
+
+A small client-side chip used by sections that carry `source_refs`:
+
+```tsx
+<SourceRef>{locator}</SourceRef>
 ```
-🤖 Claude Opus 4.7 (anthropic)           ✓ Success
-   Run at 2026-04-19 10:32 UTC
-   Tokens: 42k in / 8.5k out
-   [Voir JSON] [Télécharger]
 
-🤖 GPT-5 (openai)                        ✓ Success
-   Run at 2026-04-19 10:31 UTC
-   ...
+Behavior:
 
-🤖 Gemini Ultra (google)                 ✓ Success
-   ...
+1. Renders the locator as inline chip text (truncated visually
+   beyond ~240px; full text in `title`).
+2. On click: writes
+   `#transparence=document&anchor=<slug>` to the URL hash if the
+   locator matches `sources.md#<slug>`; otherwise writes
+   `#transparence=document` (drawer at top of document).
+3. The drawer component subscribes to `hashchange` and opens /
+   switches accordingly.
 
-🤖 Mistral Large (mistral)               ⚠ Partial (section missing)
-   ...
+Sections that already render `source_refs` inline migrate to
+`<SourceRef>` under task `0097`:
 
-🤖 Grok (xai)                            ✗ Failed (invalid JSON after retries)
-   [Voir logs]
-```
+- `IntergenSection` (source_refs list under the split panel)
+- `DomainesSection` (evidence lists inside DimensionDeepDive)
 
-Click any "Voir JSON" → inline JSON tree view with syntax highlighting. Collapsible sections matching the schema structure.
-
-#### Sub-tab 4c: Agreement map
-
-A visual representation of `aggregated.json > agreement_map`:
-
-```
-Claim                                          Models supporting
-─────────────────────────────────────────────  ─────────────────
-Economic axis placement                        ●●●●● (5/5)
-Pension math sustainability                    ●●●●○ (4/5 — Grok dissented)
-Housing access projection                      ●●●○○ (3/5 — contested)
-Counterfactual direction                       ●●●●● (5/5)
-...
-```
-
-- Filters: show all / show only contested / show only consensus
-- Click any claim → reveals per-model positions and reasoning
+No new schema fields are introduced.
 
 ---
 
-## Side-panel: ever-visible summary
+## 10. Entry points
 
-At the top of the drawer, a small always-visible summary:
+Three entry points, all leading to the same drawer:
 
-```
-Analyse de <nom candidat>
-Version: 2026-04-19
-5 modèles d'IA utilisés • 4 succès / 1 échec
-4 claims controversés • 12 claims en consensus
-Revue humaine: complète le 2026-04-20 par <reviewer>
-Repository: github.com/<repo> (commit a7b3...)
-```
-
-This summary is information-dense on purpose: it lets a skeptical reader assess the credibility signal at a glance before diving in.
+1. **Section-level `<SourceRef>` chips** — wherever an aggregated
+   claim carries `source_refs`.
+2. **Top of `<TransparencyFooter>`** — a prominent
+   "Ouvrir la transparence complète" button opens the drawer at the
+   `document` tab. The footer's existing detail content is retained
+   (it remains the JS-disabled fallback).
+3. **NavBar** — a `Transparence` entry that scrolls to the footer
+   and opens the drawer.
 
 ---
 
-## Downloads
+## 11. Accessibility baseline (full audit deferred to M_Accessibility)
 
-Every artifact has a download affordance:
+- Dialog semantics inherited from Radix `<Dialog>` via the shared
+  `<Drawer>` primitive.
+- Tab navigation uses `role="tablist"` / `role="tab"` /
+  `role="tabpanel"` with arrow-key navigation and the usual
+  ARIA-tabs pattern.
+- ESC closes the drawer; focus returns to the trigger.
+- Every color signal has a text equivalent (status badges carry
+  "Succès" / "Échec" text, not color alone).
 
-- Individual files (PDFs, text, JSON)
-- Bulk download: "Télécharger toute l'analyse de ce candidat" → zip of the entire `versions/<date>/` folder
-
-The bulk download is deliberately easy to access. We want people to be able to take our data and do their own analysis.
-
----
-
-## Deep-linking
-
-Stable URLs:
-
-- `/candidat/<id>?tab=sources&file=manifesto.pdf`
-- `/candidat/<id>?tab=document&anchor=retraite`
-- `/candidat/<id>?tab=prompts&file=analyze-candidate.md`
-- `/candidat/<id>?tab=results&model=claude-opus-4-7`
-- `/candidat/<id>?tab=results&claim=<claim-id>`
-
-These URLs are shareable and stable across deployments as long as the underlying artifacts exist.
+Full WCAG 2.1 AA compliance audit — keyboard walkthrough of every
+viewer, screen-reader announcements on tab switch, reduced-motion
+testing — belongs to `M_Accessibility`.
 
 ---
 
-## Closing the drawer
+## 12. Performance notes
 
-- ESC key
-- Click outside drawer
-- Close button top-right
-- Closing preserves the current URL without the drawer query params (so back button doesn't reopen)
-
----
-
-## Accessibility
-
-- Fully keyboard-navigable
-- Focus trapped inside drawer when open
-- Screen-reader-announced tab changes
-- All content inside drawer accessible without JavaScript (progressive enhancement)
+- Artifacts are fetched **lazily** when a tab activates, not on page
+  load. The drawer itself is code-split via dynamic import so the
+  main candidate page bundle is unaffected until the user opens it.
+- Raw-output JSON files are small (tens of KB in practice); v1
+  renders them with `JSON.stringify(data, null, 2)` inside `<pre>`.
+  Syntax highlighting and virtualization are deferred.
+- `react-markdown` (~45KB min+gz) is the only meaningful new client
+  dependency.
 
 ---
 
-## Performance
+## 13. Scope boundary (what v1 does NOT ship)
 
-- JSON viewer lazy-loaded (the syntax highlight library is heavy)
-- PDFs use native browser viewer (no custom PDF.js by default)
-- Large JSON files (raw outputs) are paginated or virtualized
-
----
-
-## Future considerations
-
-- **Version history UI**: navigate across dated versions of the same candidate
-- **Diff view** between two versions of same candidate's aggregated output
-- **Cross-candidate inspection**: see how models differed across candidates
-- **Saved views**: bookmarkable specific filters on the agreement map
-
-These are future milestones, not v1.
+- Syntax highlighting for JSON or markdown
+- Custom PDF viewer (beyond native browser iframe)
+- Version-history navigation (`/candidat/<id>/versions/<date>`)
+- Diff between two versions of the same candidate
+- Cross-candidate model comparison
+- Bulk zip download of the full version folder
+- Schema changes (none — M_Transparency is pure UI)
+- Consolidation prompt metadata in `metadata.json` (remains optional)
+- Full WCAG 2.1 AA audit (→ M_Accessibility)
+- English translations of drawer copy (FR canonical; placeholders)
+- Comment / discussion / social share features (explicit non-goals)
 
 ---
 
-## What the drawer does NOT include
+## 14. Success metrics
 
-- Reader comments or discussion (no UGC)
-- Third-party "fact check" embeds
-- Social share buttons (encouraging shallow sharing of claims out of context)
-- AI chatbot for "ask questions about this candidate" (this would undermine the "read our static analysis" contract)
-
-These are deliberate non-features.
+- From any claim carrying `source_refs`, a reader reaches the cited
+  section of `sources.md` in ≤ 2 clicks.
+- The SHA256 displayed for every prompt matches the SHA256 recorded
+  in `metadata.json` — always, byte-for-byte (enforced by content
+  addressing).
+- Drawer opens with an `#transparence=...` URL and closing removes
+  the fragment cleanly (back button does not reopen).
+- No new Zod schema is required to ship the drawer — only
+  already-written artifacts are exposed.
+- For `test-omega` (current fixture): opening the drawer succeeds,
+  every tab renders without error, the Sources tab renders its
+  empty state, the other three tabs render content.
 
 ---
 
-## Related Specs
+## Related specs
 
 - [`structure.md`](structure.md)
+- [`nextjs-architecture.md`](nextjs-architecture.md)
 - [`visual-components.md`](visual-components.md)
+- [`candidate-page-polish.md`](candidate-page-polish.md) — source of the
+  `<Drawer>` primitive reused here
 - [`../candidates/repository-structure.md`](../candidates/repository-structure.md)
-- [`../analysis/aggregation.md`](../analysis/aggregation.md)
+- [`../analysis/aggregation.md`](../analysis/aggregation.md) — source
+  of the `agreement_map` schema rendered in Tab 4
 - [`../analysis/editorial-principles.md`](../analysis/editorial-principles.md)
