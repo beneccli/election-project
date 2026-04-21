@@ -7,11 +7,11 @@ import { ComparisonBody } from "@/components/comparison/ComparisonBody";
 import {
   CandidateSelector,
   ComparisonEmptyState,
-  RisquesComparisonPlaceholder,
 } from "@/components/comparison/ComparisonSectionsPlaceholder";
 import { PositionnementComparison } from "@/components/comparison/PositionnementComparison";
 import { DomainesComparison } from "@/components/comparison/DomainesComparison";
 import { IntergenComparison } from "@/components/comparison/IntergenComparison";
+import { RisquesComparison } from "@/components/comparison/RisquesComparison";
 
 export const metadata: Metadata = {
   title: "Comparer les programmes · Élection 2027",
@@ -47,7 +47,7 @@ export default function ComparerPage() {
             <PositionnementComparison />
             <DomainesComparison />
             <IntergenComparison />
-            <RisquesComparisonPlaceholder />
+            <RisquesComparison />
           </ComparisonBody>
         </Suspense>
       </main>

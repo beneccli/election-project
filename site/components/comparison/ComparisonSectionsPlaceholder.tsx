@@ -72,23 +72,6 @@ export function CandidateSelector() {
   );
 }
 
-function Placeholder({ label }: { label: string }) {
-  const { selectedIds } = useComparison();
-  if (selectedIds.length < 2) return null;
-  return (
-    <section className="mb-12 rounded border border-dashed border-rule p-8">
-      <h2 className="mb-2 font-display text-lg font-semibold">{label}</h2>
-      <p className="text-sm text-text-secondary">
-        À implémenter — {selectedIds.length} candidats sélectionnés.
-      </p>
-    </section>
-  );
-}
-
-export function RisquesComparisonPlaceholder() {
-  return <Placeholder label="Risques" />;
-}
-
 export function ComparisonEmptyState() {
   return (
     <section className="rounded border border-rule bg-bg-subtle p-8 text-center">
