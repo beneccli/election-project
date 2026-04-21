@@ -49,4 +49,4 @@ candidates/**/current
 # TypeScript
 *.tsbuildinfo
 
-
+notes.txt
