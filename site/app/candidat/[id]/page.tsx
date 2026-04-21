@@ -6,6 +6,7 @@ import { NavBar } from "@/components/chrome/NavBar";
 import { Hero } from "@/components/chrome/Hero";
 import { SectionNav } from "@/components/chrome/SectionNav";
 import { TransparencyFooter } from "@/components/chrome/TransparencyFooter";
+import { TransparencyDrawer } from "@/components/chrome/TransparencyDrawer";
 import { SyntheseSection } from "@/components/sections/SyntheseSection";
 import { PositionnementSection } from "@/components/sections/PositionnementSection";
 import { DomainesSection } from "@/components/sections/DomainesSection";
@@ -55,6 +56,11 @@ export default async function CandidatePage({ params }: RouteParams) {
         <RisquesSection aggregated={aggregated} />
       </main>
       <TransparencyFooter id={id} versionMeta={versionMeta} />
+      <TransparencyDrawer
+        id={id}
+        versionMeta={versionMeta}
+        aggregated={aggregated}
+      />
     </>
   );
 }
