@@ -15,6 +15,7 @@ dist/
 
 # Generated static artifacts (copied from candidates/ at build time)
 site/public/candidates/
+site/public/prompts/
 
 # Environment
 .env

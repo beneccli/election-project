@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/copy-candidate-artifacts.ts",
+    "prebuild": "tsx scripts/copy-candidate-artifacts.ts && tsx scripts/copy-prompts.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
