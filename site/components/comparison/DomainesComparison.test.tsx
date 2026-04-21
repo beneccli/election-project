@@ -25,6 +25,7 @@ function makeProjection(
     party,
     partyShort: party.slice(0, 3).toUpperCase(),
     updatedAt: "2026-01-01T00:00:00Z",
+    versionDate: "2026-01-01",
     isFictional: true,
     analyzable: true,
     overallGrade: "C",

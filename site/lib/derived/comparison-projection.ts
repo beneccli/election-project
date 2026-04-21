@@ -65,6 +65,10 @@ export interface ComparisonProjection {
   partyShort: string;
   /** Updated-at timestamp from root candidate metadata. */
   updatedAt: string;
+  /** Version folder date (YYYY-MM-DD) from versionMeta.version_date.
+   *  Used by the scoped /comparer transparency footer to link to the
+   *  per-version `metadata.json`. */
+  versionDate: string;
   /** Mirrors `meta.is_fictional`. Used by the picker to filter at build
    *  time when `EXCLUDE_FICTIONAL=1`. */
   isFictional: boolean;
@@ -121,7 +125,7 @@ function riskLevelIndex(level: RiskLevel | null): RiskLevelIndex {
 export function deriveComparisonProjection(
   bundle: CandidateBundle,
 ): ComparisonProjection {
-  const { meta, aggregated } = bundle;
+  const { meta, versionMeta, aggregated } = bundle;
   const topGrade = deriveTopLevelGrade(aggregated);
 
   const positioning: Array<number | null> = AXIS_KEYS.map(
@@ -152,6 +156,7 @@ export function deriveComparisonProjection(
     party: meta.party,
     partyShort: partyShort(meta.party),
     updatedAt: meta.updated,
+    versionDate: versionMeta.version_date,
     isFictional: meta.is_fictional === true,
     analyzable: true,
     overallGrade: topGrade.letter,
