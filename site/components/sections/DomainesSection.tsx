@@ -174,7 +174,7 @@ function DimensionRow({
   );
 }
 
-function ModelGradeRow({
+function _ModelGradeRow({
   consensus,
   dissent,
 }: {

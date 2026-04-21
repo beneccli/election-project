@@ -57,7 +57,7 @@ Format: `M_<FeatureCluster>`
 | M_WebsiteCore | ✅ Done | Next.js (App Router + static export), candidate page, build-time data loading |
 | M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
 | M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
-| M_Transparency | � In Progress | Transparency drawer — raw outputs, prompts, sources exposed |
+| M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
 
@@ -387,7 +387,7 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_WebsiteCore + M_CandidatePagePolish (reuses the `<Drawer>` primitive shipped there)
 
-**Status:** 🚧 In Progress. Spike `0090` active (2026-04-21); implementation tasks `0091`–`0098` in `tasks/backlog/M_Transparency/`.
+**Status:** ✅ Done (2026-04-21). Spike `0090` + implementation tasks `0091`–`0098` archived under `tasks/archive/M_Transparency/`.
 
 **Spike produces:**
 - `docs/specs/website/transparency.md` promoted Draft → **Stable (v1.1)** via task `0098`
