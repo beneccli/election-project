@@ -1,5 +1,6 @@
 // See docs/specs/website/nextjs-architecture.md §5.2
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { listCandidates, loadCandidate } from "@/lib/candidates";
 import { NavBar } from "@/components/chrome/NavBar";
@@ -47,6 +48,18 @@ export default async function CandidatePage({ params }: RouteParams) {
     <>
       <NavBar meta={meta} />
       <Hero meta={meta} versionMeta={versionMeta} aggregated={aggregated} />
+      <div className="border-b border-rule bg-bg">
+        <div className="mx-auto flex max-w-content justify-end px-8 py-2">
+          <Link
+            href={`/comparer?c=${encodeURIComponent(id)}`}
+            data-cta="compare-from-candidate"
+            className="inline-flex items-center gap-1 text-xs font-medium text-text-secondary underline decoration-dotted underline-offset-4 hover:text-text"
+          >
+            Comparer à un autre candidat
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </div>
       <SectionNav />
       <main className="mx-auto max-w-content px-8 pb-32">
         <SyntheseSection aggregated={aggregated} />

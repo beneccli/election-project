@@ -3,7 +3,7 @@
 //
 // Overlaid per-candidate radar for the /comparer page. Renders exactly
 // N polygons for N selected candidates — NO median, NO average polygon
-// (editorial principle: no cardinal averaging, no synthesized winner).
+// (editorial principle: no cardinal averaging, no synthesized ranking).
 
 import { AXES } from "@/lib/anchors";
 import { useLang } from "@/lib/lang-context";
