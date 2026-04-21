@@ -10,6 +10,7 @@ import { SectionHead } from "@/components/chrome/SectionHead";
 import { Drawer } from "@/components/chrome/Drawer";
 import { IntergenSplitPanel } from "@/components/widgets/IntergenSplitPanel";
 import { IntergenHorizonTable } from "@/components/widgets/IntergenHorizonTable";
+import { SourceRef } from "@/components/widgets/SourceRef";
 
 const DIRECTION_LABELS: Record<string, string> = {
   young_to_old: "Des jeunes vers les aînés",
@@ -101,11 +102,8 @@ export function IntergenSection({
             </div>
             <ul className="m-0 flex flex-wrap list-none gap-1 p-0">
               {ig.source_refs.map((ref, i) => (
-                <li
-                  key={`${ref}-${i}`}
-                  className="inline-flex items-center rounded-sm border border-rule-light bg-bg px-1.5 py-[2px] font-mono text-[10px] text-text-tertiary"
-                >
-                  {ref}
+                <li key={`${ref}-${i}`} className="inline-flex">
+                  <SourceRef>{ref}</SourceRef>
                 </li>
               ))}
             </ul>
