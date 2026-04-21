@@ -8,21 +8,32 @@
 // This module MUST only be imported from server components / build-time
 // scripts. It uses `node:fs` via `./candidates`.
 
-import { listCandidates, loadCandidate } from "./candidates";
+import {
+  listCandidates,
+  loadCandidate,
+  type CandidateBundle,
+  type CandidateIndexEntry,
+} from "./candidates";
 import {
   deriveComparisonProjection,
   type ComparisonEntry,
 } from "./derived/comparison-projection";
 
-export function listComparisonProjections(): ComparisonEntry[] {
-  const entries: ComparisonEntry[] = [];
-  for (const row of listCandidates()) {
+/**
+ * Pure core: given a list of index rows and a bundle loader, build the
+ * comparison entries. Exported for unit tests that inject a stub loader.
+ */
+export function buildComparisonEntries(
+  rows: readonly CandidateIndexEntry[],
+  load: (id: string) => CandidateBundle,
+): ComparisonEntry[] {
+  const out: ComparisonEntry[] = [];
+  for (const row of rows) {
     try {
-      const bundle = loadCandidate(row.id);
-      entries.push(deriveComparisonProjection(bundle));
+      out.push(deriveComparisonProjection(load(row.id)));
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
-      entries.push({
+      out.push({
         id: row.id,
         displayName: row.displayName,
         updatedAt: row.updatedAt,
@@ -31,5 +42,9 @@ export function listComparisonProjections(): ComparisonEntry[] {
       });
     }
   }
-  return entries;
+  return out;
+}
+
+export function listComparisonProjections(): ComparisonEntry[] {
+  return buildComparisonEntries(listCandidates(), loadCandidate);
 }
