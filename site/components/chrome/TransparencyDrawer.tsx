@@ -10,6 +10,7 @@ import {
 } from "@/lib/transparency-hash";
 import { useTransparencyHash } from "@/lib/use-transparency-hash";
 import { SourcesTab } from "@/components/transparency/SourcesTab";
+import { DocumentTab } from "@/components/transparency/DocumentTab";
 
 const TAB_ORDER: readonly TransparencyTab[] = [
   "sources",
@@ -149,6 +150,9 @@ export function TransparencyDrawerChrome({
                   tab={t}
                   id={id}
                   versionDate={versionMeta.version_date}
+                  humanReviewCompleted={
+                    versionMeta.aggregation?.human_review_completed ?? false
+                  }
                   state={state}
                   onStateChange={onStateChange}
                 />
@@ -278,12 +282,14 @@ function TabBody({
   tab,
   id,
   versionDate,
+  humanReviewCompleted,
   state,
   onStateChange,
 }: {
   tab: TransparencyTab;
   id: string;
   versionDate: string;
+  humanReviewCompleted: boolean;
   state: TransparencyHashState | null;
   onStateChange: (next: TransparencyHashState | null) => void;
 }) {
@@ -304,6 +310,18 @@ function TabBody({
             )
           }
           onRequestDocumentTab={() => onStateChange({ tab: "document" })}
+        />
+      );
+    }
+    case "document": {
+      const anchor =
+        state && state.tab === "document" ? state.anchor : undefined;
+      return (
+        <DocumentTab
+          id={id}
+          versionDate={versionDate}
+          humanReviewCompleted={humanReviewCompleted}
+          anchor={anchor}
         />
       );
     }
