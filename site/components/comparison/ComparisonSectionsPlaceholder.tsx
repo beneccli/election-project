@@ -85,9 +85,6 @@ function Placeholder({ label }: { label: string }) {
   );
 }
 
-export function IntergenComparisonPlaceholder() {
-  return <Placeholder label="Intergénérationnel" />;
-}
 export function RisquesComparisonPlaceholder() {
   return <Placeholder label="Risques" />;
 }
