@@ -9,9 +9,9 @@ import {
   ComparisonEmptyState,
   DomainesComparisonPlaceholder,
   IntergenComparisonPlaceholder,
-  PositionnementComparisonPlaceholder,
   RisquesComparisonPlaceholder,
 } from "@/components/comparison/ComparisonSectionsPlaceholder";
+import { PositionnementComparison } from "@/components/comparison/PositionnementComparison";
 
 export const metadata: Metadata = {
   title: "Comparer les programmes · Élection 2027",
@@ -44,7 +44,7 @@ export default function ComparerPage() {
             emptyState={<ComparisonEmptyState />}
           >
             <CandidateSelector />
-            <PositionnementComparisonPlaceholder />
+            <PositionnementComparison />
             <DomainesComparisonPlaceholder />
             <IntergenComparisonPlaceholder />
             <RisquesComparisonPlaceholder />

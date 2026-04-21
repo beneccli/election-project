@@ -85,9 +85,6 @@ function Placeholder({ label }: { label: string }) {
   );
 }
 
-export function PositionnementComparisonPlaceholder() {
-  return <Placeholder label="Positionnement" />;
-}
 export function DomainesComparisonPlaceholder() {
   return <Placeholder label="Domaines" />;
 }
