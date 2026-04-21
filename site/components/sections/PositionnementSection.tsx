@@ -29,11 +29,8 @@ export function PositionnementSection({
         la ligne par axe, avec intervalle de consensus et points de
         désaccord.
       </p>
-      <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[340px_1fr]">
-        <div className="flex flex-col items-center lg:items-start">
-          {/* Radar hidden below sm: at narrow widths the 280x280 SVG
-              is unreadably small; the axis list below (AxisAgreementBars)
-              is the mobile fallback. See visual-components.md §4.1. */}
+      <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[280px_1fr]">
+        <div className="flex flex-col items-center gap-4">
           <InteractivePositioningRadar shape={shape} />
         </div>
         <div>

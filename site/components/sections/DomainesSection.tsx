@@ -125,9 +125,9 @@ function DimensionRow({
     >
       <GradeBadge grade={consensus} size="md" />
 
-      <div className="flex min-w-0 flex-1 flex-col gap-1.5">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="font-display text-base font-bold text-text">
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="text-base font-bold text-text">
             {label}
           </span>
           {dissentCount > 0 ? (
@@ -142,7 +142,7 @@ function DimensionRow({
                   />
                 }
               >
-                <span className="rounded-sm border border-risk-red/40 bg-risk-red/10 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-risk-red">
+                <span className="px-1.5 text-[10px] font-bold uppercase tracking-wider text-risk-red">
                   ⚡ DISSENT
                 </span>
               </Tooltip>
@@ -152,18 +152,19 @@ function DimensionRow({
         <p className="m-0 text-sm leading-[1.45] text-text-secondary [text-wrap:pretty]">
           {dim.headline.text}
         </p>
-        <div className="flex flex-wrap items-center gap-4 text-xs text-text-tertiary">
-          <ConfidenceBar value={dim.confidence} label="confiance" />
-          <ModelGradeRow
-            consensus={consensus}
-            dissent={dim.grade.dissent}
-          />
-        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-4 text-xs text-text-tertiary">
+        <ConfidenceBar value={dim.confidence} label="confiance" />
+        {/* <ModelGradeRow
+          consensus={consensus}
+          dissent={dim.grade.dissent}
+        /> */}
       </div>
 
       <span
         aria-hidden="true"
-        className="text-xl leading-none text-text-tertiary transition-transform"
+        className="mr-3 text-xl leading-none text-text-tertiary transition-transform"
         style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
       >
         ›

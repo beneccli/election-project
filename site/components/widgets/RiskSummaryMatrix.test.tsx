@@ -98,7 +98,7 @@ describe("RiskSummaryMatrix", () => {
     expect(html).toContain("Faible");
   });
 
-  it("renders a dissent badge when a cell has dissenters", () => {
+  it("exposes dissenters via tooltip content (no inline badge)", () => {
     const dims = buildDimensions({
       social_demographic: {
         budgetary: category("moderate", ["model-b"]),
@@ -107,7 +107,9 @@ describe("RiskSummaryMatrix", () => {
     const html = renderToStaticMarkup(
       <RiskSummaryMatrix dimensions={dims} />,
     );
-    expect(html).toContain("⚡");
+    // Inline ⚡ badge is disabled in the current design; dissenters live
+    // inside the per-cell tooltip's per-model rows instead.
+    expect(html).toContain("model-b");
   });
 
   it("exposes the note and per-model levels via tooltip content", () => {
@@ -136,13 +138,22 @@ describe("RiskSummaryMatrix", () => {
     expect(html).toContain('scope="col"');
   });
 
-  it("renders a legend for the 4 ordinal levels", () => {
+  it("renders every ordinal level label in the matrix body", () => {
+    const dims = buildDimensions({
+      economic_fiscal: {
+        budgetary: category("low"),
+        implementation: category("limited"),
+        dependency: category("moderate"),
+        reversibility: category("high"),
+      },
+    });
     const html = renderToStaticMarkup(
-      <RiskSummaryMatrix dimensions={buildDimensions()} />,
+      <RiskSummaryMatrix dimensions={dims} />,
     );
-    expect(html).toContain("Légende");
-    // Each level label present at least once (already checked), but
-    // specifically the legend section mentions all four.
-    expect(html).toContain("dissensus entre modèles");
+    // The legend is currently disabled in the design; the four ordinal
+    // labels must still appear inline in the matrix itself.
+    for (const label of ["Faible", "Limité", "Modéré", "Élevé"]) {
+      expect(html).toContain(label);
+    }
   });
 });

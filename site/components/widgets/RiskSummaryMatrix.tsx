@@ -1,6 +1,7 @@
 // See docs/specs/website/candidate-page-polish.md §5.4
-// 5 dimensions × 4 risk categories matrix with ordinal level pills.
-// EDITORIAL: 4-step ordinal palette; level labels are primary signal.
+// Visual design mirrors Candidate Page.html `RiskHeatmap` (flat colored pills
+// with the level label inside, 4-step ordinal palette).
+// EDITORIAL: ordinal levels only; text label is the primary signal.
 import type { AggregatedOutput } from "@/lib/schema";
 import { DIMENSION_KEYS, type DimensionKey } from "@/lib/derived/keys";
 import { Tooltip } from "@/components/widgets/Tooltip";
@@ -40,42 +41,21 @@ const LEVEL_LABELS: Record<RiskLevel, string> = {
   high: "Élevé",
 };
 
-function levelPalette(level: RiskLevel | null): {
-  bg: string;
-  border: string;
-  fg: string;
-} {
-  if (level === null) {
-    return {
-      bg: "color-mix(in oklch, var(--text-tertiary) 8%, transparent)",
-      border: "var(--text-tertiary)",
-      fg: "var(--text-tertiary)",
-    };
-  }
-  const map: Record<RiskLevel, { bg: string; border: string; fg: string }> = {
-    low: {
-      bg: "color-mix(in oklch, oklch(0.66 0.10 145) 14%, transparent)",
-      border: "oklch(0.48 0.16 145)",
-      fg: "oklch(0.38 0.16 145)",
-    },
-    limited: {
-      bg: "color-mix(in oklch, oklch(0.80 0.12 90) 20%, transparent)",
-      border: "oklch(0.60 0.14 90)",
-      fg: "oklch(0.44 0.14 75)",
-    },
-    moderate: {
-      bg: "color-mix(in oklch, oklch(0.72 0.16 55) 22%, transparent)",
-      border: "oklch(0.58 0.18 45)",
-      fg: "oklch(0.46 0.18 40)",
-    },
-    high: {
-      bg: "color-mix(in oklch, oklch(0.62 0.22 25) 22%, transparent)",
-      border: "oklch(0.52 0.22 25)",
-      fg: "oklch(0.44 0.22 25)",
-    },
-  };
-  return map[level];
-}
+// Flat palette mirroring Candidate Page.html `RiskHeatmap` `rc(v)`.
+// Dark cells (moderate/high) use white text; light cells use near-black
+// so the label stays readable in both light and dark themes.
+const LEVEL_BG: Record<RiskLevel, string> = {
+  low: "oklch(0.88 0.06 145)",
+  limited: "oklch(0.82 0.10 90)",
+  moderate: "oklch(0.74 0.15 60)",
+  high: "oklch(0.60 0.19 30)",
+};
+const LEVEL_FG: Record<RiskLevel, string> = {
+  low: "#333",
+  limited: "#333",
+  moderate: "#fff",
+  high: "#fff",
+};
 
 function levelLabel(level: RiskLevel | null): string {
   if (level === null) return "?";
@@ -88,16 +68,16 @@ export function RiskSummaryMatrix({
   dimensions: AggregatedOutput["dimensions"];
 }) {
   return (
-    <div className="overflow-x-auto">
+    <div>
       <table
-        className="w-full min-w-[640px] border-separate border-spacing-0 text-sm"
+        className="w-full min-w-[420px] border-collapse"
         aria-label="Matrice des risques par domaine et catégorie"
       >
         <thead>
           <tr>
             <th
               scope="col"
-              className="sticky left-0 z-[1] min-w-[12rem] bg-bg py-2 pr-3 text-left align-bottom text-xs font-bold uppercase tracking-wider text-text-tertiary"
+              className="w-[200px] pr-3 pb-2.5 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
             >
               Domaine
             </th>
@@ -105,7 +85,7 @@ export function RiskSummaryMatrix({
               <th
                 key={c}
                 scope="col"
-                className="px-2 py-2 text-left align-bottom font-display text-sm font-semibold text-text"
+                className="px-1 pb-2.5 text-center text-xs font-semibold uppercase tracking-[0.05em] text-text-secondary"
               >
                 {CATEGORY_LABELS[c]}
               </th>
@@ -119,12 +99,12 @@ export function RiskSummaryMatrix({
               <tr key={dk}>
                 <th
                   scope="row"
-                  className="sticky left-0 z-[1] bg-bg py-2 pr-3 align-top text-sm font-semibold text-text"
+                  className="whitespace-nowrap py-1 pr-3 text-left text-sm font-medium text-text"
                 >
                   {DIMENSION_LABELS[dk]}
                 </th>
                 {CATEGORY_KEYS.map((ck) => (
-                  <td key={ck} className="px-1 py-1 align-top">
+                  <td key={ck} className="p-1 text-center">
                     <RiskCell cell={profile[ck]} />
                   </td>
                 ))}
@@ -133,16 +113,20 @@ export function RiskSummaryMatrix({
           })}
         </tbody>
       </table>
-      <Legend />
+      {/* <Legend /> */}
     </div>
   );
 }
 
 function RiskCell({ cell }: { cell: RiskCategory }) {
   const level = cell.modal_level as RiskLevel | null;
-  const palette = levelPalette(level);
   const label = levelLabel(level);
   const hasDissent = cell.dissenters.length > 0;
+
+  const bg = level
+    ? LEVEL_BG[level]
+    : "color-mix(in oklch, var(--text-tertiary) 12%, transparent)";
+  const fg = level ? LEVEL_FG[level] : "var(--text-secondary)";
 
   return (
     <Tooltip
@@ -150,24 +134,20 @@ function RiskCell({ cell }: { cell: RiskCategory }) {
       content={<CellTooltipContent cell={cell} />}
       className="block w-full"
     >
-      <div className="flex items-center justify-between gap-2 rounded-sm border px-2 py-1.5"
-        style={{ background: palette.bg, borderColor: palette.border }}
+      <div
+        className="relative mx-auto flex w-full items-center justify-center rounded px-1 py-[5px] text-xs font-semibold"
+        style={{ background: bg, color: fg }}
+        aria-label={`Niveau de risque : ${label}`}
       >
-        <span
-          className="font-semibold"
-          style={{ color: palette.fg }}
-          aria-label={`Niveau de risque : ${label}`}
-        >
-          {label}
-        </span>
-        {hasDissent ? (
+        {label}
+        {/* {hasDissent ? (
           <span
-            className="text-[10px] font-bold text-risk-red"
             aria-label={`Dissensus : ${cell.dissenters.length} modèle(s)`}
+            className="absolute -right-1 -top-1 text-xs font-bold text-risk-red"
           >
             ⚡
           </span>
-        ) : null}
+        ) : null} */}
       </div>
     </Tooltip>
   );
@@ -185,7 +165,7 @@ function CellTooltipContent({ cell }: { cell: RiskCategory }) {
   return (
     <div className="space-y-1 text-left">
       <div className="font-semibold leading-[1.4]">{cell.note}</div>
-      <div className="font-mono text-[10px] opacity-70">{intervalLabel}</div>
+      <div className="font-mono text-xs opacity-70">{intervalLabel}</div>
       {rows.length > 0 ? (
         <div className="mt-1 space-y-0.5 border-t border-bg/30 pt-1">
           {rows.map((r) => (
@@ -208,21 +188,18 @@ function CellTooltipContent({ cell }: { cell: RiskCategory }) {
 function Legend() {
   const items: RiskLevel[] = ["low", "limited", "moderate", "high"];
   return (
-    <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-text-tertiary">
-      <span className="font-bold uppercase tracking-wider">Légende</span>
-      {items.map((lvl) => {
-        const p = levelPalette(lvl);
-        return (
-          <span key={lvl} className="inline-flex items-center gap-1.5">
-            <span
-              aria-hidden="true"
-              className="inline-block h-3 w-5 rounded-sm border"
-              style={{ background: p.bg, borderColor: p.border }}
-            />
-            {LEVEL_LABELS[lvl]}
-          </span>
-        );
-      })}
+    <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-secondary">
+      <span className="font-bold uppercase tracking-[0.06em]">Légende</span>
+      {items.map((lvl) => (
+        <span key={lvl} className="inline-flex items-center gap-1.5">
+          <span
+            aria-hidden="true"
+            className="inline-block h-3 w-5 rounded-[3px]"
+            style={{ background: LEVEL_BG[lvl] }}
+          />
+          {LEVEL_LABELS[lvl]}
+        </span>
+      ))}
       <span className="inline-flex items-center gap-1.5">
         <span aria-hidden="true" className="font-bold text-risk-red">
           ⚡

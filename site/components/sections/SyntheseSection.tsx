@@ -1,6 +1,7 @@
+"use client";
 // See docs/specs/website/nextjs-architecture.md §5.2, §4.2
 // Prototype reference: Candidate Page.html lines 446–476.
-// Server component — all deterministic derivation, no client state.
+import { useState } from "react";
 import type { AggregatedOutput } from "@/lib/schema";
 import {
   deriveSynthese,
@@ -11,6 +12,7 @@ import { SectionHead } from "@/components/chrome/SectionHead";
 import { ConfidenceDots } from "@/components/widgets/ConfidenceDots";
 import { Tooltip } from "@/components/widgets/Tooltip";
 import { dimensionLabel } from "@/lib/dimension-labels";
+import { Drawer } from "@/components/chrome/Drawer";
 
 type ColumnSpec = {
   key: "strengths" | "weaknesses" | "gaps";
@@ -82,6 +84,8 @@ export function SyntheseSection({
     aggregated.agreement_map.coverage,
   ).length;
   const consensusPct = Math.round(aggregated.summary_agreement * 100);
+  const [cfOpen, setCfOpen] = useState(false);
+  const [dsOpen, setDsOpen] = useState(false);
 
   return (
     <section
@@ -118,10 +122,48 @@ export function SyntheseSection({
         ))}
       </div>
 
-      <Counterfactual cf={aggregated.counterfactual} />
+      <div className="mb-10 flex flex-wrap gap-3">
+        <button
+          type="button"
+          onClick={() => setCfOpen(true)}
+          className="inline-flex items-center gap-2 rounded-sm border border-rule bg-bg px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          Si rien ne change
+          <span aria-hidden="true">›</span>
+        </button>
+        {aggregated.downside_scenarios.length > 0 ? (
+          <button
+            type="button"
+            onClick={() => setDsOpen(true)}
+            className="inline-flex items-center gap-2 rounded-sm border border-rule bg-bg px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            Scénarios défavorables
+            <span aria-hidden="true">›</span>
+          </button>
+        ) : null}
+      </div>
+
+      <Drawer
+        open={cfOpen}
+        onOpenChange={setCfOpen}
+        size="xl"
+        eyebrow="Synthèse"
+        title="Si rien ne change"
+        description="Trajectoire contrefactuelle : que se passerait-il sans ce programme ?"
+      >
+        <Counterfactual cf={aggregated.counterfactual} />
+      </Drawer>
 
       {aggregated.downside_scenarios.length > 0 ? (
-        <DownsideScenarios scenarios={aggregated.downside_scenarios} />
+        <Drawer
+          open={dsOpen}
+          onOpenChange={setDsOpen}
+          size="md"
+          eyebrow="Synthèse"
+          title="Scénarios défavorables"
+        >
+          <DownsideScenarios scenarios={aggregated.downside_scenarios} />
+        </Drawer>
       ) : null}
     </section>
   );
@@ -189,28 +231,7 @@ function Counterfactual({
     <div className="mb-14 rounded-md border border-rule-light bg-bg-subtle p-5">
       {/* Header: title with info tooltip + direction badge + confidence */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-bold uppercase tracking-[0.08em] text-text-secondary">
-            Si rien ne change
-          </span>
-          <Tooltip
-            content={
-              <>
-                <strong>Trajectoire contrefactuelle.</strong> Que se
-                passerait-il si la France suivait sa trajectoire actuelle, sans
-                appliquer ce programme&nbsp;? Les modèles comparent ensuite
-                cette trajectoire à celle induite par le programme.
-              </>
-            }
-          >
-            <span
-              aria-label="Définition : trajectoire contrefactuelle"
-              className="inline-flex h-4 w-4 cursor-help items-center justify-center rounded-full border border-rule text-xs font-semibold text-text-tertiary"
-            >
-              i
-            </span>
-          </Tooltip>
-        </div>
+        <div className="flex items-center gap-2"></div>
         <div className="flex items-center gap-3">
           <span
             role="status"
@@ -297,6 +318,19 @@ function Counterfactual({
   );
 }
 
+/** Parse an LLM-emitted dimension entry. Analysts may return either a bare
+ *  canonical key (`"economic_fiscal"`) or a key-prefixed description
+ *  (`"economic_fiscal: passage à un modèle..."`). We translate the key and
+ *  show the optional description alongside. Non-canonical keys fall back to
+ *  the raw string. */
+function parseDimensionEntry(raw: string): { key: string; description: string | null } {
+  const idx = raw.indexOf(":");
+  if (idx === -1) return { key: raw.trim(), description: null };
+  const key = raw.slice(0, idx).trim();
+  const description = raw.slice(idx + 1).trim();
+  return { key, description: description.length > 0 ? description : null };
+}
+
 function DimensionList({
   label,
   keys,
@@ -309,33 +343,70 @@ function DimensionList({
   filled: boolean;
 }) {
   if (keys.length === 0) return null;
+  const items = keys.map(parseDimensionEntry);
+  const hasDescriptions = items.some((it) => it.description !== null);
   return (
     <div className="mt-3">
       <div className="mb-1 text-xs font-semibold tracking-wider text-text-secondary">
         {label}:
       </div>
-      <ul className="m-0 flex flex-wrap list-none gap-1.5 p-0">
-        {keys.map((k) => (
-          <li
-            key={k}
-            className="inline-flex items-center rounded-sm px-2 py-[2px] text-xs"
-            style={
-              filled
-                ? {
-                    color: accentColor,
-                    background: `color-mix(in oklch, ${accentColor} 10%, transparent)`,
-                    border: `1px solid color-mix(in oklch, ${accentColor} 25%, transparent)`,
-                  }
-                : {
-                    color: "var(--text-secondary)",
-                    border: "1px dashed var(--rule)",
-                  }
-            }
-          >
-            {dimensionLabel(k, "fr")}
-          </li>
-        ))}
-      </ul>
+      {hasDescriptions ? (
+        <ul className="m-0 flex list-none flex-col gap-2 p-0">
+          {items.map((it, i) => (
+            <li key={`${it.key}-${i}`} className="flex flex-wrap items-baseline gap-2 text-xs">
+              <Tooltip
+                as="span"
+                content={
+                  <span className="[text-wrap:pretty]">
+                    {it.description}
+                  </span>
+                }
+              >
+              <span
+                className="inline-flex flex-shrink-0 items-center rounded-sm px-2 py-[2px]"
+                style={
+                  filled
+                    ? {
+                        color: accentColor,
+                        background: `color-mix(in oklch, ${accentColor} 10%, transparent)`,
+                        border: `1px solid color-mix(in oklch, ${accentColor} 25%, transparent)`,
+                      }
+                    : {
+                        color: "var(--text-secondary)",
+                        border: "1px dashed var(--rule)",
+                      }
+                }
+              >
+                {dimensionLabel(it.key, "fr")}
+              </span>
+              </Tooltip>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="m-0 flex flex-wrap list-none gap-1.5 p-0">
+          {items.map((it, i) => (
+            <li
+              key={`${it.key}-${i}`}
+              className="inline-flex items-center rounded-sm px-2 py-[2px] text-xs"
+              style={
+                filled
+                  ? {
+                      color: accentColor,
+                      background: `color-mix(in oklch, ${accentColor} 10%, transparent)`,
+                      border: `1px solid color-mix(in oklch, ${accentColor} 25%, transparent)`,
+                    }
+                  : {
+                      color: "var(--text-secondary)",
+                      border: "1px dashed var(--rule)",
+                    }
+              }
+            >
+              {dimensionLabel(it.key, "fr")}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

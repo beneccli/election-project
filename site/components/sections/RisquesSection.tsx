@@ -67,7 +67,9 @@ export function RisquesSection({
       <Drawer
         open={drawerOpen}
         onOpenChange={setDrawerOpen}
-        title="Risques d'exécution — liste complète"
+        size="xl"
+        eyebrow="Risques d'exécution"
+        title="Liste complète"
         description="Chaque ligne est un risque identifié par au moins un modèle. Probabilité et sévérité sont rapportées séparément."
       >
         <RiskHeatmap groups={groups} />

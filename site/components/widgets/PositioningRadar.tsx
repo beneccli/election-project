@@ -33,13 +33,16 @@ function toXY(i: number, val: number, n: number): [number, number] {
 export function PositioningRadar({
   shape,
   lang = "fr",
-  enabledModels,
+  highlight = null,
 }: {
   shape: RadarShape;
   lang?: Lang;
-  /** Set of model ids whose overlay polygon should be rendered. When
-   * absent or empty, only the consensus polygon is drawn. */
-  enabledModels?: ReadonlySet<string>;
+  /** Single-selection highlight matching Candidate Page.html:
+   *  - `null` → render consensus polygon (thick) plus every model overlay
+   *    (thin). Consensus is the headline shape and must dominate.
+   *  - model id → render only that model's polygon (no consensus fill).
+   *  See docs/specs/website/candidate-page-polish.md §5.1. */
+  highlight?: string | null;
 }) {
   const n = shape.axes.length;
   const consensusPoints = shape.axes
@@ -129,32 +132,50 @@ export function PositioningRadar({
           />
         );
       })}
-      {/* Consensus shape */}
-      <polygon
-        points={consensusPoints}
-        fill="var(--accent)"
-        fillOpacity={0.13}
-        stroke="var(--accent)"
-        strokeWidth={2}
-      />
-      {/* Per-model overlays. Rendered after consensus so toggled polygons
-          sit on top, but visibly secondary (thinner stroke, no fill). */}
-      {enabledModels && enabledModels.size > 0
-        ? modelPolygons
-            .filter((m) => enabledModels.has(m.id))
+      {/* Per-model overlays render FIRST (underneath) when consensus is
+          selected so the thicker consensus polygon dominates. When a
+          single model is highlighted, render only that model. */}
+      {highlight === null
+        ? modelPolygons.map((m) => (
+            <polygon
+              key={`model-${m.id}`}
+              points={m.points}
+              fill={m.color}
+              fillOpacity={0.07}
+              stroke={m.color}
+              strokeWidth={1.25}
+              strokeOpacity={0.75}
+              strokeLinejoin="round"
+              data-model={m.id}
+            />
+          ))
+        : modelPolygons
+            .filter((m) => m.id === highlight)
             .map((m) => (
               <polygon
                 key={`model-${m.id}`}
                 points={m.points}
-                fill="none"
+                fill={m.color}
+                fillOpacity={0.18}
                 stroke={m.color}
-                strokeWidth={1.25}
-                strokeOpacity={0.85}
+                strokeWidth={1.75}
+                strokeOpacity={0.95}
                 strokeLinejoin="round"
                 data-model={m.id}
               />
-            ))
-        : null}
+            ))}
+      {/* Consensus polygon — rendered last so it sits on top when shown.
+          Thick filled shape vs thin model outlines = visual dominance. */}
+      {highlight === null ? (
+        <polygon
+          points={consensusPoints}
+          fill="var(--accent)"
+          fillOpacity={0.16}
+          stroke="var(--accent)"
+          strokeWidth={3}
+          strokeLinejoin="round"
+        />
+      ) : null}
       {/* Axis labels + dissent badges */}
       {shape.axes.map((ax, i) => {
         const { x: lx, y: ly } = labelCoords[i];

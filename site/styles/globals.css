@@ -73,3 +73,36 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Right-side drawer animations. CSS animations (not transitions) so
+ * Radix Dialog waits for animationend before unmounting the panel.
+ * See site/components/chrome/Drawer.tsx. */
+@keyframes drawer-slide-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes drawer-slide-out {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+@keyframes drawer-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes drawer-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+[data-drawer-panel][data-state=open] {
+  animation: drawer-slide-in 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+[data-drawer-panel][data-state=closed] {
+  animation: drawer-slide-out 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+[data-drawer-overlay][data-state=open] {
+  animation: drawer-fade-in 250ms ease both;
+}
+[data-drawer-overlay][data-state=closed] {
+  animation: drawer-fade-out 250ms ease both;
+}

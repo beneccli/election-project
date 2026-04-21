@@ -1,6 +1,8 @@
 // See docs/specs/website/candidate-page-polish.md §5.3
 // See docs/specs/analysis/intergenerational-audit.md
-// Renders aggregated.intergenerational.horizon_matrix as a 6×3 grid.
+// Visual design mirrors Candidate Page.html `IntergenerationPanel`: a single
+// wide table with horizon columns, a trailing per-row note column, and a
+// horizontal bar + signed score per cell.
 // EDITORIAL: measurement only. Cell notes describe mechanism, not moral weight.
 import type { AggregatedOutput } from "@/lib/schema";
 import { Tooltip } from "@/components/widgets/Tooltip";
@@ -34,28 +36,14 @@ const ROW_LABELS: Record<HorizonRow["row"], string> = {
   housing: "Logement",
 };
 
-/** 7-step ordinal palette for modal_score ∈ [-3, +3]. */
-function cellBackground(score: number | null): string {
-  if (score === null) return "color-mix(in oklch, var(--text-tertiary) 8%, transparent)";
-  // Symmetric palette: red-ish negative, neutral, green-ish positive.
-  // OKLCH chroma saturates with |score|.
-  const map: Record<number, string> = {
-    [-3]: "color-mix(in oklch, oklch(0.58 0.22 25) 20%, transparent)",
-    [-2]: "color-mix(in oklch, oklch(0.62 0.16 30) 14%, transparent)",
-    [-1]: "color-mix(in oklch, oklch(0.70 0.10 35) 10%, transparent)",
-    [0]: "color-mix(in oklch, var(--text-tertiary) 6%, transparent)",
-    [1]: "color-mix(in oklch, oklch(0.66 0.10 145) 10%, transparent)",
-    [2]: "color-mix(in oklch, oklch(0.58 0.14 145) 16%, transparent)",
-    [3]: "color-mix(in oklch, oklch(0.50 0.18 145) 22%, transparent)",
-  };
-  return map[score] ?? map[0];
-}
-
-function cellAccent(score: number | null): string {
+// Palette mirroring Candidate Page.html `IntergenerationPanel` `sc(s)`.
+function scoreColor(score: number | null): string {
   if (score === null) return "var(--text-tertiary)";
-  if (score < 0) return "var(--risk-red)";
-  if (score > 0) return "oklch(0.48 0.16 145)";
-  return "var(--text-tertiary)";
+  if (score >= 2) return "oklch(0.44 0.17 145)";
+  if (score === 1) return "oklch(0.60 0.12 145)";
+  if (score === 0) return "var(--text-secondary)";
+  if (score === -1) return "oklch(0.60 0.13 30)";
+  return "oklch(0.46 0.19 20)";
 }
 
 function formatScore(score: number | null): string {
@@ -69,18 +57,17 @@ export function IntergenHorizonTable({
 }: {
   matrix: HorizonMatrix;
 }) {
-  // Preserve schema order: matrix is an array of 6 rows in a defined order.
   return (
-    <div className="overflow-x-auto">
+    <div>
       <table
-        className="w-full min-w-[680px] border-separate border-spacing-0 text-sm"
+        className="w-full min-w-[480px] border-collapse"
         aria-label="Matrice d'impact intergénérationnel par domaine et horizon"
       >
         <thead>
           <tr>
             <th
               scope="col"
-              className="sticky left-0 z-[1] min-w-[9rem] bg-bg py-2 pr-3 text-left align-bottom text-xs font-bold uppercase tracking-wider text-text-tertiary"
+              className="pr-4 pb-3 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
             >
               Domaine
             </th>
@@ -88,48 +75,43 @@ export function IntergenHorizonTable({
               <th
                 key={k}
                 scope="col"
-                className="px-2 py-2 text-left align-bottom"
+                className="px-2 pb-3 text-center text-xs"
               >
-                <div className="font-display text-sm font-semibold text-text">
+                <div className="text-sm font-bold text-text">
                   {HORIZON_COL_LABELS[k].range}
                 </div>
-                <div className="mt-0.5 text-[10px] font-normal text-text-tertiary">
+                <div className="mt-0.5 text-xs text-text-secondary">
                   {HORIZON_COL_LABELS[k].cohort}
                 </div>
               </th>
             ))}
+            <th
+              scope="col"
+              className="pl-4 pb-3 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
+            >
+              Note
+            </th>
           </tr>
         </thead>
         <tbody>
           {matrix.map((row) => (
-            <tr key={row.row}>
+            <tr key={row.row} className="border-t border-rule-light">
               <th
                 scope="row"
-                className="sticky left-0 z-[1] bg-bg py-2 pr-3 align-top"
+                className="whitespace-nowrap py-2.5 pr-4 text-left text-[13px] font-medium text-text"
               >
-                <div className="font-semibold text-text">
-                  {ROW_LABELS[row.row]}
-                </div>
-                <Tooltip as="span" content={row.dimension_note}>
-                  <div className="mt-0.5 hidden text-[11px] italic leading-[1.4] text-text-tertiary sm:line-clamp-2 sm:block">
-                    {row.dimension_note}
-                  </div>
-                  <span
-                    aria-hidden="true"
-                    className="text-[11px] italic text-text-tertiary sm:hidden"
-                  >
-                    note ›
-                  </span>
-                </Tooltip>
+                {ROW_LABELS[row.row]}
               </th>
               {HORIZON_KEYS.map((hk) => (
-                <td
-                  key={hk}
-                  className="px-1 py-1 align-top"
-                >
+                <td key={hk} className="px-2 py-2.5 text-center">
                   <HorizonCellView cell={row.cells[hk]} />
                 </td>
               ))}
+              <td className="max-w-[220px] py-2.5 pl-4 text-xs leading-[1.4] text-text-secondary">
+                <Tooltip as="span" content={<RowTooltipContent row={row} />}>
+                  <span>{row.dimension_note}</span>
+                </Tooltip>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -142,10 +124,11 @@ export function IntergenHorizonTable({
 
 function HorizonCellView({ cell }: { cell: HorizonCell }) {
   const score = cell.modal_score;
-  const accent = cellAccent(score);
-  const bg = cellBackground(score);
+  const color = scoreColor(score);
   const absScore = score === null ? 0 : Math.abs(score);
-  const barPct = `${(absScore / 3) * 100}%`;
+  // Width follows CP.html: max(|score|*16, 2) px. Zero scores render a
+  // faded 2px dot; non-zero scale linearly so ±3 = 48px.
+  const barWidth = Math.max(absScore * 16, 2);
   const hasDissent = cell.dissenters.length > 0;
   const label = formatScore(score);
 
@@ -153,41 +136,46 @@ function HorizonCellView({ cell }: { cell: HorizonCell }) {
     <Tooltip
       as="div"
       content={<CellTooltipContent cell={cell} />}
-      className="block w-full"
+      className="inline-block"
     >
-      <div
-        className="rounded-sm border border-rule-light p-2"
-        style={{ background: bg }}
-      >
-        <div className="flex items-center justify-between gap-2">
+      <div className="relative flex items-center justify-center gap-1.5">
+        <div
+          aria-hidden="true"
+          className="h-[6px] rounded-[3px]"
+          style={{
+            width: `${barWidth}px`,
+            background: color,
+            opacity: score === 0 ? 0.3 : 1,
+          }}
+        />
+        <span
+          className="min-w-[16px] text-xs font-semibold"
+          style={{ color }}
+          aria-label={`Score modal ${label}`}
+        >
+          {label}
+        </span>
+        {/* {hasDissent ? (
           <span
-            className="inline-flex min-w-[2.25rem] items-center justify-center rounded-full px-2 py-0.5 font-mono text-sm font-bold tabular-nums"
-            style={{
-              color: accent,
-              border: `1px solid ${accent}`,
-              background: "color-mix(in oklch, var(--bg) 60%, transparent)",
-            }}
-            aria-label={`Score modal ${label}`}
+            aria-label={`Dissensus : ${cell.dissenters.length} modèle(s)`}
+            className="absolute -right-2 -top-1 text-xs font-bold text-risk-red"
           >
-            {label}
+            ⚡
           </span>
-          {hasDissent ? (
-            <span
-              className="text-[10px] font-bold text-risk-red"
-              aria-label={`Dissensus : ${cell.dissenters.length} modèle(s)`}
-            >
-              ⚡
-            </span>
-          ) : null}
-        </div>
-        <div className="mt-1.5 h-[4px] w-full rounded-full bg-rule overflow-hidden" aria-hidden="true">
-          <div
-            className="h-full rounded-full"
-            style={{ width: barPct, background: accent }}
-          />
-        </div>
+        ) : null} */}
       </div>
     </Tooltip>
+  );
+}
+
+function RowTooltipContent({ row }: { row: HorizonRow }) {
+  return (
+    <div className="space-y-1 text-left">
+      <div className="font-semibold leading-[1.4]">
+        {ROW_LABELS[row.row]}
+      </div>
+      <div className="leading-[1.4]">{row.dimension_note}</div>
+    </div>
   );
 }
 
@@ -203,9 +191,7 @@ function CellTooltipContent({ cell }: { cell: HorizonCell }) {
   return (
     <div className="space-y-1 text-left">
       <div className="font-semibold leading-[1.4]">{cell.note}</div>
-      <div className="font-mono text-[10px] opacity-70">
-        {intervalLabel}
-      </div>
+      <div className="font-mono text-[10px] opacity-70">{intervalLabel}</div>
       {rows.length > 0 ? (
         <div className="mt-1 space-y-0.5 border-t border-bg/30 pt-1">
           {rows.map((r) => (
@@ -224,22 +210,24 @@ function CellTooltipContent({ cell }: { cell: HorizonCell }) {
 }
 
 function Legend() {
-  const items: { label: string; score: -3 | -2 | 0 | 2 | 3 }[] = [
-    { label: "Très négatif", score: -3 },
-    { label: "Négatif", score: -2 },
-    { label: "Neutre", score: 0 },
-    { label: "Positif", score: 2 },
+  const items: { label: string; score: -3 | -1 | 0 | 1 | 3 }[] = [
     { label: "Très positif", score: 3 },
+    { label: "Positif", score: 1 },
+    { label: "Neutre", score: 0 },
+    { label: "Négatif", score: -1 },
+    { label: "Très négatif", score: -3 },
   ];
   return (
-    <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-text-tertiary">
-      <span className="font-bold uppercase tracking-wider">Légende</span>
+    <div className="mt-4 flex flex-wrap gap-4 text-[10px] text-text-secondary">
       {items.map((it) => (
         <span key={it.score} className="inline-flex items-center gap-1.5">
           <span
             aria-hidden="true"
-            className="inline-block h-3 w-5 rounded-sm border border-rule-light"
-            style={{ background: cellBackground(it.score) }}
+            className="inline-block h-[5px] rounded-[2px]"
+            style={{
+              width: `${Math.max(Math.abs(it.score) * 5, 2)}px`,
+              background: scoreColor(it.score),
+            }}
           />
           {it.label}
         </span>

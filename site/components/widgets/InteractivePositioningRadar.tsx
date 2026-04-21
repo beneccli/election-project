@@ -1,7 +1,11 @@
 "use client";
-// Client wrapper that owns the `enabledModels` state shared between the
-// radar overlay and the legend/toggle panel. See spec:
+// Client wrapper that owns the single `highlight` selection shared between
+// the radar overlay and the toggle list. See spec:
 // docs/specs/website/candidate-page-polish.md §5.1.
+//
+// Semantics mirror `Candidate Page.html`:
+//  - highlight = null → show consensus (thick) + every model overlay.
+//  - highlight = id   → show only that model's polygon (no consensus fill).
 import { useCallback, useState } from "react";
 import type { RadarShape } from "@/lib/derived/positioning-shape";
 import { PositioningRadar } from "./PositioningRadar";
@@ -12,39 +16,21 @@ export function InteractivePositioningRadar({
 }: {
   shape: RadarShape;
 }) {
-  const [enabled, setEnabled] = useState<ReadonlySet<string>>(
-    () => new Set(),
-  );
-
-  const onToggle = useCallback((id: string) => {
-    setEnabled((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  }, []);
-
-  const onAll = useCallback(() => {
-    setEnabled(new Set(shape.models.map((m) => m.id)));
-  }, [shape.models]);
-
-  const onNone = useCallback(() => {
-    setEnabled(new Set());
+  const [highlight, setHighlight] = useState<string | null>(null);
+  const onSelect = useCallback((id: string | null) => {
+    setHighlight(id);
   }, []);
 
   return (
-    <>
+    <div className="flex w-full flex-col items-center gap-4">
       <div className="hidden sm:block">
-        <PositioningRadar shape={shape} enabledModels={enabled} />
+        <PositioningRadar shape={shape} highlight={highlight} />
       </div>
       <PositioningToggles
         models={shape.models}
-        enabled={enabled}
-        onToggle={onToggle}
-        onAll={onAll}
-        onNone={onNone}
+        highlight={highlight}
+        onSelect={onSelect}
       />
-    </>
+    </div>
   );
 }
