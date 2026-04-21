@@ -11,6 +11,7 @@ import {
 import { useTransparencyHash } from "@/lib/use-transparency-hash";
 import { SourcesTab } from "@/components/transparency/SourcesTab";
 import { DocumentTab } from "@/components/transparency/DocumentTab";
+import { PromptsTab } from "@/components/transparency/PromptsTab";
 
 const TAB_ORDER: readonly TransparencyTab[] = [
   "sources",
@@ -149,10 +150,8 @@ export function TransparencyDrawerChrome({
                 <TabBody
                   tab={t}
                   id={id}
-                  versionDate={versionMeta.version_date}
-                  humanReviewCompleted={
-                    versionMeta.aggregation?.human_review_completed ?? false
-                  }
+                  versionMeta={versionMeta}
+                  aggregated={aggregated}
                   state={state}
                   onStateChange={onStateChange}
                 />
@@ -281,18 +280,21 @@ function SummaryRow({
 function TabBody({
   tab,
   id,
-  versionDate,
-  humanReviewCompleted,
+  versionMeta,
+  aggregated: _aggregated,
   state,
   onStateChange,
 }: {
   tab: TransparencyTab;
   id: string;
-  versionDate: string;
-  humanReviewCompleted: boolean;
+  versionMeta: VersionMetadata;
+  aggregated: AggregatedOutput;
   state: TransparencyHashState | null;
   onStateChange: (next: TransparencyHashState | null) => void;
 }) {
+  const versionDate = versionMeta.version_date;
+  const humanReviewCompleted =
+    versionMeta.aggregation?.human_review_completed ?? false;
   switch (tab) {
     case "sources": {
       const selectedFile =
@@ -322,6 +324,16 @@ function TabBody({
           versionDate={versionDate}
           humanReviewCompleted={humanReviewCompleted}
           anchor={anchor}
+        />
+      );
+    }
+    case "prompts": {
+      const highlightedSha =
+        state && state.tab === "prompts" ? state.sha : undefined;
+      return (
+        <PromptsTab
+          versionMeta={versionMeta}
+          highlightedSha={highlightedSha}
         />
       );
     }
