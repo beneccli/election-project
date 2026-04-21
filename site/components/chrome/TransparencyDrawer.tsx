@@ -12,6 +12,7 @@ import { useTransparencyHash } from "@/lib/use-transparency-hash";
 import { SourcesTab } from "@/components/transparency/SourcesTab";
 import { DocumentTab } from "@/components/transparency/DocumentTab";
 import { PromptsTab } from "@/components/transparency/PromptsTab";
+import { ResultsTab } from "@/components/transparency/ResultsTab";
 
 const TAB_ORDER: readonly TransparencyTab[] = [
   "sources",
@@ -281,7 +282,7 @@ function TabBody({
   tab,
   id,
   versionMeta,
-  aggregated: _aggregated,
+  aggregated,
   state,
   onStateChange,
 }: {
@@ -334,6 +335,17 @@ function TabBody({
         <PromptsTab
           versionMeta={versionMeta}
           highlightedSha={highlightedSha}
+        />
+      );
+    }
+    case "results": {
+      return (
+        <ResultsTab
+          id={id}
+          versionMeta={versionMeta}
+          aggregated={aggregated}
+          state={state}
+          onStateChange={onStateChange}
         />
       );
     }
