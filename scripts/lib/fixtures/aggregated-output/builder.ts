@@ -10,7 +10,7 @@
  *
  * See docs/specs/analysis/aggregation.md (Stable).
  */
-import type { AggregatedOutput } from "../../schema";
+import type { AggregatedOutput, HorizonRowKey } from "../../schema";
 
 const MODEL_A = "claude-opus-4-0-20250514";
 const MODEL_B = "gpt-4.1-2025-04-14";
@@ -35,10 +35,49 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
     ],
     confidence: 0.75,
     dissent: [],
+    per_model: [
+      {
+        model: MODEL_A,
+        score: -2,
+        reasoning: "Multiple structural public-sector expansions.",
+      },
+      {
+        model: MODEL_B,
+        score: -2,
+        reasoning: "Interventionist economic program signals.",
+      },
+      {
+        model: MODEL_C,
+        score: -3,
+        reasoning: "Read as more strongly state-led.",
+      },
+    ],
   };
 
   const dimensionBody = {
     grade: { consensus: "B" as const, dissent: { [MODEL_C]: "C" as const } },
+    headline: {
+      text:
+        "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+      supported_by: [MODEL_A, MODEL_B, MODEL_C],
+      dissenters: [],
+      per_model: [
+        {
+          model: MODEL_A,
+          text:
+            "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        },
+        {
+          model: MODEL_B,
+          text:
+            "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes.",
+        },
+        {
+          model: MODEL_C,
+          text: "Déficit ramené à 3% en 2030 sans détail sur les recettes.",
+        },
+      ],
+    },
     summary: "Program addresses the main fiscal questions partially.",
     problems_addressed: [
       {
@@ -87,11 +126,136 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
         ...provenance,
       },
     ],
+    risk_profile: {
+      budgetary: {
+        modal_level: "moderate" as const,
+        level_interval: ["limited", "moderate"] as [
+          "limited",
+          "moderate",
+        ],
+        note: "Targets stated but no counter-measures if growth underperforms.",
+        supported_by: [MODEL_A, MODEL_B, MODEL_C],
+        dissenters: [],
+        per_model: [
+          {
+            model: MODEL_A,
+            level: "moderate" as const,
+            note: "No counter-measures described.",
+          },
+          {
+            model: MODEL_B,
+            level: "moderate" as const,
+            note: "Assumes growth hits targets.",
+          },
+          {
+            model: MODEL_C,
+            level: "limited" as const,
+            note: "Read as reasonably funded.",
+          },
+        ],
+      },
+      implementation: {
+        modal_level: "limited" as const,
+        level_interval: ["low", "limited"] as ["low", "limited"],
+        note: "Relies on existing administrative levers.",
+        supported_by: [MODEL_A, MODEL_B, MODEL_C],
+        dissenters: [],
+        per_model: [
+          {
+            model: MODEL_A,
+            level: "limited" as const,
+            note: "Standard levers only.",
+          },
+          {
+            model: MODEL_B,
+            level: "limited" as const,
+            note: "No new institutions required.",
+          },
+          {
+            model: MODEL_C,
+            level: "low" as const,
+            note: "Easy to implement.",
+          },
+        ],
+      },
+      dependency: {
+        modal_level: "low" as const,
+        level_interval: ["low", "low"] as ["low", "low"],
+        note: "No single external dependency identified.",
+        supported_by: [MODEL_A, MODEL_B, MODEL_C],
+        dissenters: [],
+        per_model: [
+          { model: MODEL_A, level: "low" as const, note: "No lock-in." },
+          { model: MODEL_B, level: "low" as const, note: "No lock-in." },
+          { model: MODEL_C, level: "low" as const, note: "No lock-in." },
+        ],
+      },
+      reversibility: {
+        modal_level: "moderate" as const,
+        level_interval: ["moderate", "moderate"] as ["moderate", "moderate"],
+        note: "Could be reversed by a subsequent budget vote.",
+        supported_by: [MODEL_A, MODEL_B, MODEL_C],
+        dissenters: [],
+        per_model: [
+          {
+            model: MODEL_A,
+            level: "moderate" as const,
+            note: "Budget-vote reversible.",
+          },
+          {
+            model: MODEL_B,
+            level: "moderate" as const,
+            note: "Budget-vote reversible.",
+          },
+          {
+            model: MODEL_C,
+            level: "moderate" as const,
+            note: "Budget-vote reversible.",
+          },
+        ],
+      },
+    },
     confidence: 0.65,
   };
 
+  const aggHorizonCell = (score: number, note: string) => ({
+    modal_score: score,
+    score_interval: [
+      Math.max(-3, score - 1),
+      Math.min(3, score + 1),
+    ] as [number, number],
+    note,
+    supported_by: [MODEL_A, MODEL_B, MODEL_C],
+    dissenters: [],
+    per_model: [
+      { model: MODEL_A, score, note },
+      { model: MODEL_B, score, note },
+      { model: MODEL_C, score, note },
+    ],
+  });
+  const aggHorizonRow = (row: HorizonRowKey, base: number) => ({
+    row,
+    dimension_note: `Aggregated effect on ${row} concentrated in later horizons.`,
+    cells: {
+      h_2027_2030: aggHorizonCell(
+        Math.max(-3, Math.min(3, base - 1)),
+        "Limited near-term effect under central assumptions.",
+      ),
+      h_2031_2037: aggHorizonCell(
+        Math.max(-3, Math.min(3, base)),
+        "Central-horizon effect described.",
+      ),
+      h_2038_2047: aggHorizonCell(
+        Math.max(-3, Math.min(3, base + 1)),
+        "Long-horizon effect amplified by cumulative dynamics.",
+      ),
+    },
+    row_supported_by: [MODEL_A, MODEL_B, MODEL_C],
+    row_dissenters: [],
+  });
+
   return {
-    schema_version: "1.0",
+    schema_version: "1.1",
     candidate_id: "test-candidate",
     version_date: "2026-04-19",
     source_models: [
@@ -206,6 +370,14 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
         "Aggregated from three models reading the same intergenerational fiscal signals.",
       source_refs: ["sources.md#retraites", "sources.md#finances-publiques"],
       confidence: 0.6,
+      horizon_matrix: [
+        aggHorizonRow("pensions", 1),
+        aggHorizonRow("public_debt", -1),
+        aggHorizonRow("climate", -1),
+        aggHorizonRow("health", 0),
+        aggHorizonRow("education", 0),
+        aggHorizonRow("housing", -1),
+      ],
       agreement: {
         direction_consensus: true,
         magnitude_consensus: "interval",

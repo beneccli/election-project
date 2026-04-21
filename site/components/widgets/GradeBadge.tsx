@@ -3,9 +3,9 @@
 import { gradeColor, type GradeLetter } from "@/lib/grade-color";
 
 const SIZES = {
-  sm: { outer: 36, font: 16, sub: 9 },
-  md: { outer: 56, font: 26, sub: 12 },
-  lg: { outer: 72, font: 34, sub: 14 },
+  sm: { outer: 36, font: 18, sub: 12 },
+  md: { outer: 56, font: 28, sub: 15 },
+  lg: { outer: 72, font: 36, sub: 16 },
 } as const;
 
 export function GradeBadge({
@@ -43,7 +43,7 @@ export function GradeBadge({
       {modifier ? (
         <span
           aria-hidden="true"
-          className="absolute right-[4px] top-[2px] font-bold leading-none"
+          className="absolute right-[4px] top-[2px] font-sans font-bold leading-none"
           style={{ fontSize: sz.sub, color: col }}
         >
           {modifier}

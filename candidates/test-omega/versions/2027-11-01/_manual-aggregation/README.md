@@ -11,7 +11,7 @@
 
 ## Prompt SHA256
 
-`61157e4e8f22590dca831b248d030349a65c2aa3404cc71a829a9e01135e0153`
+`732ab4ca06b3c3e68fb7a1e07d954b9cb720c2df26eb1aa2f8c2030ec613429b`
 
 ## Per-UI flow (brief)
 

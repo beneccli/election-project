@@ -1,28 +1,28 @@
 {
   "candidate_id": "test-omega",
   "version_date": "2027-11-01",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "analysis": {
     "prompt_file": "prompts/analyze-candidate.md",
-    "prompt_sha256": "6838918439fd1b3b711af245ffd40c5813b729cdd2db7880856b854edc1f29b1",
-    "prompt_version": "0.1",
+    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
+    "prompt_version": "1.1",
     "models": {
       "gemini-manual": {
         "provider": "manual",
-        "exact_version": "gemini-pro",
+        "exact_version": "gemini-3-pro",
         "temperature": 0,
-        "run_at": "2026-04-19T09:22:06.650Z",
+        "run_at": "2026-04-20T04:19:52.703Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
-        "attested_model_version": "gemini-pro",
+        "attested_model_version": "gemini-3-pro",
         "provider_metadata_available": false
       },
       "gpt-manual": {
         "provider": "manual",
         "exact_version": "gpt-5.4-thinking-standard",
         "temperature": 0,
-        "run_at": "2026-04-19T09:35:18.083Z",
+        "run_at": "2026-04-20T04:41:19.464Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
@@ -31,32 +31,32 @@
       },
       "claude-opus-4-6": {
         "provider": "copilot",
-        "exact_version": "Claude Opus 4.6 High",
+        "exact_version": "claude opus 4.6 high",
         "temperature": 0,
-        "run_at": "2026-04-19T09:48:47.190Z",
+        "run_at": "2026-04-20T04:29:27.910Z",
         "status": "success",
         "execution_mode": "copilot-agent",
         "attested_by": "benoit",
-        "attested_model_version": "Claude Opus 4.6 High",
+        "attested_model_version": "claude opus 4.6 high",
         "provider_metadata_available": false
       }
     }
   },
   "aggregation": {
     "prompt_file": "prompts/aggregate-analyses.md",
-    "prompt_sha256": "61157e4e8f22590dca831b248d030349a65c2aa3404cc71a829a9e01135e0153",
-    "prompt_version": "0.1",
+    "prompt_sha256": "732ab4ca06b3c3e68fb7a1e07d954b9cb720c2df26eb1aa2f8c2030ec613429b",
+    "prompt_version": "1.1",
     "aggregator_model": {
       "provider": "copilot",
-      "exact_version": "claude-opus-4-1",
-      "run_at": "2026-04-19T10:05:40.918Z",
+      "exact_version": "claude-opus-4-6",
+      "run_at": "2026-04-20T05:24:40.859Z",
       "execution_mode": "copilot-agent",
       "attested_by": "copilot-aggregator",
-      "attested_model_version": "claude-opus-4-1",
+      "attested_model_version": "claude-opus-4-6",
       "provider_metadata_available": false
     },
     "human_review_completed": true,
     "reviewer": "benoit",
-    "reviewed_at": "2026-04-19T10:06:02.989Z"
+    "reviewed_at": "2026-04-20T05:25:37.884Z"
   }
 }

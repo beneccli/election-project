@@ -1,6 +1,6 @@
 # Élection 2027 — Roadmap
 
-> **Last Updated:** April 19, 2026
+> **Last Updated:** April 20, 2026
 > **Status:** Foundation phase
 > **Target:** Full public launch by Q3 2026, with candidates added and updated through election day
 
@@ -55,7 +55,8 @@ Format: `M_<FeatureCluster>`
 | Milestone | Status | Description |
 |-----------|--------|-------------|
 | M_WebsiteCore | ✅ Done | Next.js (App Router + static export), candidate page, build-time data loading |
-| M_VisualComponents | � In Progress | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
+| M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
+| M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
 | M_Transparency | 📋 Planned (spike needed) | Transparency drawer — raw outputs, prompts, sources exposed |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
@@ -340,6 +341,43 @@ Format: `M_<FeatureCluster>`
 - Landing-page and comparison-page visuals (→ M_Landing, M_Comparison)
 - Print stylesheet, full WCAG audit (→ M_Accessibility)
 - Animation choreography beyond simple CSS transitions
+
+---
+
+### M_CandidatePagePolish
+
+**Goal:** Make each section of the candidate page screenshot-worthy by aligning with the `Candidate Page.html` prototype while real aggregated data has grown richer than the prototype assumed. Four sections redesigned — Positionnement (per-model radar selector), Domaines (headline list with inline deep dive), Intergénérationnel (domain × horizon matrix), Risques (summary matrix + right-side Drawer for full list). Ships additive schema v1.1.
+
+**Depends on:** M_VisualComponents
+
+**Status:** 🚧 Planned. Spike `0080` archived (2026-04-20); implementation tasks `0081`–`0088` in `tasks/backlog/M_CandidatePagePolish/`.
+
+**Spike produces:**
+- `docs/specs/website/candidate-page-polish.md` (finalized Stable by spike `0080`)
+- Schema v1.1 (additive): `dimensions[k].headline`, `dimensions[k].risk_profile` (4 fixed categories), `intergenerational.horizon_matrix` (6 rows × 3 horizons), `positioning[axis].per_model` (aggregated, complete list). `schema_version` bumps from `"1.0"` to `"1.1"`.
+- Prompt v1.1 for `analyze-candidate.md` + `aggregate-analyses.md` with new output-structure sections and ordinal-synthesis rules.
+- `<Drawer>` primitive reusable by M_Transparency.
+
+**Non-negotiables:**
+- All new aggregated numeric fields stay ordinal (modal + interval + per-model verbatim). No cardinal averaging.
+- Fixed cell sets: 4 risk categories × 5 dimensions; 6 horizon rows × 3 horizons; must be filled for every candidate.
+- Measurement prose only in horizon-matrix and risk-profile notes (editorial principle 3).
+- Existing `DimensionDeepDive`, `IntergenSplitPanel`, `RiskHeatmap` preserved — relocated, never removed.
+
+**Key design decisions (spike `0080`):**
+- Positioning-style ordinal aggregation reused verbatim for `risk_profile` levels and `horizon_matrix` scores.
+- `test-omega` is the only candidate; migrated atomically in task `0083` between schema/prompt tasks and UI tasks.
+- Cohort labels ("Actifs 35–55 ans" etc.) are **render-time annotations**, not schema fields — schema encodes calendar horizons (`h_2027_2030`, `h_2031_2037`, `h_2038_2047`).
+- `<Drawer>` built on `@radix-ui/react-dialog`, designed as generic chrome primitive so M_Transparency can reuse it for raw-outputs / prompts / agreement map.
+- `<RiskHeatmap>` (per-risk table) preserved unchanged, relocated into the Drawer.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Transparency drawer content — raw outputs / prompts / agreement map viewer (→ M_Transparency; reuses `<Drawer>` primitive shipped here)
+- Landing and comparison pages
+- New dimensions or positioning axes
+- New per-candidate run (regenerating `test-omega` is part of task `0083`)
+- Lighthouse / WCAG audit (→ M_Accessibility)
+- Animation or motion design beyond the Drawer slide
 
 ---
 

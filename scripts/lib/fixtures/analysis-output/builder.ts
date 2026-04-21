@@ -15,6 +15,7 @@
  * See docs/specs/analysis/output-schema.md (Stable).
  */
 import type { AnalysisOutput } from "../../schema";
+import type { HorizonRowKey } from "../../schema";
 
 export function buildValidAnalysisOutput(): AnalysisOutput {
   const positioningAxis = {
@@ -33,6 +34,8 @@ export function buildValidAnalysisOutput(): AnalysisOutput {
 
   const dimensionBody = {
     grade: "B" as const,
+    headline:
+      "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
     summary: "Program addresses the main fiscal questions partially.",
     problems_addressed: [
       {
@@ -76,11 +79,57 @@ export function buildValidAnalysisOutput(): AnalysisOutput {
         magnitude: "€5bn/year",
       },
     ],
+    risk_profile: {
+      budgetary: {
+        level: "moderate" as const,
+        note: "Targets stated but no counter-measures if growth underperforms.",
+        source_refs: ["sources.md#finances-publiques"],
+      },
+      implementation: {
+        level: "limited" as const,
+        note: "Relies on existing administrative levers.",
+        source_refs: ["sources.md#finances-publiques"],
+      },
+      dependency: {
+        level: "low" as const,
+        note: "No single external dependency identified.",
+        source_refs: [],
+      },
+      reversibility: {
+        level: "moderate" as const,
+        note: "Could be reversed by a subsequent budget vote.",
+        source_refs: ["sources.md#institutions"],
+      },
+    },
     confidence: 0.65,
   };
 
+  const horizonCell = (score: number, note: string) => ({
+    impact_score: score,
+    note,
+    source_refs: ["sources.md#retraites"],
+  });
+  const horizonRow = (row: HorizonRowKey, base: number) => ({
+    row,
+    dimension_note: `Program effect on ${row} concentrated in later horizons.`,
+    cells: {
+      h_2027_2030: horizonCell(
+        Math.max(-3, Math.min(3, base - 1)),
+        "Limited near-term effect under central assumptions.",
+      ),
+      h_2031_2037: horizonCell(
+        Math.max(-3, Math.min(3, base)),
+        "Central-horizon effect described.",
+      ),
+      h_2038_2047: horizonCell(
+        Math.max(-3, Math.min(3, base + 1)),
+        "Long-horizon effect amplified by cumulative dynamics.",
+      ),
+    },
+  });
+
   return {
-    schema_version: "1.0",
+    schema_version: "1.1",
     candidate_id: "test-candidate",
     version_date: "2026-04-19",
     model: { provider: "anthropic", version: "claude-opus-4-7" },
@@ -155,6 +204,14 @@ export function buildValidAnalysisOutput(): AnalysisOutput {
         "Program preserves indexation for current cohorts while deferring transition costs.",
       source_refs: ["sources.md#retraites", "sources.md#finances-publiques"],
       confidence: 0.6,
+      horizon_matrix: [
+        horizonRow("pensions", 1),
+        horizonRow("public_debt", -1),
+        horizonRow("climate", -1),
+        horizonRow("health", 0),
+        horizonRow("education", 0),
+        horizonRow("housing", -1),
+      ],
     },
     counterfactual: {
       status_quo_trajectory:

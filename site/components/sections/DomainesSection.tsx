@@ -1,13 +1,15 @@
 "use client";
 
-// See docs/specs/website/nextjs-architecture.md §5.2, §4.4
-// Dimensions tile grid + expandable deep-dive. Client because of toggle.
+// See docs/specs/website/candidate-page-polish.md §5.2
+// Vertical list of dimensions with inline-expanding deep-dive content.
+// Headline is rendered verbatim from aggregated.dimensions[k].headline.text.
 import { useEffect, useState } from "react";
 import type { AggregatedOutput } from "@/lib/schema";
 import { DIMENSION_KEYS, type DimensionKey } from "@/lib/derived/keys";
 import { SectionHead } from "@/components/chrome/SectionHead";
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import { ConfidenceDots } from "@/components/widgets/ConfidenceDots";
+import { ConfidenceBar } from "@/components/widgets/ConfidenceBar";
 import { Tooltip } from "@/components/widgets/Tooltip";
 import type { GradeLetter } from "@/lib/grade-color";
 
@@ -26,9 +28,11 @@ export function DomainesSection({
 }: {
   aggregated: AggregatedOutput;
 }) {
-  const [active, setActive] = useState<DimensionKey | null>(null);
+  const [expanded, setExpanded] = useState<Set<DimensionKey>>(
+    () => new Set(),
+  );
 
-  // Deep-link support: #dim=<key>
+  // Deep-link support: #dim=<key> auto-expands the corresponding row.
   useEffect(() => {
     if (typeof window === "undefined") return;
     const parse = () => {
@@ -38,7 +42,13 @@ export function DomainesSection({
         match &&
         (DIMENSION_KEYS as readonly string[]).includes(match[1])
       ) {
-        setActive(match[1] as DimensionKey);
+        const key = match[1] as DimensionKey;
+        setExpanded((cur) => {
+          if (cur.has(key)) return cur;
+          const next = new Set(cur);
+          next.add(key);
+          return next;
+        });
       }
     };
     parse();
@@ -47,7 +57,12 @@ export function DomainesSection({
   }, []);
 
   const toggle = (key: DimensionKey) => {
-    setActive((cur) => (cur === key ? null : key));
+    setExpanded((cur) => {
+      const next = new Set(cur);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
   };
 
   return (
@@ -57,96 +72,144 @@ export function DomainesSection({
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
       <SectionHead label="Analyse par domaine" />
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <ul className="m-0 flex list-none flex-col p-0">
         {DIMENSION_KEYS.map((key) => {
           const dim = aggregated.dimensions[key];
-          const dissentCount = Object.values(dim.grade.dissent).filter(
-            (g) => g !== dim.grade.consensus,
-          ).length;
+          const isOpen = expanded.has(key);
           return (
-            <DimensionTile
-              key={key}
-              dimKey={key}
-              label={DIMENSION_LABELS[key]}
-              grade={dim.grade.consensus}
-              dissentCount={dissentCount}
-              dissentMap={dim.grade.dissent}
-              confidence={dim.confidence}
-              isActive={active === key}
-              onToggle={() => toggle(key)}
-            />
+            <li key={key} className="border-b border-rule last:border-b-0">
+              <DimensionRow
+                dimKey={key}
+                label={DIMENSION_LABELS[key]}
+                dim={dim}
+                isOpen={isOpen}
+                onToggle={() => toggle(key)}
+              />
+              {isOpen ? (
+                <DimensionDeepDive dimKey={key} dim={dim} />
+              ) : null}
+            </li>
           );
         })}
-      </div>
-
-      {active ? (
-        <DimensionDeepDive
-          dimKey={active}
-          dim={aggregated.dimensions[active]}
-        />
-      ) : null}
+      </ul>
     </section>
   );
 }
 
-function DimensionTile({
+function DimensionRow({
   dimKey,
   label,
-  grade,
-  dissentCount,
-  dissentMap,
-  confidence,
-  isActive,
+  dim,
+  isOpen,
   onToggle,
 }: {
   dimKey: DimensionKey;
   label: string;
-  grade: GradeLetter;
-  dissentCount: number;
-  dissentMap: Record<string, GradeLetter>;
-  confidence: number;
-  isActive: boolean;
+  dim: AggregatedOutput["dimensions"][DimensionKey];
+  isOpen: boolean;
   onToggle: () => void;
 }) {
+  const consensus = dim.grade.consensus;
+  const dissentEntries = Object.entries(dim.grade.dissent);
+  const dissentCount = dissentEntries.filter(
+    ([, g]) => g !== consensus,
+  ).length;
+
   return (
     <button
       type="button"
       onClick={onToggle}
-      aria-expanded={isActive}
+      aria-expanded={isOpen}
       aria-controls={`deep-dive-${dimKey}`}
-      className={[
-        "flex flex-col items-start gap-3 rounded-md border p-4 text-left transition-colors",
-        isActive
-          ? "border-accent bg-accent-subtle"
-          : "border-rule bg-bg hover:border-accent hover:bg-bg-subtle",
-      ].join(" ")}
+      className="flex w-full flex-wrap items-center gap-4 py-5 text-left transition-colors hover:bg-bg-subtle focus:outline-none focus-visible:bg-bg-subtle"
     >
-      <GradeBadge grade={grade} size="sm" />
-      <div className="text-xs font-bold uppercase tracking-wider text-text-secondary">
-        {label}
+      <GradeBadge grade={consensus} size="md" />
+
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="text-base font-bold text-text">
+            {label}
+          </span>
+          {dissentCount > 0 ? (
+            // The tooltip is informational; prevent row toggle on click.
+            <span onClick={(e) => e.stopPropagation()}>
+              <Tooltip
+                as="span"
+                content={
+                  <GradeDissentList
+                    consensus={consensus}
+                    dissent={dim.grade.dissent}
+                  />
+                }
+              >
+                <span className="px-1.5 text-[10px] font-bold uppercase tracking-wider text-risk-red">
+                  ⚡ DISSENT
+                </span>
+              </Tooltip>
+            </span>
+          ) : null}
+        </div>
+        <p className="m-0 text-sm leading-[1.45] text-text-secondary [text-wrap:pretty]">
+          {dim.headline.text}
+        </p>
       </div>
-      <div className="flex items-center gap-2 text-xs text-text-tertiary">
-        <ConfidenceDots value={confidence} label="Confiance" />
-        {dissentCount > 0 ? (
-          // Click must not toggle the tile — tooltip is informational only.
-          <span onClick={(e) => e.stopPropagation()}>
-            <Tooltip
-              as="span"
-              content={
-                <GradeDissentList
-                  consensus={grade}
-                  dissent={dissentMap}
-                />
-              }
-            >
-              <span className="font-semibold text-risk-red">
-                ⚡ {dissentCount}
+
+      <div className="flex flex-wrap items-center gap-4 text-xs text-text-tertiary">
+        <ConfidenceBar value={dim.confidence} label="confiance" />
+        {/* <ModelGradeRow
+          consensus={consensus}
+          dissent={dim.grade.dissent}
+        /> */}
+      </div>
+
+      <span
+        aria-hidden="true"
+        className="mr-3 text-xl leading-none text-text-tertiary transition-transform"
+        style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
+      >
+        ›
+      </span>
+    </button>
+  );
+}
+
+function ModelGradeRow({
+  consensus,
+  dissent,
+}: {
+  consensus: GradeLetter;
+  dissent: Record<string, GradeLetter>;
+}) {
+  const entries = Object.entries(dissent).sort(([a], [b]) =>
+    a.localeCompare(b),
+  );
+  if (entries.length === 0) return null;
+  return (
+    <span className="flex flex-wrap items-center gap-1 font-mono">
+      {entries.map(([model, g], i) => {
+        const diverges = g !== consensus;
+        return (
+          <span key={model} className="inline-flex items-center gap-1">
+            {i > 0 ? (
+              <span aria-hidden="true" className="opacity-40">
+                ·
+              </span>
+            ) : null}
+            <Tooltip as="span" content={model}>
+              <span
+                className={
+                  diverges
+                    ? "font-semibold text-risk-red"
+                    : "text-text-tertiary"
+                }
+              >
+                {g === "NOT_ADDRESSED" ? "—" : g}
               </span>
             </Tooltip>
           </span>
-        ) : null}
-      </div>
-    </button>
+        );
+      })}
+    </span>
   );
 }
 
@@ -157,7 +220,6 @@ function GradeDissentList({
   consensus: GradeLetter;
   dissent: Record<string, GradeLetter>;
 }) {
-  // Stable ordering by model id; consensus row pinned first.
   const rows = Object.entries(dissent).sort(([a], [b]) => a.localeCompare(b));
   return (
     <div className="space-y-1">
@@ -197,11 +259,8 @@ function DimensionDeepDive({
   return (
     <div
       id={`deep-dive-${dimKey}`}
-      className="mt-8 rounded-md border border-rule-light bg-bg-subtle p-6"
+      className="mb-6 ml-[72px] mt-1 rounded-md border border-rule-light bg-bg-subtle p-6"
     >
-      <h3 className="mb-3 font-display text-2xl font-bold text-text">
-        {DIMENSION_LABELS[dimKey]}
-      </h3>
       <p className="mb-6 text-sm leading-[1.55] text-text-secondary [text-wrap:pretty]">
         {dim.summary}
       </p>

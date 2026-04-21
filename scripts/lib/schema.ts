@@ -284,6 +284,147 @@ const PositioningAxisSchema = z
   })
   .strict();
 
+// ---------------------------------------------------------------------------
+// v1.1 additions — risk profile, horizon matrix, dimension headline.
+// See docs/specs/website/candidate-page-polish.md §3.
+// All fields added below are additive to v1.0.
+// ---------------------------------------------------------------------------
+
+/** 4 fixed risk categories. See spec §3.2. */
+export const RiskCategoryKeySchema = z.enum([
+  "budgetary",
+  "implementation",
+  "dependency",
+  "reversibility",
+]);
+export type RiskCategoryKey = z.infer<typeof RiskCategoryKeySchema>;
+
+/** Ordered 4-level risk scale. Never cardinally averaged across models. */
+export const RiskLevelSchema = z.enum([
+  "low",
+  "limited",
+  "moderate",
+  "high",
+]);
+export type RiskLevel = z.infer<typeof RiskLevelSchema>;
+
+/** Canonical ordering for `level_interval` bounds checking. */
+const RISK_LEVEL_ORDER: ReadonlyArray<RiskLevel> = [
+  "low",
+  "limited",
+  "moderate",
+  "high",
+] as const;
+const riskLevelIndex = (l: RiskLevel): number => RISK_LEVEL_ORDER.indexOf(l);
+
+/** 6 fixed horizon-matrix row keys. See spec §3.3. */
+export const HorizonRowKeySchema = z.enum([
+  "pensions",
+  "public_debt",
+  "climate",
+  "health",
+  "education",
+  "housing",
+]);
+export type HorizonRowKey = z.infer<typeof HorizonRowKeySchema>;
+
+const HORIZON_ROW_KEYS: ReadonlyArray<HorizonRowKey> = [
+  "pensions",
+  "public_debt",
+  "climate",
+  "health",
+  "education",
+  "housing",
+] as const;
+
+/** 3 fixed horizon columns. */
+export const HorizonKeySchema = z.enum([
+  "h_2027_2030",
+  "h_2031_2037",
+  "h_2038_2047",
+]);
+export type HorizonKey = z.infer<typeof HorizonKeySchema>;
+
+export const HORIZON_KEYS: ReadonlyArray<HorizonKey> = [
+  "h_2027_2030",
+  "h_2031_2037",
+  "h_2038_2047",
+] as const;
+
+/** Integer impact score in [-3, +3]. Ordinal; not cardinally averaged. */
+const ImpactScoreSchema = z.number().int().min(-3).max(3);
+
+// -------- Per-model (analysis-output) risk & horizon cell shapes ----------
+//
+// Length caps on analyst prose fields are deliberately loose: the prompt
+// targets (140 / 160 / 180 / 200 chars) stay in prompts/analyze-candidate.md
+// §10 so the LLM writes toward them, but ingest tolerates ~2× overshoot so
+// that a 160-character headline does not reject an otherwise-valid raw
+// output. The aggregator synthesizes its own tighter prose — see the
+// Aggregated* schemas below.
+
+const RiskProfileCategorySchema = z
+  .object({
+    level: RiskLevelSchema,
+    note: z.string().min(1).max(360),
+    source_refs: z.array(SourceRefSchema),
+  })
+  .strict();
+
+/** Refinement: every one of the 4 risk categories present, strict keys. */
+const RiskProfileSchema = z
+  .object({
+    budgetary: RiskProfileCategorySchema,
+    implementation: RiskProfileCategorySchema,
+    dependency: RiskProfileCategorySchema,
+    reversibility: RiskProfileCategorySchema,
+  })
+  .strict();
+
+const HorizonCellSchema = z
+  .object({
+    impact_score: ImpactScoreSchema,
+    note: z.string().min(1).max(320),
+    source_refs: z.array(SourceRefSchema),
+  })
+  .strict();
+
+const HorizonCellsSchema = z
+  .object({
+    h_2027_2030: HorizonCellSchema,
+    h_2031_2037: HorizonCellSchema,
+    h_2038_2047: HorizonCellSchema,
+  })
+  .strict();
+
+const HorizonRowSchema = z
+  .object({
+    row: HorizonRowKeySchema,
+    dimension_note: z.string().min(1).max(400),
+    cells: HorizonCellsSchema,
+  })
+  .strict();
+
+/**
+ * Per-model horizon matrix: exactly 6 rows, one per HorizonRowKey,
+ * no duplicates, any order.
+ */
+const HorizonMatrixSchema = z
+  .array(HorizonRowSchema)
+  .length(6)
+  .refine(
+    (rows) => {
+      const seen = new Set(rows.map((r) => r.row));
+      return (
+        seen.size === 6 && HORIZON_ROW_KEYS.every((k) => seen.has(k))
+      );
+    },
+    {
+      message:
+        "horizon_matrix must contain exactly one row per HorizonRowKey (pensions, public_debt, climate, health, education, housing)",
+    },
+  );
+
 /** Positioning block — the 5 fixed axes. */
 const PositioningSchema = z
   .object({
@@ -352,12 +493,14 @@ const KeyMeasureSchema = z
 const DimensionSchema = z
   .object({
     grade: DimensionGradeSchema,
+    headline: z.string().min(1).max(280),
     summary: z.string().min(1),
     problems_addressed: z.array(ProblemAddressedSchema),
     problems_ignored: z.array(ProblemIgnoredSchema),
     problems_worsened: z.array(ProblemWorsenedSchema),
     execution_risks: z.array(ExecutionRiskSchema),
     key_measures: z.array(KeyMeasureSchema),
+    risk_profile: RiskProfileSchema,
     confidence: ConfidenceSchema,
   })
   .strict();
@@ -421,6 +564,7 @@ const IntergenerationalSchema = z
       .strict(),
     impact_on_25yo_in_2027: Impact25YoSchema,
     impact_on_65yo_in_2027: Impact65YoSchema,
+    horizon_matrix: HorizonMatrixSchema,
     reasoning: z.string().min(1),
     source_refs: z.array(SourceRefSchema).min(1),
     confidence: ConfidenceSchema,
@@ -491,7 +635,7 @@ const AdversarialPassSchema = z
 
 export const AnalysisOutputSchema = z
   .object({
-    schema_version: z.string().min(1),
+    schema_version: z.literal("1.1"),
     candidate_id: z.string().regex(candidateIdPattern),
     version_date: isoDateString,
     model: z
@@ -566,6 +710,15 @@ const PositioningDissentSchema = z
   })
   .strict();
 
+/** Per-axis per-model entry — complete list of model scores (v1.1). */
+const PositioningPerModelSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    score: PositioningScoreSchema,
+    reasoning: z.string().min(1),
+  })
+  .strict();
+
 /**
  * Aggregated per-axis positioning.
  * NOTE: no `score` field. `.strict()` enforces this — any `score` key in
@@ -580,6 +733,7 @@ const AggregatedPositioningAxisSchema = z
     evidence: z.array(EvidenceRefSchema),
     confidence: ConfidenceSchema,
     dissent: z.array(PositioningDissentSchema),
+    per_model: z.array(PositioningPerModelSchema),
   })
   .strict();
 
@@ -645,15 +799,135 @@ const AggregatedGradeSchema = z
   })
   .strict();
 
+// -------- v1.1 aggregated additions: headline, risk_profile, horizon ------
+
+// Per-model headline inside aggregated.json mirrors the analyst cap (280)
+// because it stores each model's raw text verbatim. The synthesized
+// AggregatedHeadlineSchema.text below keeps the tight 140 target.
+const HeadlinePerModelSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    text: z.string().min(1).max(280),
+  })
+  .strict();
+
+const AggregatedHeadlineSchema = z
+  .object({
+    text: z.string().min(1).max(140),
+    supported_by: supportedBySchema,
+    dissenters: dissentersSchema,
+    per_model: z.array(HeadlinePerModelSchema),
+    human_edit: z.boolean().optional(),
+  })
+  .strict();
+
+const RiskLevelIntervalSchema = z
+  .tuple([RiskLevelSchema, RiskLevelSchema])
+  .refine((t) => riskLevelIndex(t[0]) <= riskLevelIndex(t[1]), {
+    message:
+      "level_interval must be ordered low <= limited <= moderate <= high",
+  });
+
+const RiskProfilePerModelSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    level: RiskLevelSchema,
+    note: z.string().min(1).max(360),
+  })
+  .strict();
+
+const AggregatedRiskCategorySchema = z
+  .object({
+    modal_level: RiskLevelSchema.nullable(),
+    level_interval: RiskLevelIntervalSchema,
+    note: z.string().min(1).max(180),
+    supported_by: supportedBySchema,
+    dissenters: dissentersSchema,
+    per_model: z.array(RiskProfilePerModelSchema),
+    human_edit: z.boolean().optional(),
+  })
+  .strict();
+
+const AggregatedRiskProfileSchema = z
+  .object({
+    budgetary: AggregatedRiskCategorySchema,
+    implementation: AggregatedRiskCategorySchema,
+    dependency: AggregatedRiskCategorySchema,
+    reversibility: AggregatedRiskCategorySchema,
+  })
+  .strict();
+
+const ScoreIntervalSchema = z
+  .tuple([ImpactScoreSchema, ImpactScoreSchema])
+  .refine((t) => t[0] <= t[1], {
+    message: "score_interval must satisfy min <= max",
+  });
+
+const HorizonCellPerModelSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    score: ImpactScoreSchema,
+    note: z.string().min(1).max(320),
+  })
+  .strict();
+
+const AggregatedHorizonCellSchema = z
+  .object({
+    modal_score: ImpactScoreSchema.nullable(),
+    score_interval: ScoreIntervalSchema,
+    note: z.string().min(1).max(160),
+    supported_by: supportedBySchema,
+    dissenters: dissentersSchema,
+    per_model: z.array(HorizonCellPerModelSchema),
+    human_edit: z.boolean().optional(),
+  })
+  .strict();
+
+const AggregatedHorizonCellsSchema = z
+  .object({
+    h_2027_2030: AggregatedHorizonCellSchema,
+    h_2031_2037: AggregatedHorizonCellSchema,
+    h_2038_2047: AggregatedHorizonCellSchema,
+  })
+  .strict();
+
+const AggregatedHorizonRowSchema = z
+  .object({
+    row: HorizonRowKeySchema,
+    dimension_note: z.string().min(1).max(200),
+    cells: AggregatedHorizonCellsSchema,
+    row_supported_by: supportedBySchema,
+    row_dissenters: dissentersSchema,
+  })
+  .strict();
+
+const AggregatedHorizonMatrixSchema = z
+  .array(AggregatedHorizonRowSchema)
+  .length(6)
+  .refine(
+    (rows) => {
+      const seen = new Set(rows.map((r) => r.row));
+      return (
+        seen.size === 6 && HORIZON_ROW_KEYS.every((k) => seen.has(k))
+      );
+    },
+    {
+      message:
+        "horizon_matrix must contain exactly one row per HorizonRowKey (pensions, public_debt, climate, health, education, housing)",
+    },
+  );
+
 const AggregatedDimensionSchema = z
   .object({
     grade: AggregatedGradeSchema,
+    headline: AggregatedHeadlineSchema,
     summary: z.string().min(1),
     problems_addressed: z.array(AggregatedProblemAddressedSchema),
     problems_ignored: z.array(AggregatedProblemIgnoredSchema),
     problems_worsened: z.array(AggregatedProblemWorsenedSchema),
     execution_risks: z.array(AggregatedExecutionRiskSchema),
     key_measures: z.array(AggregatedKeyMeasureSchema),
+    risk_profile: AggregatedRiskProfileSchema,
     confidence: ConfidenceSchema,
   })
   .strict();
@@ -686,6 +960,7 @@ const IntergenerationalAgreementSchema = z
   .strict();
 
 const AggregatedIntergenerationalSchema = IntergenerationalSchema.extend({
+  horizon_matrix: AggregatedHorizonMatrixSchema,
   agreement: IntergenerationalAgreementSchema,
 }).strict();
 
@@ -784,7 +1059,7 @@ const SourceModelEntrySchema = z
 
 export const AggregatedOutputSchema = z
   .object({
-    schema_version: z.string().min(1),
+    schema_version: z.literal("1.1"),
     candidate_id: z.string().regex(candidateIdPattern),
     version_date: isoDateString,
     source_models: z.array(SourceModelEntrySchema).min(1),

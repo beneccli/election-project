@@ -1,7 +1,7 @@
 # Analysis Prompt Design
 
-> **Version:** 1.0
-> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
+> **Version:** 1.1
+> **Status:** Stable (v1.1 additive update by M_CandidatePagePolish task `0082`, 2026-04-20)
 
 ---
 
@@ -77,6 +77,39 @@ Political positioning scores use the 5-axis methodology from [`political-positio
 - **An explicit comparison** to other public figures/parties as anchors ("more statist than X, less than Y")
 - Clear separation of rhetoric (what candidates say) from proposals (what their measures actually do)
 
+### 10. v1.1 output fields — headline, risk_profile, horizon_matrix
+
+v1.1 (2026-04-20) adds three field groups consumed by the candidate-page
+polish UI. They are purely additive — all v1.0 dimensions, grades, axes,
+and editorial rules are unchanged.
+
+- **`headline`** (per dimension, ≤140 characters). A single-sentence
+  plain-language summary of the dimension verdict. Must be consistent with
+  the dimension's `summary` and `grade`. Carries `source_refs`.
+- **`risk_profile`** (per dimension). Four fixed categories in this order:
+  `budgetary`, `implementation`, `dependency`, `reversibility`. Each
+  category has an ordinal `level` on the scale `low < limited < moderate <
+  high` plus a ≤180-char `note`. No omissions; silent categories are
+  rated `low` with a justification.
+- **`horizon_matrix`** (under `intergenerational`). Exactly six rows in
+  fixed order — `pensions`, `public_debt`, `climate`, `health`,
+  `education`, `housing` — each with three horizon cells
+  (`h_2027_2030`, `h_2031_2037`, `h_2038_2047`). Every cell carries an
+  integer `impact_score` in `[-3, +3]` where `0` = no change and `±3` is
+  reserved for transformative effects. Silent cells score `0` with
+  `"Not addressed."` as note.
+
+Risk levels and horizon scores are **ordinal**. Aggregators must not
+compute arithmetic mean across models. See
+[`aggregation.md`](aggregation.md) §4.11–4.12.
+
+### 11. Measurement-framing reminder
+
+A final reminder block points at the authoritative disallowed-language
+lists in [`editorial-principles.md §3`](editorial-principles.md) and
+[`intergenerational-audit.md`](intergenerational-audit.md). These lists
+are the single source of truth — the prompt does not duplicate them.
+
 ---
 
 ## What the prompt MUST NOT do
@@ -115,7 +148,7 @@ Every run records in the version's `metadata.json`:
 {
   "prompt_file": "prompts/analyze-candidate.md",
   "prompt_sha256": "...",
-  "prompt_version": "1.0",
+  "prompt_version": "1.1",
   "models": {
     "claude-opus-4-7": {
       "provider": "anthropic",

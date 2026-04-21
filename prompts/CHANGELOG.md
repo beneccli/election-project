@@ -3,6 +3,83 @@
 All changes to files in `prompts/` are recorded here. See
 [`prompts/README.md`](README.md) for the versioning rules.
 
+## 2026-04-20 — aggregate-analyses.md 1.1
+
+**Change:** Additive synthesis rules for the v1.1 output layer used by the
+candidate-page polish milestone. New aggregation sections:
+
+- §4.3 addendum — require a complete `per_model[]` roll-call on every
+  positioning axis (still ordinal, still no aggregated `score` field).
+- §4.10 Headline synthesis — plurality `text` (≤140 chars), `supported_by`
+  / `dissenters`, and verbatim `per_model[]` for every dimension.
+- §4.11 Risk-profile aggregation — four fixed categories (`budgetary`,
+  `implementation`, `dependency`, `reversibility`), ordinal scale
+  `low < limited < moderate < high`, modal + ordered `level_interval` +
+  verbatim per-model list. Arithmetic mean explicitly forbidden.
+- §4.12 Horizon-matrix aggregation — six fixed rows × three horizons,
+  integer `impact_score` in `[-3, +3]`, modal + `score_interval` +
+  verbatim per-model list. Arithmetic mean explicitly forbidden.
+- JSON skeleton and field-level constraints updated to `schema_version
+  "1.1"` / `prompt_version "1.1"` with the new aggregated shapes.
+
+**Why:** The candidate page (`M_CandidatePagePolish`) surfaces a headline,
+a risk-profile radar, and a horizon matrix. These UI surfaces need an
+aggregated shape that preserves per-model dissent (radar overlay), ordinal
+structure (no false averages), and the existing inline-provenance pattern.
+
+**Impact:** Aggregated outputs produced with this prompt validate against
+`AggregatedOutputSchema` v1.1. v1.0 outputs are not forward-compatible —
+existing aggregated fixtures were regenerated in task 0081 (schema v1.1).
+The raw-output transparency artifact is untouched.
+
+**Backward compat:** Breaking at the schema level (new required fields).
+The `schema_version` literal rejects `"1.0"`, surfacing stale outputs
+loudly rather than silently. Per §4.11 / §4.12, aggregation MUST NOT
+average risk levels or horizon scores — both are ordinal.
+
+**Related specs:**
+- `docs/specs/analysis/aggregation.md` (Stable, v1.1)
+- `docs/specs/analysis/output-schema.md` (Stable, v1.1)
+- `docs/specs/analysis/intergenerational-audit.md` (Stable, v1.1)
+- `docs/specs/website/candidate-page-polish.md` (Stable)
+
+## 2026-04-20 — analyze-candidate.md 1.1
+
+**Change:** Additive v1.1 output fields consumed by the candidate-page
+polish milestone. New sections in the prompt:
+
+- §5 JSON skeleton bumped to `schema_version: "1.1"` with `headline`,
+  `risk_profile`, and `horizon_matrix` fields.
+- §10 — field-by-field instructions for the three new outputs: 140-char
+  headline per dimension; four-category `risk_profile` on the ordinal
+  scale `low < limited < moderate < high`; 6×3 `horizon_matrix` with
+  integer `impact_score` in `[-3, +3]` (`0` = no change, `±3` reserved
+  for transformative effects) plus silent-cell rule.
+- §11 — measurement-framing reminder pointing at the authoritative
+  disallowed-language lists in `editorial-principles.md §3` and
+  `intergenerational-audit.md`.
+
+**Why:** The polished candidate page needs a screenshot-worthy headline,
+a risk radar, and a long-horizon matrix. Producing these downstream would
+require the aggregator to invent structure; producing them here keeps the
+raw-output transparency artifact complete. See `candidate-page-polish.md`.
+
+**Impact:** Analyses produced with this prompt validate against
+`AnalysisOutputSchema` v1.1. v1.0 outputs stay valid against their own
+snapshotted schema but cannot be mixed with v1.1 aggregated outputs.
+Existing per-model fixtures were regenerated in task 0081.
+
+**Backward compat:** Breaking at the schema level. The `schema_version`
+literal rejects `"1.0"`, so stale runs fail loudly. The six dimension
+clusters, five positioning axes, grade scale, and editorial rules are
+unchanged.
+
+**Related specs:**
+- `docs/specs/analysis/analysis-prompt.md` (Stable, v1.1)
+- `docs/specs/analysis/output-schema.md` (Stable, v1.1)
+- `docs/specs/analysis/intergenerational-audit.md` (Stable, v1.1)
+- `docs/specs/website/candidate-page-polish.md` (Stable)
+
 ## 2026-04-19 — aggregate-analyses.md 1.0
 
 **Change:** First production version of the meta-LLM aggregation prompt.

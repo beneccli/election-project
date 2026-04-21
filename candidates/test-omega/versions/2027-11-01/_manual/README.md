@@ -15,7 +15,7 @@
 
 ## Prompt SHA256 (record at ingest time)
 
-`6838918439fd1b3b711af245ffd40c5813b729cdd2db7880856b854edc1f29b1`
+`bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9`
 
 This hash must match when you run `npm run ingest-raw-output`; any
 mismatch means the canonical prompt changed between bundle generation

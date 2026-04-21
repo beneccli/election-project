@@ -1,7 +1,7 @@
 # Intergenerational Audit
 
-> **Version:** 1.0
-> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19)
+> **Version:** 1.1
+> **Status:** Stable (finalized by M_AnalysisPrompts spike `0020`, 2026-04-19; horizon-matrix extension from M_CandidatePagePolish spike `0080`, 2026-04-20)
 
 ---
 
@@ -108,11 +108,38 @@ From [`output-schema.md`](output-schema.md):
   "impact_on_65yo_in_2027": { ... },
   "reasoning": "string",
   "source_refs": [...],
-  "confidence": 0.6
+  "confidence": 0.6,
+  "horizon_matrix": [ ... ]
 }
 ```
 
 Both `impact_on_25yo` and `impact_on_65yo` are mandatory. A candidate's program must be analyzed from both perspectives, symmetrically.
+
+---
+
+## Horizon bands and cohort framing (v1.1)
+
+The `horizon_matrix` extends the audit with a fixed-shape time-lens of the program's estimated net effect on six life-cycle-relevant domains.
+
+**Rows (6, fixed).** `pensions`, `public_debt`, `climate`, `health`, `education`, `housing`.
+
+**Columns (3, fixed horizons).**
+
+| Key | Years | Cohort annotation (render-time) |
+|---|---|---|
+| `h_2027_2030` | 2027–2030 | Actifs 35–55 ans |
+| `h_2031_2037` | 2031–2037 | Jeunes actifs & retraités proches |
+| `h_2038_2047` | 2038–2047 | Génération Z & Alpha |
+
+Cohort annotations are **render-time labels applied by the site**, not schema fields. The schema carries only the horizon keys so that the analytical framing stays horizon-first and cohort-as-consequence. This is the same measurement-over-indictment principle that governs the rest of this section.
+
+**Cells.** Each cell carries an integer `impact_score` in `[−3, +3]` describing the **estimated net effect of the program** on the row domain over that horizon. `0` is "no material change from the counterfactual over this horizon"; `±3` is reserved for transformative effects documented in `sources.md`. The score is **ordinal** — it is never cardinally averaged across models during aggregation. See [`aggregation.md`](aggregation.md) §"Horizon matrix aggregation" for the ordinal synthesis contract.
+
+**Silent programs.** If sources do not cover a cell, the per-model output must still emit a cell with `impact_score: 0` and a measurement-framed note naming the absence ("Program does not specify ..."). Missing cells are a schema error, not a valid analytical stance. This is how symmetric scrutiny is enforced across candidates whose programs are uneven in coverage.
+
+**No compound indicator.** The `horizon_matrix` does not collapse into a single "intergenerational score". The existing `net_transfer_direction` and `magnitude_estimate` keep that role; the matrix is the orthogonal horizon-by-domain lens that lives next to them.
+
+See [`../website/candidate-page-polish.md`](../website/candidate-page-polish.md) §3.3 and §5.3 for the full rationale and the candidate-page rendering.
 
 ---
 

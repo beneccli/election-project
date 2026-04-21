@@ -1,13 +1,19 @@
+"use client";
 // See docs/specs/website/nextjs-architecture.md §4.3
 // See docs/specs/website/visual-components.md §4.1
-// Pure-SVG static radar + DOM overlay for per-axis hover tooltips.
+// See docs/specs/website/candidate-page-polish.md §5.1
+// Client-rendered SVG radar + DOM overlay for per-axis hover tooltips
+// and optional per-model polygon overlays.
 //
 // EDITORIAL: `radarValue` is a SHAPE input only — never surfaced as a
 // numeric score to the reader. See positioning-shape.ts.
+import { useMemo } from "react";
 import type { RadarShape } from "@/lib/derived/positioning-shape";
 import { AXES } from "@/lib/anchors";
+import { AXIS_KEYS } from "@/lib/derived/keys";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
+import { modelColor } from "@/lib/model-color";
 import { Tooltip } from "./Tooltip";
 
 const SIZE = 280;
@@ -27,9 +33,16 @@ function toXY(i: number, val: number, n: number): [number, number] {
 export function PositioningRadar({
   shape,
   lang = "fr",
+  highlight = null,
 }: {
   shape: RadarShape;
   lang?: Lang;
+  /** Single-selection highlight matching Candidate Page.html:
+   *  - `null` → render consensus polygon (thick) plus every model overlay
+   *    (thin). Consensus is the headline shape and must dominate.
+   *  - model id → render only that model's polygon (no consensus fill).
+   *  See docs/specs/website/candidate-page-polish.md §5.1. */
+  highlight?: string | null;
 }) {
   const n = shape.axes.length;
   const consensusPoints = shape.axes
@@ -38,6 +51,22 @@ export function PositioningRadar({
       return `${x.toFixed(1)},${y.toFixed(1)}`;
     })
     .join(" ");
+
+  // Per-model overlay polygon points — memoized so repeated enable/disable
+  // doesn't re-compute unchanged polygons. See candidate-page-polish.md §5.1.
+  const modelPolygons = useMemo(() => {
+    return shape.models.map((m) => {
+      const points = AXIS_KEYS.map((axisKey, i) => {
+        const [x, y] = toXY(i, m.values[axisKey], n);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(" ");
+      return {
+        id: m.id,
+        points,
+        color: modelColor(m.id),
+      };
+    });
+  }, [shape.models, n]);
 
   // Axis labels from canonical anchor definitions (identical across
   // candidates). Fall back to axis key if anchors missing.
@@ -103,14 +132,50 @@ export function PositioningRadar({
           />
         );
       })}
-      {/* Consensus shape */}
-      <polygon
-        points={consensusPoints}
-        fill="var(--accent)"
-        fillOpacity={0.13}
-        stroke="var(--accent)"
-        strokeWidth={2}
-      />
+      {/* Per-model overlays render FIRST (underneath) when consensus is
+          selected so the thicker consensus polygon dominates. When a
+          single model is highlighted, render only that model. */}
+      {highlight === null
+        ? modelPolygons.map((m) => (
+            <polygon
+              key={`model-${m.id}`}
+              points={m.points}
+              fill={m.color}
+              fillOpacity={0.07}
+              stroke={m.color}
+              strokeWidth={1.25}
+              strokeOpacity={0.75}
+              strokeLinejoin="round"
+              data-model={m.id}
+            />
+          ))
+        : modelPolygons
+            .filter((m) => m.id === highlight)
+            .map((m) => (
+              <polygon
+                key={`model-${m.id}`}
+                points={m.points}
+                fill={m.color}
+                fillOpacity={0.18}
+                stroke={m.color}
+                strokeWidth={1.75}
+                strokeOpacity={0.95}
+                strokeLinejoin="round"
+                data-model={m.id}
+              />
+            ))}
+      {/* Consensus polygon — rendered last so it sits on top when shown.
+          Thick filled shape vs thin model outlines = visual dominance. */}
+      {highlight === null ? (
+        <polygon
+          points={consensusPoints}
+          fill="var(--accent)"
+          fillOpacity={0.16}
+          stroke="var(--accent)"
+          strokeWidth={3}
+          strokeLinejoin="round"
+        />
+      ) : null}
       {/* Axis labels + dissent badges */}
       {shape.axes.map((ax, i) => {
         const { x: lx, y: ly } = labelCoords[i];

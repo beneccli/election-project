@@ -1,7 +1,7 @@
 # Aggregation Spec
 
-> **Version:** 1.0
-> **Status:** Stable (finalized by M_Aggregation spike `0030`, 2026-04-19)
+> **Version:** 1.1
+> **Status:** Stable (finalized by M_Aggregation spike `0030`, 2026-04-19; v1.1 additive fields — `headline`, `risk_profile`, `horizon_matrix`, `positioning[axis].per_model` — from M_CandidatePagePolish spike `0080`, 2026-04-20)
 > **Source of truth:** `scripts/lib/schema.ts` (Zod) — the "Decisions finalized by spike `0030`" section below is the authoritative design; the prose above is a human-readable companion.
 
 ---
@@ -171,6 +171,68 @@ Same top-level structure as per-model output (see [`output-schema.md`](output-sc
   ]
 }
 ```
+
+---
+
+## v1.1 aggregation contracts
+
+All three v1.1 additive fields reuse the **positioning ordinal pattern**: modal value + interval + per-model verbatim. No cardinal averaging is ever introduced.
+
+### Dimension headline
+
+```json
+"headline": {
+  "text": "≤140 chars — best-supported synthesized phrasing",
+  "supported_by": ["model-a", "model-b"],
+  "dissenters": ["model-c"],
+  "per_model": [ { "model": "...", "text": "..." } ],
+  "human_edit": false
+}
+```
+
+The aggregator picks the phrasing closest to the plurality of models and preserves every model's verbatim `text` in `per_model[]`. No arithmetic operation on text.
+
+### Dimension risk profile
+
+Per-category (4 fixed categories: `budgetary`, `implementation`, `dependency`, `reversibility`):
+
+```json
+"budgetary": {
+  "modal_level": "moderate | null",
+  "level_interval": ["limited", "high"],   // ordered: low < limited < moderate < high
+  "note": "≤180 chars",
+  "supported_by": [...],
+  "dissenters": [...],
+  "per_model": [ { "model": "...", "level": "...", "note": "..." } ]
+}
+```
+
+- `modal_level` is the plurality across successful models; `null` when no plurality.
+- `level_interval[0]` must precede `level_interval[1]` in the canonical order `low < limited < moderate < high`. Zod refines this tuple.
+- Levels are **never** composed into a single score (no "risk index"). The four categories stay orthogonal in rendering.
+
+### Intergenerational horizon matrix
+
+Per cell (6 rows × 3 horizons, both fixed):
+
+```json
+{
+  "modal_score": 1,                          // integer in [-3, +3], or null
+  "score_interval": [-1, 2],                 // min <= max
+  "note": "≤160 chars synthesized",
+  "supported_by": [...],
+  "dissenters": [...],
+  "per_model": [ { "model": "...", "score": -2..3, "note": "..." } ]
+}
+```
+
+Rows also carry `row_supported_by` / `row_dissenters` to capture row-level agreement on the `dimension_note`. The full matrix must contain exactly 6 rows keyed by the 6 fixed `HorizonRowKey`s.
+
+See [`intergenerational-audit.md`](intergenerational-audit.md) §"Horizon bands and cohort framing" for the row/column semantics and the symmetric-scrutiny rules when sources are silent on a cell.
+
+### Positioning per-model list
+
+`positioning[axis].per_model` carries every successful model's raw score (integer `-5..+5`) plus its verbatim reasoning. This is **additive** to the existing `consensus_interval` / `modal_score` / `dissent` triplet — it is what the candidate-page radar reads to render per-model polygons. The `.strict()` object still forbids a top-level `score` field on the axis, preserving the cardinal-averaging guardrail.
 
 ---
 

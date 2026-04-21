@@ -1,9 +1,9 @@
 ---
 name: analyze-candidate
-version: "1.0"
+version: "1.1"
 status: stable
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-20
 used_by: scripts/analyze.ts
 related_specs:
   - docs/specs/analysis/analysis-prompt.md
@@ -12,9 +12,11 @@ related_specs:
   - docs/specs/analysis/dimensions.md
   - docs/specs/analysis/political-positioning.md
   - docs/specs/analysis/intergenerational-audit.md
+  - docs/specs/website/candidate-page-polish.md
 description: >
   Per-model, per-candidate analysis prompt for the Élection 2027 project.
-  Produces a structured JSON analysis matching AnalysisOutputSchema.
+  Produces a structured JSON analysis matching AnalysisOutputSchema
+  (schema_version 1.1).
 ---
 
 # Candidate Program Analysis
@@ -97,7 +99,7 @@ Return a single JSON object matching `AnalysisOutputSchema`
 
 ```
 {
-  schema_version: "1.0",
+  schema_version: "1.1",
   candidate_id: <string>,
   version_date: "YYYY-MM-DD",
   model: { provider, version },
@@ -111,12 +113,16 @@ Return a single JSON object matching `AnalysisOutputSchema`
   dimensions: {
     economic_fiscal, social_demographic, security_sovereignty,
     institutional_democratic, environmental_long_term:
-      { grade, summary, problems_addressed[], problems_ignored[],
-        problems_worsened[], execution_risks[], key_measures[], confidence }
+      { grade, headline, summary,
+        problems_addressed[], problems_ignored[], problems_worsened[],
+        execution_risks[], key_measures[],
+        risk_profile: { budgetary, implementation, dependency, reversibility },
+        confidence }
   },
   intergenerational: {
     net_transfer_direction, magnitude_estimate,
     impact_on_25yo_in_2027, impact_on_65yo_in_2027,
+    horizon_matrix: [ /* 6 fixed rows × 3 fixed horizons; see §10.3 */ ],
     reasoning, source_refs, confidence
   },
   counterfactual: { status_quo_trajectory,
@@ -216,6 +222,147 @@ For each axis:
 5. Provide at least one verbatim `evidence` entry per axis.
 6. Self-assess `confidence`. If the program lacks concrete measures on the
    axis, keep `confidence` at or below `0.6`.
+
+## 10. Schema v1.1 fields: headline, risk_profile, horizon_matrix
+
+Three additional output surfaces are required on every analysis. They are
+schema-mandatory and power the candidate-page summary layer described in
+[`docs/specs/website/candidate-page-polish.md`](../docs/specs/website/candidate-page-polish.md).
+All three follow the same editorial constraints as the rest of the output:
+measurement framing, symmetric scrutiny, evidence-backed, never a verdict.
+
+### 10.1 Dimension headline (per dimension)
+
+After writing `summary`, distill one concise `headline` (≤140 characters)
+for each of the five dimension clusters. The headline names the central
+policy claim of the dimension in factual terms. It is not a slogan, not a
+verdict, and not a substitute for `summary`.
+
+Example (neutral, measurement-framed):
+
+> "Objectif de déficit à 3% du PIB d'ici 2030, sans détail chiffré sur les
+> coupes ou hausses de recettes."
+
+Emit `dimensions[k].headline` for all five clusters, even when the cluster
+grade is `NOT_ADDRESSED`. In that case the headline documents the absence
+("Programme ne traite pas de la question X.").
+
+### 10.2 Risk profile (per dimension)
+
+For each dimension cluster, rate four fixed risk categories on a 4-level
+ordinal scale. The category set and the scale are fixed project-wide — no
+custom categories, no finer levels.
+
+**Categories** (all four mandatory per dimension):
+
+- `budgetary` — whether the cost of the measures is funded and stable
+  under plausible macro scenarios.
+- `implementation` — administrative complexity, staffing, timeline
+  realism, coordination requirements.
+- `dependency` — external dependencies that could block or skew the
+  measure (EU partners, private-sector compliance, global supply
+  chains, etc.).
+- `reversibility` — whether a subsequent majority could plausibly revoke
+  the measure within one legislature.
+
+**Scale.** `low` < `limited` < `moderate` < `high`. The scale is ordinal;
+do not compose it into a single score.
+
+**Per-cell shape:**
+
+```json
+"risk_profile": {
+  "budgetary":      { "level": "low|limited|moderate|high",
+                       "note": "<=180 chars — mechanism in measurement prose",
+                       "source_refs": ["sources.md#..."] },
+  "implementation": { "level": "...", "note": "...", "source_refs": [...] },
+  "dependency":     { "level": "...", "note": "...", "source_refs": [...] },
+  "reversibility":  { "level": "...", "note": "...", "source_refs": [...] }
+}
+```
+
+Every category must appear on every dimension. If sources are silent on a
+category, emit `level: "low"` with a note naming the absence, not a
+missing key.
+
+Note: `risk_profile` is **orthogonal** to the existing free-form
+`execution_risks[]`. Keep both: `execution_risks[]` captures specific,
+narratively-grounded risks; `risk_profile` is the fixed 4-category
+ordinal summary used by the candidate-page heat-row. Never compose them
+into a single figure.
+
+### 10.3 Horizon matrix (intergenerational)
+
+For six fixed domains × three fixed horizons, emit an integer
+`impact_score` in `[-3, +3]` plus a short `note` (≤160 chars) and
+`source_refs` into `sources.md`.
+
+**Rows** (exactly 6, any order, keyed by these strings):
+`pensions`, `public_debt`, `climate`, `health`, `education`, `housing`.
+
+**Horizons** (exactly 3 per row, keyed by these strings):
+
+- `h_2027_2030` — 2027–2030
+- `h_2031_2037` — 2031–2037
+- `h_2038_2047` — 2038–2047
+
+**Score semantics.** `impact_score` is the **estimated net effect of the
+program** on that row domain over that horizon, relative to the
+counterfactual trajectory. It is not an ideology signal.
+
+- `0` — no material change from the counterfactual in this horizon.
+- `+1 / -1` — discernible positive / negative net effect, with measurable
+  but bounded consequences.
+- `+2 / -2` — substantial net effect.
+- `+3 / -3` — reserved for transformative effects documented in
+  `sources.md`. Do not reach for `±3` on qualitative or rhetorical
+  commitments.
+
+**Silent cells.** If sources are silent on a row × horizon, emit
+`impact_score: 0` and a note naming the absence ("Program does not
+specify measures on X over this horizon."). Missing cells are a schema
+error, not a valid analytical stance.
+
+**Row shape:**
+
+```json
+{
+  "row": "pensions",
+  "dimension_note": "<=200 chars — row-level mechanism",
+  "cells": {
+    "h_2027_2030": { "impact_score": -1, "note": "...", "source_refs": [...] },
+    "h_2031_2037": { "impact_score":  0, "note": "...", "source_refs": [...] },
+    "h_2038_2047": { "impact_score": +1, "note": "...", "source_refs": [...] }
+  }
+}
+```
+
+**Cohort framing is not a schema field.** Do not emit cohort labels; the
+site annotates them at render time. Describe horizons by years, not by
+cohort.
+
+## 11. Measurement-framing reminder
+
+Every new v1.1 field (`headline`, `risk_profile.note`,
+`horizon_matrix.*.note`, `dimension_note`) inherits the editorial rules
+already in force on `intergenerational.*` and on every dimension
+`summary`:
+
+- Describe mechanisms, quantities, and directions. Avoid vocabulary that
+  pre-judges fairness, generosity, harshness, or heroism.
+- `horizon_matrix` notes describe **what changes and by how much**, not
+  whether the change is desirable.
+- Advocacy framing ("protects X", "threatens Y", "undermines Z") is not
+  permitted. Restate in terms of who gains what and who loses what, in
+  concrete units.
+- Hedging to simulate consensus ("broadly", "roughly") is not a
+  substitute for honest uncertainty. Use `confidence` for that.
+
+The authoritative banned-vocabulary list lives in
+[`docs/specs/analysis/editorial-principles.md §3`](../docs/specs/analysis/editorial-principles.md)
+and the illustrative examples in
+[`docs/specs/analysis/intergenerational-audit.md`](../docs/specs/analysis/intergenerational-audit.md)
+"Disallowed language". Follow both.
 
 ## Output constraints
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "candidate_id": "test-candidate",
   "version_date": "2026-04-19",
   "model": {
@@ -77,6 +77,7 @@
   "dimensions": {
     "economic_fiscal": {
       "grade": "B",
+      "headline": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -124,10 +125,39 @@
           "magnitude": "€5bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Relies on existing administrative levers.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No single external dependency identified.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Could be reversed by a subsequent budget vote.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "social_demographic": {
       "grade": "C",
+      "headline": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -175,10 +205,39 @@
           "magnitude": "€5bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Relies on existing administrative levers.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No single external dependency identified.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Could be reversed by a subsequent budget vote.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "security_sovereignty": {
       "grade": "B",
+      "headline": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -226,10 +285,39 @@
           "magnitude": "€5bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Relies on existing administrative levers.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No single external dependency identified.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Could be reversed by a subsequent budget vote.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "institutional_democratic": {
       "grade": "NOT_ADDRESSED",
+      "headline": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -277,10 +365,39 @@
           "magnitude": "€5bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Relies on existing administrative levers.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No single external dependency identified.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Could be reversed by a subsequent budget vote.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "environmental_long_term": {
       "grade": "D",
+      "headline": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans détail chiffré du côté recettes.",
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -328,6 +445,34 @@
           "magnitude": "€5bn/year"
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Relies on existing administrative levers.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No single external dependency identified.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Could be reversed by a subsequent budget vote.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        }
+      },
       "confidence": 0.65
     }
   },
@@ -382,7 +527,171 @@
       "sources.md#retraites",
       "sources.md#finances-publiques"
     ],
-    "confidence": 0.6
+    "confidence": 0.6,
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Program effect on pensions concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Program effect on public_debt concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Program effect on climate concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Program effect on health concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Program effect on education concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Program effect on housing concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Central-horizon effect described.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      }
+    ]
   },
   "counterfactual": {
     "status_quo_trajectory": "Debt rises toward 120% of GDP, housing access continues to decline.",

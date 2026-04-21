@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "candidate_id": "test-candidate",
   "version_date": "2026-04-19",
   "source_models": [
@@ -43,7 +43,24 @@
         }
       ],
       "confidence": 0.75,
-      "dissent": []
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "claude-opus-4-0-20250514",
+          "score": -2,
+          "reasoning": "Multiple structural public-sector expansions."
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "score": -2,
+          "reasoning": "Interventionist economic program signals."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "score": -3,
+          "reasoning": "Read as more strongly state-led."
+        }
+      ]
     },
     "social_cultural": {
       "consensus_interval": [
@@ -59,7 +76,24 @@
         }
       ],
       "confidence": 0.75,
-      "dissent": []
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "claude-opus-4-0-20250514",
+          "score": -2,
+          "reasoning": "Multiple structural public-sector expansions."
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "score": -2,
+          "reasoning": "Interventionist economic program signals."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "score": -3,
+          "reasoning": "Read as more strongly state-led."
+        }
+      ]
     },
     "sovereignty": {
       "consensus_interval": [
@@ -81,6 +115,23 @@
           "position": 3,
           "reasoning": "Model C read the sovereignty rhetoric as more assertive based on specific program passages."
         }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-0-20250514",
+          "score": -2,
+          "reasoning": "Multiple structural public-sector expansions."
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "score": -2,
+          "reasoning": "Interventionist economic program signals."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "score": -3,
+          "reasoning": "Read as more strongly state-led."
+        }
       ]
     },
     "institutional": {
@@ -97,7 +148,24 @@
         }
       ],
       "confidence": 0.75,
-      "dissent": []
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "claude-opus-4-0-20250514",
+          "score": -2,
+          "reasoning": "Multiple structural public-sector expansions."
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "score": -2,
+          "reasoning": "Interventionist economic program signals."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "score": -3,
+          "reasoning": "Read as more strongly state-led."
+        }
+      ]
     },
     "ecological": {
       "consensus_interval": [
@@ -113,7 +181,24 @@
         }
       ],
       "confidence": 0.75,
-      "dissent": []
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "claude-opus-4-0-20250514",
+          "score": -2,
+          "reasoning": "Multiple structural public-sector expansions."
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "score": -2,
+          "reasoning": "Interventionist economic program signals."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "score": -3,
+          "reasoning": "Read as more strongly state-led."
+        }
+      ]
     }
   },
   "dimensions": {
@@ -124,6 +209,29 @@
           "gemini-2.5-pro": "C"
         }
       },
+      "headline": {
+        "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        "supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes."
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "text": "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes."
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "text": "Déficit ramené à 3% en 2030 sans détail sur les recettes."
+          }
+        ]
+      },
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -203,6 +311,132 @@
           "dissenters": []
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "No counter-measures described."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Assumes growth hits targets."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "limited",
+              "note": "Read as reasonably funded."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Relies on existing administrative levers.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "limited",
+              "note": "Standard levers only."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "limited",
+              "note": "No new institutions required."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "Easy to implement."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "No single external dependency identified.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "No lock-in."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Could be reversed by a subsequent budget vote.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            }
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "social_demographic": {
@@ -210,6 +444,29 @@
         "consensus": "C",
         "dissent": {}
       },
+      "headline": {
+        "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        "supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes."
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "text": "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes."
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "text": "Déficit ramené à 3% en 2030 sans détail sur les recettes."
+          }
+        ]
+      },
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -289,6 +546,132 @@
           "dissenters": []
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "No counter-measures described."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Assumes growth hits targets."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "limited",
+              "note": "Read as reasonably funded."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Relies on existing administrative levers.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "limited",
+              "note": "Standard levers only."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "limited",
+              "note": "No new institutions required."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "Easy to implement."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "No single external dependency identified.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "No lock-in."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Could be reversed by a subsequent budget vote.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            }
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "security_sovereignty": {
@@ -296,6 +679,29 @@
         "consensus": "B",
         "dissent": {}
       },
+      "headline": {
+        "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        "supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes."
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "text": "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes."
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "text": "Déficit ramené à 3% en 2030 sans détail sur les recettes."
+          }
+        ]
+      },
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
         {
@@ -375,6 +781,132 @@
           "dissenters": []
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "No counter-measures described."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Assumes growth hits targets."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "limited",
+              "note": "Read as reasonably funded."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Relies on existing administrative levers.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "limited",
+              "note": "Standard levers only."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "limited",
+              "note": "No new institutions required."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "Easy to implement."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "No single external dependency identified.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "No lock-in."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Could be reversed by a subsequent budget vote.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            }
+          ]
+        }
+      },
       "confidence": 0.65
     },
     "institutional_democratic": {
@@ -382,91 +914,28 @@
         "consensus": "NOT_ADDRESSED",
         "dissent": {}
       },
-      "summary": "Program addresses the main fiscal questions partially.",
-      "problems_addressed": [
-        {
-          "problem": "Debt trajectory",
-          "approach": "Targeted spending review plus growth-linked receipts.",
-          "strength": 0.6,
-          "source_refs": [
-            "sources.md#finances-publiques"
-          ],
-          "reasoning": "Targets are stated with budget envelopes.",
-          "supported_by": [
-            "claude-opus-4-0-20250514",
-            "gpt-4.1-2025-04-14",
-            "gemini-2.5-pro"
-          ],
-          "dissenters": []
-        }
-      ],
-      "problems_ignored": [
-        {
-          "problem": "Interest-burden sensitivity to rate path",
-          "significance": "Omitting this leaves a central fiscal risk unexamined.",
-          "source_refs": [],
-          "supported_by": [
-            "claude-opus-4-0-20250514",
-            "gpt-4.1-2025-04-14",
-            "gemini-2.5-pro"
-          ],
-          "dissenters": []
-        }
-      ],
-      "problems_worsened": [
-        {
-          "problem": "EU fiscal framework alignment",
-          "mechanism": "Program's deficit path exceeds permitted envelope.",
-          "severity": 0.5,
-          "source_refs": [
-            "sources.md#finances-publiques"
-          ],
-          "reasoning": "Explicit rejection of the stability pact constraints.",
-          "supported_by": [
-            "claude-opus-4-0-20250514",
-            "gpt-4.1-2025-04-14",
-            "gemini-2.5-pro"
-          ],
-          "dissenters": []
-        }
-      ],
-      "execution_risks": [
-        {
-          "risk": "Parliamentary blockage on fiscal vote",
-          "probability": 0.4,
-          "severity": 0.5,
-          "reasoning": "Coalition arithmetic is tight on budget majorities.",
-          "source_refs": [
-            "sources.md#institutions"
-          ],
-          "supported_by": [
-            "claude-opus-4-0-20250514",
-            "gpt-4.1-2025-04-14",
-            "gemini-2.5-pro"
-          ],
-          "dissenters": []
-        }
-      ],
-      "key_measures": [
-        {
-          "measure": "Spending review targeting €5bn/year",
-          "source_ref": "sources.md#finances-publiques",
-          "quantified": true,
-          "magnitude": "€5bn/year",
-          "supported_by": [
-            "claude-opus-4-0-20250514",
-            "gpt-4.1-2025-04-14",
-            "gemini-2.5-pro"
-          ],
-          "dissenters": []
-        }
-      ],
-      "confidence": 0.65
-    },
-    "environmental_long_term": {
-      "grade": {
-        "consensus": "D",
-        "dissent": {}
+      "headline": {
+        "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        "supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes."
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "text": "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes."
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "text": "Déficit ramené à 3% en 2030 sans détail sur les recettes."
+          }
+        ]
       },
       "summary": "Program addresses the main fiscal questions partially.",
       "problems_addressed": [
@@ -547,6 +1016,367 @@
           "dissenters": []
         }
       ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "No counter-measures described."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Assumes growth hits targets."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "limited",
+              "note": "Read as reasonably funded."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Relies on existing administrative levers.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "limited",
+              "note": "Standard levers only."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "limited",
+              "note": "No new institutions required."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "Easy to implement."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "No single external dependency identified.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "No lock-in."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Could be reversed by a subsequent budget vote.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            }
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes.",
+        "supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-0-20250514",
+            "text": "Déficit à 3% du PIB d'ici 2030 via revue ciblée des dépenses, sans chiffrage côté recettes."
+          },
+          {
+            "model": "gpt-4.1-2025-04-14",
+            "text": "Trajectoire de déficit à 3% d'ici 2030, revue des dépenses non détaillée côté recettes."
+          },
+          {
+            "model": "gemini-2.5-pro",
+            "text": "Déficit ramené à 3% en 2030 sans détail sur les recettes."
+          }
+        ]
+      },
+      "summary": "Program addresses the main fiscal questions partially.",
+      "problems_addressed": [
+        {
+          "problem": "Debt trajectory",
+          "approach": "Targeted spending review plus growth-linked receipts.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Targets are stated with budget envelopes.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-burden sensitivity to rate path",
+          "significance": "Omitting this leaves a central fiscal risk unexamined.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework alignment",
+          "mechanism": "Program's deficit path exceeds permitted envelope.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ],
+          "reasoning": "Explicit rejection of the stability pact constraints.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary blockage on fiscal vote",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Coalition arithmetic is tight on budget majorities.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Spending review targeting €5bn/year",
+          "source_ref": "sources.md#finances-publiques",
+          "quantified": true,
+          "magnitude": "€5bn/year",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Targets stated but no counter-measures if growth underperforms.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "No counter-measures described."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Assumes growth hits targets."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "limited",
+              "note": "Read as reasonably funded."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Relies on existing administrative levers.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "limited",
+              "note": "Standard levers only."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "limited",
+              "note": "No new institutions required."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "Easy to implement."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "No single external dependency identified.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "low",
+              "note": "No lock-in."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "low",
+              "note": "No lock-in."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Could be reversed by a subsequent budget vote.",
+          "supported_by": [
+            "claude-opus-4-0-20250514",
+            "gpt-4.1-2025-04-14",
+            "gemini-2.5-pro"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-0-20250514",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gpt-4.1-2025-04-14",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            },
+            {
+              "model": "gemini-2.5-pro",
+              "level": "moderate",
+              "note": "Budget-vote reversible."
+            }
+          ]
+        }
+      },
       "confidence": 0.65
     }
   },
@@ -602,6 +1432,638 @@
       "sources.md#finances-publiques"
     ],
     "confidence": 0.6,
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Aggregated effect on pensions concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 1,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              3
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 2,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 2,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 2,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Aggregated effect on public_debt concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -2,
+            "score_interval": [
+              -3,
+              -1
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Aggregated effect on climate concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -2,
+            "score_interval": [
+              -3,
+              -1
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Aggregated effect on health concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Aggregated effect on education concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -1,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 1,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Aggregated effect on housing concentrated in later horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -2,
+            "score_interval": [
+              -3,
+              -1
+            ],
+            "note": "Limited near-term effect under central assumptions.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -2,
+                "note": "Limited near-term effect under central assumptions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Central-horizon effect described.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": -1,
+                "note": "Central-horizon effect described."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Long-horizon effect amplified by cumulative dynamics.",
+            "supported_by": [
+              "claude-opus-4-0-20250514",
+              "gpt-4.1-2025-04-14",
+              "gemini-2.5-pro"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-0-20250514",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gpt-4.1-2025-04-14",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              },
+              {
+                "model": "gemini-2.5-pro",
+                "score": 0,
+                "note": "Long-horizon effect amplified by cumulative dynamics."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-0-20250514",
+          "gpt-4.1-2025-04-14",
+          "gemini-2.5-pro"
+        ],
+        "row_dissenters": []
+      }
+    ],
     "agreement": {
       "direction_consensus": true,
       "magnitude_consensus": "interval",
