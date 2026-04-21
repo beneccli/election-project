@@ -22,14 +22,14 @@ export function PositionnementSection({
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
       <SectionHead label="Positionnement politique" />
-      <p className="mb-8 text-base text-text-secondary">
+      {/* <p className="mb-8 text-base text-text-secondary">
         Le positionnement est <strong>ordinal</strong> — il reflète l&apos;ordre
         relatif entre ancrages historiques plutôt qu&apos;une mesure cardinale.
         Le pentagone ci-dessous résume la forme. La lecture canonique reste
         la ligne par axe, avec intervalle de consensus et points de
         désaccord.
-      </p>
-      <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[280px_1fr]">
+      </p> */}
+      <div className="mt-12 grid grid-cols-1 items-start gap-14 lg:grid-cols-[360px_1fr]">
         <div className="flex flex-col items-center gap-4">
           <InteractivePositioningRadar shape={shape} />
         </div>

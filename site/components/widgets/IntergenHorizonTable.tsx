@@ -232,12 +232,12 @@ function Legend() {
           {it.label}
         </span>
       ))}
-      <span className="inline-flex items-center gap-1.5">
+      {/* <span className="inline-flex items-center gap-1.5">
         <span aria-hidden="true" className="font-bold text-risk-red">
           ⚡
         </span>
         dissensus entre modèles
-      </span>
+      </span> */}
     </div>
   );
 }
