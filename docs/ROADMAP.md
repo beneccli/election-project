@@ -1,6 +1,6 @@
 # Élection 2027 — Roadmap
 
-> **Last Updated:** April 20, 2026
+> **Last Updated:** April 22, 2026
 > **Status:** Foundation phase
 > **Target:** Full public launch by Q3 2026, with candidates added and updated through election day
 
@@ -58,7 +58,7 @@ Format: `M_<FeatureCluster>`
 | M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
 | M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
 | M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
-| M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
+| M_Comparison | � In Progress | Side-by-side candidate comparison mode ([`specs/website/comparison-page.md`](specs/website/comparison-page.md)) |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
 
 ### 📅 Phase 3: Operations (planned)
@@ -428,7 +428,38 @@ Format: `M_<FeatureCluster>`
 
 **Goal:** Pick 2–4 candidates, see them side by side on identical dimensions with visual diff.
 
-**Depends on:** M_WebsiteCore + M_VisualComponents
+**Depends on:** M_WebsiteCore + M_VisualComponents + M_CandidatePagePolish
+
+**Status:** 🚧 In Progress. Spike `0090` archived (2026-04-22); implementation tasks `0091`–`0098` in `tasks/backlog/M_Comparison/`.
+
+**Spike produces:**
+- `docs/specs/website/comparison-page.md` (finalized **Stable** on creation; no schema changes)
+- Route `/comparer` with URL-query-driven selection (`?c=<id>&c=<id>…`) + localStorage fallback (task `0091`)
+- Build-time `deriveComparisonProjection()` view-model and multi-candidate loader (task `0092`)
+- Four comparison-variant widgets — `<PositionnementComparison>` (overlaid radar + dot rows), `<DomainesComparison>` (grade table + spread + unique-max marker), `<IntergenComparison>` (h_2038_2047 ordinal table), `<RisquesComparison>` (stacked per-candidate 6×4 matrices) — tasks `0093`–`0096`
+- Page shell with candidate selector, sticky selected-header, empty state (task `0097`)
+- Landing + candidate-page CTAs, editorial regression test, build smoke (task `0098`)
+
+**Non-negotiables:**
+- **No composite / overall scoring across candidates.** No ranking, no winner, no voter-match quiz — enforced by the editorial regression test in task `0098`.
+- **No cardinal averaging.** Radar overlays modal integers; per-axis rows plot individual dots; grade deltas report spread (max − min), never mean; the single intergenerational cell uses `h_2038_2047` modal score verbatim.
+- **Symmetric rendering.** Every selected candidate renders with identical components, sizes, fonts and column widths. Color slot is URL order only.
+- **Dissent preserved by link-out.** Every comparison cell is a projection of an already-aggregated ordinal field; deeper detail remains on `/candidat/<id>`.
+- **Zero schema or prompt changes.** All cells derive from existing aggregated v1.1 fields.
+
+**Key design decisions (spike `0090`):**
+- Prototype `Comparison Page.html` is the visual contract; the prototype's inline dummy data (`ALL_CANDIDATES`) is discarded — values come from real `aggregated.json`.
+- URL query is the source of truth for selection (shareable); localStorage is hydration fallback only.
+- Intergenerational cell collapses the 6×3 matrix to the `h_2038_2047` **modal** per row (longest-horizon = "net impact to 2047"). No cross-horizon averaging; row label links to the candidate page's full matrix.
+- Unique-best `↑` marker on the domain-grade table is a per-dimension peer comparison, not a composite. Only shown when `argmax` is strictly unique.
+
+**Scope boundary (what this milestone does NOT cover):**
+- New analytical output — schema, prompts, aggregation unchanged.
+- Landing page and stakes charts (→ M_Landing).
+- Per-model dissent drawer in the comparison view (link-out to candidate page instead).
+- OG / share-image generation (→ future `M_Sharing`).
+- Mobile comparison redesign (→ M_Accessibility).
+- Split-pane deep-link from comparison cell to candidate-page section (v1 uses `#` anchors only).
 
 ---
 
