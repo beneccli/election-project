@@ -129,7 +129,7 @@ function HorizonCellView({ cell }: { cell: HorizonCell }) {
   // Width follows CP.html: max(|score|*16, 2) px. Zero scores render a
   // faded 2px dot; non-zero scale linearly so ±3 = 48px.
   const barWidth = Math.max(absScore * 16, 2);
-  const hasDissent = cell.dissenters.length > 0;
+  const _hasDissent = cell.dissenters.length > 0;
   const label = formatScore(score);
 
   return (

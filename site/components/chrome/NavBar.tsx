@@ -20,14 +20,13 @@ export function NavBar({ meta }: { meta: CandidateMetadata }) {
           {meta.display_name}
         </span>
         <div className="flex-1" />
-        <button
-          type="button"
-          aria-disabled="true"
-          className="flex-shrink-0 cursor-default text-xs font-medium text-text-secondary opacity-70"
-          title="Disponible dans une version future"
+        <a
+          href="#transparence=document"
+          className="flex-shrink-0 text-xs font-medium text-text-secondary underline decoration-dotted underline-offset-4 hover:text-text"
+          title="Ouvrir la transparence complète"
         >
           Transparence
-        </button>
+        </a>
         <LanguageToggle />
         <ThemeToggle />
       </div>

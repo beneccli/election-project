@@ -31,8 +31,17 @@ export function TransparencyFooter({
   return (
     <footer className="mt-24 border-t border-rule bg-bg-subtle">
       <div className="mx-auto max-w-content px-8 py-12 text-sm text-text-secondary">
-        <div className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-accent">
-          Transparence
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
+            Transparence
+          </div>
+          <a
+            href="#transparence=document"
+            className="inline-flex items-center gap-2 rounded-sm border border-accent bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-bg no-underline transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            data-transparency-trigger="footer-primary"
+          >
+            Ouvrir la transparence complète
+          </a>
         </div>
 
         <p className="mb-8 text-base text-text">

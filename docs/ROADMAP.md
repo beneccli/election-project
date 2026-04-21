@@ -57,7 +57,7 @@ Format: `M_<FeatureCluster>`
 | M_WebsiteCore | ✅ Done | Next.js (App Router + static export), candidate page, build-time data loading |
 | M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
 | M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
-| M_Transparency | 📋 Planned (spike needed) | Transparency drawer — raw outputs, prompts, sources exposed |
+| M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
 | M_Comparison | 📋 Planned | Side-by-side candidate comparison mode |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
 
@@ -383,14 +383,44 @@ Format: `M_<FeatureCluster>`
 
 ### M_Transparency
 
-**Goal:** The transparency drawer — sources, prompts, raw per-model outputs, agreement map — all accessible from the candidate page.
+**Goal:** The transparency drawer — sources, prompts, raw per-model outputs, aggregation notes, and agreement map — all accessible from the candidate page in at most two clicks from any claim.
 
-**Depends on:** M_WebsiteCore
+**Depends on:** M_WebsiteCore + M_CandidatePagePolish (reuses the `<Drawer>` primitive shipped there)
+
+**Status:** ✅ Done (2026-04-21). Spike `0090` + implementation tasks `0091`–`0098` archived under `tasks/archive/M_Transparency/`.
 
 **Spike produces:**
-- `docs/specs/website/transparency.md`
-- UX design for drawer
-- Handling of large raw JSON outputs (syntax highlight, collapse)
+- `docs/specs/website/transparency.md` promoted Draft → **Stable (v1.1)** via task `0098`
+- Content-addressed prompt snapshot build script `site/scripts/copy-prompts.ts` + `sources-raw/manifest.json` emission (task `0091`)
+- `<TransparencyDrawer>` shell with 4 tabs + hash-fragment deep-link utility (`#transparence=...`) (task `0092`)
+- Sources tab with file index + inline PDF/markdown/text/JSON viewers (task `0093`)
+- Document consolidé tab with `react-markdown` + slug-anchor scroll (task `0094`)
+- Prompts tab with SHA256-verified display and "not available in current repository" state for drifted prompts (task `0095`)
+- Résultats IA tab with aggregation notes + per-model raw JSON + agreement-map read-only views (task `0096`)
+- `<SourceRef>` component + migration of IntergenSection and DomainesSection evidence chips (task `0097`)
+- Integration: NavBar entry, TransparencyFooter button, e2e smoke test on `test-omega` (task `0098`)
+
+**Non-negotiables:**
+- Prompt-byte integrity — the drawer refuses to render current disk content under a historic SHA256 when the file has drifted.
+- Agreement map is a read-only display of `agreement_map` fields. No cardinal averaging, no score bars, no synthetic means.
+- Every claim carrying `source_refs` becomes click-to-open via `<SourceRef>`.
+- Drawer chrome is candidate-agnostic — identical four tabs for every candidate.
+
+**Key design decisions (spike `0090`):**
+- Hash-fragment URL scheme (`#transparence=...`) — compatible with `output: "export"`, free of full re-renders, cleanly removed on close via `history.replaceState`.
+- Content-addressed prompt snapshots (`/prompts/<sha256>.md`) guarantee byte-accurate historical prompt display; drift produces a warning, never a silent substitution.
+- Zero schema changes — M_Transparency is pure UI over artifacts that already exist.
+- `<Drawer>` primitive reused from M_CandidatePagePolish at `size="xl"`.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Syntax highlighting for JSON / markdown (deferred polish)
+- Custom PDF viewer (native browser iframe in v1)
+- Version-history navigation / diff between versions
+- Cross-candidate model comparison
+- Bulk zip download
+- Full WCAG 2.1 AA audit (→ M_Accessibility)
+- English translations of drawer copy (FR canonical)
+- Comment / share / chatbot features (explicit non-goals)
 
 ---
 

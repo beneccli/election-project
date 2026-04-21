@@ -11,6 +11,7 @@ import { GradeBadge } from "@/components/widgets/GradeBadge";
 import { ConfidenceDots } from "@/components/widgets/ConfidenceDots";
 import { ConfidenceBar } from "@/components/widgets/ConfidenceBar";
 import { Tooltip } from "@/components/widgets/Tooltip";
+import { SourceRef } from "@/components/widgets/SourceRef";
 import type { GradeLetter } from "@/lib/grade-color";
 
 const DIMENSION_LABELS: Record<DimensionKey, string> = {
@@ -173,7 +174,7 @@ function DimensionRow({
   );
 }
 
-function ModelGradeRow({
+function _ModelGradeRow({
   consensus,
   dissent,
 }: {
@@ -275,7 +276,7 @@ function DimensionDeepDive({
             text: p.problem,
             supportedBy: p.supported_by,
             dissenters: p.dissenters,
-            sourceCount: p.source_refs.length,
+            sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_addressed.length - MAX_ITEMS}
         />
@@ -288,7 +289,7 @@ function DimensionDeepDive({
             text: p.problem,
             supportedBy: p.supported_by,
             dissenters: p.dissenters,
-            sourceCount: p.source_refs.length,
+            sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_ignored.length - MAX_ITEMS}
         />
@@ -301,7 +302,7 @@ function DimensionDeepDive({
             text: p.problem,
             supportedBy: p.supported_by,
             dissenters: p.dissenters,
-            sourceCount: p.source_refs.length,
+            sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_worsened.length - MAX_ITEMS}
         />
@@ -397,7 +398,7 @@ function ProblemBlock({
     text: string;
     supportedBy: string[];
     dissenters: string[];
-    sourceCount: number;
+    sourceRefs: readonly string[];
   }[];
   overflow: number;
 }) {
@@ -425,18 +426,21 @@ function ProblemBlock({
               className="text-sm leading-[1.5] text-text [text-wrap:pretty]"
             >
               <span>{item.text}</span>
-              <div className="mt-0.5 text-xs text-text-tertiary">
-                {item.supportedBy.length > 0
-                  ? `Soutenu par ${item.supportedBy.join(", ")}`
-                  : null}
+              <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-text-tertiary">
+                {item.supportedBy.length > 0 ? (
+                  <span>Soutenu par {item.supportedBy.join(", ")}</span>
+                ) : null}
                 {item.dissenters.length > 0 ? (
-                  <span className="ml-1 text-risk-red">
+                  <span className="text-risk-red">
                     · désaccord : {item.dissenters.join(", ")}
                   </span>
                 ) : null}
-                {item.sourceCount > 0 ? (
-                  <span className="ml-1 text-text-tertiary">
-                    · {item.sourceCount} source{item.sourceCount > 1 ? "s" : ""}
+                {item.sourceRefs.length > 0 ? (
+                  <span className="flex flex-wrap items-center gap-1">
+                    <span aria-hidden="true">·</span>
+                    {item.sourceRefs.map((ref, idx) => (
+                      <SourceRef key={`${ref}-${idx}`}>{ref}</SourceRef>
+                    ))}
                   </span>
                 ) : null}
               </div>

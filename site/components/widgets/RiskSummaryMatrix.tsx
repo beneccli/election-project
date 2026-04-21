@@ -121,7 +121,7 @@ export function RiskSummaryMatrix({
 function RiskCell({ cell }: { cell: RiskCategory }) {
   const level = cell.modal_level as RiskLevel | null;
   const label = levelLabel(level);
-  const hasDissent = cell.dissenters.length > 0;
+  const _hasDissent = cell.dissenters.length > 0;
 
   const bg = level
     ? LEVEL_BG[level]
@@ -185,7 +185,7 @@ function CellTooltipContent({ cell }: { cell: RiskCategory }) {
   );
 }
 
-function Legend() {
+function _Legend() {
   const items: RiskLevel[] = ["low", "limited", "moderate", "high"];
   return (
     <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-secondary">

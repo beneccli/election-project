@@ -9,6 +9,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { listCandidates } from "../lib/candidates";
+import {
+  buildSourcesRawManifest,
+  writeSourcesRawManifest,
+} from "../lib/manifests/sources-manifest";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -69,6 +73,14 @@ function main() {
     fs.mkdirSync(destDir, { recursive: true });
     copyRecursive(srcCurrent, destDir);
     writeRawOutputsIndex(path.join(destDir, "raw-outputs"));
+    // See docs/specs/website/transparency.md §4 — emit sources-raw/manifest.json
+    // (even when empty) so the Sources tab can render without doing a
+    // client-side directory listing.
+    const sourcesRawDir = path.join(destDir, "sources-raw");
+    writeSourcesRawManifest(
+      sourcesRawDir,
+      buildSourcesRawManifest(sourcesRawDir),
+    );
     copied += 1;
   }
   console.log(`[artifacts] copied ${copied} candidate version(s) → ${PUBLIC_DIR}`);
