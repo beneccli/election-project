@@ -41,7 +41,7 @@ describe("TransparencyDrawerChrome", () => {
   it("does not render drawer content when state is null", () => {
     const { aggregated, versionMeta } = loadFixtures();
     const html = renderToStaticMarkup(
-      <TransparencyDrawerChrome
+      <TransparencyDrawerChrome id="test-omega"
         aggregated={aggregated}
         versionMeta={versionMeta}
         state={null}
@@ -57,7 +57,7 @@ describe("TransparencyDrawerChrome", () => {
     for (const tab of ["sources", "document", "prompts", "results"] as const) {
       expect(() =>
         renderToStaticMarkup(
-          <TransparencyDrawerChrome
+          <TransparencyDrawerChrome id="test-omega"
             aggregated={aggregated}
             versionMeta={versionMeta}
             state={{ tab }}
@@ -82,7 +82,7 @@ describe("TransparencyDrawerChrome", () => {
     };
     expect(() =>
       renderToStaticMarkup(
-        <TransparencyDrawerChrome
+        <TransparencyDrawerChrome id="test-omega"
           aggregated={aggWithCoverage}
           versionMeta={metaWithoutReview}
           state={{ tab: "sources" }}

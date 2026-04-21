@@ -9,6 +9,7 @@ import {
   type TransparencyTab,
 } from "@/lib/transparency-hash";
 import { useTransparencyHash } from "@/lib/use-transparency-hash";
+import { SourcesTab } from "@/components/transparency/SourcesTab";
 
 const TAB_ORDER: readonly TransparencyTab[] = [
   "sources",
@@ -30,11 +31,13 @@ const TAB_LABELS: Record<TransparencyTab, string> = {
 // ---------------------------------------------------------------------------
 
 export function TransparencyDrawerChrome({
+  id,
   versionMeta,
   aggregated,
   state,
   onStateChange,
 }: {
+  id: string;
   versionMeta: VersionMetadata;
   aggregated: AggregatedOutput;
   state: TransparencyHashState | null;
@@ -141,7 +144,15 @@ export function TransparencyDrawerChrome({
               hidden={!selected}
               className="text-sm text-text-secondary"
             >
-              <TabPlaceholder tab={t} />
+              {selected ? (
+                <TabBody
+                  tab={t}
+                  id={id}
+                  versionDate={versionMeta.version_date}
+                  state={state}
+                  onStateChange={onStateChange}
+                />
+              ) : null}
             </div>
           );
         })}
@@ -155,7 +166,7 @@ export function TransparencyDrawerChrome({
 // ---------------------------------------------------------------------------
 
 export function TransparencyDrawer({
-  id: _id,
+  id,
   versionMeta,
   aggregated,
 }: {
@@ -166,6 +177,7 @@ export function TransparencyDrawer({
   const [state, setState] = useTransparencyHash();
   return (
     <TransparencyDrawerChrome
+      id={id}
       versionMeta={versionMeta}
       aggregated={aggregated}
       state={state}
@@ -260,6 +272,44 @@ function SummaryRow({
       ))}
     </dl>
   );
+}
+
+function TabBody({
+  tab,
+  id,
+  versionDate,
+  state,
+  onStateChange,
+}: {
+  tab: TransparencyTab;
+  id: string;
+  versionDate: string;
+  state: TransparencyHashState | null;
+  onStateChange: (next: TransparencyHashState | null) => void;
+}) {
+  switch (tab) {
+    case "sources": {
+      const selectedFile =
+        state && state.tab === "sources" ? state.file : undefined;
+      return (
+        <SourcesTab
+          id={id}
+          versionDate={versionDate}
+          selectedFile={selectedFile}
+          onSelectFile={(filename) =>
+            onStateChange(
+              filename
+                ? { tab: "sources", file: filename }
+                : { tab: "sources" },
+            )
+          }
+          onRequestDocumentTab={() => onStateChange({ tab: "document" })}
+        />
+      );
+    }
+    default:
+      return <TabPlaceholder tab={tab} />;
+  }
 }
 
 function TabPlaceholder({ tab }: { tab: TransparencyTab }) {
