@@ -159,6 +159,21 @@ describe("deriveComparisonProjection", () => {
     const proj = deriveComparisonProjection(customBundle);
     expect(proj.partyShort).toBe("MÉS");
   });
+
+  it("projects the spectrum label and status from overall_spectrum", () => {
+    const proj = deriveComparisonProjection(bundle);
+    expect(proj.spectrumStatus).toBe("present");
+    expect(proj.spectrumLabelDisplay).toBe("Gauche");
+  });
+
+  it("projects status=absent with null label when overall_spectrum is missing", () => {
+    const agg = cloneAgg(bundle.aggregated);
+    delete (agg.positioning as { overall_spectrum?: unknown })
+      .overall_spectrum;
+    const proj = deriveComparisonProjection({ ...bundle, aggregated: agg });
+    expect(proj.spectrumStatus).toBe("absent");
+    expect(proj.spectrumLabelDisplay).toBeNull();
+  });
 });
 
 describe("comparison-projection source (editorial guardrail)", () => {

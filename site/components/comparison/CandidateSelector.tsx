@@ -56,10 +56,14 @@ export function CandidateSelector() {
             : undefined;
           const grade = entry.overallGrade;
           const gradeLabel = grade;
+          const spectrumText =
+            entry.spectrumStatus === "absent"
+              ? null
+              : entry.spectrumLabelDisplay;
           const ariaLabel =
             lang === "en"
-              ? `${selected ? "Deselect" : "Select"} ${entry.displayName}, ${entry.party}, overall grade ${gradeLabel}`
-              : `${selected ? "Désélectionner" : "Sélectionner"} ${entry.displayName}, ${entry.party}, note globale ${gradeLabel}`;
+              ? `${selected ? "Deselect" : "Select"} ${entry.displayName}, ${entry.party}, overall grade ${gradeLabel}${spectrumText ? `, positioning ${spectrumText}` : ""}`
+              : `${selected ? "Désélectionner" : "Sélectionner"} ${entry.displayName}, ${entry.party}, note globale ${gradeLabel}${spectrumText ? `, positionnement ${spectrumText}` : ""}`;
           return (
             <li key={entry.id}>
               <button
@@ -91,6 +95,15 @@ export function CandidateSelector() {
                   <span className="block truncate text-xs opacity-80">
                     {entry.party}
                   </span>
+                  {spectrumText ? (
+                    <span
+                      className={`block truncate text-xs ${selected ? "opacity-70" : "text-text-tertiary"}`}
+                      data-testid="selector-spectrum"
+                      data-spectrum-status={entry.spectrumStatus}
+                    >
+                      {spectrumText}
+                    </span>
+                  ) : null}
                 </span>
               </button>
             </li>

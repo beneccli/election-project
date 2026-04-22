@@ -75,6 +75,8 @@ function makeProjection(
       education: 0,
       housing: 0,
     },
+    spectrumLabelDisplay: null,
+    spectrumStatus: "absent",
     ...opts,
   };
 }
@@ -130,6 +132,36 @@ describe("ComparisonBody page-shell — CandidateSelector", () => {
     expect(html).not.toContain('data-candidate="a"');
     expect(html).toContain('data-candidate="b"');
   });
+
+  it("renders the spectrum subtitle and extends aria-label when present", () => {
+    setCtx({
+      entries: [
+        makeProjection("alpha", "Alpha One", {
+          spectrumLabelDisplay: "Centre-gauche",
+          spectrumStatus: "present",
+        }),
+      ],
+      selectedIds: [],
+      maxReached: false,
+      excludeFictional: false,
+    });
+    const html = renderToStaticMarkup(<CandidateSelector />);
+    expect(html).toContain('data-testid="selector-spectrum"');
+    expect(html).toContain('data-spectrum-status="present"');
+    expect(html).toContain("Centre-gauche");
+    expect(html).toMatch(/aria-label="[^"]*positionnement Centre-gauche/);
+  });
+
+  it("omits the spectrum subtitle when status is absent", () => {
+    setCtx({
+      entries: [makeProjection("a", "A")],
+      selectedIds: [],
+      maxReached: false,
+      excludeFictional: false,
+    });
+    const html = renderToStaticMarkup(<CandidateSelector />);
+    expect(html).not.toContain("selector-spectrum");
+  });
 });
 
 describe("ComparisonBody page-shell — SelectedHeader", () => {
@@ -159,6 +191,40 @@ describe("ComparisonBody page-shell — SelectedHeader", () => {
     // Sticky positioning class present.
     expect(html).toMatch(/sticky/);
     expect(html).toMatch(/top-nav-h/);
+  });
+
+  it("renders the spectrum label inside each chip when present", () => {
+    setCtx({
+      entries: [
+        makeProjection("a", "Alpha", {
+          spectrumLabelDisplay: "Gauche",
+          spectrumStatus: "present",
+        }),
+        makeProjection("b", "Bravo", {
+          spectrumLabelDisplay: "Hors spectre",
+          spectrumStatus: "inclassable",
+        }),
+      ],
+      selectedIds: ["a", "b"],
+    });
+    const html = renderToStaticMarkup(<SelectedHeader />);
+    expect(html).toContain('data-testid="selected-header-spectrum"');
+    expect(html).toContain('data-spectrum-status="present"');
+    expect(html).toContain('data-spectrum-status="inclassable"');
+    expect(html).toContain("Gauche");
+    expect(html).toContain("Hors spectre");
+  });
+
+  it("omits the spectrum chip text when status is absent", () => {
+    setCtx({
+      entries: [
+        makeProjection("a", "Alpha"),
+        makeProjection("b", "Bravo"),
+      ],
+      selectedIds: ["a", "b"],
+    });
+    const html = renderToStaticMarkup(<SelectedHeader />);
+    expect(html).not.toContain("selected-header-spectrum");
   });
 });
 

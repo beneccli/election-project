@@ -42,6 +42,8 @@ export function SelectedHeader() {
       >
         {selected.map((c, slot) => {
           const color = COMPARISON_COLORS[slot % COMPARISON_COLORS.length];
+          const spectrumText =
+            c.spectrumStatus === "absent" ? null : c.spectrumLabelDisplay;
           return (
             <li
               key={c.id}
@@ -59,6 +61,18 @@ export function SelectedHeader() {
               </span>
               <span className="text-text-tertiary">·</span>
               <span className="text-text-secondary">{c.partyShort}</span>
+              {spectrumText ? (
+                <>
+                  <span className="text-text-tertiary">·</span>
+                  <span
+                    className="text-text-tertiary"
+                    data-testid="selected-header-spectrum"
+                    data-spectrum-status={c.spectrumStatus}
+                  >
+                    {spectrumText}
+                  </span>
+                </>
+              ) : null}
             </li>
           );
         })}
