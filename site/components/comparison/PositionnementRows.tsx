@@ -58,7 +58,7 @@ export function PositionnementRows({
         return (
           <li key={axis.axis}>
             <div className="mb-1 flex items-baseline justify-between">
-              <span className="text-sm font-medium">{label}</span>
+              <span className="text-sm font-medium uppercase">{label}</span>
               {showSpread ? (
                 <span
                   className="text-xs font-semibold"

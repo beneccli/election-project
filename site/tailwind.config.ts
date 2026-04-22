@@ -13,6 +13,7 @@ const config: Config = {
     extend: {
       colors: {
         bg: "var(--bg)",
+        "bg-card": "var(--bg-card)",
         "bg-subtle": "var(--bg-subtle)",
         text: "var(--text)",
         "text-secondary": "var(--text-secondary)",

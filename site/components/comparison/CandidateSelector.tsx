@@ -15,23 +15,17 @@ export function CandidateSelector() {
   const { entries, slotOf, toggle, maxReached, excludeFictional } =
     useComparison();
   const { lang } = useLang();
+  const selectedCount = entries.filter((entry) => slotOf(entry.id) >= 0).length;
+  const maxSelectable = maxReached ? 4 : entries.length;
+
   return (
-    <section className="mb-10">
-      <h2 className="mb-3 font-display text-lg font-semibold">
-        {lang === "en" ? "Pick 2 to 4 candidates" : "Choisir 2 à 4 candidats"}
+    <section className="mb-10 border-t border-rule pt-10">
+      <h2 className="mb-3 uppercase text-sm text-text-secondary font-semibold">
+        {lang === "en" ? `Selected candidates (${selectedCount}/${maxSelectable})` : `Candidats sélectionnés (${selectedCount}/${maxSelectable})`}
       </h2>
-      <p className="mb-4 text-sm text-text-secondary">
-        {excludeFictional
-          ? lang === "en"
-            ? "Fictional candidates are excluded from the comparison."
-            : "Les candidats fictifs sont exclus de la comparaison."
-          : lang === "en"
-            ? "Fictional candidates are labelled as such."
-            : "Les candidats fictifs sont indiqués comme tels."}
-      </p>
       <ul
         role="list"
-        className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4"
+        className="flex gap-3"
       >
         {entries.map((entry) => {
           if (!entry.analyzable) {
@@ -73,16 +67,16 @@ export function CandidateSelector() {
                 aria-pressed={selected}
                 aria-label={ariaLabel}
                 data-candidate={entry.id}
-                className={`flex w-full items-center gap-3 rounded border p-3 text-left text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
-                  selected
-                    ? "border-transparent text-white"
-                    : "border-rule bg-bg hover:bg-bg-subtle"
-                } ${disabled ? "cursor-not-allowed opacity-40" : ""}`}
-                style={selected ? { backgroundColor: color } : undefined}
+                className={`h-full flex flex-col items-start min-w-[160px] gap-3 rounded-lg border border-2 p-3 text-left text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                  disabled ? "cursor-not-allowed opacity-40" : ""} ${
+                  selected ? "bg-bg-card" : "bg-bg-subtle"
+                }`}
+                style={selected ? { border: `2px solid ${color}` } : undefined}
               >
-                <span className="flex-shrink-0">
-                  <GradeBadge grade={grade} size="sm" />
-                </span>
+                <div className="flex justify-between gap-3">
+                  <div style={{ width:6, height:6, borderRadius:"50%", background: selected ? color : 'black', marginTop:2, flexShrink:0 }} />
+                  {selected && <GradeBadge grade={grade} size="sm" />}
+                </div>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-medium">
                     {entry.displayName}
@@ -92,9 +86,9 @@ export function CandidateSelector() {
                       </span>
                     ) : null}
                   </span>
-                  <span className="block truncate text-xs opacity-80">
+                  {/* <span className="block truncate text-xs opacity-80">
                     {entry.party}
-                  </span>
+                  </span> */}
                   {spectrumText ? (
                     <span
                       className={`block truncate text-xs ${selected ? "opacity-70" : "text-text-tertiary"}`}
@@ -105,6 +99,9 @@ export function CandidateSelector() {
                     </span>
                   ) : null}
                 </span>
+                {selected && (
+                  <div style={{ width:"100%", height:3, borderRadius:2, background: color, marginTop: 2 }} />
+                )}
               </button>
             </li>
           );

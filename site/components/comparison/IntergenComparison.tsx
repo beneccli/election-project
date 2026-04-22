@@ -14,6 +14,7 @@ import {
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
 import { useComparison } from "./ComparisonBody";
+import { SectionHead } from "../chrome/SectionHead";
 
 const ROW_LABELS: Record<HorizonRowKey, { fr: string; en: string }> = {
   pensions: { fr: "Retraites", en: "Pensions" },
@@ -73,9 +74,8 @@ export function IntergenTable({
   return (
     <section id="intergenerationnel" className="mb-16">
       <header className="mb-5">
-        <h2 className="font-display text-xl font-semibold">
-          {lang === "en" ? "Intergenerational" : "Intergénérationnel"}
-        </h2>
+        <SectionHead label={lang === "en" ? "Intergenerational" : "Intergénérationnel"} />
+        
         <p className="mt-1 max-w-prose text-sm text-text-secondary">
           {lang === "en"
             ? "Estimated net impact on future generations (−3 very negative, +3 very positive) at the 2047 horizon."

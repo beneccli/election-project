@@ -8,6 +8,7 @@
 :root {
   --bg: oklch(0.975 0.007 75);
   --bg-subtle: oklch(0.955 0.010 78);
+  --bg-card: oklch(0.985 0.005 75);
   --text: oklch(0.14 0.015 260);
   --text-secondary: oklch(0.44 0.015 260);
   --text-tertiary: oklch(0.62 0.01 260);
@@ -24,6 +25,7 @@
 [data-theme="dark"] {
   --bg: oklch(0.11 0.015 260);
   --bg-subtle: oklch(0.155 0.018 260);
+  --bg-card: oklch(0.13 0.016 260);
   --text: oklch(0.94 0.006 75);
   --text-secondary: oklch(0.68 0.012 260);
   --text-tertiary: oklch(0.50 0.010 260);
