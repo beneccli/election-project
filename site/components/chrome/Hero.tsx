@@ -6,6 +6,7 @@ import type {
   VersionMetadata,
 } from "@/lib/schema";
 import { deriveTopLevelGrade } from "@/lib/derived/top-level-grade";
+import { deriveSpectrumLabel } from "@/lib/derived/spectrum-label";
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 
 type PartyMeta = CandidateMetadata & {
@@ -26,6 +27,7 @@ export function Hero({
   const partyShort = p.party_short ?? meta.party.slice(0, 2).toUpperCase();
   const partyColor = p.party_color ?? "#3B6FD4";
   const grade = deriveTopLevelGrade(aggregated);
+  const spectrum = deriveSpectrumLabel(aggregated, "fr");
   const modelIds = Object.keys(versionMeta.analysis?.models ?? {});
 
   return (
@@ -56,6 +58,18 @@ export function Hero({
                 {partyShort}
                 <span className="font-normal normal-case">{meta.party}</span>
               </span>
+              {spectrum.displayText ? (
+                <a
+                  href="#positionnement"
+                  className="rounded text-[11px] text-text-tertiary hover:text-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  title={spectrum.tooltipLines.join("\n")}
+                  aria-label={`Positionnement : ${spectrum.displayText}`}
+                  data-testid="hero-spectrum-chip"
+                  data-spectrum-status={spectrum.status}
+                >
+                  {spectrum.displayText}
+                </a>
+              ) : null}
             </div>
             <h1 className="mb-5 font-display text-[clamp(28px,4vw,44px)] font-bold leading-[1.1] tracking-[-0.01em] text-text">
               {meta.display_name}
