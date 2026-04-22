@@ -1,8 +1,9 @@
 // See docs/specs/website/nextjs-architecture.md §1 — placeholder landing page
 // The real landing page ships with milestone M_Landing. A minimal CTA
 // to the /comparer route is added by M_Comparison task 0098.
+// The full landing composition arrives in task 0117.
 import Link from "next/link";
-import { listCandidates } from "@/lib/candidates";
+import { buildCompareCtaHref } from "@/lib/compare-cta";
 
 export default function HomePage() {
   const compareCtaHref = buildCompareCtaHref();
@@ -26,24 +27,4 @@ export default function HomePage() {
       </div>
     </main>
   );
-}
-
-/**
- * Build `/comparer?c=<id1>&c=<id2>` pre-selecting the two most recently
- * updated analyzable candidates, so the CTA lands on a page that
- * already has a populated comparison. Falls back to `/comparer` when
- * fewer than two analyzable candidates are available.
- *
- * Editorial: ordering is by `updated` recency, NOT by any score — the
- * landing page must never insinuate a ranking.
- */
-function buildCompareCtaHref(): string {
-  const entries = listCandidates();
-  const sorted = [...entries].sort((a, b) =>
-    b.updatedAt.localeCompare(a.updatedAt),
-  );
-  const picks = sorted.slice(0, 2).map((e) => e.id);
-  if (picks.length === 0) return "/comparer";
-  const qs = picks.map((id) => `c=${encodeURIComponent(id)}`).join("&");
-  return `/comparer?${qs}`;
 }
