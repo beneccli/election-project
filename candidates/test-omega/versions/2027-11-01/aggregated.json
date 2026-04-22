@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "test-omega",
   "version_date": "2027-11-01",
   "source_models": [
@@ -22,8 +22,8 @@
       "provider": "copilot",
       "version": "claude-opus-4-6"
     },
-    "prompt_sha256": "732ab4ca06b3c3e68fb7a1e07d954b9cb720c2df26eb1aa2f8c2030ec613429b",
-    "prompt_version": "1.1",
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
     "run_at": "2026-04-20T18:00:00Z"
   },
   "summary": "Le programme d'Omega Synthétique propose un techno-progressisme écologique et décentralisateur articulé autour d'un investissement public massif (50 Mds €/an) dans la transition verte, d'un filet de sécurité universel inconditionnel (RBU à 750 €/mois), et d'une rupture institutionnelle transférant 30 % du budget national aux régions. Le financement repose sur une fiscalité redistributive (ISF-C, suppression d'aides inefficaces) et une hypothèse de croissance à 1,2 %/an, mais l'écart entre dépenses annoncées et recettes identifiées constitue la fragilité structurelle centrale. Les trois modèles convergent sur un profil interventionniste, écologiste et progressiste, mais divergent sur l'intensité du positionnement économique, le grade de certaines dimensions, et la direction du contrefactuel.",
@@ -261,6 +261,39 @@
           "model": "gpt-5.4-thinking",
           "score": 4,
           "reasoning": "Close to EELV 2022 with a more pro-nuclear and techno-industrial pathway that does not reduce ecological policy intensity."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "gauche",
+      "label_distribution": {
+        "gauche": 2,
+        "inclassable": 1
+      },
+      "anchor_narrative": "Deux modèles placent le programme dans la bande gauche sur la base de l'interventionnisme économique, du social-progressisme et de l'écologisme marqué ; un troisième modèle conclut à un placement inclassable en raison de la combinaison d'un axe économique très étatiste et d'un axe institutionnel illibéral qui ne s'accorde pas au schéma gauche/droite conventionnel.",
+      "confidence": 0.55,
+      "dissent": [
+        {
+          "model": "gemini-1.5-pro",
+          "label": "inclassable",
+          "reasoning": "L'axe économique étatiste extrême (-4) pousse fortement à gauche, mais l'axe souveraineté (+1) et surtout l'axe institutionnel (+2 illibéral) tirent l'autre direction, et l'axe social-progressiste (-3) ne suffit pas à trancher ; les axes ne se combinent pas en une placement gauche/droite cohérent, le programme est donc reporté comme inclassable plutôt que forcé sur le spectre."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-6",
+          "label": "gauche",
+          "reasoning": "Interventionnisme économique fort (score -3) combiné à un axe social/culturel progressiste marqué (-3) et un axe écologique prononcé (+3) situent le programme dans la bande gauche, l'axe institutionnel légèrement +1 n'étant pas extrême et laissant la lecture dans le registre social-démocratique radical plutôt qu'extrême."
+        },
+        {
+          "model": "gpt-5.4-thinking",
+          "label": "gauche",
+          "reasoning": "Le poids de l'interventionnisme économique (-3), du social-progressisme modéré (-2) et de l'écologisme marqué (+4) fait pencher le programme sur la gauche conventionnelle, avec une souveraineté légèrement nationaliste (+1) qui ne suffit pas à neutraliser le bloc gauche-écologique sur les axes primaires."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "label": "inclassable",
+          "reasoning": "L'axe économique étatiste extrême (-4) pousse fortement à gauche, mais l'axe souveraineté (+1) et surtout l'axe institutionnel (+2 illibéral) tirent l'autre direction, et l'axe social-progressiste (-3) ne suffit pas à trancher ; les axes ne se combinent pas en une placement gauche/droite cohérent, le programme est donc reporté comme inclassable plutôt que forcé sur le spectre."
         }
       ]
     }
@@ -3025,6 +3058,14 @@
           4
         ],
         "modal": 4,
+        "dissent_count": 1
+      },
+      "overall_spectrum": {
+        "modal_label": "gauche",
+        "distribution": {
+          "gauche": 2,
+          "inclassable": 1
+        },
         "dissent_count": 1
       }
     }

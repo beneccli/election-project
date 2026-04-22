@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "test-omega",
   "version_date": "2026-04-20",
   "model": {
@@ -8,7 +8,7 @@
   },
   "run_metadata": {
     "run_at": "2026-04-20T04:14:52Z",
-    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "temperature": 0
   },
   "summary": "Omega Synthétique proposes a high-intervention ecological transition program combining large public investment, tax reallocation toward carbon-intensive capital, universal social transfers, and major institutional decentralization. The program is comparatively detailed on energy, climate, housing, education, and institutional redesign, but several fiscal balances depend on optimistic macro assumptions, EU-level negotiations, and heavy implementation capacity.",
@@ -112,6 +112,22 @@
       ],
       "confidence": 0.9,
       "reasoning": "The ecological axis is driven by concrete constitutional climate targets, mandatory building retrofits, protected areas, pesticide bans, rail freight investment, and a large-scale bio/agroecology shift. The strong nuclear component reduces alignment with anti-nuclear green traditions but does not reduce the overall ecological policy intensity."
+    },
+    "overall_spectrum": {
+      "label": "gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Lancement d'un grand plan d'investissement de 50 milliards d'euros par an sur le quinquennat, dédié à la relocalisation des industries critiques",
+          "source_ref": "sources.md#13-croissance-et-réindustrialisation-fictif"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "Le poids de l'interventionnisme économique (-3), du social-progressisme modéré (-2) et de l'écologisme marqué (+4) fait pencher le programme sur la gauche conventionnelle, avec une souveraineté légèrement nationaliste (+1) qui ne suffit pas à neutraliser le bloc gauche-écologique sur les axes primaires."
     }
   },
   "dimensions": {

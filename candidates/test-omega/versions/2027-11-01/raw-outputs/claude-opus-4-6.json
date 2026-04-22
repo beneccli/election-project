@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "test-omega",
   "version_date": "2027-11-01",
   "model": {
@@ -8,7 +8,7 @@
   },
   "run_metadata": {
     "run_at": "2026-04-20T12:00:00Z",
-    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "temperature": 0
   },
   "summary": "Le programme d'Omega Synthétique articule un techno-progressisme écologique et décentralisateur autour de trois piliers : un investissement public massif (50 Mds €/an) dans la transition écologique et la réindustrialisation, un filet de sécurité universel inconditionnel (RBU à 750 €/mois), et une rupture institutionnelle girondine transférant 30 % du budget national aux régions. Le financement repose sur une fiscalité redistributive (ISF-C à 8 Mds €/an, suppression d'aides inefficaces estimée à 15 Mds €/an) et une hypothèse de croissance qualitative modérée (1,2 %/an), mais l'écart entre les dépenses annoncées et les recettes identifiées constitue la principale fragilité structurelle du programme.",
@@ -112,6 +112,22 @@
       ],
       "confidence": 0.85,
       "reasoning": "Le programme propose des engagements écologiques très ambitieux et juridiquement contraignants (objectif constitutionnel, comptabilité carbone nationale, budget carbone en loi de finances). Le choix du nucléaire comme pilier du mix (50 %) le distingue d'EELV qui prône la sortie du nucléaire. Score de +3 reflète un programme très écologiste dans ses objectifs et moyens, modéré par le choix pro-nucléaire."
+    },
+    "overall_spectrum": {
+      "label": "gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Lancement d'un grand plan d'investissement de 50 milliards d'euros par an sur le quinquennat, dédié à la relocalisation des industries critiques",
+          "source_ref": "sources.md#13-croissance-et-réindustrialisation-fictif"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Interventionnisme économique fort (score -3) combiné à un axe social/culturel progressiste marqué (-3) et un axe écologique prononcé (+3) situent le programme dans la bande gauche, l'axe institutionnel légèrement +1 n'étant pas extrême et laissant la lecture dans le registre social-démocratique radical plutôt qu'extrême."
     }
   },
   "dimensions": {
@@ -124,28 +140,37 @@
           "problem": "Financement de la transition écologique",
           "approach": "Plan d'investissement dédié de 50 Mds €/an, conditionné à des contrats de trajectoire carbone, financé en partie par l'ISF-C (8 Mds €) et la revue des aides aux entreprises (15 Mds €).",
           "strength": 0.7,
-          "source_refs": ["sources.md#11-finances-publiques-fictif", "sources.md#13-croissance-et-réindustrialisation-fictif"],
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#13-croissance-et-réindustrialisation-fictif"
+          ],
           "reasoning": "Le mécanisme de financement est explicitement chiffré mais couvre moins de la moitié de l'enveloppe annoncée. La conditionnalité carbone des aides est un levier concret."
         },
         {
           "problem": "Précarité du travail de plateforme",
           "approach": "Interdiction des clauses d'exclusivité et présomption de salariat pour livreurs et chauffeurs VTC.",
           "strength": 0.75,
-          "source_refs": ["sources.md#14-marché-du-travail-fictif"],
+          "source_refs": [
+            "sources.md#14-marché-du-travail-fictif"
+          ],
           "reasoning": "Mesure directe et juridiquement opérationnelle reposant sur un renversement de la charge de la preuve. Mécanisme éprouvé dans d'autres juridictions européennes."
         },
         {
           "problem": "Insuffisance du minimum retraite",
           "approach": "Revalorisation du minimum contributif à 1 200 € nets mensuels pour carrière complète au SMIC, dans un système universel par points.",
           "strength": 0.65,
-          "source_refs": ["sources.md#15-retraites-fictif"],
+          "source_refs": [
+            "sources.md#15-retraites-fictif"
+          ],
           "reasoning": "Objectif chiffré et clair. Le coût de la revalorisation et sa compatibilité avec l'équilibre du système par points ne sont pas détaillés dans les sources."
         },
         {
           "problem": "Pénurie de logements sociaux et passoires thermiques",
           "approach": "Construction de 200 000 logements sociaux éco-conçus par an, gel des loyers conditionné à la rénovation énergétique, expropriation simplifiée des immeubles vacants des personnes morales.",
           "strength": 0.7,
-          "source_refs": ["sources.md#16-logement-fictif"],
+          "source_refs": [
+            "sources.md#16-logement-fictif"
+          ],
           "reasoning": "Volume ambitieux et mécanisme de conditionnalité clair. Le financement via le Livret A mobilise un stock existant, mais la capacité de construction du secteur à absorber 200 000 unités/an reste un risque d'exécution."
         }
       ],
@@ -166,7 +191,10 @@
           "problem": "Inflation importée par les barrières douanières",
           "mechanism": "La taxe kilométrique sur le transport routier international, le tarif carbone extérieur et le bouclier douanier agricole augmenteront mécaniquement le prix des biens importés pour les consommateurs français.",
           "severity": 0.5,
-          "source_refs": ["sources.md#12-structure-fiscale-fictif", "sources.md#17-cadre-budgétaire-européen-fictif"],
+          "source_refs": [
+            "sources.md#12-structure-fiscale-fictif",
+            "sources.md#17-cadre-budgétaire-européen-fictif"
+          ],
           "reasoning": "Le programme reconnaît une « inflation verte » de 2,5 % mais ne distingue pas la part due aux barrières commerciales de celle due à la transition productive. L'effet est structurel et régressif sans le RBU comme amortisseur."
         }
       ],
@@ -176,14 +204,19 @@
           "probability": 0.8,
           "severity": 0.85,
           "reasoning": "Le programme identifie environ 23 Mds € de recettes nouvelles (ISF-C 8 Mds + revue aides 15 Mds) pour un plan d'investissement de 50 Mds €/an, auquel s'ajoute le RBU à 750 €/mois dont le coût brut (avant recyclage des prestations supprimées) dépasse 150 Mds €/an. L'hypothèse de croissance à 1,2 % ne génère pas les recettes fiscales supplémentaires nécessaires.",
-          "source_refs": ["sources.md#11-finances-publiques-fictif", "sources.md#sources-internes-au-programme-fictif"]
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#sources-internes-au-programme-fictif"
+          ]
         },
         {
           "risk": "Négociation de l'exclusion des dépenses vertes du déficit des 3 % au niveau européen",
           "probability": 0.65,
           "severity": 0.6,
           "reasoning": "La modification des traités requiert l'unanimité des 27 États membres. Certains pays frugaux (Pays-Bas, Allemagne, Autriche) ont historiquement résisté à toute flexibilisation du Pacte de stabilité.",
-          "source_refs": ["sources.md#17-cadre-budgétaire-européen-fictif"]
+          "source_refs": [
+            "sources.md#17-cadre-budgétaire-européen-fictif"
+          ]
         }
       ],
       "key_measures": [
@@ -222,22 +255,34 @@
         "budgetary": {
           "level": "high",
           "note": "Recettes identifiées (≈23 Mds €/an) couvrent moins de la moitié de l'investissement annoncé (50 Mds €/an), hors RBU dont le coût brut dépasse 150 Mds €/an.",
-          "source_refs": ["sources.md#11-finances-publiques-fictif", "sources.md#sources-internes-au-programme-fictif"]
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif",
+            "sources.md#sources-internes-au-programme-fictif"
+          ]
         },
         "implementation": {
           "level": "high",
           "note": "Réforme des retraites, nationalisation du parc électrique, 200 000 logements sociaux/an, suppression des départements : chaque chantier est lourd individuellement.",
-          "source_refs": ["sources.md#15-retraites-fictif", "sources.md#34-souveraineté-énergétique-fictif", "sources.md#16-logement-fictif"]
+          "source_refs": [
+            "sources.md#15-retraites-fictif",
+            "sources.md#34-souveraineté-énergétique-fictif",
+            "sources.md#16-logement-fictif"
+          ]
         },
         "dependency": {
           "level": "moderate",
           "note": "Exclusion des dépenses vertes du calcul de déficit des 3 % requiert l'accord unanime au niveau européen. Hypothèse de croissance à 1,2 %/an.",
-          "source_refs": ["sources.md#17-cadre-budgétaire-européen-fictif", "sources.md#sources-internes-au-programme-fictif"]
+          "source_refs": [
+            "sources.md#17-cadre-budgétaire-européen-fictif",
+            "sources.md#sources-internes-au-programme-fictif"
+          ]
         },
         "reversibility": {
           "level": "low",
           "note": "La règle d'or verte, le système de retraite par points et l'ISF-C sont des réformes législatives réversibles par une majorité parlementaire simple.",
-          "source_refs": ["sources.md#11-finances-publiques-fictif"]
+          "source_refs": [
+            "sources.md#11-finances-publiques-fictif"
+          ]
         }
       },
       "confidence": 0.75
@@ -251,28 +296,36 @@
           "problem": "Déserts médicaux",
           "approach": "Obligation de service médical de 3 ans en désert médical pour tout jeune médecin, accompagnée d'une hausse de 5 % du budget hospitalier (hors inflation) fléchée vers les salaires paramédicaux.",
           "strength": 0.7,
-          "source_refs": ["sources.md#21-santé-fictif"],
+          "source_refs": [
+            "sources.md#21-santé-fictif"
+          ],
           "reasoning": "La mesure est contraignante et directe, mais pourrait réduire l'attractivité de la profession médicale. La revalorisation paramédicale cible un problème structurel réel."
         },
         {
           "problem": "Rémunération des enseignants sous la moyenne OCDE",
           "approach": "Revalorisation salariale inconditionnelle de 15 % dès la première année du mandat.",
           "strength": 0.8,
-          "source_refs": ["sources.md#22-éducation-fictif"],
+          "source_refs": [
+            "sources.md#22-éducation-fictif"
+          ],
           "reasoning": "Mesure directe, quantifiée, immédiate. L'objectif (moyenne OCDE) est un benchmark vérifiable."
         },
         {
           "problem": "Inégalités de revenus et pauvreté",
           "approach": "RBU à 750 €/mois fusionnant RSA et prime d'activité, plafonnement des écarts de rémunération 1 à 20, fiscalité confiscatoire sur les successions au-delà de 10 M€/enfant.",
           "strength": 0.7,
-          "source_refs": ["sources.md#24-inégalités-fictif"],
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ],
           "reasoning": "Triple mécanisme : plancher (RBU), plafond (écarts 1/20), transmission (successions). L'articulation est cohérente. Le coût brut du RBU est le point de fragilité principal."
         },
         {
           "problem": "Insuffisance de l'accueil de la petite enfance",
           "approach": "Plan de 150 000 places en crèche publique d'ici 2030, congé parental partagé de 6 mois (dont 2 non transférables).",
           "strength": 0.65,
-          "source_refs": ["sources.md#23-politique-familiale-fictif"],
+          "source_refs": [
+            "sources.md#23-politique-familiale-fictif"
+          ],
           "reasoning": "Volume quantifié et mécanisme de partage obligatoire. Le rythme de 30 000 places/an est ambitieux par rapport aux capacités de construction et de recrutement du secteur."
         }
       ],
@@ -288,7 +341,9 @@
           "problem": "Attractivité de la profession médicale",
           "mechanism": "L'obligation de service de 3 ans en désert médical pour les jeunes médecins pourrait dissuader des vocations ou encourager l'expatriation post-formation.",
           "severity": 0.4,
-          "source_refs": ["sources.md#21-santé-fictif"],
+          "source_refs": [
+            "sources.md#21-santé-fictif"
+          ],
           "reasoning": "Le mécanisme est coercitif. Des pays ayant tenté des obligations similaires ont observé une baisse des inscriptions en médecine. Les sources ne mentionnent pas de compensation financière ou de mesure d'attractivité pour les postes contraints."
         }
       ],
@@ -298,14 +353,18 @@
           "probability": 0.85,
           "severity": 0.8,
           "reasoning": "Avec environ 52 millions d'adultes en France, le coût brut annuel dépasserait 460 Mds €. Après recyclage du RSA et de la prime d'activité (≈30 Mds €), le solde net reste considérable. Les sources ne détaillent pas l'arbitrage entre universalité réelle et dégressivité fiscale implicite.",
-          "source_refs": ["sources.md#24-inégalités-fictif"]
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ]
         },
         {
           "risk": "Recrutement de personnel pour 150 000 places en crèche en 5 ans",
           "probability": 0.6,
           "severity": 0.5,
           "reasoning": "Le secteur de la petite enfance souffre déjà de pénurie de personnel. L'ouverture de 150 000 places nécessiterait le recrutement d'environ 50 000 professionnels qualifiés, sans mesure de revalorisation salariale spécifique au secteur dans les sources.",
-          "source_refs": ["sources.md#23-politique-familiale-fictif"]
+          "source_refs": [
+            "sources.md#23-politique-familiale-fictif"
+          ]
         }
       ],
       "key_measures": [
@@ -344,22 +403,32 @@
         "budgetary": {
           "level": "high",
           "note": "Le RBU à 750 €/mois représente un coût brut annuel supérieur à 460 Mds €. Le financement agrégé des mesures sociales n'est pas consolidé dans les sources.",
-          "source_refs": ["sources.md#24-inégalités-fictif"]
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ]
         },
         "implementation": {
           "level": "high",
           "note": "Déploiement simultané du RBU, de 150 000 places en crèche, d'un service civique universel et de la réforme médicale : charge administrative très élevée.",
-          "source_refs": ["sources.md#21-santé-fictif", "sources.md#23-politique-familiale-fictif", "sources.md#25-cohésion-sociale-fictif"]
+          "source_refs": [
+            "sources.md#21-santé-fictif",
+            "sources.md#23-politique-familiale-fictif",
+            "sources.md#25-cohésion-sociale-fictif"
+          ]
         },
         "dependency": {
           "level": "limited",
           "note": "Les mesures sociales sont principalement nationales. La dépendance externe se limite aux hypothèses macroéconomiques (croissance 1,2 %, chômage 5 %).",
-          "source_refs": ["sources.md#sources-internes-au-programme-fictif"]
+          "source_refs": [
+            "sources.md#sources-internes-au-programme-fictif"
+          ]
         },
         "reversibility": {
           "level": "moderate",
           "note": "Le RBU, une fois distribué, crée une dépendance politique forte rendant toute réversion socialement coûteuse. Le système par points de retraite est techniquement réversible.",
-          "source_refs": ["sources.md#24-inégalités-fictif"]
+          "source_refs": [
+            "sources.md#24-inégalités-fictif"
+          ]
         }
       },
       "confidence": 0.75
@@ -373,28 +442,36 @@
           "problem": "Défiance envers la police et tensions urbaines",
           "approach": "Police de Proximité et de Prévention de 10 000 agents non armés léthalement, évaluation par enquêtes de victimation plutôt que par le chiffre.",
           "strength": 0.6,
-          "source_refs": ["sources.md#31-sécurité-intérieure-fictif"],
+          "source_refs": [
+            "sources.md#31-sécurité-intérieure-fictif"
+          ],
           "reasoning": "La mesure propose un changement doctrinal (prévention vs répression) et un changement métrique (victimation vs gardes à vue). L'efficacité sur la criminalité est incertaine ; l'absence de mesures sur le trafic de drogue ou le terrorisme est notable."
         },
         {
           "problem": "Lenteur de la justice",
           "approach": "Doublement du budget de la justice administrative et pénale, objectif de délais de jugement de 6 mois maximum.",
           "strength": 0.7,
-          "source_refs": ["sources.md#31-sécurité-intérieure-fictif"],
+          "source_refs": [
+            "sources.md#31-sécurité-intérieure-fictif"
+          ],
           "reasoning": "Le doublement du budget est un signal fort. L'objectif de 6 mois est ambitieux mais le mécanisme de recrutement (magistrats, greffiers) n'est pas détaillé."
         },
         {
           "problem": "Dépendance énergétique aux hydrocarbures importés",
           "approach": "Nationalisation du parc électrique, mix 50 % nucléaire (8 EPR) / 50 % renouvelables, interdiction GNL non conforme aux Accords de Paris.",
           "strength": 0.75,
-          "source_refs": ["sources.md#34-souveraineté-énergétique-fictif"],
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ],
           "reasoning": "Le programme articule production (8 EPR + renouvelables) et gouvernance (nationalisation) avec un horizon de planification à 50 ans. L'interdiction du GNL non conforme est un outil de politique commerciale énergétique original."
         },
         {
           "problem": "Ruptures d'approvisionnement en métaux rares et médicaments",
           "approach": "Réserves stratégiques nationales de 6 mois de consommation pour métaux rares et médicaments essentiels.",
           "strength": 0.65,
-          "source_refs": ["sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"],
+          "source_refs": [
+            "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"
+          ],
           "reasoning": "La constitution de réserves de 6 mois est un objectif précis. Le coût de stockage, le périmètre exact des métaux, et la gestion de la rotation ne sont pas détaillés."
         }
       ],
@@ -415,7 +492,9 @@
           "problem": "Positionnement stratégique dans l'OTAN",
           "mechanism": "La sortie progressive du commandement intégré de l'OTAN d'ici 2035 réduirait l'interopérabilité militaire avec les alliés dans un contexte géopolitique tendu, sans garantie que le Commandement Stratégique Européen soit opérationnel en remplacement.",
           "severity": 0.6,
-          "source_refs": ["sources.md#33-défense-fictif"],
+          "source_refs": [
+            "sources.md#33-défense-fictif"
+          ],
           "reasoning": "La période de transition (2027-2035) crée un risque de lacune capacitaire. L'adhésion des partenaires européens au commandement autonome n'est pas acquise."
         }
       ],
@@ -425,14 +504,18 @@
           "probability": 0.7,
           "severity": 0.7,
           "reasoning": "Le retour d'expérience de Flamanville et d'Olkiluoto montre des risques de dérive calendaire et budgétaire systémiques sur les EPR. Le programme ne détaille pas les mesures de simplification industrielle.",
-          "source_refs": ["sources.md#34-souveraineté-énergétique-fictif"]
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ]
         },
         {
           "risk": "Adhésion des partenaires européens au Commandement Stratégique Européen autonome",
           "probability": 0.6,
           "severity": 0.65,
           "reasoning": "Plusieurs pays de l'UE (Pologne, pays Baltes) considèrent le commandement OTAN comme indispensable face à la menace russe. Un commandement européen autonome nécessite un consensus qui n'existe pas à ce stade.",
-          "source_refs": ["sources.md#33-défense-fictif"]
+          "source_refs": [
+            "sources.md#33-défense-fictif"
+          ]
         }
       ],
       "key_measures": [
@@ -471,22 +554,35 @@
         "budgetary": {
           "level": "moderate",
           "note": "Défense à 2,5 % du PIB (fourchette haute OTAN). Coût de la nationalisation électrique non chiffré. Réserves stratégiques de 6 mois : investissement initial significatif.",
-          "source_refs": ["sources.md#33-défense-fictif", "sources.md#34-souveraineté-énergétique-fictif"]
+          "source_refs": [
+            "sources.md#33-défense-fictif",
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ]
         },
         "implementation": {
           "level": "high",
           "note": "8 EPR, nationalisation électrique, sortie OTAN, réforme policière, doublement budget justice : cumul de chantiers administratifs et industriels lourds.",
-          "source_refs": ["sources.md#34-souveraineté-énergétique-fictif", "sources.md#33-défense-fictif", "sources.md#31-sécurité-intérieure-fictif"]
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif",
+            "sources.md#33-défense-fictif",
+            "sources.md#31-sécurité-intérieure-fictif"
+          ]
         },
         "dependency": {
           "level": "high",
           "note": "La sortie de l'OTAN requiert l'adhésion des partenaires européens. Le bouclier douanier agricole et le tarif carbone extérieur nécessitent un consensus UE à 27.",
-          "source_refs": ["sources.md#33-défense-fictif", "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"]
+          "source_refs": [
+            "sources.md#33-défense-fictif",
+            "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"
+          ]
         },
         "reversibility": {
           "level": "moderate",
           "note": "La nationalisation du parc électrique serait coûteuse à inverser (indemnisation). La sortie de l'OTAN intégré pourrait être techniquement réversible mais politiquement difficile.",
-          "source_refs": ["sources.md#34-souveraineté-énergétique-fictif", "sources.md#33-défense-fictif"]
+          "source_refs": [
+            "sources.md#34-souveraineté-énergétique-fictif",
+            "sources.md#33-défense-fictif"
+          ]
         }
       },
       "confidence": 0.7
@@ -500,21 +596,28 @@
           "problem": "Hyper-présidentialisme et centralisme du système français",
           "approach": "Septennat unique non renouvelable, suppression quasi-totale du 49.3, proportionnelle intégrale, décentralisation de 30 % du budget aux régions, suppression des départements.",
           "strength": 0.7,
-          "source_refs": ["sources.md#41-réforme-institutionnelle-fictif", "sources.md#43-décentralisation-fictif"],
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#43-décentralisation-fictif"
+          ],
           "reasoning": "L'architecture est cohérente : fréquence électorale désynchronisée (septennat présidentiel / quadriennat législatif), équilibre proportionnelle + prime majoritaire, transfert fiscal massif aux régions. Le non-renouvellement du mandat présidentiel supprime l'incitation à gouverner pour être réélu."
         },
         {
           "problem": "Crise de la représentation et abstention",
           "approach": "RIC abrogatoire et législatif à 1 million de signatures, reconnaissance du vote blanc invalidant, vote à 16 ans.",
           "strength": 0.6,
-          "source_refs": ["sources.md#42-référendum-et-système-électoral-fictif"],
+          "source_refs": [
+            "sources.md#42-référendum-et-système-électoral-fictif"
+          ],
           "reasoning": "Le RIC et le vote blanc invalidant sont des réponses directes à la demande de participation. L'effet sur l'abstention est incertain : les pays disposant d'un RIC (Suisse) n'ont pas nécessairement des taux de participation élevés."
         },
         {
           "problem": "Déficit démocratique de l'UE",
           "approach": "Fin de l'unanimité pour fiscalité, politique étrangère et environnement, initiative parlementaire directe, conditionnalité État de droit sur la contribution française.",
           "strength": 0.55,
-          "source_refs": ["sources.md#44-relation-à-lue-fictif"],
+          "source_refs": [
+            "sources.md#44-relation-à-lue-fictif"
+          ],
           "reasoning": "Les propositions sont ambitieuses mais dépendent entièrement de l'adhésion des autres États membres. La conditionnalité État de droit est un levier réel (la France est contributeur net) mais risque une crise politique avec les pays visés."
         }
       ],
@@ -530,7 +633,9 @@
           "problem": "Gouvernabilité sous proportionnelle intégrale",
           "mechanism": "La proportionnelle intégrale, même avec une prime de 15 %, rend les majorités absolues très improbables et institutionnalise la coalition, augmentant le risque d'instabilité gouvernementale à l'italienne.",
           "severity": 0.5,
-          "source_refs": ["sources.md#41-réforme-institutionnelle-fictif"],
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif"
+          ],
           "reasoning": "Le programme prévoit une prime majoritaire de 15 % comme modérateur, mais l'ampleur de cette prime ne suffit pas à garantir une majorité absolue dans un paysage politique fragmenté à 5-7 blocs."
         }
       ],
@@ -540,14 +645,19 @@
           "probability": 0.75,
           "severity": 0.7,
           "reasoning": "Le Congrès doit réunir les 3/5 ou un référendum doit être tenu pour chaque révision. Plusieurs de ces mesures (suppression quasi-totale du 49.3, RIC) seront activement combattues par l'exécutif sortant.",
-          "source_refs": ["sources.md#41-réforme-institutionnelle-fictif", "sources.md#42-référendum-et-système-électoral-fictif"]
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#42-référendum-et-système-électoral-fictif"
+          ]
         },
         {
           "risk": "Suppression de l'échelon départemental face à l'opposition des élus locaux",
           "probability": 0.7,
           "severity": 0.5,
           "reasoning": "La suppression des départements a été tentée sous Hollande et abandonnée face à la résistance des élus. Les conseillers départementaux et employés territoriaux constituent un bloc d'opposition puissant.",
-          "source_refs": ["sources.md#43-décentralisation-fictif"]
+          "source_refs": [
+            "sources.md#43-décentralisation-fictif"
+          ]
         }
       ],
       "key_measures": [
@@ -586,22 +696,33 @@
         "budgetary": {
           "level": "limited",
           "note": "Les réformes institutionnelles (proportionnelle, septennat, RIC) ont un coût direct faible. La décentralisation implique un transfert fiscal, pas une dépense nette.",
-          "source_refs": ["sources.md#43-décentralisation-fictif"]
+          "source_refs": [
+            "sources.md#43-décentralisation-fictif"
+          ]
         },
         "implementation": {
           "level": "high",
           "note": "Au moins 4 révisions constitutionnelles, suppression d'un échelon territorial, transfert de 30 % du budget, déménagement de 50 % des directions centrales hors Île-de-France.",
-          "source_refs": ["sources.md#41-réforme-institutionnelle-fictif", "sources.md#43-décentralisation-fictif", "sources.md#45-capacité-exécutive-de-létat-fictif"]
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#43-décentralisation-fictif",
+            "sources.md#45-capacité-exécutive-de-létat-fictif"
+          ]
         },
         "dependency": {
           "level": "high",
           "note": "Réformes UE (fin unanimité, initiative parlementaire) requièrent l'accord des 26 autres États. Révisions constitutionnelles : majorité des 3/5 au Congrès.",
-          "source_refs": ["sources.md#44-relation-à-lue-fictif"]
+          "source_refs": [
+            "sources.md#44-relation-à-lue-fictif"
+          ]
         },
         "reversibility": {
           "level": "moderate",
           "note": "Septennat, RIC et proportionnelle réversibles par révision constitutionnelle, mais la décentralisation budgétaire (30 % aux régions) serait difficilement réversible.",
-          "source_refs": ["sources.md#41-réforme-institutionnelle-fictif", "sources.md#43-décentralisation-fictif"]
+          "source_refs": [
+            "sources.md#41-réforme-institutionnelle-fictif",
+            "sources.md#43-décentralisation-fictif"
+          ]
         }
       },
       "confidence": 0.7
@@ -615,28 +736,37 @@
           "problem": "Émissions de gaz à effet de serre",
           "approach": "Objectif contraignant constitutionnel de -60 % d'ici 2035 (base 1990), comptabilité carbone nationale en loi de finances, provision budgétaire automatique en cas de dépassement.",
           "strength": 0.85,
-          "source_refs": ["sources.md#51-climat-fictif", "sources.md#65-dette-environnementale-fictif"],
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#65-dette-environnementale-fictif"
+          ],
           "reasoning": "Triple mécanisme de crédibilité : objectif constitutionnel (supra-législatif), comptabilité carbone contraignante (institutionnel), provision automatique (financier). L'objectif de -60 % en 8 ans est extrêmement ambitieux par rapport à la trajectoire observée."
         },
         {
           "problem": "Passoires thermiques et précarité énergétique",
           "approach": "Rénovation thermique globale obligatoire de toutes les passoires (F et G) d'ici 2030, prise en charge à 100 % par l'État pour les ménages modestes.",
           "strength": 0.75,
-          "source_refs": ["sources.md#51-climat-fictif"],
+          "source_refs": [
+            "sources.md#51-climat-fictif"
+          ],
           "reasoning": "L'obligation de rénovation globale (et non par gestes) est techniquement plus efficace. La prise en charge à 100 % pour les ménages modestes lève le frein financier principal. Le volume de chantiers (environ 5 millions de logements F/G en France) sur 3 ans implique une montée en capacité du BTP sans précédent."
         },
         {
           "problem": "Perte de biodiversité et pollution de l'eau",
           "approach": "30 % du territoire en protection forte, moratoire méga-bassines, tarification progressive de l'eau, interdiction glyphosate et néonicotinoïdes dès 2028.",
           "strength": 0.8,
-          "source_refs": ["sources.md#52-biodiversité-et-eau-fictif"],
+          "source_refs": [
+            "sources.md#52-biodiversité-et-eau-fictif"
+          ],
           "reasoning": "L'objectif de 30 % en protection forte est aligné sur le cadre mondial de Kunming-Montréal. L'interdiction des substances est datée et assortie d'un fonds d'indemnisation. La tarification progressive de l'eau est un instrument économique cohérent."
         },
         {
           "problem": "Déclin agricole et dépendance aux intrants chimiques",
           "approach": "50 % SAU en bio d'ici 2035, 100 000 nouveaux paysans sur la décennie, 5 Mds €/an pour la conversion, réorientation PAC vers l'agroécologie.",
           "strength": 0.7,
-          "source_refs": ["sources.md#53-transition-agricole-fictif"],
+          "source_refs": [
+            "sources.md#53-transition-agricole-fictif"
+          ],
           "reasoning": "L'objectif de 50 % SAU en bio est quantifié avec un calendrier et un budget dédié (5 Mds €/an). La réorientation de la PAC requiert une négociation européenne. Le plan d'installation de 100 000 paysans est accompagné de prêts à taux zéro."
         }
       ],
@@ -652,7 +782,11 @@
           "problem": "Coût de l'alimentation",
           "mechanism": "L'interdiction du glyphosate et des néonicotinoïdes, le bouclier douanier agricole, et la conversion massive au bio (plus coûteux en main-d'œuvre) augmenteront mécaniquement les prix agricoles.",
           "severity": 0.45,
-          "source_refs": ["sources.md#52-biodiversité-et-eau-fictif", "sources.md#53-transition-agricole-fictif", "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"],
+          "source_refs": [
+            "sources.md#52-biodiversité-et-eau-fictif",
+            "sources.md#53-transition-agricole-fictif",
+            "sources.md#35-souveraineté-alimentaire-et-industrielle-fictif"
+          ],
           "reasoning": "Le fonds d'indemnisation agriculteurs couvre le côté producteur. Le coût sera transmis au consommateur. Le RBU (750 €/mois) peut servir d'amortisseur mais n'est pas explicitement articulé comme tel dans les sources."
         }
       ],
@@ -662,14 +796,20 @@
           "probability": 0.75,
           "severity": 0.7,
           "reasoning": "Au rythme actuel d'environ 100 000 rénovations globales/an, atteindre 1,5 à 2 millions/an nécessite une multiplication par 15-20 de la capacité du secteur. Les formations et recrutements requis dépassent les flux actuels.",
-          "source_refs": ["sources.md#51-climat-fictif"]
+          "source_refs": [
+            "sources.md#51-climat-fictif"
+          ]
         },
         {
           "risk": "Résistance sociale aux interdictions (vols intérieurs, pesticides, moratoire autoroutier)",
           "probability": 0.6,
           "severity": 0.5,
           "reasoning": "L'interdiction des vols intérieurs, du glyphosate et le moratoire autoroutier affectent directement des secteurs employeurs (aviation, agriculture conventionnelle, BTP routier). Les mobilisations sectorielles sont prévisibles.",
-          "source_refs": ["sources.md#51-climat-fictif", "sources.md#52-biodiversité-et-eau-fictif", "sources.md#54-infrastructures-fictif"]
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#52-biodiversité-et-eau-fictif",
+            "sources.md#54-infrastructures-fictif"
+          ]
         }
       ],
       "key_measures": [
@@ -708,22 +848,34 @@
         "budgetary": {
           "level": "moderate",
           "note": "Rénovation thermique (100 % foyers modestes), conversion bio (5 Mds €/an), fret (15 Mds €) : chaque poste chiffré mais total excède le plan de 50 Mds €/an.",
-          "source_refs": ["sources.md#51-climat-fictif", "sources.md#53-transition-agricole-fictif", "sources.md#54-infrastructures-fictif"]
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#53-transition-agricole-fictif",
+            "sources.md#54-infrastructures-fictif"
+          ]
         },
         "implementation": {
           "level": "high",
           "note": "×15 sur la capacité de rénovation thermique, 50 % SAU en bio, 8 EPR, plan fret ferroviaire : capacités industrielles et humaines au plafond.",
-          "source_refs": ["sources.md#51-climat-fictif", "sources.md#53-transition-agricole-fictif"]
+          "source_refs": [
+            "sources.md#51-climat-fictif",
+            "sources.md#53-transition-agricole-fictif"
+          ]
         },
         "dependency": {
           "level": "moderate",
           "note": "Réorientation PAC et tarif carbone extérieur requièrent un accord UE à 27. Technologies EPR dépendent de chaînes d'approvisionnement mondiales.",
-          "source_refs": ["sources.md#53-transition-agricole-fictif", "sources.md#34-souveraineté-énergétique-fictif"]
+          "source_refs": [
+            "sources.md#53-transition-agricole-fictif",
+            "sources.md#34-souveraineté-énergétique-fictif"
+          ]
         },
         "reversibility": {
           "level": "low",
           "note": "Objectif constitutionnel réversible par révision, mais interdictions (vols, pesticides) et infrastructures (EPR, fret) créent des faits accomplis.",
-          "source_refs": ["sources.md#51-climat-fictif"]
+          "source_refs": [
+            "sources.md#51-climat-fictif"
+          ]
         }
       },
       "confidence": 0.8
@@ -783,17 +935,23 @@
           "h_2027_2030": {
             "impact_score": 0,
             "note": "Transition technique du système, effets principalement sur les nouveaux entrants. Désindexation >2 500 € commence.",
-            "source_refs": ["sources.md#15-retraites-fictif"]
+            "source_refs": [
+              "sources.md#15-retraites-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 1,
             "note": "Le minimum contributif à 1 200 € bénéficie aux primo-retraités à carrière complète au SMIC. Premiers départs anticipés à 60 ans.",
-            "source_refs": ["sources.md#15-retraites-fictif"]
+            "source_refs": [
+              "sources.md#15-retraites-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 1,
             "note": "Le système par points est pleinement en régime. Les 25 ans de 2027 bénéficient du taux de remplacement de 65 % à partir de 2067.",
-            "source_refs": ["sources.md#64-retraite-pour-une-française-de-25-ans-aujourdhui-fictif"]
+            "source_refs": [
+              "sources.md#64-retraite-pour-une-française-de-25-ans-aujourdhui-fictif"
+            ]
           }
         }
       },
@@ -804,17 +962,24 @@
           "h_2027_2030": {
             "impact_score": 0,
             "note": "Le cantonnement s'active mais le déficit d'investissement autorisé (2,5 % PIB) ajoute de la dette nouvelle. Stabilisation visée à 110 % PIB d'ici 2032.",
-            "source_refs": ["sources.md#11-finances-publiques-fictif", "sources.md#62-service-de-la-dette-fictif"]
+            "source_refs": [
+              "sources.md#11-finances-publiques-fictif",
+              "sources.md#62-service-de-la-dette-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 1,
             "note": "Si la trajectoire de 110 % du PIB est atteinte, le stock de dette se stabilise. Le cantonnement Covid produit ses effets sur le profil de remboursement.",
-            "source_refs": ["sources.md#11-finances-publiques-fictif"]
+            "source_refs": [
+              "sources.md#11-finances-publiques-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 1,
             "note": "Cantonnement Covid à mi-parcours (20/40 ans). Investissements verts financés par dette commencent à générer des retours (économies d'énergie, emplois).",
-            "source_refs": ["sources.md#62-service-de-la-dette-fictif"]
+            "source_refs": [
+              "sources.md#62-service-de-la-dette-fictif"
+            ]
           }
         }
       },
@@ -825,17 +990,25 @@
           "h_2027_2030": {
             "impact_score": 2,
             "note": "Phase d'accélération : rénovation thermique obligatoire F/G, interdiction vols <4h, moratoire autoroutier, lancement 8 EPR, interdiction pesticides 2028.",
-            "source_refs": ["sources.md#51-climat-fictif", "sources.md#52-biodiversité-et-eau-fictif"]
+            "source_refs": [
+              "sources.md#51-climat-fictif",
+              "sources.md#52-biodiversité-et-eau-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 2,
             "note": "Les premiers EPR entrent en service. 50 % SAU bio atteint. Les effets cumulés des rénovations thermiques réduisent la consommation énergétique des bâtiments.",
-            "source_refs": ["sources.md#34-souveraineté-énergétique-fictif", "sources.md#53-transition-agricole-fictif"]
+            "source_refs": [
+              "sources.md#34-souveraineté-énergétique-fictif",
+              "sources.md#53-transition-agricole-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 2,
             "note": "Régime de croisière post-objectif 2035. Comptabilité carbone contraint les budgets. 8 EPR en service. Conditionnel à l'atteinte du -60 %.",
-            "source_refs": ["sources.md#65-dette-environnementale-fictif"]
+            "source_refs": [
+              "sources.md#65-dette-environnementale-fictif"
+            ]
           }
         }
       },
@@ -846,17 +1019,23 @@
           "h_2027_2030": {
             "impact_score": 1,
             "note": "Hausse immédiate du budget hospitalier de 5 % réel. Premiers médecins en service obligatoire dans les déserts médicaux.",
-            "source_refs": ["sources.md#21-santé-fictif"]
+            "source_refs": [
+              "sources.md#21-santé-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 1,
             "note": "Effets cumulatifs du service médical obligatoire sur la couverture des déserts médicaux. Stabilisation des effectifs paramédicaux.",
-            "source_refs": ["sources.md#21-santé-fictif"]
+            "source_refs": [
+              "sources.md#21-santé-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 0,
             "note": "Le programme ne détaille pas de mesures structurelles de long terme au-delà du budget et de l'obligation de service. Pas de plan dépendance.",
-            "source_refs": ["sources.md#21-santé-fictif"]
+            "source_refs": [
+              "sources.md#21-santé-fictif"
+            ]
           }
         }
       },
@@ -867,17 +1046,23 @@
           "h_2027_2030": {
             "impact_score": 1,
             "note": "Revalorisation immédiate de 15 %. Déploiement progressif du plafond de 20 élèves en primaire. Introduction du module IA.",
-            "source_refs": ["sources.md#22-éducation-fictif"]
+            "source_refs": [
+              "sources.md#22-éducation-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 1,
             "note": "Plein effet des classes à 20 élèves. Les cohortes ayant bénéficié du module IA entrent sur le marché du travail.",
-            "source_refs": ["sources.md#22-éducation-fictif"]
+            "source_refs": [
+              "sources.md#22-éducation-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 1,
             "note": "Effets de long terme sur le capital humain. Le programme ne propose pas de réforme structurelle de l'enseignement supérieur.",
-            "source_refs": ["sources.md#22-éducation-fictif"]
+            "source_refs": [
+              "sources.md#22-éducation-fictif"
+            ]
           }
         }
       },
@@ -888,17 +1073,24 @@
           "h_2027_2030": {
             "impact_score": 1,
             "note": "Lancement du PTZ jeunes et du bail Jeune Actif. Montée en puissance de la construction de logements sociaux vers 200 000/an.",
-            "source_refs": ["sources.md#16-logement-fictif", "sources.md#63-accès-au-logement-des-moins-de-35-ans-fictif"]
+            "source_refs": [
+              "sources.md#16-logement-fictif",
+              "sources.md#63-accès-au-logement-des-moins-de-35-ans-fictif"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 2,
             "note": "Effet cumulé : 600 000 à 1 million de logements sociaux construits. Gel des loyers en zones tendues + rénovation obligatoire améliorent le parc existant.",
-            "source_refs": ["sources.md#16-logement-fictif"]
+            "source_refs": [
+              "sources.md#16-logement-fictif"
+            ]
           },
           "h_2038_2047": {
             "impact_score": 1,
             "note": "Le stock de logements sociaux s'est considérablement accru. L'effet sur les prix dépend de la poursuite du rythme de construction après le mandat.",
-            "source_refs": ["sources.md#16-logement-fictif"]
+            "source_refs": [
+              "sources.md#16-logement-fictif"
+            ]
           }
         }
       }
@@ -935,7 +1127,10 @@
       "problem": "Financement agrégé : l'écart entre recettes nouvelles identifiées et dépenses totales annoncées n'est pas résolu",
       "why_unsolved": "Le programme identifie environ 23 Mds €/an de recettes nouvelles (ISF-C + revue aides) pour un investissement de 50 Mds €/an et un RBU dont le coût brut excède 150 Mds €/an. Même en intégrant les recyclages et l'hypothèse de croissance à 1,2 %, l'écart reste très substantiel.",
       "severity_if_unsolved": "high",
-      "source_refs": ["sources.md#11-finances-publiques-fictif", "sources.md#sources-internes-au-programme-fictif"]
+      "source_refs": [
+        "sources.md#11-finances-publiques-fictif",
+        "sources.md#sources-internes-au-programme-fictif"
+      ]
     },
     {
       "problem": "Prise en charge de la dépendance des personnes âgées",
