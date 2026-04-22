@@ -8,6 +8,7 @@ import type {
 import { deriveTopLevelGrade } from "@/lib/derived/top-level-grade";
 import { deriveSpectrumLabel } from "@/lib/derived/spectrum-label";
 import { GradeBadge } from "@/components/widgets/GradeBadge";
+import SpectrumPill from "@/components/widgets/SpectrumPill";
 
 type PartyMeta = CandidateMetadata & {
   party_short?: string;
@@ -59,16 +60,11 @@ export function Hero({
                 <span className="font-normal normal-case">{meta.party}</span>
               </span>
               {spectrum.displayText ? (
-                <a
-                  href="#positionnement"
-                  className="rounded text-[11px] text-text-tertiary hover:text-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                  title={spectrum.tooltipLines.join("\n")}
-                  aria-label={`Positionnement : ${spectrum.displayText}`}
-                  data-testid="hero-spectrum-chip"
-                  data-spectrum-status={spectrum.status}
-                >
-                  {spectrum.displayText}
-                </a>
+                <SpectrumPill
+                  displayText={spectrum.displayText}
+                  status={spectrum.status}
+                  tooltipLines={spectrum.tooltipLines}
+                />
               ) : null}
             </div>
             <h1 className="mb-5 font-display text-[clamp(28px,4vw,44px)] font-bold leading-[1.1] tracking-[-0.01em] text-text">

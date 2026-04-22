@@ -48,6 +48,14 @@ export const CandidateMetadataSchema = z.object({
    * `--allow-fictional` is passed. Absence means false.
    */
   is_fictional: z.boolean().optional(),
+  /**
+   * Optional landing-page family override. When set to "ecologie", the
+   * candidate is bucketed under the "Écologie" family filter on the
+   * landing page regardless of their left/right spectrum modal. Additive
+   * field — existing metadata files without it remain valid.
+   * See docs/specs/website/landing-page.md §4.3.
+   */
+  family_override: z.enum(["ecologie"]).optional(),
 });
 
 export type CandidateMetadata = z.infer<typeof CandidateMetadataSchema>;

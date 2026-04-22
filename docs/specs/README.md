@@ -37,6 +37,7 @@ specs/
     ├── visual-components.md        # Signature charts/widgets                 [Stable]
     ├── candidate-page-polish.md    # Screenshot-worthy section redesigns      [Stable]
     ├── comparison-page.md          # /comparer side-by-side view              [Stable]
+    ├── landing-page.md              # / landing page + stakes charts           [Stable]
     └── transparency.md             # Transparency drawer                      [Stable]
 ```
 

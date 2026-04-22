@@ -59,8 +59,8 @@ Format: `M_<FeatureCluster>`
 | M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
 | M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
 | M_Comparison | ✅ Done | Side-by-side candidate comparison mode — shipped 2026-04-22 ([`specs/website/comparison-page.md`](specs/website/comparison-page.md)) |
-| M_PoliticalSpectrum | 📋 Planned | Global spectrum label on each candidate (additive v1.2 field; Hero chip) ([`specs/analysis/political-spectrum-label.md`](specs/analysis/political-spectrum-label.md)) |
-| M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
+| M_PoliticalSpectrum | ✅ Done | Global spectrum label on each candidate (additive v1.2 field; Hero chip) ([`specs/analysis/political-spectrum-label.md`](specs/analysis/political-spectrum-label.md)) |
+| M_Landing | � In Progress | Landing page with "2027 stakes" visuals + candidate grid + comparison/methodology entry points ([`specs/website/landing-page.md`](specs/website/landing-page.md)) |
 
 ### 📅 Phase 3: Operations (planned)
 
@@ -507,9 +507,45 @@ Format: `M_<FeatureCluster>`
 
 ### M_Landing
 
-**Goal:** Landing page with France-level context (debt curve, demographic curve, "stakes" framing), candidate cards grid, entry to comparison mode.
+**Goal:** Landing page with France-level context (debt curve, demographic curve, "stakes" framing), candidate cards grid, entry to comparison mode. Visual contract is the `Landing Page.html` prototype; implementation is a pure projection of existing aggregated data plus a static France-level context module.
 
 **Depends on:** M_Comparison
+
+**Status:** 🚧 In Progress. Spike `0110` archived (2026-04-22); implementation tasks `0111`–`0118` in `tasks/backlog/M_Landing/`.
+
+**Spike produces:**
+- `docs/specs/website/landing-page.md` (**Stable** on creation; no schema changes)
+- `site/lib/landing-context.ts` — France-level stats + two area-chart series with source URLs (task `0111`)
+- `site/lib/landing-cards.ts` — `LandingCard` view-model + `listLandingCards()` including `pending` candidates + family-bucket mapping (task `0112`)
+- `<StakesAreaChart>` reusable pure-SVG area chart with reference line + projection support (task `0113`)
+- `<LandingHero>` with neutral-color headline stats (editorial adjustment vs. prototype) (task `0114`)
+- `<CandidateGrid>` + `<CandidateCard>` (analyzed/pending variants) + family filter + extracted `<SpectrumPill>` widget (task `0115`)
+- `<LandingNavBar>`, `<CompareCta>`, `<MethodologyBlock>`, `<LandingFooter>` + shared `buildCompareCtaHref` helper (task `0116`)
+- `/` route assembly, page metadata, i18n wiring, end-to-end build smoke (task `0117`)
+- Editorial regression test covering banned vocabulary + neutral-color assertion on headline stats (task `0118`)
+
+**Non-negotiables:**
+- **No ranking of candidates.** Order is `updatedAt` desc with `displayName` asc as tie-breaker; analyzed and pending cards interleave.
+- **No cardinal averaging.** Per-card mini axis bar plots the economic-axis modal only; grade badge is the already-aggregated top-level grade.
+- **Symmetric cards.** Every analyzed candidate renders with the same tile; every pending candidate renders with the same tile; no party-specific treatment.
+- **Neutral presentation of context numbers.** Headline debt/deficit/carbon stats render in the default text color — no `bad`/`warn` coloring. Advocacy framing ("crise", "catastrophe") banned by editorial regression test.
+- **Pending ≠ clickable.** Candidates without a published `aggregated.json` render as `aria-disabled` with no link target; clicking a pending tile would imply withheld analysis.
+- **Sources cited.** Every France-level series pill links to its source URL (Eurostat, INSEE, legal target).
+
+**Key design decisions (spike `0110`):**
+- Landing-card view-model reuses `deriveComparisonProjection()` for analyzed rows; pending rows skip `aggregated.json` entirely — single derivation pipeline, two safe outputs.
+- Family filter maps the 7-label spectrum taxonomy to four buckets (gauche / centre / droite / écologie) via a deterministic public mapping; `metadata.family_override` is an additive optional field for ecology-platform candidates whose spectrum lands elsewhere.
+- France-level context is a static typed constant in `site/lib/landing-context.ts` — never auto-fetched; updating it is a documented manual step.
+- Filter state is ephemeral (no URL, no localStorage); the canonical candidate URL stays `/candidat/<id>`.
+- `<SpectrumPill>` is extracted from the existing candidate-page `Hero.tsx` so both surfaces share identical visuals.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Content for the `/methodologie`, `/changelog`, `/mentions-legales` pages — linked with placeholder anchors in v1.
+- Real EN translation of aggregated content (→ future `M_I18n`); EN chrome strings use the existing placeholder pattern.
+- Per-candidate photos on cards — slot reserved but not wired; filled when photo assets are onboarded under `M_CandidateOnboarding`.
+- Server-side analytics; no telemetry on the hot path.
+- Schema changes beyond the additive optional `family_override` on `CandidateMetadataSchema`.
+- Any average or composite ranking across candidates — explicit non-feature carried over from `structure.md`.
 
 ---
 

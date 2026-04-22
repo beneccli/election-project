@@ -1,14 +1,15 @@
-// See docs/specs/website/comparison-page.md §4 (page shell).
-// Server component analogue of NavBar for the /comparer page, where
-// there is no single candidate meta.
+// See docs/specs/website/landing-page.md §5.2
+// Server component. Mirrors ComparisonNavBar but shows the landing
+// tagline instead of a section title, and drops the "Accueil" link.
 import Link from "next/link";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
-export function ComparisonNavBar() {
+export function LandingNavBar({ lang = "fr" }: { lang?: Lang } = {}) {
   return (
     <header className="sticky px-6 top-0 z-[80] flex h-nav-h items-center border-b border-rule bg-bg">
-      <div className="mx-auto flex w-full max-w-5xl items-center gap-4">
+      <div className="mx-auto flex w-full max-w-6xl items-center gap-4">
         <Link
           href="/"
           className="flex-shrink-0 font-display text-2xl font-bold tracking-[-0.01em] text-accent no-underline"
@@ -17,15 +18,9 @@ export function ComparisonNavBar() {
         </Link>
         <span className="flex-shrink-0 text-lg text-rule">·</span>
         <span className="overflow-hidden whitespace-nowrap text-[13px] font-medium text-text-secondary text-ellipsis">
-          Comparer les programmes
+          {t(UI_STRINGS.LANDING_NAV_TAGLINE, lang)}
         </span>
         <div className="flex-1" />
-        <Link
-          href="/"
-          className="flex-shrink-0 text-xs font-medium text-text-secondary underline decoration-dotted underline-offset-4 hover:text-text"
-        >
-          Accueil
-        </Link>
         <LanguageToggle />
         <ThemeToggle />
       </div>

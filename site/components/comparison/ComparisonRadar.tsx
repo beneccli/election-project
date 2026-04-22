@@ -48,9 +48,9 @@ export function ComparisonRadar({
           key={ri}
           points={ringPoints(tRing, n, g)}
           fill="none"
-          stroke="var(--rule)"
           strokeWidth={ri === 2 ? 1.5 : 0.75}
           strokeDasharray={ri === 2 ? undefined : "3,3"}
+          className="stroke-rule dark:stroke-gray-600"
         />
       ))}
       {/* Spokes */}
@@ -64,8 +64,8 @@ export function ComparisonRadar({
             y1={g.cy}
             x2={x2}
             y2={y2}
-            stroke="var(--rule)"
             strokeWidth={0.75}
+            className="stroke-rule dark:stroke-gray-600"
           />
         );
       })}

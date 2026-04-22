@@ -3,7 +3,8 @@
 import { gradeColor, type GradeLetter } from "@/lib/grade-color";
 
 const SIZES = {
-  sm: { outer: 36, font: 18, sub: 12 },
+  xs: { outer: 36, font: 18, sub: 12 },
+  sm: { outer: 44, font: 22, sub: 13 },
   md: { outer: 56, font: 28, sub: 15 },
   lg: { outer: 72, font: 36, sub: 16 },
 } as const;

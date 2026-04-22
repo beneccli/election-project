@@ -75,7 +75,7 @@ export function CandidateSelector() {
               >
                 <div className="flex justify-between gap-3">
                   <div style={{ width:6, height:6, borderRadius:"50%", background: selected ? color : 'black', marginTop:2, flexShrink:0 }} />
-                  {selected && <GradeBadge grade={grade} size="sm" />}
+                  {selected && <GradeBadge grade={grade} size="xs" />}
                 </div>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-medium">
