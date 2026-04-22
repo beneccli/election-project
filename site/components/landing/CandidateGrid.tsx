@@ -91,19 +91,15 @@ export default function CandidateGrid({ cards, lang }: Props) {
     return () => io.disconnect();
   }, [visible]);
 
-  const countLabel =
-    lang === "fr"
-      ? `${visible.length} candidat${visible.length > 1 ? "s" : ""} affiché${visible.length > 1 ? "s" : ""}`
-      : `${visible.length} candidate${visible.length === 1 ? "" : "s"} shown`;
-
   return (
     <section className="px-6 py-10">
       <div className="mx-auto max-w-6xl">
         <div
           role="radiogroup"
           aria-label={lang === "fr" ? "Filtrer par famille" : "Filter by family"}
-          className="mb-6 flex flex-wrap items-center gap-2"
+          className="mb-8 flex flex-wrap items-center gap-2"
         >
+          <p className="uppercase text-xs font-semibold text-text-secondary mr-3 tracking-widest">Famille politique</p>
           {FILTER_ORDER.map((key) => {
             const active = filter === key;
             return (
@@ -116,7 +112,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
                 className={[
                   "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
                   active
-                    ? "border-accent bg-accent-subtle text-accent"
+                    ? "bg-accent text-white border-accent"
                     : "border-rule bg-[color:var(--bg-card)] text-text-secondary hover:text-text",
                 ].join(" ")}
               >
@@ -124,13 +120,6 @@ export default function CandidateGrid({ cards, lang }: Props) {
               </button>
             );
           })}
-          <span
-            className="ml-auto text-xs text-text-tertiary"
-            data-testid="grid-count"
-            aria-live="polite"
-          >
-            {countLabel}
-          </span>
         </div>
 
         <div
@@ -138,7 +127,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
           className="grid grid-cols-1 gap-5 min-[440px]:grid-cols-2 min-[720px]:grid-cols-3 min-[1024px]:grid-cols-4"
           data-testid="candidate-grid"
         >
-          {visible.map((card) => (
+          {visible.map((card, i) => (
             <div key={card.id} data-landing-slot>
               <CandidateCard card={card} lang={lang} />
             </div>

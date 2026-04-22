@@ -7,7 +7,6 @@
 // variant omits grade and axis and is NOT a link.
 
 import { GradeBadge } from "@/components/widgets/GradeBadge";
-import SpectrumPill from "@/components/widgets/SpectrumPill";
 import type { LandingCard } from "@/lib/landing-cards";
 import { type Lang } from "@/lib/i18n";
 
@@ -39,17 +38,14 @@ function PartyPill({
 }) {
   return (
     <span
-      className="inline-flex max-w-full items-center gap-1.5 truncate rounded px-2 py-[3px] text-[11px] font-bold uppercase tracking-wider"
+      className="inline-flex max-w-full items-center gap-1.5 text-text-tertiary uppercase truncate rounded px-2 py-[3px] text-[11px] font-bold uppercase tracking-wider"
       style={{
         background: `${partyColor}18`,
         border: `1px solid ${partyColor}40`,
-        color: partyColor,
       }}
     >
-      <span>{partyShort}</span>
-      <span className="truncate font-normal normal-case text-text-secondary">
-        {party}
-      </span>
+      <div className="w-2 h-2 rounded-full" style={{ background: partyColor }}></div>
+      <span className="truncate">{partyShort} · {party}</span>
     </span>
   );
 }
@@ -70,7 +66,6 @@ function AxisMiniBar({
       className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-wider text-text-tertiary"
       aria-label={lang === "fr" ? "Axe économique" : "Economic axis"}
     >
-      <span>−</span>
       <div className="relative h-[6px] flex-1 rounded-full bg-[color:var(--bg-subtle)]">
         {/* centre rule */}
         <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[color:var(--rule)]" />
@@ -92,7 +87,6 @@ function AxisMiniBar({
           </div>
         )}
       </div>
-      <span>+</span>
     </div>
   );
 }
@@ -100,7 +94,11 @@ function AxisMiniBar({
 export default function CandidateCard({ card, lang }: Props) {
   const Inner = (
     <article
-      className="relative flex h-full flex-col overflow-hidden rounded-lg border border-rule bg-[color:var(--bg-card)] p-4 transition-opacity duration-200"
+      className="relative flex h-full flex-col overflow-hidden rounded-lg border border-rule bg-[color:var(--bg-card)] py-4 hover:shadow-2xl hover:shadow-gray-500/20 hover:-translate-y-1"
+      style={{ 
+        transition: "opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s ease",
+        willChange: "opacity, transform",
+      }}
       data-testid="candidate-card"
       data-status={card.status}
       data-family={card.family ?? "none"}
@@ -118,49 +116,42 @@ export default function CandidateCard({ card, lang }: Props) {
         aria-hidden="true"
       />
 
-      <div className="mb-3 mt-2 flex items-start justify-between gap-3">
+      <div className="px-4 mb-3 mt-2 flex items-start justify-between gap-3">
         <PartyPill
           partyShort={card.partyShort}
           partyColor={card.partyColor}
           party={card.party}
         />
-        {card.status === "analyzed" ? (
-          <GradeBadge
-            grade={card.overallGrade}
-            modifier={card.overallGradeModifier}
-            size="md"
-          />
-        ) : (
-          <span className="rounded border border-rule bg-[color:var(--bg-subtle)] px-2 py-[2px] text-[10px] uppercase tracking-wider text-text-tertiary">
-            {lang === "fr" ? "Analyse à venir" : "Analysis pending"}
-          </span>
-        )}
       </div>
 
-      <h3 className="font-display text-lg leading-tight tracking-tight text-text">
+      <h3 className="px-4 font-display text-2xl font-bold leading-tight tracking-tight text-text">
         {card.displayName}
       </h3>
 
       {card.status === "analyzed" ? (
         <>
-          <div className="mt-2">
-            <SpectrumPill
-              displayText={card.spectrumLabel}
-              status={card.spectrumStatus}
-              tooltipLines={[]}
-              href={`/candidat/${card.id}#positionnement`}
-              labelPrefix={lang === "fr" ? "Positionnement : " : "Positioning: "}
-              static
+          <h5 className="px-4 text-text-secondary text-sm mt-3">{card.spectrumLabel}</h5>
+          <div className="px-4 flex items-center gap-4 my-6">
+            <GradeBadge
+              grade={card.overallGrade}
+              modifier={card.overallGradeModifier}
+              size="sm"
             />
+            <div className="w-full">
+              <div className="w-full flex justify-between uppercase text-text-secondary text-xs -mb-1">
+                <div>Gauche</div>
+                <div>Droite</div>
+              </div>
+              <AxisMiniBar
+                ecoAxis={card.ecoAxis}
+                partyColor={card.partyColor}
+                lang={lang}
+              />
+            </div>
           </div>
-          <AxisMiniBar
-            ecoAxis={card.ecoAxis}
-            partyColor={card.partyColor}
-            lang={lang}
-          />
-          <div className="mt-auto flex items-center justify-between gap-3 pt-4 text-xs text-text-tertiary">
+          <div className="px-4 border-t border-rule mt-auto flex items-center justify-between gap-3 pt-4 text-sm text-text-tertiary">
             <span>{formatDate(card.versionDate, lang)}</span>
-            <span className="text-accent">
+            <span className="text-accent font-bold">
               {lang === "fr" ? "Voir l\u2019analyse →" : "View analysis →"}
             </span>
           </div>

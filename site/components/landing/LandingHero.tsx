@@ -43,10 +43,11 @@ export default function LandingHero({
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-12">
         {/* Left column: title + body + stats */}
         <div className="flex flex-col gap-6">
-          <h1 className="font-display text-4xl md:text-5xl leading-[1.05] tracking-tight text-[color:var(--text)]">
+          <h3 className="uppercase text-xs font-semibold tracking-widest text-accent">Présidentielle française</h3>
+          <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight text-[color:var(--text)]">
             {t(HERO_TITLE_LEAD, lang)}
             <br />
-            <em className="not-italic italic text-[color:var(--accent)]">
+            <em className="font-semibold text-accent">
               {t(HERO_TITLE_EM, lang)}
             </em>{" "}
             {t(HERO_TITLE_TAIL, lang)}

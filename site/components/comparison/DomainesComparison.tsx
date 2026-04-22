@@ -129,7 +129,7 @@ export function DomainesTable({
                         className="border-b border-rule px-3 py-2"
                       >
                         <div className="flex items-center justify-center gap-1">
-                          <GradeBadge grade={letter} size="sm" />
+                          <GradeBadge grade={letter} size="xs" />
                           {isTop ? (
                             <span
                               aria-label={
