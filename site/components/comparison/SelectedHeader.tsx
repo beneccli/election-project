@@ -48,7 +48,7 @@ export function SelectedHeader() {
             <li
               key={c.id}
               data-candidate={c.id}
-              className="inline-flex items-center gap-2 px-3 mb-2 text-xs border-r border-rule"
+              className="inline-flex items-center gap-2 px-3 text-xs border-r border-rule"
               style={{ borderRightWidth: slot === selectedIds.length - 1 ? 0 : 1 }}
             >
               <span

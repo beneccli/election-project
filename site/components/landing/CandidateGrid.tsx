@@ -113,7 +113,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
                   "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
                   active
                     ? "bg-accent text-white border-accent"
-                    : "border-rule bg-[color:var(--bg-card)] text-text-secondary hover:text-text",
+                    : "border-rule text-text-secondary hover:text-text",
                 ].join(" ")}
               >
                 {FILTER_LABELS[key][lang]}

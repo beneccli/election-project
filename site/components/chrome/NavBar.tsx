@@ -11,9 +11,9 @@ export function NavBar({ meta }: { meta: CandidateMetadata }) {
       <div className="mx-auto flex w-full max-w-content items-center gap-4 px-8">
         <Link
           href="/"
-          className="flex-shrink-0 font-display text-xl font-bold tracking-[-0.01em] text-accent no-underline"
+          className="flex-shrink-0 font-display text-2xl font-bold tracking-[-0.01em] text-accent no-underline"
         >
-          é<span className="font-normal">27</span>
+          é<span className="font-normal">lection</span> 2027
         </Link>
         <span className="flex-shrink-0 text-lg text-rule">·</span>
         <span className="overflow-hidden whitespace-nowrap text-[13px] font-medium text-text-secondary text-ellipsis">
