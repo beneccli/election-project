@@ -6,7 +6,7 @@ import { deriveRadarShape } from "@/lib/derived/positioning-shape";
 import { SectionHead } from "@/components/chrome/SectionHead";
 import { InteractivePositioningRadar } from "@/components/widgets/InteractivePositioningRadar";
 import { AxisAgreementBars } from "@/components/widgets/AxisAgreementBars";
-import { PositioningLegend } from "@/components/widgets/PositioningLegend";
+// import { PositioningLegend } from "@/components/widgets/PositioningLegend"; // re-enable when legend is re-introduced
 
 export function PositionnementSection({
   aggregated,
