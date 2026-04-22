@@ -55,6 +55,21 @@ The 5-axis political positioning is explicitly ordinal (see [`political-position
 
 **There is no aggregated `score` field.** The per-model integer `score` lives only in `raw-outputs/<model>.json`. This prevents any downstream consumer from misreading an aggregate score as cardinal.
 
+### 4.bis Never average the overall spectrum label (schema v1.2)
+
+The categorical `positioning.overall_spectrum` field is aggregated with the same ordinal discipline as the per-axis scores. It is never averaged. Aggregated output contains:
+
+- `modal_label: SpectrumLabel | null` — plurality label across contributing models; `null` when no unique plurality (tied or all-distinct).
+- `label_distribution: Record<SpectrumLabel, number>` — counts per enum value across models.
+- `anchor_narrative: string` (≤ 600 chars) — distils per-model reasoning; no new evidence.
+- `confidence: number` in `[0, 1]` — minimum of contributing per-model confidences.
+- `dissent: { model, label, reasoning }[]` — every model whose label differs from `modal_label` (or every model when `modal_label = null`).
+- `per_model: { model, label, reasoning }[]` — exhaustive across contributing models.
+
+The aggregator **cannot promote a label no model emitted**. `inclassable` is a first-class enum value, not a fallback for tied modes. The Zod schema is `.strict()` and rejects any `score`, `mean`, `index`, or `numeric_value` key on this block.
+
+See [`political-spectrum-label.md`](political-spectrum-label.md) for the full rule.
+
 ### 5. Citations survive aggregation
 
 Every aggregated claim retains its `source_refs` (unioned across models). A claim with no `source_refs` in any source model does not appear in aggregated output — it is routed to `flagged_for_review[]`.
@@ -154,7 +169,12 @@ Same top-level structure as per-model output (see [`output-schema.md`](output-sc
     },
     "positioning_consensus": {
       "economic": { "interval": [-4, -2], "modal": -3, "dissent_count": 1 },
-      "...": {}
+      "...": {},
+      "overall_spectrum": {
+        "modal_label": "centre_gauche",
+        "distribution": { "centre_gauche": 2, "gauche": 1 },
+        "dissent_count": 1
+      }
     }
   },
 
@@ -318,6 +338,7 @@ A human-readable companion to `aggregated.json` that records:
 - [`output-schema.md`](output-schema.md)
 - [`analysis-prompt.md`](analysis-prompt.md)
 - [`political-positioning.md`](political-positioning.md)
+- [`political-spectrum-label.md`](political-spectrum-label.md)
 - [`../data-pipeline/overview.md`](../data-pipeline/overview.md)
 
 ---

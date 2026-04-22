@@ -227,6 +227,21 @@ The site does **not** use inherited labels ("far right", "far left", "centrist")
 
 This is the implementation of the "RN is not far-right because the media says so — it is [or is not] because of specific evidence" principle.
 
+### Derived spectrum label (schema v1.2, additive)
+
+From `schema_version 1.2`, a per-model `positioning.overall_spectrum`
+field emits a single categorical label (`extreme_gauche` … `inclassable`)
+**derived from** the 5-axis evidence. The label is a decoration used by
+the Hero and comparison chrome; it does **not** override the axis-by-axis
+analysis and it does **not** admit new evidence beyond what the axes
+already cite. When the axes pull in incompatible directions, the analyst
+emits `inclassable` rather than forcing a conventional placement.
+
+See companion spec
+[`political-spectrum-label.md`](political-spectrum-label.md) for the
+enum, derivation rule, and the categorical-never-averaged aggregation
+rule (modal + distribution + dissent).
+
 ---
 
 ## Resolved decisions (spike `0020`)
@@ -250,4 +265,5 @@ This is the implementation of the "RN is not far-right because the media says so
 - [`analysis-prompt.md`](analysis-prompt.md)
 - [`output-schema.md`](output-schema.md)
 - [`aggregation.md`](aggregation.md)
+- [`political-spectrum-label.md`](political-spectrum-label.md)
 - [`../website/visual-components.md`](../website/visual-components.md)
