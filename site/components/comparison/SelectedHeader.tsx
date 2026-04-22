@@ -31,7 +31,7 @@ export function SelectedHeader() {
   return (
     <div
       data-comparison-selected-header
-      className="sticky top-nav-h z-[70] -mx-8 mb-8 border-b border-rule bg-bg/95 px-8 py-2 backdrop-blur"
+      className="sticky top-nav-h z-[70] -mx-8 mb-16 border-b-2 border-rule bg-bg/95 px-8 py-2 backdrop-blur"
     >
       <ul
         role="list"
@@ -42,11 +42,14 @@ export function SelectedHeader() {
       >
         {selected.map((c, slot) => {
           const color = COMPARISON_COLORS[slot % COMPARISON_COLORS.length];
+          const spectrumText =
+            c.spectrumStatus === "absent" ? null : c.spectrumLabelDisplay;
           return (
             <li
               key={c.id}
               data-candidate={c.id}
-              className="inline-flex items-center gap-2 rounded-full border border-rule bg-bg-subtle px-3 py-1.5 text-xs"
+              className="inline-flex items-center gap-2 px-3 mb-2 text-xs border-r border-rule"
+              style={{ borderRightWidth: slot === selectedIds.length - 1 ? 0 : 1 }}
             >
               <span
                 aria-hidden
@@ -54,11 +57,23 @@ export function SelectedHeader() {
                 style={{ backgroundColor: color }}
               />
               <GradeBadge grade={c.overallGrade} size="sm" />
-              <span className="font-semibold text-text">
-                {firstName(c.displayName)}
-              </span>
-              <span className="text-text-tertiary">·</span>
-              <span className="text-text-secondary">{c.partyShort}</span>
+
+              <div className="flex flex-col">
+                <span className="font-semibold text-sm">
+                  {firstName(c.displayName)}
+                </span>
+                {spectrumText ? (
+                  <>
+                    <span
+                      className="text-text-tertiary text-xs"
+                      data-testid="selected-header-spectrum"
+                      data-spectrum-status={c.spectrumStatus}
+                    >
+                      {spectrumText}
+                    </span>
+                  </>
+                ) : null}
+              </div>
             </li>
           );
         })}

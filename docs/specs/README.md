@@ -19,6 +19,7 @@ specs/
 │   ├── output-schema.md            # JSON schema for analysis output          [Stable]
 │   ├── aggregation.md              # How per-model outputs merge              [Stable]
 │   ├── political-positioning.md    # 5-axis methodology                      [Stable]
+│   ├── political-spectrum-label.md # Additive overall-spectrum chip (v1.2)   [Stable]
 │   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Stable]
 │
 ├── candidates/         # Candidate data layout

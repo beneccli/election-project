@@ -33,6 +33,42 @@ export const UI_STRINGS = {
     fr: "Risques",
     en: "[EN] Risques",
   },
+  SPECTRUM_INCLASSABLE: {
+    fr: "Hors spectre",
+    en: "Unplaceable",
+  },
+  SPECTRUM_LABEL_CENTRE: {
+    fr: "Centre",
+    en: "Centre",
+  },
+  SPECTRUM_LABEL_CENTRE_DROIT: {
+    fr: "Centre-droit",
+    en: "Centre-right",
+  },
+  SPECTRUM_LABEL_CENTRE_GAUCHE: {
+    fr: "Centre-gauche",
+    en: "Centre-left",
+  },
+  SPECTRUM_LABEL_DROITE: {
+    fr: "Droite",
+    en: "Right",
+  },
+  SPECTRUM_LABEL_EXTREME_DROITE: {
+    fr: "Extrême-droite",
+    en: "Far-right",
+  },
+  SPECTRUM_LABEL_EXTREME_GAUCHE: {
+    fr: "Extrême-gauche",
+    en: "Far-left",
+  },
+  SPECTRUM_LABEL_GAUCHE: {
+    fr: "Gauche",
+    en: "Left",
+  },
+  SPECTRUM_SPLIT: {
+    fr: "Positionnement partagé",
+    en: "Split positioning",
+  },
   SYNTHESE_SECTION: {
     fr: "Synthèse",
     en: "[EN] Synthèse",

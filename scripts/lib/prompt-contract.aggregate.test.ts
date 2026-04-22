@@ -213,3 +213,58 @@ describe("prompts/aggregate-analyses.md — hash pinning", () => {
     ).toBe(snapshot);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Schema v1.2 — overall_spectrum aggregation (M_PoliticalSpectrum)
+// See docs/specs/analysis/political-spectrum-label.md §6.2.
+// ---------------------------------------------------------------------------
+
+describe("prompts/aggregate-analyses.md — overall_spectrum contract", () => {
+  test("§4.3.bis heading is present", () => {
+    expect(prompt).toMatch(/### 4\.3\.bis Overall spectrum label/);
+  });
+
+  test("overall_spectrum aggregation references modal_label and label_distribution", () => {
+    expect(prompt).toContain("overall_spectrum");
+    expect(prompt).toContain("modal_label");
+    expect(prompt).toContain("label_distribution");
+  });
+
+  test("'never promote a label no model emitted' rule is stated", () => {
+    expect(prompt).toMatch(/never promote a label no model emitted/i);
+  });
+
+  test("§4.3 never-average clause extends to overall_spectrum", () => {
+    // The §4.3 closing paragraph must tie the numeric-prohibition to the
+    // categorical spectrum label too, not just the five axes.
+    const closingMatch = prompt.match(
+      /arithmetic mean or median[\s\S]*?overall_spectrum/,
+    );
+    expect(
+      closingMatch,
+      "the §4.3 never-average clause must name overall_spectrum explicitly",
+    ).not.toBeNull();
+  });
+
+  test("agreement_map.positioning_consensus.overall_spectrum is documented", () => {
+    // The JSON skeleton in §8 must list the overall_spectrum entry inside
+    // positioning_consensus so the aggregator emits it.
+    expect(prompt).toMatch(
+      /positioning_consensus:[\s\S]*overall_spectrum:[\s\S]*modal_label/,
+    );
+  });
+
+  test("inclassable is treated as a regular enum value, not a fallback", () => {
+    // The prompt must explicitly state that inclassable is a regular enum
+    // value and that ties produce modal_label = null, not inclassable.
+    expect(prompt).toMatch(/inclassable/);
+    const regularValueClauses = [
+      /inclassable[\s\S]{0,40}regular\s+enum\s+value/i,
+      /not[\s\S]{0,10}a\s+fallback\s+for\s+tied\s+modes/i,
+    ];
+    expect(
+      regularValueClauses.every((re) => re.test(prompt)),
+      "prompt must explicitly state inclassable is a regular enum value and not a tied-mode fallback",
+    ).toBe(true);
+  });
+});

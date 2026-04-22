@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "test-candidate",
   "version_date": "2026-04-19",
   "source_models": [
@@ -197,6 +197,39 @@
           "model": "gemini-2.5-pro",
           "score": -3,
           "reasoning": "Read as more strongly state-led."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "centre_gauche",
+      "label_distribution": {
+        "centre_gauche": 2,
+        "gauche": 1
+      },
+      "anchor_narrative": "Consensus across models places the program on the centre-left; one model reads it as further left due to public-sector expansion.",
+      "confidence": 0.65,
+      "dissent": [
+        {
+          "model": "MODEL_C",
+          "label": "gauche",
+          "reasoning": "Weighted the scale of nationalisation proposals more heavily than other models."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "MODEL_A",
+          "label": "centre_gauche",
+          "reasoning": "Balanced mix of interventionism and progressive social positions."
+        },
+        {
+          "model": "MODEL_B",
+          "label": "centre_gauche",
+          "reasoning": "Economic and ecological axes dominate; social axis is closer to centre."
+        },
+        {
+          "model": "MODEL_C",
+          "label": "gauche",
+          "reasoning": "Scale of nationalisation proposals is read as placing the program further left."
         }
       ]
     }
@@ -2194,6 +2227,14 @@
         ],
         "modal": 2,
         "dissent_count": 0
+      },
+      "overall_spectrum": {
+        "modal_label": "centre_gauche",
+        "distribution": {
+          "centre_gauche": 2,
+          "gauche": 1
+        },
+        "dissent_count": 1
       }
     }
   },

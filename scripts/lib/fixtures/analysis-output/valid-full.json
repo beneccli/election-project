@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "test-candidate",
   "version_date": "2026-04-19",
   "model": {
@@ -72,6 +72,22 @@
       ],
       "confidence": 0.7,
       "reasoning": "Program contains several structural public-sector expansions."
+    },
+    "overall_spectrum": {
+      "label": "centre_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Nationalisation des autoroutes.",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.6,
+      "reasoning": "Economic interventionism combined with a progressive social stance and ecological investment places the program on the centre-left half of the spectrum."
     }
   },
   "dimensions": {

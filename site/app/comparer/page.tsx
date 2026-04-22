@@ -37,11 +37,7 @@ export default function ComparerPage() {
             Confronter les programmes
           </h1>
           <p className="mt-3 max-w-prose text-sm text-text-secondary">
-            Sélectionnez 2 à 4 candidats pour les comparer côte à côte sur les
-            mêmes dimensions. Les scores affichés sont ceux déjà publiés sur
-            chaque fiche candidat — aucune analyse supplémentaire n'est
-            produite ici. La comparaison ne classe pas les candidats ; elle
-            les juxtapose.
+            Sélectionnez jusqu'à 4 candidats pour les comparer sur les mêmes dimensions.
           </p>
         </header>
         <Suspense fallback={null}>

@@ -21,6 +21,10 @@ import {
   type TopGradeLetter,
   type GradeModifier,
 } from "@/lib/derived/top-level-grade";
+import {
+  deriveSpectrumLabel,
+  type SpectrumStatus,
+} from "@/lib/derived/spectrum-label";
 
 // ---------------------------------------------------------------------------
 // Shared enumerations
@@ -91,6 +95,12 @@ export interface ComparisonProjection {
   /** One signed int in [-3, +3] (or null) per horizon row. Collapsed from
    *  the `h_2038_2047` modal — no cross-horizon arithmetic. */
   intergen: Record<HorizonRowKey, number | null>;
+
+  /** Localized spectrum label for the Hero chip / comparison surfaces.
+   *  `null` when the overall_spectrum field is absent (pre-v1.2). */
+  spectrumLabelDisplay: string | null;
+  /** Categorical status: present | split | inclassable | absent. */
+  spectrumStatus: SpectrumStatus;
 }
 
 export interface NonAnalyzableCandidate {
@@ -150,6 +160,8 @@ export function deriveComparisonProjection(
     intergen[matrixRow.row] = matrixRow.cells.h_2038_2047.modal_score;
   }
 
+  const spectrum = deriveSpectrumLabel(aggregated, "fr");
+
   return {
     id: meta.id,
     displayName: meta.display_name,
@@ -165,5 +177,7 @@ export function deriveComparisonProjection(
     dimGrades,
     risks,
     intergen,
+    spectrumLabelDisplay: spectrum.displayText,
+    spectrumStatus: spectrum.status,
   };
 }

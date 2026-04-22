@@ -3,6 +3,66 @@
 All changes to files in `prompts/` are recorded here. See
 [`prompts/README.md`](README.md) for the versioning rules.
 
+## 2026-04-22 — aggregate-analyses.md 1.2
+
+**Change:** Additive aggregation rules for the categorical
+`overall_spectrum` label emitted by the v1.2 analyst prompt.
+
+- New §4.3.bis "Overall spectrum label — modal + distribution + dissent":
+  modal plurality, `label_distribution` counts, `modal_label = null` on
+  tied/all-distinct, exhaustive `per_model[]`, `dissent[]` for every
+  non-modal model, "never promote a label no model emitted", and
+  `anchor_narrative` as a distillation that admits no new evidence.
+- §4.3 closing paragraph extended so the "never average" prohibition
+  covers the categorical spectrum label in addition to the 5 per-axis
+  scores.
+- §8 JSON skeleton updated: `schema_version "1.2"`, `prompt_version
+  "1.2"`, new `<AggregatedOverallSpectrum>` block under `positioning`,
+  and `agreement_map.positioning_consensus.overall_spectrum` entry.
+- Frontmatter: `version: "1.2"`, `updated: 2026-04-22`, related spec
+  added.
+
+**Why:** M_PoliticalSpectrum — the aggregator must emit
+`positioning.overall_spectrum` with the same ordinal discipline already
+applied per-axis: modal plurality, full per-model roll-call, null on
+tied modes, no arithmetic summary. `inclassable` is a regular enum
+value, not a tied-mode fallback.
+
+**Impact:** Aggregated outputs produced with this prompt validate
+against `AggregatedOutputSchema` v1.2. `agreement_map.positioning_consensus`
+is now tightened to a `.strict()` object with 6 required keys (5 axes +
+`overall_spectrum`). Existing §4.3 per-axis instructions were **not**
+rewritten — the change is strictly additive at §4.3.bis.
+
+## 2026-04-22 — analyze-candidate.md 1.2
+
+**Change:** Additive §9.6 "Overall spectrum label" instructing the analyst
+to emit `positioning.overall_spectrum` after the five axis placements.
+
+- New sub-section §9.6 with the 8-value enum (`extreme_gauche`, `gauche`,
+  `centre_gauche`, `centre`, `centre_droit`, `droite`, `extreme_droite`,
+  `inclassable`), derivation rules (economic + social/cultural primary,
+  ecological + sovereignty tiebreak, institutional orthogonal), the
+  `derived_from_axes` non-empty requirement, the `inclassable` escape
+  hatch, two worked examples (clean placement + `inclassable`), and the
+  `confidence ≤ min(axis confidences)` ceiling.
+- §5 "Required output structure" updated to list `overall_spectrum`
+  under `positioning` and to reference `schema_version: "1.2"`.
+- Frontmatter bumped to `version: "1.2"` + `updated: 2026-04-22`.
+- Related spec added: `docs/specs/analysis/political-spectrum-label.md`.
+
+**Why:** M_PoliticalSpectrum — surface a single, stable categorical
+spectrum label on the Hero / comparison page while preserving the
+evidence-first, ordinal-per-axis derivation rules. The label is derived
+from the axes, never from party reputation, and is never averaged
+numerically (see schema v1.2).
+
+**Impact:** Analyses produced with this prompt validate against
+`AnalysisOutputSchema` v1.2. Older v1.1 analyses remain valid under
+their pinned prompt hash but cannot be re-validated against v1.2
+without re-running. Existing §9 axis instructions were **not** rewritten
+— the change is strictly additive.
+
 ## 2026-04-20 — aggregate-analyses.md 1.1
 
 **Change:** Additive synthesis rules for the v1.1 output layer used by the

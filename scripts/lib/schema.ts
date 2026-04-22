@@ -285,6 +285,62 @@ const PositioningAxisSchema = z
   .strict();
 
 // ---------------------------------------------------------------------------
+// v1.2 addition — global political-spectrum label.
+// See docs/specs/analysis/political-spectrum-label.md (Stable).
+//
+// NON-NEGOTIABLE GUARDRAILS encoded here:
+//   1. The label is categorical, never cardinal. No `score`, `mean`,
+//      `index`, or `numeric_value` key is accepted — enforced by
+//      `.strict()` on both per-model and aggregated spectrum objects.
+//   2. `derived_from_axes` is required non-empty — a label with no
+//      axis support is a schema error (editorial: "evidence, not
+//      convention").
+//   3. `inclassable` is a first-class enum value, not a fallback for
+//      tied aggregations.
+//   4. Aggregated `modal_label` is nullable (no-unique-plurality is an
+//      explicit valid outcome); aggregation never averages.
+// ---------------------------------------------------------------------------
+
+/** 8 canonical French-spectrum values. ASCII snake_case. */
+export const SpectrumLabelSchema = z.enum([
+  "extreme_gauche",
+  "gauche",
+  "centre_gauche",
+  "centre",
+  "centre_droit",
+  "droite",
+  "extreme_droite",
+  "inclassable",
+]);
+export type SpectrumLabel = z.infer<typeof SpectrumLabelSchema>;
+
+/** Which of the 5 axes drove the spectrum placement. */
+export const SpectrumAxisKeySchema = z.enum([
+  "economic",
+  "social_cultural",
+  "sovereignty",
+  "institutional",
+  "ecological",
+]);
+export type SpectrumAxisKey = z.infer<typeof SpectrumAxisKeySchema>;
+
+/**
+ * Per-model overall-spectrum block. Sibling of the 5 axes; derived
+ * from them, not an independent analytical output.
+ *
+ * See docs/specs/analysis/political-spectrum-label.md §4.1.
+ */
+const OverallSpectrumSchema = z
+  .object({
+    label: SpectrumLabelSchema,
+    derived_from_axes: z.array(SpectrumAxisKeySchema).min(1),
+    evidence: z.array(EvidenceRefSchema).min(1),
+    confidence: ConfidenceSchema,
+    reasoning: z.string().min(60).max(600),
+  })
+  .strict();
+
+// ---------------------------------------------------------------------------
 // v1.1 additions — risk profile, horizon matrix, dimension headline.
 // See docs/specs/website/candidate-page-polish.md §3.
 // All fields added below are additive to v1.0.
@@ -425,7 +481,7 @@ const HorizonMatrixSchema = z
     },
   );
 
-/** Positioning block — the 5 fixed axes. */
+/** Positioning block — the 5 fixed axes plus the v1.2 derived spectrum label. */
 const PositioningSchema = z
   .object({
     economic: PositioningAxisSchema,
@@ -433,6 +489,7 @@ const PositioningSchema = z
     sovereignty: PositioningAxisSchema,
     institutional: PositioningAxisSchema,
     ecological: PositioningAxisSchema,
+    overall_spectrum: OverallSpectrumSchema,
   })
   .strict();
 
@@ -635,7 +692,7 @@ const AdversarialPassSchema = z
 
 export const AnalysisOutputSchema = z
   .object({
-    schema_version: z.literal("1.1"),
+    schema_version: z.literal("1.2"),
     candidate_id: z.string().regex(candidateIdPattern),
     version_date: isoDateString,
     model: z
@@ -737,6 +794,50 @@ const AggregatedPositioningAxisSchema = z
   })
   .strict();
 
+// --------- v1.2 aggregated addition: overall_spectrum --------------------
+// See docs/specs/analysis/political-spectrum-label.md §5.
+// Same editorial discipline as per-axis positioning: modal plurality,
+// distribution, dissent preserved — never averaged. `.strict()` rejects
+// any `score`, `mean`, `index`, or `numeric_value` key.
+
+/** Per-model dissent entry for the categorical spectrum label. */
+const SpectrumDissentSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    label: SpectrumLabelSchema,
+    reasoning: z.string().min(1),
+  })
+  .strict();
+
+/** Per-model entry listing every contributing model's label. */
+const SpectrumPerModelSchema = z
+  .object({
+    model: ModelIdentifierSchema,
+    label: SpectrumLabelSchema,
+    reasoning: z.string().min(1),
+  })
+  .strict();
+
+/**
+ * Aggregated overall-spectrum block. Categorical; never averaged.
+ * `modal_label` is nullable: no-unique-plurality is a valid outcome
+ * (the site renders "Positionnement partagé" in that case).
+ */
+const AggregatedOverallSpectrumSchema = z
+  .object({
+    modal_label: SpectrumLabelSchema.nullable(),
+    label_distribution: z.record(
+      SpectrumLabelSchema,
+      z.number().int().nonnegative(),
+    ),
+    anchor_narrative: z.string().min(1).max(600),
+    confidence: ConfidenceSchema,
+    dissent: z.array(SpectrumDissentSchema),
+    per_model: z.array(SpectrumPerModelSchema),
+    human_edit: z.boolean().optional(),
+  })
+  .strict();
+
 const AggregatedPositioningSchema = z
   .object({
     economic: AggregatedPositioningAxisSchema,
@@ -744,6 +845,7 @@ const AggregatedPositioningSchema = z
     sovereignty: AggregatedPositioningAxisSchema,
     institutional: AggregatedPositioningAxisSchema,
     ecological: AggregatedPositioningAxisSchema,
+    overall_spectrum: AggregatedOverallSpectrumSchema,
   })
   .strict();
 
@@ -1002,15 +1104,37 @@ const PositioningConsensusEntrySchema = z
   })
   .strict();
 
+/**
+ * Overall-spectrum entry inside `agreement_map.positioning_consensus`.
+ * Categorical mirror of the numeric per-axis entry. No score field.
+ * See docs/specs/analysis/political-spectrum-label.md §5.1.
+ */
+const OverallSpectrumConsensusEntrySchema = z
+  .object({
+    modal_label: SpectrumLabelSchema.nullable(),
+    distribution: z.record(
+      SpectrumLabelSchema,
+      z.number().int().nonnegative(),
+    ),
+    dissent_count: z.number().int().nonnegative(),
+  })
+  .strict();
+
 const AgreementMapSchema = z
   .object({
     high_confidence_claims: z.array(HighConfidenceClaimSchema),
     contested_claims: z.array(ContestedClaimSchema),
     coverage: z.record(ModelIdentifierSchema, CoverageStatusSchema),
-    positioning_consensus: z.record(
-      z.string().min(1),
-      PositioningConsensusEntrySchema,
-    ),
+    positioning_consensus: z
+      .object({
+        economic: PositioningConsensusEntrySchema,
+        social_cultural: PositioningConsensusEntrySchema,
+        sovereignty: PositioningConsensusEntrySchema,
+        institutional: PositioningConsensusEntrySchema,
+        ecological: PositioningConsensusEntrySchema,
+        overall_spectrum: OverallSpectrumConsensusEntrySchema,
+      })
+      .strict(),
   })
   .strict();
 
@@ -1059,7 +1183,7 @@ const SourceModelEntrySchema = z
 
 export const AggregatedOutputSchema = z
   .object({
-    schema_version: z.literal("1.1"),
+    schema_version: z.literal("1.2"),
     candidate_id: z.string().regex(candidateIdPattern),
     version_date: isoDateString,
     source_models: z.array(SourceModelEntrySchema).min(1),

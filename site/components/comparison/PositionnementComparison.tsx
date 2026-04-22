@@ -5,6 +5,7 @@ import { useComparison } from "./ComparisonBody";
 import { ComparisonRadar } from "./ComparisonRadar";
 import { PositionnementRows } from "./PositionnementRows";
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
+import { SectionHead } from "../chrome/SectionHead";
 
 export function PositionnementComparison() {
   const { entries, selectedIds } = useComparison();
@@ -20,13 +21,13 @@ export function PositionnementComparison() {
   return (
     <section id="positionnement" className="mb-16">
       <header className="mb-5">
-        <h2 className="font-display text-xl font-semibold">Positionnement</h2>
-        <p className="mt-1 max-w-prose text-sm text-text-secondary">
+        <SectionHead label="Positionnement" />
+        {/* <p className="mt-1 max-w-prose text-sm text-text-secondary">
           Position modale de chaque programme sur cinq axes politiques. Les
           polygones superposés et les dots par axe restituent les écarts sans
           les lisser — chaque ligne est ordinale, aucune moyenne n'est
           calculée.
-        </p>
+        </p> */}
       </header>
       <div className="grid items-start gap-10 md:grid-cols-[auto_1fr]">
         <div className="flex justify-center md:justify-start">

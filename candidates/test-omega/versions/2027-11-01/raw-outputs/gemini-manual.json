@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "omega-synthetique",
   "version_date": "2026-04-20",
   "model": {
@@ -8,7 +8,7 @@
   },
   "run_metadata": {
     "run_at": "2026-04-20T12:15:27Z",
-    "prompt_sha256": "bf093ecee595d0ff13880f308d329fb2898358d261a7951bc94e8daf3d1e02e9",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "temperature": 0
   },
   "summary": "The Omega Synthétique program proposes a state-led ecological transition funded by heavy wealth and carbon taxation, alongside a massive decentralization of political power to regions. It pairs a universal basic income and reduced working hours with protectionist trade policies and targeted public investments in green industry and nuclear energy.",
@@ -84,6 +84,22 @@
       ],
       "confidence": 0.9,
       "reasoning": "Measures prioritize ecological metrics above standard economic activity, enforcing binding carbon constraints and bans on intensive agriculture/short flights."
+    },
+    "overall_spectrum": {
+      "label": "inclassable",
+      "derived_from_axes": [
+        "economic",
+        "sovereignty",
+        "institutional"
+      ],
+      "evidence": [
+        {
+          "quote": "Nationalisation complète du parc de production électrique pour l'isoler des logiques de marché de court terme",
+          "source_ref": "sources.md#3.4 Souveraineté énergétique (fictif)"
+        }
+      ],
+      "confidence": 0.55,
+      "reasoning": "L'axe économique étatiste extrême (-4) pousse fortement à gauche, mais l'axe souveraineté (+1) et surtout l'axe institutionnel (+2 illibéral) tirent l'autre direction, et l'axe social-progressiste (-3) ne suffit pas à trancher ; les axes ne se combinent pas en une placement gauche/droite cohérent, le programme est donc reporté comme inclassable plutôt que forcé sur le spectre."
     }
   },
   "dimensions": {

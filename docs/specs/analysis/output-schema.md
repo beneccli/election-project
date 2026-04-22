@@ -18,7 +18,7 @@ The canonical implementation is `scripts/lib/schema.ts` using Zod. This markdown
 
 ```json
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "candidate_id": "string",
   "version_date": "YYYY-MM-DD",
   "model": {
@@ -70,6 +70,40 @@ Uses the 5-axis methodology from [`political-positioning.md`](political-position
 ```
 
 **Critical:** these scores are **never averaged** across models during aggregation. See [`aggregation.md`](aggregation.md).
+
+#### `positioning.overall_spectrum` (schema v1.2)
+
+Additive in v1.2. A single categorical label placing the candidate on
+the conventional French political spectrum. Derived from the five axes,
+not an independent analytical output. See
+[`political-spectrum-label.md`](political-spectrum-label.md).
+
+```json
+"positioning": {
+  "economic":        { ... },
+  "social_cultural": { ... },
+  "sovereignty":     { ... },
+  "institutional":   { ... },
+  "ecological":      { ... },
+  "overall_spectrum": {
+    "label": "extreme_gauche | gauche | centre_gauche | centre | centre_droit | droite | extreme_droite | inclassable",
+    "derived_from_axes": ["economic", "social_cultural", "ecological"],
+    "evidence": [
+      { "quote": "...", "source_ref": "sources.md#..." }
+    ],
+    "confidence": 0.7,
+    "reasoning": "string, 60–600 chars, measurement framing"
+  }
+}
+```
+
+- `derived_from_axes` is a non-empty subset of the five axis keys.
+- `evidence[]` is reused from the per-axis evidence (no new sources).
+- `confidence ≤ min(confidence of each derived_from_axes axis)`.
+- `inclassable` is a first-class value for programs orthogonal to L–R.
+- The block is `.strict()` in Zod — any `score`, `mean`, `index`, or
+  `numeric_value` key is rejected. The spectrum label is categorical
+  and is never averaged.
 
 ---
 
@@ -293,6 +327,41 @@ The aggregator (see [`aggregation.md`](aggregation.md)) consumes N per-model JSO
 
 See [`aggregation.md`](aggregation.md) for full schema.
 
+### Aggregated `positioning.overall_spectrum` (schema v1.2)
+
+The aggregator emits a categorical, never-averaged shape mirroring the
+per-axis rule:
+
+```json
+"positioning": {
+  "economic":        { "consensus_interval": [int, int], "modal_score": int|null, ... },
+  ...,
+  "overall_spectrum": {
+    "modal_label": "centre_gauche | ... | inclassable | null",
+    "label_distribution": { "centre_gauche": 2, "gauche": 1 },
+    "anchor_narrative": "string ≤ 600 chars — distils per-model reasoning",
+    "confidence": 0.65,
+    "dissent":   [ { "model": "...", "label": "...", "reasoning": "..." } ],
+    "per_model": [ { "model": "...", "label": "...", "reasoning": "..." } ]
+  }
+}
+```
+
+- `modal_label` is the plurality label; `null` when no unique plurality
+  (tied or all-distinct). `null` is a valid editorial outcome.
+- `label_distribution` counts per enum value across contributing models.
+- `per_model[]` is exhaustive across contributing models.
+- `dissent[]` lists every model whose label differs from `modal_label`
+  (or every model when `modal_label = null`).
+- The aggregator cannot promote a label no model emitted.
+- `.strict()` in Zod — rejects any `score`, `mean`, `index`, or
+  `numeric_value` key on this block.
+- `agreement_map.positioning_consensus.overall_spectrum` carries the
+  same `{ modal_label, distribution, dissent_count }` for quick UI use.
+
+See [`political-spectrum-label.md`](political-spectrum-label.md) §5 for
+the full aggregation rule.
+
 ---
 
 ## Validation
@@ -319,5 +388,6 @@ See [`aggregation.md`](aggregation.md) for full schema.
 - [`dimensions.md`](dimensions.md)
 - [`analysis-prompt.md`](analysis-prompt.md)
 - [`political-positioning.md`](political-positioning.md)
+- [`political-spectrum-label.md`](political-spectrum-label.md)
 - [`intergenerational-audit.md`](intergenerational-audit.md)
 - [`aggregation.md`](aggregation.md)

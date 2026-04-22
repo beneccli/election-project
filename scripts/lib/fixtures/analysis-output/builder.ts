@@ -129,7 +129,7 @@ export function buildValidAnalysisOutput(): AnalysisOutput {
   });
 
   return {
-    schema_version: "1.1",
+    schema_version: "1.2",
     candidate_id: "test-candidate",
     version_date: "2026-04-19",
     model: { provider: "anthropic", version: "claude-opus-4-7" },
@@ -146,6 +146,19 @@ export function buildValidAnalysisOutput(): AnalysisOutput {
       sovereignty: { ...positioningAxis, score: 1 },
       institutional: { ...positioningAxis, score: -1 },
       ecological: { ...positioningAxis, score: 2 },
+      overall_spectrum: {
+        label: "centre_gauche",
+        derived_from_axes: ["economic", "social_cultural", "ecological"],
+        evidence: [
+          {
+            quote: "Nationalisation des autoroutes.",
+            source_ref: "sources.md#economie",
+          },
+        ],
+        confidence: 0.6,
+        reasoning:
+          "Economic axis reads as moderately interventionist, social/cultural axis centre-neutral, ecological axis moderately transition-prioritized; combined placement sits between Hollande 2012 and Macron 2017 on the French L-R spectrum.",
+      },
     },
     dimensions: {
       economic_fiscal: { ...dimensionBody },

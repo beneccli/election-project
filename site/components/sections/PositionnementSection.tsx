@@ -35,7 +35,7 @@ export function PositionnementSection({
         </div>
         <div>
           <AxisAgreementBars positioning={aggregated.positioning} />
-          <PositioningLegend positioning={aggregated.positioning} />
+          {/* <PositioningLegend positioning={aggregated.positioning} /> */}
         </div>
       </div>
     </section>

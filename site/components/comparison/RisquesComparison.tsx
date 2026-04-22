@@ -23,6 +23,7 @@ import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
 import { t, type Lang } from "@/lib/i18n";
 import { useComparison } from "./ComparisonBody";
+import { SectionHead } from "../chrome/SectionHead";
 
 // Palette + labels mirror the candidate-page RiskSummaryMatrix so the
 // reader recognises the same cells. Only 4 levels exist in the real
@@ -78,17 +79,10 @@ export function RisquesStack({
 }) {
   return (
     <section id="risques" className="mb-16">
-      <header className="mb-5">
-        <h2 className="font-display text-xl font-semibold">
-          {lang === "en" ? "Risks" : "Risques"}
-        </h2>
-        <p className="mt-1 max-w-prose text-sm text-text-secondary">
-          {lang === "en"
-            ? "Risk level per dimension and category, as published on each candidate page. Blocks are stacked in selection order; cells carry the ordinal level only."
-            : "Niveau de risque par domaine et catégorie, tel que publié sur chaque fiche candidat. Les blocs sont empilés dans l'ordre de sélection ; les cellules portent uniquement le niveau ordinal."}
-        </p>
+      <header className="mb-12">
+        <SectionHead label={lang === "en" ? "Risks" : "Risques"} />
       </header>
-      <div className="space-y-8">
+      <div className="space-y-12">
         {selected.map((c, slot) => (
           <RisquesBlock
             key={c.id}
@@ -116,9 +110,8 @@ function RisquesBlock({
   return (
     <div
       data-candidate={projection.id}
-      className="rounded border border-rule bg-bg p-4"
     >
-      <header className="mb-3 flex items-baseline gap-3">
+      <header className="mb-3 flex items-center gap-3">
         <span
           aria-hidden
           className="inline-block h-[3px] w-8 rounded"
@@ -126,7 +119,7 @@ function RisquesBlock({
         />
         <Link
           href={`/candidat/${projection.id}#risques`}
-          className="font-display text-base font-semibold hover:underline"
+          className="text-sm font-semibold hover:underline"
         >
           {firstName(projection.displayName)}
         </Link>

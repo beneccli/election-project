@@ -8,6 +8,7 @@ import { useLang } from "@/lib/lang-context";
 import { gradeValue } from "@/lib/grade-value";
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
 import { useComparison } from "./ComparisonBody";
+import { SectionHead } from "../chrome/SectionHead";
 
 function firstName(name: string): string {
   return name.split(/\s+/)[0] ?? name;
@@ -48,14 +49,12 @@ export function DomainesTable({
   return (
     <section id="domaines" className="mb-16">
       <header className="mb-5">
-        <h2 className="font-display text-xl font-semibold">
-          {lang === "en" ? "Domains" : "Domaines"}
-        </h2>
-        <p className="mt-1 max-w-prose text-sm text-text-secondary">
+        <SectionHead label={lang === "en" ? "Domains" : "Domaines"} />
+        {/* <p className="mt-1 max-w-prose text-sm text-text-secondary">
           {lang === "en"
             ? "Consensus grade per dimension. The ↑ marker signals the unique top of each row; Écart is the ordinal distance max − min."
             : "Grade de consensus par dimension. La flèche ↑ marque le haut strict de la ligne ; « Écart » est la distance ordinale max − min."}
-        </p>
+        </p> */}
       </header>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[520px] border-collapse text-sm">
@@ -81,9 +80,9 @@ export function DomainesTable({
                       style={{ backgroundColor: color }}
                     />
                     <span className="block">{firstName(c.displayName)}</span>
-                    <span className="block text-[10px] font-normal text-text-secondary">
+                    {/* <span className="block text-[10px] font-normal text-text-secondary">
                       {c.partyShort}
-                    </span>
+                    </span> */}
                   </th>
                 );
               })}

@@ -1,9 +1,9 @@
 ---
 name: analyze-candidate
-version: "1.1"
+version: "1.2"
 status: stable
 created: 2026-04-19
-updated: 2026-04-20
+updated: 2026-04-22
 used_by: scripts/analyze.ts
 related_specs:
   - docs/specs/analysis/analysis-prompt.md
@@ -11,12 +11,13 @@ related_specs:
   - docs/specs/analysis/editorial-principles.md
   - docs/specs/analysis/dimensions.md
   - docs/specs/analysis/political-positioning.md
+  - docs/specs/analysis/political-spectrum-label.md
   - docs/specs/analysis/intergenerational-audit.md
   - docs/specs/website/candidate-page-polish.md
 description: >
   Per-model, per-candidate analysis prompt for the Élection 2027 project.
   Produces a structured JSON analysis matching AnalysisOutputSchema
-  (schema_version 1.1).
+  (schema_version 1.2).
 ---
 
 # Candidate Program Analysis
@@ -99,7 +100,7 @@ Return a single JSON object matching `AnalysisOutputSchema`
 
 ```
 {
-  schema_version: "1.1",
+  schema_version: "1.2",
   candidate_id: <string>,
   version_date: "YYYY-MM-DD",
   model: { provider, version },
@@ -108,7 +109,12 @@ Return a single JSON object matching `AnalysisOutputSchema`
   positioning: {
     economic, social_cultural, sovereignty, institutional, ecological:
       { score: int[-5,+5], anchor_comparison, evidence[], confidence,
-        reasoning }
+        reasoning },
+    overall_spectrum:
+      { label: one of extreme_gauche | gauche | centre_gauche | centre |
+               centre_droit | droite | extreme_droite | inclassable,
+        derived_from_axes: non-empty subset of the 5 axis keys,
+        evidence[], confidence, reasoning (60-600 chars) }
   },
   dimensions: {
     economic_fiscal, social_demographic, security_sovereignty,
@@ -222,6 +228,105 @@ For each axis:
 5. Provide at least one verbatim `evidence` entry per axis.
 6. Self-assess `confidence`. If the program lacks concrete measures on the
    axis, keep `confidence` at or below `0.6`.
+
+### 9.6 Overall spectrum label
+
+After the five axis placements are complete, emit
+`positioning.overall_spectrum` — a single categorical label placing the
+candidate on the conventional French political spectrum. The label is
+**derived from the axis evidence**; no new sources are admitted at this
+step.
+
+**Enum (exactly 8 values, ASCII snake_case, no synonyms):**
+
+- `extreme_gauche` — anti-capitalist, post-EU, revolutionary register.
+- `gauche` — social-democratic / classical LFI–PS-left anchor.
+- `centre_gauche` — PS mainstream, Place publique anchor.
+- `centre` — mainstream centrism, MoDem register.
+- `centre_droit` — LR moderate, Horizons register.
+- `droite` — LR 2022 mainstream / Fillon 2017 anchor.
+- `extreme_droite` — RN / Reconquête, nationalist-authoritarian register.
+- `inclassable` — program orthogonal to the left–right spectrum (explicit
+  escape hatch).
+
+**Derivation rules:**
+
+1. **Reuse axis evidence only.** Every `evidence[]` entry on
+   `overall_spectrum` must also appear in one of the five axis
+   `evidence[]` arrays. Do not cite new material.
+2. **Weight economic and social/cultural axes first.** These are the axes
+   the French left–right spectrum historically tracks.
+3. **Consult ecological and sovereignty axes as tiebreakers.** A
+   moderate-economic + strongly-ecologist program is typically
+   `centre_gauche`; a moderate-economic + strongly-sovereigntist program
+   may be `droite` or `extreme_droite` despite moderate economics.
+4. **Institutional axis is orthogonal.** A high illiberal score does not
+   itself shift the label left or right. It can push the label toward
+   `extreme_*` only when combined with correspondingly extreme
+   economic/social placements.
+5. **`inclassable` when the axes pull in incompatible directions** and no
+   clear L–R plurality emerges (e.g. hard-statist economics + libertarian
+   social/cultural + sovereigntist). `inclassable` is a first-class
+   analytical outcome, not a fallback.
+6. **Never anchor on party name or media reputation.** The candidate's
+   self-description is admissible only when concrete proposals support it.
+
+**Required fields:**
+
+- `label`: one of the 8 enum values above.
+- `derived_from_axes`: non-empty subset of
+  `["economic", "social_cultural", "sovereignty", "institutional",
+  "ecological"]`. An empty array is a schema error — a label with no axis
+  support is a bug.
+- `evidence`: at least one `EvidenceRef` reused from the axis arrays.
+- `confidence`: in `[0, 1]`. Upper bound: `confidence ≤ min(confidence of
+  each axis in derived_from_axes)`. Label confidence cannot exceed the
+  weakest contributing axis.
+- `reasoning`: 60 to 600 characters. Describes the derivation mechanism
+  (which axes drove the placement, how they combined). Measurement
+  framing only — no "reasonable centrism", no "dangerous extremism", no
+  fairness adjectives.
+
+**Worked example — clean placement:**
+
+> Axes: economic = -2 (moderate interventionism), social_cultural = -1
+> (mildly progressive), sovereignty = -2 (EU-federalist), institutional =
+> -1 (liberal-democratic), ecological = +3 (ecologist).
+>
+> Economic mildly-left plus progressive social plus ecologist axis place
+> the program in the centre-left band. Sovereignty reinforces (pro-EU).
+> Institutional axis is orthogonal and does not shift the label.
+>
+> ```json
+> {
+>   "label": "centre_gauche",
+>   "derived_from_axes": ["economic", "social_cultural", "ecological"],
+>   "evidence": [ /* reused from axis evidence */ ],
+>   "confidence": 0.7,
+>   "reasoning": "Mild economic interventionism combined with progressive social stance and a priority on ecological transition places the program in the centre-left band; sovereignty reinforces, institutional axis orthogonal."
+> }
+> ```
+
+**Worked example — `inclassable`:**
+
+> Axes: economic = -4 (hard-statist), social_cultural = +3 (socially
+> conservative), sovereignty = +4 (nationalist), institutional = +3
+> (illiberal), ecological = -2 (productivist).
+>
+> Hard-statist economics usually pulls toward `gauche` / `extreme_gauche`,
+> but the social/cultural and sovereignty axes pull strongly to the right.
+> No clear L–R plurality — the program is orthogonal to the conventional
+> spectrum.
+>
+> ```json
+> {
+>   "label": "inclassable",
+>   "derived_from_axes": ["economic", "social_cultural", "sovereignty"],
+>   "evidence": [ /* reused from axis evidence */ ],
+>   "confidence": 0.55,
+>   "reasoning": "Hard-statist economics pulls left while socially-conservative, nationalist, and illiberal positions pull right; the axes do not admit a single L-R placement, so the program is reported as inclassable rather than forced onto the spectrum."
+> }
+> ```
 
 ## 10. Schema v1.1 fields: headline, risk_profile, horizon_matrix
 
