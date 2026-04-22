@@ -3,6 +3,37 @@
 All changes to files in `prompts/` are recorded here. See
 [`prompts/README.md`](README.md) for the versioning rules.
 
+## 2026-04-22 — aggregate-analyses.md 1.2
+
+**Change:** Additive aggregation rules for the categorical
+`overall_spectrum` label emitted by the v1.2 analyst prompt.
+
+- New §4.3.bis "Overall spectrum label — modal + distribution + dissent":
+  modal plurality, `label_distribution` counts, `modal_label = null` on
+  tied/all-distinct, exhaustive `per_model[]`, `dissent[]` for every
+  non-modal model, "never promote a label no model emitted", and
+  `anchor_narrative` as a distillation that admits no new evidence.
+- §4.3 closing paragraph extended so the "never average" prohibition
+  covers the categorical spectrum label in addition to the 5 per-axis
+  scores.
+- §8 JSON skeleton updated: `schema_version "1.2"`, `prompt_version
+  "1.2"`, new `<AggregatedOverallSpectrum>` block under `positioning`,
+  and `agreement_map.positioning_consensus.overall_spectrum` entry.
+- Frontmatter: `version: "1.2"`, `updated: 2026-04-22`, related spec
+  added.
+
+**Why:** M_PoliticalSpectrum — the aggregator must emit
+`positioning.overall_spectrum` with the same ordinal discipline already
+applied per-axis: modal plurality, full per-model roll-call, null on
+tied modes, no arithmetic summary. `inclassable` is a regular enum
+value, not a tied-mode fallback.
+
+**Impact:** Aggregated outputs produced with this prompt validate
+against `AggregatedOutputSchema` v1.2. `agreement_map.positioning_consensus`
+is now tightened to a `.strict()` object with 6 required keys (5 axes +
+`overall_spectrum`). Existing §4.3 per-axis instructions were **not**
+rewritten — the change is strictly additive at §4.3.bis.
+
 ## 2026-04-22 — analyze-candidate.md 1.2
 
 **Change:** Additive §9.6 "Overall spectrum label" instructing the analyst

@@ -1,23 +1,25 @@
 ---
 name: aggregate-analyses
-version: "1.1"
+version: "1.2"
 status: stable
 created: 2026-04-19
-updated: 2026-04-20
+updated: 2026-04-22
 used_by: scripts/aggregate.ts
 related_specs:
   - docs/specs/analysis/aggregation.md
   - docs/specs/analysis/output-schema.md
   - docs/specs/analysis/editorial-principles.md
   - docs/specs/analysis/political-positioning.md
+  - docs/specs/analysis/political-spectrum-label.md
   - docs/specs/analysis/intergenerational-audit.md
   - docs/specs/website/candidate-page-polish.md
 description: >
   Meta-LLM aggregation prompt for the Élection 2027 project. Synthesizes N
   per-model analyses of a single candidate into a structured
-  AggregatedOutput JSON (schema_version 1.1) that preserves dissent, flags
-  source contradictions, and never averages ordinal positioning,
-  risk-profile levels, or horizon-matrix impact scores.
+  AggregatedOutput JSON (schema_version 1.2) that preserves dissent, flags
+  source contradictions, and never averages ordinal positioning, the
+  categorical overall spectrum label, risk-profile levels, or
+  horizon-matrix impact scores.
 ---
 
 # Multi-Model Aggregation
@@ -145,13 +147,68 @@ Political positioning is ordinal, not cardinal. For each of the five axes
 **There is no aggregated `score` field.** The per-model integer score
 lives only in `raw-outputs/<model>.json`. Do not emit a `score` field
 anywhere under `positioning`. Do not compute arithmetic mean or median
-positioning. The ordinal structure is the editorial guardrail; producing a
-single aggregated cardinal score would allow downstream consumers to
-misread it as a measurement.
+positioning — this prohibition applies equally to per-axis scores and to
+the categorical `overall_spectrum` label described in §4.3.bis. The
+ordinal structure is the editorial guardrail; producing a single
+aggregated cardinal score would allow downstream consumers to misread it
+as a measurement.
 
 Also populate `agreement_map.positioning_consensus[<axis>]` with
 `{ interval, modal, dissent_count }` for quick UI consumption. These
 repeat the same numbers as in `positioning[<axis>]` — they must agree.
+
+### 4.3.bis Overall spectrum label — modal + distribution + dissent
+
+The v1.2 output adds `positioning.overall_spectrum`, a single categorical
+label placing the candidate on the conventional French political
+spectrum. Each per-model analysis emits one of 8 values: `extreme_gauche`,
+`gauche`, `centre_gauche`, `centre`, `centre_droit`, `droite`,
+`extreme_droite`, or `inclassable`. Aggregation applies the same ordinal
+discipline as the per-axis rule above:
+
+- Compute `label_distribution` as counts per enum value across the
+  contributing models (e.g. `{ "centre_gauche": 2, "gauche": 1 }`).
+  Enum values with zero occurrences may be omitted.
+- Compute `modal_label` as the plurality. When there is no unique
+  plurality (all distinct, or tied modes), set `modal_label` to `null`.
+  `modal_label = null` is a valid outcome, not an error — the site
+  renders it as "dissensus" with a tooltip.
+- **Never promote a label no model emitted.** The aggregator cannot
+  assign `modal_label = "centre_gauche"` when no raw output said
+  `centre_gauche`. If no enum value appears in any model's analysis for
+  this candidate, that is itself a validation failure of the upstream
+  analyses, not a licence to invent one.
+- `inclassable` is a regular enum value: it can be the modal label when
+  it is the per-model plurality, and it is treated like any other value
+  in the distribution. It is **not** a fallback for tied modes — tied
+  modes produce `modal_label = null`.
+- Record `dissent[]` for every model whose label differs from
+  `modal_label`. Each dissent entry carries `{ model, label, reasoning }`
+  with reasoning preserved verbatim from the source model. When
+  `modal_label = null`, every contributing model appears in `dissent[]`
+  (no consensus to dissent against, but the list preserves positions).
+- Emit `per_model[]` with one entry **per source model that contributed
+  to the aggregation**, carrying `{ model, label, reasoning }` with the
+  label and reasoning copied verbatim from that model's analysis. This
+  is the complete per-candidate roll-call the website uses to show
+  dissent on the comparison page.
+- `anchor_narrative` (≤ 600 characters) distils the per-model reasoning
+  into a short prose placement. It does **not** introduce new evidence
+  or new anchors — it refers only to the derivations that already appear
+  in the per-model outputs.
+- `confidence` is the minimum of the per-model confidences reported on
+  `positioning.overall_spectrum`.
+
+**No numeric aggregation.** `overall_spectrum` is categorical. Do not
+emit `score`, `mean`, `index`, or any numeric summary on the spectrum
+block — the schema rejects these keys, but the editorial rule is
+primary: averaging an ordinal categorical label would be meaningless and
+would project false precision onto a fundamentally contested placement.
+
+Also populate `agreement_map.positioning_consensus.overall_spectrum`
+with `{ modal_label, distribution, dissent_count }` for quick UI
+consumption. These repeat the same numbers as in
+`positioning.overall_spectrum` — they must agree.
 
 ### 4.4 Source-contradiction rule (with correlated-hallucination backstop)
 
@@ -387,7 +444,7 @@ Compact shape:
 
 ```
 {
-  schema_version: "1.1",
+  schema_version: "1.2",
   candidate_id: <string>,
   version_date: "YYYY-MM-DD",
   source_models: [ { provider, version }, ... ],
@@ -395,7 +452,7 @@ Compact shape:
     type: "meta_llm",
     model: { provider, version },
     prompt_sha256: <string>,          // injected by the runner
-    prompt_version: "1.1",
+    prompt_version: "1.2",
     run_at: <ISO-8601>                 // injected by the runner
   },
 
@@ -408,7 +465,8 @@ Compact shape:
     social_cultural: <AggregatedPositioningAxis>,
     sovereignty:     <AggregatedPositioningAxis>,
     institutional:   <AggregatedPositioningAxis>,
-    ecological:      <AggregatedPositioningAxis>
+    ecological:      <AggregatedPositioningAxis>,
+    overall_spectrum: <AggregatedOverallSpectrum>
   },
   // <AggregatedPositioningAxis>: {
   //   consensus_interval: [int, int],
@@ -420,6 +478,18 @@ Compact shape:
   //   per_model: [ { model, score: int, reasoning } ]   // v1.1 — complete list
   // }
   // NO score field.
+  //
+  // <AggregatedOverallSpectrum>: {             // v1.2 — categorical, never averaged
+  //   modal_label: "extreme_gauche" | "gauche" | "centre_gauche" | "centre"
+  //              | "centre_droit" | "droite" | "extreme_droite"
+  //              | "inclassable" | null,
+  //   label_distribution: { <label>: <int >= 0>, ... },
+  //   anchor_narrative: <string ≤ 600>,
+  //   confidence: <[0,1]>,
+  //   dissent:   [ { model, label, reasoning } ],
+  //   per_model: [ { model, label, reasoning } ]
+  // }
+  // NO score / mean / index / numeric_value field.
 
   dimensions: {
     economic_fiscal:         <AggregatedDimension>,
@@ -513,7 +583,12 @@ Compact shape:
       social_cultural: { ... },
       sovereignty:     { ... },
       institutional:   { ... },
-      ecological:      { ... }
+      ecological:      { ... },
+      overall_spectrum: {                      // v1.2 — categorical mirror
+        modal_label: <SpectrumLabel> | null,
+        distribution: { <SpectrumLabel>: <int >= 0>, ... },
+        dissent_count: int
+      }
     }
   },
 
