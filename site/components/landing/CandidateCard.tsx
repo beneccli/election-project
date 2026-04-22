@@ -150,6 +150,7 @@ export default function CandidateCard({ card, lang }: Props) {
               tooltipLines={[]}
               href={`/candidat/${card.id}#positionnement`}
               labelPrefix={lang === "fr" ? "Positionnement : " : "Positioning: "}
+              static
             />
           </div>
           <AxisMiniBar

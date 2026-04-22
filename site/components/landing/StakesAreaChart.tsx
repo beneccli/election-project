@@ -36,30 +36,37 @@ const DEFAULTS = {
   padL: 8,
 } as const;
 
+const SSR_FALLBACK: ThemeColors = {
+  stroke: "#0057ff",
+  fill: "#0057ff",
+  text: "#333",
+  rule: "#ccc",
+};
+
 function readThemeColors(token: "accent" | "risk-red"): ThemeColors {
   if (typeof document === "undefined") {
-    return {
-      stroke: "#0057ff",
-      fill: "#0057ff",
-      text: "#333",
-      rule: "#ccc",
-    };
+    return SSR_FALLBACK;
   }
   const style = getComputedStyle(document.documentElement);
   const strokeVar = token === "risk-red" ? "--risk-red" : "--accent";
   return {
-    stroke: style.getPropertyValue(strokeVar).trim() || "#0057ff",
-    fill: style.getPropertyValue(strokeVar).trim() || "#0057ff",
-    text: style.getPropertyValue("--text-tertiary").trim() || "#666",
-    rule: style.getPropertyValue("--rule-light").trim() || "#ccc",
+    stroke: style.getPropertyValue(strokeVar).trim() || SSR_FALLBACK.stroke,
+    fill: style.getPropertyValue(strokeVar).trim() || SSR_FALLBACK.fill,
+    text: style.getPropertyValue("--text-tertiary").trim() || SSR_FALLBACK.text,
+    rule: style.getPropertyValue("--rule-light").trim() || SSR_FALLBACK.rule,
   };
 }
 
-/** Subscribe to `data-theme` attribute changes on <html>. */
+/**
+ * Subscribe to `data-theme` attribute changes on <html>.
+ *
+ * The hook deliberately returns the SSR fallback on the first client
+ * render so server-rendered HTML matches the initial DOM (avoids a
+ * hydration mismatch). Actual OKLCH values are read in an effect,
+ * triggering a single re-render after mount.
+ */
 function useThemeColors(token: "accent" | "risk-red"): ThemeColors {
-  const [colors, setColors] = useState<ThemeColors>(() =>
-    readThemeColors(token),
-  );
+  const [colors, setColors] = useState<ThemeColors>(SSR_FALLBACK);
   useEffect(() => {
     setColors(readThemeColors(token));
     if (typeof window === "undefined") return;

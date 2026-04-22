@@ -19,6 +19,12 @@ interface Props {
   labelPrefix?: string;
   /** Extra class names appended to the default. */
   className?: string;
+  /**
+   * When true, render as a non-interactive <span> instead of an <a>.
+   * Use when the pill is already inside a clickable ancestor — nested
+   * anchors are invalid HTML and break hydration.
+   */
+  static?: boolean;
 }
 
 export default function SpectrumPill({
@@ -28,12 +34,28 @@ export default function SpectrumPill({
   href = "#positionnement",
   labelPrefix = "Positionnement : ",
   className = "",
+  static: isStatic = false,
 }: Props) {
   if (!displayText) return null;
+  const baseClass =
+    `rounded text-[11px] text-text-tertiary hover:text-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${className}`.trim();
+  if (isStatic) {
+    return (
+      <span
+        className={baseClass}
+        title={tooltipLines.join("\n")}
+        aria-label={`${labelPrefix}${displayText}`}
+        data-testid="hero-spectrum-chip"
+        data-spectrum-status={status}
+      >
+        {displayText}
+      </span>
+    );
+  }
   return (
     <a
       href={href}
-      className={`rounded text-[11px] text-text-tertiary hover:text-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${className}`.trim()}
+      className={baseClass}
       title={tooltipLines.join("\n")}
       aria-label={`${labelPrefix}${displayText}`}
       data-testid="hero-spectrum-chip"
