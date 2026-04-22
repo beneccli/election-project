@@ -132,3 +132,54 @@ describe("prompts/analyze-candidate.md — structural contracts", () => {
     ).toBe(snapshot);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Schema v1.2 — overall_spectrum (M_PoliticalSpectrum)
+// See docs/specs/analysis/political-spectrum-label.md §6.1.
+// ---------------------------------------------------------------------------
+
+describe("prompts/analyze-candidate.md — overall_spectrum contract", () => {
+  const SPECTRUM_ENUM_VALUES = [
+    "extreme_gauche",
+    "gauche",
+    "centre_gauche",
+    "centre",
+    "centre_droit",
+    "droite",
+    "extreme_droite",
+    "inclassable",
+  ];
+
+  test("§9.6 heading is present", () => {
+    expect(prompt).toMatch(/### 9\.6 Overall spectrum label/);
+  });
+
+  test("all 8 spectrum enum values are named verbatim", () => {
+    for (const value of SPECTRUM_ENUM_VALUES) {
+      expect(
+        prompt,
+        `missing spectrum enum value: ${value}`,
+      ).toContain(value);
+    }
+  });
+
+  test("derived_from_axes requirement is stated", () => {
+    expect(prompt).toContain("derived_from_axes");
+    expect(prompt).toMatch(/non-empty/i);
+  });
+
+  test("inclassable escape hatch is documented", () => {
+    expect(prompt).toMatch(/inclassable/);
+    expect(prompt).toMatch(/escape hatch|orthogonal/i);
+  });
+
+  test("§5 output structure references overall_spectrum", () => {
+    const fiveHeadingIdx = prompt.indexOf("## 5. Required output structure");
+    const sixHeadingIdx = prompt.indexOf("## 6. Evidence citations");
+    expect(fiveHeadingIdx).toBeGreaterThan(0);
+    expect(sixHeadingIdx).toBeGreaterThan(fiveHeadingIdx);
+    const sectionFive = prompt.slice(fiveHeadingIdx, sixHeadingIdx);
+    expect(sectionFive).toContain("overall_spectrum");
+    expect(sectionFive).toContain("schema_version: \"1.2\"");
+  });
+});
