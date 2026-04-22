@@ -115,3 +115,38 @@ Future contributors: re-open the linked spec before "fixing" any of them.
    aggregator attestation, human-review badge, download links. No hash is
    ever truncated. See
    [`../docs/specs/website/transparency.md`](../docs/specs/website/transparency.md).
+
+## Comparison (`/comparer`)
+
+Route shipped by milestone **M_Comparison**. Lets readers juxtapose 2 to 4
+candidates on the same dimensions. Spec:
+[`../docs/specs/website/comparison-page.md`](../docs/specs/website/comparison-page.md).
+
+- **URL query** — selection is reflected via repeated `?c=<id>` parameters.
+  Example: `/comparer?c=test-omega&c=other-candidate`. The URL is the
+  canonical state; sharing the URL reproduces the view.
+- **Persistence** — after the first interaction, the selection is mirrored
+  to `localStorage` under the key `e27-compare` (JSON array of ids). A
+  subsequent visit to `/comparer` with an empty query will rehydrate from
+  localStorage. The URL always wins when both are present.
+- **Capacity** — 2 to 4 candidates. Unknown ids, non-analyzable entries, and
+  (when `EXCLUDE_FICTIONAL=1`) fictional candidates are dropped silently.
+- **Entry points** — landing page CTA ("Comparer plusieurs candidats",
+  pre-selects the two most recently updated analyzable candidates) and a
+  small inline link on each candidate page ("Comparer à un autre candidat →",
+  pre-fills one slot with the current candidate).
+- **Editorial guardrails** — enforced by
+  `app/comparer/comparison-editorial.test.tsx`:
+  - no "gagnant / winner / vainqueur / classement général / score global /
+    meilleur candidat / best candidate" anywhere in comparison source,
+  - no ranking vocabulary in any `aria-label` / `title` of the exported HTML,
+  - no cardinal averaging — every cell reads a single aggregated ordinal
+    field (`modal_score`, `modal_level`, grade consensus).
+  The test runs in two phases: a source-file scan on every `pnpm test` run,
+  and a post-build scan of `site/out/comparer/index.html` that auto-activates
+  whenever the file exists.
+- **Transparency** — the /comparer page renders a scoped transparency
+  footer that links to each selected candidate's per-version
+  `metadata.json`. It does NOT mount the raw-outputs drawer; for the
+  complete run (prompts, sources, raw outputs) readers open the candidate
+  page itself.
