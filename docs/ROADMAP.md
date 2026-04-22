@@ -58,7 +58,8 @@ Format: `M_<FeatureCluster>`
 | M_VisualComponents | ✅ Done | Radar chart, intergenerational split, risk heatmap, counterfactual signal |
 | M_CandidatePagePolish | ✅ Done | Screenshot-worthy sections: per-model radar overlays, dimension headline list, intergen horizon matrix, risk summary matrix + Drawer primitive. Adds schema v1.1 (additive). |
 | M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
-| M_Comparison | � In Progress | Side-by-side candidate comparison mode ([`specs/website/comparison-page.md`](specs/website/comparison-page.md)) |
+| M_Comparison | ✅ Done | Side-by-side candidate comparison mode — shipped 2026-04-22 ([`specs/website/comparison-page.md`](specs/website/comparison-page.md)) |
+| M_PoliticalSpectrum | 📋 Planned | Global spectrum label on each candidate (additive v1.2 field; Hero chip) ([`specs/analysis/political-spectrum-label.md`](specs/analysis/political-spectrum-label.md)) |
 | M_Landing | 📋 Planned | Landing page with "2027 stakes" visuals |
 
 ### 📅 Phase 3: Operations (planned)
@@ -430,7 +431,7 @@ Format: `M_<FeatureCluster>`
 
 **Depends on:** M_WebsiteCore + M_VisualComponents + M_CandidatePagePolish
 
-**Status:** 🚧 In Progress. Spike `0090` archived (2026-04-22); implementation tasks `0091`–`0098` in `tasks/backlog/M_Comparison/`.
+**Status:** ✅ Done (2026-04-22). Spike `0090` archived; implementation tasks `0091`–`0098` shipped in commits `c7c7376`, `a6ae818`, `0013794`, `91ff46d`, `35c51db`, `d8adb0a`, `f1586a5`, `2b960cc`.
 
 **Spike produces:**
 - `docs/specs/website/comparison-page.md` (finalized **Stable** on creation; no schema changes)
@@ -460,6 +461,47 @@ Format: `M_<FeatureCluster>`
 - OG / share-image generation (→ future `M_Sharing`).
 - Mobile comparison redesign (→ M_Accessibility).
 - Split-pane deep-link from comparison cell to candidate-page section (v1 uses `#` anchors only).
+
+---
+
+### M_PoliticalSpectrum
+
+**Goal:** Add a global political-spectrum label (extrême-gauche / gauche / centre-gauche / centre / centre-droit / droite / extrême-droite + `inclassable` escape hatch) to each candidate analysis, as an **additive** field sibling to the existing 5-axis positioning. The label powers the candidate-page Hero chip (prototype `Candidate Page.html` line 701) and is derived from the axis evidence — never from media convention.
+
+**Depends on:** M_AnalysisPrompts + M_Aggregation + M_CandidatePagePolish (schema v1.1 additive-bump precedent)
+
+**Status:** 📋 Planned. Spike `0099` in `tasks/active/`; implementation tasks `0100`–`0106` in `tasks/backlog/M_PoliticalSpectrum/`.
+
+**Spike produces:**
+- `docs/specs/analysis/political-spectrum-label.md` (**Stable** on creation; companion to `political-positioning.md`, not a replacement)
+- Zod schema extension on per-model and aggregated positioning; `schema_version` bump `1.1` → `1.2` (task `0100`)
+- `prompts/analyze-candidate.md` §9.6 "Overall spectrum label" (task `0101`)
+- `prompts/aggregate-analyses.md` §4.3.bis modal + distribution + dissent rule (task `0102`)
+- Cross-references in `political-positioning.md`, `output-schema.md`, `aggregation.md` (task `0103`)
+- `candidates/test-omega/` fixture regeneration with the new field (task `0104`)
+- `site/lib/derived/spectrum-label.ts` helper + `Hero.tsx` chip next to party badge (task `0105`)
+- Optional surfacing in `/comparer` selector + sticky header (task `0106`)
+
+**Non-negotiables:**
+- **Derived, not convention-assigned.** The label must be computed from the 5-axis evidence present in the same analysis; the prompt forbids anchoring on media reputation or party name. `derived_from_axes` is a required non-empty array.
+- **Never averaged.** Aggregation uses modal plurality + `label_distribution` counts + `dissent[]` — identical discipline to the per-axis ordinal rule. `.strict()` Zod rejects any `score`, `mean`, `index`, or `numeric_value` key on the spectrum object.
+- **Escape hatch is first-class.** `inclassable` is part of the enum, not a fallback. Programs orthogonal to L-R are expected to land there with reasoning.
+- **Radar remains authoritative.** The chip is a communication aid that scrolls to `#positionnement`. The site never shows the chip without the 5-axis detail on the same page.
+- **Absent-field fails soft.** Pre-v1.2 aggregated outputs render no chip — no placeholder, no guessed label.
+
+**Key design decisions (spike `0099`):**
+- 8-value enum (7 canonical French + `inclassable`). Display labels in `site/lib/i18n.ts`; JSON enum is ASCII snake_case.
+- Field lives under `positioning.overall_spectrum` (sibling of the 5 axes), signalling that it is a projection of the positioning block.
+- Both analyst and aggregator emit the field; the aggregator never promotes a label no raw output carried.
+- `modal_label = null` on tied / all-distinct modes → site renders "Positionnement partagé" with tooltip.
+- Manual-bundle scripts (`prepare-manual-*.ts`) need no code change; they embed `prompts/*.md` verbatim, so prompt updates propagate.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Replacement of the 5-axis positioning — the label is additive only.
+- Retroactive relabeling of historical raw outputs — pre-v1.2 outputs remain valid and chip-less.
+- A "filter candidates by spectrum" view or a landing-page spectrum bar.
+- Re-analysis of production candidates via paid APIs — folded into the next candidate update cycle.
+- English enum values beyond i18n display labels — no new translation infrastructure.
 
 ---
 
