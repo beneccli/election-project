@@ -40,58 +40,69 @@ export default function LandingHero({
 }: Props) {
   return (
     <section className="px-6 py-12 md:py-16 border-b border-[color:var(--rule)]">
-      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-12">
-        {/* Left column: title + body + stats */}
-        <div className="flex flex-col gap-6">
-          <h3 className="uppercase text-xs font-semibold tracking-widest text-accent">Présidentielle française</h3>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight text-[color:var(--text)]">
-            {t(HERO_TITLE_LEAD, lang)}
-            <br />
-            <em className="font-semibold text-accent">
-              {t(HERO_TITLE_EM, lang)}
-            </em>{" "}
-            {t(HERO_TITLE_TAIL, lang)}
-          </h1>
+      <div className="mx-auto max-w-6xl">
+        {/* Top row: title + body (left) · stats panel (right) */}
+        <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-12 md:items-start mb-12">
+          {/* Left: title + body */}
+          <div className="flex flex-col gap-5">
+            <p className="uppercase text-xs font-semibold tracking-widest text-accent">
+              {lang === "fr" ? "Présidentielle française" : "French presidential election"}
+            </p>
+            <h1 className=" max-w-[640px] font-display text-4xl md:text-[clamp(38px,6vw,68px)] font-bold leading-[1.05] tracking-tight text-[color:var(--text)]">
+              {t(HERO_TITLE_LEAD, lang)}
+              <br />
+              <em className="font-semibold italic text-[color:var(--accent)]">
+                {t(HERO_TITLE_EM, lang)}
+              </em>{" "}
+              {t(HERO_TITLE_TAIL, lang)}
+            </h1>
+            <p className="max-w-prose max-w-[580px] text-base md:text-lg text-[color:var(--text-secondary)] leading-relaxed">
+              {t(HERO_BODY, lang)}
+            </p>
+          </div>
 
-          <p className="max-w-prose text-base md:text-lg text-[color:var(--text-secondary)] leading-relaxed">
-            {t(HERO_BODY, lang)}
-          </p>
-
+          {/* Right: stats panel — vertical stack */}
           <ul
-            className="mt-2 grid gap-4 sm:grid-cols-3"
+            className="flex-shrink-0 min-w-[240px] rounded-lg border border-[color:var(--rule)] overflow-hidden"
             data-testid="hero-stats"
           >
-            {CONTEXT_STATS.map((s) => (
-              <li
-                key={s.key}
-                className="rounded-lg border border-[color:var(--rule)] bg-[color:var(--bg-card)] p-4"
-              >
-                <div className="text-2xl font-semibold text-[color:var(--text)]">
-                  {s.headline}
-                </div>
-                <div className="mt-1 text-sm text-[color:var(--text-secondary)]">
-                  {t(s.label, lang)}
-                </div>
-                <div className="mt-1 text-xs text-[color:var(--text-tertiary)]">
-                  {t(s.sourceNote, lang)}
-                </div>
-              </li>
-            ))}
+            {CONTEXT_STATS.map((s, i) => {
+              const textColor = i == 0 ? "text-red-800" : i == 1 ? "text-orange-800" : "text-black dark:text-white";
+              return (
+                <li
+                  key={s.key}
+                  className="px-5 py-4 border-b border-[color:var(--rule)] last:border-b-0"
+                >
+                  <div className={`font-display text-4xl font-bold leading-none tracking-tight text-[color:var(--text)] ${textColor}`}>
+                    {s.headline}
+                  </div>
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.07em] text-[color:var(--text-tertiary)]">
+                    {t(s.label, lang)}
+                  </div>
+                  <div className="mt-0.5 text-xs text-[color:var(--text-tertiary)]">
+                    {t(s.sourceNote, lang)}
+                  </div>
+                </li>
+              )
+            })}
           </ul>
         </div>
 
-        {/* Right column: charts */}
-        <div className="flex flex-col gap-6" data-testid="hero-charts">
-          {CONTEXT_SERIES.map((series) => (
+        {/* Charts row: two panels side by side */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 rounded-lg border border-[color:var(--rule)] overflow-hidden"
+          data-testid="hero-charts"
+        >
+          {CONTEXT_SERIES.map((series, i) => (
             <div
               key={series.key}
-              className="rounded-lg border border-[color:var(--rule)] bg-[color:var(--bg-card)] p-4"
+              className={`p-5 ${i < CONTEXT_SERIES.length - 1 ? " sm:border-r border-b sm:border-b-0 border-[color:var(--rule)]" : ""}`}
             >
-              <div className="mb-2 flex items-baseline justify-between gap-3">
-                <h2 className="font-display text-lg text-[color:var(--text)]">
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <span className="text-xs font-bold uppercase tracking-[0.08em] text-[color:var(--text-tertiary)]">
                   {t(series.title, lang)}
-                </h2>
-                <span className="text-sm font-medium text-[color:var(--text-secondary)]">
+                </span>
+                <span className={`font-display text-lg font-bold ${i == 0 ? "text-red-700" : "text-blue-700"}`}>
                   {t(series.headline, lang)}
                 </span>
               </div>
@@ -99,13 +110,14 @@ export default function LandingHero({
             </div>
           ))}
         </div>
-      </div>
 
-      <div
-        className="mx-auto mt-10 max-w-6xl text-center text-sm text-[color:var(--text-tertiary)]"
-        data-testid="count-divider"
-      >
-        {countLabel(analyzedCount, pendingCount, lang)}
+        {/* Count divider */}
+        {/* <div
+          className="text-center text-sm text-[color:var(--text-tertiary)]"
+          data-testid="count-divider"
+        >
+          {countLabel(analyzedCount, pendingCount, lang)}
+        </div> */}
       </div>
     </section>
   );

@@ -194,9 +194,9 @@ export default function StakesAreaChart({
               y1={geom.yScale(series.refLine.y).toFixed(1)}
               x2={widthPx - DEFAULTS.padR}
               y2={geom.yScale(series.refLine.y).toFixed(1)}
-              stroke={theme.rule}
               strokeWidth={1}
               strokeDasharray="3,3"
+              className="stroke-red-800 dark:stroke-red-500"
             >
               <title>{t(series.refLine.label, lang)}</title>
             </line>
@@ -204,9 +204,8 @@ export default function StakesAreaChart({
               x={widthPx - DEFAULTS.padR - 2}
               y={(geom.yScale(series.refLine.y) - 3).toFixed(1)}
               textAnchor="end"
-              fontSize={8}
-              fill={theme.text}
               fontFamily="DM Sans, sans-serif"
+              className="text-sm fill-red-800 dark:fill-red-500"
             >
               {t(series.refLine.label, lang)}
             </text>
@@ -220,29 +219,27 @@ export default function StakesAreaChart({
               y1={DEFAULTS.padT}
               x2={geom.xScale(series.projectionFrom).toFixed(1)}
               y2={DEFAULTS.padT + geom.ch}
-              stroke={theme.rule}
-              strokeWidth={1}
               strokeDasharray="2,3"
+              className="stroke-gray-500 dark:stroke-gray-300 stroke-1"
             />
             <text
               x={(geom.xScale(series.projectionFrom) + 4).toFixed(1)}
               y={(DEFAULTS.padT + 10).toFixed(1)}
-              fontSize={8}
-              fill={theme.text}
               fontFamily="DM Sans, sans-serif"
+              className="text-sm fill-gray-800 dark:fill-gray-300"
             >
               {projectionLabel}
             </text>
           </g>
         )}
 
-        {years.map((yr) => (
+        {years.map((yr, i) => (
           <text
             key={yr}
-            x={geom.xScale(yr).toFixed(1)}
+            x={(geom.xScale(yr) + (i == 0 ? 10 : (i == 2 ? -10 : 0))).toFixed(1)}
             y={heightPx - 4}
             textAnchor="middle"
-            fontSize={8}
+            fontSize={12}
             fill={theme.text}
             fontFamily="DM Sans, sans-serif"
           >
@@ -255,7 +252,7 @@ export default function StakesAreaChart({
         href={series.source.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="self-start text-[11px] text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] underline underline-offset-2 decoration-dotted"
+        className="self-start text-sm text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] underline underline-offset-2 decoration-dotted"
       >
         {lang === "fr" ? "Source" : "Source"}: {sourceLabel}
       </a>

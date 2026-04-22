@@ -92,7 +92,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
   }, [visible]);
 
   return (
-    <section className="px-6 py-10">
+    <section className="px-6 py-8">
       <div className="mx-auto max-w-6xl">
         <div
           role="radiogroup"
