@@ -255,7 +255,7 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
   });
 
   return {
-    schema_version: "1.1",
+    schema_version: "1.2",
     candidate_id: "test-candidate",
     version_date: "2026-04-19",
     source_models: [
@@ -302,6 +302,43 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
         ...positioningAxis,
         consensus_interval: [1, 3],
         modal_score: 2,
+      },
+      overall_spectrum: {
+        modal_label: "centre_gauche" as const,
+        label_distribution: {
+          centre_gauche: 2,
+          gauche: 1,
+        },
+        anchor_narrative:
+          "Two of three models placed the program at centre-gauche; one read it as clearly gauche. Derivation weighted the economic axis (interventionist) and ecological axis (transition-prioritized).",
+        confidence: 0.65,
+        dissent: [
+          {
+            model: MODEL_C,
+            label: "gauche" as const,
+            reasoning:
+              "Model C weighted the structural public-sector expansions more heavily.",
+          },
+        ],
+        per_model: [
+          {
+            model: MODEL_A,
+            label: "centre_gauche" as const,
+            reasoning:
+              "Economic interventionism moderate; social/cultural near-neutral; ecology prioritized.",
+          },
+          {
+            model: MODEL_B,
+            label: "centre_gauche" as const,
+            reasoning: "Similar weighting; converged on centre-gauche.",
+          },
+          {
+            model: MODEL_C,
+            label: "gauche" as const,
+            reasoning:
+              "Model C weighted the structural public-sector expansions more heavily.",
+          },
+        ],
       },
     },
     dimensions: {
@@ -439,6 +476,11 @@ export function buildValidAggregatedOutput(): AggregatedOutput {
         sovereignty: { interval: [1, 3], modal: 1, dissent_count: 1 },
         institutional: { interval: [-1, 0], modal: -1, dissent_count: 0 },
         ecological: { interval: [1, 3], modal: 2, dissent_count: 0 },
+        overall_spectrum: {
+          modal_label: "centre_gauche" as const,
+          distribution: { centre_gauche: 2, gauche: 1 },
+          dissent_count: 1,
+        },
       },
     },
     coverage_warning: false,

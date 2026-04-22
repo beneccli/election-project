@@ -849,6 +849,105 @@ describe("schema v1.1 aggregated output extensions", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Schema v1.2 — overall_spectrum (M_PoliticalSpectrum)
+// See docs/specs/analysis/political-spectrum-label.md
+// ---------------------------------------------------------------------------
+
+describe("schema v1.2 overall_spectrum extensions", () => {
+  it("analysis_schema_validates_v1_2_minimal_with_overall_spectrum", () => {
+    const fixture = buildValidAnalysisOutput();
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.schema_version).toBe("1.2");
+      expect(result.data.positioning.overall_spectrum.label).toBe(
+        "centre_gauche",
+      );
+    }
+  });
+
+  it("analysis_schema_rejects_schema_version_1_1", () => {
+    const fixture = buildValidAnalysisOutput() as unknown as {
+      schema_version: string;
+    };
+    fixture.schema_version = "1.1";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_extra_score_on_overall_spectrum", () => {
+    const fixture = buildValidAnalysisOutput() as unknown as {
+      positioning: { overall_spectrum: Record<string, unknown> };
+    };
+    fixture.positioning.overall_spectrum.score = 1.5;
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_empty_derived_from_axes", () => {
+    const fixture = buildValidAnalysisOutput();
+    fixture.positioning.overall_spectrum.derived_from_axes = [];
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("analysis_schema_rejects_unknown_spectrum_label", () => {
+    const fixture = buildValidAnalysisOutput() as unknown as {
+      positioning: { overall_spectrum: { label: string } };
+    };
+    fixture.positioning.overall_spectrum.label = "liberal";
+    const result = AnalysisOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_validates_v1_2_minimal_with_overall_spectrum", () => {
+    const fixture = buildValidAggregatedOutput();
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.schema_version).toBe("1.2");
+      expect(result.data.positioning.overall_spectrum.modal_label).toBe(
+        "centre_gauche",
+      );
+    }
+  });
+
+  it("aggregated_schema_rejects_extra_numeric_keys_on_overall_spectrum", () => {
+    const fixture = buildValidAggregatedOutput() as unknown as {
+      positioning: { overall_spectrum: Record<string, unknown> };
+    };
+    fixture.positioning.overall_spectrum.mean = 2.1;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_rejects_negative_label_distribution_count", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.overall_spectrum.label_distribution.gauche = -1;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+
+  it("aggregated_schema_accepts_null_modal_label_when_inconclusive", () => {
+    const fixture = buildValidAggregatedOutput();
+    fixture.positioning.overall_spectrum.modal_label = null;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+  });
+
+  it("aggregated_schema_rejects_missing_overall_spectrum_in_consensus", () => {
+    const fixture = buildValidAggregatedOutput() as unknown as {
+      agreement_map: {
+        positioning_consensus: Record<string, unknown>;
+      };
+    };
+    delete fixture.agreement_map.positioning_consensus.overall_spectrum;
+    const result = AggregatedOutputSchema.safeParse(fixture);
+    expect(result.success).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // Execution modes on ModelRunEntry / aggregator_model
 // See docs/specs/data-pipeline/analysis-modes.md
 // ---------------------------------------------------------------------------
