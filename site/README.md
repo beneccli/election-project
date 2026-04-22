@@ -116,6 +116,30 @@ Future contributors: re-open the linked spec before "fixing" any of them.
    ever truncated. See
    [`../docs/specs/website/transparency.md`](../docs/specs/website/transparency.md).
 
+## Landing (`/`)
+
+Route shipped by milestone **M_Landing**. Renders a France-level context
+band, the candidate grid (analyzed + pending), a compare CTA, the
+methodology block, and the footer. Spec:
+[`../docs/specs/website/landing-page.md`](../docs/specs/website/landing-page.md).
+
+- **Editorial safeguards** — enforced by
+  `app/__tests__/landing-editorial.test.tsx`:
+  - no ranking vocabulary (classement, gagnant, winner, meilleur candidat,
+    score global) anywhere in the rendered landing DOM,
+  - no alarmist vocabulary (catastrophique, désastre, disaster, crise) in
+    the rendered landing DOM,
+  - the hero stats panel uses no red / amber class or inline color — the
+    context is neutral, not alarmist (spec §2, §3.2),
+  - the compare CTA does not render a "Bientôt" / "Coming soon" pill —
+    comparison has shipped.
+  The test renders `app/page.tsx` with a stubbed candidate loader so it
+  does not depend on filesystem fixtures. A route-level smoke test
+  (`app/__tests__/page.test.tsx`) verifies the six regions compose.
+- **Candidate ordering** — by `updatedAt` desc, tie-broken by
+  `displayName` asc. Never by any score or model consensus — landing
+  must not insinuate a ranking. See `lib/landing-cards.ts`.
+
 ## Comparison (`/comparer`)
 
 Route shipped by milestone **M_Comparison**. Lets readers juxtapose 2 to 4
