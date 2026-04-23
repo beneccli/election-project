@@ -1,0 +1,233 @@
+{
+  "dimensions": {
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": { "qwen3.6": "A" }
+      },
+      "headline": {
+        "text": "Fusion départements/régions en 40-50 Provinces, transfert pouvoir réglementaire, loi recentrée sur les principes, règle d'or.",
+        "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "claude-opus-4-7", "text": "Remplacement départements/régions par ~40-50 Provinces, transfert du pouvoir réglementaire, règle d'or budgétaire constitutionnelle." },
+          { "model": "deepseek-v3", "text": "Décentralisation radicale avec création de 40-50 provinces, autonomie réglementaire locale et recentrage de l'État sur le régalien, après référendum constitutionnel." },
+          { "model": "gemini-2.5-pro", "text": "Remplacement des régions et départements par des Provinces dotées du pouvoir normatif." },
+          { "model": "grok-4", "text": "Décentralisation radicale (provinces, pouvoir réglementaire local) et recentrage loi sur principes fondamentaux." },
+          { "model": "qwen3.6", "text": "Décentralisation radicale en trois niveaux, limitation de la loi aux principes fondamentaux et renforcement du Parlement." }
+        ]
+      },
+      "summary": "Refonte structurelle de la Vᵉ : trois niveaux (État / Province / bloc communal), 40-50 Provinces fusionnant départements et régions, transfert massif du pouvoir réglementaire aux collectivités, loi limitée aux 'grands principes' (sauf fiscal et pénal), Parlement doté d'une initiative législative réservée et de pouvoirs de contrôle renforcés, présidence recentrée sur le stratégique et la crise. Cible administrative : 33% → 25% des actifs en administration. Règle d'or budgétaire constitutionnelle. Validation par référendum constitutionnel. Quatre modèles attribuent B en raison du caractère théorique de la transition (modalités de péréquation et de transfert des personnels peu détaillées) ; Qwen attribue A pour la cohérence d'ensemble du nouveau triptyque.",
+      "problems_addressed": [
+        {
+          "problem": "Mille-feuille territorial et chevauchements de compétences",
+          "approach": "Suppression des départements et régions, création de 40-50 Provinces, transfert du pouvoir réglementaire aux collectivités.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#institutions", "sources.md#etat-collectivites"],
+          "reasoning": "Architecture cible explicite ; volume de compétences transférées non chiffré.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Inflation normative et instabilité juridique",
+          "approach": "Loi recentrée sur les grands principes ; pouvoir réglementaire dévolu aux Provinces ; sortie du domaine réglementaire pour le législateur.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#institutions"],
+          "reasoning": "Réforme constitutionnelle de l'article 34 implicite ; effets pratiques dépendants de la mise en œuvre.",
+          "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Faiblesse du contrôle parlementaire",
+          "approach": "Renforcement de l'initiative législative réservée, du contrôle, capacité d'évaluation accrue.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#institutions"],
+          "reasoning": "Renforcement annoncé mais leviers concrets (commissions d'enquête, contrôle a posteriori) peu détaillés.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Hyperprésidentialisme et confusion des rôles",
+          "approach": "Recentrage présidentiel sur les fonctions stratégiques et la gestion de crise ; cité gouvernementale concentrée.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#institutions"],
+          "reasoning": "Principe énoncé sans révision explicite des prérogatives constitutionnelles.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Représentativité et mode de scrutin législatif",
+          "significance": "Aucune réforme du mode de scrutin (proportionnelle, dose proportionnelle) ni des mécanismes de démocratie directe au-delà du référendum.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Statut des fonctionnaires des départements/régions supprimés",
+          "significance": "La transition RH (40-50% d'agents territoriaux concernés) n'est ni cadrée ni chiffrée.",
+          "source_refs": [],
+          "supported_by": ["deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "problem": "Péréquation interterritoriale après création des Provinces",
+          "significance": "Mécanismes de solidarité financière entre Provinces non précisés ; risque d'aggravation des inégalités territoriales.",
+          "source_refs": [],
+          "supported_by": ["deepseek-v3", "grok-4"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Continuité administrative et stabilité de l'action publique pendant la transition",
+          "mechanism": "La fusion simultanée départements + régions + transfert réglementaire crée une fenêtre de friction multi-année.",
+          "severity": 0.55,
+          "source_refs": ["sources.md#etat-collectivites"],
+          "reasoning": "Effet temporaire mais documenté ; aucun phasage n'est explicité.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Échec ou retard du référendum constitutionnel",
+          "probability": 0.5,
+          "severity": 0.85,
+          "reasoning": "L'ensemble du dispositif est conditionné à une révision constitutionnelle ; tout blocage casse l'architecture.",
+          "source_refs": ["sources.md#institutions"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Dérive d'inégalités entre Provinces",
+          "probability": 0.55,
+          "severity": 0.6,
+          "reasoning": "Autonomie réglementaire et fiscale sans péréquation explicite peut accroître la divergence.",
+          "source_refs": ["sources.md#etat-collectivites"],
+          "supported_by": ["gemini-2.5-pro", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "risk": "Capture locale des nouveaux pouvoirs réglementaires",
+          "probability": 0.4,
+          "severity": 0.45,
+          "reasoning": "Transfert massif sans renforcement explicite du contrôle de légalité.",
+          "source_refs": ["sources.md#etat-collectivites"],
+          "supported_by": ["deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Création de 40-50 Provinces fusionnant départements et régions",
+          "source_ref": "sources.md#etat-collectivites",
+          "quantified": true,
+          "magnitude": "40-50 Provinces",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Transfert du pouvoir réglementaire aux collectivités",
+          "source_ref": "sources.md#etat-collectivites",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Cible 25% d'actifs en administration (vs 33%)",
+          "source_ref": "sources.md#etat",
+          "quantified": true,
+          "magnitude": "33% → 25% (-8 pts)",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "measure": "Règle d'or budgétaire constitutionnelle",
+          "source_ref": "sources.md#economie-finances-publiques",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "measure": "Limitation de la loi aux 'grands principes' (sauf fiscal et pénal)",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Référendum constitutionnel pour valider l'architecture",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["deepseek-v3", "grok-4"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Réforme à coût net potentiellement positif via réduction du mille-feuille ; coût de transition non chiffré.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": ["deepseek-v3"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "low", "note": "Reform potentially net positive via mille-feuille reduction; transition cost unquantified." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Coûts de transition liés à la réorganisation administrative et au transfert de personnels." },
+            { "model": "gemini-2.5-pro", "level": "low", "note": "Net savings expected from suppressing entire administrative layers (départements/régions)." },
+            { "model": "grok-4", "level": "limited", "note": "Suppression mille-feuille génère économies à terme." },
+            { "model": "qwen3.6", "level": "limited", "note": "Réorganisation institutionnelle à coût net négatif si transition maîtrisée." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Refonte simultanée de l'architecture territoriale, des compétences et du domaine de la loi sur un horizon court.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Complete territorial overhaul, competence transfers, and law-domain restriction simultaneously." },
+            { "model": "deepseek-v3", "level": "high", "note": "Refonte territoriale et institutionnelle complexe nécessitant un consensus politique large." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Massive structural reform requires wide political consensus and operational capacity." },
+            { "model": "grok-4", "level": "high", "note": "Refonte Vème lourde, fusion provinces et transfert compétences sur plusieurs années." },
+            { "model": "qwen3.6", "level": "high", "note": "Réforme constitutionnelle et territoriale d'ampleur requérant accompagnement RH et juridique." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Tout repose sur une révision constitutionnelle (3/5 ou référendum) et l'adhésion des élus locaux.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Whole architecture conditional on constitutional revision passing 3/5 or referendum." },
+            { "model": "deepseek-v3", "level": "high", "note": "Dépend du succès du référendum constitutionnel et de l'adhésion des élus locaux." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Conditional on constitutional revision but mostly internal levers." },
+            { "model": "grok-4", "level": "high", "note": "Référendum constitutionnel + adhésion élus locaux." },
+            { "model": "qwen3.6", "level": "high", "note": "Soumis à révision constitutionnelle et ajustement des équilibres territoriaux." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Une fois inscrites dans la Constitution, ces transformations sont structurellement difficiles à inverser.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "low", "note": "Once provinces are constitutionally entrenched, difficult to undo without another referendum." },
+            { "model": "deepseek-v3", "level": "low", "note": "Modifications constitutionnelles et territoriales difficilement réversibles." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Statutory changes more reversible than constitutional ones." },
+            { "model": "grok-4", "level": "low", "note": "Architecture constitutionnelle Provinces difficile à revoir." },
+            { "model": "qwen3.6", "level": "low", "note": "Refonte constitutionnelle créant un nouveau triptyque institutionnel verrouillé." }
+          ]
+        }
+      },
+      "confidence": 0.72
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "positioning.overall_spectrum.droite",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "positioning.economic.droite_economique_libérale",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "positioning.sovereignty.regalien_renforce",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "intergenerational.net_transfer_direction.mixed",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.grade.B",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.measure.production_tax_cut_11_5_bn",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.measure.pension_age_65_capitalisation_40pct",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.security_sovereignty.measure.divide_by_8_residence_permits",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.institutional_democratic.measure.40_50_provinces",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "dimensions.environmental_long_term.measure.nuclear_centric_60_year_extension",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "unsolved.pension_capitalisation_transition_financing",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      },
+      {
+        "claim_id": "execution_risk.constitutional_revision_failure",
+        "models": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "dimensions.security_sovereignty.grade",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "B — angle mort sur dépendance diplomatique pays d'origine, contraintes CEDH et capacité carcérale" },
+          { "model": "deepseek-v3", "position": "A — bloc cohérent et structuré avec objectifs chiffrés" },
+          { "model": "gemini-2.5-pro", "position": "B — risques juridiques européens et tensions diplomatiques notables" },
+          { "model": "grok-4", "position": "A — paquet régalien massif et cohérent" },
+          { "model": "qwen3.6", "position": "A — cohérence d'ensemble du dispositif régalien et juridique" }
+        ]
+      },
+      {
+        "claim_id": "dimensions.social_demographic.grade",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "C — mesures sociales structurellement secondaires, suppression AME et suppression SRU pèsent négativement" },
+          { "model": "deepseek-v3", "position": "B — réformes éducation et santé d'ampleur, bémol sur le volet redistribution" },
+          { "model": "gemini-2.5-pro", "position": "B — réformes structurelles offre, déficits redistributifs compensés par contrat unique" },
+          { "model": "grok-4", "position": "B — paquet éducation/santé volontariste, faiblesse sur la pauvreté" },
+          { "model": "qwen3.6", "position": "B — modernisation école et santé, lacunes sur la lutte contre la pauvreté" }
+        ]
+      },
+      {
+        "claim_id": "dimensions.institutional_democratic.grade",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "B — refonte ambitieuse mais transition opérationnelle peu détaillée" },
+          { "model": "deepseek-v3", "position": "B — décentralisation radicale, péréquation à clarifier" },
+          { "model": "gemini-2.5-pro", "position": "B — réforme structurelle dépendant d'un consensus politique large" },
+          { "model": "grok-4", "position": "B — décentralisation radicale et recentrage de la loi cohérents" },
+          { "model": "qwen3.6", "position": "A — refonte cohérente et logique des trois leviers (territoire, loi, Parlement)" }
+        ]
+      },
+      {
+        "claim_id": "dimensions.environmental_long_term.grade",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "C — absence d'objectifs chiffrés de réduction d'émissions et de stratégie biodiversité" },
+          { "model": "deepseek-v3", "position": "C — pas de cible 2030, dépendance technologique forte sans calendrier" },
+          { "model": "gemini-2.5-pro", "position": "C — dérégulation agricole et fin subventions renouvelables sans plan compensatoire" },
+          { "model": "grok-4", "position": "B — stratégie nucléocentrée cohérente avec fiscalité carbone redistributive" },
+          { "model": "qwen3.6", "position": "B — paquet pro-nucléaire et fiscalité carbone redistributive crédibles" }
+        ]
+      },
+      {
+        "claim_id": "positioning.institutional.modal_score_indeterminate",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "0 — recentrage présidentiel + renforcement Parlement + Provinces équilibre" },
+          { "model": "deepseek-v3", "position": "-1 — recentrage présidentiel et renforcement parlementaire dominent" },
+          { "model": "gemini-2.5-pro", "position": "+1 — recentrage présidentiel renforce l'État stratège" },
+          { "model": "grok-4", "position": "+1 — renforcement présidentiel via redéploiement régalien" },
+          { "model": "qwen3.6", "position": "-1 — décentralisation radicale et renforcement parlementaire prédominent" }
+        ]
+      },
+      {
+        "claim_id": "counterfactual.direction_of_change",
+        "positions": [
+          { "model": "claude-opus-4-7", "position": "mixed — gains long terme, frictions et exposition court terme" },
+          { "model": "deepseek-v3", "position": "mixed — bénéfices structurels couplés à risques sociaux et juridiques" },
+          { "model": "gemini-2.5-pro", "position": "mixed — réformes massives à effets conditionnels" },
+          { "model": "grok-4", "position": "improvement — paquet régalien et budgétaire d'ampleur, trajectoire améliorée nette" },
+          { "model": "qwen3.6", "position": "mixed — gains macroéconomiques tempérés par tensions sociales et institutionnelles" }
+        ]
+      }
+    ],
+    "coverage": {
+      "claude-opus-4-7": "complete",
+      "deepseek-v3": "complete",
+      "gemini-2.5-pro": "complete",
+      "grok-4": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [3, 4],
+        "modal": 4,
+        "dissent_count": 2
+      },
+      "social_cultural": {
+        "interval": [2, 3],
+        "modal": 3,
+        "dissent_count": 1
+      },
+      "sovereignty": {
+        "interval": [1, 3],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [-1, 1],
+        "modal": null,
+        "dissent_count": 5
+      },
+      "ecological": {
+        "interval": [-2, 0],
+        "modal": -2,
+        "dissent_count": 2
+      },
+      "overall_spectrum": {
+        "modal_label": "droite",
+        "distribution": { "droite": 5 },
+        "dissent_count": 0
+      }
+    }
+  },
+  "flagged_for_review": [
+    {
+      "claim": "Le fichier raw `deepseek-manual.json` indique dans son champ `model` les valeurs `provider: \"anthropic\"` et `version: \"claude-opus-4-7\"`, qui contredisent le nom de fichier et le contenu (signé DeepSeek-V3 dans `analyst_meta`). L'agrégation a utilisé l'identifiant dérivé du nom de fichier (`deepseek-v3`) dans tous les champs `supported_by`/`dissenters`/`per_model`, mais l'incohérence des métadonnées doit être corrigée à la source avant publication.",
+      "claimed_by": ["deepseek-v3"],
+      "issue": "metadata_mismatch",
+      "suggested_action": "Vérifier auprès de l'opérateur (benoit) la provenance réelle du fichier ; corriger `deepseek-manual.json::model.provider/version` pour qu'ils reflètent l'auteur effectif (probablement `provider=\"deepseek\"`, `version=\"deepseek-v3\"`), puis relancer l'ingestion raw."
+    },
+    {
+      "claim": "L'axe `positioning.institutional` n'a pas de mode unique : 2× +1 (gemini, grok), 2× -1 (deepseek, qwen), 1× 0 (claude). `modal_score` est positionné à `null` conformément au schéma.",
+      "claimed_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "issue": "tied_modal",
+      "suggested_action": "Aucune action requise (cas légitime de pluralité non unique). Mentionner explicitement dans la prose éditoriale que les modèles divergent sur la lecture institutionnelle (centralisation stratégique vs décentralisation effective)."
+    },
+    {
+      "claim": "La cellule horizon `education.h_2031_2037` n'a pas de mode unique (3× score 1, 2× score 2). `modal_score` est positionné à `null`.",
+      "claimed_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "issue": "tied_modal",
+      "suggested_action": "Aucune action ; le rendu site doit afficher l'intervalle [1, 2] avec note explicative."
+    },
+    {
+      "claim": "La cellule horizon `housing.h_2027_2030` n'a pas de mode unique (2× -1, 2× +1, 1× 0). `modal_score` est positionné à `null`.",
+      "claimed_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "issue": "tied_modal",
+      "suggested_action": "Aucune action ; afficher l'intervalle [-1, 1] avec note ambivalence (suppression SRU / déblocage capitalisation)."
+    },
+    {
+      "claim": "L'identifiant de modèle 'qwen3.6' contient un point ; les autres identifiants utilisent des tirets (`claude-opus-4-7`, `deepseek-v3`, `gemini-2.5-pro`, `grok-4`).",
+      "claimed_by": ["qwen3.6"],
+      "issue": "id_format_inconsistency",
+      "suggested_action": "Décider d'une convention (probablement `qwen3-6` ou `qwen-3-6`) et harmoniser dans `qwen-manual.json` puis dans les `supported_by`/`dissenters`/`per_model`. Non bloquant pour l'ingestion (le schéma accepte `z.string().min(1)`)."
+    }
+  ]
+}

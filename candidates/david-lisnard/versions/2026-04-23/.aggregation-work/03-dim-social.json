@@ -1,0 +1,242 @@
+{
+  "dimensions": {
+    "social_demographic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": { "claude-opus-4-7": "C" }
+      },
+      "headline": {
+        "text": "Chèque-éducation, fin carte scolaire, doublement étudiants médecine, suppression ARS, déplafonnement quotient familial.",
+        "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "claude-opus-4-7", "text": "Réforme scolaire via chèque-éducation et autonomie des établissements; suppression des ARS; retour du quotient familial déplafonné." },
+          { "model": "deepseek-v3", "text": "Réforme de l'école (suppression carte scolaire, chèque-éducation), doublement des étudiants en médecine, relance de la politique familiale et réduction drastique de l'immigration légale." },
+          { "model": "gemini-2.5-pro", "text": "Fin de la carte scolaire, autonomie des établissements, et suppression des ARS en santé." },
+          { "model": "grok-4", "text": "Réformes retraites (65 ans + capitalisation), santé subsidiarité et relance familiale nataliste avec déplafonnement quotient." },
+          { "model": "qwen3.6", "text": "Retraite à 65 ans avec socle répartition et capitalisation, suppression des ARS, chèque-éducation et autonomie des écoles." }
+        ]
+      },
+      "summary": "Quatre modèles retiennent B, Claude abaisse à C en arguant que la dimension est traitée comme un levier structurel (chèque-éducation, autonomie, ARS, natalité) plutôt qu'un agenda redistributif : pauvreté, minima sociaux et politique salariale sont peu adressés. Les leviers éducatifs (carte scolaire, chèque, recentrage fondamentaux, +20% enseignants), sanitaires (ARS supprimées, doublement numerus clausus d'ici 2030, conventionnement différencié) et familiaux (quotient familial, accueil petite enfance) sont détaillés. La suppression de l'AME (700 M€ économies revendiquées) est identifiée par tous les modèles comme une dégradation de l'accès aux soins pour une population vulnérable.",
+      "problems_addressed": [
+        {
+          "problem": "Baisse du niveau scolaire et segmentation territoriale",
+          "approach": "Fin de la carte scolaire, chèque-éducation, autonomie de recrutement des chefs d'établissement, recentrage sur les fondamentaux, certificat de fin de primaire conditionnant l'entrée au collège, +20% de rémunération enseignante sur 5 ans.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#education", "sources.md#revolution-de-lecole"],
+          "reasoning": "Bouquet multi-leviers avec indicateurs explicites (examens nationaux, classement des écoles) ; consensus sur la direction.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Déserts médicaux et pénurie de soignants",
+          "approach": "Conventionnement différencié en zones sous-dotées, doublement des étudiants en médecine d'ici 2030, fin de Parcoursup médecine, pratique supervisée dès la 5e année, reconnaissance des compétences paramédicales.",
+          "strength": 0.67,
+          "source_refs": ["sources.md#sante"],
+          "reasoning": "Leviers d'offre concrets et calendrier chiffré ; délais de formation (10-12 ans) limitent l'effet court terme.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Baisse de la natalité et démantèlement de la politique familiale",
+          "approach": "Relèvement du plafond des allocations familiales, déplafonnement du quotient familial, investissement dans les modes de garde, politique logement famille.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#famille"],
+          "reasoning": "Engagements directionnels sans enveloppe chiffrée.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "problem": "Bureaucratisation hospitalière",
+          "approach": "Suppression des ARS, présidence des conseils d'hospitaliers par les maires, régulation par communautés médicales locales.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#sante"],
+          "reasoning": "Levier structurel identifié mais transition institutionnelle non triviale.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Inégalités de revenu et de patrimoine",
+          "significance": "Le programme n'adresse pas la dynamique du haut décile/centile ni les instruments fiscaux qui la façonnent.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "problem": "Accueil de la petite enfance et congé parental",
+          "significance": "Politique familiale évoquée sans détails sur les modes de garde et le congé parental, pourtant centraux pour la conciliation.",
+          "source_refs": [],
+          "supported_by": ["deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "problem": "Capacité psychiatrique et santé mentale",
+          "significance": "Le programme note la consommation record de psychotropes mais ne propose aucune mesure dédiée à la santé mentale.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Accès aux soins pour les étrangers en situation irrégulière",
+          "mechanism": "Suppression de l'AME remplacée par une aide d'urgence limitée (700 M€ d'économie revendiquée) sans chiffrage des coûts différés (TB, VIH, santé publique).",
+          "severity": 0.55,
+          "source_refs": ["sources.md#immigration"],
+          "reasoning": "Quatre modèles identifient la réduction de couverture santé comme une dégradation avec externalités non quantifiées.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Risque de ségrégation scolaire sous chèque + fin de carte scolaire",
+          "mechanism": "Voucher et recrutement par les chefs d'établissement peuvent amplifier le tri ; la littérature internationale sur les vouchers montre des effets mitigés sur la ségrégation.",
+          "severity": 0.55,
+          "source_refs": ["sources.md#revolution-de-lecole"],
+          "reasoning": "Claude et Gemini insistent sur ce risque ; le programme propose des bourses sociales comme mitigation sans quantification.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Opposition syndicale enseignante à la refonte du statut",
+          "probability": 0.8,
+          "severity": 0.75,
+          "reasoning": "Recrutement par chefs d'établissement et fin du statut national heurtent frontalement les organisations enseignantes.",
+          "source_refs": ["sources.md#revolution-de-lecole"],
+          "supported_by": ["deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Doublement du numerus clausus contraint par capacités de formation",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "Stages hospitaliers, faculté et placements cliniques sont des goulots d'étranglement au-delà du numerus clausus.",
+          "source_refs": ["sources.md#sante"],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "risk": "Suppression des ARS perturbe la coordination régionale en transition",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Transfert vers préfets et maires nécessite une montée en compétence pluriannuelle.",
+          "source_refs": ["sources.md#sante"],
+          "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Chèque-éducation et suppression de la carte scolaire",
+          "source_ref": "sources.md#education",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "+20% de rémunération enseignante sur 5 ans",
+          "source_ref": "sources.md#revolution-de-lecole",
+          "quantified": true,
+          "magnitude": "+20% / 5 ans",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Doublement du nombre d'étudiants en médecine d'ici 2030",
+          "source_ref": "sources.md#sante",
+          "quantified": true,
+          "magnitude": "x2 d'ici 2030",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression des ARS, transfert aux préfets et maires",
+          "source_ref": "sources.md#sante",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de l'AME, remplacement par aide d'urgence",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "700 M€ d'économies revendiquées",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Déplafonnement du quotient familial",
+          "source_ref": "sources.md#famille",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "grok-4"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Revalorisations enseignantes, doublement numerus clausus et chèque-éducation créent des coûts récurrents ; économies AME partielles.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4"],
+          "dissenters": ["qwen3.6"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Teacher pay rise and medical-student doubling carry recurring costs; voucher presented as budget-neutral but transition costs unquantified." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Économies AME (700 M€) mais coûts enseignants (+20%) et chèque-éducation non compensés en détail." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Teacher pay raises require localized funding offsets." },
+            { "model": "grok-4", "level": "moderate", "note": "Économies retraites attendues mais transition capitalisation non chiffrée précisément." },
+            { "model": "qwen3.6", "level": "high", "note": "Transition des retraites et revalorisations enseignantes/santé exigent un calibrage financier précis." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Réorganisation simultanée de l'école (chèque, statut, programmes) et de la santé (ARS, gouvernance hospitalière) sature la capacité administrative.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Simultaneous reorganization of education (voucher, autonomy, curricula) and health (ARS, hospital governance) within one term stretches administrative capacity." },
+            { "model": "deepseek-v3", "level": "high", "note": "Réformes de l'école et de la santé impliquent une refonte complète des structures existantes." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Abolishing ARS and transferring healthcare governance to prefects requires massive logistical rewiring." },
+            { "model": "grok-4", "level": "high", "note": "Suppression ARS, transfert maires hôpitaux et autonomie établissements scolaires complexes." },
+            { "model": "qwen3.6", "level": "high", "note": "Refonte des statuts, suppression des ARS et déploiement du chèque-éducation sont administrativement lourds." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Réformes principalement internes ; négociation avec corps enseignant et médical ; sujets migratoires liés à la santé (AME) interagissent avec le droit UE.",
+          "supported_by": ["gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "deepseek-v3"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Requires negotiation with teaching and medical professional bodies; success conditioned on local-government capability." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Les mesures migratoires dépendent de la renégociation ou de la sortie de traités européens et d'accords bilatéraux." },
+            { "model": "gemini-2.5-pro", "level": "low", "note": "Largely internal domestic policy." },
+            { "model": "grok-4", "level": "low", "note": "Mesures internes sans dépendance externe majeure." },
+            { "model": "qwen3.6", "level": "low", "note": "Réformes principalement internes, peu dépendantes de facteurs externes." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Chèque-éducation et gouvernance hospitalière révisables par loi ; numerus clausus et mise en concurrence scolaire créent des parcours et droits acquis plus rigides.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": ["deepseek-v3"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Voucher and ARS abolition can be revisited by statute; quotient familial déplafonnement is a finance-law item." },
+            { "model": "deepseek-v3", "level": "limited", "note": "Réformes structurelles (chèque-éducation, numerus clausus) créent des droits acquis difficiles à inverser rapidement." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "School maps and administrative boundaries can be redrawn by subsequent governments." },
+            { "model": "grok-4", "level": "moderate", "note": "Réformes retraites et éducation réversibles par loi suivante." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Architecture des retraites et scolaire réversible par loi, mais ancrage capitalistique crée un effet de cliquet." }
+          ]
+        }
+      },
+      "confidence": 0.68
+    }
+  }
+}

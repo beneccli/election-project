@@ -1,0 +1,241 @@
+{
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Règle d'or, -8 pts PIB de dépense en 10 ans, suppression C3S/CVAE (11,5 Md€), bascule ~40% retraites en capitalisation.",
+        "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "claude-opus-4-7", "text": "Réduction de 8 points de PIB des dépenses publiques sur 10 ans, suppression de C3S/CVAE (€11,5 Md), retraites partiellement capitalisées." },
+          { "model": "deepseek-v3", "text": "Règle d'or budgétaire, baisse des impôts de production de 11,5 Md€ et réforme des retraites vers la capitalisation, avec objectif de dépenses publiques <50% du PIB." },
+          { "model": "gemini-2.5-pro", "text": "Baisse de la dépense publique de 8 points de PIB, capitalisation partielle des retraites et fusion CDD/CDI." },
+          { "model": "grok-4", "text": "Règle d'or budgétaire, dépenses publiques <50 % PIB et baisse massive impôts production/travail sans chiffrage global recettes." },
+          { "model": "qwen3.6", "text": "Réduction de la dépense publique sous 50% du PIB en 10 ans, baisse des impôts de production et contrat de travail unique." }
+        ]
+      },
+      "summary": "Les cinq modèles convergent sur la grade B : programme dense et cohérent côté offre (règle d'or constitutionnelle hors investissement, suppression C3S/CVAE pour 11,5 Md€, contrat de travail unique CDI/CDD, retraites à 65 ans + capitalisation cible 116 Md€ sur 8 tranches, suppression article 55 SRU, basculement de 450 000 agents de l'administratif vers l'opérationnel). Le chiffrage est partiel : la trajectoire de la consolidation (8 points de PIB), le financement de la double charge de transition des retraites, la politique de recettes hors fiscalité de production et les scénarios de croissance dégradée ne sont pas détaillés. Les modèles s'accordent également sur les risques d'exécution (révision constitutionnelle, mobilisation sociale sur les retraites à 65 ans) et sur la note de confiance (~0,7-0,8).",
+      "problems_addressed": [
+        {
+          "problem": "Dépense publique et déficit structurel",
+          "approach": "Règle d'or constitutionnelle hors investissement, plan anti-gaspillages 5 ans, cible -8 points de PIB en 10 ans par référence aux trajectoires suédoise et allemande.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#maitrise-des-deficits", "sources.md#regle-dor"],
+          "reasoning": "Cibles quantifiées et benchmarks internationaux ; mécanisme d'ancrage constitutionnel spécifié par les cinq modèles.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Fiscalité de production et compétitivité industrielle",
+          "approach": "Suppression C3S et CVAE (11,5 Md€) en plus des 10 Md€ déjà engagés ; division par deux de la fiscalité de production (2% → 1% du PIB).",
+          "strength": 0.78,
+          "source_refs": ["sources.md#fiscalite-de-production"],
+          "reasoning": "Lignes de taxe nommément visées, montant chiffré ; consensus unanime sur la force de cette mesure.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Dualité du marché du travail (CDI/CDD)",
+          "approach": "Contrat de travail unique fusionnant CDI et CDD avec indemnité de rupture progressive ; charges employeur négatives pour embauches de personnes au RSA >2 ans.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#plein-emploi"],
+          "reasoning": "Direction et cible claires, mais chiffrage de la transition non publié.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Solvabilité du système de retraites et équilibre intergénérationnel",
+          "approach": "Âge légal porté à 65 ans ; minimum vieillesse à 1 000 €/mois ; transition sur 8 tranches vers la capitalisation (cible ~40%, 116 Md€) via une Agence Centrale Publique.",
+          "strength": 0.68,
+          "source_refs": ["sources.md#retraites"],
+          "reasoning": "Architecture spécifiée mais financement de la double charge pendant la transition non quantifié.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Financement de la transition capitalisation (double charge)",
+          "significance": "Basculer ~40% des pensions en capitalisation tout en honorant les engagements en répartition crée un trou de financement pluriannuel non chiffré par le programme.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Sensibilité de la trajectoire de dette aux taux d'intérêt",
+          "significance": "Dette à 120% du PIB sans scénario explicite de taux d'intérêt >3% ou de croissance dégradée.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "problem": "Fiscalité des hauts revenus et du patrimoine",
+          "significance": "Le volet recettes de la consolidation est silencieux sur l'impôt sur le revenu, le patrimoine et les plus-values.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Accès au logement social en zones tendues",
+          "mechanism": "Suppression de l'article 55 de la loi SRU (quota 20-25% de logements sociaux) sans mécanisme de substitution contraignant sur le stock.",
+          "severity": 0.55,
+          "source_refs": ["sources.md#compétitivité-territoires"],
+          "reasoning": "Trois modèles identifient un risque explicite de contraction de l'offre sociale abordable en zone tendue ; l'objectif de flux n'est pas quantifié.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage de la révision constitutionnelle de la règle d'or",
+          "probability": 0.55,
+          "severity": 0.65,
+          "reasoning": "Révision constitutionnelle 3/5 au Congrès ou référendum ; échec historique sous Sarkozy (cinq modèles convergent).",
+          "source_refs": ["sources.md#regle-dor"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "risk": "Tension de liquidité pendant la transition capitalisation",
+          "probability": 0.45,
+          "severity": 0.7,
+          "reasoning": "Double financement observé dans d'autres transitions (Chili, Suède partielle).",
+          "source_refs": ["sources.md#retraites"],
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "risk": "Mobilisation sociale sur le passage à 65 ans",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "La réforme à 64 ans de 2023 a déclenché la plus grande mobilisation de la Ve République ; 65 ans aggrave l'enjeu.",
+          "source_refs": ["sources.md#retraites"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Baisse de la dépense publique de 8 points de PIB sur 10 ans",
+          "source_ref": "sources.md#maitrise-des-deficits",
+          "quantified": true,
+          "magnitude": "8 points de PIB / 10 ans",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de la C3S et de la CVAE",
+          "source_ref": "sources.md#fiscalite-de-production",
+          "quantified": true,
+          "magnitude": "11,5 Md€/an",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Relèvement de l'âge légal de la retraite à 65 ans",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "65 ans",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Bascule de ~40% du système de retraites en capitalisation",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "116 Md€ cible ; ~40% des pensions",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Contrat de travail unique remplaçant CDI/CDD",
+          "source_ref": "sources.md#plein-emploi",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de l'article 55 de la loi SRU",
+          "source_ref": "sources.md#compétitivité-territoires",
+          "quantified": true,
+          "magnitude": "Quota 20-25% levé",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Redéploiement de 450 000 agents publics vers l'opérationnel",
+          "source_ref": "sources.md#action-publique-competitivite",
+          "quantified": true,
+          "magnitude": "450 000 agents ; 33% → 25% tâches administratives",
+          "supported_by": ["claude-opus-4-7", "grok-4"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Baisses fiscales (11,5 Md€) et transition capitalisation sans table de compensation ; trajectoire de dépense aspirationale.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": ["deepseek-v3", "grok-4", "qwen3.6"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Tax cuts and capitalization transition stated without counter-financing table; spending-cut trajectory aspirational." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Objectifs affichés mais non séquencés ; dépendance à la croissance." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Combining massive tax cuts with pension capitalization transition costs strains near-term deficits." },
+            { "model": "grok-4", "level": "moderate", "note": "Cibles chiffrées partielles mais absence scénario croissance faible." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Cibles de dépense claires mais pas de clause de sauvegarde si la croissance sous-performe." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Unanime : réécriture du Code du travail, refonte de l'architecture retraites et redéploiement de 450 000 agents en un mandat dépassent la capacité administrative historique.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Requires simultaneous labor-code rewrite, pension architecture reconstruction, and 450k civil servant redeployment within one term." },
+            { "model": "deepseek-v3", "level": "high", "note": "Nécessite une révision constitutionnelle et des réformes systémiques à forte conflictualité sociale et politique." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Moving 450,000 civil servants to the field and reorganizing the state requires unprecedented administrative overhaul." },
+            { "model": "grok-4", "level": "high", "note": "Décentralisation radicale et externalisation 450 000 agents requièrent coordination inédite." },
+            { "model": "qwen3.6", "level": "high", "note": "Réorganisation de la fonction publique et du code du travail exige un calendrier législatif dense." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Règle d'or dépend d'une majorité constitutionnelle nationale ; réforme fiscale locale dépend d'un accord avec l'association des élus ; effet marchés/taux limité mais présent.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": ["deepseek-v3", "grok-4"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Règle d'or requires constitutional amendment; local fiscal reform requires agreement with elected officials." },
+            { "model": "deepseek-v3", "level": "limited", "note": "La plupart des mesures relèvent du cadre national ; quelques interactions avec les règles budgétaires européennes." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Pension capitalization yields depend heavily on global financial market returns." },
+            { "model": "grok-4", "level": "limited", "note": "Pas de dépendance UE explicite sur règle d'or nationale." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Dépend de la conjoncture européenne et de la réaction des marchés à la règle d'or." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Capitalisation avec droits acquis structurellement difficile à défaire ; baisses fiscales et contrat unique plus aisés à réviser par une majorité ultérieure.",
+          "supported_by": ["deepseek-v3", "grok-4", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "limited", "note": "Capitalization cohort-tranche design is structurally hard to reverse once accrued rights are established." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Révision constitutionnelle difficile à annuler, mesures infra-constitutionnelles modifiables par majorité ultérieure." },
+            { "model": "gemini-2.5-pro", "level": "low", "note": "Once pension funds are capitalized into private accounts, reverting to pure repartition is legally complex." },
+            { "model": "grok-4", "level": "moderate", "note": "Règle d'or institutionnelle et décentralisation réversibles par majorité suivante." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Majorité ultérieure pourrait rétablir les taxes ou la dualité contractuelle par loi ordinaire." }
+          ]
+        }
+      },
+      "confidence": 0.75
+    }
+  }
+}

@@ -1,0 +1,750 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "david-lisnard",
+  "version_date": "2026-04-23",
+  "model": {
+    "provider": "xai",
+    "version": "grok-4"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-23T09:25:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Le programme de David Lisnard recentre l'État sur ses fonctions régaliennes (sécurité, défense), impose une règle d'or budgétaire et une réduction des dépenses publiques vers moins de 50 % du PIB, propose une décentralisation radicale avec provinces et pouvoir réglementaire local, une révolution scolaire fondée sur le mérite et l'autonomie des établissements, une réforme des retraites introduisant la capitalisation à côté de la répartition après passage à 65 ans, une immigration maîtrisée par quotas et assimilation, et une transition écologique pro-nucléaire et technologique sans décroissance punitive.",
+  "positioning": {
+    "economic": {
+      "score": 4,
+      "anchor_comparison": "Plus orienté marché que Fillon 2017 (+3), moins interventionniste que Macron 2017 (+1).",
+      "evidence": [
+        {
+          "quote": "La baisse de la fiscalité de production doit être intensifiée.",
+          "source_ref": "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+        },
+        {
+          "quote": "Supprimer les surcharges sur le capital et le travail et mener l’assouplissement des règles du Code du Travail",
+          "source_ref": "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Propositions concrètes de suppression C3S/CVAE (11,5 Md€), contrat unique de travail, charges négatives RSA, réduction normes entreprises de 50 % et objectif dépenses publiques <50 % PIB via décentralisation et externalisation."
+    },
+    "social_cultural": {
+      "score": 3,
+      "anchor_comparison": "Plus conservateur que LR 2022 (+2), proche de positions traditionnelles sur famille et assimilation.",
+      "evidence": [
+        {
+          "quote": "La nécessaire relance de la politique familiale... déplafonnement du quotient familial",
+          "source_ref": "sources.md#POUR LA DIGNITÉ HUMAINE, UNE SOCIÉTÉ PLUS ÉQUITABLE"
+        },
+        {
+          "quote": "L’idéologie déconstructionniste, le corporatisme et le centralisme bureaucratique",
+          "source_ref": "sources.md#LA RÉVOLUTION DE L’ÉCOLE DE LA DÉMOCRATIE"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Relance politique familiale nataliste, école recentrée sur fondamentaux, autorité, mérite et littérature française ; assimilation exigée des immigrés réguliers."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Plus souverainiste que LR 2022 (+2), moins que RN 2022 (+4).",
+      "evidence": [
+        {
+          "quote": "La souveraineté des frontières et l’assimilation des immigrés... quotas d’immigration... référendum",
+          "source_ref": "sources.md#UNE COHÉSION NATIONALE RENFORCÉE"
+        },
+        {
+          "quote": "Pour faire de l’Europe un levier de puissance... redéfinir les compétences européennes",
+          "source_ref": "sources.md#POUR FAIRE DE L’EUROPE UN LEVIER DE PUISSANCE."
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Quotas immigration, fin automaticité droit du sol, référendum pour sortir contraintes supranationales, mais coopération européenne sur projets concrets (nucléaire, data) et démocratisation UE."
+    },
+    "institutional": {
+      "score": 1,
+      "anchor_comparison": "Plus réformateur que Macron 2017 (-1), moins illibéral que RN 2022 (+3).",
+      "evidence": [
+        {
+          "quote": "Un nouveau schéma institutionnel avec l’instauration de Provinces... référendum constitutionnel",
+          "source_ref": "sources.md#LA TRANSFORMATION DE L’AMÉNAGEMENT DU TERRITOIRE PAR LA DÉCENTRALISATION RADICALE."
+        },
+        {
+          "quote": "Recentrer la loi sur les grands principes... pouvoir normatif d’application aux collectivités territoriales",
+          "source_ref": "sources.md#POUR UN FONCTIONNEMENT RÉNOVÉ DES INSTITUTIONS DE LA VÈME RÉPUBLIQUE."
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Décentralisation radicale (provinces, pouvoir réglementaire local), recentrage loi sur principes, renforcement contrôle parlementaire et prospective nationale, sans remise en cause cadre démocratique."
+    },
+    "ecological": {
+      "score": -2,
+      "anchor_comparison": "Plus productiviste que LR 2022 (-1), moins que RN 2022 (-3).",
+      "evidence": [
+        {
+          "quote": "Favoriser la production d’énergie décarbonée en s’appuyant sur le nucléaire... priorité écologique et stratégique",
+          "source_ref": "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+        },
+        {
+          "quote": "Nous voulons faire de la France le leader « Bas carbone » du G20... sans décroissance",
+          "source_ref": "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Priorité nucléaire (EPR, mini-réacteurs, prolongation 60 ans), fiscalité carbone avec réciprocité et redistribution, technologies hyper (captage CO2, hydrogène), refus principe de précaution et écologie punitive."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "La baisse de la fiscalité de production doit être intensifiée.",
+          "source_ref": "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+        },
+        {
+          "quote": "La souveraineté des frontières et l’assimilation des immigrés",
+          "source_ref": "sources.md#UNE COHÉSION NATIONALE RENFORCÉE"
+        },
+        {
+          "quote": "déplafonnement du quotient familial",
+          "source_ref": "sources.md#POUR LA DIGNITÉ HUMAINE, UNE SOCIÉTÉ PLUS ÉQUITABLE"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Fort positionnement pro-marché et baisse prélèvements (axe economic) combiné à relance famille traditionnelle et assimilation stricte (axe social_cultural) et souveraineté frontières/quotas avec redéfinition compétences UE (axe sovereignty) produisent une placement clair sur la droite classique."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Règle d’or budgétaire, dépenses publiques <50 % PIB et baisse massive impôts production/travail sans chiffrage global recettes.",
+      "summary": "Programme cible équilibre budgétaire via règle d’or sur fonctionnement, plan anti-gaspillages 5 ans, réduction administrative 33→25 % tâches, suppression C3S/CVAE (11,5 Md€) et charges employeurs domicile/RSA, mais transition retraites capitalisation et décentralisation impliquent coûts initiaux non chiffrés.",
+      "problems_addressed": [
+        {
+          "problem": "Déficit chronique et dette 120 % PIB depuis 1974",
+          "approach": "Règle d’or institutionnelle + rééquilibrage régalien + décentralisation + réformes retraites/santé",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#L’IMPÉRATIF ABSOLU DE LA MAÎTRISE DES DÉFICITS PUBLICS ET DE LA DETTE."
+          ],
+          "reasoning": "Exemples Suède/Allemagne réduction 8 pts PIB en 10 ans ; chiffrage partiel C3S/CVAE."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Impact macroéconomique exact des baisses fiscales sur recettes",
+          "significance": "Aucune modélisation dynamique complète des effets Laffer ou croissance induite.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Résistance parlementaire et corporatisme fonction publique à la réduction 450 000 postes administratifs",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Réformes systémiques exigent majorité et adhésion agents.",
+          "source_refs": [
+            "sources.md#POUR RÉFORMER « AUTREMENT » L’ETAT."
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression C3S et CVAE",
+          "source_ref": "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION.",
+          "quantified": true,
+          "magnitude": "11,5 Md€"
+        },
+        {
+          "measure": "Âge légal retraite à 65 ans",
+          "source_ref": "sources.md#POUR LA DIGNITÉ HUMAINE, UNE SOCIÉTÉ PLUS ÉQUITABLE",
+          "quantified": true,
+          "magnitude": "65 ans"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Cibles chiffrées partielles mais absence scénario croissance faible ou taux intérêt >3 %.",
+          "source_refs": [
+            "sources.md#L’IMPÉRATIF ABSOLU DE LA MAÎTRISE DES DÉFICITS PUBLICS ET DE LA DETTE."
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Décentralisation radicale et externalisation 450 000 agents requièrent coordination inédite.",
+          "source_refs": [
+            "sources.md#POUR RÉFORMER « AUTREMENT » L’ETAT."
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "Pas de dépendance UE explicite sur règle d’or nationale.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Règle d’or institutionnelle et décentralisation réversibles par majorité suivante.",
+          "source_refs": [
+            "sources.md#POUR UN FONCTIONNEMENT RÉNOVÉ DES INSTITUTIONS DE LA VÈME RÉPUBLIQUE."
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Réformes retraites (65 ans + capitalisation), santé subsidiarité et relance familiale nataliste avec déplafonnement quotient.",
+      "summary": "Programme réforme Etat-providence via retraites (socle répartition 1000 € min + capitalisation 40 % total), santé décentralisée (suppression ARS, maisons santé canton), famille (quotient familial, accueil, logement) et éducation autonomie/meritocratie.",
+      "problems_addressed": [
+        {
+          "problem": "Déséquilibre retraites et justice générationnelle",
+          "approach": "Âge 65 ans préalable + capitalisation progressive tranches 8 + agence centrale",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+          ],
+          "reasoning": "Transition 116 Md€ capitalisation ; études pays comparables cités."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Coût transition capitalisation retraites et impact court terme sur jeunes cotisants",
+          "significance": "Aucune simulation détaillée sur 8 tranches.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Opposition syndicale et rue à passage 65 ans et capitalisation",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "Historique réformes retraites France.",
+          "source_refs": [
+            "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Minimum vieillesse 1000 €/mois + capitalisation",
+          "source_ref": "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite",
+          "quantified": true,
+          "magnitude": "1000 €/mois"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Économies retraites attendues mais transition capitalisation non chiffrée précisément.",
+          "source_refs": [
+            "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Suppression ARS, transfert maires hôpitaux et autonomie établissements scolaires complexes.",
+          "source_refs": [
+            "sources.md#La réforme globale du système de santé."
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Mesures internes sans dépendance externe majeure.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réformes retraites et éducation réversibles par loi suivante.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.75
+    },
+    "security_sovereignty": {
+      "grade": "A",
+      "headline": "Plan 10 ans remise à niveau police/justice, police territoriale décentralisée, quotas immigration et assimilation stricte.",
+      "summary": "Renforcement régalien massif : police territoriale avec PJ/OMP, justice budget doublé, peines planchers, immigration illégale supprimée + quotas légale + référendum souveraineté, expulsion fichés S et condamnés.",
+      "problems_addressed": [
+        {
+          "problem": "Insécurité et immigration incontrôlée",
+          "approach": "Police territoriale décentralisée + quotas + fin régularisation clandestins + référendum",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#UNE COHÉSION NATIONALE RENFORCÉE PAR UNE MEILLEURE SÉCURITÉ"
+          ],
+          "reasoning": "Mesures opérationnelles détaillées (Secrétariat État Sécurité, centres rétention 24 mois, AME supprimée)."
+        }
+      ],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Conflit juridique avec CEDH/CJUE et pays origine non-coopératifs",
+          "probability": 0.7,
+          "severity": 0.65,
+          "reasoning": "Programme prévoit bras de fer et référendum.",
+          "source_refs": [
+            "sources.md#IMMIGRATION"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Division par huit titres de séjour + quotas main-d’œuvre",
+          "source_ref": "sources.md#IMMIGRATION",
+          "quantified": true,
+          "magnitude": "division par huit"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Plans 10 ans police/justice chiffrés implicitement par rattrapage moyenne européenne.",
+          "source_refs": [
+            "sources.md#La sécurité au service de la liberté de tous les citoyens."
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Décentralisation police territoriale nécessite formation et coordination.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Accords pays origine et Frontex indispensables pour retours.",
+          "source_refs": [
+            "sources.md#La souveraineté des frontières et l’assimilation des immigrés."
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Référendum constitutionnel et inscription primauté droit national rendent réversibilité difficile.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "institutional_democratic": {
+      "grade": "B",
+      "headline": "Décentralisation radicale (provinces, pouvoir réglementaire local) et recentrage loi sur principes fondamentaux.",
+      "summary": "Réforme Vème : provinces (40-50) fusion départements/régions, transfert compétences + pouvoir normatif local, loi limitée principes, parlement initiative réservée, prospective via Haut-Commissariat Plan ouvert.",
+      "problems_addressed": [
+        {
+          "problem": "Suradministration et centralisme paralysant",
+          "approach": "Décentralisation 3 niveaux + codes simplifiés + subsidiarité",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#LA TRANSFORMATION DE L’AMÉNAGEMENT DU TERRITOIRE PAR LA DÉCENTRALISATION RADICALE."
+          ],
+          "reasoning": "Schéma clair Etat/Province/Bloc communal validé par référendum."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Risque inégalité territoriale accrue post-décentralisation",
+          "significance": "Aucune garantie péréquation explicite détaillée.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Résistance État central et corps intermédiaires à perte compétences",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "Réforme systémique historique.",
+          "source_refs": [
+            "sources.md#POUR RÉFORMER « AUTREMENT » L’ETAT."
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Création provinces + référendum constitutionnel",
+          "source_ref": "sources.md#LA TRANSFORMATION DE L’AMÉNAGEMENT DU TERRITOIRE PAR LA DÉCENTRALISATION RADICALE.",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Économies attendues de suppression doublons mais transition non chiffrée.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Redéfinition 3 niveaux + transfert normes complexe et long.",
+          "source_refs": [
+            "sources.md#LA TRANSFORMATION DE L’AMÉNAGEMENT DU TERRITOIRE PAR LA DÉCENTRALISATION RADICALE."
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Réforme interne française.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Référendum constitutionnel mais révision possible.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.8
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Leadership bas carbone via nucléaire prioritaire, fiscalité carbone réciproque et technologies hyper sans décroissance.",
+      "summary": "Programme rejette écologie punitive/précaution, priorise nucléaire (EPR, mini-réacteurs, 60 ans), fiscalité verte taxation constante + redistribution, innovation captage CO2/hydrogène et action internationale sur super-pollueurs.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance énergies fossiles et émissions",
+          "approach": "Nucléaire + prix carbone réciprocité + hypertechnologies",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+          ],
+          "reasoning": "France déjà 4e pays vert MIT ; programmes filières excellence."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Biodiversité et eau au-delà climat",
+          "significance": "Focus quasi-exclusif carbone et nucléaire.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Opposition locale et judiciaire aux projets nucléaires/renouvelables",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Historique contentieux urbanisme/nucléaire.",
+          "source_refs": [
+            "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Prolongation réacteurs 60 ans + EPR nouvelle génération",
+          "source_ref": "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE ».",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Réinvestissement économies renouvelables dérogatoires non chiffré.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Déploiement nucléaire et clusters tech réaliste mais long.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Coopération européenne projets énergie et accords internationaux réciprocité.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Infrastructures nucléaires difficilement réversibles.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.75
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "environ 116 Md€ capitalisation progressive",
+      "units": "Md€ transition",
+      "confidence": 0.65,
+      "caveats": "Montant cité pour capitalisation totale ; impact net sur jeunes dépend croissance et rendements."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Allègement charges travail et fiscalité production",
+        "quantified": "-11,5 Md€ impôts production"
+      },
+      "housing": {
+        "summary": "Suppression SRU 20-25 % logement social + objectif flux",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Capitalisation obligatoire progressive + âge 65 ans",
+        "quantified": "40 % total retraites capitalisé"
+      },
+      "labor_market": {
+        "summary": "Contrat unique + charges négatives RSA + apprentissage renforcé",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Investissement nucléaire et captage CO2",
+        "quantified": null
+      },
+      "narrative_summary": "Amélioration nette perspectives long terme via capitalisation, marché travail flexible et logement libéralisé, malgré transition retraites."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Minimum vieillesse 1000 € garanti",
+        "quantified": "1000 €/mois"
+      },
+      "pension": {
+        "summary": "Socle répartition maintenu + indexation implicite",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Accès soins inchangé court terme",
+        "quantified": null
+      },
+      "narrative_summary": "Cohorte actuelle protégée par socle répartition et minimum ; gains limités."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Réforme âge 65 ans + capitalisation progressive impacte long terme",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Transition tranches commence ; effet limité court terme.",
+            "source_refs": [
+              "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Capitalisation monte à ~20-30 % ; équilibre amélioré.",
+            "source_refs": [
+              "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "40 % capitalisé ; revenus supérieurs pour cohortes jeunes.",
+            "source_refs": [
+              "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Règle d’or + économies retraites/santé/administration",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Plan 5 ans anti-gaspillages commence.",
+            "source_refs": [
+              "sources.md#L’IMPÉRATIF ABSOLU DE LA MAÎTRISE DES DÉFICITS PUBLICS ET DE LA DETTE."
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -2,
+            "note": "Décentralisation et externalisation réduisent dépense.",
+            "source_refs": [
+              "sources.md#L’IMPÉRATIF ABSOLU DE LA MAÎTRISE DES DÉFICITS PUBLICS ET DE LA DETTE."
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Dette reflux structurel post-transition.",
+            "source_refs": [
+              "sources.md#L’IMPÉRATIF ABSOLU DE LA MAÎTRISE DES DÉFICITS PUBLICS ET DE LA DETTE."
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Nucléaire prioritaire + captage CO2 + fiscalité carbone réciproque",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Prolongation réacteurs et nouveaux EPR lancés.",
+            "source_refs": [
+              "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Mini-réacteurs et hydrogène décarboné déployés.",
+            "source_refs": [
+              "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Leadership bas carbone G20 consolidé.",
+            "source_refs": [
+              "sources.md#L’AMBITION ÉCOLOGIQUE POUR UNE FRANCE ET UNE PLANÈTE « BAS CARBONE »."
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Subsidiarité et innovation (maisons santé, télésurveillance)",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Suppression ARS et transfert local commence.",
+            "source_refs": [
+              "sources.md#La réforme globale du système de santé."
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Accès proximité amélioré via maisons pluridisciplinaires.",
+            "source_refs": [
+              "sources.md#La réforme globale du système de santé."
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Innovation biotechnologie et relocalisation médicaments.",
+            "source_refs": [
+              "sources.md#La réforme globale du système de santé."
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Révolution école : autonomie établissements, chèque-éducation, meritocratie",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Autonomie chefs d’établissement et fin carte scolaire progressive.",
+            "source_refs": [
+              "sources.md#LA RÉVOLUTION DE L’ÉCOLE DE LA DÉMOCRATIE"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Chèque-éducation et filières excellence/apprentissage généralisés.",
+            "source_refs": [
+              "sources.md#LA RÉVOLUTION DE L’ÉCOLE DE LA DÉMOCRATIE"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Niveau France remonte classements internationaux.",
+            "source_refs": [
+              "sources.md#LA RÉVOLUTION DE L’ÉCOLE DE LA DÉMOCRATIE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Suppression SRU + objectif flux logements marchands",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Fin contrainte 20-25 % social zones tendues.",
+            "source_refs": [
+              "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Offre marché augmente ; accès classes moyennes jeunes.",
+            "source_refs": [
+              "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Effet stabilisé ; dépend démographie.",
+            "source_refs": [
+              "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Réforme retraites vise justice générationnelle explicite ; capitalisation bénéficie entrants marché travail tandis qu’actuels retraités conservent répartition ; décentralisation et fiscalité allègent charges jeunes.",
+    "source_refs": [
+      "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite",
+      "sources.md#UNE ÉCONOMIE PLUS PROSPÈRE DANS LA MONDIALISATION."
+    ],
+    "confidence": 0.7
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Dette >120 % PIB, dépenses 55 % PIB, immigration incontrôlée, école stagnante, agriculture déclinante, transition écologique punitive.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "improvement",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Programme rompt avec étatisme via règle d’or, décentralisation, réformes régaliennes et pro-nucléaire ; trajectoire dette et compétitivité inversée.",
+    "confidence": 0.75
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Coût précis et phasage transition capitalisation retraites",
+      "why_unsolved": "Montant 116 Md€ cité mais pas de simulation complète sur 8 tranches ni impact jeunes cotisants.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#La réforme des retraites : la priorité de l’augmentation de l’âge de la retraite"
+      ]
+    },
+    {
+      "problem": "Inégalités territoriales post-décentralisation",
+      "why_unsolved": "Aucune péréquation ou fonds de solidarité détaillé malgré provinces.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Résistance massive à décentralisation et réduction fonction publique",
+      "trigger": "Grèves et blocage parlementaire",
+      "probability": 0.5,
+      "severity": 0.7,
+      "reasoning": "Réformes systémiques historiques ont échoué sans consensus large."
+    },
+    {
+      "scenario": "Conflit UE/CEDH bloque réforme immigration et souveraineté",
+      "trigger": "Manque accords pays origine + décisions européennes",
+      "probability": 0.6,
+      "severity": 0.65,
+      "reasoning": "Programme prévoit référendum mais sortie CEDH dernier recours."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
+        "critique": "Strength 0.75 peut surestimer granularité chiffrage global (seulement C3S/CVAE détaillé).",
+        "alternative_interpretation": "Cibles dépenses <50 % PIB restent aspirationales sans trajectoire complète."
+      },
+      {
+        "claim_location": "intergenerational.horizon_matrix[0]",
+        "critique": "Impact_score +2 long terme retraites repose sur hypothèses rendements capitalisation non explicitées.",
+        "alternative_interpretation": "Risque marchés ou transition plus coûteuse que prévu."
+      }
+    ],
+    "potential_bias": "Légère inclinaison vers lecture libérale-cohérente des propositions de baisse État et marché (effet cadrage sources pro-compétitivité).",
+    "evidence_gaps": "Détails chiffrés santé et éducation absents (renvoi ateliers) ; aucune modélisation macro globale dette/retraites.",
+    "confidence_in_critique": 0.65
+  },
+  "confidence_self_assessment": 0.72
+}

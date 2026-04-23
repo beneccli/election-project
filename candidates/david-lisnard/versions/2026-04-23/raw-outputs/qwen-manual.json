@@ -1,0 +1,860 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "david-lisnard",
+  "version_date": "2026-04-23",
+  "model": {
+    "provider": "qwen",
+    "version": "qwen3.6"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-23T12:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Le programme propose une refonte structurelle de l'État par la décentralisation radicale, la réduction de la dépense publique sous 50% du PIB, et la libéralisation du marché du travail et du logement. Il combine une architecture sociale révisée (retraites à 65 ans avec capitalisation, chèque-éducation, suppression des ARS) avec une ligne régalienne ferme (quotas d'immigration, durcissement pénal, primauté constitutionnelle) et une écologie technologique centrée sur le nucléaire et le prix du carbone.",
+  "positioning": {
+    "economic": {
+      "score": 4,
+      "anchor_comparison": "Plus orienté marché que Macron 2017, proche de Fillon 2017 sur la baisse des charges et la flexibilité du travail.",
+      "evidence": [
+        {
+          "quote": "Supprimer les surcharges sur le capital et le travail et mener l’assouplissement des règles du Code du Travail permettront de reconquérir des parts de marché",
+          "source_ref": "sources.md#economie"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Le programme privilégie systématiquement la dérégulation, la baisse des impôts de production, la fusion CDI/CDD et la capitalisation des retraites, marquant une orientation marché assumée."
+    },
+    "social_cultural": {
+      "score": 3,
+      "anchor_comparison": "Plus conservateur que LR 2022 sur l'école et la justice, moins identitaire que Zemmour 2022.",
+      "evidence": [
+        {
+          "quote": "Il faut abroger la carte scolaire qui enferme les familles dans leur quartier... instauration progressive d’un chèque-éducation",
+          "source_ref": "sources.md#education"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "L'accent sur le mérite, les fondamentaux, la fin du pédagogisme, la majorité pénale à 16 ans et l'assimilation stricte indique une ligne socialement conservatrice et méritocratique."
+    },
+    "sovereignty": {
+      "score": 2,
+      "anchor_comparison": "Similaire à LR 2022 sur la coopération européenne par projets, plus offensif sur la primauté du droit national face à la CEDH.",
+      "evidence": [
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l’intérêt national",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Le programme refuse le fédéralisme et le repli, prônant une Europe de projets tout en affirmant une souveraineté juridique et migratoire stricte, avec menace de sortie de la CEDH."
+    },
+    "institutional": {
+      "score": -1,
+      "anchor_comparison": "Plus décentralisateur que le socle Ve République, maintient les contrepoids parlementaires et l'État de droit.",
+      "evidence": [
+        {
+          "quote": "transférer le pouvoir normatif d’application de la loi ... aux collectivités territoriales",
+          "source_ref": "sources.md#institutions"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "La refonte vise à limiter l'exécutif central, renforcer le Parlement et déléguer le pouvoir réglementaire aux Provinces, dans un cadre libéral-démocratique et subsidiaire."
+    },
+    "ecological": {
+      "score": -2,
+      "anchor_comparison": "Plus productiviste que LR 2022, partage le rejet de l'écologie punitive mais mise sur le nucléaire et l'hypertechnologie.",
+      "evidence": [
+        {
+          "quote": "ni le principe de précaution, ni l’inscription dans la Constitution de la « préservation de l’environnement » ne constituent des contributions utiles, bien au contraire.",
+          "source_ref": "sources.md#ecologie"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "L'approche rejette la décroissance et le principe de précaution, privilégiant le nucléaire, le prix du carbone à fiscalité constante et l'innovation technologique pour la transition."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "Supprimer les surcharges sur le capital et le travail et mener l’assouplissement des règles du Code du Travail permettront de reconquérir des parts de marché",
+          "source_ref": "sources.md#economie"
+        },
+        {
+          "quote": "Il faut abroger la carte scolaire qui enferme les familles dans leur quartier... instauration progressive d’un chèque-éducation",
+          "source_ref": "sources.md#education"
+        },
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l’intérêt national",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Le libéralisme économique structurel, combiné au conservatisme social et éducatif et à une ligne souverainiste sur l'immigration, place le programme dans la bande droite classique. L'axe institutionnel décentralisateur et l'axe écologique technophile ne modifient pas cet ancrage."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Réduction de la dépense publique sous 50% du PIB en 10 ans, baisse des impôts de production et contrat de travail unique.",
+      "summary": "Le programme cible la réduction structurelle du déficit par la baisse de la dépense, la dérégulation et la flexibilité du travail, avec des mécanismes détaillés mais des hypothèses de croissance dépendantes du cycle macroéconomique.",
+      "problems_addressed": [
+        {
+          "problem": "Niveau élevé de la dépense publique et des impôts de production",
+          "approach": "Objectif de baisse de 8 points de PIB en 10 ans, suppression C3S/CVAE (11,5 Md€), règle d'or hors investissement.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#finances-publiques",
+            "sources.md#economie"
+          ],
+          "reasoning": "Les leviers sont identifiés et chiffrés partiellement, avec des précédents européens cités."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Impact distributif court terme de la consolidation budgétaire",
+          "significance": "L'ajustement de 8 points de PIB peut contracter la demande sans mécanisme compensatoire explicite.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Accès au logement social en zones tendues",
+          "mechanism": "Suppression de l'article 55 de la loi SRU sans dispositif de remplacement contraignant sur le stock.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#logement"
+          ],
+          "reasoning": "La libéralisation du marché peut réduire la part de logements sociaux dans les communes sous tension."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage parlementaire ou syndical sur le contrat unique et la baisse des effectifs administratifs",
+          "probability": 0.5,
+          "severity": 0.7,
+          "reasoning": "La fusion CDI/CDD et le basculement de 450 000 fonctionnaires vers le terrain rencontrent des résistances structurelles.",
+          "source_refs": [
+            "sources.md#economie",
+            "sources.md#etat"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression C3S et CVAE, baisse de 11,5 Md€ des impôts de production",
+          "source_ref": "sources.md#economie",
+          "quantified": true,
+          "magnitude": "11,5 Md€"
+        },
+        {
+          "measure": "Instauration d'un contrat de travail unique fusionnant CDI et CDD",
+          "source_ref": "sources.md#economie",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Cibles de dépense claires mais pas de clause de sauvegarde si la croissance sous-performe.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Réorganisation de la fonction publique et du code du travail exige un calendrier législatif dense.",
+          "source_refs": [
+            "sources.md#etat",
+            "sources.md#economie"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de la conjoncture européenne et de la réaction des marchés à la règle d'or.",
+          "source_refs": [
+            "sources.md#finances-publiques"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Une majorité ultérieure pourrait rétablir les taxes ou la dualité contractuelle par loi ordinaire.",
+          "source_refs": [
+            "sources.md#economie"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Retraite à 65 ans avec socle répartition et capitalisation, suppression des ARS, chèque-éducation et autonomie des écoles.",
+      "summary": "Refonte de l'État-providence par la capitalisation partielle des retraites, la décentralisation sanitaire et le libre choix scolaire, privilégiant la responsabilité individuelle et la gestion locale.",
+      "problems_addressed": [
+        {
+          "problem": "Déficit structurel des retraites et déserts médicaux",
+          "approach": "Âge légal à 65 ans, montée en charge de la capitalisation, suppression des ARS, doublement des étudiants en médecine.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#retraites",
+            "sources.md#sante"
+          ],
+          "reasoning": "Les mesures ciblent les déséquilibres actuariels et l'engorgement administratif avec des leviers opérationnels."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Coût de transition du système de retraites vers la capitalisation",
+          "significance": "Le financement de la période de double charge n'est pas détaillé.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Inégalités d'accès aux soins selon les territoires",
+          "mechanism": "Conventionnement différencié et suppression des ARS peuvent fragmenter l'offre sans péréquation forte.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#sante"
+          ],
+          "reasoning": "La logique de subsidiarité sanitaire repose sur l'initiative locale, variable selon les bassins de vie."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Opposition des syndicats médicaux et enseignants aux nouveaux statuts et à l'évaluation",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "La conditionnalité des revalorisations et l'autonomie des chefs d'établissement heurtent les cultures corporatistes.",
+          "source_refs": [
+            "sources.md#education",
+            "sources.md#sante"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Âge légal à 65 ans, socle répartition + capitalisation obligatoire progressive",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "116 Md€ capitalisés à terme (~40% des retraites)"
+        },
+        {
+          "measure": "Chèque-éducation et suppression progressive de la carte scolaire",
+          "source_ref": "sources.md#education",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Transition des retraites et revalorisations enseignantes/santé exigent un calibrage financier précis.",
+          "source_refs": [
+            "sources.md#retraites",
+            "sources.md#education"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Refonte des statuts, suppression des ARS et déploiement du chèque-éducation sont administrativement lourds.",
+          "source_refs": [
+            "sources.md#sante",
+            "sources.md#education"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Réformes principalement internes, peu dépendantes de facteurs externes.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Architecture des retraites et scolaire réversible par loi, mais ancrage capitalistique crée un effet de cliquet.",
+          "source_refs": [
+            "sources.md#retraites",
+            "sources.md#education"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": "A",
+      "headline": "Durcissement pénal, quotas d'immigration, suppression de l'AME, primauté constitutionnelle et plan décennal police.",
+      "summary": "Approche régalienne offensive combinant dissuasion pénale, contrôle strict des flux migratoires, affirmation de la souveraineté juridique et montée en puissance des forces de sécurité territoriales.",
+      "problems_addressed": [
+        {
+          "problem": "Hausse des violences, lenteur judiciaire et immigration non maîtrisée",
+          "approach": "Majorité pénale à 16 ans, peines planchers, quotas, division par 8 des titres de séjour, primauté du droit national.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#securite",
+            "sources.md#immigration"
+          ],
+          "reasoning": "Le programme aligne moyens, procédures et cadre juridique sur un objectif de réduction structurelle de la délinquance et des flux."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Capacité d'absorption diplomatique et juridique d'une sortie de la CEDH",
+          "significance": "Les conséquences sur les traités bilatéraux et le droit européen ne sont pas évaluées.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Relations avec les institutions européennes et le Conseil de l'Europe",
+          "mechanism": "Inscription de la primauté nationale et menace de sortie de la CEDH créent un conflit de normes.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "La confrontation juridique assumée peut entraîner des sanctions ou un isolement conventionnel."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Censure du Conseil constitutionnel ou blocage conventionnel international",
+          "probability": 0.5,
+          "severity": 0.8,
+          "reasoning": "La révision constitutionnelle et la rupture avec la CEDH exigent des majorités qualifiées et des négociations complexes.",
+          "source_refs": [
+            "sources.md#immigration",
+            "sources.md#institutions"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Division par huit des titres de séjour et quotas par secteurs sous tension",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "-87,5% flux titres de séjour"
+        },
+        {
+          "measure": "Abaissement de la majorité pénale à 16 ans et inversion de l'excuse de minorité dès 13 ans",
+          "source_ref": "sources.md#securite",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Plan police sur 10 ans et doublement budget justice sont financés par redéploiement régalien.",
+          "source_refs": [
+            "sources.md#securite"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Réorganisation policière et judiciaire demande une montée en charge progressive mais les leviers existent.",
+          "source_refs": [
+            "sources.md#securite"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépend de la faisabilité juridique internationale et de la coopération des pays d'origine pour les expulsions.",
+          "source_refs": [
+            "sources.md#immigration"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Inscription constitutionnelle et refonte pénale créent un verrouillage structurel difficile à inverser.",
+          "source_refs": [
+            "sources.md#immigration",
+            "sources.md#securite"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "institutional_democratic": {
+      "grade": "A",
+      "headline": "Décentralisation radicale en trois niveaux, limitation de la loi aux principes fondamentaux et renforcement du Parlement.",
+      "summary": "Refonte architecturale de l'État visant à réduire l'inflation normative, transférer le pouvoir réglementaire aux Provinces et rééquilibrer les pouvoirs exécutif et législatif.",
+      "problems_addressed": [
+        {
+          "problem": "Millefeuille territorial, inflation législative et suradministration centrale",
+          "approach": "Fusion départements/régions en Provinces, transfert du pouvoir normatif local, loi limitée aux principes, renforcement du contrôle parlementaire.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#institutions",
+            "sources.md#decentralisation"
+          ],
+          "reasoning": "Le programme attaque les causes structurelles de la lourdeur administrative par la subsidiarité et la clarification des compétences."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Mécanismes de péréquation fiscale entre Provinces",
+          "significance": "L'autonomie financière sans solidarité explicite peut creuser les écarts territoriaux.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coordination des politiques publiques nationales",
+          "mechanism": "Dévolution du pouvoir réglementaire peut fragmenter l'application des lois sur le territoire.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#decentralisation"
+          ],
+          "reasoning": "La diversité normative locale exige des mécanismes de convergence non détaillés."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Échec du référendum constitutionnel ou résistance de l'administration centrale",
+          "probability": 0.4,
+          "severity": 0.7,
+          "reasoning": "La suppression des échelons actuels et le transfert de compétences heurtent des intérêts institutionnels établis.",
+          "source_refs": [
+            "sources.md#decentralisation"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Nouveau schéma État / Province / Bloc communal par référendum",
+          "source_ref": "sources.md#decentralisation",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Réduction des tâches administratives dans la fonction publique de 33% à 25%",
+          "source_ref": "sources.md#etat",
+          "quantified": true,
+          "magnitude": "-8 points, ~450 000 agents redéployés"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Réorganisation à enveloppe constante, vise des gains d'efficacité structurels.",
+          "source_refs": [
+            "sources.md#decentralisation"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Fusion des collectivités, transfert de compétences et refonte normative exigent une transition pluriannuelle complexe.",
+          "source_refs": [
+            "sources.md#decentralisation",
+            "sources.md#institutions"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Réforme interne, dépend principalement du vote populaire et parlementaire.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Architecture constitutionnelle et transfert de pouvoir réglementaire créent un nouvel équilibre difficile à défaire.",
+          "source_refs": [
+            "sources.md#decentralisation"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Priorité au nucléaire, prix du carbone à fiscalité constante, rejet du principe de précaution et libération agricole.",
+      "summary": "Stratégie écologique technophile et pro-croissance, centrée sur le nucléaire, la tarification du carbone avec redistribution et la dérégulation agricole, refusant les cadres décroissants.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance énergétique, émissions industrielles et carcan normatif agricole",
+          "approach": "Prolongation réacteurs à 60 ans, EPR/SMR, prix du carbone redistributif, fin des surtranspositions, autorisation NTG et bassines.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#ecologie",
+            "sources.md#agriculture"
+          ],
+          "reasoning": "Le programme mise sur l'offre énergétique décarbonée et l'innovation pour découpler croissance et émissions."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Gestion à long terme des déchets nucléaires et acceptabilité sociale du carbone",
+          "significance": "Les verrous technologiques et politiques ne sont pas adressés en détail.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Biodiversité et artificialisation des sols",
+          "mechanism": "Rejet du principe de précaution et priorité à la production peuvent accélérer la pression sur les écosystèmes.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#ecologie",
+            "sources.md#agriculture"
+          ],
+          "reasoning": "L'approche privilégie les indicateurs carbone et productifs au détriment des seuils écologiques locaux."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Retards industriels sur les EPR/SMR et contentieux européen sur la fiscalité carbone",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Les calendriers nucléaires sont structurellement longs et la taxation carbone exige une coordination internationale.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Prolongation des réacteurs à 60 ans, construction EPR nouvelle génération et déploiement mini-réacteurs",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Prix du carbone avec redistribution et taxation totale constante",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Investissements nucléaires lourds, compensés par la fin des subventions renouvelables dérogatoires.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Déploiement technologique et refonte de la PAC exigent une ingénierie industrielle et administrative complexe.",
+          "source_refs": [
+            "sources.md#ecologie",
+            "sources.md#agriculture"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépend des chaînes d'approvisionnement nucléaires, des accords commerciaux et de la réciprocité carbone internationale.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Infrastructures nucléaires irréversibles à court terme, mais fiscalité et normes agricoles ajustables par loi.",
+          "source_refs": [
+            "sources.md#ecologie",
+            "sources.md#agriculture"
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "approximately €800/person/year shift toward capitalization and debt reduction",
+      "units": "€/person/year",
+      "confidence": 0.55,
+      "caveats": "Depends on pension transition phasing, macro growth assumptions, and double-payment bridging mechanism."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher initial contributions for pension capitalization and debt consolidation.",
+        "quantified": "+€400–600/year during transition"
+      },
+      "housing": {
+        "summary": "Improved access via SRU abolition and market deregulation in tight zones.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Higher long-term replacement rate via mandatory capitalization tranche.",
+        "quantified": "~65–70% projected vs current ~55% for young cohorts"
+      },
+      "labor_market": {
+        "summary": "Easier entry and reduced duality via single contract and negative charges for long-term RSA hires.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Reduced long-term burden via nuclear baseload and tech-driven decarbonization.",
+        "quantified": null
+      },
+      "narrative_summary": "Near-term fiscal burden increases due to pension transition and debt reduction, offset by improved labor market flexibility, housing supply deregulation, and long-term pension sustainability."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Stable tax burden; pension indexation and minimum vieillesse preserved.",
+        "quantified": "€0/year change"
+      },
+      "pension": {
+        "summary": "Age hike to 65 affects late-career workers; current retirees maintain acquired rights.",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Improved local access via ARS suppression and differentiated conventioning.",
+        "quantified": null
+      },
+      "narrative_summary": "Current retirees face minimal fiscal change but later cohorts encounter higher retirement age; healthcare access may improve through local management reforms."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Transition vers la capitalisation progressive, effets structurels visibles après 2035.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Phase de transition, double charge potentielle, effets nets limités.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Montée en charge de la capitalisation, stabilisation du ratio dépenses/PIB.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Rendements capitalisés matures, taux de remplacement amélioré pour les cohortes actives.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Consolidation budgétaire et règle d'or visent un reflux structurel de la dette/PIB.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Coûts de transition et investissements freinent le reflux immédiat.",
+            "source_refs": [
+              "sources.md#finances-publiques"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Équilibre structurel atteint, ratio dette/PIB en baisse régulière.",
+            "source_refs": [
+              "sources.md#finances-publiques"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Dette ramenée sous 90% du PIB sous hypothèse de croissance potentielle tenue.",
+            "source_refs": [
+              "sources.md#finances-publiques"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Déploiement nucléaire et prix du carbone réduisent l'intensité émissions/PIB sur le moyen terme.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Chantiers EPR/SMR et mise en place fiscalité carbone, effets limités à court terme.",
+            "source_refs": [
+              "sources.md#ecologie"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Nouveaux réacteurs opérationnels, substitution fossile accélérée.",
+            "source_refs": [
+              "sources.md#ecologie"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Parc décarboné stabilisé, gains marginaux dépendant de l'innovation hydrogène/captage.",
+            "source_refs": [
+              "sources.md#ecologie"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Suppression des ARS et gestion locale visent à réduire les délais et déserts médicaux.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Réorganisation administrative et doublement étudiants en médecine, effets différés.",
+            "source_refs": [
+              "sources.md#sante"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Nouveaux médecins installés, maillage territorial amélioré par les maisons de santé.",
+            "source_refs": [
+              "sources.md#sante"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Système stabilisé, accès aux soins maintenu sous hypothèse de démographie médicale tenue.",
+            "source_refs": [
+              "sources.md#sante"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Chèque-éducation, autonomie des établissements et recentrage sur les fondamentaux.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Déploiement du libre choix et évaluation publique, premiers gains de performance.",
+            "source_refs": [
+              "sources.md#education"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Effets composés sur le niveau scolaire et la réduction du décrochage.",
+            "source_refs": [
+              "sources.md#education"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Génération formée sous le nouveau modèle, amélioration structurelle du capital humain.",
+            "source_refs": [
+              "sources.md#education"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Fin de l'article 55 SRU et libéralisation du foncier visent à augmenter l'offre.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Levée des contraintes réglementaires, relance des permis en zones tendues.",
+            "source_refs": [
+              "sources.md#logement"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Stock supplémentaire absorbé, pression sur les prix modérée.",
+            "source_refs": [
+              "sources.md#logement"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Marché fluidifié, accès à la propriété amélioré pour les ménages intermédiaires.",
+            "source_refs": [
+              "sources.md#logement"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Le programme transfère l'architecture sociale vers la capitalisation et la gestion locale, imposant des coûts d'ajustement à court terme aux jeunes actifs tout en ciblant la soutenabilité fiscale et des retraites. La dérégulation du logement et de l'éducation vise à améliorer l'accès et le capital humain sur le moyen terme.",
+    "source_refs": [
+      "sources.md#retraites",
+      "sources.md#finances-publiques",
+      "sources.md#logement",
+      "sources.md#education"
+    ],
+    "confidence": 0.6
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Dette stabilisée vers 115–120% du PIB, ajustements paramétriques récurrents des retraites, offre de logement contrainte en zones tendues, inflation normative persistante.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Les ruptures architecturales (capitalisation, décentralisation radicale, contrat unique, primauté constitutionnelle) divergent significativement des ajustements incrémentaux du statu quo.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Financement de la transition vers la capitalisation des retraites",
+      "why_unsolved": "Le programme détaille le phasage mais pas les recettes pont ou l'émission de dette pour couvrir la double charge.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Péréquation fiscale entre Provinces après décentralisation radicale",
+      "why_unsolved": "L'autonomie financière est affirmée sans mécanisme explicite de solidarité interterritoriale.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Conséquences diplomatiques et commerciales d'une sortie de la CEDH",
+      "why_unsolved": "Le programme assume le rapport de force mais ne détaille pas les plans de contingence face aux sanctions ou ruptures conventionnelles.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Trou de financement pendant la transition des retraites",
+      "trigger": "Phasage de la capitalisation sans recette pont, pression sur les ménages actifs.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "La double charge temporaire peut contracter le revenu disponible ou exiger un recours à la dette, contredisant l'objectif de reflux."
+    },
+    {
+      "scenario": "Ségrégation spatiale accrue après suppression de la loi SRU",
+      "trigger": "Les communes en zone tendue réduisent la construction sociale au profit du marché libre.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "L'allocation par le marché peut exclure les ménages modestes sans mécanisme compensatoire sur le stock."
+    },
+    {
+      "scenario": "Friction juridique majeure avec l'UE et le Conseil de l'Europe",
+      "trigger": "Inscription de la primauté constitutionnelle et menace de sortie de la CEDH.",
+      "probability": 0.3,
+      "severity": 0.8,
+      "reasoning": "Le conflit de normes peut retarder les fonds de cohésion, complexifier la participation au marché unique et isoler diplomatiquement."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
+        "critique": "L'hypothèse d'une baisse de 8 points de PIB de dépense publique sans effet récessif majeur est optimiste.",
+        "alternative_interpretation": "Les précédents suédois et allemands reposaient sur des contextes macroéconomiques et des structures sociales différents ; les rigidités françaises pourraient réduire la faisabilité ou exiger un étalement plus long."
+      },
+      {
+        "claim_location": "intergenerational.impact_on_25yo_in_2027.housing",
+        "critique": "La suppression de l'article 55 SRU ne garantit pas une hausse de l'offre abordable en zones tendues.",
+        "alternative_interpretation": "Les promoteurs pourraient privilégier les segments à forte marge, laissant l'accès des classes moyennes et modestes inchangé ou dégradé sans incitations ciblées."
+      }
+    ],
+    "potential_bias": "L'analyse tend à surpondérer les gains d'efficacité annoncés par la décentralisation et la dérégulation, reflétant un cadrage économique mainstream qui suppose que les mécanismes de marché corrigent automatiquement les contraintes d'offre.",
+    "evidence_gaps": "Le programme manque de détails quantitatifs sur le financement de la transition des retraites, le niveau exact du prix du carbone, la formule de péréquation fiscale des Provinces et le calendrier précis de suppression des ARS.",
+    "confidence_in_critique": 0.7
+  },
+  "confidence_self_assessment": 0.65
+}
