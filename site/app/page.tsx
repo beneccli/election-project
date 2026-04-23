@@ -21,18 +21,12 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const cards = listLandingCards();
-  const analyzedCount = cards.filter((c) => c.status === "analyzed").length;
-  const pendingCount = cards.length - analyzedCount;
 
   return (
     <>
       <LandingNavBar lang="fr" />
       <main>
-        <LandingHero
-          lang="fr"
-          analyzedCount={analyzedCount}
-          pendingCount={pendingCount}
-        />
+        <LandingHero lang="fr" />
         <CandidateGrid cards={cards} lang="fr" />
         <CompareCta lang="fr" />
         <MethodologyBlock lang="fr" />

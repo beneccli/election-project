@@ -60,7 +60,7 @@ Format: `M_<FeatureCluster>`
 | M_Transparency | ✅ Done | Transparency drawer — raw outputs, prompts, sources exposed (2026-04-21) |
 | M_Comparison | ✅ Done | Side-by-side candidate comparison mode — shipped 2026-04-22 ([`specs/website/comparison-page.md`](specs/website/comparison-page.md)) |
 | M_PoliticalSpectrum | ✅ Done | Global spectrum label on each candidate (additive v1.2 field; Hero chip) ([`specs/analysis/political-spectrum-label.md`](specs/analysis/political-spectrum-label.md)) |
-| M_Landing | � In Progress | Landing page with "2027 stakes" visuals + candidate grid + comparison/methodology entry points ([`specs/website/landing-page.md`](specs/website/landing-page.md)) |
+| M_Landing | ✅ Done | Landing page with "2027 stakes" visuals + candidate grid + comparison/methodology entry points ([`specs/website/landing-page.md`](specs/website/landing-page.md)) |
 
 ### 📅 Phase 3: Operations (planned)
 
