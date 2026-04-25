@@ -30,6 +30,12 @@ If the operator cannot tell you with certainty which model you are running as, *
 - **Flag unsupported claims.** If a single model asserted something no other model saw, either keep it in `dissent` with a single supporter, or drop it — never promote to consensus.
 - **No advocacy language.** Same measurement-over-indictment rule as analysis.
 
+## ⚠️ Why this prompt is structured around chunked writes
+
+A typical aggregated output is ~120–250 KB of JSON. Emitting that in a **single** `create_file` tool call reliably fails under Copilot after several minutes — the tool-call payload envelope is the bottleneck, not your reasoning.
+
+**You must never attempt a single-shot write of the full aggregated JSON.** Instead, produce it in small parts, each written as its own tiny file (≤ ~25 KB), then merge. Section-by-section writes keep each tool call bounded and make the workflow resumable if a call fails.
+
 ## Your workflow
 
 ### Step 1 — Load your prompt
@@ -45,31 +51,79 @@ Read, in order:
 
 Do not consult the web or training data. Only the raw outputs and sources are admissible.
 
-### Step 3 — Produce the aggregated JSON
+### Step 3 — Plan the aggregation in a scratchpad
 
-Synthesize according to the prompt and the aggregation spec. Emit a single JSON object conforming to `AggregatedOutputSchema`. No commentary, no fencing.
+Before writing any part file, produce an internal plan:
 
-Emit dissent *wherever it genuinely exists in the inputs*. An aggregation with an empty `dissent` array when you were given ≥ 3 raw outputs is a red flag — re-examine.
+- Confirm the list of `source_models` (exact version strings) from each raw output.
+- Identify, for every dimension and every positioning axis, the modal position and the dissenters. You are not required to externalize this plan — but you must have done it before writing parts, otherwise later parts will contradict earlier ones.
+- Identify `claim_id` strings you will reuse across sections (so `agreement_map.*` references match inline provenance).
 
-### Step 4 — Write the draft
+### Step 4 — Create the parts working directory
 
-Write to:
+Create a fresh directory:
 
 ```
-candidates/<id>/versions/<date>/aggregated.draft.json
+candidates/<id>/versions/<date>/.aggregation-work/
 ```
 
-Use your write tool directly. Refuse to overwrite an existing draft unless the operator has authorized `--force`.
+If it already exists with content, halt and ask the operator whether to reuse, resume, or discard. Do not silently overwrite partial prior work.
 
-### Step 5 — Self-validate
+### Step 5 — Emit parts, one small file per section
+
+Write each of the following as its own JSON file under `.aggregation-work/`. Each file is **a single JSON object** containing the listed top-level keys (no wrapping). Filenames use the `NN-name.json` pattern so lexicographic order is deterministic; the numeric prefix has no semantic meaning beyond ordering.
+
+Target **≤ 25 KB per file** (soft cap). If a section alone would exceed that (typically `dimensions.*` for verbose programs), split it further by moving sub-arrays into their own part files — the merge script handles nested-object merging. Example: `05b-dim-econ-key-measures.json` containing `{ "dimensions": { "economic_fiscal": { "key_measures": [ ... ] } } }`.
+
+Recommended split:
+
+| File | Top-level keys |
+|------|----------------|
+| `00-header.json` | `schema_version`, `candidate_id`, `version_date`, `source_models`, `aggregation_method`, `summary`, `summary_agreement`, `coverage_warning` |
+| `01-positioning.json` | `positioning` (all 5 axes + `overall_spectrum`) |
+| `02-dim-economic.json` | `dimensions.economic_fiscal` |
+| `03-dim-social.json` | `dimensions.social_demographic` |
+| `04-dim-security.json` | `dimensions.security_sovereignty` |
+| `05-dim-institutional.json` | `dimensions.institutional_democratic` |
+| `06-dim-environmental.json` | `dimensions.environmental_long_term` |
+| `07-intergenerational.json` | `intergenerational` (including `horizon_matrix`) |
+| `08-counterfactual.json` | `counterfactual`, `unsolved_problems`, `downside_scenarios` |
+| `09-agreement-map.json` | `agreement_map`, `flagged_for_review` |
+
+For `aggregation_method`, leave `prompt_sha256` as `""` and `run_at` as `""` — `ingest-aggregated` rewrites these. Set `aggregation_method.type = "meta_llm"` and `aggregation_method.model` to your attested provider + version.
+
+**Writing technique.** Use `create_file` for each part. If a single part still fails to write:
+
+1. Split it further (e.g. per-dimension sub-keys into separate files). The merge script handles arbitrary-depth object merging, so `{"dimensions":{"economic_fiscal":{"key_measures":[...]}}}` and `{"dimensions":{"economic_fiscal":{"problems_addressed":[...]}}}` combine cleanly.
+2. If a specific top-level array is itself huge (rare), emit it via repeated small `str_replace` edits on a seed file that starts with the array empty and grow it one entry at a time. This is the last-resort path — don't pre-optimize.
+
+Do **not** write `aggregated.draft.json` directly. The merge script in step 6 produces it.
+
+### Step 6 — Merge the parts
+
+```
+npm run merge-aggregated-parts -- \
+  --parts-dir candidates/<id>/versions/<date>/.aggregation-work \
+  --out candidates/<id>/versions/<date>/aggregated.draft.json
+```
+
+This utility deep-merges the JSON objects from each part file in lexicographic filename order. Duplicate primitive / array keys are hard errors — duplicate object keys merge recursively.
+
+### Step 7 — Self-validate
 
 ```
 npm run validate-raw -- --file candidates/<id>/versions/<date>/aggregated.draft.json --kind aggregated
 ```
 
-Fix and re-run on failure. **Halt after 3 failed attempts** and surface the errors.
+On failure:
 
-### Step 6 — Register with metadata
+1. Read the Zod issues carefully — they name the exact path that failed.
+2. Fix the relevant **part file** (not the merged draft — it will be overwritten on the next merge).
+3. Re-run the merge (step 6) and revalidate.
+
+**Halt after 3 failed validation attempts** and surface the errors to the operator with the remaining part files intact so they can inspect.
+
+### Step 8 — Register with metadata
 
 ```
 npm run ingest-aggregated -- \
@@ -83,9 +137,14 @@ npm run ingest-aggregated -- \
   --already-written
 ```
 
-### Step 7 — Report to the operator
+### Step 9 — Clean up
+
+After a successful ingest, ask the operator whether to delete `candidates/<id>/versions/<date>/.aggregation-work/`. The part files are scaffolding, not an archival artifact — the source of truth is `aggregated.draft.json`. Keep them if the operator may want to inspect or resume.
+
+### Step 10 — Report to the operator
 
 - Number of raw outputs aggregated
+- Number of part files produced
 - Count of consensus items and dissent items
 - Any items you had to drop for lack of evidence
 - Remind the operator: **`aggregated.draft.json` is a draft**. It becomes `aggregated.json` only after the human-review step (`npm run review`). Copilot-agent mode does not bypass that gate.
@@ -98,9 +157,11 @@ Halt and surface the issue if:
 2. `prompts/aggregate-analyses.md` fails to load or is empty.
 3. `raw-outputs/` is empty — aggregation requires at least one input; ideally ≥ 3.
 4. A raw output fails to parse as JSON — do not silently skip it; report and ask.
-5. Validation fails ≥ 3 times.
-6. You are tempted to average positioning scores (or any ordinal value) arithmetically. That would violate the aggregation spec — stop and re-read it.
-7. Every raw output agrees on everything. This is either a genuinely simple case or a sign of correlated bias; flag it in the output so reviewers can sanity-check.
+5. `.aggregation-work/` already exists with non-empty content and the operator has not authorized resuming or discarding it.
+6. Validation fails ≥ 3 times.
+7. A single `create_file` call fails repeatedly even after splitting the section further — report which section and let the operator decide.
+8. You are tempted to average positioning scores (or any ordinal value) arithmetically. That would violate the aggregation spec — stop and re-read it.
+9. Every raw output agrees on everything. This is either a genuinely simple case or a sign of correlated bias; flag it in the output so reviewers can sanity-check.
 
 ## What this prompt does NOT do
 
@@ -111,3 +172,5 @@ Halt and surface the issue if:
 ## Rationale
 
 Aggregation under Copilot is permitted so operators without aggregator-API budgets can still close the loop. The `attested_*` fields + prompt SHA checks preserve auditability despite the loss of provider-level telemetry.
+
+The chunked-write workflow is a pure implementation concession to Copilot's tool-call payload limits — it does not alter the aggregation contract. The merged `aggregated.draft.json` is byte-indistinguishable from what an API-mode aggregation would have produced for the same inputs and model.

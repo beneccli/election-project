@@ -1,0 +1,151 @@
+{
+  "counterfactual": {
+    "status_quo_trajectory": "Sous trajectoire inchangée : la dette publique progresse de ~120% vers ~130% du PIB d'ici la mi-2030 ; le système de retraites subit des ajustements paramétriques récurrents sans rééquilibrage structurel ; la part des déserts médicaux continue de croître ; le parc nucléaire vieillit sans programme de renouvellement clair ; l'inflation législative et réglementaire se poursuit ; les flux migratoires et leur taux d'exécution des éloignements restent inchangés.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "social_demographic"
+    ],
+    "reasoning": "Le programme infléchit la trajectoire sur les finances publiques (règle d'or + cible -8 pts de PIB de dépense), les retraites (65 ans + ~40% capitalisation), l'architecture institutionnelle (40-50 Provinces + dévolution réglementaire), l'énergie (nouveau parc nucléaire, sortie du régime dérogatoire renouvelables) et la migration (primauté constitutionnelle, division par 8 des titres). Le socle redistributif social-démographique est moins transformé : les outils contre la pauvreté et l'inégalité restent structurellement similaires ; les réformes éducation/santé sont des leviers de gouvernance et d'offre plus que des leviers redistributifs. Quatre modèles concluent à une trajectoire 'mixed' (gains structurels long terme, frictions et exposition court terme) ; Grok juge l'effet net 'improvement' compte tenu de l'ampleur du paquet régalien et budgétaire.",
+    "confidence": 0.7,
+    "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+    "dissenters": ["grok-4"]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Financement de la transition retraites (double-paiement pendant la bascule capitalisation)",
+      "why_unsolved": "Le programme cible ~40% de capitalisation et un cadre par tranches mais ne publie pas de plan de financement de la période de double-paiement (cotisations actuelles + accumulation tranches) ; les estimations externes situent le besoin à plusieurs dizaines de Md€/an pendant 10-15 ans.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#retraites"],
+      "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Décarbonation des transports (route, aviation, maritime) et du bâti",
+      "why_unsolved": "La décarbonation du programme est centrée sur l'électricité et le nucléaire ; les émissions transport et bâtiment ne reçoivent pas d'instrument dédié.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+      "dissenters": []
+    },
+    {
+      "problem": "Péréquation fiscale entre Provinces après décentralisation radicale",
+      "why_unsolved": "Le transfert massif de compétences et de pouvoir réglementaire ne s'accompagne pas d'un mécanisme explicite de péréquation interterritoriale ; risque de divergence des services publics.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Trajectoire de dépense de défense et engagement OTAN-2%",
+      "why_unsolved": "Le programme renforce le régalien intérieur sans fixer de cible budgétaire de défense ni de plan d'équipement.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7"],
+      "dissenters": []
+    },
+    {
+      "problem": "Conséquences diplomatiques et commerciales d'une sortie de la CEDH",
+      "why_unsolved": "Le programme inscrit la primauté constitutionnelle sur la CEDH/CJUE et envisage une sortie en dernier recours sans modéliser les impacts sur les traités bilatéraux et le droit européen.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#immigration"],
+      "supported_by": ["claude-opus-4-7", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Prise en charge de la dépendance et de la perte d'autonomie",
+      "why_unsolved": "Aucune solution structurelle (5e branche, financement) pour répondre au choc démographique du grand âge.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+      "dissenters": []
+    },
+    {
+      "problem": "Rénovation thermique du parc bâti",
+      "why_unsolved": "Pas de stratégie chiffrée de rénovation des passoires thermiques.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7"],
+      "dissenters": []
+    },
+    {
+      "problem": "Réforme du mode de scrutin et représentation après création des Provinces",
+      "why_unsolved": "L'architecture des Provinces n'est pas couplée à une réforme du mode de scrutin législatif ou de la représentation territoriale au Sénat.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "La transition vers la capitalisation des retraites déclenche un stress sur le marché de la dette souveraine pendant la période de double-financement",
+      "trigger": "Le programme baisse les recettes (production-tax -11,5 Md€/an, IS -25%→20%) tout en finançant les premières tranches de capitalisation, sans plan de financement explicite ni calendrier des économies de dépense.",
+      "probability": 0.4,
+      "severity": 0.8,
+      "reasoning": "Conjonction historiquement risquée pour une dette à 120% du PIB ; les marchés peuvent réagir avant que les économies de dépense matérialisent l'effet règle d'or.",
+      "supported_by": ["claude-opus-4-7", "deepseek-v3", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Échec de la révision constitutionnelle migratoire au Congrès puis en référendum ; plusieurs réformes régaliennes perdent leur ancrage juridique",
+      "trigger": "Seuil 3/5 non atteint ou rejet référendaire ; primauté sur CEDH/CJUE non inscrite, mesures (quotas, droit du sol, rétention 24 mois) censurées.",
+      "probability": 0.5,
+      "severity": 0.75,
+      "reasoning": "Le programme conditionne tout l'agenda migratoire à la révision ; un blocage neutralise la cohérence du bloc régalien.",
+      "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Création des Provinces produit un blocage durable de l'administration territoriale",
+      "trigger": "Fusion simultanée départements + régions, transfert de compétences et de personnels sans phasage explicite ; négociations RH conflictuelles ; capture par les grands élus locaux.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "Refonte territoriale d'une ampleur inédite ; précédent des fusions régionales 2016 sur la durée d'absorption.",
+      "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Glissement du calendrier de mise en service du nouveau parc nucléaire au-delà d'une décennie compromet la crédibilité de la décarbonation",
+      "trigger": "Précédents EPR (Flamanville, Olkiluoto), absence de SMR commercialisés, supply chain tendue.",
+      "probability": 0.55,
+      "severity": 0.65,
+      "reasoning": "Si la sortie du régime dérogatoire renouvelables précède la mise en service nucléaire, l'écart d'émissions s'accroît à court terme.",
+      "supported_by": ["claude-opus-4-7"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Mobilisation sociale massive contre le passage à 65 ans bloque l'agenda global de réformes",
+      "trigger": "Annonce du relèvement de l'âge légal à 65 ans alors que la précédente réforme (64 ans, 2023) a déjà cristallisé l'opposition.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "Précédent récent de mobilisation prolongée ; combinaison avec la réforme du Code du travail amplifie le potentiel conflictuel.",
+      "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Friction juridique et diplomatique majeure avec l'UE et le Conseil de l'Europe",
+      "trigger": "Inscription de la primauté constitutionnelle, suppression de l'accord franco-algérien de 1968, condamnations CJUE/CEDH non exécutées.",
+      "probability": 0.45,
+      "severity": 0.7,
+      "reasoning": "Standoff juridique séquentiel décrit dans le programme ; risque de représailles commerciales ou de dégradation de la coopération sectorielle (Frontex, Schengen).",
+      "supported_by": ["gemini-2.5-pro", "grok-4", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Ségrégation spatiale accrue après suppression de la loi SRU",
+      "trigger": "Suppression de l'article 55 sans mécanisme compensatoire ; négociation des objectifs de flux par commune.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "Précédents internationaux : la suppression de quotas territoriaux de logement social tend à concentrer le logement aidé dans les communes déjà pourvues.",
+      "supported_by": ["qwen3.6", "gemini-2.5-pro"],
+      "dissenters": []
+    }
+  ]
+}

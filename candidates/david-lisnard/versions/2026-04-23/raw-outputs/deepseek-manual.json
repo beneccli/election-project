@@ -1,0 +1,1085 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "david-lisnard",
+  "version_date": "2026-04-23",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-23T01:23:27.943Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Programme de David Lisnard (Nouvelle Énergie) axé sur le rétablissement des comptes publics via une règle d'or budgétaire, une réforme des retraites combinant répartition minimale et capitalisation obligatoire, une décentralisation radicale vers des provinces, une politique sécuritaire et migratoire restrictive, et une écologie pro-nucléaire rejetant la décroissance.",
+  "positioning": {
+    "economic": {
+      "score": 3,
+      "anchor_comparison": "Plus orienté marché que Macron 2017, similaire à Fillon 2017.",
+      "evidence": [
+        {
+          "quote": "Supprimer les surcharges sur le capital et le travail et mener l’assouplissement des règles du Code du Travail permettront de reconquérir des parts de marché.",
+          "source_ref": "sources.md#une-economie-plus-prospere-dans-la-mondialisation"
+        },
+        {
+          "quote": "la baisse de la fiscalité de production doit être intensifiée. [...] suppression de plusieurs contributions (C3S, CVAE…).",
+          "source_ref": "sources.md#la-baisse-de-la-fiscalite-de-production-doit-etre-intensifiee"
+        },
+        {
+          "quote": "instauration d’un contrat de travail unique pour les nouveaux emplois, fusionnant CDI et CDD.",
+          "source_ref": "sources.md#pour-revenir-au-plein-emploi-lacces-au-travail-et-a-la-formation-sera-simplifie-et-stimule"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Mesures explicites de réduction des dépenses publiques (objectif <50% du PIB), de baisse de la fiscalité de production, de flexibilisation du marché du travail et de retraite par capitalisation, indiquant une orientation pro-marché cohérente."
+    },
+    "social_cultural": {
+      "score": 3,
+      "anchor_comparison": "Plus conservateur que LR 2022, moins que Zemmour Reconquête 2022.",
+      "evidence": [
+        {
+          "quote": "Diviser par huit la délivrance de titres de séjour. Fixer des quotas de main-d’œuvre qualifiée et conditionner le regroupement familial à des critères de ressources et des tests d’intégration. Mettre fin à l’automaticité du droit du sol.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Supprimer l’Aide Médicale d’État (AME) et la remplacer par une aide d’urgence.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "abroger la carte scolaire qui enferme les familles dans leur quartier.",
+          "source_ref": "sources.md#i-en-finir-avec-legalitarisme-bureaucratique"
+        },
+        {
+          "quote": "L’école doit transmettre les fondamentaux – lire, écrire, compter, raisonner.",
+          "source_ref": "sources.md#ii-recentrer-lecole-sur-sa-mission-instruire"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Programme articule une forte réduction de l'immigration légale et illégale, une réforme scolaire recentrée sur l'autorité et les savoirs fondamentaux, et une critique explicite de l'égalitarisme bureaucratique, ce qui le situe à droite sur l'axe culturel."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Plus souverainiste que LR 2022, comparable à RN 2022 sur la primauté nationale.",
+      "evidence": [
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l’intérêt national. Sortir de la CEDH en dernier recours.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "il importe de redéfinir les compétences indispensables à la plus-value européenne, pour lesquelles l’Europe doit agir en pleine capacité et les compétences qui doivent rester de niveau national ou régional.",
+          "source_ref": "sources.md#pour-redefinir-les-competences-europeennes"
+        },
+        {
+          "quote": "En cas d’impossibilité pour un Etat d’exercer sa souveraineté en raison de règles supranationales, il devra être possible, en cas de blocage, de demander aux citoyens d’arbitrer par référendum.",
+          "source_ref": "sources.md#pour-democratiser-leurope"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Le programme affirme la primauté du droit national sur les traités européens, envisage une sortie conditionnelle de la CEDH et prévoit un référendum en cas de blocage supranational, marquant une orientation souverainiste marquée."
+    },
+    "institutional": {
+      "score": -1,
+      "anchor_comparison": "Similaire à Macron 2017 sur la volonté de réforme libérale-démocratique.",
+      "evidence": [
+        {
+          "quote": "Recentrer la loi sur les grands principes. [...] La loi doit donc être limitée à l’édiction des principes fondamentaux du droit.",
+          "source_ref": "sources.md#recentrer-la-loi-sur-les-grands-principes"
+        },
+        {
+          "quote": "redonner à l’article 24 de la Constitution toute son effectivité : « Le Parlement vote la loi. Il contrôle l’action du Gouvernement. Il évalue les politiques publiques ».",
+          "source_ref": "sources.md#restaurer-la-confiance-entre-lexecutif-et-le-legislatif"
+        },
+        {
+          "quote": "Un transfert massif de compétences et l’autonomie du pouvoir réglementaire pour les politiques publiques locales.",
+          "source_ref": "sources.md#un-transfert-massif-de-competences-et-lautonomie-du-pouvoir-reglementaire-pour-les-politiques-publiques-locales"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Le programme propose un rééquilibrage des pouvoirs vers le Parlement, une décentralisation radicale et une réduction du champ de la loi, ce qui relève d'une réforme institutionnelle libérale-démocratique, sans dérive illibérale identifiée."
+    },
+    "ecological": {
+      "score": -1,
+      "anchor_comparison": "Productiviste, similaire à LR 2022, moins productiviste que RN 2022.",
+      "evidence": [
+        {
+          "quote": "La France a d’abord besoin de prendre définitivement ses distances avec la vision décroissante et punitive, les mensonges et les approximations de l’écologie « rouge ».",
+          "source_ref": "sources.md#lambition-ecologique-pour-une-france-et-une-planete-bas-carbone"
+        },
+        {
+          "quote": "Favoriser la production d’énergie décarbonée en s’appuyant sur le nucléaire.",
+          "source_ref": "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+        },
+        {
+          "quote": "Il faut mettre un terme à cette gabegie [énergies renouvelables subventionnées] en faisant rentrer ces projets dans le droit commun.",
+          "source_ref": "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Le programme rejette explicitement la décroissance et l'écologie punitive, priorise le nucléaire et remet en cause les subventions aux renouvelables, tout en proposant des investissements technologiques bas-carbone. Cela le place dans une approche productiviste avec une composante techno-optimiste."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "Supprimer les surcharges sur le capital et le travail et mener l’assouplissement des règles du Code du Travail permettront de reconquérir des parts de marché.",
+          "source_ref": "sources.md#une-economie-plus-prospere-dans-la-mondialisation"
+        },
+        {
+          "quote": "Diviser par huit la délivrance de titres de séjour.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l’intérêt national.",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Les axes économique (pro-marché +3), social-culturel (conservateur +3) et de souveraineté (nationaliste +3) convergent vers la droite. Les axes institutionnel (-1) et écologique (-1) n'atténuent pas ce positionnement. Le programme s'inscrit clairement dans la droite classique, sans basculer vers l'extrême droite du fait de l'absence de remise en cause radicale des institutions démocratiques."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Règle d'or budgétaire, baisse des impôts de production de 11,5 Md€ et réforme des retraites vers la capitalisation, avec objectif de dépenses publiques <50% du PIB.",
+      "summary": "Le programme aborde la réduction des déficits via une règle d'or excluant l'investissement, une baisse ciblée de la fiscalité de production (suppression C3S, CVAE) et une réforme systémique des retraites (âge légal à 65 ans puis introduction d'une capitalisation obligatoire). La flexibilisation du marché du travail passe par un contrat unique et des incitations à l'emploi. La politique du logement supprime la loi SRU pour libérer le marché. Certains chiffrages restent incomplets, notamment le séquencement précis de la réduction de la dette.",
+      "problems_addressed": [
+        {
+          "problem": "Déficit public chronique et dette à 120% du PIB",
+          "approach": "Règle d'or constitutionnelle limitant les déficits de fonctionnement, plan de réduction des déficits sur 5 ans.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#pour-la-regle-dor-de-maitrise-des-comptes-publics",
+            "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics"
+          ],
+          "reasoning": "Mesures institutionnelles fortes et engagement pluriannuel explicite, mais trajectoire précise non détaillée."
+        },
+        {
+          "problem": "Fiscalité de production pénalisante",
+          "approach": "Suppression de la C3S et de la CVAE, représentant 11,5 Md€ de baisse d'impôts.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#la-baisse-de-la-fiscalite-de-production-doit-etre-intensifiee"
+          ],
+          "reasoning": "Chiffrage précis et cohérent avec l'objectif de compétitivité."
+        },
+        {
+          "problem": "Dualité du marché du travail et chômage structurel",
+          "approach": "Contrat de travail unique fusionnant CDI et CDD, charges patronales négatives pour les embauches de personnes au RSA depuis plus de 2 ans.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#pour-revenir-au-plein-emploi-lacces-au-travail-et-a-la-formation-sera-simplifie-et-stimule"
+          ],
+          "reasoning": "Mesures structurelles visant à fluidifier le marché du travail, mais l'impact sur le chômage de longue durée n'est pas quantifié."
+        },
+        {
+          "problem": "Soutenabilité du système de retraite",
+          "approach": "Relèvement de l'âge légal à 65 ans puis transition vers un système mixte (socle par répartition + capitalisation obligatoire).",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation"
+          ],
+          "reasoning": "Réforme profonde avec des paramètres chiffrés (116 Md€ en capitalisation cible), mais le calendrier de transition et les effets redistributifs précis ne sont pas détaillés."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Financement de la transition démographique du système de santé",
+          "significance": "Le vieillissement accroît les dépenses de santé et de dépendance ; le programme ne spécifie pas de mécanisme de financement dédié au-delà des réformes de gouvernance.",
+          "source_refs": []
+        },
+        {
+          "problem": "Impact redistributif de la suppression de l'ISF/IFI ou de la flat tax",
+          "significance": "Le programme ne détaille pas la fiscalité du patrimoine ou des hauts revenus, laissant un angle mort sur la progressivité globale du système.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Tensions sur le marché du logement locatif privé à court terme",
+          "mechanism": "Suppression de l'article 55 de la loi SRU obligeant les communes à 20-25% de logements sociaux, sans mécanisme de substitution immédiat pour les ménages modestes en zone tendue.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#la-competitivite-de-tous-les-territoires-sera-amelioree"
+          ],
+          "reasoning": "La libération du marché pourrait réduire l'offre de logements abordables dans les zones où les promoteurs privés ne construisent pas pour les bas revenus."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage politique sur la réforme constitutionnelle de la règle d'or",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Une révision constitutionnelle nécessite une majorité des 3/5 au Congrès ou un référendum, avec un risque élevé d'opposition parlementaire et sociale.",
+          "source_refs": [
+            "sources.md#pour-la-regle-dor-de-maitrise-des-comptes-publics"
+          ]
+        },
+        {
+          "risk": "Résistance sociale à la réforme des retraites et au contrat unique",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Historique des mouvements sociaux contre les réformes des retraites et du Code du travail ; la mise en œuvre pourrait être ralentie ou édulcorée.",
+          "source_refs": [
+            "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Règle d'or budgétaire interdisant les déficits de fonctionnement",
+          "source_ref": "sources.md#pour-la-regle-dor-de-maitrise-des-comptes-publics",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Suppression de la C3S et de la CVAE (11,5 Md€ de baisse d'impôts de production)",
+          "source_ref": "sources.md#la-baisse-de-la-fiscalite-de-production-doit-etre-intensifiee",
+          "quantified": true,
+          "magnitude": "11,5 milliards d'euros"
+        },
+        {
+          "measure": "Contrat de travail unique fusionnant CDI et CDD",
+          "source_ref": "sources.md#pour-revenir-au-plein-emploi-lacces-au-travail-et-a-la-formation-sera-simplifie-et-stimule",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Relèvement de l'âge légal de la retraite à 65 ans",
+          "source_ref": "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation",
+          "quantified": true,
+          "magnitude": "65 ans"
+        },
+        {
+          "measure": "Suppression de l'article 55 de la loi SRU (quota de logements sociaux)",
+          "source_ref": "sources.md#la-competitivite-de-tous-les-territoires-sera-amelioree",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Objectifs de réduction des dépenses affichés mais non séquencés ; dépendance à la croissance pour les recettes.",
+          "source_refs": [
+            "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une révision constitutionnelle et des réformes systémiques (retraites, Code du travail) à forte conflictualité sociale et politique.",
+          "source_refs": [
+            "sources.md#pour-la-regle-dor-de-maitrise-des-comptes-publics"
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "La plupart des mesures relèvent du cadre national ; quelques interactions avec les règles budgétaires européennes.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Une révision constitutionnelle serait difficile à annuler, mais les mesures infra-constitutionnelles (fiscalité, contrat de travail) pourraient être modifiées par une majorité ultérieure.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.75
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Réforme de l'école (suppression carte scolaire, chèque-éducation), doublement des étudiants en médecine, relance de la politique familiale et réduction drastique de l'immigration légale.",
+      "summary": "Le programme propose une transformation profonde du système éducatif (autonomie des établissements, libre choix scolaire, recentrage sur les fondamentaux) et du système de santé (suppression des ARS, augmentation du numerus clausus, incitations territoriales). La politique familiale est relancée via le déplafonnement du quotient familial. En matière d'immigration, l'objectif est de diviser par huit la délivrance de titres de séjour et de conditionner les prestations sociales non-contributives à cinq ans de résidence. Les mesures sont détaillées mais leur chiffrage budgétaire est souvent absent.",
+      "problems_addressed": [
+        {
+          "problem": "Baisse du niveau scolaire et inégalités territoriales",
+          "approach": "Suppression progressive de la carte scolaire, chèque-éducation, autonomie de recrutement des chefs d'établissement, recentrage sur les fondamentaux.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#i-en-finir-avec-legalitarisme-bureaucratique",
+            "sources.md#ii-recentrer-lecole-sur-sa-mission-instruire"
+          ],
+          "reasoning": "Mesures structurelles visant à introduire de la concurrence et de l'autonomie, mais les effets sur les inégalités sont débattus et non quantifiés."
+        },
+        {
+          "problem": "Déserts médicaux et pénurie de soignants",
+          "approach": "Conventionnement différencié pour inciter à l'installation en zone sous-dotée, doublement des étudiants en médecine d'ici 2030, suppression des ARS, reconnaissance des compétences paramédicales.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#1-garantir-lacces-aux-soins-par-la-liberte",
+            "sources.md#3-respecter-les-soignants-cest-leur-rendre-leur-liberte"
+          ],
+          "reasoning": "Leviers incitatifs et augmentation de l'offre de formation, mais les délais de formation sont longs et l'efficacité des incitations financières n'est pas garantie."
+        },
+        {
+          "problem": "Niveau d'immigration légale et intégration",
+          "approach": "Quotas d'immigration économique stricts, division par huit des titres de séjour, conditionnement du regroupement familial, fin de l'automaticité du droit du sol.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "Objectifs quantifiés et mesures juridiques précises, mais la faisabilité au regard du droit européen et international est incertaine."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Accueil de la petite enfance et congé parental",
+          "significance": "Le programme évoque la politique familiale sans détailler les mesures relatives aux modes de garde ou au congé parental, essentiels pour la conciliation vie professionnelle/familiale.",
+          "source_refs": []
+        },
+        {
+          "problem": "Lutte contre la pauvreté et inclusion sociale",
+          "significance": "Au-delà de la suppression de l'AME et du conditionnement des prestations sociales pour les étrangers, le programme ne propose pas de stratégie globale de réduction de la pauvreté.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Accès aux soins pour les étrangers en situation irrégulière",
+          "mechanism": "Suppression de l'Aide Médicale d'État (AME) remplacée par une aide d'urgence moins étendue.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "Réduction de la couverture santé pour une population vulnérable, avec des conséquences potentielles en termes de santé publique et de coûts différés."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Opposition syndicale et enseignante à la réforme de l'école",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "La suppression du statut national des enseignants et l'autonomie de recrutement par les chefs d'établissement heurtent frontalement les organisations syndicales et la culture du ministère de l'Éducation nationale.",
+          "source_refs": [
+            "sources.md#le-statut-des-enseignants-et-des-etablissements-sera-entierement-refondu-sur-la-liberte-de-recrutement"
+          ]
+        },
+        {
+          "risk": "Censure constitutionnelle ou européenne des mesures migratoires",
+          "probability": 0.7,
+          "severity": 0.9,
+          "reasoning": "La remise en cause du droit du sol, les quotas stricts et la primauté du droit national sur les traités pourraient être jugés contraires à la Constitution ou à la CEDH, nécessitant une révision constitutionnelle ou une dénonciation de traités.",
+          "source_refs": [
+            "sources.md#immigration"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Chèque-éducation et suppression de la carte scolaire",
+          "source_ref": "sources.md#i-en-finir-avec-legalitarisme-bureaucratique",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Doublement du nombre d'étudiants en médecine d'ici 2030",
+          "source_ref": "sources.md#3-respecter-les-soignants-cest-leur-rendre-leur-liberte",
+          "quantified": true,
+          "magnitude": "x2"
+        },
+        {
+          "measure": "Division par huit de la délivrance de titres de séjour",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "division par 8"
+        },
+        {
+          "measure": "Suppression de l'AME et remplacement par une aide d'urgence",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "700 M€ d'économies"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Certaines économies sont chiffrées (AME : 700 M€), mais les coûts de la revalorisation enseignante (+20% sur 5 ans) et du chèque-éducation ne sont pas compensés de manière détaillée.",
+          "source_refs": [
+            "sources.md#iii-redonner-autorite-et-attractivite-au-metier-denseignant",
+            "sources.md#immigration"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Les réformes de l'école et de la santé impliquent une refonte complète des structures existantes (suppression des ARS, nouveau statut des enseignants) avec une forte conflictualité.",
+          "source_refs": [
+            "sources.md#2-en-finir-avec-la-bureaucratie-sanitaire-pour-une-republique-de-la-subsidiarite",
+            "sources.md#le-statut-des-enseignants-et-des-etablissements-sera-entierement-refondu-sur-la-liberte-de-recrutement"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Les mesures migratoires dépendent de la renégociation ou de la sortie de traités européens (CEDH) et d'accords bilatéraux (accord franco-algérien de 1968).",
+          "source_refs": [
+            "sources.md#immigration"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Les réformes structurelles (chèque-éducation, nouveau numerus clausus) créent des droits acquis ou des parcours difficiles à inverser rapidement.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": "A",
+      "headline": "Plan massif sur 10 ans pour police et justice, peines planchers, majorité pénale à 16 ans, décentralisation de la police territoriale et lutte prioritaire contre narcotrafic et islamisme.",
+      "summary": "Le programme détaille une refonte de la chaîne de sécurité et de justice : augmentation des budgets de la police et de la justice pour atteindre la moyenne européenne, création d'une police territoriale décentralisée avec pouvoirs judiciaires, durcissement des peines (suppression des réductions automatiques, peines planchers), abaissement de la majorité pénale à 16 ans, et mesures spécifiques contre le narcotrafic et l'islamisme radical. L'ensemble forme un bloc cohérent de restauration de l'autorité régalienne, avec des objectifs chiffrés et des réformes organisationnelles précises.",
+      "problems_addressed": [
+        {
+          "problem": "Augmentation des violences et sentiment d'impunité",
+          "approach": "Plan massif de remise à niveau de la police sur 10 ans, 50% de présence sur le terrain, fin des réductions de peine automatiques, peines planchers pour récidivistes.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#1-reorganiser-lappareil-de-securite-publique-pour-agir-vraiment",
+            "sources.md#4-mettre-fin-a-limpunite-judiciaire-des-peines-reelles-executees"
+          ],
+          "reasoning": "Mesures détaillées, chiffrées (objectifs de présence) et juridiquement articulées."
+        },
+        {
+          "problem": "Délinquance des mineurs",
+          "approach": "Abaissement de la majorité pénale à 16 ans, inversion de l'excuse de minorité dès 13 ans, création d'internats disciplinaires fermés.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#4-mettre-fin-a-limpunite-judiciaire-des-peines-reelles-executees"
+          ],
+          "reasoning": "Modifications législatives claires, mais l'efficacité des structures fermées reste à démontrer."
+        },
+        {
+          "problem": "Narcotrafic et entrisme islamiste",
+          "approach": "Cellules anti-stups sous autorité préfectorale, confiscations, infiltration numérique, interdiction des Frères musulmans, expulsion des prêcheurs radicaux.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#3-frapper-sans-relache-les-narcotrafics-et-lentrisme-islamiste"
+          ],
+          "reasoning": "Approche combinant répression, renseignement et lutte idéologique, avec des mesures spécifiques."
+        },
+        {
+          "problem": "Faiblesse des moyens de la justice",
+          "approach": "Augmentation du budget de la justice à la moyenne européenne, doublement des procureurs, séparation du budget de l'administration pénitentiaire.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#une-justice-plus-efficace-et-responsable-au-nom-du-peuple-francais"
+          ],
+          "reasoning": "Objectifs quantifiés de rattrapage budgétaire et d'effectifs, mais la trajectoire précise n'est pas spécifiée."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Surpopulation carcérale et conditions de détention",
+          "significance": "Le programme prévoit plus de places de prison mais ne détaille pas les modalités de construction ni le financement correspondant, ni les mesures alternatives à l'incarcération pour désengorger.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Résistance du corps judiciaire aux réformes de la justice",
+          "probability": 0.6,
+          "severity": 0.5,
+          "reasoning": "La fixation d'objectifs de délais et d'effectivité des sanctions, ainsi que la réforme du CSM, pourrait être perçue comme une remise en cause de l'indépendance de la magistrature et susciter une opposition.",
+          "source_refs": [
+            "sources.md#la-justice-doit-devenir-plus-responsable-et-plus-performante"
+          ]
+        },
+        {
+          "risk": "Incertitude sur l'efficacité de la décentralisation policière",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "La création d'une police territoriale avec pouvoirs judiciaires est une réforme complexe qui pourrait générer des conflits de compétence et des inégalités territoriales.",
+          "source_refs": [
+            "sources.md#2-responsabiliser-les-maires-et-renforcer-les-polices-municipales"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Plan massif de remise à niveau de la police nationale sur 10 ans",
+          "source_ref": "sources.md#1-reorganiser-lappareil-de-securite-publique-pour-agir-vraiment",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Abaissement de la majorité pénale à 16 ans",
+          "source_ref": "sources.md#4-mettre-fin-a-limpunite-judiciaire-des-peines-reelles-executees",
+          "quantified": true,
+          "magnitude": "16 ans"
+        },
+        {
+          "measure": "Doublement des procureurs et séparation du budget de la justice de l'administration pénitentiaire",
+          "source_ref": "sources.md#une-justice-plus-efficace-et-responsable-au-nom-du-peuple-francais",
+          "quantified": true,
+          "magnitude": "x2"
+        },
+        {
+          "measure": "Création d'un corps de police territoriale avec qualité d'OPJ",
+          "source_ref": "sources.md#2-responsabiliser-les-maires-et-renforcer-les-polices-municipales",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Augmentation des budgets police et justice annoncée mais non chiffrée ; le financement repose sur les économies de la réforme de l'État, non détaillées.",
+          "source_refs": [
+            "sources.md#pour-la-remise-a-niveau-de-letat-regalien"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Les réformes impliquent des changements législatifs lourds (majorité pénale, peines planchers) et une réorganisation administrative profonde (police territoriale).",
+          "source_refs": [
+            "sources.md#4-mettre-fin-a-limpunite-judiciaire-des-peines-reelles-executees"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "La plupart des mesures relèvent de la souveraineté nationale, à l'exception de la coopération internationale contre le narcotrafic.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Les modifications du code pénal et de procédure pénale pourraient être révisées par une majorité ultérieure, mais les créations d'institutions (police territoriale) seraient plus difficiles à démanteler.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "institutional_democratic": {
+      "grade": "B",
+      "headline": "Décentralisation radicale avec création de 40-50 provinces, autonomie réglementaire locale et recentrage de l'État sur le régalien, après référendum constitutionnel.",
+      "summary": "Le programme propose une refonte majeure de l'organisation territoriale et du fonctionnement des institutions : création de provinces fusionnant départements et régions, transfert massif de compétences de l'État vers ces provinces avec autonomie réglementaire, recentrage du rôle du Président sur la stratégie et les crises, renforcement du Parlement dans sa mission de contrôle et d'initiative législative. Une révision constitutionnelle par référendum est envisagée pour valider ce nouveau schéma. Les principes sont clairement énoncés mais les modalités précises de la transition et de la péréquation financière restent à définir.",
+      "problems_addressed": [
+        {
+          "problem": "Millefeuille territorial et inefficacité de l'action publique",
+          "approach": "Suppression des départements et régions au profit de 40-50 provinces, simplification à trois niveaux (État/province/bloc communal).",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces"
+          ],
+          "reasoning": "Objectif clair de simplification, mais le nombre exact et les périmètres restent à définir en concertation."
+        },
+        {
+          "problem": "Inflation législative et réglementaire",
+          "approach": "Limitation de la loi aux grands principes, transfert du pouvoir réglementaire d'application aux collectivités territoriales.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#recentrer-la-loi-sur-les-grands-principes",
+            "sources.md#un-transfert-massif-de-competences-et-lautonomie-du-pouvoir-reglementaire-pour-les-politiques-publiques-locales"
+          ],
+          "reasoning": "Mesure de fond visant à réduire la production normative, mais la mise en œuvre nécessite une révision constitutionnelle et une recodification."
+        },
+        {
+          "problem": "Affaiblissement du Parlement",
+          "approach": "Renforcement du contrôle gouvernemental, définition d'un périmètre législatif réservé au Parlement, évaluation systématique des politiques publiques.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#restaurer-la-confiance-entre-lexecutif-et-le-legislatif"
+          ],
+          "reasoning": "Les intentions sont louables mais les mécanismes concrets (droit d'initiative réservé, modalités de contrôle) sont peu détaillés."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réforme du mode de scrutin et proportionnelle",
+          "significance": "Le programme n'aborde pas la question de la représentation proportionnelle ni du mode d'élection des députés, pourtant centrale dans le débat sur le renouveau démocratique.",
+          "source_refs": []
+        },
+        {
+          "problem": "Statut de la Corse et des outre-mer",
+          "significance": "La réforme territoriale proposée ne mentionne pas spécifiquement les collectivités à statut particulier, laissant un flou sur leur devenir dans le nouveau schéma.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Inégalités territoriales de services publics",
+          "mechanism": "La décentralisation radicale avec autonomie réglementaire et financière pourrait accentuer les écarts entre provinces riches et pauvres en l'absence de mécanismes de péréquation robustes non détaillés.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#un-partage-de-recettes-fiscales-nationales"
+          ],
+          "reasoning": "Le programme mentionne un partage de recettes fiscales nationales mais sans préciser les critères de répartition, ce qui pourrait laisser les territoires les moins dynamiques sous-dotés."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Échec du référendum constitutionnel",
+          "probability": 0.5,
+          "severity": 0.9,
+          "reasoning": "La réforme territoriale et institutionnelle est conditionnée à un référendum ; un rejet bloquerait l'ensemble du volet décentralisation.",
+          "source_refs": [
+            "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces"
+          ]
+        },
+        {
+          "risk": "Résistance des corps intermédiaires et des élus locaux",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "La suppression des départements et régions actuels suscitera une opposition forte des élus concernés et des administrations territoriales.",
+          "source_refs": [
+            "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Création de 40-50 provinces en remplacement des départements et régions",
+          "source_ref": "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces",
+          "quantified": true,
+          "magnitude": "40-50 provinces"
+        },
+        {
+          "measure": "Transfert du pouvoir réglementaire d'application de la loi aux provinces",
+          "source_ref": "sources.md#un-transfert-massif-de-competences-et-lautonomie-du-pouvoir-reglementaire-pour-les-politiques-publiques-locales",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Référendum constitutionnel pour valider la nouvelle organisation territoriale",
+          "source_ref": "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "La simplification administrative est censée générer des économies, mais le coût de la transition (fusion des services, harmonisation des statuts) n'est pas chiffré.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une révision constitutionnelle, un référendum, et une refonte complète de l'administration territoriale sur plusieurs années.",
+          "source_refs": [
+            "sources.md#un-nouveau-schema-institutionnel-avec-linstauration-de-provinces"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Réforme strictement nationale sans dépendance externe majeure.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Une fois les provinces créées et les compétences transférées, un retour en arrière serait politiquement et administrativement très difficile.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.65
+    },
+    "environmental_long_term": {
+      "grade": "C",
+      "headline": "Priorité au nucléaire (EPR, SMR), rejet de l'écologie punitive et de la décroissance, soutien aux innovations technologiques (captage CO2, hydrogène) sans objectifs chiffrés de réduction d'émissions.",
+      "summary": "Le programme affiche une ambition écologique fondée sur le progrès technologique et le nucléaire, en opposition à l'écologie 'rouge' et punitive. Il propose de prolonger la durée de vie des réacteurs, de construire de nouveaux EPR et SMR, et d'investir dans l'hydrogène et le captage de CO2. La fiscalité verte est évoquée avec des principes (taxation constante, réciprocité, redistribution) mais sans mesures concrètes. Les énergies renouvelables subventionnées sont critiquées. Aucun objectif chiffré de réduction des émissions de GES ou de calendrier de sortie des énergies fossiles n'est fourni, ce qui limite la crédibilité du volet climatique au regard des engagements internationaux de la France.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance aux énergies fossiles et souveraineté énergétique",
+          "approach": "Développement du nucléaire (prolongation à 60 ans, EPR2, SMR), soutien à la recherche sur les nouvelles technologies (hydrogène, captage CO2).",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire",
+            "sources.md#vers-le-zero-pollution-la-transformation-vertueuse-par-lhypertechnologie-et-leconomie-circulaire"
+          ],
+          "reasoning": "Mesures industrielles précises pour le nucléaire, mais le calendrier et les investissements nécessaires ne sont pas chiffrés."
+        },
+        {
+          "problem": "Pollution et émissions de GES",
+          "approach": "Prix du carbone et fiscalité verte avec réciprocité internationale, programme international de fixation du carbone (forêts, océans).",
+          "strength": 0.4,
+          "source_refs": [
+            "sources.md#le-prix-du-carbone-et-la-fiscalite-verte-pour-facturer-la-pollution"
+          ],
+          "reasoning": "Principes généraux énoncés sans dispositif concret (niveau de taxe, calendrier, mécanisme redistributif)."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Objectifs de réduction des émissions de GES à 2030 et neutralité carbone 2050",
+          "significance": "Le programme ne mentionne aucun objectif chiffré aligné avec la Stratégie Nationale Bas-Carbone ou les engagements européens, laissant un vide sur la trajectoire climatique.",
+          "source_refs": []
+        },
+        {
+          "problem": "Adaptation au changement climatique (canicules, inondations, retrait-gonflement des argiles)",
+          "significance": "Le programme se concentre sur l'atténuation technologique et ignore les mesures d'adaptation nécessaires face aux impacts déjà présents.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversité et artificialisation des sols",
+          "significance": "La question de la biodiversité n'est abordée que marginalement, et le Zéro Artificialisation Nette (ZAN) n'est pas mentionné.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Développement des énergies renouvelables",
+          "mechanism": "Le programme prévoit de faire rentrer les projets d'énergies renouvelables dans le droit commun et de mettre fin aux subventions dérogatoires, ce qui pourrait ralentir leur déploiement.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+          ],
+          "reasoning": "La réduction des incitations financières pourrait freiner l'atteinte des objectifs européens de part d'ENR, même si le nucléaire compense en termes d'émissions."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Retards dans la construction des nouveaux EPR et SMR",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Les retards et surcoûts historiques des projets nucléaires (Flamanville) rendent incertain le calendrier de mise en service des nouvelles capacités.",
+          "source_refs": [
+            "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+          ]
+        },
+        {
+          "risk": "Opposition de l'UE aux clauses miroirs et à la réciprocité commerciale",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "La mise en place unilatérale de clauses miroirs ou de taxes carbone aux frontières pourrait être contestée au sein de l'OMC ou nécessiter une renégociation des traités européens.",
+          "source_refs": [
+            "sources.md#le-prix-du-carbone-et-la-fiscalite-verte-pour-facturer-la-pollution"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Prolongation de la durée de vie des réacteurs nucléaires jusqu'à 60 ans",
+          "source_ref": "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire",
+          "quantified": true,
+          "magnitude": "60 ans"
+        },
+        {
+          "measure": "Construction d'EPR de nouvelle génération et déploiement de SMR",
+          "source_ref": "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Fin des subventions dérogatoires aux énergies renouvelables",
+          "source_ref": "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Le programme nucléaire nécessite des investissements publics massifs (nouveaux EPR) non chiffrés ; les économies sur les subventions ENR pourraient les financer partiellement.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "La construction de nouveaux réacteurs et le développement de technologies de rupture (fusion, hydrogène) s'étalent sur des décennies avec des incertitudes techniques et industrielles.",
+          "source_refs": [
+            "sources.md#vers-le-zero-pollution-la-transformation-vertueuse-par-lhypertechnologie-et-leconomie-circulaire"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Certaines technologies (hydrogène, captage CO2) dépendent de coopérations européennes ou internationales et de marchés mondiaux de l'énergie.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Les décisions d'investissement nucléaire engagent le pays sur plusieurs générations ; l'arrêt des subventions ENR peut être révisé par une loi ultérieure.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.6
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "non quantifiable précisément",
+      "units": "non applicable",
+      "confidence": 0.3,
+      "caveats": "Le programme combine une réduction de la dette publique bénéfique aux jeunes générations, une réforme des retraites favorable à long terme mais avec un effort d'âge à court terme, et une politique du logement défavorable à l'accès des jeunes. L'absence de chiffrage global empêche une estimation monétaire."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Baisse des prélèvements obligatoires à terme via la réduction des dépenses publiques, mais possible austérité budgétaire à court terme.",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "Suppression des quotas de logements sociaux (loi SRU) pouvant réduire l'offre locative abordable en zones tendues et renchérir l'accès à la propriété pour les primo-accédants modestes.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Âge légal porté à 65 ans, puis transition vers un système mixte avec capitalisation obligatoire ; les projections du programme annoncent des revenus de retraite supérieurs à long terme, mais la transition pèsera sur les actifs.",
+        "quantified": "116 Md€ de capitalisation cible"
+      },
+      "labor_market": {
+        "summary": "Contrat unique et baisse des charges sur les bas salaires pourraient améliorer l'insertion professionnelle des jeunes.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Investissements dans le nucléaire et les technologies bas-carbone bénéfiques à long terme, mais absence d'objectifs de réduction d'émissions à court terme pourrait reporter le coût de la transition.",
+        "quantified": null
+      },
+      "narrative_summary": "Impact net incertain : la réduction de la dette et la réforme des retraites par capitalisation pourraient améliorer la situation patrimoniale future, mais le durcissement de l'accès au logement et l'effort d'âge pour la retraite représentent des transferts défavorables à court-moyen terme."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Maintien probable de l'indexation des pensions sur l'inflation (programme ne spécifie pas de désindexation).",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "Relèvement progressif de l'âge légal à 65 ans pourrait affecter les personnes en fin de carrière, mais les pensions déjà liquidées ne sont pas remises en cause ; le socle minimum garanti à 1000€/mois peut bénéficier aux petites retraites.",
+        "quantified": "minimum vieillesse 1000€/mois"
+      },
+      "healthcare": {
+        "summary": "Réformes de gouvernance et lutte contre les déserts médicaux pourraient améliorer l'accès aux soins dans les zones rurales où résident de nombreux retraités.",
+        "quantified": null
+      },
+      "narrative_summary": "Impact globalement neutre à positif : protection des pensions acquises, amélioration potentielle de l'accès aux soins, et revalorisation des minima."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Réforme systémique : relèvement de l'âge à 65 ans puis introduction progressive de la capitalisation obligatoire.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Le relèvement de l'âge légal à 65 ans pourrait réduire les droits pour les cohortes proches de la retraite, mais l'effet sur les jeunes actifs est limité à ce stade.",
+            "source_refs": [
+              "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Début de la transition vers la capitalisation ; les effets sont ambivalents : effort d'épargne supplémentaire pour les actifs, mais promesse de rendements supérieurs à long terme.",
+            "source_refs": [
+              "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "La capitalisation obligatoire (cible 116 Md€, 40% du total) devrait générer des pensions plus élevées et réduire le poids de la dette implicite pour les jeunes générations.",
+            "source_refs": [
+              "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Objectif de réduction du ratio dette/PIB via règle d'or et baisse des dépenses de fonctionnement.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Effet limité à court terme ; la règle d'or n'empêche pas un déficit d'investissement et la réduction des dépenses prend du temps.",
+            "source_refs": [
+              "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Les efforts de maîtrise des dépenses et les gains de croissance potentielle pourraient infléchir durablement la trajectoire de la dette.",
+            "source_refs": [
+              "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Si la réforme de l'État et des retraites est menée à bien, le ratio dette/PIB pourrait diminuer significativement, allégeant la charge pour les générations futures.",
+            "source_refs": [
+              "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Priorité au nucléaire et aux technologies bas-carbone, rejet des subventions aux ENR intermittentes.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Aucun objectif de réduction d'émissions à court terme ; l'effet sur le climat est neutre à cet horizon, le temps de déploiement des nouveaux réacteurs étant long.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Mise en service potentielle des premiers EPR2 et déploiement de SMR, contribuant à une électricité décarbonée ; mais l'absence de politique sur les transports et le bâtiment limite le gain global.",
+            "source_refs": [
+              "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Si le programme nucléaire est pleinement réalisé, la France pourrait disposer d'un mix électrique quasi-décarboné ; l'effet sur les émissions territoriales serait positif.",
+            "source_refs": [
+              "sources.md#favoriser-la-production-denergie-decarbonee-en-sappuyant-sur-le-nucleaire"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Réformes de gouvernance (suppression ARS, décentralisation) et doublement des étudiants en médecine.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Le doublement du numerus clausus n'aura d'effet sur le nombre de médecins qu'après 10-12 ans de formation ; les réformes de gouvernance peuvent améliorer l'efficience à court terme.",
+            "source_refs": [
+              "sources.md#3-respecter-les-soignants-cest-leur-rendre-leur-liberte"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Les premiers effets de l'augmentation des promotions médicales commenceront à se faire sentir, réduisant les tensions sur l'offre de soins.",
+            "source_refs": [
+              "sources.md#3-respecter-les-soignants-cest-leur-rendre-leur-liberte"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Le nombre de médecins en activité devrait augmenter significativement, améliorant l'accès aux soins pour toutes les générations, y compris les jeunes d'aujourd'hui devenus seniors.",
+            "source_refs": [
+              "sources.md#3-respecter-les-soignants-cest-leur-rendre-leur-liberte"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Suppression de la carte scolaire, chèque-éducation, autonomie des établissements, recentrage sur les fondamentaux.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Les effets d'une réforme scolaire se mesurent sur le long terme ; à court terme, l'impact sur le niveau des élèves est incertain.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "La mise en concurrence et l'autonomie pourraient améliorer progressivement les résultats scolaires moyens, sous réserve d'une mise en œuvre effective.",
+            "source_refs": [
+              "sources.md#i-en-finir-avec-legalitarisme-bureaucratique"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Un système éducatif plus performant augmenterait le capital humain des générations futures, avec des effets positifs sur la croissance et l'emploi.",
+            "source_refs": [
+              "sources.md#i-en-finir-avec-legalitarisme-bureaucratique"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Suppression de l'article 55 de la loi SRU (quota de logements sociaux).",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "La fin de l'obligation de construction de logements sociaux pourrait réduire l'offre abordable en zone tendue, aggravant les difficultés d'accès au logement pour les jeunes ménages.",
+            "source_refs": [
+              "sources.md#la-competitivite-de-tous-les-territoires-sera-amelioree"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "La libéralisation du marché pourrait stimuler la construction privée et atténuer la tension, mais l'effet net dépend des politiques locales.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "À long terme, l'impact dépendra de l'évolution du marché et des politiques d'aménagement locales, non spécifiées dans le programme.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "Le programme combine des mesures favorables aux jeunes générations à long terme (réduction de la dette, retraite par capitalisation) avec des mesures défavorables à court terme (logement, âge de départ) et des protections pour les retraités actuels. L'absence de chiffrage précis et de calendrier détaillé ne permet pas de trancher nettement le sens du transfert intergénérationnel net.",
+    "source_refs": [
+      "sources.md#la-reforme-des-retraites-la-priorite-de-laugmentation-de-lage-de-la-retraite-avant-la-reforme-densemble-combinant-la-repartition-et-la-capitalisation",
+      "sources.md#pour-un-plan-de-reduction-des-deficits-et-de-la-dette-publics",
+      "sources.md#la-competitivite-de-tous-les-territoires-sera-amelioree"
+    ],
+    "confidence": 0.4
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Dette publique autour de 120% du PIB, croissance molle, tensions sur les retraites et la santé, poursuite de la dégradation du niveau scolaire et des services publics, augmentation continue de l'immigration légale et illégale.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "security_sovereignty",
+      "institutional_democratic",
+      "social_demographic"
+    ],
+    "dimensions_unchanged": [
+      "environmental_long_term"
+    ],
+    "reasoning": "Le programme propose des ruptures nettes sur les plans budgétaire (règle d'or), des retraites (capitalisation), institutionnel (provinces) et migratoire (quotas drastiques). En revanche, sur le climat, les objectifs de réduction d'émissions ne sont pas renforcés, s'appuyant essentiellement sur la filière nucléaire existante et future sans rupture majeure de trajectoire d'émissions à court terme.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Financement de la dépendance et de la perte d'autonomie",
+      "why_unsolved": "Le programme ne mentionne pas de mesures spécifiques pour le financement de la dépendance liée au vieillissement de la population.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Transition écologique du parc automobile et du chauffage résidentiel",
+      "why_unsolved": "Le programme se concentre sur l'offre d'électricité nucléaire mais n'aborde pas les secteurs diffus des transports et du bâtiment, principaux émetteurs de GES.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Péréquation financière entre provinces riches et pauvres",
+      "why_unsolved": "Le principe de partage de recettes fiscales est évoqué mais aucun mécanisme de péréquation n'est détaillé, ce qui pourrait accentuer les inégalités territoriales.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [
+        "sources.md#un-partage-de-recettes-fiscales-nationales"
+      ]
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Blocage institutionnel et rejet du référendum constitutionnel",
+      "trigger": "Échec du référendum sur la nouvelle organisation territoriale (provinces).",
+      "probability": 0.5,
+      "severity": 0.8,
+      "reasoning": "Un rejet bloquerait l'ensemble du volet décentralisation et affaiblirait l'autorité politique pour mener les autres réformes structurelles."
+    },
+    {
+      "scenario": "Crise sociale majeure sur la réforme des retraites et du Code du travail",
+      "trigger": "Mouvements sociaux de grande ampleur similaires à 1995 ou 2023.",
+      "probability": 0.6,
+      "severity": 0.7,
+      "reasoning": "Le relèvement de l'âge légal et le contrat unique touchent à des acquis sociaux sensibles ; une forte contestation pourrait conduire à des concessions ou à l'abandon partiel des mesures."
+    },
+    {
+      "scenario": "Censure constitutionnelle ou européenne des mesures migratoires",
+      "trigger": "Décision du Conseil constitutionnel ou de la CEDH invalidant la primauté du droit national ou les restrictions au regroupement familial.",
+      "probability": 0.7,
+      "severity": 0.6,
+      "reasoning": "La mise en conformité nécessiterait une révision constitutionnelle ou une dénonciation de traités, processus longs et incertains, risquant de vider la réforme migratoire de sa substance."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0].strength",
+        "critique": "L'attribution d'une force de 0.7 à la règle d'or budgétaire peut surestimer son efficacité, car l'expérience internationale montre que les règles budgétaires sont souvent contournées ou suspendues en période de crise.",
+        "alternative_interpretation": "La règle d'or pourrait être un signal politique plus qu'un instrument contraignant, sa crédibilité dépendant de la volonté d'application continue sur plusieurs mandats."
+      },
+      {
+        "claim_location": "horizon_matrix.public_debt.h_2038_2047.impact_score",
+        "critique": "Un impact de +2 suppose que l'ensemble des réformes structurelles (retraites, État, décentralisation) seront intégralement mises en œuvre et produiront les effets escomptés, ce qui est très optimiste compte tenu des risques d'exécution.",
+        "alternative_interpretation": "Un score de +1 refléterait mieux l'incertitude sur la réalisation effective des économies et la sensibilité à la croissance."
+      }
+    ],
+    "potential_bias": "L'analyse pourrait sous-estimer la cohérence du volet écologique en le réduisant à l'absence d'objectifs chiffrés, alors que le programme articule une vision technologique cohérente avec la tradition nucléaire française. La note 'C' et les scores faibles dans la matrice horizon pourraient refléter un biais en faveur d'une approche plus réglementaire du climat.",
+    "evidence_gaps": "L'absence de chiffrage précis du coût du plan police/justice et du financement de la transition des retraites vers la capitalisation limite la solidité des jugements sur la soutenabilité budgétaire.",
+    "confidence_in_critique": 0.65
+  },
+  "confidence_self_assessment": 0.7
+}

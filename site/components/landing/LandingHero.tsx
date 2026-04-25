@@ -11,8 +11,6 @@ import StakesAreaChart from "./StakesAreaChart";
 
 interface Props {
   lang: Lang;
-  analyzedCount: number;
-  pendingCount: number;
 }
 
 // Local copy strings. Consolidated into UI_STRINGS in task 0116.
@@ -27,16 +25,8 @@ const HERO_BODY = {
   en: "Every programme analysed by 4–5 frontier AI models on identical dimensions. Disagreement between models preserved. Sources, prompts and raw outputs are public. The goal: analysis, not advocacy.",
 };
 
-function countLabel(n: number, m: number, lang: Lang): string {
-  return lang === "fr"
-    ? `${n} candidats analysés · ${m} à venir`
-    : `${n} candidates analysed · ${m} to come`;
-}
-
 export default function LandingHero({
   lang,
-  analyzedCount,
-  pendingCount,
 }: Props) {
   return (
     <section className="px-6 py-12 md:py-16 border-b border-[color:var(--rule)]">

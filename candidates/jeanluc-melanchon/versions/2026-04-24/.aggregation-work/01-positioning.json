@@ -1,0 +1,129 @@
+{
+  "positioning": {
+    "economic": {
+      "consensus_interval": [-5, -4],
+      "modal_score": -5,
+      "anchor_narrative": "Six modèles unanimes sur un axe économique radicalement interventionniste (de -5 à -4), partagés à égalité (3-3) entre une lecture anticapitaliste explicite (-5) et une lecture d'économie mixte sous forte régulation publique (-4). Les éléments structurants : pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement ; barème d'impôt à 14 tranches ; ISF climatique ; encadrement des prix de première nécessité ; SMIC à 1600€ net ; conversion par la BCE de la dette publique en titres perpétuels à taux nul ; plan d'investissement de 200 Md€.",
+      "evidence": [
+        { "quote": "Constituer des pôles publics dans les secteurs stratégiques : médicaments, transports et mobilité, banque, énergie, armement", "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee" },
+        { "quote": "Faire la révolution fiscale pour répartir l'effort entre tous selon les revenus.", "source_ref": "sources.md#chapitre-6--partage-des-richesses" },
+        { "quote": "Rompre avec le capitalisme. Et de substituer à la dictature des actionnaires un outil d'intérêt plus collectif pour guider l'économie : la planification écologique.", "source_ref": "sources.md#introduction" }
+      ],
+      "confidence": 0.85,
+      "dissent": [],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": -4, "reasoning": "Socialisation bancaire, fiscalité progressive, hausse du SMIC, prix administrés et investissement public massif." },
+        { "model": "claude-opus-4-7", "score": -5, "reasoning": "Program is structurally state-interventionist across pricing, ownership (public poles in banking, energy, pharma, transport, armament), labor (SMIC to €1600), and inheritance (€12M ceiling). Anchor places it at the anti-capitalist end of the axis." },
+        { "model": "deepseek", "score": -5, "reasoning": "Programme explicite sur la reprise en main publique de secteurs stratégiques, la régulation des prix et la fiscalité confiscatoire des hauts patrimoines. Propositions concrètes et affirmées." },
+        { "model": "gemini-1.5-pro", "score": -4, "reasoning": "Program centers on widespread nationalization, public monopolies, strict price controls, and heavy capital taxation." },
+        { "model": "mistral-le-chat-2026-04-25", "score": -4, "reasoning": "Le programme propose une transformation structurelle de l'économie vers un modèle d'économie mixte avec une forte régulation publique, une taxation radicale des grands revenus et du capital, et une nationalisation des secteurs stratégiques." },
+        { "model": "qwen3.6", "score": -5, "reasoning": "Program mandates price controls, nationalizations in energy/transport/banking, a 14-bracket income tax, wealth taxes, and BCE debt monetization, indicating maximum state intervention on the axis." }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [-5, -3],
+      "modal_score": -4,
+      "anchor_narrative": "Pôle progressiste fortement assumé : constitutionnalisation de l'IVG, du droit de mourir dans la dignité et de la non-marchandisation du corps ; auto-détermination de genre déjudiciarisée ; régularisation des sans-papiers ; droit de vote des étrangers aux élections locales ; lutte structurelle contre les discriminations. Le score modal de -4 (gpt, gemini, qwen) est encadré par claude et mistral (-3, jugés moins radicaux que des mouvements anti-système) et deepseek (-5, mesures « sans ambiguïté »).",
+      "evidence": [
+        { "quote": "Déjudiciariser le changement de sexe à l'état-civil en le rendant libre et gratuit devant un officier d'état civil", "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte" },
+        { "quote": "Constitutionaliser le droit de mourir dans la dignité (y compris avec assistance) et l'accès garanti à des soins palliatifs dans la Constitution.", "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte" },
+        { "quote": "Constitutionnaliser la non-marchandisation du corps humain et le droit fondamental de disposer de soi en toutes circonstances", "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte" }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        { "model": "claude-opus-4-7", "position": -3, "reasoning": "Constitutionalising abortion, assisted dying, gender self-determination for minors with one-parent consent, full birthright citizenship, and voting rights for foreign residents in local elections place the program firmly progressive but within the recognisable French left tradition rather than at an extreme pole." },
+        { "model": "deepseek", "position": -5, "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté." },
+        { "model": "mistral-le-chat-2026-04-25", "position": -3, "reasoning": "Le programme radicalise les positions sur les droits individuels (IVG, euthanasie, droits LGBTQIA+), la protection de l'enfance, et la lutte contre les discriminations, mais reste moins radical que des mouvements anti-système." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": -4, "reasoning": "Droits LGBTI, IVG, égalité, accueil des migrants et lutte contre les discriminations structurent l'axe social." },
+        { "model": "claude-opus-4-7", "score": -3, "reasoning": "Constitutionalising abortion, assisted dying, gender self-determination, full birthright citizenship, and voting rights for foreign residents place the program firmly progressive but within the French left tradition rather than at an extreme pole." },
+        { "model": "deepseek", "score": -5, "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté." },
+        { "model": "gemini-1.5-pro", "score": -4, "reasoning": "Proposes systematic deconstruction of patriarchal structures, free IVG, full constitutional reproductive rights, and strong anti-discrimination measures." },
+        { "model": "mistral-le-chat-2026-04-25", "score": -3, "reasoning": "Le programme radicalise les positions sur les droits individuels (IVG, euthanasie, droits LGBTQIA+), la protection de l'enfance, et la lutte contre les discriminations." },
+        { "model": "qwen3.6", "score": -4, "reasoning": "Strong emphasis on gender parity, LGBTI rights, reproductive freedom, anti-discrimination testing, and regularisation of migrants places the program firmly on the progressive pole." }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [2, 3],
+      "modal_score": 3,
+      "anchor_narrative": "Souverainisme de gauche assumé : retrait du commandement intégré de l'OTAN puis sortie progressive de l'organisation, désobéissance aux traités européens incompatibles avec les objectifs écologiques et sociaux (Plan B), protectionnisme écologique et solidaire aux frontières, refus de la libre circulation des capitaux, relocalisation industrielle et alimentaire. Les six modèles distinguent ce souverainisme altermondialiste du nationalisme RN. Modal +3 (4 modèles) ; claude et gemini abaissent à +2, soulignant le maintien de cadres multilatéraux (UN, ONUDI) et l'identité plus internationaliste que nationale du projet.",
+      "evidence": [
+        { "quote": "Se retirer immédiatement du commandement intégré de l'OTAN puis, par étapes, de l'organisation elle-même", "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix" },
+        { "quote": "Instaurer le protectionnisme solidaire pour protéger l'industrie d'une concurrence déloyale ou fondée sur le non-respect des droits humains ou l'extractivisme forcené.", "source_ref": "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins" },
+        { "quote": "Refuser la libre-circulation des capitaux nous empêche de reprendre le pouvoir sur le secteur financier.", "source_ref": "sources.md#chapitre-17--europe" }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        { "model": "claude-opus-4-7", "position": 2, "reasoning": "The Plan A/Plan B EU strategy explicitly elevates national constitutional norms above EU law and commits to unilateral disobedience — operationally a sovereigntist program. NATO withdrawal and ecological protectionism reinforce this, but the multilateral, UN-centric register and refusal of identitarian framing keep it below the high-sovereigntist anchor." },
+        { "model": "gemini-1.5-pro", "position": 2, "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence — but from an altermondialist rather than nationalist register." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 3, "reasoning": "Sortie de l'OTAN, désobéissance européenne, veto commercial et souveraineté industrielle." },
+        { "model": "claude-opus-4-7", "score": 2, "reasoning": "Plan A/Plan B EU strategy elevates national constitutional norms above EU law; NATO withdrawal and ecological protectionism reinforce this, but multilateral UN-centric register keeps it below the high-sovereigntist anchor." },
+        { "model": "deepseek", "score": 3, "reasoning": "Programme articulant sortie de l'OTAN, désobéissance aux traités européens, protectionnisme et relocalisation. Le registre reste altermondialiste et internationaliste, ce qui le distingue du souverainisme identitaire." },
+        { "model": "gemini-1.5-pro", "score": 2, "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence." },
+        { "model": "mistral-le-chat-2026-04-25", "score": 3, "reasoning": "Sortie de l'OTAN, protectionnisme écologique et social, désobéissance aux traités européens incompatibles avec les objectifs écologiques et sociaux. Souveraineté industrielle, alimentaire et énergétique." },
+        { "model": "qwen3.6", "score": 3, "reasoning": "Program rejects EU fiscal/competition rules via Plan B disobedience, exits NATO command, imposes ecological protectionism and border taxes, while maintaining UN-centric multilateralism rather than ethnic nationalism." }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [2, 2],
+      "modal_score": 2,
+      "anchor_narrative": "Consensus unanime à +2 : refonte institutionnelle radicale via Assemblée constituante, RIC (révocatoire, abrogatif, législatif, constituant), suppression du 49.3, proportionnelle intégrale, abaissement du droit de vote à 16 ans, séparation stricte État / intérêts financiers. Les modèles décrivent un projet « illibéral / populiste » au sens technique (rupture avec la 5e République et primauté des principes constitutionnels nationaux sur le droit européen) tout en notant la préservation des contre-pouvoirs (indépendance judiciaire renforcée, anti-corruption, pluralisme média).",
+      "evidence": [
+        { "quote": "Convoquer une Constituante pour passer à la 6e République", "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple" },
+        { "quote": "Instaurer le Référendum d'initiative citoyenne (RIC), par lequel les citoyens qui réunissent suffisamment de signatures peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution", "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple" }
+      ],
+      "confidence": 0.85,
+      "dissent": [],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 2, "reasoning": "RIC, proportionnelle, révocation, parlementarisme et constituante modifient profondément la 5e République." },
+        { "model": "claude-opus-4-7", "score": 2, "reasoning": "Genuinely liberal-democratic reforms (proportional representation, restoration of jurors, anti-corruption, media pluralism, judicial independence) are paired with a constitutional rupture process and explicit primacy of constitutional norms over EU law." },
+        { "model": "deepseek", "score": 2, "reasoning": "Le projet de 6e République avec primauté populaire et contournement des traités existants place le programme dans la zone illibérale/populiste de l'axe, bien que les contre-pouvoirs soient préservés." },
+        { "model": "gemini-1.5-pro", "score": 2, "reasoning": "Aims to abolish the 'presidential monarchy', institute the RIC, and strictly separate state and financial interests." },
+        { "model": "mistral-le-chat-2026-04-25", "score": 2, "reasoning": "Refonte institutionnelle radicale : assemblée constituante souveraine, RIC, suppression du 49.3, et limitation des mandats. Démocratisation de la Ve République dans un cadre républicain." },
+        { "model": "qwen3.6", "score": 2, "reasoning": "Constituent assembly, abolition of 49.3, proportional representation, and RIC shift power from executive to direct/parliamentary mechanisms, fitting left-populist institutional redesign." }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [4, 4],
+      "modal_score": 4,
+      "anchor_narrative": "Consensus unanime à +4 : programme le plus écologique évalué. Inscription constitutionnelle de la « règle verte » (ne pas prélever davantage à la nature qu'elle ne reconstitue), planification écologique comme méthode de gouvernement, sortie programmée du nucléaire, objectif 100% renouvelables d'ici 2050, baisse de 65% des émissions d'ici 2030, plan de 200 Md€, rénovation thermique de 700 000 logements/an, ZAN dès 2027, interdiction des pesticides systémiques et des coupes rases, transition agroécologique 100% bio à terme.",
+      "evidence": [
+        { "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer", "source_ref": "sources.md#chapitre-12--planification-ecologique" },
+        { "quote": "Sortir des énergies carbonées : arrêter les subventions aux énergies fossiles, y compris à l'étranger.", "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique" }
+      ],
+      "confidence": 0.9,
+      "dissent": [],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 4, "reasoning": "Règle verte, planification, rénovation, biodiversité et sortie des fossiles sont au cœur du projet." },
+        { "model": "claude-opus-4-7", "score": 4, "reasoning": "Constitutional règle verte, 65% emissions cut by 2030, 100% renewables by 2050, nuclear phase-out, €200bn investment plan, 700,000 deep retrofits per year, ZAN by 2027, ban on glyphosate/neonicotinoids." },
+        { "model": "deepseek", "score": 4, "reasoning": "Les propositions écologiques sont centrales, détaillées et structurelles, couvrant l'énergie, l'agriculture, l'eau, la biodiversité et les transports." },
+        { "model": "gemini-1.5-pro", "score": 4, "reasoning": "Ecology is the central organizing principle of the economic program, featuring constitutional green rules, an exit from nuclear, and 100% renewables." },
+        { "model": "mistral-le-chat-2026-04-25", "score": 4, "reasoning": "Programme le plus ambitieux sur le plan écologique : constitutionnalisation de la règle verte, sortie du nucléaire, moratoire sur les grands projets inutiles, planification écologique." },
+        { "model": "qwen3.6", "score": 4, "reasoning": "Constitutional green rule, 200bn ecological investment, nuclear phase-out, 100% renewables by 2050, and agroecological transition demonstrate high ecological prioritization and structural planning." }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "extreme_gauche",
+      "label_distribution": {
+        "extreme_gauche": 5,
+        "gauche": 1
+      },
+      "anchor_narrative": "Pluralité large à l'extrême-gauche (5/6) : économie de rupture anticapitaliste, progressisme social maximal, écologie de planification constitutionnelle et souverainisme post-européen convergent vers le pôle radical. Qwen seul classe le programme « gauche » classique, jugeant que l'interventionnisme dur et l'écologie planifiée s'inscrivent dans la tradition de gauche historique sans franchir le seuil de l'extrême-gauche.",
+      "confidence": 0.8,
+      "dissent": [
+        { "model": "qwen3.6", "label": "gauche", "reasoning": "Hard economic interventionism combined with strongly progressive social policies and ecologist planning anchors the program in the classical left band; sovereignty and institutional axes modify implementation but do not shift the left-right placement." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "label": "extreme_gauche", "reasoning": "Le label vient surtout de l'économie de rupture, de la désobéissance européenne, de la socialisation financière et de la refondation institutionnelle." },
+        { "model": "claude-opus-4-7", "label": "extreme_gauche", "reasoning": "Economic axis at -5 (anti-capitalist register: rupture with capitalism stated as objective, inheritance ceiling, ECB debt cancellation, broad renationalisation) combined with progressive social/cultural reforms and ecological constitutionalisation." },
+        { "model": "deepseek", "label": "extreme_gauche", "reasoning": "Économie étatiste et anticapitaliste, progressisme sociétal maximal, écologie de rupture et souverainisme post-européen placent le programme à l'extrême-gauche." },
+        { "model": "gemini-1.5-pro", "label": "extreme_gauche", "reasoning": "Hard-statist economics, deep social progressivism, and an institutional rupture agenda via a Constituent Assembly pull the program firmly into the extreme-left/radical-left band, breaking explicitly with capitalist norms." },
+        { "model": "mistral-le-chat-2026-04-25", "label": "extreme_gauche", "reasoning": "Les axes économique (-4), social/culturel (-3), souveraineté (+3) et écologique (+4) convergent vers une position extrême-gauche. L'axe institutionnel (+2) renforce cette orientation par une radicalité démocratique." },
+        { "model": "qwen3.6", "label": "gauche", "reasoning": "Hard economic interventionism combined with strongly progressive social policies and ecologist planning anchors the program in the classical left band; sovereignty and institutional axes modify implementation but do not shift the left-right placement." }
+      ]
+    }
+  }
+}

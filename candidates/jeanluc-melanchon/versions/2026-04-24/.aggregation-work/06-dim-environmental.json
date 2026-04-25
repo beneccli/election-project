@@ -1,0 +1,218 @@
+{
+  "dimensions": {
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "deepseek": "A",
+          "gemini-1.5-pro": "A"
+        }
+      },
+      "headline": {
+        "text": "Règle verte constitutionnelle, -65% GES en 2030, sortie du nucléaire, 100% ENR en 2050, 200 Md€, 700 000 rénovations/an.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Ambition écologique forte, fragile sur énergie et capacité industrielle." },
+          { "model": "claude-opus-4-7", "text": "Règle verte constitutionnelle, -65% d'émissions GES en 2030, 100% renouvelables en 2050 sans nucléaire, plan d'investissement écologique de 200Md€, ZAN dès 2027." },
+          { "model": "deepseek", "text": "Règle verte constitutionnelle, 200 Md€ d'investissement, 100% ENR en 2050, sortie du nucléaire, agriculture bio et protectionnisme écologique." },
+          { "model": "gemini-1.5-pro", "text": "Planification écologique constitutionnelle (règle verte), sortie du nucléaire et 100% renouvelable." },
+          { "model": "mistral-le-chat-2026-04-25", "text": "Planification écologique radicale avec sortie du nucléaire, 100% renouvelables, et règle verte constitutionnalisée." },
+          { "model": "qwen3.6", "text": "Constitutional green rule, 200bn ecological planning, nuclear phase-out, and 100% renewable energy target by 2050." }
+        ]
+      },
+      "summary": "Le programme inscrit l'écologie au plus haut niveau juridique via la « règle verte » constitutionnelle (interdiction de prélever davantage à la nature qu'elle ne reconstitue) et organise la transition par la planification : trajectoire de -65% d'émissions GES en 2030, 100% renouvelables en 2050, sortie programmée du nucléaire (annulation des EPR2, fin de la prolongation au-delà de la durée de conception), 200 Md€ d'investissement, plan de rénovation thermique de 700 000 logements/an, ZAN dès 2027, moratoire sur les mégabassines, fin des subventions aux énergies fossiles y compris à l'étranger, transition agroécologique vers une agriculture 100% bio à terme, interdiction des coupes rases et des pesticides systémiques. Modal B (4/6) : ambition reconnue, fragilités sur la transition énergétique et la chaîne d'approvisionnement ; deepseek et gemini (A) jugent l'architecture suffisamment détaillée et chiffrée pour atteindre la note maximale.",
+      "problems_addressed": [
+        {
+          "problem": "Émissions de gaz à effet de serre et dette écologique",
+          "approach": "Trajectoire -65% d'émissions GES en 2030, plan d'investissement de 200 Md€, fin des subventions aux fossiles, taxe carbone aux frontières.",
+          "strength": 0.9,
+          "source_refs": ["sources.md#chapitre-12--planification-ecologique", "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "reasoning": "Objectifs chiffrés alignés sur l'Accord de Paris, financement explicite et instrument constitutionnel ; consensus large des modèles.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Précarité thermique et passoires énergétiques",
+          "approach": "Plan de rénovation thermique de 700 000 logements/an, financement public et obligation de rénovation, encadrement des loyers conditionné au DPE.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "reasoning": "Cible chiffrée ambitieuse (vs ~370 000/an actuels) ; impact direct sur facture énergétique et émissions du bâtiment.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Érosion de la biodiversité et pression agro-industrielle",
+          "approach": "Interdiction des pesticides systémiques (glyphosate, néonicotinoïdes), interdiction des coupes rases sauf impasse sanitaire, ZAN dès 2027, moratoire sur les mégabassines, transition vers 100% bio.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#chapitre-14--protection-des-biens-communs-et-des-droits-de-lespece"],
+          "reasoning": "Combinaison d'interdictions, d'objectifs spatiaux (ZAN) et d'instruments économiques ; approche systémique.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Stabilité du réseau électrique pendant la sortie du nucléaire",
+          "significance": "L'objectif 100% renouvelables sans nucléaire en 2050, combiné à l'électrification des transports et du chauffage, exige des capacités de stockage et de pilotage de la demande dont le calendrier de déploiement n'est pas chiffré.",
+          "source_refs": [],
+          "supported_by": ["gemini-1.5-pro", "qwen3.6", "claude-opus-4-7", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        },
+        {
+          "problem": "Acceptabilité sociale locale du déploiement renouvelable",
+          "significance": "Pas d'analyse des résistances locales (éolien terrestre, solaire au sol, lignes THT) ni des conflits d'usage avec l'agriculture et la forêt.",
+          "source_refs": [],
+          "supported_by": ["mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Dépendance aux matières premières critiques pour les renouvelables",
+          "mechanism": "Le déploiement 100% renouvelables requiert des terres rares, du cuivre, du lithium et du cobalt majoritairement importés, ce qui entre en tension avec l'objectif de relocalisation.",
+          "severity": 0.65,
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "reasoning": "Tension structurelle reconnue par gemini, mistral et qwen ; partiellement adressée par les plans de relocalisation industrielle.",
+          "supported_by": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Risque transitoire sur les rendements agricoles",
+          "mechanism": "L'interdiction immédiate des pesticides clés et le passage accéléré au 100% bio peuvent réduire les rendements à court terme avant que les alternatives agroécologiques ne soient industrialisées.",
+          "severity": 0.6,
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "reasoning": "Effet bien documenté dans la littérature agronomique ; gemini et claude le signalent.",
+          "supported_by": ["gemini-1.5-pro", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Goulots d'étranglement RH et matériaux pour la rénovation à 700 000 logements/an",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "L'objectif dépasse de loin la capacité actuelle du secteur (~370 000/an); formation et chaînes d'approvisionnement non détaillées.",
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "supported_by": ["gemini-1.5-pro", "qwen3.6", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        },
+        {
+          "risk": "Déploiement renouvelables limité par la chaîne d'approvisionnement en métaux critiques",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Le 100% renouvelables suppose un accès aux terres rares et au lithium dont l'offre mondiale est contrainte.",
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "risk": "Recours juridiques et délais administratifs ralentissant les projets",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "Complexité du droit de l'environnement et risques contentieux peuvent décaler les jalons de la trajectoire 2030.",
+          "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+          "supported_by": ["mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Inscription constitutionnelle de la « règle verte »",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique",
+          "quantified": false,
+          "magnitude": "mandat constitutionnel",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Sortie du nucléaire et 100% renouvelables d'ici 2050",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "100% ENR / 2050",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan de rénovation thermique de 700 000 logements/an",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "700 000/an",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Trajectoire -65% d'émissions GES en 2030",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique",
+          "quantified": true,
+          "magnitude": "-65% vs référence",
+          "supported_by": ["claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Investissement de 200 Md€ et rénovation thermique massifs représentent un engagement public historique.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+          "dissenters": ["qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Investissement public massif." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "200 Md€ et rénovations historiques." },
+            { "model": "deepseek", "level": "high", "note": "Investissement écologique sans précédent." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Dépense publique historique pour la transition." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Investissements massifs nécessaires." },
+            { "model": "qwen3.6", "level": "moderate", "note": "200 Md€ partiellement gageables sur taxe carbone et redirection des dividendes." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Mise à l'échelle de la rénovation, démantèlement nucléaire et restructuration agricole sont des défis industriels et logistiques majeurs.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["mistral-le-chat-2026-04-25"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Capacité industrielle limitée." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Multi-secteur, coordination très complexe." },
+            { "model": "deepseek", "level": "high", "note": "Mise à l'échelle simultanée énergie/agriculture/bâti." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Démantèlement nucléaire et rénovations massives." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Coordination État/collectivités/privés réalisable." },
+            { "model": "qwen3.6", "level": "high", "note": "Sortie nucléaire + réseau + rénovation requièrent coordination multi-secteur." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Dépendance aux matières premières critiques et aux technologies vertes importées ; partiellement compensée par la relocalisation programmée.",
+          "supported_by": ["gpt-5.5-thinking", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Technologies vertes partiellement importées." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Dépendance forte aux chaînes d'approvisionnement critiques." },
+            { "model": "deepseek", "level": "moderate", "note": "Dépendance partielle aux chaînes d'approvisionnement." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Renouvelables dépendent de matières importées." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Dépendance aux technologies vertes." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Mitigée par les plans de relocalisation." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": null,
+          "level_interval": ["low", "moderate"],
+          "note": "Démantèlement nucléaire et règle verte constitutionnelle quasi-irréversibles ; investissements en infrastructure et rénovations créent une dépendance de sentier durable.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Score générique (template)." },
+            { "model": "claude-opus-4-7", "level": "limited", "note": "Démantèlement nucléaire et règle constitutionnelle peu réversibles." },
+            { "model": "deepseek", "level": "low", "note": "Constitutionalisation et infra durables." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Démantèlement nucléaire et règles constitutionnelles essentiellement irréversibles." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Changements structurels difficiles à inverser." },
+            { "model": "qwen3.6", "level": "limited", "note": "Sunk cost et dépendance de sentier." }
+          ]
+        }
+      },
+      "confidence": 0.78
+    }
+  }
+}

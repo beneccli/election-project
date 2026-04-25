@@ -1,0 +1,372 @@
+{
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Réforme des retraites bascule ~40% des droits vers la capitalisation avec longue transition ; direction nette dépend du positionnement de la cohorte par rapport aux tranches. Effets pro-jeunes (libéralisation marché du travail, accès au logement, capitalisation cumulée) coexistent avec une exposition des cohortes intermédiaires au double-financement de la transition.",
+      "units": "qualitatif ; cible capitalisation ~40% ; transition à 8 tranches",
+      "confidence": 0.55,
+      "caveats": "Le programme ne publie pas de tables distributionnelles cohorte par cohorte ; les estimations sont dérivées de l'architecture déclarée (seuil 65 ans, 8 tranches, cible 40% capitalisation, règle d'or, baisse de 8 points de PIB de dépense)."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Baisse durable de la fiscalité de production et des charges sur le travail tout au long de la carrière ; possible rééquilibrage TVA/cotisations en cas de TVA compétitivité.",
+        "quantified": "Baisse fiscalité de production : 11,5 Md€/an ; trajectoire TVA non tranchée"
+      },
+      "housing": {
+        "summary": "Suppression de la SRU article 55 peut accroître l'offre non-sociale en zones tendues ; déblocage de la capitalisation pour la résidence principale soutient l'accession.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Exposition complète à la tranche capitalisation (~40% des droits) sur l'ensemble de la carrière ; minimum vieillesse 1000 €/mois garanti à 65 ans.",
+        "quantified": "~40% capitalisation ; plancher à 65 ans + min. vieillesse 1000 €/mois"
+      },
+      "labor_market": {
+        "summary": "Contrat de travail unique réduit le clivage insiders/outsiders ; charges patronales négatives pour les sortants de RSA longue durée.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Nouveau parc nucléaire mis en service au cœur de la mi-carrière de cette cohorte ; risque d'écart d'émissions à court terme selon la durée du pont.",
+        "quantified": null
+      },
+      "narrative_summary": "La cohorte des -35 ans capte les gains de libéralisation du marché du travail et l'accumulation en capitalisation sur une carrière complète, tout en supportant l'exposition au financement de la transition retraite et à un risque d'émissions à court terme si les renouvelables ralentissent."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension déjà servie sous le régime de répartition ; aucune réduction directe des droits acquis annoncée.",
+        "quantified": "Pas de réduction des droits acquis"
+      },
+      "pension": {
+        "summary": "Retraités actuels non concernés par la bascule capitalisation ; revalorisation des petites pensions via minimum vieillesse 1000 €/mois.",
+        "quantified": "Min. vieillesse = 1000 €/mois"
+      },
+      "healthcare": {
+        "summary": "Suppression des ARS recompose la gouvernance ; accès hospitalier dépendant de la capacité des communautés médicales locales pendant la transition.",
+        "quantified": null
+      },
+      "narrative_summary": "Les droits acquis de la cohorte actuelle sont préservés par construction de la transition ; les turbulences institutionnelles dans la santé peuvent introduire une volatilité d'accès dans les premières années."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Seuil 65 ans agit dès le court terme ; accumulation capitalisation cumule sur tous les horizons ; minimum vieillesse stabilise la queue basse.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [-1, 0],
+            "note": "Relèvement du départ à 65 ans réduit l'accès aux retraites pour les cohortes en départ anticipé ; capitalisation pas encore accumulée.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+            "dissenters": ["grok-4", "qwen3.6"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": -1, "note": "Age-65 raise reduces benefit access for early-retirement cohorts; capitalization not yet accrued." },
+              { "model": "deepseek-v3", "score": -1, "note": "Relèvement à 65 ans pénalise les cohortes proches du départ ; capitalisation non encore active." },
+              { "model": "gemini-2.5-pro", "score": -1, "note": "Pension reform raises retirement age; capitalization yet to mature." },
+              { "model": "grok-4", "score": 0, "note": "Mise en place tranches capitalisation neutre court terme ; minimum vieillesse 1000€ déjà actif." },
+              { "model": "qwen3.6", "score": 0, "note": "Démarrage progressif des tranches ; effets neutres à court terme." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [0, 1],
+            "note": "Premières tranches de capitalisation matures ; minimum vieillesse actif ; solvabilité en amélioration.",
+            "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": ["deepseek-v3"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "First capitalization tranches mature; system solvency improves; minimum-vieillesse floor active." },
+              { "model": "deepseek-v3", "score": 0, "note": "Tranches en cours de constitution ; effets distributifs encore limités." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "Capitalization tranches start producing returns; floor stabilizes low end." },
+              { "model": "grok-4", "score": 1, "note": "Tranches capitalisation maturent ; système se rééquilibre." },
+              { "model": "qwen3.6", "score": 1, "note": "Premiers effets positifs des tranches capitalisées sur les jeunes cohortes." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Capitalisation approche les ~40% cible ; dépendance au ratio démographique recule.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 2, "note": "Capitalization approaches ~40% target; system reliance on demographic ratio declines." },
+              { "model": "deepseek-v3", "score": 1, "note": "Cible ~40% capitalisation atteinte progressivement ; soutenabilité renforcée." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "System reaches mature capitalization mix; demographic risk falls sharply." },
+              { "model": "grok-4", "score": 2, "note": "Cible 40% atteinte ; cohortes jeunes captent rendement capital." },
+              { "model": "qwen3.6", "score": 2, "note": "Plein effet de la capitalisation ; allègement structurel du système par répartition." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Cible de baisse de dépense + baisse fiscalité de production interagissent avec le double-financement de la transition capitalisation et la règle d'or constitutionnelle.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [-1, 1],
+            "note": "Baisses fiscales (11,5 Md€/an) et coûts de transition capitalisation précèdent les économies de dépense ; trajectoire dette dégradée à court terme.",
+            "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+            "dissenters": ["deepseek-v3", "gemini-2.5-pro"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": -1, "note": "Tax cuts and capitalization transition costs precede spending-cut dividends; debt trajectory may worsen initially." },
+              { "model": "deepseek-v3", "score": 0, "note": "Effets de la règle d'or et des économies de dépense neutralisent partiellement les baisses fiscales." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "Spending discipline begins; règle d'or framework anchors expectations." },
+              { "model": "grok-4", "score": -1, "note": "Coûts transition capitalisation et baisses fiscales avant économies dépenses." },
+              { "model": "qwen3.6", "score": -1, "note": "Coûts initiaux de la transition pèsent sur les comptes publics." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [-2, 2],
+            "note": "Règle d'or pleinement effective et mi-trajectoire de baisse de dépense ; effet net dépend du respect des cibles. Vue Grok plus dégradée (transition coûteuse).",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "grok-4"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 0, "note": "Règle d'or takes effect; spending-cut trajectory reaches mid-path; net effect neutral if targets met." },
+              { "model": "deepseek-v3", "score": 1, "note": "Économies de dépense compensent baisses fiscales ; trajectoire dette stabilisée." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "Règle d'or enforces discipline; spending cuts visible in debt trajectory." },
+              { "model": "grok-4", "score": -2, "note": "Transition capitalisation coûteuse, dette aggravée mi-période." },
+              { "model": "qwen3.6", "score": 1, "note": "Effets positifs des économies structurelles commencent à compenser les baisses fiscales." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [-1, 2],
+            "note": "Cible de baisse de 8 points de PIB de dépense atteinte sur trajectoire Suède/Allemagne ; dette en recul. Grok dissident sur l'ampleur des coûts résiduels.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+            "dissenters": ["grok-4"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "8-GDP-point spending reduction achieved on Sweden/Germany trajectory; debt ratio declines." },
+              { "model": "deepseek-v3", "score": 2, "note": "Baisse de dépense de 8 points de PIB et soutenabilité retraite réduisent fortement la dette." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "Long-term spending cuts and capitalization payoff stabilize debt." },
+              { "model": "grok-4", "score": -1, "note": "Coûts capitalisation persistent au-delà de 10 ans ; bénéfices nets différés." },
+              { "model": "qwen3.6", "score": 2, "note": "Effets cumulés des réformes ; allègement structurel de la dette publique." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+        "row_dissenters": ["grok-4"]
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Capacités nucléaires nouvelles arrivent en différé ; sortie du régime renouvelables agit immédiatement ; tarification carbone à fiscalité constante.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [-1, 1],
+            "note": "Régime dérogatoire des renouvelables prend fin avant la mise en service des nouveaux EPR ; risque d'écart d'émissions à court terme selon la durée du pont.",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "grok-4"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": -1, "note": "Renewables dérogatoire regime ends before new nuclear commissions; bridging gap raises near-term emissions risk." },
+              { "model": "deepseek-v3", "score": 0, "note": "Maintien du nucléaire existant compense partiellement le retrait des renouvelables." },
+              { "model": "gemini-2.5-pro", "score": 0, "note": "Renewables retrenchment partly offset by carbon pricing." },
+              { "model": "grok-4", "score": 1, "note": "Renouvelables ramenés au droit commun ; nucléaire existant maintenu, fiscalité carbone redistributive active." },
+              { "model": "qwen3.6", "score": 0, "note": "Effets neutres à court terme ; trajectoire de décarbonation portée par le nucléaire historique." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [0, 2],
+            "note": "Premiers EPR et SMR entrent en mise en service ; tarification carbone à fiscalité constante en place.",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "grok-4"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 0, "note": "First new EPRs and SMRs enter commissioning; tax-constant carbon pricing at play." },
+              { "model": "deepseek-v3", "score": 1, "note": "Nouveaux EPR et SMR en service ; émissions amorcent une baisse." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "First EPRs come online; tax-constant carbon pricing supports transition." },
+              { "model": "grok-4", "score": 2, "note": "Nucléaire neuf opérationnel ; trajectoire émissions accélère vers le bas." },
+              { "model": "qwen3.6", "score": 1, "note": "Démarrage des EPR et SMR ; structuration de la fiscalité carbone." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Nouveau parc nucléaire pleinement intégré ; électricité décarbonée soutient l'électrification de l'industrie.",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "grok-4"],
+            "dissenters": ["claude-opus-4-7", "qwen3.6"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "New nuclear fleet fully integrated; decarbonized electricity supports industry electrification." },
+              { "model": "deepseek-v3", "score": 2, "note": "Décarbonation de l'électricité acquise ; émissions structurellement réduites." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "Mature nuclear fleet enables full electrification of energy uses." },
+              { "model": "grok-4", "score": 2, "note": "Plein effet décarbonation ; leadership bas-carbone G20 atteignable." },
+              { "model": "qwen3.6", "score": 1, "note": "Bénéfices structurels de la décarbonation se consolident." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Suppression des ARS crée une période de transition ; doublement des étudiants en médecine arrive à maturité sur un horizon décennal.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "Dissolution ARS pendant la transition peut désorganiser la coordination ; nouveaux étudiants pas encore diplômés.",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": -1, "note": "ARS dissolution during transition may disrupt coordination; new medical students not yet graduated." },
+              { "model": "deepseek-v3", "score": 0, "note": "Réorganisation gouvernance santé en cours ; effets cliniques limités à court terme." },
+              { "model": "gemini-2.5-pro", "score": 0, "note": "Governance reform creates short-term churn but no immediate access loss." },
+              { "model": "grok-4", "score": 0, "note": "ARS supprimées progressivement ; offre soins peu impactée immédiatement." },
+              { "model": "qwen3.6", "score": 0, "note": "Réorganisation institutionnelle sans impact direct sur l'accès aux soins." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [1, 1],
+            "note": "Premières cohortes de médecins doublées entrent en exercice ; conventionnement différencié recompose l'accès territorial.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "First doubled cohorts enter practice; differentiated conventionnement reshapes spatial access." },
+              { "model": "deepseek-v3", "score": 1, "note": "Doublement étudiants atteint maturité ; pression sur déserts médicaux baisse." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "Medical-student doubling matures; access improves." },
+              { "model": "grok-4", "score": 1, "note": "Doublement étudiants en pratique ; conventionnement différencié allège déserts." },
+              { "model": "qwen3.6", "score": 1, "note": "Effets positifs des réformes structurelles sur l'accès aux soins." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [1, 2],
+            "note": "Métriques de désertification médicale s'améliorent ; consortium pharmaceutique européen stabilise les approvisionnements.",
+            "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": ["deepseek-v3"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "Medical-desert metrics improve; European pharmaceutical consortium stabilizes supply." },
+              { "model": "deepseek-v3", "score": 2, "note": "Système de santé renforcé en personnel et en gouvernance ; soutenabilité accrue." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "Stable medical workforce supports universal access." },
+              { "model": "grok-4", "score": 1, "note": "Désertification réduite, approvisionnements stratégiques sécurisés." },
+              { "model": "qwen3.6", "score": 1, "note": "Maturité du système réformé ; accès soins consolidé." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Réformes du chèque éducation et de l'autonomie scolaire agissent progressivement sur l'expérience des cohortes au fur et à mesure des cycles.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [0, 1],
+            "note": "Évolution des programmes et certificat de fin de primaire entrent en vigueur ; déploiement du chèque éducation phasé.",
+            "supported_by": ["gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "deepseek-v3"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 0, "note": "Curriculum shift and certificate-of-primary introduction begin; voucher rollout phased." },
+              { "model": "deepseek-v3", "score": 0, "note": "Phase de mise en place du chèque éducation et nouveaux programmes." },
+              { "model": "gemini-2.5-pro", "score": 1, "note": "Initial curriculum reform and assessment milestones improve learning outcomes." },
+              { "model": "grok-4", "score": 1, "note": "Certificat fin primaire et chèque éducation phasés améliorent qualité." },
+              { "model": "qwen3.6", "score": 1, "note": "Premiers effets de la mise en place du chèque éducation." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": null,
+            "score_interval": [1, 2],
+            "note": "Pas de mode unique : exposition complète au chèque éducation et hausse 20% salaires enseignants ; vues divergent sur l'ampleur de l'effet.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "Full-cohort voucher exposure; teacher-pay rise (+20%) stabilizes recruitment." },
+              { "model": "deepseek-v3", "score": 1, "note": "Plein effet du chèque éducation ; recrutement enseignants stabilisé." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "Reform fully felt; teacher salaries support recruitment quality." },
+              { "model": "grok-4", "score": 2, "note": "Cohortes pleinement exposées chèque éducation ; +20% salaires enseignants." },
+              { "model": "qwen3.6", "score": 1, "note": "Stabilisation des recrutements et amélioration de la qualité scolaire." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Premières cohortes pleinement éduquées sous le système réformé entrent sur le marché du travail.",
+            "supported_by": ["deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "First cohorts fully educated under reformed system enter labor market." },
+              { "model": "deepseek-v3", "score": 2, "note": "Cohortes éduquées sous le système réformé montrent des résultats améliorés sur le marché du travail." },
+              { "model": "gemini-2.5-pro", "score": 2, "note": "Reformed school system produces graduates with measurable outcomes." },
+              { "model": "grok-4", "score": 2, "note": "Cohortes éduquées sous système réformé arrivent en emploi." },
+              { "model": "qwen3.6", "score": 2, "note": "Effets cumulés sur la productivité et la cohésion sociale." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Suppression de la SRU recompose l'offre en zones tendues ; déblocage capitalisation pour résidence principale soutient la demande.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [-1, 1],
+            "note": "Pas de mode unique : modifications légales effectives ; réponse de l'offre privée différée 2-4 ans ; effet immédiat mixité sociale possiblement négatif.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 0, "note": "Legal change takes effect; supply response lags by 2-4 years." },
+              { "model": "deepseek-v3", "score": -1, "note": "Suppression SRU sans mesure compensatoire fragilise l'accès au logement social court terme." },
+              { "model": "gemini-2.5-pro", "score": -1, "note": "SRU abolition risks accelerated segregation in tense zones short term." },
+              { "model": "grok-4", "score": 1, "note": "Suppression SRU et déblocage capitalisation libèrent immédiatement l'accession." },
+              { "model": "qwen3.6", "score": 1, "note": "Déblocage capitalisation et libération offre soutiennent l'accession." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [-1, 1],
+            "note": "Réponse de l'offre privée dans les zones précédemment contraintes ; déblocage capitalisation soutient l'accession.",
+            "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+            "dissenters": ["deepseek-v3", "gemini-2.5-pro"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 1, "note": "Private-development supply response in previously-constrained zones." },
+              { "model": "deepseek-v3", "score": 0, "note": "Effets ambigus : libération offre vs perte logement social en zones tendues." },
+              { "model": "gemini-2.5-pro", "score": -1, "note": "Long-term housing market more polarized without SRU compensatory mechanisms." },
+              { "model": "grok-4", "score": 1, "note": "Réponse offre privée dans zones SRU libérées ; accession capitalisation." },
+              { "model": "qwen3.6", "score": 1, "note": "Effets de la libération de l'offre commencent à se concrétiser." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 2],
+            "note": "Offre rééquilibrée ; résultats de mixité sociale dépendent de la négociation des objectifs de flux avec les communes.",
+            "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+            "dissenters": ["grok-4", "qwen3.6"],
+            "per_model": [
+              { "model": "claude-opus-4-7", "score": 0, "note": "Supply rebalanced; mixité-sociale outcomes depend on flow-target negotiation with communes." },
+              { "model": "deepseek-v3", "score": 0, "note": "Marché logement rééquilibré, mais ségrégation territoriale possible." },
+              { "model": "gemini-2.5-pro", "score": 0, "note": "Long-term equilibrium uncertain; depends on local negotiations." },
+              { "model": "grok-4", "score": 2, "note": "Marché rééquilibré ; offre adaptée aux territoires sous tension." },
+              { "model": "qwen3.6", "score": 2, "note": "Marché plus fluide ; bénéfices structurels pour les jeunes ménages." }
+            ]
+          }
+        },
+        "row_supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4", "qwen3.6"],
+        "row_dissenters": ["gemini-2.5-pro"]
+      }
+    ],
+    "reasoning": "Le programme protège simultanément les droits acquis des retraités actuels (répartition) et bascule les cohortes actives vers la capitalisation (~40% à terme). La direction nette intergénérationnelle est qualifiée de 'mixed' par les cinq modèles : les -35 ans portent l'exposition au double-financement de la transition mais captent la libéralisation du marché du travail, la capitalisation cumulée et le déblocage logement (capitalisation pour résidence principale, suppression SRU) ; les +65 ans conservent leurs droits acquis avec impact direct minime. Le risque d'écart d'émissions court terme (renouvelables → nucléaire neuf) et la fragilisation potentielle de la mixité sociale sont les principaux contre-effets pour les jeunes cohortes.",
+    "source_refs": ["sources.md#retraites", "sources.md#fiscalite-de-production", "sources.md#regle-dor", "sources.md#sante", "sources.md#revolution-de-lecole", "sources.md#compétitivité-territoires", "sources.md#ambition-ecologique"],
+    "confidence": 0.62,
+    "agreement": {
+      "direction_consensus": true,
+      "magnitude_consensus": "interval",
+      "dissenting_views": [
+        {
+          "model": "grok-4",
+          "view": "Considère que la trajectoire de dette se dégrade plus durablement (h_2031_2037 : -2 ; h_2038_2047 : -1) en raison du coût soutenu de la transition capitalisation et estime un effet pro-jeunes plus marqué sur le logement (h_2038_2047 : +2) et le climat (h_2027_2030 : +1) que les autres modèles."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "view": "Vue plus négative à long terme sur le logement (h_2038_2047 : 0) et plus positive sur la dette publique (h_2027_2030 : +1) ; insiste sur la polarisation du marché du logement sans mécanismes compensatoires de la SRU."
+        },
+        {
+          "model": "deepseek-v3",
+          "view": "Vue contrastée sur le logement court terme (h_2027_2030 : -1) en raison de la perte de logement social non compensée."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,795 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "model": {
+    "provider": "qwen",
+    "version": "qwen3.6"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T03:30:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0.7
+  },
+  "summary": "The program proposes a comprehensive structural shift toward state-led economic planning, wealth redistribution, and ecological transition. It combines institutional overhaul via a constituent assembly with expansive public service guarantees, price controls, and EU treaty disobedience if negotiations fail.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "More interventionist than Mélenchon 2022, significantly left of Hollande 2012.",
+      "evidence": [
+        {
+          "quote": "Rompre avec le capitalisme. Et de substituer à la dictature des actionnaires un outil d’intérêt plus collectif pour guider l’économie : la planification écologique.",
+          "source_ref": "sources.md#introduction"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Program mandates price controls, nationalizations in energy/transport/banking, a 14-bracket income tax, wealth taxes, and BCE debt monetization, indicating maximum state intervention on the axis."
+    },
+    "social_cultural": {
+      "score": -4,
+      "anchor_comparison": "More progressive than EELV 2022, aligned with radical left social emancipation frameworks.",
+      "evidence": [
+        {
+          "quote": "Constitutionnaliser la non-marchandisation du corps humain et le droit fondamental de disposer de soi en toutes circonstances",
+          "source_ref": "sources.md#chapitre-4"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Strong emphasis on gender parity, LGBTI rights, reproductive freedom, anti-discrimination testing, and regularisation of migrants places the program firmly on the progressive pole."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "More sovereigntist than LR 2022, less nationalist than RN 2022; aligns with left-sovereigntist/altermondialiste tradition.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN puis, par étapes, de l’organisation elle-même",
+          "source_ref": "sources.md#chapitre-16"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Program rejects EU fiscal/competition rules via Plan B disobedience, exits NATO command, imposes ecological protectionism and border taxes, while maintaining UN-centric multilateralism rather than ethnic nationalism."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Similar to LFI referendum framing, more populist than Macron 2017, less illiberal than RN judicial proposals.",
+      "evidence": [
+        {
+          "quote": "Instaurer le Référendum d’initiative citoyenne (RIC), par lequel les citoyens qui réunissent suffisamment de signatures peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution",
+          "source_ref": "sources.md#chapitre-1"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Constituent assembly, abolition of 49.3, proportional representation, and RIC shift power from executive to direct/parliamentary mechanisms, fitting left-populist institutional redesign."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "More ecologist than Macron 2017, aligned with EELV 2022 on planning and phase-outs.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu’elle est en état de reconstituer",
+          "source_ref": "sources.md#chapitre-12"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Constitutional green rule, 200bn ecological investment, nuclear phase-out, 100% renewables by 2050, and agroecological transition demonstrate high ecological prioritization and structural planning."
+    },
+    "overall_spectrum": {
+      "label": "gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Rompre avec le capitalisme. Et de substituer à la dictature des actionnaires un outil d’intérêt plus collectif pour guider l’économie : la planification écologique.",
+          "source_ref": "sources.md#introduction"
+        },
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu’elle est en état de reconstituer",
+          "source_ref": "sources.md#chapitre-12"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Hard economic interventionism combined with strongly progressive social policies and ecologist planning anchors the program in the classical left band; sovereignty and institutional axes modify implementation but do not shift the left-right placement."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Redistribution via 14-bracket income tax, wealth taxes, price controls, and 200bn public investment funded by BCE debt monetization.",
+      "summary": "Program restructures fiscal policy toward high progressivity, caps prices on essentials, and funds a 200bn ecological/social investment plan. Financing relies on tax yields, dividend restrictions, and BCE perpetual debt conversion, creating high budgetary dependency on EU institutional confrontation.",
+      "problems_addressed": [
+        {
+          "problem": "Wealth concentration and regressive taxation",
+          "approach": "14-bracket income tax, restored ISF with climate component, 2% billionaire wealth guarantee, progressive CSG.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "Detailed tax bracket expansion and wealth levies directly target upper decile asset accumulation."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Capital flight and tax base erosion under unilateral wealth taxes",
+          "significance": "Unilateral implementation without EU coordination risks asset relocation and reduced yields.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal and monetary framework compliance",
+          "mechanism": "BCE debt monetization and deficit spending exceed Stability and Growth Pact limits.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-17"
+          ],
+          "reasoning": "Explicit Plan B disobedience to EU budget/competition rules triggers legal and market friction."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "BCE refusal to convert sovereign debt to perpetual zero-rate instruments",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "ECB mandate independence and treaty constraints make unilateral debt conversion legally unenforceable without treaty change.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "SMIC increased to 1600€ net monthly, indexed to inflation",
+          "source_ref": "sources.md#chapitre-8",
+          "quantified": true,
+          "magnitude": "1600€/month net"
+        },
+        {
+          "measure": "200bn ecological and social investment plan",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "200bn€ over legislature"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financing assumes BCE debt conversion and high tax yields; shortfall risks deficit expansion beyond 3%.",
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-13"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Price controls and tax restructuring require expanded administrative capacity and enforcement mechanisms.",
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-9"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Debt strategy and trade tariffs depend on EU institutional tolerance and partner retaliation thresholds.",
+          "source_refs": [
+            "sources.md#chapitre-17"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Tax code changes and SMIC hikes can be amended by subsequent majority, but nationalizations require complex unwinding.",
+          "source_refs": [
+            "sources.md#chapitre-2",
+            "sources.md#chapitre-6"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "social_demographic": {
+      "grade": "A",
+      "headline": "Universal service expansion: retirement at 60, guaranteed minimum income at poverty line, free education and healthcare.",
+      "summary": "Program guarantees income at poverty threshold (1216€), restores retirement at 60 with 40 annuities, expands childcare by 500k places, and establishes 100% Sécu reimbursement. Measures target poverty reduction and service access across age cohorts.",
+      "problems_addressed": [
+        {
+          "problem": "Old-age poverty and pension replacement rate decline",
+          "approach": "Return to retirement at 60, pension floor at SMIC level, indexation to wages.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#chapitre-8"
+          ],
+          "reasoning": "Directly reverses 2023 reform parameters and sets explicit replacement floors."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Dependency ratio pressure on pay-as-you-go pension financing",
+          "significance": "Lowering retirement age without explicit contribution base expansion increases structural deficit risk.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Healthcare workforce shortages limiting 100% Sécu and hospital reopening targets",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Recruitment plans lack binding timelines and training pipeline capacity constraints are not quantified.",
+          "source_refs": [
+            "sources.md#chapitre-15"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Guarantee d'autonomie set at poverty threshold (1216€ for single person)",
+          "source_ref": "sources.md#chapitre-7",
+          "quantified": true,
+          "magnitude": "1216€/month"
+        },
+        {
+          "measure": "500,000 new public childcare places over five years",
+          "source_ref": "sources.md#chapitre-5",
+          "quantified": true,
+          "magnitude": "500k places/5y"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Pension and income guarantees increase recurring expenditure; offset relies on contribution base expansion and tax reforms.",
+          "source_refs": [
+            "sources.md#chapitre-7",
+            "sources.md#chapitre-8"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Childcare and hospital expansion require multi-year recruitment and infrastructure deployment.",
+          "source_refs": [
+            "sources.md#chapitre-5",
+            "sources.md#chapitre-15"
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "Primarily domestic fiscal and administrative levers; low external dependency.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Statutory entitlements can be amended by subsequent finance laws, though political cost is high.",
+          "source_refs": [
+            "sources.md#chapitre-8"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "NATO withdrawal, UN-centric diplomacy, ecological protectionism, and proximity police reform with civil liberty safeguards.",
+      "summary": "Program exits NATO integrated command, prioritizes UN mandates, imposes ecological border taxes, and regularizes migrant workers. Internal security shifts toward proximity policing, bans lethal restraint techniques, and emphasizes judicial oversight over surveillance.",
+      "problems_addressed": [
+        {
+          "problem": "Military alignment reducing diplomatic autonomy",
+          "approach": "Withdraw from NATO command, pursue non-aligned altermondialiste diplomacy.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ],
+          "reasoning": "Explicit structural decoupling from Atlanticist command restores independent defense posture."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Short-term defense capability gaps during NATO transition",
+          "significance": "Command withdrawal without detailed interoperability replacement plans risks coordination deficits.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Trade partner retaliation against ecological border taxes and tariff barriers",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "Unilateral border carbon/tariff measures may trigger WTO disputes and export market contraction.",
+          "source_refs": [
+            "sources.md#chapitre-9",
+            "sources.md#chapitre-16"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Ecological border tax based on carbon emissions and transport distance",
+          "source_ref": "sources.md#chapitre-9",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Ban on flash-balls, ventral restraint, and kettling techniques",
+          "source_ref": "sources.md#chapitre-4",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Defense reprogramming and police reform reallocate existing budgets; net fiscal impact moderate.",
+          "source_refs": [
+            "sources.md#chapitre-4",
+            "sources.md#chapitre-16"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Police restructuring and border tax administration require new regulatory frameworks and training.",
+          "source_refs": [
+            "sources.md#chapitre-4",
+            "sources.md#chapitre-9"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Trade and defense posture shifts depend on international partner responses and multilateral negotiation outcomes.",
+          "source_refs": [
+            "sources.md#chapitre-16",
+            "sources.md#chapitre-17"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Treaty withdrawals and police bans can be reversed by subsequent executive/legislative action.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "institutional_democratic": {
+      "grade": "A",
+      "headline": "Transition to 6th Republic via constituent assembly, proportional representation, RIC, and strict anti-lobbying rules.",
+      "summary": "Program convenes a constituent assembly to draft a new constitution, abolishes 49.3, institutes proportional representation, lowers voting age to 16, and establishes citizen initiative referendums. Anti-corruption measures separate financial interests from state functions.",
+      "problems_addressed": [
+        {
+          "problem": "Executive concentration and legislative bypass",
+          "approach": "Abolish 49.3, mandate proportional representation, require government accountability to parliament.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Directly targets procedural mechanisms enabling unilateral executive lawmaking."
+        }
+      ],
+      "problems_ignored": [],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Constituent process timeline exceeding legislative stability window",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Two-year drafting plus referendum creates institutional uncertainty during transition period.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Constituent assembly referendum and 2-year drafting mandate",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "10-year cooling-off period for public-to-private sector transitions",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": true,
+          "magnitude": "10 years"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Institutional restructuring carries minimal direct fiscal cost relative to macroeconomic measures.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Constitutional overhaul requires complex electoral logistics, legal drafting, and ratification thresholds.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "Domestic constitutional process; minimal external dependency.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Constitutional entrenchment and electoral system changes are structurally durable absent supermajority reversal.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Constitutional green rule, 200bn ecological planning, nuclear phase-out, and 100% renewable energy target by 2050.",
+      "summary": "Program embeds ecological planning in constitutional law, mandates 65% emissions reduction by 2030, phases out nuclear power, and targets 100% renewables by 2050. Investment focuses on grid modernization, building renovation, and agroecological transition.",
+      "problems_addressed": [
+        {
+          "problem": "Decarbonization investment gap and building stock inefficiency",
+          "approach": "200bn investment plan, 700k annual renovations, public energy pole, regulated tariffs.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Quantified renovation targets and public utility restructuring address supply and demand-side emissions."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Grid stability and baseload replacement during nuclear phase-out",
+          "significance": "100% renewable target without detailed storage/interconnection scaling risks supply shortfalls.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Renovation workforce and material supply bottlenecks",
+          "probability": 0.7,
+          "severity": 0.65,
+          "reasoning": "700k annual renovations exceed current sector capacity; training and supply chain scaling timelines are unspecified.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "65% GHG emissions reduction target by 2030",
+          "source_ref": "sources.md#chapitre-12",
+          "quantified": true,
+          "magnitude": "-65% vs baseline"
+        },
+        {
+          "measure": "Moratorium on mega-basins and single-use plastics ban",
+          "source_ref": "sources.md#chapitre-14",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "200bn plan requires sustained capital allocation; partial offset via carbon taxation and dividend redirection.",
+          "source_refs": [
+            "sources.md#chapitre-13",
+            "sources.md#chapitre-6"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nuclear phase-out, grid expansion, and renovation targets require multi-sector coordination and workforce scaling.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Renewable supply chains and critical mineral imports create external dependency; mitigated by relocalization plans.",
+          "source_refs": [
+            "sources.md#chapitre-9",
+            "sources.md#chapitre-13"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Infrastructure investments and constitutional green rule create path dependency; policy rollbacks face legal and sunk-cost barriers.",
+          "source_refs": [
+            "sources.md#chapitre-12"
+          ]
+        }
+      },
+      "confidence": 0.75
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "old_to_young",
+    "magnitude_estimate": {
+      "value": "~1400",
+      "units": "€/person/year",
+      "confidence": 0.6,
+      "caveats": "Estimate aggregates income guarantees, education/housing investment, and pension cost shifts; depends on tax yield realization and BCE financing."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Lower net tax burden via progressive brackets and wealth tax shift.",
+        "quantified": "-€400/year effective"
+      },
+      "housing": {
+        "summary": "Rent controls and 200k annual public units improve access.",
+        "quantified": "+15% affordability index"
+      },
+      "pension_outlook": {
+        "summary": "Restored 60yo retirement improves near-term expectations but raises long-run contribution pressure.",
+        "quantified": "~65% replacement rate target"
+      },
+      "labor_market": {
+        "summary": "SMIC hike and precarious contract caps raise entry wages and stability.",
+        "quantified": "+€200/month net baseline"
+      },
+      "environmental_debt": {
+        "summary": "Front-loaded ecological investment reduces deferred adaptation costs.",
+        "quantified": "-12% projected climate damage exposure by 2040"
+      },
+      "narrative_summary": "Net positive distributional shift for under-35 cohort via income floors, housing supply expansion, and labor market stabilization, offset by long-term pension financing uncertainty."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Wealth and inheritance taxes increase liability for upper decile retirees.",
+        "quantified": "+€800/year for top 10%"
+      },
+      "pension": {
+        "summary": "Indexation to wages and SMIC floor preserve purchasing power.",
+        "quantified": "~0% real change for median pensioner"
+      },
+      "healthcare": {
+        "summary": "100% Sécu and hospital reopening improve access and out-of-pocket reduction.",
+        "quantified": "-€300/year OOP expenses"
+      },
+      "narrative_summary": "Current retirees experience stable pension purchasing power and improved healthcare access, with fiscal pressure concentrated on high-asset households via wealth and succession taxes."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Restored retirement age and wage indexation improve near-term benefits; long-term sustainability depends on contribution base expansion.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Immediate restoration of 60yo retirement and SMIC floor raises payout levels.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "System stabilizes; dependency ratio pressure offsets wage indexation gains.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Aging cohort expansion strains pay-as-you-go financing without structural revenue reform.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "200bn investment and BCE debt conversion increase near-term liabilities; long-term trajectory depends on growth and EU negotiation outcomes.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Investment surge and deficit expansion raise debt-to-GDP ratio.",
+            "source_refs": [
+              "sources.md#chapitre-6",
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Debt servicing stabilizes if BCE conversion succeeds; otherwise remains elevated.",
+            "source_refs": [
+              "sources.md#chapitre-6"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-run trajectory converges to baseline assuming growth-linked revenue maturation.",
+            "source_refs": [
+              "sources.md#chapitre-6"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Front-loaded ecological planning and emissions targets reduce long-term environmental debt.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Initial investment deployment and renovation programs begin emissions reduction.",
+            "source_refs": [
+              "sources.md#chapitre-12",
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Grid modernization and renewable scaling achieve substantial decarbonization.",
+            "source_refs": [
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 3,
+            "note": "100% renewable target and agroecological transition structurally lower climate exposure.",
+            "source_refs": [
+              "sources.md#chapitre-13"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Public hospital reconstruction and 100% Sécu improve access and reduce out-of-pocket costs across horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Service reopening and recruitment plans begin reducing care deserts.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Full reimbursement and preventive care expansion lower chronic disease burden.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Sustained public health infrastructure maintains access gains and reduces mortality disparities.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Free education, reduced class sizes, and vocational restructuring improve human capital accumulation.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Immediate fee abolition and recruitment reduce access barriers.",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cohort progression through restructured system raises qualification levels.",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-term human capital gains stabilize labor market matching and productivity.",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Public construction targets, rent controls, and vacancy requisition improve affordability and supply.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "200k annual public units and rent caps begin correcting supply deficit.",
+            "source_refs": [
+              "sources.md#chapitre-7"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cumulative construction and renovation stock significantly reduces pressure.",
+            "source_refs": [
+              "sources.md#chapitre-7"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Structural supply expansion and inheritance caps limit speculative concentration.",
+            "source_refs": [
+              "sources.md#chapitre-7"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Program front-loads fiscal transfers and service expansion toward younger cohorts via income guarantees, education/housing investment, and labor market regulation. Pension restoration benefits current retirees but shifts long-run financing pressure to future contributors. Net effect is a structural redistribution from capital/older asset holders to younger labor/service users.",
+    "source_refs": [
+      "sources.md#chapitre-6",
+      "sources.md#chapitre-7",
+      "sources.md#chapitre-8",
+      "sources.md#chapitre-13"
+    ],
+    "confidence": 0.65
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Continued pension age indexation, moderate deficit reduction, incremental renewable deployment, and persistent housing supply shortage.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "security_sovereignty"
+    ],
+    "reasoning": "Program structurally alters fiscal redistribution, service provision, and ecological investment paths relative to baseline. Defense and diplomatic realignment changes posture but does not materially shift near-term security capacity metrics.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Pension system long-term actuarial balance under lowered retirement age",
+      "why_unsolved": "Program restores 60yo retirement and wage indexation without specifying contribution base expansion or demographic adjustment mechanisms.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Grid reliability during nuclear phase-out and renewable scaling",
+      "why_unsolved": "100% renewable target and EPR cancellation lack detailed storage, interconnection, and demand-response scaling timelines.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "EU institutional confrontation triggers capital flight and borrowing cost spike",
+      "trigger": "Unilateral breach of EU competition/budget rules without treaty renegotiation.",
+      "probability": 0.45,
+      "severity": 0.8,
+      "reasoning": "Market repricing of French sovereign risk and corporate relocation would compress tax base and increase debt service, undermining investment plan financing."
+    },
+    {
+      "scenario": "Energy supply shortfall during nuclear-retirement transition",
+      "trigger": "Renewable deployment and storage scaling lag behind reactor closures.",
+      "probability": 0.35,
+      "severity": 0.7,
+      "reasoning": "Baseload reduction without equivalent dispatchable capacity raises curtailment risk and industrial electricity price volatility."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "intergenerational.magnitude_estimate",
+        "critique": "The ~1400€/person/year net transfer estimate aggregates heterogeneous measures and assumes full tax yield realization without modeling behavioral responses.",
+        "alternative_interpretation": "Actual net transfer may be 30-40% lower if capital flight or compliance gaps reduce wealth tax and dividend restriction revenues."
+      },
+      {
+        "claim_location": "dimensions.environmental_long_term.problems_addressed[0]",
+        "critique": "Strength 0.8 may overstate feasibility given current renovation sector capacity and supply chain constraints.",
+        "alternative_interpretation": "Near-term renovation rates may plateau at 400-500k/year, delaying emissions reduction trajectory by 3-5 years."
+      }
+    ],
+    "potential_bias": "Analysis may underweight the program's institutional disruption risks by treating constitutional and EU confrontation mechanisms as procedural rather than macroeconomically destabilizing.",
+    "evidence_gaps": "Source text lacks quantified timelines for workforce scaling in healthcare/renovation sectors and detailed grid storage capacity targets, limiting precision on implementation risk scoring.",
+    "confidence_in_critique": 0.7
+  },
+  "confidence_self_assessment": 0.68
+}

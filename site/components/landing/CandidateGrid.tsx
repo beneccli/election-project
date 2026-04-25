@@ -127,7 +127,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
           className="grid grid-cols-1 gap-5 min-[440px]:grid-cols-2 min-[720px]:grid-cols-3 min-[1024px]:grid-cols-4"
           data-testid="candidate-grid"
         >
-          {visible.map((card, i) => (
+          {visible.map((card) => (
             <div key={card.id} data-landing-slot>
               <CandidateCard card={card} lang={lang} />
             </div>

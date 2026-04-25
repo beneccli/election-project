@@ -1,0 +1,812 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "model": {
+    "provider": "google",
+    "version": "gemini-1.5-pro"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T11:29:44Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Programme prévoyant le passage à une 6e République, une planification écologique massive de 200 milliards d'euros, le retour de la retraite à 60 ans, et une politique de rupture économique basée sur la relance par la demande, une fiscalité fortement progressive et le protectionnisme écologique.",
+  "positioning": {
+    "economic": {
+      "score": -4,
+      "anchor_comparison": "Similar to Mélenchon 2022, highly interventionist with major public poles and price controls.",
+      "evidence": [
+        {
+          "quote": "Constituer des pôles publics dans les secteurs stratégiques : médicaments, transports et mobilité, banque, énergie, armement",
+          "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Program centers on widespread nationalization, public monopolies, strict price controls, and heavy capital taxation."
+    },
+    "social_cultural": {
+      "score": -4,
+      "anchor_comparison": "More progressive than EELV 2022 due to explicit structural overhauls of gender, family, and immigrant rights.",
+      "evidence": [
+        {
+          "quote": "Déjudiciariser le changement de sexe à l’état-civil en le rendant libre et gratuit devant un officier d’état civil",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Proposes systematic deconstruction of patriarchal structures, free IVG, full constitutional reproductive rights, and strong anti-discrimination measures."
+    },
+    "sovereignty": {
+      "score": 2,
+      "anchor_comparison": "More sovereignty-focused than Macron 2017 or mainstream left, sharing protectionist traits with LR 2022 but from an altermondialist perspective.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN puis, par étapes, de l’organisation elle-même",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Aligns with LFI referendum framing, explicitly seeking to dismantle current Fifth Republic institutions.",
+      "evidence": [
+        {
+          "quote": "Convoquer une Constituante pour passer à la 6e République",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Aims to abolish the 'presidential monarchy', institute the RIC (citizens' initiative referendum), and strictly separate state and financial interests."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "Matches EELV 2022 anchor, prioritizing the 'green rule' above traditional economic metrics.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu’elle est en état de reconstituer",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Ecology is the central organizing principle of the economic program, featuring constitutional green rules, an exit from nuclear, and 100% renewables."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "institutional"
+      ],
+      "evidence": [
+        {
+          "quote": "Constituer des pôles publics dans les secteurs stratégiques : médicaments, transports et mobilité, banque, énergie, armement",
+          "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Hard-statist economics, deep social progressivism, and an institutional rupture agenda via a Constituent Assembly pull the program firmly into the extreme-left/radical-left band, breaking explicitly with capitalist norms."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Hausse massive des dépenses via 200 milliards d'investissements, compensée par une révolution fiscale (14 tranches).",
+      "summary": "The program proposes a total structural overhaul of the economy, replacing free-market dynamics with ecological planning, widespread nationalization, and a heavily progressive tax system (14 income and CSG brackets). It aims to cancel public debt held by the ECB.",
+      "problems_addressed": [
+        {
+          "problem": "Wealth inequality and poverty",
+          "approach": "Increase SMIC to €1600 net, create an autonomy guarantee above poverty line (€1216), cap inheritance at €12M, and establish a 14-bracket income tax.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses",
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Highly detailed redistributive mechanisms targeting top incomes to fund base-level guarantees."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Capital flight and market retaliation",
+          "significance": "Program assumes strict capital controls and 'exit taxes' will fully mitigate market reactions to heavy taxation and nationalizations.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU market alignment and trade relations",
+          "mechanism": "Explicit policy of disobeying EU treaties and implementing unilateral ecological protectionism.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-17--europe"
+          ],
+          "reasoning": "Will trigger structural confrontation with European institutions and potential trade barriers."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "ECB refusal to cancel debt",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "ECB mandate and EU consensus strictly forbid monetary financing and debt cancellation; failure here jeopardizes the funding of the €200bn investment plan.",
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Increase SMIC to €1600 net",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "€1600 net/month"
+        },
+        {
+          "measure": "€200 billion ecological and social investment plan",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "€200bn"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Assumes massive new revenues from wealth/corporate taxes and ECB debt cancellation, which face severe macro-economic headwinds.",
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Requires unprecedented restructuring of tax authorities and nationalization of major private entities.",
+          "source_refs": [
+            "sources.md#chapitre-2--par-dela-la-propriete-privee"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Heavily dependent on forcing EU/ECB compliance or surviving institutional rupture.",
+          "source_refs": [
+            "sources.md#chapitre-17--europe"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Nationalizations and constitutional tax mandates are difficult to reverse within one legislature.",
+          "source_refs": [
+            "sources.md#chapitre-2--par-dela-la-propriete-privee"
+          ]
+        }
+      },
+      "confidence": 0.85
+    },
+    "social_demographic": {
+      "grade": "A",
+      "headline": "Restauration de la retraite à 60 ans, 100% Sécu et garantie d'autonomie pour éradiquer la pauvreté.",
+      "summary": "Program systematically expands the welfare state. It lowers the retirement age back to 60, guarantees autonomy above the poverty line (€1216/month), promises 100% health coverage including mutuals, and creates a public dependence service.",
+      "problems_addressed": [
+        {
+          "problem": "Poverty and youth precarity",
+          "approach": "Implement an autonomy guarantee bringing everyone, including independent youth, above the poverty line.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-7--la-force-de-lentraide",
+            "sources.md#chapitre-10--faire-place-a-la-nouvelle-france"
+          ],
+          "reasoning": "Direct cash transfers effectively eliminate extreme statistical poverty."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Labor force participation rate constraint",
+          "significance": "Lowering retirement to 60 and reducing work week to 32h reduces total labor supply at a time of demographic aging.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Pension system structural deficit",
+          "mechanism": "Restoring retirement at 60 (40 annuities) significantly increases the structural cost of the pension system.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Funding relies on payroll tax increases and dividend taxation, which may not bridge the demographic gap."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Shortage of healthcare and childcare personnel",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Creating 500,000 crèche spots and expanding EHPADs requires massive hiring in sectors already facing structural recruitment crises.",
+          "source_refs": [
+            "sources.md#chapitre-5--elever-le-niveau-dinstruction",
+            "sources.md#chapitre-10--faire-place-a-la-nouvelle-france"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Retirement at 60 with 40 annuities",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "Age 60"
+        },
+        {
+          "measure": "Autonomy guarantee above poverty line",
+          "source_ref": "sources.md#chapitre-7--la-force-de-lentraide",
+          "quantified": true,
+          "magnitude": "€1216/month"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Extensive new universal benefits create massive, structural recurring expenditures.",
+          "source_refs": [
+            "sources.md#chapitre-7--la-force-de-lentraide"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Relies on existing CAF/Sécurité Sociale infrastructure but requires vast personnel recruitment.",
+          "source_refs": [
+            "sources.md#chapitre-15--une-approche-de-sante-globale"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Domestic welfare policies have few direct external dependencies.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "high",
+          "note": "Pensions and benefits can be altered by subsequent legislative majorities.",
+          "source_refs": [
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ]
+        }
+      },
+      "confidence": 0.9
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "Sortie de l'OTAN, refondation d'une police de proximité (fin des BAC/BRAV-M) et protectionnisme.",
+      "summary": "Shifts security focus from public order and tech surveillance to proximity policing and white-collar crime. Internationally, advocates non-alignment, exiting NATO's integrated command, and implementing ecological protectionism at borders.",
+      "problems_addressed": [
+        {
+          "problem": "Police violence and community trust",
+          "approach": "Dismantle BAC and BRAV-M, ban lethal immobilization techniques, establish proximity policing.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-7--la-force-de-lentraide",
+            "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+          ],
+          "reasoning": "Concrete operational changes to use of force and unit structures."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Short-term conventional deterrence gap",
+          "significance": "Exiting NATO and building an independent capability creates a transitional security vulnerability.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "European defense coordination",
+          "mechanism": "Opting out of European defense programs and opposing an EU Defense Commissioner isolates French military industry.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-17--europe"
+          ],
+          "reasoning": "Explicit rejection of EU-level defense integration."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Police force internal resistance",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "Dismantling specialized units (BAC, BRAV-M) and reforming IGPN will face severe opposition from police unions.",
+          "source_refs": [
+            "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Withdrawal from NATO integrated command",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix",
+          "quantified": false,
+          "magnitude": "Full withdrawal"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Rebuilding independent conventional deterrence and space capabilities requires sustained high spending.",
+          "source_refs": [
+            "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Reorganizing police forces entails significant logistical and HR challenges.",
+          "source_refs": [
+            "sources.md#chapitre-7--la-force-de-lentraide"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Altermondialist diplomacy relies heavily on the willingness of Global South nations to form a new bloc.",
+          "source_refs": [
+            "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Treaty withdrawals take time but can be reversed, unit dismantlements can be undone by decree.",
+          "source_refs": [
+            "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "institutional_democratic": {
+      "grade": "A",
+      "headline": "Abolition de la monarchie présidentielle via la 6e République et instauration du RIC.",
+      "summary": "Proposes a profound institutional rupture. A Constituent Assembly will draft a 6th Republic to establish a stable parliamentary regime, introduce the Citizens' Initiative Referendum (RIC), enforce strict secularism, and end media concentration.",
+      "problems_addressed": [
+        {
+          "problem": "Executive overreach and democratic deficit",
+          "approach": "Abolish Article 49.3, establish a parliamentary regime, and implement the RIC.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Directly removes the primary tools of executive dominance."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Constituent Assembly gridlock",
+          "significance": "Does not outline mechanisms to prevent the Constituent Assembly from failing to produce a viable draft.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Short-term legislative stability",
+          "mechanism": "Full proportional representation combined with a pure parliamentary system historically risks volatile coalitions in France.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Transitioning to PR alters the mathematical likelihood of absolute majorities."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Referendum rejection of the 6th Republic",
+          "probability": 0.4,
+          "severity": 0.9,
+          "reasoning": "The new constitution must be approved by referendum after 2 years; a 'No' vote resets the entire institutional project.",
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Constituent Assembly for the 6th Republic",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": "Full constitutional rewrite"
+        },
+        {
+          "measure": "Implementation of the Citizens' Initiative Referendum (RIC)",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": "Constitutional reform"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Institutional reform carries negligible direct budgetary cost.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Requires organizing complex national elections for the Constituent Assembly and subsequent referendum.",
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Purely domestic legal process.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "A new Constitution is the hardest legal framework to reverse.",
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ]
+        }
+      },
+      "confidence": 0.85
+    },
+    "environmental_long_term": {
+      "grade": "A",
+      "headline": "Planification écologique constitutionnelle (règle verte), sortie du nucléaire et 100% renouvelable.",
+      "summary": "Embeds ecology at the highest legal level via the 'green rule'. Proposes a planned exit from nuclear power, targeting 100% renewable energy by 2050, massive infrastructure renovation, and strict regulation of water as a public good.",
+      "problems_addressed": [
+        {
+          "problem": "Greenhouse gas emissions and ecological debt",
+          "approach": "Increase 2030 emissions reduction target to 65%, plan €200bn investment in eco-infrastructure, ban single-use plastics.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-12--planification-ecologique",
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Provides quantified, legally binding targets and massive capital injection."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Base-load power gap during nuclear exit",
+          "significance": "Exiting nuclear while electrifying transport and heating creates a severe capacity risk before renewables and storage scale up.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Agricultural yield shortfalls",
+          "mechanism": "Immediate ban on critical pesticides and shift to 100% bio/peasant agriculture risks near-term production drops.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Structural overhaul of agriculture without guaranteed scalable organic alternatives."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Energy transition supply chain constraints",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Deploying 100% renewables requires immense raw materials (critical metals) mostly controlled by foreign powers, conflicting with relocalization goals.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Constitutional 'Green Rule' (règle verte)",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique",
+          "quantified": false,
+          "magnitude": "Constitutional mandate"
+        },
+        {
+          "measure": "Renovate 700,000 dwellings per year",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "700,000/year"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "€200 billion plan and thermal renovations represent historic public expenditure.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Scaling thermal renovation to 700k/year and dismantling nuclear plants are monumental industrial challenges.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Renewable scale-up relies heavily on imported raw materials and components.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Nuclear dismantlement and constitutional rules are essentially irreversible.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ]
+        }
+      },
+      "confidence": 0.85
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Varies radically by income; net transfer exceeds €2000/person/year for youth below poverty line.",
+      "units": "€/person/year",
+      "confidence": 0.6,
+      "caveats": "Calculated via the autonomy guarantee (€1216/mo) against broader macro-debt assumptions."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Massive increase in direct subsidies, offset by long-term debt pooling.",
+        "quantified": "+€1216/mo floor"
+      },
+      "housing": {
+        "summary": "Increased public supply and rent controls, improving affordability.",
+        "quantified": "200k public units/year"
+      },
+      "pension_outlook": {
+        "summary": "Retirement secured earlier at 60, but funded via higher near-term labor taxes.",
+        "quantified": "Age 60"
+      },
+      "labor_market": {
+        "summary": "Higher minimum wage and reduced hours, though offset by potential hiring freezes in private sector.",
+        "quantified": "€1600 net / 32h"
+      },
+      "environmental_debt": {
+        "summary": "Aggressive reduction via 200bn investment plan and green rule.",
+        "quantified": "-65% emissions by 2030"
+      },
+      "narrative_summary": "Net highly positive distributional impact on under-35s in the near term, assuming macroeconomic stability holds."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension indexation to wages, increased minimum pensions.",
+        "quantified": "Pensions at least SMIC level"
+      },
+      "pension": {
+        "summary": "Increased absolute value of minimum pensions, removal of decote.",
+        "quantified": "+€0 to +€400/month depending on base"
+      },
+      "healthcare": {
+        "summary": "100% public coverage, elimination of deductibles, public EHPAD expansion.",
+        "quantified": "100% coverage"
+      },
+      "narrative_summary": "Net positive for low/middle-income retirees, but high-wealth retirees face severe inheritance and capital taxation."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Immediate boost to minimum pensions and lower retirement age; long-term funding relies on wage growth.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Immediate restoration of age 60 and SMIC-level minimums.",
+            "source_refs": [
+              "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Benefits sustained, but demographic pressure increases funding requirements.",
+            "source_refs": [
+              "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-term sustainability depends entirely on successful economic relocalization and full employment.",
+            "source_refs": [
+              "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Massive near-term debt expansion for ecological investments, assuming ECB cancellation.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -3,
+            "note": "Sharp increase in nominal debt due to €200bn investment and welfare expansion.",
+            "source_refs": [
+              "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -2,
+            "note": "Debt load remains structurally high without explicit ECB intervention.",
+            "source_refs": [
+              "sources.md#chapitre-6--partage-des-richesses"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Investment returns (energy savings) begin to offset initial debt issuance.",
+            "source_refs": [
+              "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Aggressive, state-planned reduction in emissions via 'green rule'.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Immediate statutory shifts: single-use plastic bans, 65% emission target.",
+            "source_refs": [
+              "sources.md#chapitre-12--planification-ecologique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 3,
+            "note": "Thermal renovation plan (700k/yr) yields massive structural emission drops.",
+            "source_refs": [
+              "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 3,
+            "note": "Targeted attainment of 100% renewable grid and ecological transition.",
+            "source_refs": [
+              "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Rebuilding public hospital capacity and ensuring 100% free care.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Removal of deductibles and immediate hiring boosts access.",
+            "source_refs": [
+              "sources.md#chapitre-15--une-approche-de-sante-globale"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Public poles and medical desert strategies take structural effect.",
+            "source_refs": [
+              "sources.md#chapitre-15--une-approche-de-sante-globale"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-term population health improves due to elimination of malbouffe and pollution.",
+            "source_refs": [
+              "sources.md#chapitre-15--une-approche-de-sante-globale"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Eradication of tracking, massive hiring, and total school gratuity.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Immediate free access to canteens, supplies, and abolition of Parcoursup.",
+            "source_refs": [
+              "sources.md#chapitre-5--elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Structural reduction in class sizes and rebuilding of vocational tracks.",
+            "source_refs": [
+              "sources.md#chapitre-5--elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-term equalization of human capital via universal access.",
+            "source_refs": [
+              "sources.md#chapitre-5--elever-le-niveau-dinstruction"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Massive public construction and strict rent controls.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Immediate rent controls and ban on evictions provide baseline relief.",
+            "source_refs": [
+              "sources.md#chapitre-7--la-force-de-lentraide"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Delivery of 200k public units/year significantly alters market supply.",
+            "source_refs": [
+              "sources.md#chapitre-7--la-force-de-lentraide"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Inheritance caps (max 5 properties) forcibly redistribute capital stock.",
+            "source_refs": [
+              "sources.md#chapitre-7--la-force-de-lentraide"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "The program systematically redistributes wealth to both youth (autonomy guarantee, education) and the elderly (pension minimums, EHPADs) simultaneously, funded by top-bracket taxation and ECB debt structuring.",
+    "source_refs": [
+      "sources.md#chapitre-7--la-force-de-lentraide",
+      "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+      "sources.md#chapitre-10--faire-place-a-la-nouvelle-france"
+    ],
+    "confidence": 0.75
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Continued Fifth Republic executive dominance, adherence to EU fiscal pacts, rising retirement age, and market-led ecological transition.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "improvement",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "The program represents a total, multi-dimensional rupture with the macroeconomic, institutional, and geopolitical status quo, systematically replacing market logic with state planning.",
+    "confidence": 0.95
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Nuclear phase-out energy bridging",
+      "why_unsolved": "Program mandates dismantling nuclear while aiming for 100% renewables, but does not detail how base-load power is maintained during windless/sunless periods before storage tech matures.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Capital flight in response to wealth taxation",
+      "why_unsolved": "Assumes an exit tax and capital controls will be fully effective without causing a broader freeze in foreign direct investment or severe economic contraction.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Institutional gridlock and EU retaliation.",
+      "trigger": "Disobedience to EU treaties leads to severe sanctions and market panic, while the Constituent Assembly fails to reach a consensus on the 6th Republic.",
+      "probability": 0.5,
+      "severity": 0.9,
+      "reasoning": "The dual strategy of domestic constitutional rewrite and international treaty rupture simultaneously stresses both internal and external stability."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.execution_risks[0]",
+        "critique": "Assigning an 80% probability to ECB refusal might underestimate the political leverage a major economy like France has in crisis negotiations.",
+        "alternative_interpretation": "A compromise debt-restructuring facility could be invented to avoid Eurozone fracture."
+      },
+      {
+        "claim_location": "intergenerational.horizon_matrix[1].cells.h_2027_2030",
+        "critique": "A -3 impact score for public debt implies catastrophic issuance, but the program claims tax revenues will fully fund new operating expenditures.",
+        "alternative_interpretation": "Debt increase might be bounded to the €200bn capital investment rather than structural deficits."
+      }
+    ],
+    "potential_bias": "The analysis may lean towards orthodox economic skepticism regarding the feasibility of massive state planning, strict price controls, and explicit treaty disobedience.",
+    "evidence_gaps": "The text lacks explicit macroeconomic modeling for how the 14 tax brackets map to total revenue yields, making budget feasibility hard to perfectly quantify.",
+    "confidence_in_critique": 0.8
+  },
+  "confidence_self_assessment": 0.85
+}

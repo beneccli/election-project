@@ -1,0 +1,1478 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T03:26:30Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "L'Avenir en Commun (2025 update) is a 831-measure rupture program proposing a Sixth Republic via constituent assembly, large-scale renationalisation and public-pole creation across energy/transport/banking/pharma, a 14-bracket progressive income tax with wealth and inheritance ceilings, retirement at 60 after 40 years of contributions, 100% renewables by 2050 with nuclear phase-out, and a confrontational EU strategy combining treaty renegotiation (Plan A) with unilateral disobedience to binding rules (Plan B). The program couples high public expenditure and a €200bn ecological investment plan with a 65% emissions reduction target by 2030 and ECB monetisation of public debt.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "At or beyond Mélenchon LFI 2022 anchor (-4); the program extends the 2022 platform with explicit ECB debt cancellation, a 12M€ inheritance ceiling, a 14-bracket CSG, and renationalisations of EDF/Engie/SNCF/autoroutes/aéroports.",
+      "evidence": [
+        {
+          "quote": "Revenir sur les privatisations (aéroports, autoroutes, Française des Jeux, etc.)",
+          "source_ref": "sources.md#chapitre-2"
+        },
+        {
+          "quote": "Rendre l'impôt sur le revenu plus progressif avec un barème à 14 tranches contre 5 aujourd'hui",
+          "source_ref": "sources.md#chapitre-6"
+        },
+        {
+          "quote": "Exiger de l'Union européenne que la Banque centrale européenne (BCE) transforme la part de dette des États qu'elle possède en dettes perpétuelles à taux nul",
+          "source_ref": "sources.md#chapitre-6"
+        },
+        {
+          "quote": "créer un héritage maximal de 12 millions d'euros",
+          "source_ref": "sources.md#chapitre-6"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "The program is structurally state-interventionist across pricing (price controls on essentials, energy, food), ownership (public poles in banking, energy, pharma, transport, armament), labor (SMIC to €1600, retirement to 60, 35h restoration, 6th week of paid leave), and finance (separation of retail/investment banking, capital controls, FTT). It exceeds the Mélenchon 2022 anchor on inheritance ceiling and ECB debt treatment."
+    },
+    "social_cultural": {
+      "score": -3,
+      "anchor_comparison": "Comparable to or slightly beyond EELV 2022 anchor (-3) on individual rights but with a strong universalist-republican framing distinct from EELV's identity emphasis; substantially more progressive than Macron 2017 (-1).",
+      "evidence": [
+        {
+          "quote": "Constitutionnaliser la non-marchandisation du corps humain et le droit fondamental de disposer de soi en toutes circonstances",
+          "source_ref": "sources.md#chapitre-4"
+        },
+        {
+          "quote": "Ajouter le droit de mourir dans la dignité (y compris avec assistance) et l'accès garanti à des soins palliatifs dans la Constitution",
+          "source_ref": "sources.md#chapitre-4"
+        },
+        {
+          "quote": "Déjudiciariser le changement de sexe à l'état-civil en le rendant libre et gratuit devant un officier d'état civil",
+          "source_ref": "sources.md#chapitre-4"
+        },
+        {
+          "quote": "Garantir le droit du sol intégral à tous les enfants nés en France",
+          "source_ref": "sources.md#chapitre-10"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Constitutionalising abortion, assisted dying, gender self-determination for minors with one-parent consent, full birthright citizenship, and voting rights for foreign residents in local elections place the program firmly on the progressive pole. The universalist-laïque framing (rejection of communautarismes, strict 1905 separation) distinguishes it from identity-progressive variants but does not pull the score toward the conservative pole."
+    },
+    "sovereignty": {
+      "score": 2,
+      "anchor_comparison": "Closer to the LR 2022 anchor (+2) than to Macron's pro-EU pole (-1), but ideologically distinct from RN nationalism (+4); the program is sovereigntist in mechanism (veto, disobedience, treaty rupture, NATO exit) while internationalist in stated values.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l'OTAN puis, par étapes, de l'organisation elle-même",
+          "source_ref": "sources.md#chapitre-16"
+        },
+        {
+          "quote": "Cesser d'appliquer unilatéralement les normes incompatibles avec nos engagements écologiques et sociaux telles que la directive sur le détachement des travailleurs, les règles budgétaires, les règles de la concurrence, la libre circulation des capitaux",
+          "source_ref": "sources.md#chapitre-17"
+        },
+        {
+          "quote": "Réaffirmer la supériorité des principes fondamentaux inscrits dans la Constitution de la 6e République sur le droit européen",
+          "source_ref": "sources.md#chapitre-17"
+        },
+        {
+          "quote": "Utiliser le droit de veto de la France, par exemple pour refuser tous les nouveaux accords de libre-échange",
+          "source_ref": "sources.md#chapitre-17"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "The Plan A/Plan B EU strategy explicitly elevates national constitutional norms above EU law and commits to unilateral disobedience to binding rules — operationally a sovereigntist program. NATO withdrawal, refusal of new trade deals, and abrogation of CETA-style accords reinforce this. The score is held below RN levels because the program rejects ethno-nationalism and pursues alternative international cooperation (UN, altermondialism, francophonie of peoples)."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Aligns with the LFI referendum-framing anchor (+2); the program combines liberal-democratic measures (proportional representation, abolishing 49.3, jury restoration, anti-corruption) with populist mechanisms (revocatory RIC, constituent assembly bypassing parliament via Article 11, executive-driven disobedience to courts of European law).",
+      "evidence": [
+        {
+          "quote": "Instaurer le Référendum d'initiative citoyenne (RIC), par lequel les citoyens qui réunissent suffisamment de signatures peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution",
+          "source_ref": "sources.md#chapitre-1"
+        },
+        {
+          "quote": "Convoquer un référendum (article 11) pour engager le processus constituant",
+          "source_ref": "sources.md#chapitre-1"
+        },
+        {
+          "quote": "Abolir les procédures de « votes forcés » du Parlement comme l'article 49.3",
+          "source_ref": "sources.md#chapitre-1"
+        },
+        {
+          "quote": "Faire voter une loi d'amnistie pour les syndicalistes, les Gilets jaunes, les militants pour la paix, les écologistes, les associatifs et des différents mouvements sociaux",
+          "source_ref": "sources.md#chapitre-1"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "The program contains genuinely liberal-democratic reforms (proportional representation, restoration of jurors, anti-corruption, media pluralism, judicial independence from executive). However, the use of Article 11 to convene a constituent assembly (a contested constitutional path), revocatory referendums against elected officials, retroactive amnesty for one political camp's activists, and explicit primacy of national constitution over EU law adjudicated by ECJ shift the institutional logic toward populist mechanisms. The score does not reach RN levels because press freedom, judicial independence from the executive, and minority rights are reinforced rather than weakened."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "At the EELV 2022 anchor (+4); the program goes beyond on quantitative climate targets (65% emissions reduction by 2030 vs 50%) and on constitutional entrenchment via the règle verte, but pairs ecology with statist tools rather than market mechanisms.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer",
+          "source_ref": "sources.md#chapitre-12"
+        },
+        {
+          "quote": "Relever les ambitions climatiques de la France avec pour objectif une baisse de 65 % des émissions en 2030",
+          "source_ref": "sources.md#chapitre-12"
+        },
+        {
+          "quote": "Planifier le passage à 100 % d'énergies renouvelables avec un double mot d'ordre : sobriété et efficacité énergétique",
+          "source_ref": "sources.md#chapitre-13"
+        },
+        {
+          "quote": "Lancer un plan massif de 200 milliards d'euros d'investissements écologiquement et socialement utiles",
+          "source_ref": "sources.md#chapitre-13"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Constitutional règle verte, 65% emissions cut by 2030, 100% renewables by 2050, nuclear phase-out, €200bn investment plan, 700,000 deep retrofits per year, ZAN by 2027, ban on glyphosate/neonicotinoids, Mediterranean drilling moratorium, and an écocide crime constitute a comprehensive ecologist platform. The score does not reach +5 because the nuclear phase-out introduces a contested decarbonisation trade-off and the program lacks a fully costed transition financing mechanism beyond ECB monetisation."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "Rendre l'impôt sur le revenu plus progressif avec un barème à 14 tranches contre 5 aujourd'hui",
+          "source_ref": "sources.md#chapitre-6"
+        },
+        {
+          "quote": "créer un héritage maximal de 12 millions d'euros",
+          "source_ref": "sources.md#chapitre-6"
+        },
+        {
+          "quote": "Exiger de l'Union européenne que la Banque centrale européenne (BCE) transforme la part de dette des États qu'elle possède en dettes perpétuelles à taux nul",
+          "source_ref": "sources.md#chapitre-6"
+        },
+        {
+          "quote": "Cesser d'appliquer unilatéralement les normes incompatibles avec nos engagements écologiques et sociaux",
+          "source_ref": "sources.md#chapitre-17"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Economic axis at -5 (anti-capitalist register: rupture with capitalism stated as objective, inheritance ceiling, ECB debt cancellation, broad renationalisation) combined with progressive social/cultural axis (-3) and ecologist axis (+4) places the program on the left pole. Sovereignty axis (+2) reinforces via post-EU operational stance (Plan B disobedience). The economic axis reaches the anti-capitalist register that distinguishes extrême-gauche from gauche; confidence capped by economic axis confidence (0.9) and bounded down by sovereignty's heterodox tilt."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "C",
+      "headline": "Hausse massive de la dépense publique et des prélèvements sur le capital, financée par fiscalité progressive et monétisation BCE; aucun chiffrage agrégé du solde budgétaire.",
+      "summary": "The program proposes a comprehensive transformation of public finances: a 14-bracket progressive income tax, restoration and climate-extension of the ISF, a 2% Zucman tax on billionaires' wealth, a 12M€ inheritance ceiling, an end to flat tax on capital income, retirement at 60 with 40 years of contributions, SMIC at €1600 net, retail/investment bank separation, ECB monetisation of public debt, and a €200bn ecological investment plan. Labor market measures restore the 35-hour week, add a sixth week of paid leave, abolish the Pénicaud ordinances, and impose quotas on precarious contracts (5-10%). The pension reversal and SMIC increase are quantified; the aggregate budget impact and the assumed elasticities are not stated in the source. Housing is addressed via 200,000 public units/year, rent controls, and SRU quota raise to 30%. The EU fiscal framework is explicitly rejected.",
+      "problems_addressed": [
+        {
+          "problem": "Wage stagnation and in-work poverty",
+          "approach": "SMIC raised immediately to €1600 net, salary indexation on inflation in private and public sectors, 10% increase in fonctionnaire point d'indice.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-8",
+            "sources.md#chapitre-9"
+          ],
+          "reasoning": "Quantified targets with explicit instruments; mechanism is direct legal increase rather than negotiation."
+        },
+        {
+          "problem": "Capital income taxation parity with labor",
+          "approach": "Suppression of flat tax (PFU), capital income taxed at progressive income tax rates, restoration of exit tax.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "Specific reversal of identifiable Macron-era measures with clear mechanism."
+        },
+        {
+          "problem": "Wealth concentration and inheritance inequality",
+          "approach": "Restored ISF with climate component, 2% Zucman tax on billionaires, lifetime accumulation of gifts/inheritances counted, 12M€ inheritance ceiling (≈100× median net wealth).",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "Clear quantitative thresholds; international precedent thin and capital flight risk not addressed in source."
+        },
+        {
+          "problem": "Housing supply and affordability",
+          "approach": "200,000 public housing units/year for 5 years, rent controls extended nationwide and lowered in large cities, SRU quota raised to 30%, 5-property inheritance limit, AirBnB capped at 60 days/year.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ],
+          "reasoning": "Quantified construction target; financing source not specified in source."
+        },
+        {
+          "problem": "Precarious employment and labor market dualism",
+          "approach": "Quota of 5-10% precarious contracts per firm, abrogation of Pénicaud and El Khomri laws, restoration of 'principe de faveur', titularisation of public-sector contractuels, transposition of EU presumption-of-employment directive for platform workers.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-8"
+          ],
+          "reasoning": "Specific legal instruments named; effect on hiring volume not modelled in source."
+        },
+        {
+          "problem": "Pension financing under demographic shift",
+          "approach": "Repeal of 64-year reform, return to 60 after 40 years; financing via 0.25pt/year cotisation increase, extension of cotisation base to dividends, intéressement, financial revenue.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-8"
+          ],
+          "reasoning": "Financing instruments listed but no comparison to COR baseline or sensitivity to demographic assumptions in source."
+        },
+        {
+          "problem": "Public-sector recapitalisation in strategic industries",
+          "approach": "Renationalisation of EDF, Engie, SNCF, autoroutes, aéroports; public poles in banking, pharma, transport, armament.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-2",
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Scope clearly defined; compensation mechanism for shareholders not specified in source."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Sensitivity of debt service to OAT yield path",
+          "significance": "Program assumes ECB will monetise debt as perpetuals; absent that, a 100bp rate shock on a debt stock approaching 115% of GDP adds ~€20bn/year to the budget. The source does not present a fallback if ECB statute change is rejected.",
+          "source_refs": []
+        },
+        {
+          "problem": "Capital flight and tax base erosion under wealth/inheritance ceiling",
+          "significance": "12M€ inheritance ceiling and restored ISF create incentives for high-net-worth relocation; source does not estimate base erosion or compare to 2012 ISF revenue trajectory.",
+          "source_refs": []
+        },
+        {
+          "problem": "Aggregate fiscal balance under full program",
+          "significance": "No consolidated chiffrage of revenue increases versus expenditure increases; impossible to assess whether the deficit trajectory improves, holds, or worsens.",
+          "source_refs": []
+        },
+        {
+          "problem": "Productivity and growth model beyond demand stimulation",
+          "significance": "Program emphasises consumption-led recovery and public investment; supply-side productivity drivers (TFP, innovation incentives outside CIR) are not articulated. CIR suppression removes a €7bn/year R&D subsidy without specified replacement at firm level.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU fiscal framework compliance",
+          "mechanism": "Explicit refusal of stability pact rules and announced disobedience to budgetary norms; deficit path and ECB monetisation request are incompatible with current EU treaties.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-17"
+          ],
+          "reasoning": "Plan B explicitly states unilateral non-application of EU budgetary rules."
+        },
+        {
+          "problem": "Investment climate predictability",
+          "mechanism": "Renationalisations, requisition rights, dividend caps, and retroactive treatment of past privatisations introduce expropriation risk premiums; source does not quantify compensation.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-2",
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "Multiple measures alter property rights without specified compensation framework."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Parliamentary majority for tax overhaul",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "14-bracket IR, 12M€ inheritance ceiling, and restored ISF require ordinary law majorities; current Assembly arithmetic does not provide one without coalition arrangements absent from the source.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        },
+        {
+          "risk": "Constitutional Council review of confiscatory thresholds",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Inheritance ceiling and lifetime gift accumulation may face proportionality review under existing jurisprudence on confiscatory taxation.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        },
+        {
+          "risk": "ECB statute change refusal",
+          "probability": 0.85,
+          "severity": 0.8,
+          "reasoning": "Treaty change requires unanimity; Plan A explicitly contemplates failure and falls back on Plan B disobedience, which raises sovereign-financing risk.",
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-17"
+          ]
+        },
+        {
+          "risk": "Capital outflow on announcement",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Program announces capital controls as a tool; pre-implementation outflow window is structurally hard to close.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "SMIC at €1600 net immediately",
+          "source_ref": "sources.md#chapitre-8",
+          "quantified": true,
+          "magnitude": "€1600 net/month"
+        },
+        {
+          "measure": "14-bracket progressive income tax (vs 5 currently)",
+          "source_ref": "sources.md#chapitre-6",
+          "quantified": true,
+          "magnitude": "14 brackets"
+        },
+        {
+          "measure": "2% Zucman tax on billionaires' wealth",
+          "source_ref": "sources.md#chapitre-6",
+          "quantified": true,
+          "magnitude": "2%/year"
+        },
+        {
+          "measure": "Inheritance ceiling at €12M (≈100× median net wealth)",
+          "source_ref": "sources.md#chapitre-6",
+          "quantified": true,
+          "magnitude": "€12M lifetime"
+        },
+        {
+          "measure": "Retirement at 60 after 40 years of contributions",
+          "source_ref": "sources.md#chapitre-8",
+          "quantified": true,
+          "magnitude": "60 years / 40 annuités"
+        },
+        {
+          "measure": "200,000 public housing units/year for 5 years",
+          "source_ref": "sources.md#chapitre-7",
+          "quantified": true,
+          "magnitude": "200,000/year × 5"
+        },
+        {
+          "measure": "€200bn ecological investment plan",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "€200bn cumulative"
+        },
+        {
+          "measure": "ECB conversion of state-held public debt to zero-coupon perpetuals",
+          "source_ref": "sources.md#chapitre-6",
+          "quantified": false,
+          "magnitude": "Share of debt held by ECB (≈25% of French sovereign stock)"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "No aggregate balance is presented; ECB monetisation is the load-bearing assumption and is not under French unilateral control.",
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-17"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Simultaneous tax overhaul, labor-code reversal, renationalisations and price controls require legislative throughput beyond a single legislative cycle.",
+          "source_refs": [
+            "sources.md#chapitre-6",
+            "sources.md#chapitre-8"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Core financing depends on ECB statute modification (treaty unanimity) or unilateral disobedience with unmodelled market-funding fallback.",
+          "source_refs": [
+            "sources.md#chapitre-17"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Tax-rate changes reversible by ordinary law; renationalisations and constitutional règle verte raise reversal cost.",
+          "source_refs": [
+            "sources.md#chapitre-12"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Reconstruction du service public hospitalier, gratuité de l'éducation publique, garantie d'autonomie au seuil de pauvreté, 100% Sécu pour les soins prescrits.",
+      "summary": "The program proposes a wide reconstruction of social services: 100% Sécu reimbursement of prescribed care with mutuelles integrated into Sécurité sociale, restoration of public hospital staffing and reopened maternity/emergency services within 30 minutes of every French resident, 500,000 new childcare places with a public early-childhood service, free public education including canteens and supplies, abrogation of the 'Choc des savoirs' and Parcoursup, end of student selection, free higher education from licence to doctorate, AAH raised to SMIC level, garantie d'autonomie at the poverty threshold (€1216 for a single person), 210,000 EHPAD staff added, and a return to medical/educational professions through pluriannual recruitment plans. Healthcare addresses both supply (public centres in medical deserts, doubling med-school capacity) and demand (100% Sécu). The program does not present a consolidated chiffrage of new social spending or its compatibility with stated revenue measures.",
+      "problems_addressed": [
+        {
+          "problem": "Hospital understaffing and emergency closures",
+          "approach": "Pluriannual recruitment plan, ONDAM replaced by ONBAM (needs-based), restoration of global dotation funding model, reopening of services within 30-min reach.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-15"
+          ],
+          "reasoning": "Specific structural change (ONDAM→ONBAM) plus quantified accessibility target."
+        },
+        {
+          "problem": "Out-of-pocket healthcare costs",
+          "approach": "100% Sécu reimbursement of prescribed care; mutuelles integrated into Sécurité sociale.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-15"
+          ],
+          "reasoning": "Mechanism reduces fragmentation but transfers complementary insurance costs to the public balance sheet without quantification."
+        },
+        {
+          "problem": "Childcare access and gender-equal labor participation",
+          "approach": "500,000 public crèche places over 5 years, freeze on private lucratif openings, free public crèche, opposable right to early-childhood care.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-5"
+          ],
+          "reasoning": "Quantified target with structural shift from private to public provision."
+        },
+        {
+          "problem": "Educational segregation and inequality",
+          "approach": "End of niveau-grouping at collège, repeal of 'Choc des savoirs', new carte scolaire, malus on socio-segregating private contract schools.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-5"
+          ],
+          "reasoning": "Reverses recent reforms; effect on outcomes depends on implementation in REP."
+        },
+        {
+          "problem": "Higher education access and student precarity",
+          "approach": "Dismantle Parcoursup, free higher ed from licence to doctorate, €1 CROUS meals, 15,000 student housing units/year, abrogation of LRU and Fioraso.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-5"
+          ],
+          "reasoning": "Structural rather than incremental; capacity expansion target quantified for housing only."
+        },
+        {
+          "problem": "Disability rights and accessibility",
+          "approach": "AAH raised to SMIC, 100% accessible new construction (reverses ELAN), AESH civil-servant corps, ESAT workers given salaried status.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-10"
+          ],
+          "reasoning": "Multiple targeted measures with specific status changes."
+        },
+        {
+          "problem": "Old-age care and EHPAD staffing",
+          "approach": "210,000 staff added, public EHPAD network, collectivisation of for-profit EHPAD, 10,000 public places/year for 5 years.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-10"
+          ],
+          "reasoning": "Quantified staffing target; collectivisation legal mechanism not detailed in source."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Demographic decline and fertility trajectory",
+          "significance": "France's TFR fell to 1.62 in 2024; the program does not address fertility incentives or cohort-replacement consequences for the social model it proposes.",
+          "source_refs": []
+        },
+        {
+          "problem": "Cost containment in 100% Sécu",
+          "significance": "Universal coverage without copay shifts demand-side moderation onto supply-side controls; source does not specify provider-side cost-control instruments beyond recruitment.",
+          "source_refs": []
+        },
+        {
+          "problem": "Medical-school capacity ramp-up timeline",
+          "significance": "Doubling places treats stocks; physician training takes 9-11 years, so medical-desert relief on the program's stated horizon depends on transitional measures barely sketched.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Private-sector childcare and education capacity",
+          "mechanism": "Freeze on private lucratif crèche openings and reduced public funding to private contract schools may reduce total capacity in the transition period.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#chapitre-5"
+          ],
+          "reasoning": "Capacity transition is mechanically slow; source does not specify bridge."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Recruitment shortfall in healthcare and education",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Multiple sectors compete for the same trained labor pool; pluriannual plans take years to materialise.",
+          "source_refs": [
+            "sources.md#chapitre-15",
+            "sources.md#chapitre-5"
+          ]
+        },
+        {
+          "risk": "Construction throughput for 200k housing + 500k crèche places",
+          "probability": 0.75,
+          "severity": 0.6,
+          "reasoning": "Public construction capacity, planning approvals, and ZAN 2027 constraint compound to limit feasible volumes.",
+          "source_refs": [
+            "sources.md#chapitre-7",
+            "sources.md#chapitre-12"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "100% Sécu reimbursement of prescribed care",
+          "source_ref": "sources.md#chapitre-15",
+          "quantified": false,
+          "magnitude": "Full coverage of prescribed care"
+        },
+        {
+          "measure": "500,000 crèche places over 5 years",
+          "source_ref": "sources.md#chapitre-5",
+          "quantified": true,
+          "magnitude": "500,000 places / 5 years"
+        },
+        {
+          "measure": "AAH raised to SMIC (€1600 net)",
+          "source_ref": "sources.md#chapitre-10",
+          "quantified": true,
+          "magnitude": "€1600 net/month"
+        },
+        {
+          "measure": "Garantie d'autonomie at €1216/month for a single adult",
+          "source_ref": "sources.md#chapitre-7",
+          "quantified": true,
+          "magnitude": "€1216/month"
+        },
+        {
+          "measure": "210,000 EHPAD staff hires",
+          "source_ref": "sources.md#chapitre-10",
+          "quantified": true,
+          "magnitude": "210,000 FTE"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "100% Sécu, garantie d'autonomie, AAH-SMIC alignment and pluriannual recruitment plans imply tens of billions in annual recurring spending without consolidated chiffrage.",
+          "source_refs": [
+            "sources.md#chapitre-15",
+            "sources.md#chapitre-7"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Simultaneous reorganisation of Sécu, mutuelles, hospital governance, education governance, and disability administration is operationally heavy.",
+          "source_refs": [
+            "sources.md#chapitre-15",
+            "sources.md#chapitre-10"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Depends on healthcare/education labor supply elasticity and on construction capacity for crèches/housing.",
+          "source_refs": [
+            "sources.md#chapitre-5"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Most measures reversible by ordinary law; mutuelle integration into Sécu and EHPAD collectivisation more sticky.",
+          "source_refs": [
+            "sources.md#chapitre-15"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Sortie de l'OTAN, pôle public d'armement, conscription citoyenne de 9 mois au SMIC, refus de la militarisation européenne, posture pro-désarmement nucléaire multilatéral.",
+      "summary": "The program proposes withdrawal from NATO integrated command and then NATO itself, opt-out from European defence programs, a public armament pole reabsorbing privatised defence industries, prioritisation of French equipment in procurement, and a 9-month citizen conscription paid at SMIC with optional military component. Strategic posture is framed as non-aligned altermondialism with an emphasis on UN multilateralism, recognition of Palestine, sanctions on Israel, and a Ukraine-cease-fire diplomatic framework. Industrial sovereignty is addressed via a Relocation Agency, anti-dumping measures, and elargissement of the foreign-investment control regime. Energy sovereignty is built around 100% renewables and nuclear phase-out — a contested choice given current 70% nuclear electricity share. Internal security: dismantling BAC and BRAV-M, restoring police de proximité, banning facial recognition, two-year police training, abolishing the IGPN/IGGN in favor of an independent authority.",
+      "problems_addressed": [
+        {
+          "problem": "Industrial sovereignty in strategic sectors",
+          "approach": "Public armament pole, foreign-investment control regime extended, Agency for Relocation, anti-dumping on steel/auto/pharma, semiconductor and battery-recycling industrial plans.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-9",
+            "sources.md#chapitre-12"
+          ],
+          "reasoning": "Mechanisms identified; capital intensity and timeline of reindustrialisation not quantified."
+        },
+        {
+          "problem": "Police-citizen relations and use of force",
+          "approach": "Dismantle BAC/BRAV-M, ban tasers/LBD/grenades de désencerclement and lethal immobilisation techniques, restore police de proximité, IGPN/IGGN replaced by independent authority, mandatory récépissé for ID checks.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-7",
+            "sources.md#chapitre-4"
+          ],
+          "reasoning": "Specific institutional and equipment changes; tradeoff with crowd-control capacity not addressed in source."
+        },
+        {
+          "problem": "Energy sovereignty",
+          "approach": "Renationalise EDF and Engie, public energy pole, regulated tariffs based on production cost, gradual nuclear exit with reconversion plan.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Renationalisation pathway clear; nuclear-exit feasibility under 65%-by-2030 emissions target is highly contested."
+        },
+        {
+          "problem": "Border and migration management",
+          "approach": "Suspend Dublin regulation, renegotiate Touquet, regularise undocumented workers/students/parents, 10-year residency as default, environmental-distress protected status.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ],
+          "reasoning": "Comprehensive humanitarian reorientation; volume and rate of regularisation not specified."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Transitional security guarantee outside NATO",
+          "significance": "Withdrawal from integrated command then from NATO requires a credible alternative collective-security architecture; source mentions altermondialist coalitions but no concrete alliance structure.",
+          "source_refs": []
+        },
+        {
+          "problem": "Decarbonisation arithmetic without nuclear",
+          "significance": "Closing existing reactors while raising the 2030 emissions target to -65% requires deployment rates of renewables and storage that are not quantified in the source.",
+          "source_refs": []
+        },
+        {
+          "problem": "Cybersecurity and AI offensive capabilities",
+          "significance": "Strong restrictions on biometric and surveillance AI; offensive cyber doctrine and protection against state-sponsored intrusion barely articulated.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Allied interoperability and force projection",
+          "mechanism": "NATO exit and opt-out from EU defence reduce shared logistics, intelligence-sharing, and procurement scale economies.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-16",
+            "sources.md#chapitre-17"
+          ],
+          "reasoning": "Mechanical loss of multilateral defence integration."
+        },
+        {
+          "problem": "Electricity price volatility during transition",
+          "mechanism": "Concurrent nuclear phase-out, market re-regulation and renewable scaling expose tariffs to scheduling and capacity risks.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Multiple structural changes implemented together amplify transition risk."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "NATO withdrawal triggering market and diplomatic shock",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "France's defence posture is interlinked with EU/US allies; abrupt withdrawal raises transition costs the source does not estimate.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        },
+        {
+          "risk": "Reactor decommissioning labor and waste capacity",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Decommissioning workforce, ANDRA capacity, and reactor lifecycle planning constrain feasible exit pace.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Withdrawal from NATO integrated command then NATO itself",
+          "source_ref": "sources.md#chapitre-16",
+          "quantified": false,
+          "magnitude": "Full institutional withdrawal"
+        },
+        {
+          "measure": "9-month citizen conscription paid at SMIC for under-25s",
+          "source_ref": "sources.md#chapitre-5",
+          "quantified": true,
+          "magnitude": "9 months × ~700k cohort"
+        },
+        {
+          "measure": "Nuclear phase-out and 100% renewables by 2050",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "100% renewables / 0% nuclear by 2050"
+        },
+        {
+          "measure": "Renationalisation of EDF and Engie",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": false,
+          "magnitude": "Full public ownership"
+        },
+        {
+          "measure": "Dismantle BAC and BRAV-M",
+          "source_ref": "sources.md#chapitre-7",
+          "quantified": false,
+          "magnitude": "Full dissolution"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Conscription, public armament pole, and energy renationalisations are capital-intensive; source does not chiffre acquisition costs.",
+          "source_refs": [
+            "sources.md#chapitre-13",
+            "sources.md#chapitre-16"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Conscription requires barracks/training capacity at scale; nuclear phase-out requires coordinated decommissioning, grid, and storage build-out.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Energy transition depends on critical mineral supply chains and grid technology; defence reorientation depends on alternative international partnerships.",
+          "source_refs": [
+            "sources.md#chapitre-13",
+            "sources.md#chapitre-16"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "NATO re-entry and reactor restart after closure are slow and costly; renationalisations reversible at high price.",
+          "source_refs": [
+            "sources.md#chapitre-13",
+            "sources.md#chapitre-16"
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "institutional_democratic": {
+      "grade": "C",
+      "headline": "Convocation d'une Constituante par référendum article 11 pour passer à la 6e République, RIC à 4 modalités, scrutin proportionnel, abolition du 49.3.",
+      "summary": "The program centres on a Sixth Republic via a constituent assembly summoned by Article 11 referendum, with ex-parliamentarians excluded from the assembly and assembly delegates excluded from subsequent elections. Concrete reforms within the existing framework include proportional representation, abolition of the 49.3, mandatory referendum on constitutional changes and EU treaty ratification, citizen-initiated referendum (RIC) with four modalities including recall of elected officials and constitutional revision, voting at 16, blank-vote recognition, mandatory voting, and reduction of party donation cap to €200. Anti-corruption: 10-year revolving-door ban, criminalisation of conflict of interests, end of monopoly of fiscal administration over fraud prosecutions. Media: anti-concentration law, public broadcasting funding via dedicated progressive levy, parliamentary election of public broadcaster presidents. Police-justice: judicial police attached to judicial authority, restoration of jurors, end of correctionalisation of rapes, IGPN replaced. The Article 11 path to a constituent assembly is constitutionally contested.",
+      "problems_addressed": [
+        {
+          "problem": "Executive overreach via 49.3 and ordonnances",
+          "approach": "Abolition of 49.3 (within constituent process), proportional representation by ordinary law, mandatory accountability before parliament.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Specific institutional changes targeting identified mechanisms."
+        },
+        {
+          "problem": "Concentration of media ownership",
+          "approach": "Anti-concentration law extending across formats, infrastructure-content separation, citizen ethics council, dedicated progressive audiovisual levy.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Multiple complementary instruments addressing horizontal and vertical concentration."
+        },
+        {
+          "problem": "Lobbying and revolving-door corruption",
+          "approach": "10-year cooldown, mandatory resignation and training-cost reimbursement for senior civil servants moving to private sector, lobby-agenda transparency.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Specific durations and triggers; enforcement capacity not detailed."
+        },
+        {
+          "problem": "Citizen disengagement and abstention",
+          "approach": "RIC (4 modalities), voting at 16, blank-vote recognition, mandatory voting, threshold for valid election, citizen sponsorship for presidential candidates.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Multiple instruments; effects on participation are empirically mixed in comparative literature, not addressed in source."
+        },
+        {
+          "problem": "Police accountability",
+          "approach": "IGPN/IGGN replaced by independent authority including magistrates and academics, attached to Défenseur des droits, with disciplinary powers.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-4"
+          ],
+          "reasoning": "Specific structural change addressing repeatedly identified accountability gap."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Constitutional path-of-creation legitimacy",
+          "significance": "Article 11 was used by de Gaulle in 1962 amid contestation; its applicability to convening a constituent assembly bypassing Congress remains legally disputed. Source does not address the contestation pathway.",
+          "source_refs": []
+        },
+        {
+          "problem": "Stability under recall referendums",
+          "significance": "Revocatory RIC creates ongoing campaign incentives; source does not address signature thresholds or cooldown mechanisms.",
+          "source_refs": []
+        },
+        {
+          "problem": "Coordination with Constitutional Council and ECJ",
+          "significance": "Asserting primacy of national constitution over EU law and instructing unilateral disobedience invites Constitutional Council and ECJ confrontation that the source does not procedurally map.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Legal predictability during transition",
+          "mechanism": "Two-year constituent process, planned disobedience to EU rules, and amnesty for one camp's activists generate normative uncertainty across multiple legal domains simultaneously.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-1",
+            "sources.md#chapitre-17"
+          ],
+          "reasoning": "Multiple concurrent legal-order changes raise transition cost."
+        },
+        {
+          "problem": "Selectivity of amnesty",
+          "mechanism": "Amnesty named for syndicalists, Gilets jaunes, peace/ecology/associative activists from social movements; symmetric treatment of other movements not specified.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Source enumerates specific categories; symmetric criterion not stated."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Constitutional Council blocks Article 11 convocation",
+          "probability": 0.6,
+          "severity": 0.8,
+          "reasoning": "Doctrinal contestation of using Article 11 for constituent process; precedent contested.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        {
+          "risk": "Negative referendum outcome on draft constitution",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "Two-year drafting cycle then referendum; rejection triggers restart per program text.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        {
+          "risk": "Sustained ECJ/EU legal action over disobedience",
+          "probability": 0.85,
+          "severity": 0.6,
+          "reasoning": "Unilateral non-application of binding rules triggers infringement procedures and financial penalties.",
+          "source_refs": [
+            "sources.md#chapitre-17"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Article 11 referendum to convene constituent assembly",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": false,
+          "magnitude": "Initiates 2-year constituent process"
+        },
+        {
+          "measure": "Proportional representation for National Assembly",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": false,
+          "magnitude": "Full proportional"
+        },
+        {
+          "measure": "RIC with 4 modalities (legislative, abrogative, constitutional, recall)",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": false,
+          "magnitude": "4 modalities"
+        },
+        {
+          "measure": "Donation cap reduced to €200/individual/party",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": true,
+          "magnitude": "€200/year"
+        },
+        {
+          "measure": "10-year revolving-door cooldown for senior civil servants",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": true,
+          "magnitude": "10 years"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Institutional reforms have low direct budget impact; constituent assembly costs marginal at state scale.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Two-year constituent process, simultaneous proportional reform, RIC implementation and media restructuring strain legislative bandwidth.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Depends on Constitutional Council validation of the Article 11 path and on referendum approval.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Once a Sixth Republic is adopted by referendum, reversal requires a further constitutional process.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Règle verte constitutionnelle, -65% d'émissions GES en 2030, 100% renouvelables en 2050 sans nucléaire, plan d'investissement écologique de 200Md€, ZAN dès 2027.",
+      "summary": "The program treats ecological planning as the structuring principle of state action: constitutionalising the règle verte, raising the 2030 emissions target to -65% (vs the current -50%), 100% renewables by 2050 with full nuclear phase-out, a €200bn ecological investment plan, deep retrofit of 700,000 housing units/year, ZAN (zéro artificialisation nette) from 2027, ban on glyphosate and neonicotinoids, moratorium on Mediterranean drilling and deep-sea mining, an écocide crime, suppression of short-haul flights where train alternative is under 4h, and 300,000 new agricultural jobs through agroecology. Forestry: ban on clear-cutting except sanitary impasses, 25% of forest in libre evolution. Water governance built on watersheds with regions redrawn accordingly. The nuclear-exit + emissions-target combination is the key internal tension; the source acknowledges sobriety and efficiency as solving variables but does not present the load-balancing arithmetic.",
+      "problems_addressed": [
+        {
+          "problem": "Greenhouse gas emissions trajectory",
+          "approach": "-65% by 2030, mandatory carbon accounting for high-emission sectors first, climate dissimulation crime, conditionality of state aid on emission reduction.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-12"
+          ],
+          "reasoning": "Quantified target with enforcement mechanisms; absolute decoupling pace not modelled in source."
+        },
+        {
+          "problem": "Building thermal performance",
+          "approach": "Mandatory retrofit before rental of passoires thermiques, 700k retrofits/year, public guichet unique, ban on fioul heating, écoconstruction with biosourced materials.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Quantified annual target; sector capacity constraint not addressed in source."
+        },
+        {
+          "problem": "Land artificialisation",
+          "approach": "ZAN by 2027, ban on giant warehouses, urban-sprawl moratorium, brownfield priority.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-12",
+            "sources.md#chapitre-14"
+          ],
+          "reasoning": "Aggressive timeline; tension with 200k housing/year and 500k crèche-place targets not addressed."
+        },
+        {
+          "problem": "Agricultural transition and pesticides",
+          "approach": "Glyphosate and neonicotinoid ban, pesticide-import ban for products containing them, 100% organic local in school canteens, agrarian reform for new entrants, 300k agricultural jobs.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Specific bans plus structural rural-economy programme; transition support detail thin."
+        },
+        {
+          "problem": "Water cycle and pollution",
+          "approach": "Règle bleue, watershed-based regions, public water management, free initial cubic metres, mégabassine moratorium, canalisation renewal plan.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-14"
+          ],
+          "reasoning": "Comprehensive governance redesign with quantified rights."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Decarbonisation arithmetic with nuclear phase-out",
+          "significance": "Replacing ~360 TWh of nuclear generation by 2050 while increasing electrification of transport and heat requires renewable build-out and storage capacity that the source does not quantify in TWh, GW or €/MWh.",
+          "source_refs": []
+        },
+        {
+          "problem": "Carbon-leakage absent EU border alignment",
+          "significance": "Unilateral protectionnisme écologique outside CBAM coordination risks WTO challenges and trade retaliation; source asserts the rupture but does not address legal substitution mechanisms.",
+          "source_refs": []
+        },
+        {
+          "problem": "Just-transition cost allocation across deciles",
+          "significance": "Program emphasises distributional fairness but does not quantify which deciles bear the marginal cost of retrofit, transport, and food-system transition.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Short-term electricity emission intensity",
+          "mechanism": "Closing existing reactors before equivalent renewable + storage capacity is online raises gas/imports share and CO2/kWh during transition.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Capacity sequencing issue documented in comparable cases; source does not present the bridging arithmetic."
+        },
+        {
+          "problem": "Land-use trade-off between renewables, ZAN, agriculture and housing",
+          "mechanism": "ZAN by 2027, 200k housing units/year, agrivoltaic and onshore wind expansion compete for the same land base.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-12",
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Multiple targets share a fixed land budget."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Renewables build-out velocity vs nuclear closure",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Permitting, supply chain, and grid-connection timelines historically slower than program assumes.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        {
+          "risk": "Retrofit construction labor and material capacity",
+          "probability": 0.75,
+          "severity": 0.6,
+          "reasoning": "700k deep retrofits/year exceeds current French capacity (~370k under MaPrimeRénov in recent years).",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        {
+          "risk": "WTO and trade-partner retaliation on protectionnisme écologique",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "Unilateral kilometric tariffs and sectoral anti-dumping outside EU framework face challenge.",
+          "source_refs": [
+            "sources.md#chapitre-9"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Constitutional règle verte",
+          "source_ref": "sources.md#chapitre-12",
+          "quantified": false,
+          "magnitude": "Constitutional rank"
+        },
+        {
+          "measure": "-65% GHG emissions by 2030",
+          "source_ref": "sources.md#chapitre-12",
+          "quantified": true,
+          "magnitude": "-65% vs base year"
+        },
+        {
+          "measure": "100% renewables by 2050, full nuclear phase-out",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "100% / 0% mix"
+        },
+        {
+          "measure": "€200bn ecological investment plan",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "€200bn cumulative"
+        },
+        {
+          "measure": "700,000 deep retrofits per year",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "700k/year"
+        },
+        {
+          "measure": "ZAN (zéro artificialisation nette) by 2027 in metropolitan France",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": true,
+          "magnitude": "Net zero land take by 2027"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "€200bn investment, 700k/year retrofit, agricultural transition support and renationalisation of energy operators carry large upfront cost.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "ZAN-2027, retrofit volume, renewable build-out and nuclear decommissioning all stress sectoral capacity simultaneously.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Critical mineral supply, EU coordination on carbon border adjustment, and labor force transitions all condition outcomes.",
+          "source_refs": [
+            "sources.md#chapitre-9"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Constitutional règle verte and reactor closures are slow to reverse; quantitative targets reversible by ordinary law.",
+          "source_refs": [
+            "sources.md#chapitre-12",
+            "sources.md#chapitre-13"
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Net effect on a 25-year-old in 2027 is positive in cash terms in early years (SMIC at €1600, free higher education, garantie d'autonomie, public housing, free crèche if parent) and negative in deferred fiscal terms; the implicit transfer toward current 65-year-olds via retirement-at-60 restoration partially offsets the youth-directed redistribution.",
+      "units": "€/person/year (qualitative under unconsolidated chiffrage)",
+      "confidence": 0.45,
+      "caveats": "Source provides no consolidated chiffrage of revenue and expenditure measures; the magnitude depends on ECB monetisation feasibility, capital-flight elasticity, and the emissions-target-without-nuclear arithmetic. The estimate assumes Plan A succeeds for ECB statute change; otherwise debt-service burden falls heavily on younger cohorts."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Lower direct labor taxation at the lower end of the IR distribution thanks to 14-bracket progressivity; higher implicit fiscal exposure if ECB Plan A fails and debt service rises.",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "Public housing supply at 200k units/year, rent controls, and the 5-property inheritance limit favor first-time renters and young owners over rentier accumulation; absolute affordability gain depends on construction throughput.",
+        "quantified": "200,000 public units/year; SRU quota raised to 30%"
+      },
+      "pension_outlook": {
+        "summary": "Restored 60-year retirement at 40 annuités requires 25-year-olds to fund the additional benefit period via cotisation increases (0.25pt/year) and base extension (dividends, intéressement); net replacement-rate impact at retirement depends on demographic and growth path.",
+        "quantified": "+0.25pt/year cotisation; retirement at 60 vs 64"
+      },
+      "labor_market": {
+        "summary": "Higher entry SMIC (€1600), 5-10% precarity caps and platform-worker presumption-of-employment improve early-career stability; aggregate employment effect of compressed wage distribution not modelled in source.",
+        "quantified": "SMIC at €1600 net; precarity cap 5-10%"
+      },
+      "environmental_debt": {
+        "summary": "-65% by 2030 and €200bn investment front-load decarbonisation, reducing climate liabilities transferred to 2050+; nuclear phase-out introduces transitional emission risk that may partially offset.",
+        "quantified": "-65% GHG by 2030"
+      },
+      "narrative_summary": "Net positive in housing, education, entry-wage, and climate dimensions; net negative or contingent in deferred fiscal and pension-financing dimensions. Outcome heavily depends on ECB statute change and nuclear-exit feasibility."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher wealth and inheritance taxation for top decile retirees (ISF, Zucman, 12M€ ceiling); lower direct taxation for median retirees through reduced VAT on essentials and progressive CSG.",
+        "quantified": "ISF restored; 2% Zucman; €12M inheritance ceiling"
+      },
+      "pension": {
+        "summary": "Existing pensions raised to SMIC for full careers; minimum vieillesse aligned to poverty threshold; indexation on wages rather than prices typically protects purchasing power.",
+        "quantified": "Full-career minimum at €1600 net; minimum vieillesse at €1216"
+      },
+      "healthcare": {
+        "summary": "100% Sécu reduces out-of-pocket costs and mutuelle premiums; supply-side staffing plan improves access in medical deserts where retirees concentrate.",
+        "quantified": null
+      },
+      "narrative_summary": "Strong net positive for median retirees on pensions, healthcare and long-term care; net negative for top decile via wealth, inheritance and capital-income measures."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Restoring retirement at 60 with 40 annuités, financed by progressive cotisation increases and base extensions; effect on cohorts diverges by horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Immediate uplift: minimum pension to SMIC for full careers, minimum vieillesse to poverty threshold, end of décote.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Continued benefit for cohorts retiring at 60-62; financing pressure rises with 0.25pt/year cotisation increase.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Demographic tilt and accumulated cotisation rises shift effective burden onto younger workers absent productivity offset.",
+            "source_refs": [
+              "sources.md#chapitre-8"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Trajectory depends on ECB monetisation pathway (Plan A) versus unilateral disobedience (Plan B); source does not present a chiffrage.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Major spending and tax overhaul launched simultaneously; deficit path widens before tax-base adjustments stabilise.",
+            "source_refs": [
+              "sources.md#chapitre-6",
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Effect contingent on ECB statute change; if achieved, debt-service burden compressed; otherwise market financing under disobedience widens spreads.",
+            "source_refs": [
+              "sources.md#chapitre-6",
+              "sources.md#chapitre-17"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon effect indeterminate without aggregate chiffrage and resolved EU framework.",
+            "source_refs": [
+              "sources.md#chapitre-17"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "-65% GHG by 2030 target plus €200bn investment plan plus ZAN-2027; offset by nuclear phase-out introducing transitional emission risk.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Investment plan and retrofit volume begin; transition emissions from nuclear closures partly offset gains in this horizon.",
+            "source_refs": [
+              "sources.md#chapitre-12",
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cumulative retrofit and renewables stock yields measurable emission reduction if build-out velocity matches plan.",
+            "source_refs": [
+              "sources.md#chapitre-13"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Constitutional règle verte plus full renewables transition reduce climate liabilities transferred to post-2047 cohorts; magnitude bounded by build-out feasibility.",
+            "source_refs": [
+              "sources.md#chapitre-12",
+              "sources.md#chapitre-13"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "100% Sécu, mutuelles integration, hospital reconstruction, doubled medical-school capacity, mental-health plan.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Coverage expansion and franchise rollback reduce out-of-pocket; physician supply lag limits access gains.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Recruitment plans materialise; medical deserts narrow as new graduate cohorts enter.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Aging cohort raises demand; supply gains stabilise rather than expand further absent additional investment.",
+            "source_refs": [
+              "sources.md#chapitre-15"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Free public education end-to-end, abolition of niveau-grouping, dismantled Parcoursup, free higher ed, free crèches.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Cost reduction for households is immediate; structural quality effect lags reform implementation.",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cohort effect: students entering under reformed system reach labor market with reduced debt and broader access.",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Persistent benefit if reforms maintained; reversibility risk on contestable measures (Parcoursup dismantling, niveau-grouping ban).",
+            "source_refs": [
+              "sources.md#chapitre-5"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "200k public units/year, 30% SRU quota, nationwide rent control, 5-property inheritance cap, AirBnB cap, retrofit obligation.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Rent control immediate; construction lag means supply uplift only partial in this horizon.",
+            "source_refs": [
+              "sources.md#chapitre-7"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Stock effect of 1M cumulative public units materialises; affordability for under-35s improves measurably.",
+            "source_refs": [
+              "sources.md#chapitre-7"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Stock advantage persists; ZAN-2027 constraint may compress incremental construction unless brownfield capacity scales.",
+            "source_refs": [
+              "sources.md#chapitre-7",
+              "sources.md#chapitre-13"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "The redistribution is multidirectional and not summarisable as a single arrow. Working-age and youth cohorts gain from minimum-wage increases, free education, public housing, climate front-loading, and labor reregulation; they bear the contingent fiscal risk if Plan A on ECB monetisation fails and the deferred cost of restoring retirement at 60. Median retirees gain from pension-floor uplift, 100% Sécu, and EHPAD staffing; top-decile retirees and inheritors face the largest tax-side impact via ISF, Zucman, and the €12M ceiling. The 'mixed' direction reflects this distributional cross-cutting rather than a clean intergenerational transfer.",
+    "source_refs": [
+      "sources.md#chapitre-6",
+      "sources.md#chapitre-7",
+      "sources.md#chapitre-8",
+      "sources.md#chapitre-13",
+      "sources.md#chapitre-15"
+    ],
+    "confidence": 0.55
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Public debt approaches 120% of GDP under current trajectory, retirement age set to 64 with continuing demographic pressure, housing affordability declining for under-35s, GHG emissions on -50% by 2030 path, healthcare access deteriorating in medical deserts, and EU fiscal framework constraining public investment. Status quo continues integration into NATO and EU markets without renationalisations.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "The program proposes structural change in every assessed dimension; the direction of welfare effect varies by cohort and decile. Lower-income and younger cohorts gain on housing, education, entry-wage and climate; higher-income cohorts and inheritors face structural tax increases. Geopolitical and EU positioning change qualitatively (NATO exit, treaty rupture). 'Mixed' rather than 'improvement' or 'worsening' reflects the heterogeneous distributional and risk profile, not analytical hedging.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Quantified bridging arithmetic between nuclear phase-out and -65% GHG by 2030",
+      "why_unsolved": "The program asserts both targets and invokes sobriety/efficiency as solving variables but does not present a TWh, GW or capacity-factor model showing the trajectory.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Aggregate fiscal balance under the full program",
+      "why_unsolved": "Source enumerates revenue increases (ISF, Zucman, 12M€ inheritance ceiling, capital-income parity, 14-bracket IR, FTT) and expenditure increases (€200bn ecological plan, 100% Sécu, retirement at 60, garantie d'autonomie, AAH-SMIC, 200k housing, 500k crèche) but does not consolidate them.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Sovereign-financing fallback if ECB Plan A fails",
+      "why_unsolved": "ECB statute change requires treaty unanimity; Plan B specifies disobedience but does not specify how France finances annual rollover (~€300bn) under a likely market spread widening.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Construction sector throughput for housing + crèche + retrofit + renewables targets simultaneously",
+      "why_unsolved": "Cumulative annual demand for skilled construction labor and materials exceeds current French capacity; source does not address training-to-deployment lag.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Capital-flight elasticity under wealth and inheritance ceilings",
+      "why_unsolved": "Lifetime gift accumulation and 12M€ ceiling are unprecedented in OECD comparators; source does not estimate base erosion or model offshore relocation under capital controls.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Demographic decline without explicit fertility or migration arithmetic",
+      "why_unsolved": "Pension-at-60 financing, EHPAD staffing, and healthcare expansion all depend on demographic ratios; the program addresses migration humanitarian framing but not labor-supply replacement arithmetic.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Constitutional path validity of Article 11 for constituent assembly",
+      "why_unsolved": "Doctrinal contestation on whether Article 11 referendum can convene a constituent assembly bypassing Congress; Constitutional Council jurisprudence ambiguous.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "ECB Plan A is rejected, France enters disobedience under Plan B, OAT spreads widen beyond 200bp over Bund.",
+      "trigger": "ECB Governing Council unanimity not achieved; French government applies budgetary disobedience.",
+      "probability": 0.55,
+      "severity": 0.85,
+      "reasoning": "Treaty unanimity is unlikely on debt cancellation; disobedience triggers mechanical infringement procedures and rating downgrades. Annual debt-service burden rises sharply on a €3+ trillion stock."
+    },
+    {
+      "scenario": "Constitutional Council blocks Article 11 path to constituent assembly, triggering institutional standoff.",
+      "trigger": "Conseil constitutionnel ruling on Article 11 convocation.",
+      "probability": 0.5,
+      "severity": 0.7,
+      "reasoning": "Doctrinal contestation high; political crisis if executive proceeds despite ruling. Reverses to legislative cycle for constitutional reform via Article 89, requiring qualified majorities the program does not assume."
+    },
+    {
+      "scenario": "Capital flight on announcement exceeds capital-control implementation speed.",
+      "trigger": "Pre-implementation window between announcement and operational capital controls.",
+      "probability": 0.55,
+      "severity": 0.6,
+      "reasoning": "Wealth-tax and inheritance-ceiling announcement create immediate exit incentives; control instruments (Banque de France escrow, exit tax) require legislation."
+    },
+    {
+      "scenario": "Electricity mix instability during simultaneous nuclear closure and renewables build-out.",
+      "trigger": "Reactor closure schedule outpaces renewables + storage commissioning.",
+      "probability": 0.5,
+      "severity": 0.65,
+      "reasoning": "Sequencing risk well documented in comparable transitions; tariff and emission consequences material if generation gap opens."
+    },
+    {
+      "scenario": "Construction throughput shortfall causes simultaneous misses on housing, crèche, retrofit, and renewable targets.",
+      "trigger": "Skilled labor and materials capacity fail to scale to plan velocity.",
+      "probability": 0.65,
+      "severity": 0.5,
+      "reasoning": "Cumulative annual demand exceeds current sector capacity by a wide margin; training-to-deployment lag exceeds the legislative horizon."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "positioning.economic.score",
+        "critique": "Scoring -5 (beyond the Mélenchon 2022 anchor) rests partly on the inheritance ceiling and ECB monetisation, which are extensions of an existing platform rather than entirely new categorical leaps; an alternative reading places the 2025 update at -4, identical to the anchor.",
+        "alternative_interpretation": "If the 2025 measures are read as quantitative deepening rather than categorical extension, the score is -4 (anchor-equivalent) rather than -5 (beyond-anchor)."
+      },
+      {
+        "claim_location": "positioning.overall_spectrum.label",
+        "critique": "Labeling the program 'extreme_gauche' relies on the economic-axis register (anti-capitalist rupture stated explicitly) and risks conflating rhetorical register with operational program. A 'gauche' label could be defended on the grounds that many measures resemble 1981 PS first-cycle policies rather than rupture.",
+        "alternative_interpretation": "The program could be read as 'gauche' if anti-capitalist rhetoric is treated as register and the operational measures are benchmarked against historical PS programs and contemporary social-democratic platforms."
+      },
+      {
+        "claim_location": "intergenerational.net_transfer_direction",
+        "critique": "Reporting 'mixed' rather than 'old_to_young' may understate the magnitude of the youth-directed redistribution (free education, housing, garantie d'autonomie, climate front-loading) relative to the retirement-at-60 cost, which is partially funded by base extension rather than purely by future cohorts.",
+        "alternative_interpretation": "If the retirement-financing extension to dividends and financial revenue is treated as effective, the net direction is closer to 'old_to_young'."
+      },
+      {
+        "claim_location": "dimensions.environmental_long_term.grade",
+        "critique": "Grade B may be generous given the unresolved nuclear-phase-out + -65%-by-2030 arithmetic; a stricter coherence-and-evidence reading could justify C.",
+        "alternative_interpretation": "If feasibility weighting dominates ambition weighting, the dimension grade falls to C."
+      }
+    ],
+    "potential_bias": "The analysis may carry a mainstream-consensus tilt on EU and NATO topics, treating Plan B disobedience as primarily a risk rather than a strategic instrument; this framing inherits from the dominant institutional perspective rather than from the program's own logic. Conversely, the analysis may under-weight the program's coherence as a structured rupture project by demanding a chiffrage standard that the source explicitly subordinates to political-economy reasoning.",
+    "evidence_gaps": "No external chiffrage by IPP, OFCE, COR or comparable bodies is admitted into this analysis (per the source-grounded constraint); claims about feasibility, capacity, and macro effects rest on the source's own measure-level statements without independent calibration. Quantitative claims about demographic ratios, retrofit capacity, OAT yield sensitivity, and capital-flight elasticity are bounded by general-knowledge orders of magnitude rather than candidate-specific source references.",
+    "confidence_in_critique": 0.7
+  },
+  "confidence_self_assessment": 0.65
+}

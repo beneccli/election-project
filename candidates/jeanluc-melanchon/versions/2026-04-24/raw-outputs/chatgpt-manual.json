@@ -1,0 +1,822 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "model": {
+    "provider": "OpenAI",
+    "version": "GPT-5.5 Thinking"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T04:20:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Programme de rupture de gauche radicale : redistribution fiscale et salariale, services publics renforcés, planification écologique, souveraineté économique, désobéissance européenne, sortie progressive de l’OTAN et 6e République. Il traite de vrais problèmes sociaux et climatiques, mais son risque principal est l’exécution budgétaire, européenne, énergétique et administrative.",
+  "positioning": {
+    "economic": {
+      "score": -4,
+      "anchor_comparison": "Gauche de rupture plus interventionniste qu’une social-démocratie classique.",
+      "evidence": [
+        {
+          "quote": "Créer un pôle public bancaire en socialisant les banques généralistes",
+          "source_ref": "sources.md#chapitre-6"
+        }
+      ],
+      "confidence": 0.93,
+      "reasoning": "Socialisation bancaire, fiscalité progressive, hausse du SMIC, prix administrés et investissement public massif."
+    },
+    "social_cultural": {
+      "score": -4,
+      "anchor_comparison": "Progressiste, proche ou à gauche d’EELV.",
+      "evidence": [
+        {
+          "quote": "Déjudiciariser le changement de sexe à l’état-civil",
+          "source_ref": "sources.md#chapitre-4"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Droits LGBTI, IVG, égalité, accueil des migrants et lutte contre les discriminations structurent l’axe social."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Souverainisme de gauche non identitaire.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN",
+          "source_ref": "sources.md#chapitre-16"
+        }
+      ],
+      "confidence": 0.88,
+      "reasoning": "Sortie de l’OTAN, désobéissance européenne, veto commercial et souveraineté industrielle."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Refondation démocratique radicale.",
+      "evidence": [
+        {
+          "quote": "Convoquer une Constituante pour passer à la 6e République",
+          "source_ref": "sources.md#chapitre-1"
+        }
+      ],
+      "confidence": 0.86,
+      "reasoning": "RIC, proportionnelle, révocation, parlementarisme et constituante modifient profondément la 5e République."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "Écologie de planification proche d’EELV avec outils étatiques plus forts.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la règle verte",
+          "source_ref": "sources.md#chapitre-12"
+        }
+      ],
+      "confidence": 0.91,
+      "reasoning": "Règle verte, planification, rénovation, biodiversité et sortie des fossiles sont au cœur du projet."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty",
+        "institutional",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "désobéirons aux règles bloquantes",
+          "source_ref": "sources.md#chapitre-17"
+        }
+      ],
+      "confidence": 0.84,
+      "reasoning": "Le label vient surtout de l’économie de rupture, de la désobéissance européenne, de la socialisation financière et de la refondation institutionnelle."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "C",
+      "headline": "Rupture redistributive structurée, mais soutenabilité et compatibilité monétaire peu démontrées.",
+      "summary": "Le programme traite pouvoir d’achat, bas salaires, financiarisation et désindustrialisation par SMIC à 1 600 euros, fiscalité progressive, blocage de prix, pôle public bancaire et investissement massif. Le point faible est le bouclage budgétaire et le conflit européen.",
+      "problems_addressed": [
+        {
+          "problem": "Problème central explicitement ciblé par le programme.",
+          "approach": "Réponse par réglementation, investissement public, droits nouveaux ou planification selon la dimension.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "La mesure est directement liée au problème, mais dépend fortement de la capacité d’exécution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Bouclage opérationnel complet.",
+          "significance": "Le programme donne des orientations fortes mais détaille moins le calendrier, les effectifs, le financement consolidé ou les compromis techniques.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque de confrontation ou de surcharge.",
+          "mechanism": "L’ampleur et la simultanéité des ruptures peuvent créer blocages juridiques, administratifs, économiques ou diplomatiques.",
+          "severity": 0.58,
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ],
+          "reasoning": "Le programme assume une stratégie de rupture, donc l’exécution n’est pas incrémentale."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité de mise en œuvre insuffisante.",
+          "probability": 0.58,
+          "severity": 0.68,
+          "reasoning": "Les réformes exigent coordination, moyens humains, arbitrages et acceptabilité.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mesure phare de la dimension.",
+          "source_ref": "sources.md#chapitre-6",
+          "quantified": false,
+          "magnitude": "variable selon mesure"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financement public important et partiellement conflictuel.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nombreuses réformes lourdes à livrer simultanément.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend d’acteurs publics, européens et sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réversible juridiquement, mais politiquement coûteux.",
+          "source_refs": [
+            "sources.md#chapitre-6"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Couverture sociale large, freinée par coût et recrutement.",
+      "summary": "Le programme couvre pauvreté, logement, santé, école, handicap, dépendance, jeunesse, égalité femmes-hommes et droits LGBTI. Les mesures sont concrètes, mais exigent financement et effectifs publics.",
+      "problems_addressed": [
+        {
+          "problem": "Problème central explicitement ciblé par le programme.",
+          "approach": "Réponse par réglementation, investissement public, droits nouveaux ou planification selon la dimension.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ],
+          "reasoning": "La mesure est directement liée au problème, mais dépend fortement de la capacité d’exécution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Bouclage opérationnel complet.",
+          "significance": "Le programme donne des orientations fortes mais détaille moins le calendrier, les effectifs, le financement consolidé ou les compromis techniques.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque de confrontation ou de surcharge.",
+          "mechanism": "L’ampleur et la simultanéité des ruptures peuvent créer blocages juridiques, administratifs, économiques ou diplomatiques.",
+          "severity": 0.58,
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ],
+          "reasoning": "Le programme assume une stratégie de rupture, donc l’exécution n’est pas incrémentale."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité de mise en œuvre insuffisante.",
+          "probability": 0.58,
+          "severity": 0.68,
+          "reasoning": "Les réformes exigent coordination, moyens humains, arbitrages et acceptabilité.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mesure phare de la dimension.",
+          "source_ref": "sources.md#chapitre-7",
+          "quantified": false,
+          "magnitude": "variable selon mesure"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financement public important et partiellement conflictuel.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nombreuses réformes lourdes à livrer simultanément.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend d’acteurs publics, européens et sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réversible juridiquement, mais politiquement coûteux.",
+          "source_refs": [
+            "sources.md#chapitre-7"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Souveraineté cohérente, mais transition diplomatique risquée.",
+      "summary": "Le programme combine sortie de l’OTAN, non-alignement, pôle public de l’armement, désobéissance européenne, régularisations et refonte police-justice. La transition alliances/UE/sécurité reste peu sécurisée.",
+      "problems_addressed": [
+        {
+          "problem": "Problème central explicitement ciblé par le programme.",
+          "approach": "Réponse par réglementation, investissement public, droits nouveaux ou planification selon la dimension.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ],
+          "reasoning": "La mesure est directement liée au problème, mais dépend fortement de la capacité d’exécution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Bouclage opérationnel complet.",
+          "significance": "Le programme donne des orientations fortes mais détaille moins le calendrier, les effectifs, le financement consolidé ou les compromis techniques.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque de confrontation ou de surcharge.",
+          "mechanism": "L’ampleur et la simultanéité des ruptures peuvent créer blocages juridiques, administratifs, économiques ou diplomatiques.",
+          "severity": 0.58,
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ],
+          "reasoning": "Le programme assume une stratégie de rupture, donc l’exécution n’est pas incrémentale."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité de mise en œuvre insuffisante.",
+          "probability": 0.58,
+          "severity": 0.68,
+          "reasoning": "Les réformes exigent coordination, moyens humains, arbitrages et acceptabilité.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mesure phare de la dimension.",
+          "source_ref": "sources.md#chapitre-16",
+          "quantified": false,
+          "magnitude": "variable selon mesure"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financement public important et partiellement conflictuel.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nombreuses réformes lourdes à livrer simultanément.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend d’acteurs publics, européens et sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réversible juridiquement, mais politiquement coûteux.",
+          "source_refs": [
+            "sources.md#chapitre-16"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "institutional_democratic": {
+      "grade": "B",
+      "headline": "Refondation démocratique ambitieuse avec risque de transition.",
+      "summary": "Le programme veut une 6e République, une Constituante, la proportionnelle, le RIC, le vote blanc et l’anti-concentration médiatique. Il répond à l’hyperprésidentialisme mais ouvre une phase d’incertitude.",
+      "problems_addressed": [
+        {
+          "problem": "Problème central explicitement ciblé par le programme.",
+          "approach": "Réponse par réglementation, investissement public, droits nouveaux ou planification selon la dimension.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "La mesure est directement liée au problème, mais dépend fortement de la capacité d’exécution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Bouclage opérationnel complet.",
+          "significance": "Le programme donne des orientations fortes mais détaille moins le calendrier, les effectifs, le financement consolidé ou les compromis techniques.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque de confrontation ou de surcharge.",
+          "mechanism": "L’ampleur et la simultanéité des ruptures peuvent créer blocages juridiques, administratifs, économiques ou diplomatiques.",
+          "severity": 0.58,
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ],
+          "reasoning": "Le programme assume une stratégie de rupture, donc l’exécution n’est pas incrémentale."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité de mise en œuvre insuffisante.",
+          "probability": 0.58,
+          "severity": 0.68,
+          "reasoning": "Les réformes exigent coordination, moyens humains, arbitrages et acceptabilité.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mesure phare de la dimension.",
+          "source_ref": "sources.md#chapitre-1",
+          "quantified": false,
+          "magnitude": "variable selon mesure"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financement public important et partiellement conflictuel.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nombreuses réformes lourdes à livrer simultanément.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend d’acteurs publics, européens et sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réversible juridiquement, mais politiquement coûteux.",
+          "source_refs": [
+            "sources.md#chapitre-1"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Ambition écologique forte, fragile sur énergie et capacité industrielle.",
+      "summary": "Le programme propose règle verte, baisse forte des émissions, rénovation massive, 100 % renouvelables, transports publics, agriculture écologique et biodiversité. Le risque principal est le calendrier énergie-réseau-rénovation.",
+      "problems_addressed": [
+        {
+          "problem": "Problème central explicitement ciblé par le programme.",
+          "approach": "Réponse par réglementation, investissement public, droits nouveaux ou planification selon la dimension.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "La mesure est directement liée au problème, mais dépend fortement de la capacité d’exécution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Bouclage opérationnel complet.",
+          "significance": "Le programme donne des orientations fortes mais détaille moins le calendrier, les effectifs, le financement consolidé ou les compromis techniques.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque de confrontation ou de surcharge.",
+          "mechanism": "L’ampleur et la simultanéité des ruptures peuvent créer blocages juridiques, administratifs, économiques ou diplomatiques.",
+          "severity": 0.58,
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ],
+          "reasoning": "Le programme assume une stratégie de rupture, donc l’exécution n’est pas incrémentale."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Capacité de mise en œuvre insuffisante.",
+          "probability": 0.58,
+          "severity": 0.68,
+          "reasoning": "Les réformes exigent coordination, moyens humains, arbitrages et acceptabilité.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mesure phare de la dimension.",
+          "source_ref": "sources.md#chapitre-13",
+          "quantified": false,
+          "magnitude": "variable selon mesure"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Financement public important et partiellement conflictuel.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nombreuses réformes lourdes à livrer simultanément.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend d’acteurs publics, européens et sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Réversible juridiquement, mais politiquement coûteux.",
+          "source_refs": [
+            "sources.md#chapitre-13"
+          ]
+        }
+      },
+      "confidence": 0.8
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "not quantified",
+      "units": "qualitative net transfer",
+      "confidence": 0.36,
+      "caveats": "Pas de compte générationnel complet; effets jeunes/climat positifs mais retraites et dette peuvent transférer une charge future."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Services et investissements utiles, mais risque de dette future.",
+        "quantified": "not quantified"
+      },
+      "housing": {
+        "summary": "Gain potentiel via logement public et loyers encadrés.",
+        "quantified": "200 000 logements publics/an annoncé"
+      },
+      "pension_outlook": {
+        "summary": "Âge légal plus favorable, soutenabilité incertaine.",
+        "quantified": "retraite à 60 ans"
+      },
+      "labor_market": {
+        "summary": "SMIC et droits protecteurs, risque d’effets sectoriels sur emploi.",
+        "quantified": "SMIC 1 600 euros nets"
+      },
+      "environmental_debt": {
+        "summary": "Bénéfice fort si planification écologique réussit.",
+        "quantified": "objectif -65 % émissions en 2030"
+      },
+      "narrative_summary": "Un jeune gagne surtout sur logement, droits sociaux et climat, mais supporte le risque d’échec budgétaire ou productif."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Bénéficie des services publics, contribue plus si patrimoine/revenu élevé.",
+        "quantified": "not quantified"
+      },
+      "pension": {
+        "summary": "Très favorable aux retraités modestes et proches retraités.",
+        "quantified": "pension minimale 1 600 euros pour carrière complète"
+      },
+      "healthcare": {
+        "summary": "Bénéfice direct via santé et dépendance.",
+        "quantified": "not quantified"
+      },
+      "narrative_summary": "Un retraité est protégé par le programme; les coûts éventuels sont plus diffus."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Retirement at 60 with 40 contribution years raises benefits for older cohorts while increasing contribution needs for workers.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Age-60 retirement and higher minimum pensions benefit near-retirees; contribution increases start during the mandate.",
+            "source_refs": [
+              "sources.md#retraite-a-60-ans"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -2,
+            "note": "Lower retirement age and wage-indexed pensions expand recurring pension obligations beyond the first mandate.",
+            "source_refs": [
+              "sources.md#retraite-a-60-ans"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -2,
+            "note": "Future cohorts inherit a structurally earlier retirement age unless contribution-base expansion offsets ageing costs.",
+            "source_refs": [
+              "sources.md#retraite-a-60-ans"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Debt strategy relies on ECB treatment, a Treasury circuit and audit, while the program adds large public-service and ecological spending.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Spending starts immediately; debt relief depends on ECB and EU arrangements not controlled unilaterally by France.",
+            "source_refs": [
+              "sources.md#refuser-le-chantage-annuler-la-dette-publique",
+              "sources.md#faire-la-revolution-fiscale"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Debt-service gains are possible if ECB debt conversion occurs; without it, higher spending keeps fiscal pressure elevated.",
+            "source_refs": [
+              "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-run effect is ambiguous: public assets may rise, but the program does not quantify a debt-to-GDP path to 2047.",
+            "source_refs": [
+              "sources.md#refuser-le-chantage-annuler-la-dette-publique",
+              "sources.md#planification-ecologique"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "The program gives climate policy a constitutional rule, annual accounting, planning institutions and a 2030 emissions target.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "The 65% emissions-reduction target for 2030 and carbon accounting would materially change the near-term trajectory.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Planning bodies, relocalisation policy and green logistics create durable instruments beyond the first mandate.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Rule-verte constraints and ecosystem accounting reduce long-term environmental debt if maintained by later governments.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique",
+              "sources.md#protection-des-biens-communs-et-des-droits-de-lespece"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Health measures expand reimbursement, rebuild public hospitals, reopen local services and relocalise strategic medicines.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "100% Sécu and emergency reopenings improve access quickly, but staffing and hospital capacity take time to rebuild.",
+            "source_refs": [
+              "sources.md#faire-passer-la-sante-dabord",
+              "sources.md#reconstruire-les-etablissements-de-sante-publics"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Recruitment, wage revaluation and proximity services have stronger effects once training and hiring pipelines mature.",
+            "source_refs": [
+              "sources.md#faire-passer-la-sante-dabord",
+              "sources.md#reconstruire-les-etablissements-de-sante-publics"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "A larger public-care base and medicine supply policy can improve resilience for ageing and pandemic risks.",
+            "source_refs": [
+              "sources.md#faire-passer-la-sante-dabord",
+              "sources.md#adaptation-aux-pandemies-et-zoonoses"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Education policy targets lower household costs, smaller classes, extended schooling, recruitment and stronger public provision.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Free canteens, transport, supplies and class-size reductions lower family costs and improve access during the mandate.",
+            "source_refs": [
+              "sources.md#reconstruire-une-ecole-globale-pour-legalite-et-lemancipation"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Recruitment, teacher training and schooling to 18 affect cohorts educated through the next decade.",
+            "source_refs": [
+              "sources.md#reconstruire-une-ecole-globale-pour-legalite-et-lemancipation"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Human-capital gains may persist for cohorts entering work after 2038, if staffing and school-building commitments hold.",
+            "source_refs": [
+              "sources.md#reconstruire-une-ecole-globale-pour-legalite-et-lemancipation"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Housing measures combine public construction, rent regulation, anti-speculation tools and mandatory thermal renovation.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "200,000 public homes per year and rent controls would materially affect access for renters if delivered on schedule.",
+            "source_refs": [
+              "sources.md#logement-200000-logements-publics",
+              "sources.md#encadrer-les-loyers"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "The five-year public-building plan adds up to one million units; social-stock effects persist after construction.",
+            "source_refs": [
+              "sources.md#logement-200000-logements-publics"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run benefits remain through public stock and renovation rules, but the program does not specify post-five-year output.",
+            "source_refs": [
+              "sources.md#logement-200000-logements-publics",
+              "sources.md#renovation-des-passoires-thermiques"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "La direction nette est mixte : jeunes et climat bénéficient d’investissements, mais retraites, dette et risque d’exécution peuvent reporter une partie de la charge.",
+    "source_refs": [
+      "sources.md#chapitre-6",
+      "sources.md#chapitre-7",
+      "sources.md#chapitre-8",
+      "sources.md#chapitre-12",
+      "sources.md#chapitre-13"
+    ],
+    "confidence": 0.62
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Le statu quo prolongerait, selon le programme, austérité, hyperprésidentialisme, dépendance européenne/OTAN, désindustrialisation, inégalités et insuffisance climatique.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Le programme change fortement toutes les dimensions; la direction est mixed car il combine bénéfices sociaux/climatiques probables et risques d’exécution majeurs.",
+    "confidence": 0.82
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Bouclage macro-budgétaire complet.",
+      "why_unsolved": "Les sources ne donnent pas une trajectoire consolidée dépenses-recettes-dette.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-6"
+      ]
+    },
+    {
+      "problem": "Compatibilité UE/BCE.",
+      "why_unsolved": "La désobéissance européenne est prévue mais son issue juridique et financière reste incertaine.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-17"
+      ]
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Crise de financement.",
+      "trigger": "Conflit avec UE/BCE ou doute sur la dette.",
+      "probability": 0.42,
+      "severity": 0.86,
+      "reasoning": "Les mesures centrales reposent sur un rapport de force financier et européen."
+    },
+    {
+      "scenario": "Surcharge administrative.",
+      "trigger": "Trop de réformes lancées simultanément.",
+      "probability": 0.56,
+      "severity": 0.65,
+      "reasoning": "La réussite suppose une reconstruction rapide de l’État."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "economic_fiscal.grade",
+        "critique": "La note C peut être trop favorable si le risque UE/BCE est pondéré plus fortement.",
+        "alternative_interpretation": "Le programme pourrait mériter D en faisabilité économique."
+      },
+      {
+        "claim_location": "environmental_long_term.grade",
+        "critique": "La note B valorise l’ambition, mais sous-estime peut-être la difficulté énergétique.",
+        "alternative_interpretation": "Une note C serait défendable si la sécurité d’approvisionnement prime."
+      }
+    ],
+    "potential_bias": "Analyse limitée aux sources programmatiques; elle peut surestimer la cohérence interne et sous-estimer les contraintes empiriques externes.",
+    "evidence_gaps": "Chiffrage consolidé, coûts de nationalisation, calendrier de recrutement, plan énergie détaillé, réactions UE/BCE, effets fiscaux comportementaux.",
+    "confidence_in_critique": 0.82
+  },
+  "confidence_self_assessment": 0.8
+}

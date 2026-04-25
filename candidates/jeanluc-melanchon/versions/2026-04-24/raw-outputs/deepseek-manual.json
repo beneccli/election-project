@@ -1,0 +1,1106 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T03:26:30.115Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Programme de rupture anticapitaliste articulé autour de la planification écologique, une 6e République citoyenne, une refonte fiscale redistributive, et une renégociation radicale des engagements européens et atlantiques. Les mesures sont détaillées et couvrent la quasi-totalité des champs de l'action publique, mais reposent sur des hypothèses fortes de coopération institutionnelle (UE, BCE) et de transformation légale rapide.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "Plus interventionniste que Mélenchon 2022 (-4) ; nationalisations, planification et contrôle des prix généralisés.",
+      "evidence": [
+        {
+          "quote": "Créer un pôle public bancaire",
+          "source_ref": "sources.md#pour-des-banques-au-service-de-lintérêt-général"
+        },
+        {
+          "quote": "Revenir sur les privatisations (aéroports, autoroutes, Française des Jeux, etc.)",
+          "source_ref": "sources.md#mettre-fin-au-pillage-économique-de-la-nation"
+        },
+        {
+          "quote": "Bloquer les prix des produits de première nécessité",
+          "source_ref": "sources.md#créer-un-état-durgence-sociale"
+        }
+      ],
+      "confidence": 0.95,
+      "reasoning": "Programme explicite sur la reprise en main publique de secteurs stratégiques, la régulation des prix et la fiscalité confiscatoire des hauts patrimoines. Propositions concrètes et affirmées."
+    },
+    "social_cultural": {
+      "score": -5,
+      "anchor_comparison": "À l'extrémité progressiste de l'échiquier politique français, au-delà du positionnement EELV 2022 (-3).",
+      "evidence": [
+        {
+          "quote": "Déjudiciariser le changement de sexe à l'état-civil en le rendant libre et gratuit",
+          "source_ref": "sources.md#une-nouvelle-étape-des-libertés-et-de-lémancipation-individuelle"
+        },
+        {
+          "quote": "Légaliser et encadrer par un monopole d’État la consommation, la production et la vente de cannabis",
+          "source_ref": "sources.md#addictions-et-drogues-il-faut-changer-de-stratégie"
+        },
+        {
+          "quote": "Abolir la prostitution et garantir la dignité de la personne",
+          "source_ref": "sources.md#réaliser-légalité-entre-les-femmes-et-les-hommes"
+        },
+        {
+          "quote": "Instituer le droit de vote des étrangers aux élections locales",
+          "source_ref": "sources.md#une-république-universaliste-contre-le-racisme-et-les-discriminations"
+        }
+      ],
+      "confidence": 0.95,
+      "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Niveau de souverainisme comparable à LR 2022 (+2) mais plus affirmé, sans atteindre le nationalisme identitaire du RN (+4).",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN puis, par étapes, de l’organisation elle-même",
+          "source_ref": "sources.md#assumer-lindépendance-de-la-france-dans-le-monde"
+        },
+        {
+          "quote": "Désobéir à chaque fois que c’est nécessaire pour mettre en œuvre notre programme",
+          "source_ref": "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire-pour-mettre-en-œuvre-notre-programme"
+        },
+        {
+          "quote": "Relocaliser les productions essentielles à la vie de notre pays",
+          "source_ref": "sources.md#réindustrialiser-et-relocaliser-pour-assurer-notre-indépendance"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Programme articulant sortie de l'OTAN, désobéissance aux traités européens, protectionnisme et relocalisation. Le registre reste altermondialiste et internationaliste, ce qui le distingue du souverainisme nationaliste."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Similaire au référentiel LFI (+2), avec primauté assumée de la souveraineté populaire sur les contraintes constitutionnelles et supranationales.",
+      "evidence": [
+        {
+          "quote": "Convoquer une Constituante pour passer à la 6e République",
+          "source_ref": "sources.md#réunir-une-assemblée-constituante-pour-passer-à-la-6e-république"
+        },
+        {
+          "quote": "Instaurer le Référendum d’initiative citoyenne (RIC), par lequel les citoyens […] peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution",
+          "source_ref": "sources.md#une-république-permettant-lintervention-populaire"
+        },
+        {
+          "quote": "Réaffirmer la supériorité des principes fondamentaux inscrits dans la Constitution de la 6e République sur le droit européen",
+          "source_ref": "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire-pour-mettre-en-œuvre-notre-programme"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Le projet de 6e République avec primauté populaire et contournement des traités existants place le programme dans la zone illibérale/populiste de l'axe, bien que les contre-pouvoirs (indépendance judiciaire, médias) soient aussi renforcés."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "Au même niveau qu'EELV 2022 (+4) ; planification écologique, règle verte, sortie du nucléaire et investissement massif.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu’elle est en état de reconstituer",
+          "source_ref": "sources.md#la-bifurcation-écologique-pour-une-société-de-lharmonie"
+        },
+        {
+          "quote": "Lancer un plan massif de 200 milliards d’euros d’investissements écologiquement et socialement utiles",
+          "source_ref": "sources.md#investir-pour-lancer-la-bifurcation-de-notre-économie"
+        },
+        {
+          "quote": "Planifier le passage à 100 % d’énergies renouvelables",
+          "source_ref": "sources.md#organiser-le-100-dénergies-renouvelables-en-2050-et-la-rénovation-énergétique"
+        }
+      ],
+      "confidence": 0.95,
+      "reasoning": "Les propositions écologiques sont centrales, détaillées et structurelles, couvrant l'énergie, l'agriculture, l'eau, la biodiversité et les transports."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "Créer un pôle public bancaire",
+          "source_ref": "sources.md#pour-des-banques-au-service-de-lintérêt-général"
+        },
+        {
+          "quote": "Déjudiciariser le changement de sexe à l'état-civil en le rendant libre et gratuit",
+          "source_ref": "sources.md#une-nouvelle-étape-des-libertés-et-de-lémancipation-individuelle"
+        },
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte »",
+          "source_ref": "sources.md#la-bifurcation-écologique-pour-une-société-de-lharmonie"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Économie étatiste et anticapitaliste, progressisme sociétal maximal, écologie de rupture et souverainisme post-européen placent le programme à l'extrême-gauche. Les axes institutionnel et de souveraineté renforcent le caractère de rupture sans déplacer le curseur gauche-droite."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Révolution fiscale (14 tranches d'IR, ISF renforcé, taxe Zucman) et création de pôles publics, mais financement tributaire d'un affrontement avec la BCE et l'UE.",
+      "summary": "Le programme détaille une refonte complète de la fiscalité (progressivité, suppression de la flat tax, taxation des superprofits, ISF climatique), la création de pôles publics (banque, énergie, transports, médicaments), l'annulation/restructuration de la dette publique via la BCE, et une forte revalorisation du SMIC et des minima sociaux. Les mesures sont précises et cohérentes entre elles, mais le bouclage macroéconomique repose sur des hypothèses de coopération de la BCE et de croissance induite par la demande qui ne sont pas quantifiées.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration des richesses et injustice fiscale",
+          "approach": "ISF renforcé avec volet climatique, taxe Zucman de 2% sur le patrimoine des milliardaires, héritage maximal de 12M€, 14 tranches d'IR, suppression de la flat tax.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#faire-la-révolution-fiscale"
+          ],
+          "reasoning": "Mesures détaillées et chiffrées visant directement la progressivité et la redistribution."
+        },
+        {
+          "problem": "Financement de l'État soumis aux marchés financiers",
+          "approach": "Transformation des dettes BCE en dettes perpétuelles à taux nul, circuit du Trésor, audit citoyen de la dette.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+          ],
+          "reasoning": "Stratégie explicite mais dépendante d'une renégociation du statut de la BCE et d'un rapport de force avec l'UE."
+        },
+        {
+          "problem": "Précarité salariale et bas revenus",
+          "approach": "SMIC à 1600€ net, indexation des salaires sur l'inflation, garantie d'autonomie au seuil de pauvreté (1216€), blocage des prix de première nécessité.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#augmenter-les-salaires-et-réduire-les-inégalités-salariales",
+            "sources.md#éradiquer-la-pauvreté"
+          ],
+          "reasoning": "Chiffrages précis et mesures immédiates d'urgence sociale."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Équilibre extérieur et balance commerciale en cas de relance par la demande",
+          "significance": "Une hausse de la consommation populaire sans capacité productive immédiate pourrait creuser le déficit commercial, non traité explicitement.",
+          "source_refs": []
+        },
+        {
+          "problem": "Impact d'une taxe sur les transactions financières et contrôle des capitaux sur la place financière de Paris",
+          "significance": "Fuite de capitaux et rétorsions possibles non évaluées.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Conflit juridique et budgétaire avec l'UE",
+          "mechanism": "Désobéissance aux règles budgétaires et de concurrence, sortie des traités, risque de sanctions ou d'isolement.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire-pour-mettre-en-œuvre-notre-programme"
+          ],
+          "reasoning": "Le programme anticipe la confrontation mais n'en mesure pas les coûts économiques à court terme."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage par la BCE ou les institutions européennes du financement monétaire",
+          "probability": 0.7,
+          "severity": 0.9,
+          "reasoning": "La BCE et l'UE ont historiquement refusé les solutions de monétisation de la dette et les entorses au Pacte de stabilité.",
+          "source_refs": [
+            "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+          ]
+        },
+        {
+          "risk": "Évasion fiscale accélérée et départ des contribuables les plus mobiles",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Le programme prévoit des mesures de lutte contre l'évasion mais l'expérience de l'ISF montre des départs significatifs.",
+          "source_refs": [
+            "sources.md#faire-la-révolution-fiscale"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Barème de l'IR à 14 tranches et suppression de la flat tax",
+          "source_ref": "sources.md#faire-la-révolution-fiscale",
+          "quantified": true,
+          "magnitude": "14 tranches"
+        },
+        {
+          "measure": "Taxe Zucman de 2% sur le patrimoine des milliardaires",
+          "source_ref": "sources.md#faire-la-révolution-fiscale",
+          "quantified": true,
+          "magnitude": "2% du patrimoine"
+        },
+        {
+          "measure": "SMIC à 1600€ net et indexation des salaires sur l'inflation",
+          "source_ref": "sources.md#augmenter-les-salaires-et-réduire-les-inégalités-salariales",
+          "quantified": true,
+          "magnitude": "1600€ net/mois"
+        },
+        {
+          "measure": "Garantie d'autonomie au seuil de pauvreté (1216€)",
+          "source_ref": "sources.md#éradiquer-la-pauvreté",
+          "quantified": true,
+          "magnitude": "1216€/personne/mois"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Dépend du financement monétaire par la BCE et de la croissance des recettes fiscales nouvelles, hypothèses non garanties.",
+          "source_refs": [
+            "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Refonte complète du système fiscal, création de pôles publics et renégociation des traités exigent une capacité administrative exceptionnelle.",
+          "source_refs": [
+            "sources.md#faire-la-révolution-fiscale"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance critique à la BCE, aux partenaires européens et à l'acceptation par les marchés financiers.",
+          "source_refs": [
+            "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire-pour-mettre-en-œuvre-notre-programme"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les nationalisations et nouveaux droits sociaux seraient difficiles à défaire ; les mesures fiscales réversibles par une autre majorité.",
+          "source_refs": [
+            "sources.md#mettre-fin-au-pillage-économique-de-la-nation"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "social_demographic": {
+      "grade": "A",
+      "headline": "Service public de la petite enfance, garantie d'autonomie pour les jeunes, refonte de l'école et de la dépendance, droits des femmes et anti-discriminations.",
+      "summary": "Le programme couvre l'ensemble des champs sociaux avec des propositions détaillées et souvent chiffrées : éradication de la pauvreté par une garantie d'autonomie, service public de la petite enfance (500 000 places en crèche), reconstruction de l'école publique, plan pour la dépendance, lutte contre les violences sexistes (budget de 2,6 Md€), droits des personnes handicapées, et mesures spécifiques pour les Outre-mer. La cohérence d'ensemble est forte, axée sur l'universalisme et la réduction des inégalités.",
+      "problems_addressed": [
+        {
+          "problem": "Pauvreté et exclusion sociale",
+          "approach": "Garantie d'autonomie à 1216€, zéro sans-abri via 203 000 places, gratuité des premières consommations d'énergie et d'eau, encadrement des prix alimentaires.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#éradiquer-la-pauvreté"
+          ],
+          "reasoning": "Objectif chiffré et mesures immédiates de transferts monétaires et en nature."
+        },
+        {
+          "problem": "Inégalités de genre et violences sexistes",
+          "approach": "Loi de lutte contre le sexisme avec 2,6 Md€, parité dans toutes les instances, égalité salariale, congé parental identique obligatoire, lutte contre l'impunité des agresseurs sexuels.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#réaliser-légalité-entre-les-femmes-et-les-hommes"
+          ],
+          "reasoning": "Ensemble complet de mesures juridiques, budgétaires et structurelles."
+        },
+        {
+          "problem": "Accès à la santé et déserts médicaux",
+          "approach": "100% Sécu, recrutement de médecins publics, régulation de l'installation, réouverture de services de proximité, plan santé mentale.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#faire-passer-la-santé-dabord-et-reconstruire-les-établissements-de-santé-publics"
+          ],
+          "reasoning": "Mesures structurelles mais recrutement massif dépendant des capacités de formation."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Financement intergénérationnel des retraites à long terme après retour à 60 ans",
+          "significance": "Le programme ne détaille pas l'équilibrage du système au-delà des hausses de cotisations immédiates.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Tensions sur l'offre de soins à très court terme",
+          "mechanism": "La suppression des franchises et le 100% Sécu sans augmentation immédiate de l'offre pourraient accroître les délais d'attente.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#faire-passer-la-santé-dabord"
+          ],
+          "reasoning": "Effet de demande induit avant montée en charge de l'offre."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Pénurie de professionnels de santé formés à court terme",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "Les recrutements massifs annoncés ne produiront leurs effets qu'après plusieurs années de formation.",
+          "source_refs": [
+            "sources.md#faire-passer-la-santé-dabord"
+          ]
+        },
+        {
+          "risk": "Coût budgétaire cumulé des mesures sociales (garantie autonomie, crèches, dépendance, santé)",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Les masses financières ne sont pas consolidées, et le financement repose en partie sur la refonte fiscale simultanée.",
+          "source_refs": [
+            "sources.md#éradiquer-la-pauvreté",
+            "sources.md#faire-le-service-public-de-la-petite-enfance"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Garantie d'autonomie au seuil de pauvreté (1216€/mois)",
+          "source_ref": "sources.md#éradiquer-la-pauvreté",
+          "quantified": true,
+          "magnitude": "1216€/personne/mois"
+        },
+        {
+          "measure": "500 000 places en crèche et service public petite enfance",
+          "source_ref": "sources.md#faire-le-service-public-de-la-petite-enfance",
+          "quantified": true,
+          "magnitude": "500 000 places"
+        },
+        {
+          "measure": "100% Sécu et abrogation des franchises médicales",
+          "source_ref": "sources.md#faire-passer-la-santé-dabord",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Loi de lutte contre le sexisme dotée de 2,6 Md€",
+          "source_ref": "sources.md#réaliser-légalité-entre-les-femmes-et-les-hommes",
+          "quantified": true,
+          "magnitude": "2,6 Md€"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Cumul de dépenses nouvelles très élevé (garantie autonomie, crèches, santé, dépendance) sans trajectoire de financement consolidée hors hypothèse de croissance et de réforme fiscale.",
+          "source_refs": [
+            "sources.md#éradiquer-la-pauvreté"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite des recrutements massifs dans la santé, la petite enfance, le médico-social ; le stock de professionnels formés est insuffisant à court terme.",
+          "source_refs": [
+            "sources.md#faire-le-service-public-de-la-petite-enfance"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépendance modérée vis-à-vis de l'UE pour les normes sociales, mais les prestations monétaires sont purement nationales.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Les prestations monétaires et droits nouveaux créeraient des droits acquis difficiles politiquement à supprimer.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "Sortie de l'OTAN, refondation de la police, politique migratoire humaniste et souveraineté industrielle par la relocalisation et le protectionnisme écologique.",
+      "summary": "Le programme articule une refonte régalienne autour de la souveraineté nationale : retrait de l'OTAN, défense souveraine avec pôle public de l'armement, sécurité intérieure recentrée sur la police de proximité et le renseignement humain, politique migratoire fondée sur la régularisation et l'asile, et souveraineté énergétique/alimentaire par la relocalisation et les renouvelables. La cohérence est forte sur l'indépendance stratégique, mais les vulnérabilités de transition (sortie du nucléaire sans fossiles, alternatives à l'OTAN) sont peu détaillées.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance militaire vis-à-vis de l'OTAN et des États-Unis",
+          "approach": "Retrait du commandement intégré puis de l'OTAN, loi de programmation militaire pour l'indépendance, pôle public de l'armement.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#assumer-lindépendance-de-la-france-dans-le-monde",
+            "sources.md#construire-une-défense-souveraine-au-service-de-la-paix"
+          ],
+          "reasoning": "Mesures structurelles de désengagement et d'autonomisation de l'outil de défense."
+        },
+        {
+          "problem": "Violences policières et défiance population-police",
+          "approach": "Refondation de la police républicaine, interdiction des LBD et techniques létales, remplacement IGPN/IGGN par une autorité indépendante, rétablissement de la police de proximité, démantèlement des BAC et BRAV-M.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#refonder-une-police-républicaine",
+            "sources.md#une-police-de-proximité-au-service-de-la-sûreté-des-citoyens"
+          ],
+          "reasoning": "Mesures précises visant les doctrines de maintien de l'ordre et les structures de contrôle."
+        },
+        {
+          "problem": "Dépendance industrielle et alimentaire",
+          "approach": "Relocalisation des productions essentielles, protectionnisme écologique, droits de douane carbone, plan de reconstruction industrielle.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#réindustrialiser-et-relocaliser-pour-assurer-notre-indépendance",
+            "sources.md#souveraineté-alimentaire-et-révolution-agricole"
+          ],
+          "reasoning": "Identification claire des filières stratégiques et outils de politique commerciale."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Architecture de sécurité européenne alternative à l'OTAN",
+          "significance": "Le programme mentionne un cadre paneuropéen de sécurité et l'ONU, mais ne détaille pas de mécanisme opérationnel de défense collective.",
+          "source_refs": []
+        },
+        {
+          "problem": "Garantie de la dissuasion nucléaire en cas de réorientation radicale de la doctrine de défense",
+          "significance": "Le programme veut penser des alternatives à la dissuasion nucléaire, sans préciser le calendrier ni les conditions.",
+          "source_refs": [
+            "sources.md#construire-une-défense-souveraine-au-service-de-la-paix"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Tensions avec les alliés occidentaux et l'UE en matière de défense",
+          "mechanism": "Le retrait de l'OTAN et l'opposition à une Europe de la défense intégrée peuvent isoler la France dans les instances de sécurité.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#assumer-lindépendance-de-la-france-dans-le-monde"
+          ],
+          "reasoning": "Risque diplomatique assumé par le programme mais non chiffré."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Vulnérabilité énergétique durant la transition nucléaire vers le 100% ENR",
+          "probability": 0.5,
+          "severity": 0.7,
+          "reasoning": "La sortie du nucléaire sans recours aux fossiles impose un rythme de déploiement des ENR et des stockages qui peut être tendu.",
+          "source_refs": [
+            "sources.md#organiser-le-100-dénergies-renouvelables-en-2050"
+          ]
+        },
+        {
+          "risk": "Baisse de la capacité de projection militaire extérieure",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "La sortie de l'OTAN et la priorité aux équipements défensifs pourraient réduire l'interopérabilité et la portée expéditionnaire.",
+          "source_refs": [
+            "sources.md#construire-une-défense-souveraine-au-service-de-la-paix"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Retrait du commandement intégré de l'OTAN puis de l'organisation",
+          "source_ref": "sources.md#assumer-lindépendance-de-la-france-dans-le-monde",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Création d'un pôle public de l'armement",
+          "source_ref": "sources.md#construire-une-défense-souveraine-au-service-de-la-paix",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Rétablissement de la police de proximité et démantèlement BAC/BRAV-M",
+          "source_ref": "sources.md#une-police-de-proximité-au-service-de-la-sûreté-des-citoyens",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Régularisation des travailleurs sans papiers et carte de séjour de 10 ans comme titre de référence",
+          "source_ref": "sources.md#pour-une-politique-migratoire-humaniste-et-réaliste",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "La loi de programmation militaire nouvelle et la refonte de la police nécessiteront des budgets accrus, en partie compensés par la réorientation des dépenses OTAN.",
+          "source_refs": [
+            "sources.md#construire-une-défense-souveraine-au-service-de-la-paix"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Changer la doctrine de défense, reconstruire les filières industrielles d'armement et réformer la police en profondeur prendront plusieurs années.",
+          "source_refs": [
+            "sources.md#refonder-une-police-républicaine"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "La sortie de l'OTAN et la désobéissance aux règles européennes créent une forte dépendance au contexte international et aux réactions des alliés.",
+          "source_refs": [
+            "sources.md#assumer-lindépendance-de-la-france-dans-le-monde"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Un retour dans l'OTAN est politiquement difficile mais juridiquement possible ; les réformes policières pourraient être défaites par une majorité suivante.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.8
+    },
+    "institutional_democratic": {
+      "grade": "A",
+      "headline": "Assemblée constituante pour une 6e République parlementaire avec RIC, référendum révocatoire, et séparation stricte de l'argent et de l'État.",
+      "summary": "Le programme propose une refondation complète des institutions : convocation d'une Assemblée constituante, passage à un régime parlementaire stable, introduction du RIC (y compris révocatoire), abolition de la monarchie présidentielle (suppression du 49.3), droit de vote à 16 ans, reconnaissance du vote blanc, lutte contre la corruption (séparation État-finance, inéligibilité des corrompus, fin du pantouflage), et réforme des médias pour le pluralisme. L'ensemble forme un projet cohérent de démocratie continue et de contrôle citoyen.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration excessive du pouvoir exécutif et défiance démocratique",
+          "approach": "6e République parlementaire, suppression du 49.3, proportionnelle, RIC constituant et législatif, référendum révocatoire.",
+          "strength": 0.95,
+          "source_refs": [
+            "sources.md#abolir-la-monarchie-présidentielle",
+            "sources.md#une-république-permettant-lintervention-populaire"
+          ],
+          "reasoning": "Mécanismes constitutionnels détaillés pour redistribuer le pouvoir entre Parlement, citoyens et exécutif."
+        },
+        {
+          "problem": "Corruption et conflits d'intérêts entre État et intérêts privés",
+          "approach": "Interdiction du pantouflage, allongement des délais d'incompatibilité, transparence des agendas, suppression du monopole du déclenchement des poursuites par Bercy, fin des cabinets de conseil privés pour les politiques publiques.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#balayer-loligarchie-abolir-les-privilèges-de-la-caste"
+          ],
+          "reasoning": "Dispositif complet de règles d'incompatibilité, de transparence et de répression."
+        },
+        {
+          "problem": "Concentration des médias et dépendance aux intérêts financiers",
+          "approach": "Loi anti-concentration, séparation infrastructures/contenus, transformation du conseil de déontologie en contre-pouvoir citoyen, élection des présidents de l'audiovisuel public au Parlement, statut juridique des rédactions.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#la-révolution-citoyenne-dans-les-médias"
+          ],
+          "reasoning": "Mesures structurelles visant le capitalisme médiatique et le pluralisme."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Risque de paralysie décisionnelle en régime parlementaire avec fort recours au référendum",
+          "significance": "La combinaison proportionnelle intégrale, RIC fréquent et absence de 49.3 peut produire une instabilité gouvernementale et des contradictions entre volonté populaire directe et majorité parlementaire.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Sécurité juridique et prévisibilité normative",
+          "mechanism": "Le RIC révocatoire et la supériorité de la Constitution sur le droit européen introduisent une incertitude pour les engagements internationaux et les droits des tiers.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#une-république-permettant-lintervention-populaire",
+            "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire"
+          ],
+          "reasoning": "La possibilité de révocation et de remise en cause fréquente des normes peut nuire à la stabilité juridique."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage du processus constituant par les institutions existantes (Sénat, Conseil constitutionnel) ou par référendum négatif",
+          "probability": 0.6,
+          "severity": 0.8,
+          "reasoning": "L'article 11 comme base juridique est contesté ; un refus référendaire ou un blocage du Sénat retarderait considérablement la réforme.",
+          "source_refs": [
+            "sources.md#réunir-une-assemblée-constituante-pour-passer-à-la-6e-république"
+          ]
+        },
+        {
+          "risk": "Capture du RIC par des intérêts organisés ou des mouvements d'opinion conjoncturels",
+          "probability": 0.4,
+          "severity": 0.6,
+          "reasoning": "Le RIC sans filtres institutionnels solides peut être instrumentalisé pour des référendums contradictoires ou démagogiques.",
+          "source_refs": [
+            "sources.md#une-république-permettant-lintervention-populaire"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Convocation d'une Assemblée constituante par référendum (art. 11) pour une 6e République",
+          "source_ref": "sources.md#réunir-une-assemblée-constituante-pour-passer-à-la-6e-république",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Instauration du RIC législatif, abrogatoire, constituant et révocatoire",
+          "source_ref": "sources.md#une-république-permettant-lintervention-populaire",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Séparation de l'argent et de l'État : interdiction du pantouflage, transparence, fin des cabinets de conseil",
+          "source_ref": "sources.md#balayer-loligarchie-abolir-les-privilèges-de-la-caste",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Droit de vote à 16 ans et reconnaissance du vote blanc",
+          "source_ref": "sources.md#une-république-permettant-lintervention-populaire",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Coût direct modéré (organisation d'élections et référendums), mais l'incertitude institutionnelle peut affecter la confiance économique.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "La refonte constitutionnelle est l'entreprise institutionnelle la plus lourde possible, avec un risque élevé d'enlisement.",
+          "source_refs": [
+            "sources.md#réunir-une-assemblée-constituante"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Le processus constituant dépend de la validation juridique initiale (article 11) et de l'acceptation populaire par référendums successifs.",
+          "source_refs": [
+            "sources.md#réunir-une-assemblée-constituante"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Une fois la 6e République adoptée, un retour à la 5e serait juridiquement et politiquement très difficile.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.9
+    },
+    "environmental_long_term": {
+      "grade": "A",
+      "headline": "Règle verte constitutionnelle, 200 Md€ d'investissement, 100% ENR en 2050, sortie du nucléaire, agriculture bio et protectionnisme écologique.",
+      "summary": "Le programme place la bifurcation écologique au centre avec une planification démocratique : règle verte constitutionnelle, objectif de -65% d'émissions en 2030, 200 Md€ d'investissements écologiques, sortie du nucléaire et 100% ENR en 2050, rénovation de 700 000 logements/an, agriculture écologique et paysanne (300 000 emplois créés), protection de l'eau et de la biodiversité, et protectionnisme écologique. L'ambition est maximale et les mesures couvrent tous les secteurs, mais la faisabilité technique et économique de la sortie simultanée du nucléaire et des fossiles est peu documentée.",
+      "problems_addressed": [
+        {
+          "problem": "Dérèglement climatique et émissions de GES",
+          "approach": "Objectif -65% en 2030, règle verte, planification écologique, 200 Md€ d'investissement, rénovation massive, décarbonation des transports et de l'industrie.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#la-bifurcation-écologique-pour-une-société-de-lharmonie",
+            "sources.md#investir-pour-lancer-la-bifurcation-de-notre-économie"
+          ],
+          "reasoning": "Objectifs chiffrés et plan d'investissement pluriannuel articulé."
+        },
+        {
+          "problem": "Effondrement de la biodiversité et artificialisation des sols",
+          "approach": "Zéro artificialisation nette dès 2027, protection des forêts (interdiction coupes rases), arrêt des pesticides dangereux, protection des océans et de la haute mer.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#défendre-la-forêt-poumon-de-la-planète",
+            "sources.md#sauver-lécosystème-et-la-biodiversité"
+          ],
+          "reasoning": "Mesures réglementaires fortes avec création de statuts protecteurs."
+        },
+        {
+          "problem": "Pollution de l'eau et raréfaction de la ressource",
+          "approach": "Règle bleue, gestion 100% publique, gratuité des premiers m3, rénovation des canalisations, régies publiques locales, moratoire sur les méga-bassines.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#leau-enjeu-central-pour-lhumanité"
+          ],
+          "reasoning": "Approche intégrée de la gestion de l'eau comme bien commun."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Coût complet et calendrier du démantèlement du parc nucléaire",
+          "significance": "Le programme ne chiffre pas le coût total du démantèlement des 56 réacteurs ni les besoins en compétences pour une période de 25-30 ans.",
+          "source_refs": [
+            "sources.md#organiser-le-100-dénergies-renouvelables-en-2050"
+          ]
+        },
+        {
+          "problem": "Acceptabilité sociale des contraintes de sobriété",
+          "significance": "Le programme mentionne la sobriété mais ne détaille pas les mesures contraignantes potentielles (limitation de la mobilité individuelle, rationnements).",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Conflit entre objectifs de réindustrialisation et empreinte écologique à court terme",
+          "mechanism": "La relocalisation industrielle et la reconstruction de filières peuvent augmenter temporairement les émissions territoriales avant que les nouvelles normes écologiques ne s'appliquent.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#réindustrialiser-et-relocaliser-pour-assurer-notre-indépendance"
+          ],
+          "reasoning": "Tension inhérente entre construction rapide d'infrastructures et bilan carbone."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Insuffisance des financements face à l'ampleur des besoins (200 Md€ ne couvrent peut-être qu'une partie du coût total de la transition)",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Le chiffre de 200 Md€ est une enveloppe d'impulsion, mais les besoins totaux de la transition sont estimés par divers instituts entre 50 et 80 Md€ par an, soit 250-400 Md€ sur 5 ans.",
+          "source_refs": [
+            "sources.md#investir-pour-lancer-la-bifurcation-de-notre-économie"
+          ]
+        },
+        {
+          "risk": "Tensions sur les matériaux critiques pour les ENR et les batteries",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "La généralisation des ENR et des véhicules électriques dépend de métaux rares dont l'approvisionnement est concentré (Chine, RDC).",
+          "source_refs": [
+            "sources.md#organiser-le-100-dénergies-renouvelables-en-2050"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Règle verte inscrite dans la Constitution",
+          "source_ref": "sources.md#la-bifurcation-écologique-pour-une-société-de-lharmonie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Plan de 200 Md€ d'investissements écologiques sur le quinquennat",
+          "source_ref": "sources.md#investir-pour-lancer-la-bifurcation-de-notre-économie",
+          "quantified": true,
+          "magnitude": "200 Md€"
+        },
+        {
+          "measure": "100% énergies renouvelables en 2050, sortie du nucléaire",
+          "source_ref": "sources.md#organiser-le-100-dénergies-renouvelables-en-2050",
+          "quantified": true,
+          "magnitude": "100% ENR en 2050"
+        },
+        {
+          "measure": "Rénovation d'au moins 700 000 logements par an",
+          "source_ref": "sources.md#organiser-le-100-dénergies-renouvelables-en-2050-et-la-rénovation-énergétique",
+          "quantified": true,
+          "magnitude": "700 000 logements/an"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "200 Md€ sur 5 ans représentent environ 40 Md€/an, soit près de 1,5% du PIB annuel, en plus des autres dépenses sociales ; le financement dépend des recettes fiscales nouvelles et du soutien de la BCE.",
+          "source_refs": [
+            "sources.md#investir-pour-lancer-la-bifurcation-de-notre-économie"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "La planification écologique mobilise tous les secteurs (bâtiment, transport, énergie, agriculture) avec des besoins massifs de main-d'œuvre formée immédiatement.",
+          "source_refs": [
+            "sources.md#les-grands-chantiers-de-la-bifurcation-écologique"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance aux importations de technologies ENR, aux chaînes d'approvisionnement en minerais et à la coopération internationale pour le climat.",
+          "source_refs": [
+            "sources.md#organiser-le-100-dénergies-renouvelables-en-2050"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Les infrastructures construites (ENR, rénovations) sont irréversibles ; un changement de majorité pourrait ralentir mais difficilement annuler la trajectoire.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "non chiffré dans le programme",
+      "units": "€/personne/an",
+      "confidence": 0.3,
+      "caveats": "Le retour à la retraite à 60 ans et l'indexation sur les salaires augmentent les transferts vers les retraités actuels. La garantie d'autonomie (1216€/mois) et les aides au logement bénéficient aux jeunes, mais le financement par endettement ou cotisations accrues pèse sur les actifs futurs. Aucune consolidation intergénérationnelle n'est présentée."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Hausse probable des prélèvements à moyen terme pour financer les retraites et la dette, malgré les transferts immédiats (garantie d'autonomie, blocage des loyers).",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "Encadrement des loyers, construction de 200 000 logements publics/an, réquisition des logements vides et limitation des locations touristiques améliorent l'accès au logement.",
+        "quantified": "200 000 logements publics/an"
+      },
+      "pension_outlook": {
+        "summary": "Retraite à 60 ans avec 40 annuités ; un jeune entrant tard sur le marché du travail (après 27 ans) atteindra difficilement la durée requise et subira des décotes, malgré la suppression annoncée de la décote.",
+        "quantified": "durée requise : 40 annuités"
+      },
+      "labor_market": {
+        "summary": "Garantie d'emploi pour les chômeurs longue durée, emploi spécifique jeune de 5 ans, titularisation des précaires et encadrement des stages améliorent les perspectives. Le passage aux 32h peut libérer des postes.",
+        "quantified": "SMIC à 1600€ net"
+      },
+      "environmental_debt": {
+        "summary": "Les investissements massifs dans la transition écologique réduisent la dette environnementale léguée aux jeunes générations, à condition d'être effectivement mis en œuvre.",
+        "quantified": "200 Md€ d'investissements écologiques"
+      },
+      "narrative_summary": "Effets ambivalents : gains immédiats en matière de revenu garanti, de logement et d'emploi, mais exposition à une dette publique accrue et à un système de retraite dont l'équilibre à long terme n'est pas assuré pour les carrières fragmentées."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Les pensions sont revalorisées (indexation sur les salaires, minimum au SMIC), l'ISF et la fiscalité du capital ne touchent qu'une minorité de retraités aisés.",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "Retour à la retraite à 60 ans, abrogation de la réforme Macron, minimum vieillesse au seuil de pauvreté, amélioration nette des pensions actuelles et futures immédiates.",
+        "quantified": "pension minimale au niveau du SMIC revalorisé"
+      },
+      "healthcare": {
+        "summary": "Service public de la dépendance, 10 000 places EHPAD publics/an, ratio d'encadrement renforcé, tarifs harmonisés, amélioration de la prise en charge de la perte d'autonomie.",
+        "quantified": "10 000 places EHPAD/an, 210 000 recrutements"
+      },
+      "narrative_summary": "Amélioration substantielle pour les retraités actuels : revalorisation des pensions, accès renforcé aux soins et à la prise en charge de la dépendance, sans contribution directe supplémentaire explicite."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Abrogation immédiate de la réforme Macron (retour à 60 ans/40 annuités), revalorisation et indexation sur les salaires améliorent la situation des retraités actuels et futurs proches, au prix de cotisations accrues.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Hausse immédiate des pensions minimales et retour à 60 ans ; effet positif direct pour les 60-64 ans, coût pour les régimes.",
+            "source_refs": [
+              "sources.md#garantir-une-retraite-digne"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "La hausse des cotisations (+0,25 point/an) et l'indexation sur les salaires pèsent sur les actifs ; l'équilibre financier se tend.",
+            "source_refs": [
+              "sources.md#garantir-une-retraite-digne"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -2,
+            "note": "Le financement devient structurellement plus difficile avec le vieillissement démographique et les carrières hachées des jeunes générations.",
+            "source_refs": [
+              "sources.md#garantir-une-retraite-digne"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Stratégie de rachat/annulation par la BCE et auditede la dette, avec dépenses nouvelles massives non consolidées budgétairement.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Hausse probable du déficit et de la dette si la BCE ne suit pas ; les dépenses sociales et d'investissement sont immédiates.",
+            "source_refs": [
+              "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Si la renégociation européenne aboutit, la pression de la dette pourrait se stabiliser ; sinon, accumulation supplémentaire.",
+            "source_refs": [
+              "sources.md#désobéir-à-chaque-fois-que-cest-nécessaire"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "À long terme, les effets dépendent entièrement de l'issue du bras de fer avec l'UE et de la soutenabilité de la croissance induite.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Investissement massif de 200 Md€, règle verte, objectifs renforcés (-65% en 2030), planification écologique intégrée.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Lancement des grands travaux (rénovation, transports) ; effets sur les émissions encore modestes dans le 1er mandat.",
+            "source_refs": [
+              "sources.md#les-grands-chantiers-de-la-bifurcation-écologique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "La montée en charge des ENR, de la rénovation et de la décarbonation des transports produit une inflexion notable des émissions.",
+            "source_refs": [
+              "sources.md#organiser-le-100-dénergies-renouvelables-en-2050"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 3,
+            "note": "Atteinte du 100% ENR et transformation du modèle agricole : trajectoire alignée avec les engagements climatiques renforcés.",
+            "source_refs": [
+              "sources.md#la-bifurcation-écologique-pour-une-société-de-lharmonie"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "100% Sécu, plan de recrutement massif, reconstruction de l'hôpital public, plan dépendance et santé mentale.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Effet limité à court terme : les recrutements et la réouverture de lits prennent du temps, la demande augmente avec le 100% remboursement.",
+            "source_refs": [
+              "sources.md#faire-passer-la-santé-dabord"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "L'arrivée des nouveaux professionnels formés et la réorganisation du système produisent des gains d'accès et de qualité.",
+            "source_refs": [
+              "sources.md#faire-passer-la-santé-dabord"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Le système de santé public reconstruit atteint sa pleine capacité, réduisant les inégalités territoriales de santé.",
+            "source_refs": [
+              "sources.md#faire-passer-la-santé-dabord"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Refonte de l'école (gratuité réelle, effectifs réduits, abrogation des réformes Macron), plan de recrutement, école inclusive et bifurcation écologique.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Mesures immédiates de gratuité et de réduction des effectifs ; amélioration des conditions d'apprentissage dès le premier mandat.",
+            "source_refs": [
+              "sources.md#reconstruire-une-école-globale-pour-légalité-et-lémancipation"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Effet cumulé des recrutements, de la formation des enseignants et de la refonte des programmes sur le niveau et l'égalité scolaire.",
+            "source_refs": [
+              "sources.md#reconstruire-une-école-globale-pour-légalité-et-lémancipation"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Générations formées dans un système plus égalitaire et adapté aux enjeux écologiques ; hausse du niveau de qualification général.",
+            "source_refs": [
+              "sources.md#reconstruire-une-école-globale-pour-légalité-et-lémancipation"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Construction de 200 000 logements publics/an, encadrement des loyers, réquisition des logements vides, rénovation thermique obligatoire.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "L'encadrement des loyers et la mise en chantier des premiers logements publics commencent à détendre le marché.",
+            "source_refs": [
+              "sources.md#garantir-le-droit-au-logement"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Le parc social s'accroît significativement (1 million de logements sur 5 ans) et la rénovation thermique réduit la précarité énergétique.",
+            "source_refs": [
+              "sources.md#garantir-le-droit-au-logement"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "L'offre de logements abordables est structurellement élargie ; la concentration immobilière et la spéculation sont durablement réduites.",
+            "source_refs": [
+              "sources.md#garantir-le-droit-au-logement"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Le programme privilégie la réparation immédiate des droits des retraités actuels (abrogation de la réforme des retraites, revalorisation, dépendance) et des jeunes (garantie autonomie, logement). Le financement repose sur la redistribution des hauts patrimoines, la croissance induite et le recours à la BCE, reportant implicitement le risque d'ajustement sur les actifs futurs si les hypothèses de financement ne se matérialisent pas.",
+    "source_refs": [
+      "sources.md#garantir-une-retraite-digne",
+      "sources.md#construire-lautonomie-des-jeunes",
+      "sources.md#faire-face-collectivement-à-la-perte-dautonomie-individuelle",
+      "sources.md#refuser-le-chantage-annuler-la-dette-publique"
+    ],
+    "confidence": 0.6
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Poursuite des réformes libérales : retraite à 64 ans, austérité budgétaire, ouverture à la concurrence, investissements écologiques insuffisants pour les objectifs de Paris, creusement des inégalités.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Le programme rompt avec la trajectoire actuelle sur l'ensemble des dimensions. Le sens du changement est positif pour la redistribution, l'accès aux droits, la transition écologique et la démocratisation, mais comporte des risques élevés de confrontation avec l'UE, de tensions budgétaires et d'instabilité juridique.",
+    "confidence": 0.8
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Équilibre du système de retraite à horizon 2040-2050 avec un âge de départ à 60 ans et une démographie vieillissante",
+      "why_unsolved": "Le programme se concentre sur l'abrogation de la réforme Macron et des hausses de cotisations immédiates, sans projection démographique ni mécanisme automatique d'équilibrage.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Viabilité d'une sortie simultanée du nucléaire et des énergies fossiles sans recours à des importations carbonées",
+      "why_unsolved": "Le calendrier 100% ENR en 2050 n'est pas adossé à un scénario de pilotage fin de la sécurité d'approvisionnement électrique pendant la transition.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Mécanisme de résolution en cas de refus persistant de la BCE et des partenaires européens de suivre le plan A ou B",
+      "why_unsolved": "Le programme énonce la désobéissance et la négociation, mais n'envisage pas de scénario où ni la négociation ni la désobéissance ne permettent de financer les mesures.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Crise de financement de l'État par refus de la BCE et fuite des capitaux",
+      "trigger": "Confrontation avec l'UE dès 2027, absence d'accord sur les dettes perpétuelles, dégradation de la notation souveraine.",
+      "probability": 0.5,
+      "severity": 0.9,
+      "reasoning": "Sans financement monétaire ni accès aux marchés, l'État ne peut honorer simultanément la dépense sociale, l'investissement écologique et le service de la dette existante."
+    },
+    {
+      "scenario": "Blocage institutionnel et instabilité politique chronique",
+      "trigger": "Échec du référendum constituant ou paralysie parlementaire en l'absence de majorité stable sous un régime de proportionnelle intégrale.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "Le programme nécessite une refonte constitutionnelle qui peut échouer ou prendre des années, laissant le pays dans un entre-deux juridique et politique."
+    },
+    {
+      "scenario": "Départ accéléré des contribuables les plus mobiles et des capitaux",
+      "trigger": "Mise en œuvre rapide de la taxe Zucman, de l'héritage maximal et du contrôle des capitaux sans coordination internationale.",
+      "probability": 0.4,
+      "severity": 0.6,
+      "reasoning": "L'assiette fiscale sur le capital peut s'éroder plus vite que prévu, réduisant le rendement des nouvelles recettes et aggravant le déficit."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "intergenerational.net_transfer_direction",
+        "critique": "La qualification 'young_to_old' est fragile : le programme injecte des ressources massives vers les jeunes (garantie autonomie, logement, emploi) qui pourraient compenser ou inverser le transfert net retraite/dette. L'analyse sous-pondère ces transferts.",
+        "alternative_interpretation": "Le transfert net pourrait être 'mixed', les gains immédiats pour les jeunes (revenu garanti, logement, emploi) équilibrant partiellement le poids futur des retraites et de la dette."
+      },
+      {
+        "claim_location": "dimensions.economic_fiscal.grade",
+        "critique": "Le grade B accordé au volet économique pourrait être trop clément au regard de l'absence totale de chiffrage consolidé et de l'extrême dépendance à des variables hors de contrôle (BCE, UE). Un grade C serait défendable pour manque de soutenabilité documentée.",
+        "alternative_interpretation": "Le grade C refléterait mieux le risque d'incohérence entre des dépenses très détaillées et un financement hypothétique."
+      },
+      {
+        "claim_location": "dimensions.environmental_long_term.problems_addressed[0].strength",
+        "critique": "Le score de 0.9 pour la crédibilité de l'objectif -65% en 2030 est élevé : le programme ne détaille pas de mesures sectorielles contraignantes de court terme pour atteindre ce seuil dès 2030, ce qui affaiblit la force réelle de l'engagement.",
+        "alternative_interpretation": "Un score de 0.7 refléterait mieux l'écart entre l'ambition annoncée et les leviers précis documentés pour 2027-2030."
+      }
+    ],
+    "potential_bias": "L'analyse tend à présenter la cohérence interne du programme comme un substitut à la faisabilité externe, notamment sur la dimension économique et européenne. Cela peut refléter un biais de symétrie où la clarté des propositions masque l'incertitude radicale de leur mise en œuvre.",
+    "evidence_gaps": "Les projections de recettes des nouvelles mesures fiscales ne sont pas chiffrées dans le programme source, rendant toute évaluation quantitative du bouclage impossible. L'analyse intergénérationnelle est entièrement qualitative pour cette raison.",
+    "confidence_in_critique": 0.75
+  },
+  "confidence_self_assessment": 0.75
+}

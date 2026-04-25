@@ -1,0 +1,100 @@
+{
+  "counterfactual": {
+    "status_quo_trajectory": "Sans mise en œuvre du programme, la France poursuit une trajectoire de réformes structurelles incrémentales : maintien de l'âge de départ à 64 ans, modernisation tendancielle des services publics sous contrainte budgétaire, transition écologique pilotée par le marché et la réglementation européenne, dégradation continue de l'accès aux soins et au logement dans les zones tendues, et ancrage croissant des inégalités patrimoniales intergénérationnelles. La cohésion sociale et institutionnelle reste fragile, avec une démocratie représentative en perte de confiance.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_redistributive",
+      "social_cultural",
+      "institutional_democratic",
+      "environmental_intergenerational",
+      "security_sovereignty"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Le programme rompt avec la trajectoire de référence sur cinq dimensions structurantes : redistribution massive (SMIC à 1600€, ISF climatique, plafonds successoraux), reconstruction du service public (santé, éducation, logement), refondation institutionnelle (VIe République, RIC, scrutin proportionnel), accélération écologique (règle verte, planification, 100% ENR à 2050) et réorientation diplomatique (sortie du commandement intégré OTAN, refonte traités UE). Cinq modèles sur six (gpt, claude, deepseek, mistral, qwen) qualifient le résultat global de mixte : les gains sociaux/écologiques sont compensés par des risques économiques (croissance, attractivité, soutenabilité dette) et géopolitiques (isolement européen). Gemini, seul, qualifie la direction d'amélioration en valorisant les gains structurels et en jugeant les risques surmontables. Mistral identifie la dimension institutionnelle comme inchangée dans son cadre interprétatif (changement de procédure plutôt que de fond) ; qwen identifie la dimension sécurité-souveraineté comme inchangée dans le sien (rupture de forme, continuité des intérêts stratégiques). Ces deux dissensions sont marquées comme telles plutôt que conservées dans la liste agrégée.",
+    "confidence": 0.7,
+    "supported_by": [
+      "gpt-5.5-thinking",
+      "claude-opus-4-7",
+      "deepseek",
+      "mistral-le-chat-2026-04-25",
+      "qwen3.6"
+    ],
+    "dissenters": ["gemini-1.5-pro"]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Soutenabilité actuarielle long terme du système de retraite à 60 ans face au vieillissement démographique",
+      "why_unsolved": "Le programme restaure les paramètres (âge 60, 40 annuités, plancher SMIC) et élargit l'assiette de cotisations, mais ne fournit pas de modélisation actuarielle complète couvrant le ratio actifs/retraités au-delà de 2040. Les modèles convergent sur l'incertitude : la dérive démographique pourrait dépasser les recettes additionnelles d'élargissement de l'assiette si la croissance et l'emploi sont en deçà des hypothèses centrales.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#chapitre-7--la-force-de-lentraide"],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+      "dissenters": ["gemini-1.5-pro"]
+    },
+    {
+      "problem": "Sécurité d'approvisionnement électrique et industrialisation du mix 100% ENR à l'horizon 2050",
+      "why_unsolved": "L'objectif 100% renouvelables à 2050 et la sortie progressive du nucléaire reposent sur un déploiement massif d'éolien, solaire et biomasse, mais le programme ne précise pas la stratégie de stockage/flexibilité, de gestion de l'intermittence et de financement des infrastructures réseau associées. Le risque de tension sur la pointe hivernale et de déficit de capacité pilotable pendant la décennie 2030-2040 reste identifié par 5 modèles.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+      "dissenters": ["qwen3.6"]
+    },
+    {
+      "problem": "Articulation entre la stratégie économique nationale (redistribution, planification) et le maintien de l'attractivité du capital productif et des compétences",
+      "why_unsolved": "L'ISF climatique, la cotisation BPP, les plafonds successoraux et la fiscalité du capital élevée pourraient déclencher des fuites de capitaux et de compétences si elles ne sont pas compensées par une politique d'attractivité positive (R&D, formation, infrastructure). Le programme mentionne la lutte contre l'évasion fiscale mais ne quantifie pas l'effet net attendu sur l'investissement productif domestique.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [
+        "sources.md#chapitre-6--partage-des-richesses",
+        "sources.md#chapitre-9--produire-en-france"
+      ],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "mistral-le-chat-2026-04-25", "qwen3.6"],
+      "dissenters": ["deepseek", "gemini-1.5-pro"]
+    },
+    {
+      "problem": "Modalités juridiques et politiques de mise en œuvre du Plan A (renégociation des traités) face à un refus probable des partenaires européens",
+      "why_unsolved": "Le programme conditionne une partie significative des engagements (règle verte, désobéissance budgétaire, conversion BCE) à un Plan A de renégociation des traités UE, avec un Plan B de désobéissance unilatérale en cas d'échec. Les modèles soulignent que les conditions politiques d'une renégociation à 27 sont quasiment inexistantes, et que le Plan B implique des coûts juridiques et économiques (sanctions, conflits institutionnels) que le programme ne quantifie pas.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#chapitre-15--la-france-au-service-de-la-paix-mondiale"],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+      "dissenters": ["gemini-1.5-pro"]
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Crise de la dette publique et de la balance des paiements",
+      "trigger": "Conjonction d'une expansion budgétaire forte (200 Md€ d'investissement, hausse des prestations sociales), d'une fuite des capitaux suite à l'ISF climatique et à la cotisation BPP, et d'un refus de la BCE de monétiser la dette française. Spread sur OAT élargi, ratings dégradés, refinancement plus coûteux.",
+      "probability": 0.4,
+      "severity": 0.85,
+      "reasoning": "Les six modèles identifient cette possibilité comme l'un des risques systémiques majeurs. La probabilité estimée varie de 0.30 (qwen, gemini) à 0.55 (mistral, gpt) selon l'évaluation de la crédibilité du Plan B et de la résilience des recettes fiscales.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Échec du Plan B et confrontation institutionnelle avec l'UE",
+      "trigger": "Mise en œuvre unilatérale de la désobéissance budgétaire et de la règle verte sans accord avec les partenaires UE. Procédures d'infraction, sanctions, gel de fonds européens, isolement diplomatique sur les dossiers commerciaux et migratoires.",
+      "probability": 0.55,
+      "severity": 0.7,
+      "reasoning": "Cinq modèles évaluent cette probabilité comme élevée (>0.5). Gemini conserve la plus basse estimation (0.30). La sévérité dépend de la durée et de la nature des sanctions ; aucune n'est triviale, et la plupart des modèles l'évaluent à 0.65–0.80.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+      "dissenters": ["gemini-1.5-pro"]
+    },
+    {
+      "scenario": "Sous-réalisation de la transition énergétique et tension d'approvisionnement",
+      "trigger": "Sortie du nucléaire combinée à un déploiement ENR plus lent que prévu (contraintes industrielles, foncières, sociales) et à un sous-investissement dans le stockage et le réseau. Délestages structurels, pertes industrielles, recours aux énergies fossiles importées.",
+      "probability": 0.4,
+      "severity": 0.65,
+      "reasoning": "Cinq modèles identifient ce risque comme matériel. La probabilité estimée varie selon l'évaluation de la vitesse de déploiement industriel ENR (gpt, claude, mistral à 0.45–0.55 ; deepseek, gemini à 0.30–0.35).",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+      "dissenters": ["qwen3.6"]
+    },
+    {
+      "scenario": "Blocage institutionnel et constitutionnel de la VIe République",
+      "trigger": "Convocation d'une Assemblée constituante par référendum après un mandat 2027–2028, mais blocage parlementaire et conflits avec le Conseil constitutionnel sur les mesures économiques et fiscales. Période d'instabilité institutionnelle prolongée et incertitude réglementaire.",
+      "probability": 0.45,
+      "severity": 0.55,
+      "reasoning": "Quatre modèles identifient le risque ; mistral l'évalue comme limité (procédure démocratique encadrée), gemini comme négligeable. La sévérité dépend de la durée de la transition et de l'aboutissement de la nouvelle constitution.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "qwen3.6"],
+      "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"]
+    }
+  ]
+}

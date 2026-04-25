@@ -1,0 +1,1083 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "Le Chat",
+    "version": "Mistral AI 2026-04-25"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T03:26:30Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Le programme de Jean-Luc Mélenchon propose une rupture radicale avec le modèle néolibéral, axée sur la justice sociale, la planification écologique et la refonte institutionnelle. Il combine une révolution fiscale, une nationalisation des secteurs stratégiques, la sortie du nucléaire, et une refonte de l'UE par la désobéissance aux traités actuels. L'analyse révèle un projet cohérent mais risqué sur le plan budgétaire et systémique.",
+  "positioning": {
+    "economic": {
+      "score": -4,
+      "anchor_comparison": "Plus interventionniste que Mélenchon 2022, plus radical que la gauche traditionnelle.",
+      "evidence": [
+        {
+          "quote": "Faire la révolution fiscale pour répartir l’effort entre tous selon les revenus. [...] Instaurer une taxe permanente sur les superprofits étendue à l’ensemble des secteurs d’activité.",
+          "source_ref": "sources.md#chapitre-6-partage-des-richesses"
+        },
+        {
+          "quote": "Nationaliser certaines banques de détail [...] et les intégrer au pôle public bancaire, en vue de financer les très petites entreprises (TPE) sur des critères sociaux et écologiques.",
+          "source_ref": "sources.md#chapitre-6-partage-des-richesses"
+        },
+        {
+          "quote": "Instaurer un crime climatique de dissimulation et de tromperie sur les émissions carbone des entreprises.",
+          "source_ref": "sources.md#chapitre-12-planification-ecologique"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Le programme propose une transformation structurelle de l'économie vers un modèle d'économie mixte avec une forte régulation publique, une taxation radicale des grands revenus et du capital, et une nationalisation des secteurs stratégiques. Ces mesures dépassent largement le cadre de la gauche traditionnelle."
+    },
+    "social_cultural": {
+      "score": -3,
+      "anchor_comparison": "Plus progressiste que EELV 2022, moins radical que les mouvements anti-système.",
+      "evidence": [
+        {
+          "quote": "Constitutionaliser le droit de mourir dans la dignité (y compris avec assistance) et l’accès garanti à des soins palliatifs dans la Constitution.",
+          "source_ref": "sources.md#chapitre-4-etendre-le-domaine-de-la-liberte"
+        },
+        {
+          "quote": "Interdire la violence physique et psychologique de toutes sortes (éducative, punitive, ou autre) à l'égard des enfants.",
+          "source_ref": "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+        },
+        {
+          "quote": "Instaurer une garantie d’autonomie qui permettra que nul ne soit privé de sa dignité pour vivre : le revenu mensuel de chaque personne atteindra le seuil de pauvreté (1 216 euros pour une personne seule).",
+          "source_ref": "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+        }
+      ],
+      "confidence": 0.95,
+      "reasoning": "Le programme radicalise les positions sur les droits individuels (IVG, euthanasie, droits LGBTQIA+), la protection de l'enfance, et la lutte contre les discriminations. Il propose une société d'entraide avec des droits étendus pour les minorités et les plus vulnérables, s'inscrivant dans une logique de justice sociale et de redistribution."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Plus souverainiste que LR 2022, moins radical que RN 2022.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN puis, par étapes, de l’organisation elle-même.",
+          "source_ref": "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-paix"
+        },
+        {
+          "quote": "Instaurer le protectionnisme solidaire pour protéger l’industrie d’une concurrence déloyale ou fondée sur le non-respect des droits humains ou l’extractivisme forcené.",
+          "source_ref": "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins"
+        },
+        {
+          "quote": "Refuser la libre-circulation des capitaux nous empêche de reprendre le pouvoir sur le secteur financier.",
+          "source_ref": "sources.md#chapitre-17-europe"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Le programme propose une sortie de l'OTAN, un protectionnisme écologique et social, et une désobéissance aux traités européens incompatibles avec les objectifs écologiques et sociaux. Il défend une souveraineté industrielle, alimentaire et énergétique, avec une planification écologique comme pilier."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Plus illibéral que la Ve République traditionnelle, moins radical que les mouvements populistes.",
+      "evidence": [
+        {
+          "quote": "Convoquer un référendum (article 11) pour engager le processus constituant et décider des modalités de composition de l’Assemblée constituante [...] Aucun parlementaire des anciennes assemblées ne pourra siéger dans cette Assemblée constituante.",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple"
+        },
+        {
+          "quote": "Instaurer le Référendum d’initiative citoyenne (RIC), par lequel les citoyens qui réunissent suffisamment de signatures peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution.",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple"
+        },
+        {
+          "quote": "Abolir la réforme Macron du corps préfectoral et diplomatique.",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Le programme propose une refonte institutionnelle radicale : assemblée constituante souveraine, RIC, suppression du 49.3, et limitation des mandats. Ces mesures visent à démocratiser la Ve République mais restent dans un cadre républicain, sans remettre en cause fondamentalement l'État de droit."
+    },
+    "ecological": {
+      "score": 4,
+      "anchor_comparison": "Plus écologiste que EELV 2022, moins radical que les mouvements deep ecology.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu’elle est en état de reconstituer.",
+          "source_ref": "sources.md#chapitre-12-planification-ecologique"
+        },
+        {
+          "quote": "Sortir des énergies carbonées : arrêter les subventions aux énergies fossiles, y compris à l’étranger.",
+          "source_ref": "sources.md#chapitre-13-grands-chantiers-ecologiques"
+        },
+        {
+          "quote": "Interdire les coupes rases sauf en cas d’impasse sanitaire avérée.",
+          "source_ref": "sources.md#chapitre-14-protection-des-biens-communs-et-des-droits-de-lespece"
+        }
+      ],
+      "confidence": 0.95,
+      "reasoning": "Le programme est le plus ambitieux sur le plan écologique : constitutionnalisation de la 'règle verte', sortie du nucléaire, moratoire sur les grands projets inutiles, et planification écologique comme méthode de gouvernement. Il propose une transformation systémique des modes de production et de consommation."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty",
+        "institutional",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Instaurer une taxe permanente sur les superprofits étendue à l’ensemble des secteurs d’activité.",
+          "source_ref": "sources.md#chapitre-6-partage-des-richesses"
+        },
+        {
+          "quote": "Constitutionaliser le droit de mourir dans la dignité [...] et l’accès garanti à des soins palliatifs dans la Constitution.",
+          "source_ref": "sources.md#chapitre-4-etendre-le-domaine-de-la-liberte"
+        },
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l’OTAN.",
+          "source_ref": "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Les axes économique (-4), social/culturel (-3), souveraineté (+3) et écologique (+4) convergent vers une position 'extreme_gauche'. L'axe institutionnel (+2) renforce cette orientation par une radicalité démocratique. Le projet dépasse le cadre de la gauche traditionnelle pour proposer une transformation radicale du modèle social et économique."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "D",
+      "headline": "Programme propose une révolution fiscale radicale et une hausse massive des dépenses publiques via nationalisations et planification écologique.",
+      "summary": "Le programme vise une transformation structurelle de l'économie française vers un modèle d'économie mixte avec une forte régulation publique, une taxation radicale des grands revenus et du capital, et une nationalisation des secteurs stratégiques. Les mesures visent à financer une relance par la consommation populaire et l'investissement public, mais sans détail chiffré des effets macroéconomiques à long terme.",
+      "problems_addressed": [
+        {
+          "problem": "Inégalités de revenus et de patrimoine",
+          "approach": "Revenu de solidarité universelle à 1 216€/mois, ISF renforcé avec volet climatique, taxation des superprofits, et suppression de la flat tax.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ],
+          "reasoning": "Mesures directes de redistribution et de taxation des plus aisés."
+        },
+        {
+          "problem": "Dette publique et dépendance aux marchés financiers",
+          "approach": "Exiger de la BCE qu'elle transforme la part de dette des États qu'elle possède en dettes perpétuelles à taux nul, et création d'un circuit du Trésor pour sortir la dette publique des marchés financiers.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ],
+          "reasoning": "Solution radicale mais risquée, dépendante de la coopération de la BCE et des partenaires européens."
+        },
+        {
+          "problem": "Précarité et chômage",
+          "approach": "Garantie d'emploi pour les chômeurs de longue durée, quota maximal de contrats précaires dans les entreprises, et relance par la consommation populaire.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Mesures structurelles mais avec un coût budgétaire élevé et une dépendance à la croissance."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Risque de fuite des capitaux et de dévaluation du franc",
+          "significance": "Pas d'analyse des conséquences des mesures de taxation radicale et de contrôle des capitaux sur la stabilité financière.",
+          "source_refs": []
+        },
+        {
+          "problem": "Effet sur la compétitivité des entreprises",
+          "significance": "Pas d'évaluation des coûts de production liés à la taxation des dividendes et à la régulation accrue.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Déficit public et pression sur les taux d'intérêt",
+          "mechanism": "Augmentation massive des dépenses publiques (nationalisations, garantie d'emploi, relance) sans hausse proportionnelle des recettes fiscales garanties.",
+          "severity": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ],
+          "reasoning": "Programme explicitement en désaccord avec le pacte de stabilité européen."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage parlementaire et résistance des élites économiques",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "Mesures radicales nécessitant une Assemblée Constituante et une majorité qualifiée.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        },
+        {
+          "risk": "Réaction des marchés financiers et fuite des capitaux",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Taxation radicale des superprofits et contrôle des capitaux pourraient déstabiliser les investisseurs.",
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ]
+        },
+        {
+          "risk": "Inefficacité des nationalisations et de la planification",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Expérience historique montre des difficultés de gestion publique dans certains secteurs (énergie, transports).",
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Réforme fiscale avec barème à 14 tranches, ISF renforcé, taxation des superprofits, et suppression de la flat tax",
+          "source_ref": "sources.md#chapitre-6-partage-des-richesses",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Nationalisation des secteurs stratégiques (énergie, transports, banques) et création de pôles publics",
+          "source_ref": "sources.md#chapitre-13-grands-chantiers-ecologiques",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Garantie d'emploi pour les chômeurs de longue durée et quota maximal de contrats précaires (5% dans les grandes entreprises)",
+          "source_ref": "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Dépenses publiques massives non financées par des recettes garanties dans le programme.",
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une refonte institutionnelle radicale et une coopération européenne improbable.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance forte à la BCE et à la coopération de partenaires européens pour la dette perpétuelle.",
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Mesures constitutionnelles et nationalisations difficiles à réverser.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "social_demographic": {
+      "grade": "C",
+      "headline": "Programme propose une société d'entraide avec droits étendus pour les minorités et les plus vulnérables, mais sans garantie de financement pérenne.",
+      "summary": "Le programme vise une transformation sociale radicale avec une garantie d'autonomie à 1 216€/mois, une refonte des services publics (éducation, santé, petite enfance), et une protection renforcée des droits individuels. Cependant, l'absence de détails sur le financement pérenne des mesures sociales et la dépendance aux recettes fiscales redistributives créent des risques budgétaires.",
+      "problems_addressed": [
+        {
+          "problem": "Pauvreté et exclusion sociale",
+          "approach": "Garantie d'autonomie à 1 216€/mois, gratuité des cantines scolaires, et encadrement des prix des produits de première nécessité.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Mesures concrètes mais sans détail sur le financement à long terme."
+        },
+        {
+          "problem": "Inégalités de genre et violences faites aux femmes",
+          "approach": "Loi de lutte contre le sexisme, parité dans les institutions, et revalorisation des métiers féminisés.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-10-faire-place-a-la-nouvelle-france"
+          ],
+          "reasoning": "Approche progressive mais avec des objectifs ambitieux."
+        },
+        {
+          "problem": "Déserts médicaux et précarité dans les services publics",
+          "approach": "Reconstruire le service public hospitalier, créer 500 000 places en crèche, et garantir un maillage territorial des services publics.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+          ],
+          "reasoning": "Mesures nécessaires mais avec un coût budgétaire élevé et une dépendance aux recrutements publics."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Vieillissement de la population et dépendance",
+          "significance": "Pas de mesures spécifiques pour la dépendance et le grand âge au-delà de la création de 10 000 places en EHPAD publics par an.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Pression fiscale sur la classe moyenne",
+          "mechanism": "Hausse des impôts sur les hauts revenus et le patrimoine pour financer les mesures sociales.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ],
+          "reasoning": "La taxation radicale pourrait affecter indirectement la classe moyenne via la fiscalité locale et les cotisations."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Difficulté de recrutement dans les services publics",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Revalorisation salariale nécessaire mais pas de garantie sur la disponibilité de main-d'œuvre qualifiée.",
+          "source_refs": [
+            "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+          ]
+        },
+        {
+          "risk": "Résistance des professions libérales et syndicales",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "Revalorisation des métiers du soin et de l'éducation pourrait rencontrer des résistances.",
+          "source_refs": [
+            "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Garantie d'autonomie à 1 216€/mois pour tous",
+          "source_ref": "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Plan de création de 500 000 places en crèche et de reconstruction de l'école publique",
+          "source_ref": "sources.md#chapitre-5-elever-le-niveau-dinstruction",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Loi contre le sexisme et violences faites aux femmes avec budget dédié de 2,6 milliards €",
+          "source_ref": "sources.md#chapitre-10-faire-place-a-la-nouvelle-france",
+          "quantified": true,
+          "magnitude": "2,6 milliards €"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Dépenses sociales élevées mais partiellement financées par la fiscalité redistributive.",
+          "source_refs": [
+            "sources.md#chapitre-6-partage-des-richesses"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une réforme profonde des services publics et une coopération des professionnels.",
+          "source_refs": [
+            "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Peu de dépendances externes identifiées.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Mesures sociales peuvent être ajustées mais sont ancrées dans le programme.",
+          "source_refs": [
+            "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "Programme propose une sortie de l'OTAN, un protectionnisme écologique et une relocalisation industrielle pour assurer la souveraineté nationale.",
+      "summary": "Le programme vise une autonomie stratégique dans les domaines de la défense, de l'énergie, de l'alimentation et de l'industrie. Il prévoit une sortie de l'OTAN, la création d'un pôle public de l'armement, et un protectionnisme écologique pour relocaliser les productions essentielles. Cependant, les coûts économiques et les risques géopolitiques de ces mesures ne sont pas détaillés.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance énergétique et industrielle",
+          "approach": "Plan de relocalisation industrielle, protectionnisme écologique, et sortie du nucléaire.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins"
+          ],
+          "reasoning": "Mesures nécessaires pour la souveraineté mais avec un coût économique élevé."
+        },
+        {
+          "problem": "Menaces géopolitiques et alliances militaires",
+          "approach": "Sortie du commandement intégré de l'OTAN et création d'une défense souveraine française.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace"
+          ],
+          "reasoning": "Changement radical de doctrine mais sans détail sur les alternatives."
+        },
+        {
+          "problem": "Souveraineté alimentaire",
+          "approach": "Protectionnisme écologique sur les produits alimentaires et relocalisation de la production.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ],
+          "reasoning": "Mesures protectionnistes mais avec un risque de hausse des prix pour les consommateurs."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Impact sur les alliances européennes et transatlantiques",
+          "significance": "Pas d'analyse des conséquences d'une sortie de l'OTAN sur les relations avec les partenaires européens et américains.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coût économique de la relocalisation",
+          "mechanism": "Protectionnisme écologique et relocalisation pourraient augmenter les coûts de production et réduire la compétitivité.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins"
+          ],
+          "reasoning": "Risque de perte de compétitivité pour les entreprises françaises."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Tensions avec les partenaires européens",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Désobéissance aux traités européens et protectionnisme écologique pourraient entraîner des sanctions ou des représailles.",
+          "source_refs": [
+            "sources.md#chapitre-17-europe"
+          ]
+        },
+        {
+          "risk": "Dépendance aux matières premières critiques",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Relocalisation industrielle pourrait buter sur l'accès aux matières premières nécessaires (terres rares, métaux).",
+          "source_refs": [
+            "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Sortie immédiate du commandement intégré de l'OTAN",
+          "source_ref": "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Création d'un pôle public de l'armement et nationalisation des industries stratégiques",
+          "source_ref": "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Plan de relocalisation industrielle et protectionnisme écologique",
+          "source_ref": "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Coût élevé de la relocalisation et de la restructuration industrielle.",
+          "source_refs": [
+            "sources.md#chapitre-9-produire-nous-memes-pour-repondre-aux-besoins"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une coordination complexe entre État, industriels et partenaires sociaux.",
+          "source_refs": [
+            "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance forte à la coopération européenne pour le marché unique et aux partenaires internationaux pour les matières premières.",
+          "source_refs": [
+            "sources.md#chapitre-17-europe"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Nationalisations et protectionnisme difficilement réversibles.",
+          "source_refs": [
+            "sources.md#chapitre-16-diplomatie-altermondialiste-pour-la-pace"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "institutional_democratic": {
+      "grade": "B",
+      "headline": "Programme propose une refonte radicale des institutions avec Assemblée Constituante, RIC, et suppression du 49.3.",
+      "summary": "Le programme vise une démocratisation radicale des institutions par la convocation d'une Assemblée Constituante, l'instauration du Référendum d'Initiative Citoyenne (RIC), et la suppression des outils de gouvernement par ordonnance (49.3). Ces mesures s'inscrivent dans une logique de rupture avec la Ve République actuelle, mais leur mise en œuvre dépend d'une majorité qualifiée et d'une coopération institutionnelle qui n'est pas garantie.",
+      "problems_addressed": [
+        {
+          "problem": "Crise de confiance entre citoyens et institutions",
+          "approach": "Assemblée Constituante pour rédiger une nouvelle Constitution, RIC, et suppression du 49.3.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Mesures répondent directement aux revendications démocratiques."
+        },
+        {
+          "problem": "Concentration des pouvoirs exécutifs",
+          "approach": "Passage à une VIe République parlementaire, élections à la proportionnelle intégrale, et obligation de rendre des comptes devant le Parlement.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Rééquilibrage des pouvoirs mais avec un risque de blocage institutionnel."
+        },
+        {
+          "problem": "Indépendance de la justice et lutte contre la corruption",
+          "approach": "Renforcer les moyens de la justice, supprimer le monopole de la parole des patrons via le Medef, et instaurer une plan nationale de lutte contre la corruption.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Mesures nécessaires mais avec un risque de politisation de l'appareil judiciaire."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Efficacité de la nouvelle architecture institutionnelle",
+          "significance": "Pas d'analyse des risques de blocage ou d'inefficacité dans une Assemblée Constituante élargie.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Instabilité politique et blocages institutionnels",
+          "mechanism": "Passage à une VIe République avec une Assemblée Constituante pourrait générer des conflits politiques prolongés.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Risque de paralysie institutionnelle pendant la transition."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Blocage parlementaire et résistance des élites",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "Nécessite une majorité qualifiée pour la Constituante et une coopération de l'opposition.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        },
+        {
+          "risk": "Conflits entre nouvelle Constitution et droit européen",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Supériorité des principes constitutionnels sur le droit européen pourrait générer des tensions.",
+          "source_refs": [
+            "sources.md#chapitre-17-europe"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Convoquer un référendum pour engager le processus constituant et créer une Assemblée Constituante souveraine",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Instaurer le RIC pour permettre aux citoyens de révoquer des élus, proposer ou abroger une loi",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Supprimer le 49.3 et les votes forcés, et instaurer un Parlement obligatoire",
+          "source_ref": "sources.md#chapitre-1-le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Coût institutionnel limité, principalement logistique.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite une mobilisation citoyenne et une coopération des acteurs politiques.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Peu de dépendances externes identifiées.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Changements constitutionnels difficilement réversibles.",
+          "source_refs": [
+            "sources.md#chapitre-1-le-pouvoir-au-peuple"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "B",
+      "headline": "Programme propose une planification écologique radicale avec sortie du nucléaire, 100% renouvelables, et règle verte constitutionnalisée.",
+      "summary": "Le programme est le plus ambitieux sur le plan écologique : sortie du nucléaire, planification écologique, 100% d'énergies renouvelables d'ici 2050, et constitutionnalisation de la 'règle verte'. Les mesures visent une transformation systémique des modes de production et de consommation pour atteindre la neutralité carbone. Cependant, les coûts économiques et les risques de transition énergétique rapide ne sont pas détaillés.",
+      "problems_addressed": [
+        {
+          "problem": "Changement climatique et émissions de GES",
+          "approach": "Baisse de 65% des émissions d'ici 2030, planification écologique, et sortie des énergies fossiles.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-12-planification-ecologique"
+          ],
+          "reasoning": "Objectifs ambitieux mais réalistes avec une planification rigoureuse."
+        },
+        {
+          "problem": "Biodiversité et pollution",
+          "approach": "Interdiction des coupes rases, interdiction des pesticides, et protection des forêts.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-14-protection-des-biens-communs-et-des-droits-de-lespece"
+          ],
+          "reasoning": "Mesures nécessaires pour la préservation des écosystèmes."
+        },
+        {
+          "problem": "Transition énergétique et sobriété",
+          "approach": "100% d'énergies renouvelables d'ici 2050, plan de rénovation énergétique de 700 000 logements/an, et sortie du nucléaire.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ],
+          "reasoning": "Objectifs réalistes mais avec un coût économique et social élevé."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Acceptabilité sociale de la transition énergétique",
+          "significance": "Pas d'analyse des résistances locales et des conflits d'usage (éolien, solaire).",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coût économique de la transition",
+          "mechanism": "Sortie du nucléaire et transition vers les renouvelables pourraient entraîner une hausse des coûts de l'énergie à court terme.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ],
+          "reasoning": "Risque de précarité énergétique pour les ménages modestes."
+        },
+        {
+          "problem": "Dépendance aux importations de technologies vertes",
+          "mechanism": "La France dépend des importations pour certains équipements (panneaux solaires, éoliennes).",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ],
+          "reasoning": "Risque de dépendance technologique et de vulnérabilité aux fluctuations des marchés internationaux."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Retard dans la mise en œuvre des projets",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Complexité administrative et recours juridiques pourraient ralentir la transition.",
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ]
+        },
+        {
+          "risk": "Manque de main-d'œuvre qualifiée",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "Formation des professionnels nécessaire mais pas garantie.",
+          "source_refs": [
+            "sources.md#chapitre-13-grands-chantiers-ecologiques"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Constitutionnalisation de la 'règle verte' (ne pas prendre à la nature plus que ce qu'elle peut reconstituer)",
+          "source_ref": "sources.md#chapitre-12-planification-ecologique",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Sortie du nucléaire et 100% d'énergies renouvelables d'ici 2050",
+          "source_ref": "sources.md#chapitre-13-grands-chantiers-ecologiques",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Plan de rénovation énergétique de 700 000 logements/an",
+          "source_ref": "sources.md#chapitre-13-grands-chantiers-ecologiques",
+          "quantified": true,
+          "magnitude": "700 000 logements/an"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Investissements massifs nécessaires pour la transition écologique.",
+          "source_refs": [
+            "sources.md#chapitre-12-planification-ecologique"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Nécéssite une coordination complexe entre État, collectivités et acteurs privés.",
+          "source_refs": [
+            "sources.md#chapitre-12-planification-ecologique"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépendance aux technologies vertes et aux partenariats européens.",
+          "source_refs": [
+            "sources.md#chapitre-17-europe"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Changements structurels difficilement réversibles.",
+          "source_refs": [
+            "sources.md#chapitre-12-planification-ecologique"
+          ]
+        }
+      },
+      "confidence": 0.8
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "approximately €1,500/person/year (net transfer from under-35s to retirees and public services)",
+      "units": "€/person/year",
+      "confidence": 0.7,
+      "caveats": "Estimate assumes full implementation of the program's fiscal and social measures. Risk of underestimation if economic growth disappoints."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher effective tax burden via progressive income tax, wealth tax, and social contributions, offset by increased public services and social transfers.",
+        "quantified": "+€800/year in net tax burden"
+      },
+      "housing": {
+        "summary": "Improved access to social housing and rent controls, but continued high housing costs due to supply constraints.",
+        "quantified": "No material change in affordability index"
+      },
+      "pension_outlook": {
+        "summary": "Replacement rate trending down due to retirement at 60 after 40 years of contributions, but improved by indexation on wages.",
+        "quantified": "~55% vs current 74%"
+      },
+      "labor_market": {
+        "summary": "Entry wages compressed by higher minimum wage, but improved job security via quota on precarious contracts.",
+        "quantified": "+15% increase in entry wages"
+      },
+      "environmental_debt": {
+        "summary": "Deferred transition costs concentrated post-2040, with improved environmental quality for future generations.",
+        "quantified": null
+      },
+      "narrative_summary": "Net negative distributional impact on under-35s in the short term, balanced by long-term environmental and social gains."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension indexation preserved, but higher taxes on capital income.",
+        "quantified": "+€0/year"
+      },
+      "pension": {
+        "summary": "Replacement rate stable near current 74%, with improved indexation on wages.",
+        "quantified": "~74%"
+      },
+      "healthcare": {
+        "summary": "Access improved via reconstruction of public hospitals and increased staffing, but potential congestion in early years.",
+        "quantified": null
+      },
+      "narrative_summary": "Net neutral-to-positive for current retirees, with improved access to healthcare and pensions."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Program effect on pensions concentrated in medium and long horizons due to retirement age change and funding.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Limited near-term effect under central assumptions.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Central-horizon effect described: retirement at 60 after 40 years.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-horizon effect amplified by cumulative dynamics: improved indexation and lower replacement rates.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Program effect on public debt concentrated in later horizons due to growth rebound.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Debt-to-GDP ratio increases due to higher spending and lower growth.",
+            "source_refs": [
+              "sources.md#chapitre-6-partage-des-richesses"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Debt ratio stabilizes as growth rebounds and fiscal consolidation occurs.",
+            "source_refs": [
+              "sources.md#chapitre-6-partage-des-richesses"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-term debt sustainability improves via debt restructuring and growth.",
+            "source_refs": [
+              "sources.md#chapitre-6-partage-des-richesses"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Program effect on climate concentrated in later horizons as emissions decline.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Limited near-term effect: emissions decline but not yet transformative.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -2,
+            "note": "Central-horizon effect: 65% emissions reduction by 2030, renewable energy deployment.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -3,
+            "note": "Long-horizon effect: climate neutrality achieved, environmental debt reduced.",
+            "source_refs": [
+              "sources.md#chapitre-12-planification-ecologique"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Program effect on health concentrated in medium and long horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Limited near-term effect: reconstruction takes time.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Central-horizon effect: improved access to healthcare, reopening of hospitals.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-horizon effect: universal healthcare improved, environmental health gains.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Program effect on education concentrated in later horizons as system reforms take effect.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Limited near-term effect: reforms take time to implement.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Central-horizon effect: improved access to education, reduced class sizes.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-horizon effect: educational attainment improves, reduced inequalities.",
+            "source_refs": [
+              "sources.md#chapitre-5-elever-le-niveau-dinstruction"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Program effect on housing concentrated in later horizons as supply increases.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Limited near-term effect: construction takes time.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Central-horizon effect: increased social housing supply, rent controls.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 2,
+            "note": "Long-horizon effect: improved affordability, reduced homelessness.",
+            "source_refs": [
+              "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Le programme crée un transfert net des jeunes vers les retraités et les services publics dans le court terme, mais améliore les perspectives environnementales et sociales pour les générations futures. Les mesures de relance par la consommation et l'investissement public bénéficient à l'ensemble de la population, mais les jeunes supportent une fiscalité plus lourde.",
+    "source_refs": [
+      "sources.md#chapitre-6-partage-des-richesses",
+      "sources.md#chapitre-8-travailler-tous-travailler-moins-travailler-mieux",
+      "sources.md#chapitre-12-planification-ecologique"
+    ],
+    "confidence": 0.75
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Debt-to-GDP ratio rises to 130% by 2047, housing affordability declines, environmental degradation accelerates, and social inequalities widen.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "institutional_democratic"
+    ],
+    "reasoning": "Le programme change radicalement la trajectoire économique et sociale, mais ne modifie pas l'architecture institutionnelle actuelle. Les mesures fiscales et sociales améliorent les indicateurs sociaux, mais au prix d'une hausse de la dette publique et d'une pression fiscale accrue. La transition écologique est accélérée, mais avec des risques économiques.",
+    "confidence": 0.8
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Acceptabilité sociale et blocages politiques",
+      "why_unsolved": "Le programme propose des mesures radicales (nationalisations, taxation des superprofits, sortie de l'OTAN) qui rencontrent une forte opposition des élites économiques et politiques.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Financement de la transition écologique et sociale",
+      "why_unsolved": "L'absence de détails sur le financement pérenne des mesures (notamment la garantie d'autonomie et la reconstruction des services publics) crée un risque budgétaire.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-6-partage-des-richesses"
+      ]
+    },
+    {
+      "problem": "Dépendance aux partenariats européens",
+      "why_unsolved": "Le programme prévoit une désobéissance aux traités européens, mais dépend de la coopération de partenaires pour la dette perpétuelle et la transition écologique.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [
+        "sources.md#chapitre-17-europe"
+      ]
+    },
+    {
+      "problem": "Risques de fuite des capitaux et d'inflation",
+      "why_unsolved": "La taxation radicale des hauts revenus et du patrimoine, combinée au contrôle des capitaux, pourrait entraîner une fuite des capitaux et une pression inflationniste.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Failure to secure a qualified majority for the Constituent Assembly triggers a political crisis and delays all reforms.",
+      "trigger": "Opposition blocage of constitutional process.",
+      "probability": 0.3,
+      "severity": 0.9,
+      "reasoning": "Without a Constituent Assembly, the program's institutional reforms cannot be implemented."
+    },
+    {
+      "scenario": "Market reaction to wealth tax and capital controls triggers capital flight and a sovereign debt crisis.",
+      "trigger": "10-year OAT yield spikes above 5%.",
+      "probability": 0.25,
+      "severity": 0.95,
+      "reasoning": "High debt burden and radical taxation could lead to a loss of investor confidence."
+    },
+    {
+      "scenario": "Economic growth disappoints, leading to a fiscal squeeze on social spending despite higher tax revenues.",
+      "trigger": "GDP growth below 1% for three consecutive years.",
+      "probability": 0.4,
+      "severity": 0.8,
+      "reasoning": "Lower growth would reduce tax revenues and increase the deficit, forcing cuts to social programs."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_worsened[0]",
+        "critique": "The claim that the program worsens the deficit is too vague and lacks quantification of the fiscal impact.",
+        "alternative_interpretation": "The program may stabilize the debt-to-GDP ratio if growth rebounds, though with higher short-term deficits."
+      },
+      {
+        "claim_location": "intergenerational.net_transfer_direction",
+        "critique": "The net transfer estimate assumes full implementation and ignores potential behavioral responses (tax avoidance, capital flight).",
+        "alternative_interpretation": "Net transfer could be lower if economic agents adjust their behavior."
+      }
+    ],
+    "potential_bias": "Analysis may under-weight the sovereignty and ecological dimensions, focusing too much on the economic and social policy trade-offs.",
+    "evidence_gaps": "Lack of detailed fiscal projections and macroeconomic modeling for the program's impact on growth, inflation, and employment.",
+    "confidence_in_critique": 0.75
+  },
+  "confidence_self_assessment": 0.7
+}

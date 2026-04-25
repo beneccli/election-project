@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "david-lisnard",
+  "version_date": "2026-04-23",
+  "source_models": [
+    { "provider": "anthropic", "version": "claude-opus-4-7" },
+    { "provider": "deepseek", "version": "deepseek-v3" },
+    { "provider": "google", "version": "gemini-2.5-pro" },
+    { "provider": "xai", "version": "grok-4" },
+    { "provider": "qwen", "version": "qwen3.6" }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "copilot",
+      "version": "claude opus 4.7"
+    },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-23T14:00:00Z"
+  },
+  "summary": "Le programme de David Lisnard (Nouvelle Énergie) articule trois ruptures : un resserrement de l'État central via une règle d'or budgétaire et une cible de dépenses publiques sous 50% du PIB en dix ans, une décentralisation radicale avec création de 40 à 50 Provinces remplaçant départements et régions, et un agenda régalien durci (plan décennal police-justice, division par 8 des titres de séjour, primauté constitutionnelle du droit national sur CJUE/CEDH en matière migratoire). La réforme des retraites porte l'âge légal à 65 ans puis bascule ~40% du système en capitalisation obligatoire (cible 116 Md€). L'école introduit un chèque-éducation, l'autonomie des établissements et la fin de la carte scolaire; la santé supprime les ARS et double le numerus clausus d'ici 2030. L'écologie est technophile et pro-nucléaire (prolongation 60 ans, EPR2, SMR), rejette explicitement le principe de précaution et la décroissance, sans objectif chiffré d'émissions. Le volet fiscal supprime C3S et CVAE (11,5 Md€), fusionne CDI/CDD en contrat unique et abroge l'article 55 de la loi SRU. Les cinq modèles convergent sur un positionnement de droite classique, sans basculement d'extrême droite.",
+  "summary_agreement": 0.78,
+  "coverage_warning": false
+}

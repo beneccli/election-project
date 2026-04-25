@@ -1,0 +1,277 @@
+{
+  "dimensions": {
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "A",
+        "dissent": { "claude-opus-4-7": "B", "gemini-2.5-pro": "B" }
+      },
+      "headline": {
+        "text": "Plan 10 ans police-justice, police territoriale, ÷8 titres de séjour, primauté constitutionnelle CJUE/CEDH, majorité pénale 16 ans.",
+        "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "claude-opus-4-7", "text": "Plan décennal police, polices territoriales armées, division par 8 des titres de séjour, quotas sectoriels, révision constitutionnelle migratoire." },
+          { "model": "deepseek-v3", "text": "Plan massif sur 10 ans pour police et justice, peines planchers, majorité pénale à 16 ans, décentralisation de la police territoriale et lutte prioritaire contre narcotrafic et islamisme." },
+          { "model": "gemini-2.5-pro", "text": "Quotas d'immigration, primauté du droit national, abaissement de la majorité pénale à 16 ans." },
+          { "model": "grok-4", "text": "Plan 10 ans remise à niveau police/justice, police territoriale décentralisée, quotas immigration et assimilation stricte." },
+          { "model": "qwen3.6", "text": "Durcissement pénal, quotas d'immigration, suppression de l'AME, primauté constitutionnelle et plan décennal police." }
+        ]
+      },
+      "summary": "Bloc régalien dense et cohérent : plan décennal de remise à niveau police, création d'une police territoriale décentralisée avec qualité d'OPJ, cible 50% de présence terrain (vs 37% aujourd'hui), budget justice porté à la moyenne européenne, doublement des procureurs, fin des réductions automatiques de peine, peines planchers réintroduites, majorité pénale à 16 ans avec inversion de l'excuse de minorité dès 13 ans. Volet immigration : division par 8 des titres de séjour, suppression de l'accord franco-algérien de 1968, fin de l'automaticité du droit du sol, rétention 24 mois, primauté constitutionnelle sur CJUE/CEDH, sortie de la CEDH en dernier recours. Trois modèles attribuent A pour la cohérence et l'ambition d'ensemble ; Claude et Gemini retiennent B en raison de l'angle mort sur la dépendance diplomatique (pays d'origine, Frontex), des contraintes juridiques européennes (CEDH/CJUE) et des enjeux carcéraux de capacité.",
+      "problems_addressed": [
+        {
+          "problem": "Hausse des violences et délinquance de rue",
+          "approach": "Plan décennal de modernisation, cible 50% de présence terrain, police territoriale décentralisée à statut OPJ/APJ.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#securite", "sources.md#securite-liberte"],
+          "reasoning": "Cibles chiffrées et réforme organisationnelle ; calendrier explicite.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Sous-dotation et lenteur de la justice",
+          "approach": "Budget porté à la moyenne européenne (depuis 0,20% du PIB), doublement des procureurs et JAP, séparation budget pénitentiaire.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#justice"],
+          "reasoning": "Benchmark européen, cibles chiffrées de doublement.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "problem": "Flux migratoires et faible exécution des retours",
+          "approach": "Division par 8 des titres de séjour, quotas sectoriels, fin des régularisations après entrée illégale, rétention 24 mois, primauté constitutionnelle.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#immigration", "sources.md#souverainete-frontieres"],
+          "reasoning": "Multiples leviers concrets ; cible de division par 8 spécifique mais non décomposée par catégorie.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Délinquance des mineurs",
+          "approach": "Majorité pénale à 16 ans, inversion de l'excuse de minorité dès 13 ans, internats disciplinaires fermés.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#securite"],
+          "reasoning": "Modifications législatives claires ; efficacité empirique des structures fermées contestée.",
+          "supported_by": ["deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Entrisme islamiste",
+          "approach": "Interdiction des Frères musulmans, contrôle des écoles hors contrat, expulsion des prêcheurs radicaux, interdiction du voile à l'université.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#securite"],
+          "reasoning": "Énumération claire ; faisabilité juridique de certaines mesures (voile université, interdiction Frères musulmans) incertaine.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Narcotrafic",
+          "approach": "Cellules anti-stups sous autorité préfectorale, confiscations, infiltration numérique, task forces outre-mer.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#securite"],
+          "reasoning": "Architecture de gouvernance spécifiée sans enveloppe quantifiée.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de dépense de défense et engagement OTAN-2%",
+          "significance": "Le programme évoque un rééquilibrage régalien mais ne fixe pas de cible budgétaire de défense ni de plan d'équipement.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Capacité carcérale et conditions de détention",
+          "significance": "Le programme augmente les places de prison sans détailler les modalités de construction, le financement, ni les alternatives à l'incarcération pour désengorger.",
+          "source_refs": [],
+          "supported_by": ["deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Capacité d'absorption diplomatique d'une sortie de la CEDH",
+          "significance": "Conséquences sur les traités bilatéraux et le droit européen non évaluées.",
+          "source_refs": [],
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Relations diplomatiques avec l'Algérie et coopération avec les pays de départ",
+          "mechanism": "Suppression unilatérale de l'accord de 1968 et représailles visas/APD peuvent durcir les relations bilatérales et réduire la coopération sur les retours à court terme.",
+          "severity": 0.6,
+          "source_refs": ["sources.md#immigration"],
+          "reasoning": "Le programme assume un rapport de force ; la réponse de la contrepartie n'est pas modélisée.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Position de la France au regard du Conseil de l'Europe",
+          "mechanism": "Primauté constitutionnelle sur la CEDH + sortie potentielle créent un conflit avec les obligations conventionnelles.",
+          "severity": 0.6,
+          "source_refs": ["sources.md#immigration"],
+          "reasoning": "Standoff juridique séquentiel décrit ; conséquences sur l'architecture conventionnelle non évaluées.",
+          "supported_by": ["claude-opus-4-7", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Échec de la révision constitutionnelle migratoire",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "Seuil 3/5 ou incertitude référendaire ; la sortie CEDH appellerait une procédure distincte.",
+          "source_refs": ["sources.md#immigration"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Décentralisation policière crée des trous de coordination",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "Transfert des attributions de police judiciaire à l'échelon municipal soulève des risques de chaîne de commandement.",
+          "source_refs": ["sources.md#securite-liberte"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "risk": "Doublement du budget justice contraint par la chaîne de recrutement",
+          "probability": 0.45,
+          "severity": 0.4,
+          "reasoning": "Capacité ENM et recrutements latéraux limitent la montée en charge rapide.",
+          "source_refs": ["sources.md#justice"],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "risk": "Censure constitutionnelle/européenne des mesures migratoires",
+          "probability": 0.7,
+          "severity": 0.85,
+          "reasoning": "Remise en cause du droit du sol, quotas, primauté du droit national : risque élevé de censure.",
+          "source_refs": ["sources.md#immigration"],
+          "supported_by": ["deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Plan décennal police avec cible 50% de présence terrain",
+          "source_ref": "sources.md#securite-liberte",
+          "quantified": true,
+          "magnitude": "50% (vs 37% aujourd'hui) ; horizon 10 ans",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Doublement des procureurs et budget justice à la moyenne européenne",
+          "source_ref": "sources.md#justice",
+          "quantified": true,
+          "magnitude": "x2 procureurs ; cible >0,20% du PIB",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "measure": "Division par 8 des titres de séjour",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "÷8 (-87,5%)",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Rétention administrative portée à 24 mois",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "24 mois",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de l'accord franco-algérien de 1968",
+          "source_ref": "sources.md#immigration",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de l'AME, remplacement par aide d'urgence",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "700 M€ d'économies revendiquées",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Majorité pénale à 16 ans, inversion de l'excuse de minorité dès 13 ans",
+          "source_ref": "sources.md#securite",
+          "quantified": true,
+          "magnitude": "16 / 13 ans",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Plans police-justice à coûts récurrents partiellement compensés par AME et redéploiement administratif ; financement précis non détaillé.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": ["gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Justice and police upgrades carry recurring costs; partial offset from AME suppression and bureaucratic redeployment." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Augmentation des budgets police et justice annoncée mais non chiffrée ; le financement repose sur les économies de la réforme de l'État." },
+            { "model": "gemini-2.5-pro", "level": "low", "note": "Most measures are regulatory or generate minor savings (AME)." },
+            { "model": "grok-4", "level": "limited", "note": "Plans 10 ans police/justice chiffrés implicitement par rattrapage moyenne européenne." },
+            { "model": "qwen3.6", "level": "limited", "note": "Plan police sur 10 ans et doublement budget justice sont financés par redéploiement régalien." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Création d'une police territoriale, capacité de rétention 24 mois et refonte pénale exigent une montée en charge pluriannuelle.",
+          "supported_by": ["gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "deepseek-v3"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Territorial police creation, ARS abolition, 24-month retention capacity all require multi-year administrative build-up." },
+            { "model": "deepseek-v3", "level": "high", "note": "Réformes impliquent des changements législatifs lourds et une réorganisation administrative profonde." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Requires significant police redeployment and judicial processing speed." },
+            { "model": "grok-4", "level": "moderate", "note": "Décentralisation police territoriale nécessite formation et coordination." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Réorganisation policière et judiciaire demande une montée en charge progressive." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["low", "high"],
+          "note": "Agenda migratoire dépend de la révision constitutionnelle, de la coopération des pays d'origine et potentiellement de la sortie de la CEDH.",
+          "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+          "dissenters": ["deepseek-v3", "gemini-2.5-pro"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Migration agenda depends on constitutional revision, renegotiation of bilateral treaties, and potentially ECHR exit." },
+            { "model": "deepseek-v3", "level": "low", "note": "La plupart des mesures relèvent de la souveraineté nationale, à l'exception de la coopération internationale contre le narcotrafic." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Requires renegotiation or denunciation of international treaties (ECHR, EU frameworks)." },
+            { "model": "grok-4", "level": "high", "note": "Accords pays origine et Frontex indispensables pour retours." },
+            { "model": "qwen3.6", "level": "high", "note": "Dépend de la faisabilité juridique internationale et de la coopération des pays d'origine." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Modifications constitutionnelles difficiles à réviser ; éléments statutaires (AME, sentencing) plus aisés.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": ["grok-4", "qwen3.6"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Constitutional changes hard to reverse; statutory elements (AME, sentencing) easier." },
+            { "model": "deepseek-v3", "level": "limited", "note": "Modifications du code pénal révisables, mais création d'institutions plus difficile à démanteler." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Statutory changes can be reversed, but constitutional revisions are sticky." },
+            { "model": "grok-4", "level": "low", "note": "Référendum constitutionnel et inscription primauté droit national rendent réversibilité difficile." },
+            { "model": "qwen3.6", "level": "low", "note": "Inscription constitutionnelle et refonte pénale créent un verrouillage structurel difficile à inverser." }
+          ]
+        }
+      },
+      "confidence": 0.81
+    }
+  }
+}

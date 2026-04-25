@@ -1,0 +1,210 @@
+{
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "C",
+          "mistral-le-chat-2026-04-25": "D"
+        }
+      },
+      "headline": {
+        "text": "Révolution fiscale (14 tranches, ISF climatique, Zucman) et 200 Md€ d'investissement ; bouclage dépendant d'un bras de fer BCE/UE.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Rupture redistributive structurée, mais soutenabilité et compatibilité monétaire peu démontrées." },
+          { "model": "claude-opus-4-7", "text": "Hausse massive de la dépense publique et des prélèvements sur le capital, financée par fiscalité progressive et monétisation BCE; aucun chiffrage agrégé du solde budgétaire." },
+          { "model": "deepseek", "text": "Révolution fiscale (14 tranches d'IR, ISF renforcé, taxe Zucman) et création de pôles publics, mais financement tributaire d'un affrontement avec la BCE et l'UE." },
+          { "model": "gemini-1.5-pro", "text": "Hausse massive des dépenses via 200 milliards d'investissements, compensée par une révolution fiscale (14 tranches)." },
+          { "model": "mistral-le-chat-2026-04-25", "text": "Révolution fiscale radicale et hausse massive des dépenses publiques via nationalisations et planification écologique." },
+          { "model": "qwen3.6", "text": "Redistribution via 14-bracket income tax, wealth taxes, price controls, and 200bn public investment funded by BCE debt monetization." }
+        ]
+      },
+      "summary": "Le programme refonde la politique économique autour de trois leviers : (i) un barème d'impôt sur le revenu à 14 tranches assorti d'un ISF climatique et d'une taxe Zucman sur le patrimoine des milliardaires, (ii) la création de pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement (nationalisations partielles ou totales), et (iii) un plan d'investissement écologique et social de 200 Md€ sur la législature, dont le financement repose sur une conversion par la BCE de la dette publique détenue en titres perpétuels à taux nul. Le SMIC est porté à 1600€ net, les prix des biens de première nécessité sont encadrés et la flat tax est supprimée. Aucune trajectoire chiffrée de solde public n'est présentée. La majorité des modèles (B, 3/6) jugent l'architecture cohérente et concrète ; les dissents pointent l'absence de modélisation budgétaire (gpt, claude → C) ou la dépendance assumée à un affrontement avec la BCE et le Pacte de stabilité (mistral → D).",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du patrimoine et régressivité fiscale",
+          "approach": "Barème d'IR à 14 tranches, restauration et durcissement de l'ISF avec volet climatique, taxe Zucman à 2% sur les milliardaires, suppression de la flat tax, taxation permanente des superprofits, CSG progressive.",
+          "strength": 0.85,
+          "source_refs": ["sources.md#chapitre-6--partage-des-richesses"],
+          "reasoning": "Mécanismes de redistribution explicites et chiffrés ciblant directement le décile supérieur ; les six modèles convergent sur la cohérence interne du dispositif.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Sortie de la dette publique des marchés financiers",
+          "approach": "Conversion par la BCE des titres souverains qu'elle détient en dettes perpétuelles à taux nul ; création d'un circuit du Trésor refinancé hors marchés.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#chapitre-6--partage-des-richesses"],
+          "reasoning": "Solution articulée mais qui suppose une rupture juridique avec le mandat actuel de la BCE et le traité de fonctionnement de l'UE — donc opérationnellement conditionnée à un affrontement institutionnel.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Précarité de l'emploi et chômage de longue durée",
+          "approach": "Garantie d'emploi pour les chômeurs de longue durée, quota de 5% maximum de contrats précaires dans les grandes entreprises, hausse du SMIC à 1600€ net, encadrement des prix des biens essentiels.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"],
+          "reasoning": "Outils structurels combinant relance par la consommation et stabilisation des contrats ; coût budgétaire récurrent reconnu mais non chiffré.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réaction des marchés et fuite des capitaux sous fiscalité unilatérale du patrimoine",
+          "significance": "Le programme suppose qu'une exit tax et le contrôle des capitaux suffisent à neutraliser les arbitrages d'expatriation fiscale et la repricing du risque souverain ; cette hypothèse n'est ni discutée ni quantifiée.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Effets de seuil sur la compétitivité industrielle et l'investissement étranger",
+          "significance": "Le cumul de la taxation des dividendes, du protectionnisme écologique et des nationalisations partielles peut peser sur la formation brute de capital fixe ; aucune analyse d'impact n'est fournie.",
+          "source_refs": [],
+          "supported_by": ["mistral-le-chat-2026-04-25", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Conformité au cadre budgétaire et monétaire européen",
+          "mechanism": "Le programme assume explicitement la désobéissance au Pacte de stabilité et à l'indépendance de la BCE (dette perpétuelle, monétisation), ce qui dégrade mécaniquement la position juridique et financière de la France vis-à-vis de l'UE.",
+          "severity": 0.75,
+          "source_refs": ["sources.md#chapitre-6--partage-des-richesses", "sources.md#chapitre-17--europe"],
+          "reasoning": "Les six modèles relèvent le même mécanisme : la rupture est revendiquée, donc le « pire » qu'elle pourrait produire est intrinsèque à la trajectoire choisie, pas un effet de bord.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Refus de la BCE de convertir la dette en titres perpétuels à taux nul",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "Le mandat d'indépendance de la BCE et la jurisprudence Gauweiler/Weiss interdisent le financement monétaire direct ; un refus rendrait inopérante la pierre angulaire du financement du plan d'investissement de 200 Md€.",
+          "source_refs": ["sources.md#chapitre-6--partage-des-richesses"],
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["gemini-1.5-pro"]
+        },
+        {
+          "risk": "Réaction des marchés financiers et envolée du spread OAT-Bund",
+          "probability": 0.55,
+          "severity": 0.85,
+          "reasoning": "Combinée aux contrôles de capitaux, la taxation radicale du patrimoine peut provoquer un repricing du risque souverain et une crise de refinancement avant que les rendements fiscaux espérés ne se matérialisent.",
+          "source_refs": ["sources.md#chapitre-6--partage-des-richesses"],
+          "supported_by": ["mistral-le-chat-2026-04-25", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "risk": "Inefficacité opérationnelle des nationalisations et de la planification",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "L'expérience historique française montre des difficultés de gestion publique dans certains secteurs (énergie, transports) ; le programme ne détaille pas la gouvernance des pôles publics.",
+          "source_refs": ["sources.md#chapitre-2--par-dela-la-propriete-privee"],
+          "supported_by": ["mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Barème d'impôt sur le revenu à 14 tranches, ISF restauré avec volet climatique, taxe Zucman à 2% sur le patrimoine des milliardaires",
+          "source_ref": "sources.md#chapitre-6--partage-des-richesses",
+          "quantified": true,
+          "magnitude": "14 tranches; ISF + 2% milliardaires",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan d'investissement écologique et social de 200 Md€ sur la législature",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "200 Md€",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "SMIC à 1600€ net, indexation sur l'inflation, semaine à 32h dans les métiers pénibles, retour aux 35h ailleurs",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "1600€ net / 32h",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Création de pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement",
+          "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Dépenses récurrentes massives (autonomie, 100% Sécu, retraite à 60, 200 Md€) sans solde modélisé ; financement adossé à des hypothèses fiscales et monétaires non garanties.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Hausse durable et structurelle de la dépense publique." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Hausse massive du périmètre des dépenses publiques sans solde chiffré." },
+            { "model": "deepseek", "level": "high", "note": "Recettes fiscales et monétisation BCE supposées couvrir les dépenses, sans modèle macro publié." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Hypothèses massives sur les recettes et l'annulation BCE de la dette." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Dépenses publiques massives non couvertes par des recettes garanties." },
+            { "model": "qwen3.6", "level": "high", "note": "Conversion BCE et rendements fiscaux conditionnent le respect du seuil de 3%." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Mise en œuvre simultanée d'une refonte fiscale, de nationalisations sectorielles et d'un encadrement des prix exige une capacité administrative très supérieure à l'existant.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+          "dissenters": ["qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Restructuration administrative profonde." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Nationalisations majeures et redéploiement de l'administration fiscale." },
+            { "model": "deepseek", "level": "high", "note": "Refonte fiscale et nationalisations simultanées exigent des capacités importantes." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Nationalisation d'entités privées majeures et restructuration fiscale sans précédent." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Refonte institutionnelle et coopération européenne improbable." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Le contrôle des prix et la fiscalité requièrent extension des capacités d'enforcement, pas une rupture administrative complète." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Bouclage dépendant de la coopération forcée de la BCE et de la tolérance de l'UE ; sans cela, le plan d'investissement n'a pas de financement crédible.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépendance partielle aux contreparties européennes." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Forte dépendance à la coopération BCE/UE et aux partenaires commerciaux." },
+            { "model": "deepseek", "level": "high", "note": "Dépendance à la coopération BCE et partenaires européens pour la dette perpétuelle." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Dépend de la conformité forcée de l'UE/BCE ou de la rupture institutionnelle." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Dépendance forte BCE et partenaires européens." },
+            { "model": "qwen3.6", "level": "high", "note": "Stratégie de dette et tarifs commerciaux soumis aux seuils de tolérance européens." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "limited",
+          "level_interval": ["low", "moderate"],
+          "note": "Les nationalisations et les changements constitutionnels associés sont coûteux à défaire, mais le barème fiscal et le SMIC peuvent être amendés par une majorité ultérieure.",
+          "supported_by": ["claude-opus-4-7", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "deepseek", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Réversibilité partielle des outils budgétaires." },
+            { "model": "claude-opus-4-7", "level": "limited", "note": "Nationalisations difficiles à défaire dans une seule législature." },
+            { "model": "deepseek", "level": "moderate", "note": "Outils fiscaux modifiables ; nationalisations plus difficiles." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Mandats fiscaux constitutionnels et nationalisations difficiles à inverser." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "limited", "note": "Mesures constitutionnelles et nationalisations difficilement réversibles." },
+            { "model": "qwen3.6", "level": "limited", "note": "SMIC et IR amendables; nationalisations exigent un démantèlement complexe." }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  }
+}

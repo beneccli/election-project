@@ -23,7 +23,7 @@ function stripHtmlForText(html: string): string {
 describe("LandingHero", () => {
   it("renders in FR with em-emphasis on 'vraiment'", () => {
     const html = renderToStaticMarkup(
-      <LandingHero lang="fr" analyzedCount={3} pendingCount={5} />,
+      <LandingHero lang="fr" />,
     );
     expect(html).toContain("<em");
     expect(html).toContain("vraiment");
@@ -40,7 +40,7 @@ describe("LandingHero", () => {
 
   it("divider label reflects the analyzed and pending counts", () => {
     const html = renderToStaticMarkup(
-      <LandingHero lang="fr" analyzedCount={3} pendingCount={5} />,
+      <LandingHero lang="fr" />,
     );
     expect(html).toMatch(/3 candidats analysés · 5 à venir/);
   });
@@ -82,7 +82,7 @@ describe("LandingHero", () => {
 
   it("contains no banned advocacy words (regression guard)", () => {
     const html = renderToStaticMarkup(
-      <LandingHero lang="fr" analyzedCount={3} pendingCount={5} />,
+      <LandingHero lang="fr" />,
     );
     const text = stripHtmlForText(html);
     for (const w of BANNED) {

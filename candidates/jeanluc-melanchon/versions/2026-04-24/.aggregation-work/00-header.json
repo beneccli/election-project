@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "source_models": [
+    { "provider": "openai", "version": "gpt-5.5-thinking" },
+    { "provider": "anthropic", "version": "claude-opus-4-7" },
+    { "provider": "deepseek", "version": "deepseek" },
+    { "provider": "google", "version": "gemini-1.5-pro" },
+    { "provider": "mistralai", "version": "mistral-le-chat-2026-04-25" },
+    { "provider": "qwen", "version": "qwen3.6" }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": { "provider": "anthropic", "version": "claude-opus-4-7" },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-25T04:34:09Z"
+  },
+  "summary": "Programme de rupture systémique : 6e République via Assemblée constituante, planification écologique inscrite dans une « règle verte » constitutionnelle, plan d'investissement de 200 Md€, retour de la retraite à 60 ans avec 40 annuités, garantie d'autonomie au seuil de pauvreté (1216€), nationalisations de pôles publics stratégiques (énergie, transports, banque, médicaments, armement), barème d'impôt à 14 tranches, sortie du commandement intégré de l'OTAN et désobéissance assumée aux traités européens incompatibles avec ces objectifs. Les six modèles convergent sur un positionnement à l'extrême-gauche économique et écologiste avec une refonte institutionnelle profonde ; ils divergent surtout sur la magnitude du transfert intergénérationnel, la soutenabilité budgétaire à long terme du système de retraite et la trajectoire d'émissions sous sortie du nucléaire.",
+  "summary_agreement": 0.78,
+  "coverage_warning": false
+}

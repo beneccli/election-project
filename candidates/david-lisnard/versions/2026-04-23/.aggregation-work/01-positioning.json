@@ -1,0 +1,223 @@
+{
+  "positioning": {
+    "economic": {
+      "consensus_interval": [3, 4],
+      "modal_score": 4,
+      "anchor_narrative": "Les cinq modèles classent l'axe économique nettement à droite, à proximité ou au-dessus de l'anchor Fillon 2017 : suppression C3S/CVAE (11,5 Md€), contrat de travail unique CDI/CDD, transition vers ~40% de capitalisation, cible <50% PIB de dépense publique en 10 ans. Gemini, Grok et Qwen codent +4 (plus libéral que Fillon) ; Claude et DeepSeek retiennent +3 (aligné sur Fillon, sans trait libertarien marqué).",
+      "evidence": [
+        {
+          "quote": "La suppression de la C3S (Contribution sociale de solidarité au bénéfice de la Sécurité Sociale) et, le cas échéant, de la CVAE",
+          "source_ref": "sources.md#une-economie-plus-prospere"
+        },
+        {
+          "quote": "faire évoluer tous les autres régimes vers la capitalisation",
+          "source_ref": "sources.md#retraites"
+        },
+        {
+          "quote": "l'instauration d'un contrat de travail unique pour les nouveaux emplois, fusionnant CDI et CDD",
+          "source_ref": "sources.md#une-economie-plus-prospere"
+        }
+      ],
+      "confidence": 0.83,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 3,
+          "reasoning": "Concrete measures include halving production taxes (€11.5bn), moving 40% of pensions to capitalization, unified labor contract, removing SRU Article 55, and reducing public spending by 8 GDP points over 10 years. This is a sustained market-oriented package comparable to Fillon's 2017 platform."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": 3,
+          "reasoning": "Mesures explicites de réduction des dépenses publiques (<50% du PIB), de baisse de la fiscalité de production, de flexibilisation du marché du travail et de retraite par capitalisation, indiquant une orientation pro-marché cohérente sans trait d'extrême libéralisation."
+        }
+      ],
+      "per_model": [
+        { "model": "claude-opus-4-7", "score": 3, "reasoning": "Package pro-offre cohérent comparable à Fillon 2017 (halving production taxes, pension capitalization, unified contract, SRU abolition, -8pts PIB)." },
+        { "model": "deepseek-v3", "score": 3, "reasoning": "Orientation pro-marché cohérente sans trait d'extrême libéralisation : dépense <50% PIB, C3S/CVAE, contrat unique, capitalisation." },
+        { "model": "gemini-2.5-pro", "score": 4, "reasoning": "Explicit cuts of 8 points of GDP, halved production taxes, and capitalized pensions indicate a strongly market-oriented, supply-side approach more ambitious than Fillon 2017." },
+        { "model": "grok-4", "score": 4, "reasoning": "Plus orienté marché que Fillon 2017 : suppression C3S/CVAE, contrat unique, charges négatives RSA, réduction normes entreprises 50%, objectif dépenses <50% PIB via décentralisation." },
+        { "model": "qwen3.6", "score": 4, "reasoning": "Dérégulation, baisse des impôts de production, fusion CDI/CDD et capitalisation des retraites marquent une orientation marché assumée, au-delà de Fillon 2017." }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [2, 3],
+      "modal_score": 3,
+      "anchor_narrative": "Quatre modèles sur cinq codent +3 (plus conservateur que LR 2022) : autorité scolaire, humanités, méritocratie, assimilation stricte, majorité pénale à 16 ans, déplafonnement du quotient familial. Claude retient +2, arguant que le programme ne reprend pas les marqueurs identitaires ou moraux (LGBTQ+, IVG) qui porteraient le score plus haut.",
+      "evidence": [
+        {
+          "quote": "rétablir l'autorité du professeur, le primat du cours sur l'animation, et la logique de progression sur celle du ressenti",
+          "source_ref": "sources.md#education"
+        },
+        {
+          "quote": "Une nouvelle politique d'assimilation par l'éducation, le respect rigoureux de la loi, l'emploi et le logement",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "abaisser la majorité pénale à 16 ans, inverser le principe de l'excuse de minorité dès 13 ans",
+          "source_ref": "sources.md#securite"
+        }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 2,
+          "reasoning": "Program combines restoration of classical-humanities curriculum, authority-centered school model, assimilation frame and explicit opposition to political Islam. Family policy is natalist. Absent are conservative positions on LGBTQ rights, abortion, or civil-society moral questions, which keeps the score below +3."
+        }
+      ],
+      "per_model": [
+        { "model": "claude-opus-4-7", "score": 2, "reasoning": "Conservatisme d'autorité et d'assimilation sans marqueurs identitaires/moraux (LGBTQ, IVG) ; reste au-dessous de LR 2022." },
+        { "model": "deepseek-v3", "score": 3, "reasoning": "Forte réduction de l'immigration, réforme scolaire recentrée sur l'autorité et les savoirs fondamentaux, critique explicite de l'égalitarisme bureaucratique." },
+        { "model": "gemini-2.5-pro", "score": 3, "reasoning": "Measures focus heavily on restoring traditional authority in schools and justice, abolishing the minor excuse, and enforcing cultural assimilation." },
+        { "model": "grok-4", "score": 3, "reasoning": "Relance familiale nataliste, école recentrée sur fondamentaux, autorité, mérite et littérature française ; assimilation exigée." },
+        { "model": "qwen3.6", "score": 3, "reasoning": "Accent sur le mérite, les fondamentaux, la fin du pédagogisme, la majorité pénale à 16 ans et l'assimilation stricte." }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [1, 3],
+      "modal_score": 3,
+      "anchor_narrative": "Trois modèles codent +3 (plus souverainiste que LR 2022) en raison de la primauté constitutionnelle du droit national sur CJUE/CEDH en matière migratoire et de l'éventuelle sortie de la CEDH. Claude (+1) et Qwen (+2) relativisent en soulignant que l'Europe est qualifiée de « conquête » et que la coopération sectorielle (industrie, nucléaire) est maintenue.",
+      "evidence": [
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l'intérêt national",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Sortir de la CEDH en dernier recours",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "l'Europe institutionnelle est une conquête et un outil nécessaire dans le monde multipolaire actuel",
+          "source_ref": "sources.md#europe"
+        }
+      ],
+      "confidence": 0.72,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 1,
+          "reasoning": "Program is neither federalist nor exit-oriented. 'Treaty of democratization' to rebalance toward Council and Parliament, keeps cooperation on strategic sectors; explicit constitutional primacy on migration with ECHR exit only as last resort. Net score mildly sovereigntist."
+        },
+        {
+          "model": "qwen3.6",
+          "position": 2,
+          "reasoning": "Le programme refuse le fédéralisme et le repli, prônant une Europe de projets tout en affirmant une souveraineté juridique et migratoire stricte, avec menace de sortie de la CEDH en dernier recours."
+        }
+      ],
+      "per_model": [
+        { "model": "claude-opus-4-7", "score": 1, "reasoning": "Ni fédéraliste ni exit ; primauté constitutionnelle sur migration avec CEDH en dernier recours ; coopération européenne maintenue." },
+        { "model": "deepseek-v3", "score": 3, "reasoning": "Primauté du droit national, sortie conditionnelle de la CEDH, référendum en cas de blocage supranational : orientation souverainiste marquée." },
+        { "model": "gemini-2.5-pro", "score": 3, "reasoning": "While supporting European industrial cooperation, the program explicitly calls for constitutional primacy over the ECHR and CJEU on migration and borders." },
+        { "model": "grok-4", "score": 3, "reasoning": "Quotas, fin automaticité droit du sol, référendum pour sortir contraintes supranationales, mais coopération européenne sur projets concrets." },
+        { "model": "qwen3.6", "score": 2, "reasoning": "Europe de projets refusant fédéralisme et repli, souveraineté juridique et migratoire stricte avec menace CEDH en dernier recours." }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [-1, 1],
+      "modal_score": null,
+      "anchor_narrative": "L'axe institutionnel ne présente pas de mode unique : deux modèles (DeepSeek, Qwen) codent -1 (décentralisation libérale-démocratique), deux (Gemini, Grok) codent +1 (référendum et révision constitutionnelle tirent vers l'instrument plébiscitaire), Claude retient 0 (équilibre entre les deux forces). L'intervalle de consensus [-1, +1] traduit un désaccord analytique authentique sur la lecture institutionnelle : décentralisation massive et recentrage du Parlement (libéral) vs révisions constitutionnelles et référendums (populiste).",
+      "evidence": [
+        {
+          "quote": "un nouveau schéma institutionnel à trois niveaux : Etat/ Province/ Bloc communal selon un choix à faire valider par un référendum constitutionnel",
+          "source_ref": "sources.md#decentralisation"
+        },
+        {
+          "quote": "le Parlement vote la loi. Il contrôle l'action du Gouvernement. Il évalue les politiques publiques",
+          "source_ref": "sources.md#institutions"
+        },
+        {
+          "quote": "Un référendum sera nécessaire.",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 0,
+          "reasoning": "Program reinforces Parliament's legislative initiative and oversight, decentralizes regulatory power, and recenters the presidency — all liberal-democratic markers. Counterbalanced by referendum-first framing on migration sovereignty and constitutional revision to override supranational courts. Net near zero."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": -1,
+          "reasoning": "Rééquilibrage des pouvoirs vers le Parlement, décentralisation radicale et réduction du champ de la loi : réforme institutionnelle libérale-démocratique sans dérive illibérale identifiée."
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "position": 1,
+          "reasoning": "Massive decentralization to Provinces diffuses power (liberal), but the willingness to override international courts via referendum adds a populist/plebiscitarian element."
+        },
+        {
+          "model": "grok-4",
+          "position": 1,
+          "reasoning": "Décentralisation radicale, recentrage de la loi sur les principes, renforcement du contrôle parlementaire ; référendum constitutionnel sur architecture territoriale et migration ajoute une dimension plébiscitaire."
+        },
+        {
+          "model": "qwen3.6",
+          "position": -1,
+          "reasoning": "Refonte visant à limiter l'exécutif central, renforcer le Parlement et déléguer le pouvoir réglementaire aux Provinces, dans un cadre libéral-démocratique et subsidiaire."
+        }
+      ],
+      "per_model": [
+        { "model": "claude-opus-4-7", "score": 0, "reasoning": "Équilibre entre marqueurs libéraux (décentralisation, Parlement) et instruments populistes (référendum migration, révision constitutionnelle)." },
+        { "model": "deepseek-v3", "score": -1, "reasoning": "Décentralisation et réduction du champ de la loi : réforme libérale-démocratique sans dérive illibérale." },
+        { "model": "gemini-2.5-pro", "score": 1, "reasoning": "Décentralisation libérale combinée à la volonté d'outrepasser les cours internationales via référendum : élément plébiscitaire." },
+        { "model": "grok-4", "score": 1, "reasoning": "Réforme institutionnelle profonde avec dimension plébiscitaire via référendum constitutionnel." },
+        { "model": "qwen3.6", "score": -1, "reasoning": "Décentralisation subsidiaire dans un cadre libéral-démocratique, pas d'éléments illibéraux identifiés." }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [-2, 0],
+      "modal_score": -2,
+      "anchor_narrative": "Trois modèles codent -2 (plus productiviste que LR 2022) : nucléaire prioritaire, rejet du principe de précaution, dénonciation de l'« écologie punitive », fin du régime dérogatoire aux renouvelables, NTG autorisées. DeepSeek (-1) et Claude (0) relèvent cependant que le programme revendique un leadership bas-carbone, investit dans l'hydrogène et le captage CO₂, et introduit une fiscalité carbone à taxation constante — éléments qui limitent la pente productiviste.",
+      "evidence": [
+        {
+          "quote": "le remplacement du principe constitutionnel de précaution par un principe de responsabilité",
+          "source_ref": "sources.md#economie"
+        },
+        {
+          "quote": "Les notions d'« empreinte écologique » et de « jour du dépassement » sont également des impostures.",
+          "source_ref": "sources.md#ambition-ecologique"
+        },
+        {
+          "quote": "Favoriser la production d'énergie décarbonée en s'appuyant sur le nucléaire",
+          "source_ref": "sources.md#ambition-ecologique"
+        }
+      ],
+      "confidence": 0.72,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 0,
+          "reasoning": "Program commits to decarbonization via nuclear expansion and carbon pricing, which places it above pure productivism. However, explicit rejection of precautionary principle, rejection of planetary boundaries concepts, pro-NTG and renewables scaled back pull it down from Macron-2017 baseline. Net near zero."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": -1,
+          "reasoning": "Rejet explicite de la décroissance, priorité nucléaire, remise en cause des subventions aux renouvelables, mais investissements technologiques bas-carbone. Approche productiviste avec composante techno-optimiste."
+        }
+      ],
+      "per_model": [
+        { "model": "claude-opus-4-7", "score": 0, "reasoning": "Décarbonation nucléaire + carbone tax-constant au-dessus du productivisme pur ; mais rejet du précaution + NTG + renouvelables réduites tirent vers le bas." },
+        { "model": "deepseek-v3", "score": -1, "reasoning": "Rejet de la décroissance, priorité nucléaire, critique des subventions renouvelables ; composante techno-optimiste." },
+        { "model": "gemini-2.5-pro", "score": -2, "reasoning": "Strong reliance on nuclear power, explicit rejection of ecological footprint metrics, and deregulation of agricultural environmental constraints." },
+        { "model": "grok-4", "score": -2, "reasoning": "Priorité nucléaire, technologies hyper, refus principe de précaution et écologie punitive." },
+        { "model": "qwen3.6", "score": -2, "reasoning": "Rejet de la décroissance et du principe de précaution, nucléaire et innovation technologique comme piliers de la transition." }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": { "droite": 5 },
+      "anchor_narrative": "Les cinq modèles s'accordent sur un positionnement de droite classique (5/5). La combinaison d'un axe économique pro-marché marqué (+3 à +4), d'un axe social-culturel conservateur (+2 à +3) et d'un axe souveraineté affirmé (+1 à +3) place le programme dans la bande droite au sens large. Aucun modèle ne retient extrême_droite : absence de rhétorique identitaire, préservation du cadre démocratique, coopération européenne maintenue.",
+      "confidence": 0.73,
+      "dissent": [],
+      "per_model": [
+        { "model": "claude-opus-4-7", "label": "droite", "reasoning": "Axe économique +3 combiné à social-culturel +2 place le programme dans la bande droite, au niveau de l'anchor Fillon/LR mainstream ; souveraineté +1 n'emmène pas vers extrême_droite car pro-EU et rejet de la rhétorique identitaire." },
+        { "model": "deepseek-v3", "label": "droite", "reasoning": "Axes économique (+3), social-culturel (+3) et souveraineté (+3) convergent vers la droite ; pas de remise en cause radicale des institutions démocratiques, donc pas d'extrême_droite." },
+        { "model": "gemini-2.5-pro", "label": "droite", "reasoning": "High scores on market-oriented economics, conservative social policies, and sovereigntist border controls squarely place the program in the classical, albeit radicalized, right-wing spectrum." },
+        { "model": "grok-4", "label": "droite", "reasoning": "Fort positionnement pro-marché et baisse prélèvements combinés à relance famille traditionnelle, assimilation stricte et souveraineté frontières : placement clair sur la droite classique." },
+        { "model": "qwen3.6", "label": "droite", "reasoning": "Libéralisme économique structurel, conservatisme social-éducatif et ligne souverainiste sur l'immigration placent le programme dans la bande droite classique." }
+      ]
+    }
+  }
+}

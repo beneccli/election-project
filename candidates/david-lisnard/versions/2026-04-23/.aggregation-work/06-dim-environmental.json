@@ -1,0 +1,257 @@
+{
+  "dimensions": {
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "C",
+        "dissent": { "grok-4": "B", "qwen3.6": "B" }
+      },
+      "headline": {
+        "text": "Stratégie nucléocentrée (60 ans, EPR, SMR), fiscalité carbone à taxation constante, rejet du principe de précaution, libération agricole.",
+        "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "claude-opus-4-7", "text": "Leader bas-carbone du G20 via nucléaire (EPR, SMR, prolongation 60 ans), rejet du principe de précaution, fiscalité carbone à taxation constante." },
+          { "model": "deepseek-v3", "text": "Priorité au nucléaire (EPR, SMR), rejet de l'écologie punitive et de la décroissance, soutien aux innovations technologiques (captage CO2, hydrogène) sans objectifs chiffrés de réduction d'émissions." },
+          { "model": "gemini-2.5-pro", "text": "Dérégulation agricole, fin des subventions éoliennes/solaires, et investissement massif dans le nucléaire." },
+          { "model": "grok-4", "text": "Leadership bas carbone via nucléaire prioritaire, fiscalité carbone réciproque et technologies hyper sans décroissance." },
+          { "model": "qwen3.6", "text": "Priorité au nucléaire, prix du carbone à fiscalité constante, rejet du principe de précaution et libération agricole." }
+        ]
+      },
+      "summary": "Volet écologique technophile et pro-croissance : décarbonation traitée comme enjeu industriel et de souveraineté avec le nucléaire au centre (prolongation à 60 ans, EPR de nouvelle génération, SMR, recherche de traitement laser des déchets). Fiscalité carbone admise sous trois conditions (taxation constante, redistribution aux perdants/vertueux, préservation de la compétitivité, réciprocité internationale). Renouvelables ramenés au droit commun. Principe de précaution remplacé par un principe de responsabilité. Agriculture : autorisation des NTG, phytosanitaires raisonnés, bassines en subsidiarité. Trois modèles attribuent C en raison de l'absence d'objectifs chiffrés de réduction d'émissions, de calendrier de sortie des fossiles et de stratégie biodiversité ; Grok et Qwen attribuent B au titre de la cohérence pro-nucléaire et de la fiscalité carbone redistributive.",
+      "problems_addressed": [
+        {
+          "problem": "Décarbonation du mix électrique",
+          "approach": "Prolongation des réacteurs à 60 ans, nouveaux EPR, déploiement de SMR.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#climat", "sources.md#energie"],
+          "reasoning": "Pilier technologique clair et chiffré (60 ans, EPR, SMR) ; calendrier néanmoins indicatif.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Compétitivité industrielle face au prix de l'énergie",
+          "approach": "Tarif électrique compétitif via nucléaire historique, taxation carbone à fiscalité constante avec réciprocité internationale.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#climat", "sources.md#economie-fiscalite"],
+          "reasoning": "Logique économique cohérente ; chiffrage des transferts redistributifs absent.",
+          "supported_by": ["claude-opus-4-7", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté agricole et compétitivité du secteur",
+          "approach": "Autorisation des NTG, phytosanitaires raisonnés, bassines de stockage d'eau en subsidiarité.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#agriculture"],
+          "reasoning": "Mesures explicites en faveur de la production ; impact biodiversité et eau non chiffré.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Émissions des super-pollueurs internationaux",
+          "approach": "Action diplomatique pour cibler les principaux émetteurs (Chine, Inde, États-Unis) plutôt que pénaliser unilatéralement la France.",
+          "strength": 0.45,
+          "source_refs": ["sources.md#climat"],
+          "reasoning": "Diagnostic juste mais leviers diplomatiques peu spécifiés.",
+          "supported_by": ["grok-4"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Objectifs chiffrés de réduction des émissions de GES",
+          "significance": "Aucune cible -55% à 2030 ou trajectoire SNBC ; engagement européen non explicitement réaffirmé.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation au changement climatique",
+          "significance": "Vagues de chaleur, montée des eaux, événements extrêmes : aucune stratégie d'adaptation territoriale chiffrée.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "problem": "Biodiversité et artificialisation des sols",
+          "significance": "ZAN, érosion biodiversité, pollutions diffuses non traités.",
+          "source_refs": [],
+          "supported_by": ["gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Décarbonation des transports et du bâti",
+          "significance": "Au-delà de l'électricité, les secteurs des transports (ZFE, mobilités) et du bâti (rénovation thermique) sont peu abordés.",
+          "source_refs": [],
+          "supported_by": ["deepseek-v3"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Trajectoire de réduction des renouvelables installables",
+          "mechanism": "Fin des subventions éoliennes/solaires + retour au droit commun ralentit la diversification du mix court terme, le temps que les nouveaux EPR/SMR montent en puissance (>10 ans).",
+          "severity": 0.55,
+          "source_refs": ["sources.md#energie"],
+          "reasoning": "Décalage temporel structurel entre fenêtre 2026-2035 et disponibilité du nucléaire neuf.",
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "problem": "Pression sur la ressource en eau et biodiversité",
+          "mechanism": "Soutien aux bassines, NTG et phytosanitaires raisonnés sans cadre national strict peut accroître localement la pression environnementale.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#agriculture"],
+          "reasoning": "Subsidiarité revendiquée mais sans garde-fous explicites.",
+          "supported_by": ["gemini-2.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Retard ou surcoût des programmes EPR/SMR",
+          "probability": 0.65,
+          "severity": 0.7,
+          "reasoning": "Historique des EPR (Flamanville, Olkiluoto) ; SMR encore non commercialisés à l'échelle.",
+          "source_refs": ["sources.md#energie"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Échec de la fiscalité carbone à taxation constante (acceptabilité sociale, équilibre redistributif)",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Mémoire Gilets jaunes ; mécanique redistributive non chiffrée.",
+          "source_refs": ["sources.md#climat"],
+          "supported_by": ["claude-opus-4-7", "deepseek-v3"],
+          "dissenters": []
+        },
+        {
+          "risk": "Incompatibilité avec les objectifs européens (Fit for 55, taxonomie)",
+          "probability": 0.45,
+          "severity": 0.6,
+          "reasoning": "Absence de cibles 2030, retrait des subventions renouvelables peuvent créer un conflit avec le cadre UE.",
+          "source_refs": ["sources.md#climat", "sources.md#energie"],
+          "supported_by": ["deepseek-v3", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Prolongation des réacteurs nucléaires à 60 ans",
+          "source_ref": "sources.md#energie",
+          "quantified": true,
+          "magnitude": "60 ans",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Construction de nouveaux EPR de génération suivante",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "measure": "Déploiement de petits réacteurs modulaires (SMR)",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "grok-4"],
+          "dissenters": []
+        },
+        {
+          "measure": "Fiscalité carbone à taxation constante avec redistribution",
+          "source_ref": "sources.md#climat",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "grok-4", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Fin des subventions éoliennes/solaires (retour droit commun)",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Remplacement du principe de précaution par un principe de responsabilité",
+          "source_ref": "sources.md#climat",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Autorisation des NTG (nouvelles techniques génomiques) en agriculture",
+          "source_ref": "sources.md#agriculture",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Programme nucléaire (EPR, SMR, prolongations) à très haute intensité capitalistique sur 15-20 ans ; chiffrage absent.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro"],
+          "dissenters": ["grok-4", "qwen3.6"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Nuclear program (EPRs, SMRs, life-extensions) is highly capital-intensive over 15-20 years; cost not detailed." },
+            { "model": "deepseek-v3", "level": "high", "note": "Investissements nucléaires lourds nécessitant un financement public ou via EDF, sans engagement chiffré." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Carbon revenues recycled (tax neutral) but nuclear capital expenditure is intensive." },
+            { "model": "grok-4", "level": "moderate", "note": "Nucléaire EPR/SMR coûteux mais financé via EDF et contracts long terme." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Investissements nucléaires lourds compensés par revenus de la fiscalité carbone." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Industrie nucléaire (EDF, supply chain, ASN) sous tension ; SMR non commercialisés à l'échelle.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "qwen3.6"],
+          "dissenters": ["gemini-2.5-pro", "grok-4"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "high", "note": "Nuclear industry (EDF, supply chain, ASN) under stress; SMRs not yet commercial at scale." },
+            { "model": "deepseek-v3", "level": "high", "note": "Construction de nouveaux EPR techniquement complexe et longue." },
+            { "model": "gemini-2.5-pro", "level": "moderate", "note": "Nuclear capacity is established, agricultural deregulation requires lifting EU rules." },
+            { "model": "grok-4", "level": "moderate", "note": "Nucléaire industriel maîtrisé mais SMR non encore commercialisés." },
+            { "model": "qwen3.6", "level": "high", "note": "Construction et prolongation nucléaires nécessitent compétences industrielles tendues." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "high"],
+          "note": "Chaîne d'approvisionnement uranium et coopération européenne (taxonomie) ; négociations CETA/Mercosur.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "qwen3.6"],
+          "dissenters": ["gemini-2.5-pro", "grok-4"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Uranium supply, ECB-comparable industrial financing, EU taxonomy alignment." },
+            { "model": "deepseek-v3", "level": "moderate", "note": "Dépend de la stabilité juridique européenne et de la coopération internationale." },
+            { "model": "gemini-2.5-pro", "level": "high", "note": "Requires reciprocal carbon mechanisms and possibly EU treaty modification." },
+            { "model": "grok-4", "level": "low", "note": "Souveraineté énergétique nationale réduit dépendance externe." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Dépend de la disponibilité du combustible et des autorisations européennes." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Investissements nucléaires lourds verrouillent le mix électrique pour 60+ ans ; fiscalité réversible.",
+          "supported_by": ["claude-opus-4-7", "deepseek-v3", "gemini-2.5-pro", "qwen3.6"],
+          "dissenters": ["grok-4"],
+          "per_model": [
+            { "model": "claude-opus-4-7", "level": "low", "note": "Heavy nuclear investments lock electricity mix for 60+ years; tax framework reversible." },
+            { "model": "deepseek-v3", "level": "low", "note": "Investissements nucléaires lourds difficilement réversibles." },
+            { "model": "gemini-2.5-pro", "level": "low", "note": "Nuclear infrastructure choices lock the energy mix for half a century." },
+            { "model": "grok-4", "level": "moderate", "note": "Fiscalité carbone réversible, infrastructures nucléaires moins." },
+            { "model": "qwen3.6", "level": "low", "note": "Investissements nucléaires structurellement verrouillants à long terme." }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  }
+}
