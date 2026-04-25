@@ -2796,7 +2796,7 @@
             ]
           },
           "h_2038_2047": {
-            "modal_score": null,
+            "modal_score": -1,
             "score_interval": [
               -2,
               2
