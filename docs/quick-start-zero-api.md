@@ -43,11 +43,11 @@ Pick a throwaway ID prefixed with `test-`:
 
 ```bash
 npm run scaffold-candidate -- \
-  --id test-omega \
-  --name "Omega Synthétique" \
-  --party "Parti Placeholder-Ω" \
-  --party-id test-omega \
-  --date 2027-11-01 \
+  --id bruno-retailleau \
+  --name "Bruno Retailleau" \
+  --party "Les Républicains" \
+  --party-id les-republicains \
+  --date 2026-04-24 \
   --is-fictional
 ```
 
@@ -89,8 +89,8 @@ reusable across every chat UI you drive:
 
 ```bash
 npm run prepare-manual-analysis -- \
-  --candidate test-omega \
-  --version 2027-11-01
+  --candidate bruno-retailleau \
+  --version 2026-04-25
 ```
 
 This writes `candidates/test-omega/versions/2027-11-01/_manual/`
@@ -163,8 +163,8 @@ Bundle the aggregation prompt + the three raw outputs:
 
 ```bash
 npm run prepare-manual-aggregation -- \
-  --candidate test-omega \
-  --version 2027-11-01
+  --candidate jeanluc-melanchon \
+  --version 2026-04-24
 ```
 
 This writes
@@ -175,13 +175,13 @@ in Copilot. It will produce `aggregated.draft.json`. Then ingest:
 
 ```bash
 npm run ingest-aggregated -- \
-  --candidate test-omega \
-  --version 2027-11-01 \
+  --candidate bruno-retailleau \
+  --version 2026-04-25 \
   --mode copilot-agent \
-  --attested-version claude-opus-4-1 \
+  --attested-version claude-opus-4-7 \
   --attested-by copilot-aggregator \
   --already-written \
-  --file candidates/test-omega/versions/2027-11-01/aggregated.draft.json
+  --file candidates/bruno-retailleau/versions/2026-04-25/aggregated.draft.json
 ```
 
 ---
@@ -190,8 +190,8 @@ npm run ingest-aggregated -- \
 
 ```bash
 npm run review -- \
-  --candidate test-omega \
-  --version 2027-11-01 \
+  --candidate bruno-retailleau \
+  --version 2026-04-25 \
   --reviewer "$(whoami)"
 ```
 
@@ -206,7 +206,7 @@ Walk through flagged items. When done, the CLI renames
 First attempt **without** the override:
 
 ```bash
-npm run publish -- --candidate test-omega --version 2027-11-01
+npm run publish -- --candidate bruno-retailleau --version 2026-04-25
 ```
 
 Expected: the publish command refuses because
