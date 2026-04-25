@@ -236,6 +236,9 @@ describe("listLandingCards (locale-aware)", () => {
       }),
     );
     for (const entry of fs.readdirSync(path.join(OMEGA_ROOT, "current"))) {
+      // Locale-aware tests seed a baseline FR-only candidate; skip any
+      // committed translation artifacts so the "missing" scenario is real.
+      if (/^aggregated\.[a-z]{2}\.json$/.test(entry)) continue;
       const src = path.join(OMEGA_ROOT, "current", entry);
       const dst = path.join(dir, "current", entry);
       const stat = fs.statSync(src);

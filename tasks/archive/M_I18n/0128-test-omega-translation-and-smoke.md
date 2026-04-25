@@ -14,7 +14,7 @@ context:
   - scripts/prepare-manual-translation.ts
   - scripts/ingest-translation.ts
   - scripts/pipeline.integration.test.ts
-test_command: npm run build --workspace site && npm run test:integration
+test_command: npm run site:build && npm run test:pipeline
 depends_on: ["0122", "0123", "0124", "0126", "0127"]
 ---
 
