@@ -22,6 +22,7 @@ import { DIMENSION_LABELS } from "@/lib/dimension-labels";
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
 import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 import { useComparison } from "./ComparisonBody";
 import { SectionHead } from "../chrome/SectionHead";
 
@@ -118,7 +119,7 @@ function RisquesBlock({
           style={{ backgroundColor: color }}
         />
         <Link
-          href={`/candidat/${projection.id}#risques`}
+          href={localePath(`/candidat/${projection.id}#risques`, lang)}
           className="text-sm font-semibold hover:underline"
         >
           {firstName(projection.displayName)}

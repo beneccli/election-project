@@ -14,6 +14,7 @@ import {
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
 import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 import { useComparison } from "./ComparisonBody";
 import { SectionHead } from "../chrome/SectionHead";
 
@@ -113,7 +114,10 @@ export function IntergenTable({
           <tbody>
             {HORIZON_ROW_KEYS.map((row) => {
               const labels = ROW_LABELS[row];
-              const href = `/candidat/${anchorCandidate}#horizon-${row}`;
+              const href = localePath(
+                `/candidat/${anchorCandidate}#horizon-${row}`,
+                lang,
+              );
               return (
                 <tr key={row}>
                   <th

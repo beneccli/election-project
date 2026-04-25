@@ -9,6 +9,7 @@
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import type { LandingCard } from "@/lib/landing-cards";
 import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 
 interface Props {
   card: LandingCard;
@@ -186,7 +187,7 @@ export default function CandidateCard({ card, lang }: Props) {
   if (card.status === "analyzed") {
     return (
       <a
-        href={`/candidat/${card.id}`}
+        href={localePath(`/candidat/${card.id}`, lang)}
         className="block h-full rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         {Inner}

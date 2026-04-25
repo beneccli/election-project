@@ -49,4 +49,12 @@ describe("buildCompareCtaHref", () => {
     expect(href).toContain("c=alice-dupont");
     expect(href).toContain("c=bob-martin");
   });
+
+  it("prefixes /<lang> when lang is not fr", () => {
+    expect(buildCompareCtaHref([], "en")).toBe("/en/comparer");
+    const entries = [entry("a", "2026-01-01"), entry("b", "2026-02-01")];
+    expect(buildCompareCtaHref(entries, "en")).toBe(
+      "/en/comparer?c=b&c=a",
+    );
+  });
 });

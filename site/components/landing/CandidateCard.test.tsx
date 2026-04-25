@@ -49,6 +49,13 @@ describe("CandidateCard — analyzed", () => {
     expect(html).toMatch(/<a [^>]*href="\/candidat\/omega"/);
   });
 
+  it("prefixes the link with /<lang> when lang is not fr", () => {
+    const html = renderToStaticMarkup(
+      <CandidateCard card={BASE_ANALYZED} lang="en" />,
+    );
+    expect(html).toMatch(/<a [^>]*href="\/en\/candidat\/omega"/);
+  });
+
   it("includes the grade badge and display name", () => {
     const html = renderToStaticMarkup(
       <CandidateCard card={BASE_ANALYZED} lang="fr" />,

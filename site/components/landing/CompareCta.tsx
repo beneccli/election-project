@@ -14,7 +14,7 @@ interface Props {
 }
 
 export default function CompareCta({ lang, entries }: Props) {
-  const href = buildCompareCtaHref(entries);
+  const href = buildCompareCtaHref(entries, lang);
   return (
     <section className="border-y border-rule bg-[color:var(--bg-subtle)] px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
