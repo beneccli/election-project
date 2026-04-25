@@ -5,6 +5,8 @@ import type {
   SourcesRawManifest,
   SourcesRawManifestEntry,
 } from "@/lib/manifests/sources-manifest";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { useLang } from "@/lib/lang-context";
 
 type FetchState =
   | { phase: "loading" }
@@ -23,6 +25,7 @@ export function SourcesTab({
   onSelectFile: (filename: string | null) => void;
   onRequestDocumentTab: () => void;
 }) {
+  const { lang } = useLang();
   const manifestUrl = `/candidates/${id}/${versionDate}/sources-raw/manifest.json`;
   const [state, setState] = React.useState<FetchState>({ phase: "loading" });
 
@@ -57,7 +60,7 @@ export function SourcesTab({
   if (state.phase === "loading") {
     return (
       <p className="rounded-md border border-rule bg-bg-subtle px-4 py-6 text-center text-xs text-text-tertiary">
-        Chargement de l’index des sources…
+        {t(UI_STRINGS.SOURCES_LOADING_INDEX, lang)}
       </p>
     );
   }
@@ -69,6 +72,7 @@ export function SourcesTab({
       selectedFile={selectedFile}
       onSelectFile={onSelectFile}
       onRequestDocumentTab={onRequestDocumentTab}
+      lang={lang}
     />
   );
 }
@@ -83,15 +87,17 @@ export function SourcesTabView({
   selectedFile,
   onSelectFile,
   onRequestDocumentTab,
+  lang = "fr",
 }: {
   manifest: SourcesRawManifest;
   baseUrl: string;
   selectedFile: string | undefined;
   onSelectFile: (filename: string | null) => void;
   onRequestDocumentTab: () => void;
+  lang?: Lang;
 }) {
   if (manifest.files.length === 0) {
-    return <EmptyState onGoToDocument={onRequestDocumentTab} />;
+    return <EmptyState onGoToDocument={onRequestDocumentTab} lang={lang} />;
   }
   return (
     <ul className="flex flex-col gap-3">
@@ -110,10 +116,11 @@ export function SourcesTabView({
               onToggle={() =>
                 onSelectFile(isOpen ? null : entry.filename)
               }
+              lang={lang}
             />
             {isOpen ? (
               <div className="border-t border-rule px-3 py-3">
-                <Viewer entry={entry} href={href} />
+                <Viewer entry={entry} href={href} lang={lang} />
               </div>
             ) : null}
           </li>
@@ -132,11 +139,13 @@ function Row({
   href,
   isOpen,
   onToggle,
+  lang,
 }: {
   entry: SourcesRawManifestEntry;
   href: string;
   isOpen: boolean;
   onToggle: () => void;
+  lang: Lang;
 }) {
   return (
     <div className="flex flex-wrap items-center gap-3 px-3 py-2">
@@ -158,11 +167,11 @@ function Row({
               rel="noreferrer noopener"
               className="underline decoration-dotted underline-offset-2"
             >
-              source d’origine
+              {t(UI_STRINGS.SOURCES_ORIGIN_LINK, lang)}
             </a>
           ) : null}
           {typeof entry.accessed_at === "string" && entry.accessed_at ? (
-            <span>accédée {entry.accessed_at}</span>
+            <span>{format(t(UI_STRINGS.SOURCES_ACCESSED_AT, lang), { at: entry.accessed_at })}</span>
           ) : null}
         </span>
       </div>
@@ -173,34 +182,32 @@ function Row({
           className="rounded-sm border border-rule px-2 py-1 hover:bg-bg-subtle"
           aria-expanded={isOpen}
         >
-          {isOpen ? "Masquer" : "Voir"}
+          {isOpen ? t(UI_STRINGS.RESULTS_HIDE_RAW, lang) : t(UI_STRINGS.SOURCES_VIEW, lang)}
         </button>
         <a
           href={href}
           download={entry.filename}
           className="rounded-sm border border-rule px-2 py-1 hover:bg-bg-subtle"
         >
-          Télécharger
+          {t(UI_STRINGS.RESULTS_DOWNLOAD, lang)}
         </a>
       </div>
     </div>
   );
 }
 
-function EmptyState({ onGoToDocument }: { onGoToDocument: () => void }) {
+function EmptyState({ onGoToDocument, lang }: { onGoToDocument: () => void; lang: Lang }) {
   return (
     <div className="rounded-md border border-rule bg-bg-subtle px-4 py-6 text-sm text-text-secondary">
       <p>
-        Les sources primaires archivées ne sont pas encore disponibles pour
-        cette version. Voir le document consolidé pour le contenu du
-        programme tel qu’il a été soumis aux modèles.
+        {t(UI_STRINGS.SOURCES_EMPTY_BODY, lang)}
       </p>
       <button
         type="button"
         onClick={onGoToDocument}
         className="mt-3 rounded-sm border border-rule bg-bg px-3 py-1 text-xs hover:bg-bg-subtle"
       >
-        Ouvrir le document consolidé
+        {t(UI_STRINGS.SOURCES_OPEN_CONSOLIDATED_DOC, lang)}
       </button>
     </div>
   );
@@ -213,9 +220,11 @@ function EmptyState({ onGoToDocument }: { onGoToDocument: () => void }) {
 function Viewer({
   entry,
   href,
+  lang,
 }: {
   entry: SourcesRawManifestEntry;
   href: string;
+  lang: Lang;
 }) {
   const kind = classifyFile(entry.filename);
   switch (kind) {
@@ -230,18 +239,18 @@ function Viewer({
       );
     case "text":
     case "json":
-      return <TextViewer href={href} kind={kind} />;
+      return <TextViewer href={href} kind={kind} lang={lang} />;
     default:
       return (
         <p className="text-xs text-text-secondary">
-          Aperçu non disponible.{" "}
+          {t(UI_STRINGS.SOURCES_PREVIEW_UNAVAILABLE, lang)}{" "}
           <a
             href={href}
             target="_blank"
             rel="noreferrer noopener"
             className="underline decoration-dotted underline-offset-2"
           >
-            Ouvrir dans un nouvel onglet
+            {t(UI_STRINGS.SOURCES_OPEN_NEW_TAB, lang)}
           </a>
           .
         </p>
@@ -252,9 +261,11 @@ function Viewer({
 function TextViewer({
   href,
   kind,
+  lang,
 }: {
   href: string;
   kind: "text" | "json";
+  lang: Lang;
 }) {
   const [state, setState] = React.useState<
     | { phase: "loading" }
@@ -298,12 +309,12 @@ function TextViewer({
   }, [href, kind]);
 
   if (state.phase === "loading") {
-    return <p className="text-xs text-text-tertiary">Chargement…</p>;
+    return <p className="text-xs text-text-tertiary">{t(UI_STRINGS.RESULTS_LOADING_INLINE, lang)}</p>;
   }
   if (state.phase === "error") {
     return (
       <p className="text-xs text-text-tertiary">
-        Échec du chargement : {state.message}
+        {format(t(UI_STRINGS.RESULTS_LOADING_FAILED_INLINE, lang), { message: state.message })}
       </p>
     );
   }

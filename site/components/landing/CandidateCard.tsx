@@ -8,7 +8,7 @@
 
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import type { LandingCard } from "@/lib/landing-cards";
-import { type Lang } from "@/lib/i18n";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 interface Props {
   card: LandingCard;
@@ -64,7 +64,7 @@ function AxisMiniBar({
   return (
     <div
       className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-wider text-text-tertiary"
-      aria-label={lang === "fr" ? "Axe économique" : "Economic axis"}
+      aria-label={t(UI_STRINGS.A11Y_LANDING_AXIS_ECO, lang)}
     >
       <div className="relative h-[6px] flex-1 rounded-full bg-[color:var(--bg-subtle)]">
         {/* centre rule */}
@@ -104,8 +104,8 @@ export default function CandidateCard({ card, lang }: Props) {
       data-family={card.family ?? "none"}
       aria-label={
         card.status === "analyzed"
-          ? `${card.displayName} — ${lang === "fr" ? "analyse disponible" : "analysis available"}`
-          : `${card.displayName} — ${lang === "fr" ? "analyse à venir" : "analysis pending"}`
+          ? format(t(UI_STRINGS.LANDING_CARD_ANALYSIS_AVAILABLE, lang), { name: card.displayName })
+          : format(t(UI_STRINGS.CANDIDATE_PENDING_ARIA, lang), { name: card.displayName })
       }
       aria-disabled={card.status === "pending" ? true : undefined}
     >
@@ -126,11 +126,7 @@ export default function CandidateCard({ card, lang }: Props) {
           <span
             className="rounded border border-rule px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-text-tertiary"
             data-fr-chip
-            title={
-              lang === "en"
-                ? "Translation pending — French content shown"
-                : "Traduction à venir — contenu en français"
-            }
+            title={t(UI_STRINGS.LANDING_TRANSLATION_PENDING_NOTE, lang)}
           >
             FR
           </span>
@@ -152,8 +148,8 @@ export default function CandidateCard({ card, lang }: Props) {
             />
             <div className="w-full">
               <div className="w-full flex justify-between uppercase text-text-secondary text-xs -mb-1">
-                <div>Gauche</div>
-                <div>Droite</div>
+                <div>{t(UI_STRINGS.SPECTRUM_LABEL_GAUCHE, lang)}</div>
+                <div>{t(UI_STRINGS.SPECTRUM_LABEL_DROITE, lang)}</div>
               </div>
               <AxisMiniBar
                 ecoAxis={card.ecoAxis}
@@ -165,7 +161,7 @@ export default function CandidateCard({ card, lang }: Props) {
           <div className="px-4 border-t border-rule mt-auto flex items-center justify-between gap-3 pt-4 text-sm text-text-tertiary">
             <span>{formatDate(card.versionDate, lang)}</span>
             <span className="text-accent font-bold">
-              {lang === "fr" ? "Voir l\u2019analyse →" : "View analysis →"}
+              {t(UI_STRINGS.LANDING_CARD_VIEW_ANALYSIS, lang)}
             </span>
           </div>
         </>

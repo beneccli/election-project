@@ -2,11 +2,11 @@
 // Thin route shell — body in ComparerPageBody (shared with /en/comparer).
 import type { Metadata } from "next";
 import { ComparerPageBody } from "@/components/pages/ComparerPageBody";
+import { t, UI_STRINGS } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Comparer les programmes · Élection 2027",
-  description:
-    "Comparer côte à côte 2 à 4 programmes de l'élection présidentielle 2027.",
+  title: t(UI_STRINGS.META_COMPARER_TITLE, "fr"),
+  description: t(UI_STRINGS.META_COMPARER_DESCRIPTION, "fr"),
 };
 
 export default function ComparerPage() {

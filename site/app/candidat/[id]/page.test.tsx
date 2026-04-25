@@ -50,7 +50,7 @@ describe("candidate page smoke (test-omega)", () => {
   it("renders a 6×3 intergenerational horizon matrix", async () => {
     const html = await renderOmega();
     expect(html).toContain(
-      "Matrice d&#x27;impact intergénérationnel par domaine et horizon",
+      "Matrice d’impact intergénérationnel par domaine et horizon",
     );
     // 6 rows × 3 cells = 18 score cells. We probe the horizon column
     // headers instead to avoid tight coupling to cell markup.

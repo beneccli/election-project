@@ -13,6 +13,8 @@ import { SourcesTab } from "@/components/transparency/SourcesTab";
 import { DocumentTab } from "@/components/transparency/DocumentTab";
 import { PromptsTab } from "@/components/transparency/PromptsTab";
 import { ResultsTab } from "@/components/transparency/ResultsTab";
+import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 const TAB_ORDER: readonly TransparencyTab[] = [
   "sources",
@@ -21,12 +23,18 @@ const TAB_ORDER: readonly TransparencyTab[] = [
   "results",
 ];
 
-const TAB_LABELS: Record<TransparencyTab, string> = {
-  sources: "Sources",
-  document: "Document consolidé",
-  prompts: "Prompts",
-  results: "Résultats IA",
-};
+function tabLabel(tab: TransparencyTab, lang: Lang): string {
+  switch (tab) {
+    case "sources":
+      return t(UI_STRINGS.TRANSPARENCY_TAB_SOURCES, lang);
+    case "document":
+      return t(UI_STRINGS.TRANSPARENCY_TAB_DOCUMENT, lang);
+    case "prompts":
+      return t(UI_STRINGS.TRANSPARENCY_TAB_PROMPTS, lang);
+    case "results":
+      return t(UI_STRINGS.TRANSPARENCY_TAB_RESULTS, lang);
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Pure chrome — state is lifted so SSR/unit tests can drive the component
@@ -46,6 +54,7 @@ export function TransparencyDrawerChrome({
   state: TransparencyHashState | null;
   onStateChange: (next: TransparencyHashState | null) => void;
 }) {
+  const { lang } = useLang();
   const tab: TransparencyTab = state?.tab ?? "sources";
   const open = state !== null;
   const tabRefs = React.useRef<Record<TransparencyTab, HTMLButtonElement | null>>(
@@ -88,11 +97,11 @@ export function TransparencyDrawerChrome({
     <Drawer
       open={open}
       onOpenChange={(next) => onStateChange(next ? state ?? { tab: "sources" } : null)}
-      eyebrow="Transparence"
+      eyebrow={t(UI_STRINGS.NAV_TRANSPARENCE, lang)}
       title={
-        TAB_LABELS[tab] + " — " + (versionMeta.version_date ?? "")
+        tabLabel(tab, lang) + " — " + (versionMeta.version_date ?? "")
       }
-      description="Toutes les pièces justificatives de cette analyse."
+      description={t(UI_STRINGS.TRANSPARENCY_DRAWER_DESCRIPTION, lang)}
       size="xl"
     >
       <WarningRibbons
@@ -100,29 +109,30 @@ export function TransparencyDrawerChrome({
         humanReviewCompleted={
           versionMeta.aggregation?.human_review_completed ?? false
         }
+        lang={lang}
       />
-      <SummaryRow versionMeta={versionMeta} aggregated={aggregated} />
+      <SummaryRow versionMeta={versionMeta} aggregated={aggregated} lang={lang} />
       <div
         role="tablist"
-        aria-label="Sections de transparence"
+        aria-label={t(UI_STRINGS.A11Y_TRANSPARENCY_TABS, lang)}
         onKeyDown={onKeyDown}
         className="mt-6 flex flex-wrap gap-1 border-b border-rule"
       >
-        {TAB_ORDER.map((t) => {
-          const selected = t === tab;
+        {TAB_ORDER.map((tb) => {
+          const selected = tb === tab;
           return (
             <button
-              key={t}
+              key={tb}
               ref={(el) => {
-                tabRefs.current[t] = el;
+                tabRefs.current[tb] = el;
               }}
               role="tab"
               type="button"
-              id={`transparency-tab-${t}`}
+              id={`transparency-tab-${tb}`}
               aria-selected={selected}
-              aria-controls={`transparency-panel-${t}`}
+              aria-controls={`transparency-panel-${tb}`}
               tabIndex={selected ? 0 : -1}
-              onClick={() => selectTab(t)}
+              onClick={() => selectTab(tb)}
               className={
                 "rounded-t-md border-b-2 px-4 py-2 text-sm font-medium transition-colors " +
                 (selected
@@ -130,26 +140,26 @@ export function TransparencyDrawerChrome({
                   : "border-transparent text-text-secondary hover:text-text")
               }
             >
-              {TAB_LABELS[t]}
+              {tabLabel(tb, lang)}
             </button>
           );
         })}
       </div>
       <div className="pt-6">
-        {TAB_ORDER.map((t) => {
-          const selected = t === tab;
+        {TAB_ORDER.map((tb) => {
+          const selected = tb === tab;
           return (
             <div
-              key={t}
+              key={tb}
               role="tabpanel"
-              id={`transparency-panel-${t}`}
-              aria-labelledby={`transparency-tab-${t}`}
+              id={`transparency-panel-${tb}`}
+              aria-labelledby={`transparency-tab-${tb}`}
               hidden={!selected}
               className="text-sm text-text-secondary"
             >
               {selected ? (
                 <TabBody
-                  tab={t}
+                  tab={tb}
                   id={id}
                   versionMeta={versionMeta}
                   aggregated={aggregated}
@@ -197,9 +207,11 @@ export function TransparencyDrawer({
 function WarningRibbons({
   coverageWarning,
   humanReviewCompleted,
+  lang,
 }: {
   coverageWarning: boolean;
   humanReviewCompleted: boolean;
+  lang: Lang;
 }) {
   if (!coverageWarning && humanReviewCompleted) return null;
   return (
@@ -207,15 +219,15 @@ function WarningRibbons({
       {coverageWarning ? (
         <Ribbon
           tone="warn"
-          label="Couverture partielle"
-          detail="Moins de trois modèles ont analysé ce programme avec succès — les désaccords et consensus sont donc établis sur une base réduite."
+          label={t(UI_STRINGS.TRANSPARENCY_PARTIAL_COVERAGE_LABEL, lang)}
+          detail={t(UI_STRINGS.TRANSPARENCY_PARTIAL_COVERAGE_DETAIL, lang)}
         />
       ) : null}
       {!humanReviewCompleted ? (
         <Ribbon
           tone="warn"
-          label="Revue humaine non complétée"
-          detail="Cette version n’a pas encore été validée par un relecteur humain."
+          label={t(UI_STRINGS.TRANSPARENCY_HUMAN_REVIEW_PENDING_LABEL, lang)}
+          detail={t(UI_STRINGS.TRANSPARENCY_HUMAN_REVIEW_PENDING_DETAIL, lang)}
         />
       ) : null}
     </div>
@@ -249,17 +261,19 @@ function Ribbon({
 function SummaryRow({
   versionMeta,
   aggregated,
+  lang,
 }: {
   versionMeta: VersionMetadata;
   aggregated: AggregatedOutput;
+  lang: Lang;
 }) {
   const modelCount = Object.keys(versionMeta.analysis?.models ?? {}).length;
   const items: Array<{ label: string; value: string }> = [
-    { label: "Version", value: versionMeta.version_date },
-    { label: "Schéma", value: aggregated.schema_version },
-    { label: "Modèles", value: String(modelCount) },
+    { label: t(UI_STRINGS.TRANSPARENCY_SUMMARY_VERSION, lang), value: versionMeta.version_date },
+    { label: t(UI_STRINGS.TRANSPARENCY_SUMMARY_SCHEMA, lang), value: aggregated.schema_version },
+    { label: t(UI_STRINGS.TRANSPARENCY_SUMMARY_MODELS, lang), value: String(modelCount) },
     {
-      label: "Agrégation",
+      label: t(UI_STRINGS.TRANSPARENCY_SUMMARY_AGGREGATION, lang),
       value:
         versionMeta.aggregation?.aggregator_model.exact_version ?? "—",
     },

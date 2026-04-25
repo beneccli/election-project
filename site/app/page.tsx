@@ -3,11 +3,11 @@
 // /[lang] EN tree) — see docs/specs/website/i18n.md §4.
 import type { Metadata } from "next";
 import { LandingPageBody } from "@/components/pages/LandingPageBody";
+import { t, UI_STRINGS } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Élection 2027 · Analyse multi-IA des programmes",
-  description:
-    "Que proposent vraiment les candidats à l'Élysée ? Analyse indépendante par 4 à 5 grands modèles d'IA. Désaccords préservés. Sources publiques.",
+  title: t(UI_STRINGS.META_LANDING_TITLE, "fr"),
+  description: t(UI_STRINGS.META_LANDING_DESCRIPTION, "fr"),
 };
 
 export default function HomePage() {

@@ -9,6 +9,7 @@ import { useState } from "react";
 import type { AggregatedOutput } from "@/lib/schema";
 import type { DimensionKey } from "@/lib/derived/keys";
 import { ConfidenceDots } from "./ConfidenceDots";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 type Risk = AggregatedOutput["dimensions"][DimensionKey]["execution_risks"][number];
 
@@ -20,22 +21,22 @@ export interface RiskGroup {
   totalCoverage: number;
 }
 
-export function RiskHeatmap({ groups }: { groups: RiskGroup[] }) {
+export function RiskHeatmap({ groups, lang = "fr" }: { groups: RiskGroup[]; lang?: Lang }) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[540px] border-collapse">
         <thead>
           <tr className="text-left text-xs uppercase tracking-[0.06em] text-text-secondary">
-            <th className="w-[66%] pb-3 pr-3 font-semibold">Risque</th>
-            <th className="pb-3 pr-3 font-semibold">Probabilité</th>
-            <th className="pb-3 pr-3 font-semibold">Sévérité</th>
-            <th className="pb-3 pr-3 font-semibold">Modèles</th>
-            <th className="w-[32px] pb-3 font-semibold" aria-label="Détails" />
+            <th className="w-[66%] pb-3 pr-3 font-semibold">{t(UI_STRINGS.RISK_HEATMAP_COL_RISK, lang)}</th>
+            <th className="pb-3 pr-3 font-semibold">{t(UI_STRINGS.RISK_HEATMAP_COL_PROBABILITY, lang)}</th>
+            <th className="pb-3 pr-3 font-semibold">{t(UI_STRINGS.RISK_HEATMAP_COL_SEVERITY, lang)}</th>
+            <th className="pb-3 pr-3 font-semibold">{t(UI_STRINGS.RISK_HEATMAP_COL_MODELS, lang)}</th>
+            <th className="w-[32px] pb-3 font-semibold" aria-label={t(UI_STRINGS.A11Y_DETAILS, lang)} />
           </tr>
         </thead>
         <tbody>
           {groups.map((g) => (
-            <GroupBody key={g.dimensionKey} group={g} />
+            <GroupBody key={g.dimensionKey} group={g} lang={lang} />
           ))}
         </tbody>
       </table>
@@ -43,7 +44,7 @@ export function RiskHeatmap({ groups }: { groups: RiskGroup[] }) {
   );
 }
 
-function GroupBody({ group }: { group: RiskGroup }) {
+function GroupBody({ group, lang }: { group: RiskGroup; lang: Lang }) {
   return (
     <>
       <tr className="border-t border-rule">
@@ -60,7 +61,7 @@ function GroupBody({ group }: { group: RiskGroup }) {
             colSpan={5}
             className="px-3 py-3 text-sm italic text-text-tertiary"
           >
-            Aucun risque d&apos;exécution identifié par les modèles.
+            {t(UI_STRINGS.RISK_HEATMAP_EMPTY, lang)}
           </td>
         </tr>
       ) : (
@@ -69,6 +70,7 @@ function GroupBody({ group }: { group: RiskGroup }) {
             key={`${group.dimensionKey}-${i}`}
             risk={r}
             totalCoverage={group.totalCoverage}
+            lang={lang}
           />
         ))
       )}
@@ -88,9 +90,11 @@ function tintFor(max: number): string {
 function RiskRow({
   risk,
   totalCoverage,
+  lang,
 }: {
   risk: Risk;
   totalCoverage: number;
+  lang: Lang;
 }) {
   const [open, setOpen] = useState(false);
   const max = Math.max(risk.probability, risk.severity);
@@ -108,10 +112,10 @@ function RiskRow({
           {risk.risk}
         </td>
         <td className="px-3 py-3">
-          <ConfidenceDots value={risk.probability} label="Probabilité" />
+          <ConfidenceDots value={risk.probability} label={t(UI_STRINGS.SYNTHESE_PROBABILITY, lang)} />
         </td>
         <td className="px-3 py-3">
-          <ConfidenceDots value={risk.severity} label="Sévérité" />
+          <ConfidenceDots value={risk.severity} label={t(UI_STRINGS.SYNTHESE_SEVERITY, lang)} />
         </td>
         <td className="px-3 py-3">
           <span className="inline-flex items-center rounded-sm border border-rule px-1.5 py-0.5 text-xs font-semibold text-text-secondary">
@@ -122,7 +126,7 @@ function RiskRow({
           <button
             type="button"
             aria-expanded={open}
-            aria-label={open ? "Réduire les détails" : "Afficher les détails"}
+            aria-label={open ? t(UI_STRINGS.A11Y_DETAILS_TOGGLE_HIDE, lang) : t(UI_STRINGS.A11Y_DETAILS_TOGGLE_SHOW, lang)}
             onClick={(e) => {
               e.stopPropagation();
               setOpen((v) => !v);
@@ -142,7 +146,7 @@ function RiskRow({
             <div className="pt-3 grid grid-cols-1 gap-4 md:grid-cols-[1fr_220px]">
               <div>
                 <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-                  Raisonnement
+                  {t(UI_STRINGS.RISK_HEATMAP_REASONING, lang)}
                 </div>
                 <p className="leading-[1.55] text-text [text-wrap:pretty]">
                   {risk.reasoning}
@@ -150,7 +154,7 @@ function RiskRow({
               </div>
               <div>
                 <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-                  Modèles ({supported})
+                  {format(t(UI_STRINGS.RISK_HEATMAP_MODELS_LABEL, lang), { n: supported })}
                 </div>
                 <ul className="m-0 flex flex-wrap list-none gap-1 p-0">
                   {risk.supported_by.map((m) => (
@@ -165,7 +169,7 @@ function RiskRow({
                 {dissenters.length > 0 ? (
                   <>
                     <div className="mb-1 mt-3 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-                      En désaccord
+                      {t(UI_STRINGS.RISK_HEATMAP_DISSENT_LABEL, lang)}
                     </div>
                     <ul className="m-0 flex flex-wrap list-none gap-1 p-0">
                       {dissenters.map((m) => (

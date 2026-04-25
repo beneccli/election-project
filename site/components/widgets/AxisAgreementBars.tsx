@@ -6,7 +6,7 @@
 import type { AggregatedOutput } from "@/lib/schema";
 import { AXIS_KEYS, type AxisKey } from "@/lib/derived/keys";
 import { AXES } from "@/lib/anchors";
-import { t, type Lang } from "@/lib/i18n";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 import { Tooltip } from "./Tooltip";
 import { modelColor } from "@/lib/model-color";
 
@@ -66,8 +66,8 @@ function AxisRow({
           ].join(" ")}
         >
           {hasDissent
-            ? `⚡ Désaccord ±${dissentSpread}`
-            : `Intervalle ±${dissentSpread}`}
+            ? format(t(UI_STRINGS.AXIS_AGREEMENT_DISSENT, lang), { spread: dissentSpread })
+            : format(t(UI_STRINGS.AXIS_AGREEMENT_INTERVAL, lang), { spread: dissentSpread })}
         </span>
       </div>
       <div className="relative h-6 rounded-sm bg-bg-subtle">
@@ -104,11 +104,11 @@ function AxisRow({
         {/* Modal marker (filled) */}
         {data.modal_score !== null ? (
           <Tooltip
-            content={`Modal : ${data.modal_score}`}
+            content={format(t(UI_STRINGS.AXIS_AGREEMENT_MODAL_TOOLTIP, lang), { score: data.modal_score })}
             className="!absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-bg bg-accent"
             style={{ left: `${pct(data.modal_score)}%` }}
           >
-            <span aria-label={`Score modal ${data.modal_score}`} />
+            <span aria-label={format(t(UI_STRINGS.A11Y_POSITIONING_MODAL_SCORE, lang), { score: data.modal_score })} />
           </Tooltip>
         ) : null}
         {/* Dissenting-model markers (hollow, colored per model) */}
@@ -128,7 +128,7 @@ function AxisRow({
               style={{ left: `${pct(d.position)}%`, borderColor: col }}
             >
               <span
-                aria-label={`${d.model} en désaccord à la position ${d.position}`}
+                aria-label={format(t(UI_STRINGS.A11Y_POSITIONING_AXIS_DISSENT, lang), { model: d.model, pos: d.position })}
               />
             </Tooltip>
           );

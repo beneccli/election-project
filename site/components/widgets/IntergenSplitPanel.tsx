@@ -2,38 +2,44 @@
 // Two-column static panel — neutral treatment, no red/green asymmetry.
 import type { AggregatedOutput } from "@/lib/schema";
 import { ConfidenceDots } from "./ConfidenceDots";
+import { t, UI_STRINGS, type Lang, type I18nString } from "@/lib/i18n";
 
 type Intergen = AggregatedOutput["intergenerational"];
 type Cell = Intergen["impact_on_25yo_in_2027"]["fiscal"];
 
-const LABELS_25 = {
-  fiscal: "Fiscal",
-  housing: "Logement",
-  pension_outlook: "Perspective retraite",
-  labor_market: "Marché du travail",
-  environmental_debt: "Dette environnementale",
-} as const;
+const LABELS_25: Record<
+  "fiscal" | "housing" | "pension_outlook" | "labor_market" | "environmental_debt",
+  I18nString
+> = {
+  fiscal: UI_STRINGS.INTERGEN_SPLIT_FISCAL,
+  housing: UI_STRINGS.INTERGEN_CATEGORY_HOUSING,
+  pension_outlook: UI_STRINGS.INTERGEN_SPLIT_PENSION_OUTLOOK,
+  labor_market: UI_STRINGS.INTERGEN_CATEGORY_LABOR_MARKET,
+  environmental_debt: UI_STRINGS.INTERGEN_SPLIT_ENVIRONMENTAL_DEBT,
+};
 
-const LABELS_65 = {
-  fiscal: "Fiscal",
-  pension: "Retraite",
-  healthcare: "Santé",
-} as const;
+const LABELS_65: Record<"fiscal" | "pension" | "healthcare", I18nString> = {
+  fiscal: UI_STRINGS.INTERGEN_SPLIT_FISCAL,
+  pension: UI_STRINGS.INTERGEN_SPLIT_PENSION,
+  healthcare: UI_STRINGS.INTERGEN_CATEGORY_HEALTHCARE,
+};
 
 export function IntergenSplitPanel({
   intergen,
+  lang = "fr",
 }: {
   intergen: Intergen;
+  lang?: Lang;
 }) {
   const confidence = intergen.confidence;
   const y25 = intergen.impact_on_25yo_in_2027;
   const y65 = intergen.impact_on_65yo_in_2027;
 
   const rows25 = (Object.keys(LABELS_25) as (keyof typeof LABELS_25)[]).map(
-    (k) => ({ key: k, label: LABELS_25[k], cell: y25[k] }),
+    (k) => ({ key: k, label: t(LABELS_25[k], lang), cell: y25[k] }),
   );
   const rows65 = (Object.keys(LABELS_65) as (keyof typeof LABELS_65)[]).map(
-    (k) => ({ key: k, label: LABELS_65[k], cell: y65[k] }),
+    (k) => ({ key: k, label: t(LABELS_65[k], lang), cell: y65[k] }),
   );
 
   // Pad the shorter column with invisible rows so the two columns align
@@ -43,18 +49,20 @@ export function IntergenSplitPanel({
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       <Column
-        title="À 25 ans (né·e en 2002)"
+        title={t(UI_STRINGS.INTERGEN_AT_25_TITLE, lang)}
         rows={rows25}
         rowCount={n}
         confidence={confidence}
         narrative={y25.narrative_summary}
+        lang={lang}
       />
       <Column
-        title="À 65 ans (né·e en 1962)"
+        title={t(UI_STRINGS.INTERGEN_AT_65_TITLE, lang)}
         rows={rows65}
         rowCount={n}
         confidence={confidence}
         narrative={y65.narrative_summary}
+        lang={lang}
       />
     </div>
   );
@@ -66,12 +74,14 @@ function Column({
   rowCount,
   confidence,
   narrative,
+  lang,
 }: {
   title: string;
   rows: { key: string; label: string; cell: Cell }[];
   rowCount: number;
   confidence: number;
   narrative: string;
+  lang: Lang;
 }) {
   return (
     <div className="rounded-md border border-rule-light bg-bg-subtle p-5">
@@ -88,11 +98,11 @@ function Column({
               <span className="text-sm font-semibold text-text-secondary">
                 {label}
               </span>
-              <ConfidenceDots value={confidence} label="Confiance" />
+              <ConfidenceDots value={confidence} label={t(UI_STRINGS.SYNTHESE_CONFIDENCE, lang)} />
             </div>
             <div className="text-sm text-text">
               {cell.quantified ?? (
-                <span className="italic text-text-tertiary">Non quantifié</span>
+                <span className="italic text-text-tertiary">{t(UI_STRINGS.INTERGEN_NOT_QUANTIFIED, lang)}</span>
               )}
             </div>
             <div className="text-xs leading-[1.5] text-text-secondary [text-wrap:pretty]">
@@ -111,7 +121,7 @@ function Column({
 
       <div className="mt-12">
         <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Résumé
+            {t(UI_STRINGS.INTERGEN_SUMMARY_LABEL, lang)}
         </div>
         <p className="text-sm leading-[1.55] text-text [text-wrap:pretty]">
             {narrative}

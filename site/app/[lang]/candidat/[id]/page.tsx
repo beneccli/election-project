@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { listCandidates, loadCandidate } from "@/lib/candidates";
 import { CandidatePageBody } from "@/components/pages/CandidatePageBody";
-import type { Lang } from "@/lib/i18n";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 interface RouteParams {
   params: Promise<{ lang: string; id: string }>;
@@ -22,12 +22,15 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: RouteParams): Promise<Metadata> {
-  const { id } = await params;
+  const { lang: rawLang, id } = await params;
+  const lang = rawLang as Lang;
   try {
     const { meta } = loadCandidate(id);
-    return { title: `${meta.display_name} — Analysis · Élection 2027` };
+    return {
+      title: `${meta.display_name} ${t(UI_STRINGS.META_CANDIDATE_TITLE_SUFFIX, lang)}`,
+    };
   } catch {
-    return { title: "Candidate not found · Élection 2027" };
+    return { title: t(UI_STRINGS.META_CANDIDATE_NOT_FOUND_TITLE, lang) };
   }
 }
 

@@ -8,7 +8,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { LandingCard, LandingFamily } from "@/lib/landing-cards";
-import { type Lang } from "@/lib/i18n";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 import CandidateCard from "./CandidateCard";
 
 type FilterBucket = "all" | LandingFamily;
@@ -19,11 +19,11 @@ interface Props {
 }
 
 const FILTER_LABELS: Record<FilterBucket, { fr: string; en: string }> = {
-  all: { fr: "Tous", en: "All" },
-  gauche: { fr: "Gauche", en: "Left" },
-  centre: { fr: "Centre", en: "Centre" },
-  droite: { fr: "Droite", en: "Right" },
-  ecologie: { fr: "Écologie", en: "Ecology" },
+  all: UI_STRINGS.LANDING_FAMILY_ALL,
+  gauche: UI_STRINGS.SPECTRUM_LABEL_GAUCHE,
+  centre: UI_STRINGS.SPECTRUM_LABEL_CENTRE,
+  droite: UI_STRINGS.SPECTRUM_LABEL_DROITE,
+  ecologie: UI_STRINGS.PARTY_FAMILY_ECOLOGIE,
 };
 
 const FILTER_ORDER: FilterBucket[] = [
@@ -96,10 +96,10 @@ export default function CandidateGrid({ cards, lang }: Props) {
       <div className="mx-auto max-w-6xl">
         <div
           role="radiogroup"
-          aria-label={lang === "fr" ? "Filtrer par famille" : "Filter by family"}
+          aria-label={t(UI_STRINGS.A11Y_LANDING_FAMILY_FILTER, lang)}
           className="mb-8 flex flex-wrap items-center gap-2"
         >
-          <p className="uppercase text-xs font-semibold text-text-secondary mr-3 tracking-widest">Famille politique</p>
+          <p className="uppercase text-xs font-semibold text-text-secondary mr-3 tracking-widest">{t(UI_STRINGS.LANDING_FAMILY_FILTER_LABEL, lang)}</p>
           {FILTER_ORDER.map((key) => {
             const active = filter === key;
             return (
@@ -116,7 +116,7 @@ export default function CandidateGrid({ cards, lang }: Props) {
                     : "border-rule text-text-secondary hover:text-text",
                 ].join(" ")}
               >
-                {FILTER_LABELS[key][lang]}
+                {t(FILTER_LABELS[key], lang)}
               </button>
             );
           })}

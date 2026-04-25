@@ -13,21 +13,7 @@ import { IntergenComparison } from "@/components/comparison/IntergenComparison";
 import { RisquesComparison } from "@/components/comparison/RisquesComparison";
 import { ComparisonTransparencyFooter } from "@/components/comparison/ComparisonTransparencyFooter";
 import type { Lang } from "@/lib/i18n";
-
-const COPY: Record<Lang, { kicker: string; h1: string; intro: string }> = {
-  fr: {
-    kicker: "Comparaison",
-    h1: "Confronter les programmes",
-    intro:
-      "Sélectionnez jusqu'à 4 candidats pour les comparer sur les mêmes dimensions.",
-  },
-  en: {
-    kicker: "Comparison",
-    h1: "Confront the programmes",
-    intro:
-      "Select up to 4 candidates to compare on the same dimensions.",
-  },
-};
+import { t, UI_STRINGS } from "@/lib/i18n";
 
 export interface ComparerPageBodyProps {
   lang: Lang;
@@ -36,23 +22,22 @@ export interface ComparerPageBodyProps {
 export function ComparerPageBody({ lang }: ComparerPageBodyProps) {
   const entries = listComparisonProjections(lang);
   const excludeFictional = process.env.EXCLUDE_FICTIONAL === "1";
-  const copy = COPY[lang];
   return (
     <>
-      <ComparisonNavBar />
+      <ComparisonNavBar lang={lang} />
       <main className="mx-auto max-w-[1100px] px-8 pb-24 pt-10">
         <header className="mb-10">
           <div
             className="mb-3 font-sans text-sm font-semibold uppercase tracking-[0.12em] text-accent"
             data-comparison-kicker
           >
-            {copy.kicker}
+            {t(UI_STRINGS.COMPARER_PAGE_KICKER, lang)}
           </div>
           <h1 className="font-display text-3xl font-bold tracking-tight">
-            {copy.h1}
+            {t(UI_STRINGS.COMPARER_PAGE_H1, lang)}
           </h1>
           <p className="mt-3 max-w-prose text-sm text-text-secondary">
-            {copy.intro}
+            {t(UI_STRINGS.COMPARER_PAGE_LEAD, lang)}
           </p>
         </header>
         <Suspense fallback={null}>

@@ -5,6 +5,8 @@
 import type { AggregatedOutput } from "@/lib/schema";
 import { DIMENSION_KEYS, type DimensionKey } from "@/lib/derived/keys";
 import { Tooltip } from "@/components/widgets/Tooltip";
+import { format, t, UI_STRINGS, type Lang, type I18nString } from "@/lib/i18n";
+import { dimensionLabel } from "@/lib/dimension-labels";
 
 type RiskProfile =
   AggregatedOutput["dimensions"][DimensionKey]["risk_profile"];
@@ -19,26 +21,18 @@ const CATEGORY_KEYS = [
 ] as const;
 type CategoryKey = (typeof CATEGORY_KEYS)[number];
 
-const CATEGORY_LABELS: Record<CategoryKey, string> = {
-  budgetary: "Budgétaire",
-  implementation: "Mise en œuvre",
-  dependency: "Dépendance",
-  reversibility: "Réversibilité",
+const CATEGORY_LABELS: Record<CategoryKey, I18nString> = {
+  budgetary: UI_STRINGS.RISK_CATEGORY_BUDGETARY,
+  implementation: UI_STRINGS.RISK_CATEGORY_IMPLEMENTATION,
+  dependency: UI_STRINGS.RISK_CATEGORY_DEPENDENCY,
+  reversibility: UI_STRINGS.RISK_CATEGORY_REVERSIBILITY,
 };
 
-const DIMENSION_LABELS: Record<DimensionKey, string> = {
-  economic_fiscal: "Économique & fiscal",
-  social_demographic: "Social & démographique",
-  security_sovereignty: "Sécurité & souveraineté",
-  institutional_democratic: "Institutionnel & démocratique",
-  environmental_long_term: "Environnemental & long terme",
-};
-
-const LEVEL_LABELS: Record<RiskLevel, string> = {
-  low: "Faible",
-  limited: "Limité",
-  moderate: "Modéré",
-  high: "Élevé",
+const LEVEL_LABELS: Record<RiskLevel, I18nString> = {
+  low: UI_STRINGS.RISK_LEVEL_LOW,
+  limited: UI_STRINGS.RISK_LEVEL_LIMITED,
+  moderate: UI_STRINGS.RISK_LEVEL_MODERATE,
+  high: UI_STRINGS.RISK_LEVEL_HIGH,
 };
 
 // Flat palette mirroring Candidate Page.html `RiskHeatmap` `rc(v)`.
@@ -57,21 +51,23 @@ const LEVEL_FG: Record<RiskLevel, string> = {
   high: "#fff",
 };
 
-function levelLabel(level: RiskLevel | null): string {
+function levelLabel(level: RiskLevel | null, lang: Lang): string {
   if (level === null) return "?";
-  return LEVEL_LABELS[level];
+  return t(LEVEL_LABELS[level], lang);
 }
 
 export function RiskSummaryMatrix({
   dimensions,
+  lang = "fr",
 }: {
   dimensions: AggregatedOutput["dimensions"];
+  lang?: Lang;
 }) {
   return (
     <div>
       <table
         className="w-full min-w-[420px] border-collapse"
-        aria-label="Matrice des risques par domaine et catégorie"
+        aria-label={t(UI_STRINGS.A11Y_RISK_MATRIX, lang)}
       >
         <thead>
           <tr>
@@ -79,7 +75,7 @@ export function RiskSummaryMatrix({
               scope="col"
               className="w-[200px] pr-3 pb-2.5 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
             >
-              Domaine
+              {t(UI_STRINGS.INTERGEN_HORIZON_DOMAIN_LABEL, lang)}
             </th>
             {CATEGORY_KEYS.map((c) => (
               <th
@@ -87,7 +83,7 @@ export function RiskSummaryMatrix({
                 scope="col"
                 className="px-1 pb-2.5 text-center text-xs font-semibold uppercase tracking-[0.05em] text-text-secondary"
               >
-                {CATEGORY_LABELS[c]}
+                {t(CATEGORY_LABELS[c], lang)}
               </th>
             ))}
           </tr>
@@ -101,11 +97,11 @@ export function RiskSummaryMatrix({
                   scope="row"
                   className="whitespace-nowrap py-1 pr-3 text-left text-sm font-medium text-text"
                 >
-                  {DIMENSION_LABELS[dk]}
+                  {dimensionLabel(dk, lang)}
                 </th>
                 {CATEGORY_KEYS.map((ck) => (
                   <td key={ck} className="p-1 text-center">
-                    <RiskCell cell={profile[ck]} />
+                    <RiskCell cell={profile[ck]} lang={lang} />
                   </td>
                 ))}
               </tr>
@@ -118,9 +114,9 @@ export function RiskSummaryMatrix({
   );
 }
 
-function RiskCell({ cell }: { cell: RiskCategory }) {
+function RiskCell({ cell, lang }: { cell: RiskCategory; lang: Lang }) {
   const level = cell.modal_level as RiskLevel | null;
-  const label = levelLabel(level);
+  const label = levelLabel(level, lang);
   const _hasDissent = cell.dissenters.length > 0;
 
   const bg = level
@@ -131,13 +127,13 @@ function RiskCell({ cell }: { cell: RiskCategory }) {
   return (
     <Tooltip
       as="div"
-      content={<CellTooltipContent cell={cell} />}
+      content={<CellTooltipContent cell={cell} lang={lang} />}
       className="block w-full"
     >
       <div
         className="relative mx-auto flex w-full items-center justify-center rounded px-1 py-[5px] text-xs font-semibold"
         style={{ background: bg, color: fg }}
-        aria-label={`Niveau de risque : ${label}`}
+        aria-label={format(t(UI_STRINGS.COMPARISON_RISKS_LEVEL_TEMPLATE, lang), { label })}
       >
         {label}
         {/* {hasDissent ? (
@@ -153,12 +149,12 @@ function RiskCell({ cell }: { cell: RiskCategory }) {
   );
 }
 
-function CellTooltipContent({ cell }: { cell: RiskCategory }) {
+function CellTooltipContent({ cell, lang }: { cell: RiskCategory; lang: Lang }) {
   const [lo, hi] = cell.level_interval;
   const intervalLabel =
     lo === hi
-      ? `niveau : ${LEVEL_LABELS[lo as RiskLevel]}`
-      : `intervalle : ${LEVEL_LABELS[lo as RiskLevel]} → ${LEVEL_LABELS[hi as RiskLevel]}`;
+      ? `niveau : ${t(LEVEL_LABELS[lo as RiskLevel], lang)}`
+      : `intervalle : ${t(LEVEL_LABELS[lo as RiskLevel], lang)} → ${t(LEVEL_LABELS[hi as RiskLevel], lang)}`;
   const rows = [...cell.per_model].sort((a, b) =>
     a.model.localeCompare(b.model),
   );
@@ -175,7 +171,7 @@ function CellTooltipContent({ cell }: { cell: RiskCategory }) {
             >
               <span className="font-mono opacity-80">{r.model}</span>
               <span className="font-semibold">
-                {LEVEL_LABELS[r.level as RiskLevel]}
+                {t(LEVEL_LABELS[r.level as RiskLevel], lang)}
               </span>
             </div>
           ))}
@@ -189,7 +185,7 @@ function _Legend() {
   const items: RiskLevel[] = ["low", "limited", "moderate", "high"];
   return (
     <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-secondary">
-      <span className="font-bold uppercase tracking-[0.06em]">Légende</span>
+      <span className="font-bold uppercase tracking-[0.06em]">{t(UI_STRINGS.LEGEND_LABEL, "fr")}</span>
       {items.map((lvl) => (
         <span key={lvl} className="inline-flex items-center gap-1.5">
           <span
@@ -197,7 +193,7 @@ function _Legend() {
             className="inline-block h-3 w-5 rounded-[3px]"
             style={{ background: LEVEL_BG[lvl] }}
           />
-          {LEVEL_LABELS[lvl]}
+          {t(LEVEL_LABELS[lvl], "fr")}
         </span>
       ))}
       <span className="inline-flex items-center gap-1.5">

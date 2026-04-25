@@ -5,7 +5,6 @@ import { useState } from "react";
 import type { AggregatedOutput } from "@/lib/schema";
 import {
   deriveSynthese,
-  SYNTHESE_EMPTY_FALLBACK,
   type DerivedBullet,
 } from "@/lib/derived/synthese-selection";
 import { SectionHead } from "@/components/chrome/SectionHead";
@@ -13,12 +12,14 @@ import { ConfidenceDots } from "@/components/widgets/ConfidenceDots";
 import { Tooltip } from "@/components/widgets/Tooltip";
 import { dimensionLabel } from "@/lib/dimension-labels";
 import { Drawer } from "@/components/chrome/Drawer";
+import { useLang } from "@/lib/lang-context";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 type ColumnSpec = {
   key: "strengths" | "weaknesses" | "gaps";
   color: string;
   icon: string;
-  label: string;
+  labelKey: typeof UI_STRINGS[keyof typeof UI_STRINGS];
 };
 
 const COLUMNS: ColumnSpec[] = [
@@ -26,59 +27,67 @@ const COLUMNS: ColumnSpec[] = [
     key: "strengths",
     color: "oklch(0.42 0.16 145)",
     icon: "↑",
-    label: "Points forts",
+    labelKey: UI_STRINGS.SYNTHESE_STRENGTHS,
   },
   {
     key: "weaknesses",
     color: "var(--risk-red)",
     icon: "↓",
-    label: "Points faibles",
+    labelKey: UI_STRINGS.SYNTHESE_WEAKNESSES,
   },
   {
     key: "gaps",
     color: "oklch(0.52 0.14 60)",
     icon: "○",
-    label: "Absences notables",
+    labelKey: UI_STRINGS.SYNTHESE_GAPS,
   },
 ];
 
 type Direction = "improvement" | "worsening" | "neutral" | "mixed";
 
-const DIRECTION_META: Record<
-  Direction,
-  { label: string; color: string; icon: string; aria: string }
-> = {
-  improvement: {
-    label: "Amélioration",
-    color: "oklch(0.42 0.16 145)",
-    icon: "↑",
-    aria: "Trajectoire améliorée",
-  },
-  worsening: {
-    label: "Détérioration",
-    color: "var(--risk-red)",
-    icon: "↓",
-    aria: "Trajectoire dégradée",
-  },
-  neutral: {
-    label: "Trajectoire inchangée",
-    color: "var(--text-secondary)",
-    icon: "→",
-    aria: "Trajectoire inchangée",
-  },
-  mixed: {
-    label: "Effets contrastés",
-    color: "oklch(0.52 0.14 60)",
-    icon: "↔",
-    aria: "Effets contrastés",
-  },
-};
+function directionMeta(
+  d: Direction,
+  lang: Lang,
+): { label: string; color: string; icon: string; aria: string } {
+  switch (d) {
+    case "improvement":
+      return {
+        label: t(UI_STRINGS.SYNTHESE_TRAJ_IMPROVED_LABEL, lang),
+        color: "oklch(0.42 0.16 145)",
+        icon: "↑",
+        aria: t(UI_STRINGS.SYNTHESE_TRAJ_IMPROVED_ARIA, lang),
+      };
+    case "worsening":
+      return {
+        label: t(UI_STRINGS.SYNTHESE_TRAJ_WORSENED_LABEL, lang),
+        color: "var(--risk-red)",
+        icon: "↓",
+        aria: t(UI_STRINGS.SYNTHESE_TRAJ_WORSENED_ARIA, lang),
+      };
+    case "mixed":
+      return {
+        label: t(UI_STRINGS.SYNTHESE_TRAJ_MIXED_LABEL, lang),
+        color: "oklch(0.52 0.14 60)",
+        icon: "↔",
+        aria: t(UI_STRINGS.SYNTHESE_TRAJ_MIXED_ARIA, lang),
+      };
+    case "neutral":
+    default:
+      return {
+        label: t(UI_STRINGS.SYNTHESE_TRAJ_UNCHANGED_LABEL, lang),
+        color: "var(--text-secondary)",
+        icon: "→",
+        aria: t(UI_STRINGS.SYNTHESE_TRAJ_UNCHANGED_ARIA, lang),
+      };
+  }
+}
 
 export function SyntheseSection({
   aggregated,
 }: {
   aggregated: AggregatedOutput;
 }) {
+  const { lang } = useLang();
   const bullets = deriveSynthese(aggregated);
   const coverageCount = Object.keys(
     aggregated.agreement_map.coverage,
@@ -90,10 +99,10 @@ export function SyntheseSection({
   return (
     <section
       id="synthese"
-      data-screen-label="Synthèse"
+      data-screen-label={t(UI_STRINGS.SYNTHESE_SECTION, lang)}
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
-      <SectionHead label="Synthèse" />
+      <SectionHead label={t(UI_STRINGS.SYNTHESE_SECTION, lang)} />
 
       <blockquote className="m-0 mb-12 max-w-[720px] border-l-[3px] border-accent pl-6 font-display text-2xl italic leading-[1.55] text-text [text-wrap:pretty]">
         «&thinsp;{aggregated.summary}&thinsp;»
@@ -101,13 +110,11 @@ export function SyntheseSection({
 
       <div className="mb-12 flex flex-wrap items-center gap-3 text-xs text-text-secondary">
         <span>
-          Consensus {consensusPct} % — {coverageCount} modèle
-          {coverageCount > 1 ? "s" : ""} couvert
-          {coverageCount > 1 ? "s" : ""}
+          {format(t(UI_STRINGS.SYNTHESE_CONSENSUS_LABEL, lang), { pct: consensusPct, n: coverageCount })}
         </span>
         {aggregated.coverage_warning ? (
           <span className="rounded-sm border border-risk-red/40 bg-risk-red/10 px-2 py-[2px] font-semibold uppercase tracking-wider text-risk-red">
-            ⚠ couverture limitée
+            {t(UI_STRINGS.SYNTHESE_COVERAGE_WARNING, lang)}
           </span>
         ) : null}
       </div>
@@ -118,6 +125,7 @@ export function SyntheseSection({
             key={col.key}
             spec={col}
             items={bullets[col.key]}
+            lang={lang}
           />
         ))}
       </div>
@@ -128,7 +136,7 @@ export function SyntheseSection({
           onClick={() => setCfOpen(true)}
           className="inline-flex items-center gap-2 rounded-sm border border-rule bg-bg px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
-          Si rien ne change
+          {t(UI_STRINGS.SYNTHESE_IF_NOTHING_CHANGES, lang)}
           <span aria-hidden="true">›</span>
         </button>
         {aggregated.downside_scenarios.length > 0 ? (
@@ -137,7 +145,7 @@ export function SyntheseSection({
             onClick={() => setDsOpen(true)}
             className="inline-flex items-center gap-2 rounded-sm border border-rule bg-bg px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
-            Scénarios défavorables
+            {t(UI_STRINGS.SYNTHESE_DOWNSIDE_TITLE, lang)}
             <span aria-hidden="true">›</span>
           </button>
         ) : null}
@@ -147,11 +155,11 @@ export function SyntheseSection({
         open={cfOpen}
         onOpenChange={setCfOpen}
         size="xl"
-        eyebrow="Synthèse"
-        title="Si rien ne change"
-        description="Trajectoire contrefactuelle : que se passerait-il sans ce programme ?"
+        eyebrow={t(UI_STRINGS.SYNTHESE_SECTION, lang)}
+        title={t(UI_STRINGS.SYNTHESE_IF_NOTHING_CHANGES, lang)}
+        description={t(UI_STRINGS.SYNTHESE_CF_DRAWER_DESCRIPTION, lang)}
       >
-        <Counterfactual cf={aggregated.counterfactual} />
+        <Counterfactual cf={aggregated.counterfactual} lang={lang} />
       </Drawer>
 
       {aggregated.downside_scenarios.length > 0 ? (
@@ -159,10 +167,10 @@ export function SyntheseSection({
           open={dsOpen}
           onOpenChange={setDsOpen}
           size="md"
-          eyebrow="Synthèse"
-          title="Scénarios défavorables"
+          eyebrow={t(UI_STRINGS.SYNTHESE_SECTION, lang)}
+          title={t(UI_STRINGS.SYNTHESE_DOWNSIDE_TITLE, lang)}
         >
-          <DownsideScenarios scenarios={aggregated.downside_scenarios} />
+          <DownsideScenarios scenarios={aggregated.downside_scenarios} lang={lang} />
         </Drawer>
       ) : null}
     </section>
@@ -172,9 +180,11 @@ export function SyntheseSection({
 function SyntheseColumn({
   spec,
   items,
+  lang,
 }: {
   spec: ColumnSpec;
   items: DerivedBullet[];
+  lang: Lang;
 }) {
   return (
     <div>
@@ -187,12 +197,12 @@ function SyntheseColumn({
           {spec.icon}
         </span>
         <span className="text-sm font-bold uppercase tracking-[0.08em] text-text-secondary">
-          {spec.label}
+          {t(spec.labelKey, lang)}
         </span>
       </div>
       {items.length === 0 ? (
         <p className="text-sm italic text-text-tertiary">
-          {SYNTHESE_EMPTY_FALLBACK}
+          {t(UI_STRINGS.SYNTHESE_EMPTY_FALLBACK, lang)}
         </p>
       ) : (
         <ul className="m-0 flex list-none flex-col gap-2.5 p-0">
@@ -219,11 +229,12 @@ function SyntheseColumn({
 
 function Counterfactual({
   cf,
+  lang,
 }: {
   cf: AggregatedOutput["counterfactual"];
+  lang: Lang;
 }) {
-  const dir = (DIRECTION_META[cf.direction_of_change as Direction] ??
-    DIRECTION_META.neutral);
+  const dir = directionMeta(cf.direction_of_change as Direction, lang);
   const confidencePct = Math.round(cf.confidence * 100);
   const supporters = cf.supported_by ?? [];
   const dissenters = cf.dissenters ?? [];
@@ -247,10 +258,10 @@ function Counterfactual({
             {dir.label}
           </span>
           <Tooltip
-            content={`Confiance moyenne des modèles : ${confidencePct} %`}
+            content={format(t(UI_STRINGS.SYNTHESE_CONFIDENCE_TOOLTIP, lang), { pct: confidencePct })}
           >
             <span className="inline-flex items-center gap-1.5 text-xs text-text-tertiary">
-              <ConfidenceDots value={cf.confidence} label="Confiance" />
+              <ConfidenceDots value={cf.confidence} label={t(UI_STRINGS.SYNTHESE_CONFIDENCE, lang)} />
               <span className="font-semibold">{confidencePct}%</span>
             </span>
           </Tooltip>
@@ -261,25 +272,27 @@ function Counterfactual({
       <div className="grid grid-cols-1 gap-4 text-sm text-text md:grid-cols-2">
         <div>
           <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Statu quo
+            {t(UI_STRINGS.SYNTHESE_STATUS_QUO, lang)}
           </div>
           <p className="leading-[1.5]">{cf.status_quo_trajectory}</p>
         </div>
         <div>
           <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Effet du programme
+            {t(UI_STRINGS.SYNTHESE_PROGRAM_EFFECT, lang)}
           </div>
           <DimensionList
-            label="Impact sur"
+            label={t(UI_STRINGS.SYNTHESE_IMPACT_ON, lang)}
             keys={cf.dimensions_changed}
             accentColor={dir.color}
             filled
+            lang={lang}
           />
           <DimensionList
-            label="Pas d'impact sur"
+            label={t(UI_STRINGS.SYNTHESE_NO_IMPACT_ON, lang)}
             keys={cf.dimensions_unchanged}
             accentColor="var(--text-tertiary)"
             filled={false}
+            lang={lang}
           />
         </div>
       </div>
@@ -287,7 +300,7 @@ function Counterfactual({
       {cf.reasoning ? (
         <div className="mt-4">
           <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Raisonnement
+            {t(UI_STRINGS.SYNTHESE_REASONING, lang)}
           </div>
           <p className="text-sm text-text-secondary [text-wrap:pretty]">
             {cf.reasoning}
@@ -300,14 +313,14 @@ function Counterfactual({
         <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-rule-light pt-3 text-xs">
           {supporters.length > 0 ? (
             <ProvenancePills
-              label="Soutenu par"
+              label={t(UI_STRINGS.SYNTHESE_SUPPORTED_BY, lang)}
               models={supporters}
               variant="support"
             />
           ) : null}
           {dissenters.length > 0 ? (
             <ProvenancePills
-              label="En désaccord"
+              label={t(UI_STRINGS.SYNTHESE_DISSENTERS, lang)}
               models={dissenters}
               variant="dissent"
             />
@@ -336,11 +349,13 @@ function DimensionList({
   keys,
   accentColor,
   filled,
+  lang,
 }: {
   label: string;
   keys: string[];
   accentColor: string;
   filled: boolean;
+  lang: Lang;
 }) {
   if (keys.length === 0) return null;
   const items = keys.map(parseDimensionEntry);
@@ -377,7 +392,7 @@ function DimensionList({
                       }
                 }
               >
-                {dimensionLabel(it.key, "fr")}
+                {dimensionLabel(it.key, lang)}
               </span>
               </Tooltip>
             </li>
@@ -402,7 +417,7 @@ function DimensionList({
                     }
               }
             >
-              {dimensionLabel(it.key, "fr")}
+              {dimensionLabel(it.key, lang)}
             </li>
           ))}
         </ul>
@@ -450,13 +465,15 @@ function ProvenancePills({
 
 function DownsideScenarios({
   scenarios,
+  lang,
 }: {
   scenarios: AggregatedOutput["downside_scenarios"];
+  lang: Lang;
 }) {
   return (
     <div>
       <div className="mb-4 text-sm font-bold uppercase tracking-[0.08em] text-text-secondary">
-        Scénarios défavorables
+        {t(UI_STRINGS.SYNTHESE_DOWNSIDE_TITLE, lang)}
       </div>
       <ul className="m-0 flex list-none flex-col gap-4 p-0">
         {scenarios.map((s, i) => (
@@ -468,14 +485,14 @@ function DownsideScenarios({
               {s.scenario}
             </div>
             <div className="mb-2 text-sm text-text-secondary">
-              Déclencheur : {s.trigger}
+              {t(UI_STRINGS.SYNTHESE_DOWNSIDE_TRIGGER, lang)} {s.trigger}
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-text-tertiary">
               <span className="inline-flex items-center gap-2">
-                Probabilité <ConfidenceDots value={s.probability} label="Probabilité" />
+                {t(UI_STRINGS.SYNTHESE_PROBABILITY, lang)} <ConfidenceDots value={s.probability} label={t(UI_STRINGS.SYNTHESE_PROBABILITY, lang)} />
               </span>
               <span className="inline-flex items-center gap-2">
-                Sévérité <ConfidenceDots value={s.severity} label="Sévérité" />
+                {t(UI_STRINGS.SYNTHESE_SEVERITY, lang)} <ConfidenceDots value={s.severity} label={t(UI_STRINGS.SYNTHESE_SEVERITY, lang)} />
               </span>
             </div>
           </li>

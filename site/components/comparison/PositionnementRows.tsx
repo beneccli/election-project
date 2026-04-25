@@ -8,7 +8,7 @@
 
 import { AXES } from "@/lib/anchors";
 import { useLang } from "@/lib/lang-context";
-import { t } from "@/lib/i18n";
+import { t, UI_STRINGS } from "@/lib/i18n";
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
 
 const SPREAD_THRESHOLD = 2;
@@ -63,7 +63,7 @@ export function PositionnementRows({
                 <span
                   className="text-xs font-semibold"
                   style={{ color: "var(--risk-red)" }}
-                  title="Écart inter-candidats sur cet axe (ordinal, en unités)"
+                  title={t(UI_STRINGS.COMPARISON_AXIS_SPREAD_TOOLTIP, lang)}
                 >
                   ⚡ ±{spread}
                 </span>

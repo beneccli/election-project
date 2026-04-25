@@ -21,7 +21,7 @@ import { DIMENSION_KEYS, type DimensionKey } from "@/lib/derived/keys";
 import { DIMENSION_LABELS } from "@/lib/dimension-labels";
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
-import { t, type Lang } from "@/lib/i18n";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 import { useComparison } from "./ComparisonBody";
 import { SectionHead } from "../chrome/SectionHead";
 
@@ -41,16 +41,16 @@ const LEVEL_FG: Record<RiskLevel, string> = {
   high: "#fff",
 };
 const LEVEL_LABELS: Record<RiskLevel, { fr: string; en: string }> = {
-  low: { fr: "Faible", en: "Low" },
-  limited: { fr: "Limité", en: "Limited" },
-  moderate: { fr: "Modéré", en: "Moderate" },
-  high: { fr: "Élevé", en: "High" },
+  low: UI_STRINGS.RISK_LEVEL_LOW,
+  limited: UI_STRINGS.RISK_LEVEL_LIMITED,
+  moderate: UI_STRINGS.RISK_LEVEL_MODERATE,
+  high: UI_STRINGS.RISK_LEVEL_HIGH,
 };
 const CATEGORY_LABELS: Record<RiskCategoryKey, { fr: string; en: string }> = {
-  budgetary: { fr: "Budgétaire", en: "Budgetary" },
-  implementation: { fr: "Mise en œuvre", en: "Implementation" },
-  dependency: { fr: "Dépendance", en: "Dependency" },
-  reversibility: { fr: "Réversibilité", en: "Reversibility" },
+  budgetary: UI_STRINGS.RISK_CATEGORY_BUDGETARY,
+  implementation: UI_STRINGS.RISK_CATEGORY_IMPLEMENTATION,
+  dependency: UI_STRINGS.RISK_CATEGORY_DEPENDENCY,
+  reversibility: UI_STRINGS.RISK_CATEGORY_REVERSIBILITY,
 };
 
 function firstName(name: string): string {
@@ -80,7 +80,7 @@ export function RisquesStack({
   return (
     <section id="risques" className="mb-16">
       <header className="mb-12">
-        <SectionHead label={lang === "en" ? "Risks" : "Risques"} />
+        <SectionHead label={t(UI_STRINGS.COMPARISON_RISKS_TITLE, lang)} />
       </header>
       <div className="space-y-12">
         {selected.map((c, slot) => (
@@ -130,11 +130,7 @@ function RisquesBlock({
       <div className="overflow-x-auto">
         <table
           className="w-full min-w-[420px] border-collapse"
-          aria-label={
-            lang === "en"
-              ? `Risk matrix for ${projection.displayName}`
-              : `Matrice des risques pour ${projection.displayName}`
-          }
+          aria-label={format(t(UI_STRINGS.COMPARISON_RISKS_MATRIX_ARIA, lang), { name: projection.displayName })}
         >
           <thead>
             <tr>
@@ -142,7 +138,7 @@ function RisquesBlock({
                 scope="col"
                 className="w-[200px] pr-3 pb-2 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
               >
-                {lang === "en" ? "Dimension" : "Domaine"}
+                {t(UI_STRINGS.COMPARISON_RISKS_DOMAIN_LABEL, lang)}
               </th>
               {RISK_CATEGORY_KEYS.map((c) => (
                 <th
@@ -207,7 +203,7 @@ function RiskCell({
             "color-mix(in oklch, var(--text-tertiary) 12%, transparent)",
           color: "var(--text-secondary)",
         }}
-        aria-label={lang === "en" ? "Unknown level" : "Niveau inconnu"}
+        aria-label={t(UI_STRINGS.COMPARISON_RISKS_LEVEL_UNKNOWN, lang)}
       >
         ?
       </div>
@@ -218,9 +214,7 @@ function RiskCell({
     <div
       className="mx-auto flex w-full items-center justify-center rounded px-1 py-[5px] text-xs font-semibold"
       style={{ background: LEVEL_BG[level], color: LEVEL_FG[level] }}
-      aria-label={
-        lang === "en" ? `Risk level: ${label}` : `Niveau de risque : ${label}`
-      }
+      aria-label={format(t(UI_STRINGS.COMPARISON_RISKS_LEVEL_TEMPLATE, lang), { label })}
     >
       {label}
     </div>
@@ -231,7 +225,7 @@ function Legend({ lang }: { lang: Lang }) {
   return (
     <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-secondary">
       <span className="font-bold uppercase tracking-[0.06em]">
-        {lang === "en" ? "Legend" : "Légende"}
+        {t(UI_STRINGS.LEGEND_LABEL, lang)}
       </span>
       {RISK_LEVEL_ORDER.map((lvl) => (
         <span key={lvl} className="inline-flex items-center gap-1.5">

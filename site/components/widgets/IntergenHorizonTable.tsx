@@ -6,6 +6,7 @@
 // EDITORIAL: measurement only. Cell notes describe mechanism, not moral weight.
 import type { AggregatedOutput } from "@/lib/schema";
 import { Tooltip } from "@/components/widgets/Tooltip";
+import { format, t, UI_STRINGS, type Lang, type I18nString } from "@/lib/i18n";
 
 type HorizonMatrix =
   AggregatedOutput["intergenerational"]["horizon_matrix"];
@@ -15,25 +16,25 @@ type HorizonCell = HorizonRow["cells"]["h_2027_2030"];
 const HORIZON_KEYS = ["h_2027_2030", "h_2031_2037", "h_2038_2047"] as const;
 type HorizonKey = (typeof HORIZON_KEYS)[number];
 
-const HORIZON_COL_LABELS: Record<
-  HorizonKey,
-  { range: string; cohort: string }
-> = {
-  h_2027_2030: { range: "2027–2030", cohort: "Actifs 35–55 ans" },
-  h_2031_2037: {
-    range: "2031–2037",
-    cohort: "Jeunes actifs & retraités",
-  },
-  h_2038_2047: { range: "2038–2047", cohort: "Génération Z & Alpha" },
+const HORIZON_RANGE: Record<HorizonKey, string> = {
+  h_2027_2030: "2027–2030",
+  h_2031_2037: "2031–2037",
+  h_2038_2047: "2038–2047",
 };
 
-const ROW_LABELS: Record<HorizonRow["row"], string> = {
-  pensions: "Retraites",
-  public_debt: "Dette publique",
-  climate: "Climat",
-  health: "Santé",
-  education: "Éducation",
-  housing: "Logement",
+const HORIZON_COHORT: Record<HorizonKey, I18nString> = {
+  h_2027_2030: UI_STRINGS.INTERGEN_HORIZON_COHORT_2027_2030,
+  h_2031_2037: UI_STRINGS.INTERGEN_HORIZON_COHORT_2031_2037,
+  h_2038_2047: UI_STRINGS.INTERGEN_HORIZON_COHORT_2038_2047,
+};
+
+const ROW_LABELS: Record<HorizonRow["row"], I18nString> = {
+  pensions: UI_STRINGS.INTERGEN_CATEGORY_PENSIONS,
+  public_debt: UI_STRINGS.INTERGEN_CATEGORY_PUBLIC_DEBT,
+  climate: UI_STRINGS.INTERGEN_CATEGORY_CLIMATE,
+  health: UI_STRINGS.INTERGEN_CATEGORY_HEALTHCARE,
+  education: UI_STRINGS.INTERGEN_CATEGORY_EDUCATION,
+  housing: UI_STRINGS.INTERGEN_CATEGORY_HOUSING,
 };
 
 // Palette mirroring Candidate Page.html `IntergenerationPanel` `sc(s)`.
@@ -54,14 +55,16 @@ function formatScore(score: number | null): string {
 
 export function IntergenHorizonTable({
   matrix,
+  lang = "fr",
 }: {
   matrix: HorizonMatrix;
+  lang?: Lang;
 }) {
   return (
     <div>
       <table
         className="w-full min-w-[480px] border-collapse"
-        aria-label="Matrice d'impact intergénérationnel par domaine et horizon"
+        aria-label={t(UI_STRINGS.A11Y_INTERGEN_TABLE, lang)}
       >
         <thead>
           <tr>
@@ -69,7 +72,7 @@ export function IntergenHorizonTable({
               scope="col"
               className="pr-4 pb-3 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
             >
-              Domaine
+              {t(UI_STRINGS.INTERGEN_HORIZON_DOMAIN_LABEL, lang)}
             </th>
             {HORIZON_KEYS.map((k) => (
               <th
@@ -78,10 +81,10 @@ export function IntergenHorizonTable({
                 className="px-2 pb-3 text-center text-xs"
               >
                 <div className="text-sm font-bold text-text">
-                  {HORIZON_COL_LABELS[k].range}
+                  {HORIZON_RANGE[k]}
                 </div>
                 <div className="mt-0.5 text-xs text-text-secondary">
-                  {HORIZON_COL_LABELS[k].cohort}
+                  {t(HORIZON_COHORT[k], lang)}
                 </div>
               </th>
             ))}
@@ -89,7 +92,7 @@ export function IntergenHorizonTable({
               scope="col"
               className="pl-4 pb-3 text-left text-xs font-semibold uppercase tracking-[0.06em] text-text-secondary"
             >
-              Note
+              {t(UI_STRINGS.INTERGEN_HORIZON_NOTE_LABEL, lang)}
             </th>
           </tr>
         </thead>
@@ -100,15 +103,15 @@ export function IntergenHorizonTable({
                 scope="row"
                 className="whitespace-nowrap py-2.5 pr-4 text-left text-[13px] font-medium text-text"
               >
-                {ROW_LABELS[row.row]}
+                {t(ROW_LABELS[row.row], lang)}
               </th>
               {HORIZON_KEYS.map((hk) => (
                 <td key={hk} className="px-2 py-2.5 text-center">
-                  <HorizonCellView cell={row.cells[hk]} />
+                  <HorizonCellView cell={row.cells[hk]} lang={lang} />
                 </td>
               ))}
               <td className="max-w-[220px] py-2.5 pl-4 text-xs leading-[1.4] text-text-secondary">
-                <Tooltip as="span" content={<RowTooltipContent row={row} />}>
+                <Tooltip as="span" content={<RowTooltipContent row={row} lang={lang} />}>
                   <span>{row.dimension_note}</span>
                 </Tooltip>
               </td>
@@ -117,12 +120,12 @@ export function IntergenHorizonTable({
         </tbody>
       </table>
 
-      <Legend />
+      <Legend lang={lang} />
     </div>
   );
 }
 
-function HorizonCellView({ cell }: { cell: HorizonCell }) {
+function HorizonCellView({ cell, lang }: { cell: HorizonCell; lang: Lang }) {
   const score = cell.modal_score;
   const color = scoreColor(score);
   const absScore = score === null ? 0 : Math.abs(score);
@@ -151,7 +154,7 @@ function HorizonCellView({ cell }: { cell: HorizonCell }) {
         <span
           className="min-w-[16px] text-xs font-semibold"
           style={{ color }}
-          aria-label={`Score modal ${label}`}
+          aria-label={format(t(UI_STRINGS.A11Y_INTERGEN_MODAL_SCORE, lang), { label })}
         >
           {label}
         </span>
@@ -168,11 +171,11 @@ function HorizonCellView({ cell }: { cell: HorizonCell }) {
   );
 }
 
-function RowTooltipContent({ row }: { row: HorizonRow }) {
+function RowTooltipContent({ row, lang }: { row: HorizonRow; lang: Lang }) {
   return (
     <div className="space-y-1 text-left">
       <div className="font-semibold leading-[1.4]">
-        {ROW_LABELS[row.row]}
+        {t(ROW_LABELS[row.row], lang)}
       </div>
       <div className="leading-[1.4]">{row.dimension_note}</div>
     </div>
@@ -209,13 +212,13 @@ function CellTooltipContent({ cell }: { cell: HorizonCell }) {
   );
 }
 
-function Legend() {
-  const items: { label: string; score: -3 | -1 | 0 | 1 | 3 }[] = [
-    { label: "Très positif", score: 3 },
-    { label: "Positif", score: 1 },
-    { label: "Neutre", score: 0 },
-    { label: "Négatif", score: -1 },
-    { label: "Très négatif", score: -3 },
+function Legend({ lang }: { lang: Lang }) {
+  const items: { labelKey: I18nString; score: -3 | -1 | 0 | 1 | 3 }[] = [
+    { labelKey: UI_STRINGS.INTERGEN_LEGEND_VERY_POSITIVE, score: 3 },
+    { labelKey: UI_STRINGS.INTERGEN_LEGEND_POSITIVE, score: 1 },
+    { labelKey: UI_STRINGS.INTERGEN_LEGEND_NEUTRAL, score: 0 },
+    { labelKey: UI_STRINGS.INTERGEN_LEGEND_NEGATIVE, score: -1 },
+    { labelKey: UI_STRINGS.INTERGEN_LEGEND_VERY_NEGATIVE, score: -3 },
   ];
   return (
     <div className="mt-4 flex flex-wrap gap-4 text-[10px] text-text-secondary">
@@ -229,7 +232,7 @@ function Legend() {
               background: scoreColor(it.score),
             }}
           />
-          {it.label}
+          {t(it.labelKey, lang)}
         </span>
       ))}
       {/* <span className="inline-flex items-center gap-1.5">

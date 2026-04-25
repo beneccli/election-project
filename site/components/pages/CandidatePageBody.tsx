@@ -13,7 +13,7 @@ import { DomainesSection } from "@/components/sections/DomainesSection";
 import { IntergenSection } from "@/components/sections/IntergenSection";
 import { RisquesSection } from "@/components/sections/RisquesSection";
 import { TranslationFallbackBanner } from "@/components/chrome/TranslationFallbackBanner";
-import type { Lang } from "@/lib/i18n";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 export interface CandidatePageBodyProps {
   id: string;
@@ -33,12 +33,11 @@ export function CandidatePageBody({ id, lang }: CandidatePageBodyProps) {
     lang === "fr"
       ? `/comparer?c=${encodeURIComponent(id)}`
       : `/${lang}/comparer?c=${encodeURIComponent(id)}`;
-  const compareLabel =
-    lang === "en" ? "Compare to another candidate" : "Comparer à un autre candidat";
+  const compareLabel = t(UI_STRINGS.CANDIDATE_PAGE_COMPARE_LINK, lang);
 
   return (
     <>
-      <NavBar meta={meta} />
+      <NavBar meta={meta} lang={lang} />
       <Hero meta={meta} versionMeta={versionMeta} aggregated={aggregated} />
       {translation.status === "missing" ? (
         <TranslationFallbackBanner lang={translation.lang} />
@@ -63,7 +62,7 @@ export function CandidatePageBody({ id, lang }: CandidatePageBodyProps) {
         <IntergenSection aggregated={aggregated} />
         <RisquesSection aggregated={aggregated} />
       </main>
-      <TransparencyFooter id={id} versionMeta={versionMeta} />
+      <TransparencyFooter id={id} versionMeta={versionMeta} lang={lang} />
       <TransparencyDrawer
         id={id}
         versionMeta={versionMeta}

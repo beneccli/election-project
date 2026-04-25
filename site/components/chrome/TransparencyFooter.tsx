@@ -10,13 +10,16 @@
 //    normally prevents that state from shipping but the footer renders
 //    defensively.
 import type { VersionMetadata } from "@/lib/schema";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 export function TransparencyFooter({
   id,
   versionMeta,
+  lang = "fr",
 }: {
   id: string;
   versionMeta: VersionMetadata;
+  lang?: Lang;
 }) {
   const models = versionMeta.analysis?.models ?? {};
   const modelEntries = Object.entries(models);
@@ -33,32 +36,35 @@ export function TransparencyFooter({
       <div className="mx-auto max-w-content px-8 py-12 text-sm text-text-secondary">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
-            Transparence
+            {t(UI_STRINGS.NAV_TRANSPARENCE, lang)}
           </div>
           <a
             href="#transparence=document"
             className="inline-flex items-center gap-2 rounded-sm border border-accent bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-bg no-underline transition-colors hover:bg-accent/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             data-transparency-trigger="footer-primary"
           >
-            Ouvrir la transparence complète
+            {t(UI_STRINGS.NAV_OPEN_TRANSPARENCY, lang)}
           </a>
         </div>
 
         <p className="mb-8 text-base text-text">
-          Cette analyse a été produite par{" "}
-          <strong className="text-text">{modelCount}</strong>{" "}
-          {modelCount > 1 ? "modèles d’IA" : "modèle d’IA"} analysant
-          indépendamment le programme du candidat au{" "}
-          {versionMeta.version_date}.
+          {format(t(UI_STRINGS.TRANSPARENCY_FOOTER_INTRO, lang), {
+            count: modelCount,
+            modelLabel:
+              modelCount > 1
+                ? t(UI_STRINGS.TRANSPARENCY_MODEL_LABEL_PLURAL, lang)
+                : t(UI_STRINGS.TRANSPARENCY_MODEL_LABEL_SINGULAR, lang),
+            date: versionMeta.version_date,
+          })}
         </p>
 
         {/* Models */}
         <section className="mb-8">
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Modèles d’analyse
+            {t(UI_STRINGS.TRANSPARENCY_ANALYSIS_MODELS, lang)}
           </h3>
           {modelEntries.length === 0 ? (
-            <p className="text-text-tertiary">Aucun modèle enregistré.</p>
+            <p className="text-text-tertiary">{t(UI_STRINGS.TRANSPARENCY_NO_MODELS, lang)}</p>
           ) : (
             <ul className="flex flex-wrap gap-2">
               {modelEntries.map(([modelId, entry]) => (
@@ -85,16 +91,18 @@ export function TransparencyFooter({
         {/* Prompt hashes */}
         <section className="mb-8 grid gap-4 md:grid-cols-2">
           <HashBlock
-            label="SHA256 du prompt d’analyse"
+            label={t(UI_STRINGS.TRANSPARENCY_ANALYSIS_PROMPT_HASH, lang)}
             version={analysis?.prompt_version}
             file={analysis?.prompt_file}
             hash={analysis?.prompt_sha256}
+            naLabel={t(UI_STRINGS.TRANSPARENCY_NA, lang)}
           />
           <HashBlock
-            label="SHA256 du prompt d’agrégation"
+            label={t(UI_STRINGS.TRANSPARENCY_AGGREGATION_PROMPT_HASH, lang)}
             version={aggregation?.prompt_version}
             file={aggregation?.prompt_file}
             hash={aggregation?.prompt_sha256}
+            naLabel={t(UI_STRINGS.TRANSPARENCY_NA, lang)}
           />
         </section>
 
@@ -102,20 +110,20 @@ export function TransparencyFooter({
         {agg ? (
           <section className="mb-8">
             <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-              Agrégateur
+              {t(UI_STRINGS.TRANSPARENCY_AGGREGATOR, lang)}
             </h3>
             <div className="rounded-md border border-rule bg-bg p-4 text-xs">
               <dl className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
-                <Field label="Fournisseur" value={agg.provider} />
-                <Field label="Version exacte" value={agg.exact_version} mono />
-                <Field label="Mode d’exécution" value={agg.execution_mode} />
-                <Field label="Exécuté le" value={agg.run_at} mono />
+                <Field label={t(UI_STRINGS.TRANSPARENCY_PROVIDER, lang)} value={agg.provider} />
+                <Field label={t(UI_STRINGS.TRANSPARENCY_EXACT_VERSION, lang)} value={agg.exact_version} mono />
+                <Field label={t(UI_STRINGS.TRANSPARENCY_EXECUTION_MODE, lang)} value={agg.execution_mode} />
+                <Field label={t(UI_STRINGS.TRANSPARENCY_RUN_AT, lang)} value={agg.run_at} mono />
                 {agg.attested_by ? (
-                  <Field label="Attesté par" value={agg.attested_by} />
+                  <Field label={t(UI_STRINGS.TRANSPARENCY_ATTESTED_BY, lang)} value={agg.attested_by} />
                 ) : null}
                 {agg.attested_model_version ? (
                   <Field
-                    label="Version attestée"
+                    label={t(UI_STRINGS.TRANSPARENCY_ATTESTED_VERSION, lang)}
                     value={agg.attested_model_version}
                     mono
                   />
@@ -128,15 +136,15 @@ export function TransparencyFooter({
         {/* Human review badge */}
         <section className="mb-8">
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Revue humaine
+            {t(UI_STRINGS.TRANSPARENCY_HUMAN_REVIEW, lang)}
           </h3>
-          <ReviewBadge aggregation={aggregation} />
+          <ReviewBadge aggregation={aggregation} lang={lang} />
         </section>
 
         {/* Downloads */}
         <section className="mb-8">
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Téléchargements
+            {t(UI_STRINGS.TRANSPARENCY_DOWNLOADS, lang)}
           </h3>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <li>
@@ -165,29 +173,17 @@ export function TransparencyFooter({
         {/* Methodology */}
         <details className="group rounded-md border border-rule bg-bg p-4">
           <summary className="cursor-pointer text-sm font-semibold text-text">
-            Comment ces données ont été produites
+            {t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_TITLE, lang)}
           </summary>
           <div className="mt-3 space-y-2 text-xs text-text-secondary">
-            <p>
-              Le programme du candidat est consolidé à partir de sources
-              publiques (voir <code className="font-mono">sources.md</code>),
-              puis soumis indépendamment à chaque modèle via un prompt
-              versionné. Les réponses brutes (
-              <code className="font-mono">raw-outputs/</code>) sont ensuite
-              agrégées sans moyennage cardinal du positionnement et avec
-              préservation des désaccords inter-modèles.
-            </p>
-            <p>
-              Les hachages SHA256 ci-dessus permettent de vérifier que les
-              prompts publiés dans le dépôt correspondent exactement à ceux
-              utilisés pour cette analyse.
-            </p>
+            <p>{t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_BODY_PIPELINE, lang)}</p>
+            <p>{t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_BODY_HASH, lang)}</p>
             <p>
               <a
                 href="/methodologie"
                 className="text-accent underline-offset-2 hover:underline"
               >
-                Méthodologie complète →
+                {t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_FULL_LINK, lang)}
               </a>
             </p>
           </div>
@@ -226,11 +222,13 @@ function HashBlock({
   version,
   file,
   hash,
+  naLabel,
 }: {
   label: string;
   version?: string;
   file?: string;
   hash?: string;
+  naLabel: string;
 }) {
   return (
     <div className="rounded-md border border-rule bg-bg p-4">
@@ -252,7 +250,7 @@ function HashBlock({
           {hash}
         </code>
       ) : (
-        <span className="text-text-tertiary">non disponible</span>
+        <span className="text-text-tertiary">{naLabel}</span>
       )}
     </div>
   );
@@ -277,13 +275,16 @@ function Field({
 
 function ReviewBadge({
   aggregation,
+  lang,
 }: {
   aggregation: VersionMetadata["aggregation"];
+  lang: Lang;
 }) {
   if (aggregation?.human_review_completed) {
     const parts: string[] = [];
     if (aggregation.reviewed_at) parts.push(aggregation.reviewed_at);
-    if (aggregation.reviewer) parts.push(`par ${aggregation.reviewer}`);
+    if (aggregation.reviewer)
+      parts.push(format(t(UI_STRINGS.TRANSPARENCY_REVIEW_DONE_BY, lang), { reviewer: aggregation.reviewer }));
     return (
       <div
         className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-xs font-medium"
@@ -297,7 +298,8 @@ function ReviewBadge({
       >
         <span aria-hidden="true">✓</span>
         <span>
-          Revue humaine terminée{parts.length ? ` — ${parts.join(" ")}` : ""}
+          {t(UI_STRINGS.TRANSPARENCY_HUMAN_REVIEW_COMPLETE, lang)}
+          {parts.length ? ` — ${parts.join(" ")}` : ""}
         </span>
       </div>
     );
@@ -313,7 +315,7 @@ function ReviewBadge({
       role="status"
     >
       <span aria-hidden="true">⚠</span>
-      <span>Revue humaine en cours — publication provisoire</span>
+      <span>{t(UI_STRINGS.TRANSPARENCY_REVIEW_IN_PROGRESS, lang)}</span>
     </div>
   );
 }
