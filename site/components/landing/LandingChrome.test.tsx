@@ -14,6 +14,7 @@ function entry(id: string, updated: string): CandidateIndexEntry {
     party: "P",
     partyId: "p",
     isFictional: false,
+    availableLocales: ["fr"],
     versionDate: "2026-01-01",
     updatedAt: updated,
   };

@@ -93,6 +93,7 @@ const FIXTURE_ENTRIES: CandidateIndexEntry[] = [
     updatedAt: "2026-01-15",
     versionDate: "2026-01-15",
     isFictional: true,
+    availableLocales: ["fr"],
   },
 ];
 

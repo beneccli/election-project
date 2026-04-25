@@ -20,150 +20,17 @@ import { Command } from "commander";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { AggregatedOutputSchema } from "./lib/schema";
-import { isTranslatablePath } from "./lib/translatable-paths";
 import { versionDir } from "./lib/paths";
 import { normalizeArgv } from "./lib/cli-args";
 import { ValidationError, validateOrThrow } from "./lib/validate";
+import {
+  ParityError,
+  type ParityIssue,
+  checkParity,
+} from "./lib/parity";
 
-export interface ParityIssue {
-  path: string;
-  kind:
-    | "type-mismatch"
-    | "value-mismatch"
-    | "array-length-mismatch"
-    | "missing-key"
-    | "extra-key";
-  message: string;
-}
-
-export class ParityError extends Error {
-  constructor(public issues: ParityIssue[]) {
-    super(`Translation parity check failed (${issues.length} issue(s))`);
-    this.name = "ParityError";
-  }
-}
-
-type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | Json[]
-  | { [key: string]: Json };
-
-function typeOf(v: Json): string {
-  if (v === null) return "null";
-  if (Array.isArray(v)) return "array";
-  return typeof v;
-}
-
-/**
- * Walk `fr` and `tr` in lockstep. For every leaf:
- * - object/array shapes must match (same keys / same length).
- * - non-translatable leaves must be deepEqual.
- * - translatable string leaves may differ, but their type must remain
- *   `string` (no swapping a string for null/number).
- */
-function walk(fr: Json, tr: Json, path: string, issues: ParityIssue[]): void {
-  const frType = typeOf(fr);
-  const trType = typeOf(tr);
-
-  if (frType !== trType) {
-    issues.push({
-      path,
-      kind: "type-mismatch",
-      message: `expected ${frType}, got ${trType}`,
-    });
-    return;
-  }
-
-  if (frType === "array") {
-    const frArr = fr as Json[];
-    const trArr = tr as Json[];
-    if (frArr.length !== trArr.length) {
-      issues.push({
-        path,
-        kind: "array-length-mismatch",
-        message: `expected length ${frArr.length}, got ${trArr.length}`,
-      });
-      return;
-    }
-    for (let i = 0; i < frArr.length; i++) {
-      walk(frArr[i], trArr[i], `${path}.${i}`, issues);
-    }
-    return;
-  }
-
-  if (frType === "object") {
-    const frObj = fr as { [k: string]: Json };
-    const trObj = tr as { [k: string]: Json };
-    const frKeys = Object.keys(frObj);
-    const trKeys = Object.keys(trObj);
-    const frKeySet = new Set(frKeys);
-    const trKeySet = new Set(trKeys);
-    for (const k of frKeys) {
-      if (!trKeySet.has(k)) {
-        issues.push({
-          path: path === "" ? k : `${path}.${k}`,
-          kind: "missing-key",
-          message: `key present in FR but missing in translation`,
-        });
-      }
-    }
-    for (const k of trKeys) {
-      if (!frKeySet.has(k)) {
-        issues.push({
-          path: path === "" ? k : `${path}.${k}`,
-          kind: "extra-key",
-          message: `key present in translation but absent in FR`,
-        });
-      }
-    }
-    for (const k of frKeys) {
-      if (!trKeySet.has(k)) continue;
-      const childPath = path === "" ? k : `${path}.${k}`;
-      walk(frObj[k], trObj[k], childPath, issues);
-    }
-    return;
-  }
-
-  // Leaf scalar: string, number, boolean, null.
-  if (isTranslatablePath(path)) {
-    // Allowed to differ, but only for string-valued leaves. If FR has
-    // a null in a translatable slot the translation must also be null
-    // (so we don't allow translation to fabricate prose).
-    if (frType === "string") {
-      // Type already matched; any string value is acceptable.
-      return;
-    }
-    // Non-string leaf in an allowlisted slot — fall through to strict
-    // equality check.
-  }
-
-  if (fr !== tr) {
-    issues.push({
-      path,
-      kind: "value-mismatch",
-      message:
-        `expected ${JSON.stringify(fr)}, got ${JSON.stringify(tr)}` +
-        (isTranslatablePath(path)
-          ? " (path is translatable but leaf is non-string)"
-          : ""),
-    });
-  }
-}
-
-/**
- * Compare a translation to the FR canonical file. Throws
- * {@link ParityError} on failure, otherwise returns silently.
- */
-export function checkParity(fr: unknown, tr: unknown): void {
-  const issues: ParityIssue[] = [];
-  walk(fr as Json, tr as Json, "", issues);
-  if (issues.length > 0) {
-    throw new ParityError(issues);
-  }
-}
+export { ParityError, checkParity };
+export type { ParityIssue };
 
 interface ValidateArgs {
   candidate: string;

@@ -51,6 +51,7 @@ describe("sortLandingCards", () => {
     partyColor: "",
     family: null,
     isFictional: false,
+    availableLocales: ["fr"],
   } as const;
 
   it("orders by updatedAt desc then displayName asc", () => {

@@ -3,7 +3,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   CandidateDataError,
   listCandidates,
@@ -142,5 +142,118 @@ describe("loadCandidate", () => {
       expect(e.zodIssues).toBeDefined();
       expect(e.zodIssues!.length).toBeGreaterThan(0);
     }
+  });
+});
+
+describe("loadCandidate (locale-aware)", () => {
+  let tmp = "";
+
+  beforeEach(() => {
+    tmp = buildTmpFixture().dir;
+  });
+
+  afterEach(() => {
+    if (tmp) fs.rmSync(tmp, { recursive: true, force: true });
+  });
+
+  function readAgg(): unknown {
+    return JSON.parse(
+      fs.readFileSync(
+        path.join(tmp, "test-omega", "current", "aggregated.json"),
+        "utf8",
+      ),
+    );
+  }
+
+  function writeEnFile(payload: unknown): void {
+    fs.writeFileSync(
+      path.join(tmp, "test-omega", "current", "aggregated.en.json"),
+      JSON.stringify(payload),
+    );
+  }
+
+  it("defaults to fr with native_fr translation status", () => {
+    const bundle = withCandidatesDir(tmp, () => loadCandidate("test-omega"));
+    expect(bundle.translation).toEqual({ lang: "fr", status: "native_fr" });
+  });
+
+  it("returns native_fr when lang='fr' is explicit", () => {
+    const bundle = withCandidatesDir(tmp, () =>
+      loadCandidate("test-omega", "fr"),
+    );
+    expect(bundle.translation).toEqual({ lang: "fr", status: "native_fr" });
+  });
+
+  it("falls back to FR canonical with status='missing' when EN file absent", () => {
+    const bundle = withCandidatesDir(tmp, () =>
+      loadCandidate("test-omega", "en"),
+    );
+    expect(bundle.translation).toEqual({ lang: "en", status: "missing" });
+    // Aggregated payload should be the FR canonical content.
+    const fr = readAgg() as { candidate_id: string };
+    expect(bundle.aggregated.candidate_id).toBe(fr.candidate_id);
+  });
+
+  it("returns the EN file with status='available' when present (parity-clean)", () => {
+    // A perfect copy is parity-clean.
+    writeEnFile(readAgg());
+    const bundle = withCandidatesDir(tmp, () =>
+      loadCandidate("test-omega", "en"),
+    );
+    expect(bundle.translation).toEqual({ lang: "en", status: "available" });
+  });
+
+  it("warns (not throws) when EN file has parity drift", () => {
+    const fr = readAgg() as Record<string, unknown> & {
+      coverage_warning: boolean;
+    };
+    // Toggle a non-translatable boolean leaf in a schema-valid way.
+    const drifted = JSON.parse(JSON.stringify(fr)) as typeof fr;
+    drifted.coverage_warning = !fr.coverage_warning;
+    writeEnFile(drifted);
+
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const bundle = withCandidatesDir(tmp, () =>
+        loadCandidate("test-omega", "en"),
+      );
+      expect(bundle.translation).toEqual({ lang: "en", status: "available" });
+      expect(warnSpy).toHaveBeenCalled();
+      const firstCall = warnSpy.mock.calls[0]?.[0] as string;
+      expect(firstCall).toMatch(/parity drift/i);
+    } finally {
+      warnSpy.mockRestore();
+    }
+  });
+});
+
+describe("listCandidates availableLocales", () => {
+  let tmp = "";
+
+  beforeEach(() => {
+    tmp = buildTmpFixture().dir;
+  });
+
+  afterEach(() => {
+    if (tmp) fs.rmSync(tmp, { recursive: true, force: true });
+  });
+
+  it("returns ['fr'] when only the canonical aggregated.json is present", () => {
+    const entries = withCandidatesDir(tmp, () => listCandidates());
+    const omega = entries.find((e) => e.id === "test-omega");
+    expect(omega?.availableLocales).toEqual(["fr"]);
+  });
+
+  it("includes 'en' when aggregated.en.json is present", () => {
+    fs.writeFileSync(
+      path.join(tmp, "test-omega", "current", "aggregated.en.json"),
+      fs.readFileSync(
+        path.join(tmp, "test-omega", "current", "aggregated.json"),
+        "utf8",
+      ),
+    );
+    const entries = withCandidatesDir(tmp, () => listCandidates());
+    const omega = entries.find((e) => e.id === "test-omega");
+    expect(omega?.availableLocales).toEqual(["fr", "en"]);
   });
 });
