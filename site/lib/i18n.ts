@@ -157,6 +157,18 @@ export const UI_STRINGS = {
     fr: "Mode clair",
     en: "[EN] Mode clair",
   },
+  TRANSLATION_FALLBACK_BODY: {
+    fr: "Une traduction française de cette analyse n’est pas encore publiée. Le contenu ci-dessous est affiché dans la langue source — la version canonique.",
+    en: "An English translation of this analysis is not yet published. The content below is shown in French — the canonical source.",
+  },
+  TRANSLATION_FALLBACK_DISMISS: {
+    fr: "Masquer ce message",
+    en: "Dismiss this message",
+  },
+  TRANSLATION_FALLBACK_TITLE: {
+    fr: "Traduction en attente",
+    en: "Translation pending",
+  },
   TRANSPARENCY_HUMAN_REVIEW_COMPLETE: {
     fr: "Revue humaine terminée",
     en: "[EN] Revue humaine terminée",
