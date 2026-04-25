@@ -1,0 +1,203 @@
+{
+  "dimensions": {
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {
+          "gpt-5.5-thinking": "B",
+          "claude-opus-4-7": "C",
+          "mistral-le-chat-2026-04-25": "B"
+        }
+      },
+      "headline": {
+        "text": "Constituante (article 11) pour la 6e République parlementaire avec RIC, proportionnelle intégrale et abolition du 49.3.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Refondation démocratique ambitieuse avec risque de transition." },
+          { "model": "claude-opus-4-7", "text": "Convocation d'une Constituante par référendum article 11 pour passer à la 6e République, RIC à 4 modalités, scrutin proportionnel, abolition du 49.3." },
+          { "model": "deepseek", "text": "Assemblée constituante pour une 6e République parlementaire avec RIC, référendum révocatoire, et séparation stricte de l'argent et de l'État." },
+          { "model": "gemini-1.5-pro", "text": "Abolition de la monarchie présidentielle via la 6e République et instauration du RIC." },
+          { "model": "mistral-le-chat-2026-04-25", "text": "Refonte radicale des institutions avec Assemblée Constituante, RIC, et suppression du 49.3." },
+          { "model": "qwen3.6", "text": "Transition to 6th Republic via constituent assembly, proportional representation, RIC, and strict anti-lobbying rules." }
+        ]
+      },
+      "summary": "Le programme propose une rupture institutionnelle complète : convocation d'un référendum article 11 pour engager le processus constituant, élection d'une Assemblée constituante non-cumulable avec un mandat parlementaire actuel, rédaction d'une nouvelle Constitution sur 24 mois, ratification par référendum. La 6e République est parlementaire avec proportionnelle intégrale, abolition du 49.3, droit de vote à 16 ans, RIC à 4 modalités (révocatoire, abrogatif, législatif, constituant). Mesures de séparation État/argent : période de viduité de 10 ans pour les passages public/privé, fin du monopole médiatique du Medef, lutte renforcée contre la corruption, indépendance judiciaire renforcée. Modal A (3/6, deepseek/gemini/qwen) ; gpt et mistral notent les risques de transition (B) ; claude (C) souligne la tension structurelle entre l'élargissement des contre-pouvoirs et l'élévation des principes constitutionnels nationaux au-dessus du droit européen.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du pouvoir exécutif et contournement du Parlement",
+          "approach": "Abolition du 49.3 et des votes bloqués, passage à une République parlementaire, proportionnelle intégrale, scrutin obligatoire, gouvernement responsable devant l'Assemblée.",
+          "strength": 0.9,
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "reasoning": "Suppression directe des outils de domination exécutive ; tous les modèles convergent sur la cohérence du dispositif.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Crise de confiance et délégitimation du système politique",
+          "approach": "Référendum d'initiative citoyenne (RIC) à 4 modalités, droit de vote à 16 ans, abaissement du seuil de signatures, transparence des finances de campagne et anti-corruption.",
+          "strength": 0.85,
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "reasoning": "Outils de réappropriation citoyenne du processus législatif ; tous les modèles citent la même architecture.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Capture des institutions par les intérêts économiques privés",
+          "approach": "Délai de viduité de 10 ans pour les passages public/privé, plan national anti-corruption, fin du monopole médiatique, indépendance judiciaire renforcée.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "reasoning": "Combinaison de mesures structurelles et d'outils de contrôle ; cinq modèles sur six citent le délai de 10 ans.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Mécanismes de gestion d'un blocage de la Constituante",
+          "significance": "Le programme ne précise pas la procédure si l'Assemblée constituante échoue à produire un texte ratifiable dans le délai de 24 mois ; aucun mécanisme de sortie n'est décrit.",
+          "source_refs": [],
+          "supported_by": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Stabilité législative à court terme",
+          "mechanism": "La proportionnelle intégrale combinée à un régime parlementaire pur augmente mathématiquement la probabilité de coalitions volatiles dans le contexte français actuel.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "reasoning": "Effet structurel reconnu par gemini, mistral et claude ; deepseek et qwen y voient un trait positif (parlementarisme assumé) plutôt qu'une dégradation.",
+          "supported_by": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25", "claude-opus-4-7"],
+          "dissenters": ["deepseek", "qwen3.6"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Rejet du projet de Constitution par référendum",
+          "probability": 0.4,
+          "severity": 0.85,
+          "reasoning": "La nouvelle Constitution doit être approuvée par référendum après 2 ans ; un « non » remet à zéro l'ensemble du projet institutionnel et déclenche une crise de légitimité.",
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "risk": "Conflits entre la nouvelle Constitution et le droit européen",
+          "probability": 0.7,
+          "severity": 0.75,
+          "reasoning": "L'élévation des principes constitutionnels nationaux au-dessus du droit dérivé européen entre en tension avec la jurisprudence Costa/ENEL et déclenche des contentieux structurels.",
+          "source_refs": ["sources.md#chapitre-17--europe"],
+          "supported_by": ["claude-opus-4-7", "mistral-le-chat-2026-04-25", "deepseek"],
+          "dissenters": []
+        },
+        {
+          "risk": "Calendrier de la Constituante débordant la fenêtre de stabilité législative",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "24 mois de rédaction + référendum créent une période d'incertitude institutionnelle pendant laquelle deux ordres normatifs coexistent.",
+          "source_refs": ["sources.md#chapitre-1--le-pouvoir-au-peuple"],
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Référendum article 11 pour engager le processus constituant et création d'une Assemblée constituante non-cumulable",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": "réécriture constitutionnelle complète",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "RIC à 4 modalités (révocatoire, abrogatif, législatif, constituant)",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression du 49.3 et des votes bloqués, proportionnelle intégrale, droit de vote à 16 ans",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Délai de viduité de 10 ans pour les passages public/privé",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": true,
+          "magnitude": "10 ans",
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "high"],
+          "note": "Coût direct essentiellement logistique (élections supplémentaires, fonctionnement Constituante) ; faible face aux mesures macroéconomiques.",
+          "supported_by": ["claude-opus-4-7", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "deepseek"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Score générique (template) ; peu plausible pour le bloc institutionnel." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Coût direct faible." },
+            { "model": "deepseek", "level": "limited", "note": "Coût logistique limité." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Coût budgétaire négligeable." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "low", "note": "Coût institutionnel principalement logistique." },
+            { "model": "qwen3.6", "level": "low", "note": "Coût direct minimal." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Organisation de référendums multiples, élection d'une Constituante, rédaction sur 24 mois et ratification finale exigent une logistique électorale complexe.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Logistique élections multi-niveaux." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Calendrier référendaire chargé." },
+            { "model": "deepseek", "level": "high", "note": "Mobilisation citoyenne et coopération politique requises." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Élections nationales complexes mais bornées." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Mobilisation citoyenne et coopération des acteurs politiques." },
+            { "model": "qwen3.6", "level": "high", "note": "Logistique électorale, drafting juridique et seuils de ratification." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Processus essentiellement domestique ; dépendance externe principalement liée à la friction avec le droit européen.",
+          "supported_by": ["deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Score générique (template)." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Friction avec ordre juridique européen." },
+            { "model": "deepseek", "level": "low", "note": "Processus principalement domestique." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Procédure légale interne." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "low", "note": "Peu de dépendances externes." },
+            { "model": "qwen3.6", "level": "limited", "note": "Indépendance procédurale dominante." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Une nouvelle Constitution est l'instrument juridique le plus difficile à inverser ; les changements de mode de scrutin sont structurellement durables.",
+          "supported_by": ["claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "deepseek", "mistral-le-chat-2026-04-25"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Score générique (template)." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Constitution durable, mode de scrutin difficilement inversé." },
+            { "model": "deepseek", "level": "limited", "note": "Modifications constitutionnelles difficilement réversibles." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Cadre constitutionnel le plus difficile à inverser." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "limited", "note": "Réformes constitutionnelles durables." },
+            { "model": "qwen3.6", "level": "low", "note": "Entrenchment constitutionnel et système électoral durables sans supermajorité." }
+          ]
+        }
+      },
+      "confidence": 0.78
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "retraite_60_ans_40_annuites_plancher_smic",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "regle_verte_constitutionnelle",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "ric_referendum_initiative_citoyenne_revocation",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "sortie_commandement_integre_otan",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "investissement_ecologique_200_milliards",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "smic_1600_euros_net_revalorisation",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "construction_200000_logements_publics_par_an",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "vie_republique_assemblee_constituante",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "100_pct_securite_sociale_soins_prescrits",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "isf_climatique_taxe_zucman",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      },
+      {
+        "claim_id": "abolition_parcoursup_gratuite_education",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "intergenerational_net_transfer_direction",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "Effet mixte selon le décile : pension favorise les âgés, autonomie/éducation/climat favorisent les jeunes." },
+          { "model": "claude-opus-4-7", "position": "Effet mixte : redistribution intra-cohorte sur le patrimoine, gains structurels pour les jeunes via climat et éducation." },
+          { "model": "deepseek", "position": "Direction nette young_to_old : la concentration des bénéfices sociaux sur les retraites et la charge fiscale future pèsent sur les jeunes." },
+          { "model": "gemini-1.5-pro", "position": "Effet mixte : bénéfices intergénérationnels via le climat et l'éducation, mais charge sur la dette publique pour les jeunes." },
+          { "model": "mistral-le-chat-2026-04-25", "position": "Direction nette young_to_old, ~+1500€/an des moins-de-35 vers les retraités et services publics ; taux de remplacement projeté en baisse." },
+          { "model": "qwen3.6", "position": "Direction nette old_to_young, ~+1400€/an vers les jeunes via planchers de revenu, investissement éducation/logement et stabilisation du marché du travail." }
+        ]
+      },
+      {
+        "claim_id": "climate_horizon_signe_intergenerationnel",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "Scores positifs +2/+2/+2 : décarbonation cumulée bénéficie aux jeunes générations." },
+          { "model": "claude-opus-4-7", "position": "Scores +1/+2/+2 : trajectoire de transition durable." },
+          { "model": "deepseek", "position": "Scores +1/+2/+3 : neutralité atteinte, dette écologique réduite." },
+          { "model": "gemini-1.5-pro", "position": "Scores +2/+3/+3 : 100% renouvelables et trajectoire 2030 livrent des baisses massives." },
+          { "model": "mistral-le-chat-2026-04-25", "position": "Scores -1/-2/-3 : interprétation inverse — la transition est un coût économique net plutôt qu'un bénéfice intergénérationnel." },
+          { "model": "qwen3.6", "position": "Scores +1/+2/+3 : modernisation réseau et 100% ENR abaissent l'exposition climatique structurellement." }
+        ]
+      },
+      {
+        "claim_id": "positioning_economic_modal_score",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "Score -5 : transformation systémique de l'ordre économique." },
+          { "model": "claude-opus-4-7", "position": "Score -5 : programme à dominante anti-marché et redistributive." },
+          { "model": "deepseek", "position": "Score -4 : très à gauche, redistribution forte sans renoncement complet à l'économie de marché." },
+          { "model": "gemini-1.5-pro", "position": "Score -4 : intervention massive de l'État sans nationalisation totale." },
+          { "model": "mistral-le-chat-2026-04-25", "position": "Score -5 : refonte structurelle." },
+          { "model": "qwen3.6", "position": "Score -4 : interventionnisme fort mais capitalisme conservé." }
+        ]
+      },
+      {
+        "claim_id": "social_cultural_axis_modal",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "Score -3 : laïcité républicaine classique, ouverture sociétale modérée." },
+          { "model": "claude-opus-4-7", "position": "Score -4 : ouverture sociétale forte, antiracisme structurel." },
+          { "model": "deepseek", "position": "Score -4 : progressisme sociétal explicite." },
+          { "model": "gemini-1.5-pro", "position": "Score -3 : ouverture marquée mais ancrée dans la République." },
+          { "model": "mistral-le-chat-2026-04-25", "position": "Score -5 : maximum de progressisme sur tous les axes sociétaux." },
+          { "model": "qwen3.6", "position": "Score -4 : forte ouverture LGBTQI+, féminisme, antiracisme." }
+        ]
+      },
+      {
+        "claim_id": "economic_dimension_grade",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "Grade C : risques d'exécution élevés (financement, attractivité, soutenabilité dette)." },
+          { "model": "claude-opus-4-7", "position": "Grade C : ambition forte mais soutenabilité incertaine." },
+          { "model": "deepseek", "position": "Grade B : cohérence interne et chiffrage suffisant." },
+          { "model": "gemini-1.5-pro", "position": "Grade B : programme cohérent, risques identifiés mais chiffrage solide." },
+          { "model": "mistral-le-chat-2026-04-25", "position": "Grade D : risques majeurs sur la soutenabilité et la crédibilité du Plan B." },
+          { "model": "qwen3.6", "position": "Grade B : programme structuré et chiffré." }
+        ]
+      }
+    ],
+    "coverage": {
+      "gpt-5.5-thinking": "complete",
+      "claude-opus-4-7": "complete",
+      "deepseek": "complete",
+      "gemini-1.5-pro": "complete",
+      "mistral-le-chat-2026-04-25": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [-5, -4],
+        "modal": null,
+        "dissent_count": 0
+      },
+      "social_cultural": {
+        "interval": [-5, -3],
+        "modal": -4,
+        "dissent_count": 3
+      },
+      "sovereignty": {
+        "interval": [2, 3],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [2, 2],
+        "modal": 2,
+        "dissent_count": 0
+      },
+      "ecological": {
+        "interval": [4, 4],
+        "modal": 4,
+        "dissent_count": 0
+      },
+      "overall_spectrum": {
+        "modal_label": "extreme_gauche",
+        "distribution": {
+          "extreme_gauche": 5,
+          "gauche": 1
+        },
+        "dissent_count": 1
+      }
+    }
+  },
+  "flagged_for_review": [
+    {
+      "claim": "Le fichier raw deepseek-manual.json déclare model.provider=\"anthropic\" et model.version=\"claude-opus-4-7\" alors que le nom de fichier et la signature stylistique indiquent une analyse produite par DeepSeek.",
+      "claimed_by": ["deepseek"],
+      "issue": "Incohérence de provenance : la métadonnée de modèle dans le fichier raw ne correspond pas à l'identifiant inféré du nom de fichier. Risque de double-comptage avec claude-opus-4-7 si non corrigé.",
+      "suggested_action": "Demander à l'opérateur humain de confirmer le modèle réellement utilisé pour ce fichier (DeepSeek ou Claude) et corriger la métadonnée du fichier raw avant publication. L'agrégation traite ce fichier comme \"deepseek\" sur la base du nom de fichier."
+    },
+    {
+      "claim": "Mistral-le-chat-2026-04-25 attribue des scores horizon négatifs (-1/-2/-3) à la dimension climat sur les trois horizons intergénérationnels, alors que les cinq autres modèles attribuent des scores positifs (+1 à +3).",
+      "claimed_by": ["mistral-le-chat-2026-04-25"],
+      "issue": "Inversion systématique de signe sur la dimension climat. Indique soit (a) une interprétation divergente de la matrice (\"coût de transition économique\" vs \"effet intergénérationnel net\"), soit (b) une erreur de signe non détectée dans la sortie raw du modèle.",
+      "suggested_action": "Reviewer humain : examiner la sortie raw mistral-le-chat-2026-04-25.json pour confirmer si l'inversion est intentionnelle (cadre interprétatif) ou erronée (erreur de signe). Si erronée, traiter cohorte mistral comme climate-incomplete."
+    },
+    {
+      "claim": "GPT-5.5-thinking attribue le motif uniforme {execution_difficulty: high, financing_credibility: high, political_feasibility: moderate, reversibility: moderate} à l'ensemble des cinq dimensions du programme.",
+      "claimed_by": ["gpt-5.5-thinking"],
+      "issue": "Le risk_profile gpt-5.5-thinking présente un motif templaté identique d'une dimension à l'autre, ce qui suggère un défaut de différenciation du modèle plutôt qu'une analyse fine par dimension. Risque de biais d'agrégation si le motif sert de socle modal.",
+      "suggested_action": "Reviewer humain : vérifier si la sortie raw gpt-5.5-thinking-manual.json contient effectivement ce motif uniforme ou s'il s'agit d'un artefact de notre extraction. Le cas échéant, marquer gpt-5.5-thinking comme moins fiable sur risk_profile."
+    },
+    {
+      "claim": "Plusieurs entrées dans la sortie chatgpt-thinking-manual.json utilisent une formulation générique de placeholder du type \"Problème central explicitement ciblé par le programme\" plutôt qu'un libellé concret de problème.",
+      "claimed_by": ["gpt-5.5-thinking"],
+      "issue": "Formulation générique répétée qui suggère que certaines parties de la sortie raw n'ont pas été remplies avec un contenu spécifique. Risque de noyer la qualité analytique des autres modèles dans l'agrégation.",
+      "suggested_action": "Reviewer humain : examiner la sortie raw gpt-5.5-thinking-manual.json pour identifier les sections génériques et décider si elles doivent être réinjectées ou si gpt-5.5-thinking doit être marqué \"partial\" sur les dimensions concernées."
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "intervalle qualitatif large : de ~+1400€/an net pour les <35 ans (qwen) à ~-1500€/an net pour les <35 ans (mistral), avec gpt/claude/gemini concluant à un effet net mixte selon le décile",
+      "units": "€/personne/an",
+      "confidence": 0.5,
+      "caveats": "Les modèles divergent sur le signe : qwen identifie un transfert old_to_young (front-loading vers les jeunes), mistral et deepseek un young_to_old (charge fiscale et coût pension), gpt/claude/gemini un effet mixte selon le décile. Aucun ne fournit de modélisation actuarielle ; tous reposent sur l'hypothèse de réussite du Plan B européen."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Effet ambigu : la garantie d'autonomie de 1216€/mois et la hausse du SMIC bénéficient aux jeunes adultes, mais l'extension de la fiscalité progressive et la cotisation BPP pèsent sur les jeunes actifs aisés. Modèles partagés entre gain net (claude, deepseek, gemini, qwen) et charge nette (mistral).",
+        "quantified": "+1216€/mois plancher pour les jeunes en autonomie ; effet net variable selon décile (-400€/an à +1216€/mois selon les modèles)"
+      },
+      "housing": {
+        "summary": "Encadrement des loyers, livraison de 200 000 logements publics/an, plafonds successoraux (5 logements max) et réquisition des biens vacants améliorent l'accès au logement.",
+        "quantified": "200 000 logements publics/an ; +15% indice d'accessibilité estimé (qwen)"
+      },
+      "pension_outlook": {
+        "summary": "Retour à 60 ans et plancher au SMIC sécurisent les paramètres ; soutenabilité long terme contestée — claude estime un taux de remplacement maintenu, mistral l'estime en baisse vers ~55%.",
+        "quantified": "âge 60 / 40 annuités ; taux de remplacement projeté : 55–74% selon les modèles"
+      },
+      "labor_market": {
+        "summary": "SMIC à 1600€ net, semaine de 32h dans les métiers pénibles, quota de 5% de contrats précaires dans les grandes entreprises augmentent salaires d'entrée et stabilité.",
+        "quantified": "+200€/mois minimum / quota 5% précaires"
+      },
+      "environmental_debt": {
+        "summary": "Investissement écologique de 200 Md€ et règle verte réduisent la dette écologique transmise ; effet positif structurel pour les jeunes générations.",
+        "quantified": "-65% émissions GES en 2030 ; -12% exposition projetée aux dommages climatiques en 2040 (qwen)"
+      },
+      "narrative_summary": "Pour un jeune de 25 ans en 2027, le programme combine un effet redistributif fortement positif (autonomie, logement, climat) et une fiscalité plus lourde sur les jeunes actifs aisés. Le solde dépend de la position dans la distribution des revenus et de la réussite du Plan B européen."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Effet redistributif intra-cohorte : indexation sur les salaires et plancher au SMIC pour les pensions modestes ; alourdissement de la fiscalité du capital et de la transmission pour les retraités aisés (ISF climatique, taxe Zucman, plafond successoral 12 M€).",
+        "quantified": "+800€/an pour le décile supérieur (qwen) ; pensions modestes alignées sur le SMIC"
+      },
+      "pension": {
+        "summary": "Indexation sur les salaires (et non plus l'inflation), plancher au SMIC, suppression de la décote ; gain net pour les pensions modestes et stabilité du pouvoir d'achat pour les pensions médianes.",
+        "quantified": "indexation salaire / plancher SMIC / +0 à +400€/mois selon la base"
+      },
+      "healthcare": {
+        "summary": "100% Sécu sur les soins prescrits, plan de reconstruction de l'hôpital public, expansion des EHPAD publics ; baisse marquée du reste à charge.",
+        "quantified": "-300€/an de RAC estimé (qwen) ; 100% couverture prescrits"
+      },
+      "narrative_summary": "Pour un retraité de 65 ans en 2027, l'effet est globalement positif (santé, pension modeste indexée), avec une charge fiscale concentrée sur les retraités à fort patrimoine via l'ISF climatique, la taxe Zucman et le plafonnement successoral."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Restauration immédiate de la retraite à 60 ans avec plancher SMIC ; soutenabilité long terme contestée selon que l'élargissement de l'assiette de cotisations couvre ou non la dérive démographique.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "row_dissenters": [],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [-1, 2],
+            "note": "Effet immédiat positif via retour à 60 ans et plancher SMIC ; gpt l'évalue négativement comme report de charge, mistral le juge limité.",
+            "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro"],
+            "dissenters": ["gpt-5.5-thinking", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Effet considéré comme avantage transféré aux cohortes plus âgées." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Restauration de la retraite à 60 ans bénéficie immédiatement aux cohortes proches du départ." },
+              { "model": "deepseek", "score": 2, "note": "Mesures paramétriques effectives dès la première législature." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Restauration immédiate de l'âge 60 et plancher SMIC." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 0, "note": "Effet à court terme limité sous hypothèses centrales." },
+              { "model": "qwen3.6", "score": 1, "note": "Restauration de l'âge 60 et plancher relèvent les niveaux de prestation immédiats." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [-2, 1],
+            "note": "Stabilisation du système ; trois modèles (claude, gemini, mistral) maintiennent un gain modéré, gpt et deepseek anticipent une dérive.",
+            "supported_by": ["claude-opus-4-7", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "dissenters": ["gpt-5.5-thinking", "deepseek", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -2, "note": "Pression démographique non absorbée." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Niveau soutenu sous hypothèse d'élargissement de l'assiette." },
+              { "model": "deepseek", "score": -1, "note": "Pression structurelle sur le financement." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Bénéfices maintenus, pression sur le financement." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 1, "note": "Effet central : retraite à 60 ans après 40 années de cotisation." },
+              { "model": "qwen3.6", "score": 0, "note": "Stabilisation : pression démographique compense indexation." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": null,
+            "score_interval": [-2, 2],
+            "note": "Désaccord profond sur la soutenabilité long terme : -2 (gpt, deepseek), -1 (claude, qwen), 0 (gemini), +2 (mistral) selon hypothèses.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -2, "note": "Soutenabilité actuarielle dégradée à long terme." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Dérive sans réforme structurelle complémentaire." },
+              { "model": "deepseek", "score": -2, "note": "Dérive démographique non couverte." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Soutenabilité conditionnée à la relocalisation et plein emploi." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 2, "note": "Effet long-horizon amplifié par dynamiques cumulatives." },
+              { "model": "qwen3.6", "score": -1, "note": "Cohorte vieillissante distend le financement par répartition." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Forte expansion nominale à court terme financée par la conversion BCE espérée et par les recettes fiscales ; trajectoire long terme dépendante de la croissance et de l'aboutissement du Plan B.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "row_dissenters": [],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -2,
+            "score_interval": [-3, -1],
+            "note": "Hausse marquée de la dette à court terme (consensus) ; gemini la qualifie de catastrophique, gpt la juge limitée.",
+            "supported_by": ["claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Dégradation contenue à court terme." },
+              { "model": "claude-opus-4-7", "score": -2, "note": "Forte expansion budgétaire à court terme." },
+              { "model": "deepseek", "score": -2, "note": "Augmentation marquée du ratio dette/PIB." },
+              { "model": "gemini-1.5-pro", "score": -3, "note": "Augmentation nominale forte due à 200 Md€ et expansion sociale." },
+              { "model": "mistral-le-chat-2026-04-25", "score": -2, "note": "Ratio dette/PIB croît avec dépenses et croissance ralentie." },
+              { "model": "qwen3.6", "score": -2, "note": "Investissement et expansion déficitaire haussent le ratio." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [-2, 1],
+            "note": "Stabilisation pour la majorité (4/6) si la conversion BCE aboutit ; gemini et mistral divergent sur l'effet.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Dégradation contenue." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Pression maintenue sans conversion BCE effective." },
+              { "model": "deepseek", "score": -1, "note": "Charge persistante en l'absence d'intervention BCE." },
+              { "model": "gemini-1.5-pro", "score": -2, "note": "Charge structurelle élevée sans intervention BCE explicite." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 1, "note": "Stabilisation par rebond de croissance et consolidation fiscale." },
+              { "model": "qwen3.6", "score": -1, "note": "Stabilisation conditionnée à la conversion BCE." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [-1, 2],
+            "note": "Convergence vers une trajectoire neutre pour 4 modèles ; gemini et mistral divergent (gain ou contraction).",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Stabilisation à long terme sous hypothèses centrales." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Convergence vers la trajectoire de référence." },
+              { "model": "deepseek", "score": 0, "note": "Effet neutralisé par maturation des recettes." },
+              { "model": "gemini-1.5-pro", "score": -1, "note": "Retours d'investissement (économies d'énergie) compensent partiellement." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 2, "note": "Soutenabilité améliorée via restructuration et croissance." },
+              { "model": "qwen3.6", "score": 0, "note": "Convergence vers la baseline avec maturation des recettes." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Trajectoire structurellement favorable selon 5 modèles (planification, règle verte, ENR) ; mistral inverse le signe en interprétant la transition comme un coût économique net.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": ["mistral-le-chat-2026-04-25"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Effet positif initial via plastiques, planification, fin des subventions fossiles ; mistral, seul, l'évalue négativement (coût de transition).",
+            "supported_by": ["claude-opus-4-7", "deepseek", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Effets immédiats forts." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Lancement du plan d'investissement." },
+              { "model": "deepseek", "score": 1, "note": "Investissement et règles entrent en vigueur." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Bascules statutaires immédiates : plastiques, objectif -65%." },
+              { "model": "mistral-le-chat-2026-04-25", "score": -1, "note": "Cadre interprétatif inverse : coûts de transition à court terme." },
+              { "model": "qwen3.6", "score": 1, "note": "Investissements et rénovations amorcent la baisse d'émissions." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [-2, 3],
+            "note": "Décarbonation marquée pour 4 modèles ; gemini évalue +3, mistral conserve son signe inverse (-2).",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Massification du plan." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Diffusion structurelle de la transition." },
+              { "model": "deepseek", "score": 2, "note": "ENR et bâti livrent les premiers gains." },
+              { "model": "gemini-1.5-pro", "score": 3, "note": "Rénovations et trajectoire 2030 livrent des baisses massives." },
+              { "model": "mistral-le-chat-2026-04-25", "score": -2, "note": "Coût économique central de la transition." },
+              { "model": "qwen3.6", "score": 2, "note": "Modernisation réseau et déploiement ENR atteignent une décarbonation substantielle." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 3,
+            "score_interval": [-3, 3],
+            "note": "Trois modèles évaluent l'effet maximal positif ; gpt et claude maintiennent +2, mistral inverse à -3.",
+            "supported_by": ["deepseek", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Effets cumulés soutenus." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Trajectoire de décarbonation maintenue." },
+              { "model": "deepseek", "score": 3, "note": "Atteinte de la neutralité, dette écologique réduite." },
+              { "model": "gemini-1.5-pro", "score": 3, "note": "100% renouvelables et transition écologique atteints." },
+              { "model": "mistral-le-chat-2026-04-25", "score": -3, "note": "Maximum du coût économique de transition." },
+              { "model": "qwen3.6", "score": 3, "note": "100% ENR et agroécologie abaissent l'exposition climatique structurellement." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Reconstruction du service public hospitalier et 100% Sécu améliorent l'accès et réduisent le reste à charge sur les trois horizons.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "row_dissenters": [],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [0, 1],
+            "note": "Effet positif initial pour 4 modèles via suppression franchises et embauches ; deepseek et mistral notent une montée en charge plus longue.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["deepseek", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Embauches et 100% Sécu effectifs." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Suppression du reste à charge sur soins prescrits." },
+              { "model": "deepseek", "score": 0, "note": "Reconstitution prend du temps." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Suppression des franchises et embauches accroissent l'accès." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 0, "note": "Effet limité à court terme : reconstruction prend du temps." },
+              { "model": "qwen3.6", "score": 1, "note": "Réouverture de services et recrutements réduisent les déserts." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Effet structurel : pôles publics et stratégies déserts médicaux livrent leurs premiers résultats.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Effets en plein régime." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Pôles publics opérationnels." },
+              { "model": "deepseek", "score": 2, "note": "Couverture prévention et soins étendue." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Pôles publics et stratégie déserts livrent leurs effets." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 1, "note": "Accès amélioré, réouverture des hôpitaux." },
+              { "model": "qwen3.6", "score": 2, "note": "Remboursement intégral et prévention diminuent la charge des maladies chroniques." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Effet positif maintenu via stabilité des infrastructures et bénéfices des politiques nutritionnelles et environnementales.",
+            "supported_by": ["gpt-5.5-thinking", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Effet long terme cumulé." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Maturation tempérée par contraintes RH." },
+              { "model": "deepseek", "score": 2, "note": "Système consolidé." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Santé populationnelle améliorée." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 2, "note": "Couverture universelle et gains sanitaires environnementaux." },
+              { "model": "qwen3.6", "score": 2, "note": "Infrastructure publique soutenue maintient les gains d'accès." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Gratuité étendue, fin de Parcoursup, baisse des effectifs par classe et reconstruction de la voie professionnelle améliorent l'accumulation de capital humain.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "row_dissenters": [],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [0, 2],
+            "note": "Effet positif immédiat via gratuité (cantines, fournitures) et abolition de Parcoursup ; gemini évalue +2, mistral 0.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Mise en place rapide." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Gratuité opérationnelle." },
+              { "model": "deepseek", "score": 1, "note": "Abolition Parcoursup, gratuité matérielle." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Gratuité immédiate et abolition de Parcoursup." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 0, "note": "Effet limité : réformes prennent du temps." },
+              { "model": "qwen3.6", "score": 1, "note": "Suppression des frais et recrutements abaissent les barrières d'accès." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Effet structurel : baisse effectifs, voie pro reconstruite, dispersion des résultats des cohortes.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Plein effet." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Cohortes complètes en système réformé." },
+              { "model": "deepseek", "score": 2, "note": "Refonte structurelle effective." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Réduction des effectifs et reconstruction voie pro." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 1, "note": "Accès amélioré, classes réduites." },
+              { "model": "qwen3.6", "score": 2, "note": "Cohorte progresse dans le système restructuré, qualifications relevées." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Égalisation du capital humain et stabilité des résultats sur le long terme.",
+            "supported_by": ["gpt-5.5-thinking", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Bénéfices cumulés." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Effet maintenu, contraintes RH." },
+              { "model": "deepseek", "score": 2, "note": "Capital humain élargi." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Égalisation long terme du capital humain." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 2, "note": "Niveau éducatif élevé, inégalités réduites." },
+              { "model": "qwen3.6", "score": 2, "note": "Gains de capital humain stabilisent productivité et matching." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Construction publique massive (200 000 unités/an), encadrement des loyers, plafonds successoraux et réquisition des biens vacants améliorent l'accessibilité.",
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "row_dissenters": [],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [0, 2],
+            "note": "Effet immédiat via encadrement des loyers et interdiction des expulsions ; gpt évalue +2, mistral 0.",
+            "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Effets immédiats marqués." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Encadrement loyers et lancement construction." },
+              { "model": "deepseek", "score": 1, "note": "Mise en place du dispositif." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Encadrement et interdiction d'expulsions amorcent l'effet." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 0, "note": "Construction prend du temps." },
+              { "model": "qwen3.6", "score": 1, "note": "200k unités publiques/an et plafonds de loyer corrigent le déficit." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Livraison cumulée des 200 000 unités/an déforme l'offre et les loyers ; mistral seul reste à +1.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["mistral-le-chat-2026-04-25"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 2, "note": "Stock public significatif." },
+              { "model": "claude-opus-4-7", "score": 2, "note": "Stock cumulé livré." },
+              { "model": "deepseek", "score": 2, "note": "Effet structurel sur les prix." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Livraison de 200 000 unités/an modifie le marché." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 1, "note": "Offre HLM et encadrement des loyers." },
+              { "model": "qwen3.6", "score": 2, "note": "Stock cumulé réduit la pression locative." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [1, 2],
+            "note": "Effets cumulés long terme via plafonds successoraux et réquisitions ; gpt et claude restent à +1.",
+            "supported_by": ["deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Effets stabilisés." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Saturation du marché public." },
+              { "model": "deepseek", "score": 2, "note": "Marché transformé durablement." },
+              { "model": "gemini-1.5-pro", "score": 2, "note": "Plafonds successoraux redistribuent le capital." },
+              { "model": "mistral-le-chat-2026-04-25", "score": 2, "note": "Accès amélioré, réduction du sans-abrisme." },
+              { "model": "qwen3.6", "score": 2, "note": "Expansion structurelle de l'offre et plafonds successoraux." }
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Les six modèles convergent sur un programme qui redistribue simultanément des ressources vers les jeunes générations (autonomie, logement, éducation, climat, dette écologique réduite) et vers les retraités modestes (pensions indexées, 100% Sécu), financé par une fiscalité accrue sur le capital et le patrimoine, principalement détenu par les déciles supérieurs des cohortes plus âgées. Trois modèles concluent à un effet net mixte selon le décile (gpt, claude, gemini), deux à un transfert young_to_old porté par le coût pension et la charge fiscale future (deepseek, mistral), un à un transfert old_to_young porté par le front-loading des prestations et investissements ciblant les jeunes (qwen). Cette divergence est structurelle : elle reflète un désaccord sur la soutenabilité long terme du système de retraite et sur la magnitude des transferts qualifiables.",
+    "source_refs": [
+      "sources.md#chapitre-6--partage-des-richesses",
+      "sources.md#chapitre-7--la-force-de-lentraide",
+      "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+      "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+    ],
+    "confidence": 0.65,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        { "model": "deepseek", "view": "Direction nette young_to_old : la restauration de la retraite à 60 ans et l'expansion des services publics sociaux concentrent les gains sur les cohortes plus âgées tandis que la charge fiscale et démographique pèse sur les actifs futurs." },
+        { "model": "mistral-le-chat-2026-04-25", "view": "Direction nette young_to_old : transfert estimé à ~+1500€/an des moins-de-35 vers les retraités et services publics, avec taux de remplacement projeté en baisse pour les 25 ans actuels (~55% vs 74%)." },
+        { "model": "qwen3.6", "view": "Direction nette old_to_young : transfert estimé à ~+1400€/an vers les jeunes via planchers de revenu, investissement éducation/logement et stabilisation du marché du travail, financé par fiscalité du patrimoine concentrée sur les ménages aisés âgés." },
+        { "model": "gpt-5.5-thinking", "view": "Effet mixte : la retraite à 60 ans bénéficie aux cohortes plus âgées (cellules pension à scores négatifs sur tous horizons), mais l'autonomie, l'éducation et le climat profitent aux jeunes." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "dimensions": {
+    "social_demographic": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {
+          "gpt-5.5-thinking": "B",
+          "claude-opus-4-7": "B",
+          "mistral-le-chat-2026-04-25": "C"
+        }
+      },
+      "headline": {
+        "text": "Garantie d'autonomie 1216€, retraite à 60 ans, 100% Sécu, 500 000 places de crèche, refonte école et dépendance.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Couverture sociale large, freinée par coût et recrutement." },
+          { "model": "claude-opus-4-7", "text": "Reconstruction du service public hospitalier, gratuité de l'éducation publique, garantie d'autonomie au seuil de pauvreté, 100% Sécu pour les soins prescrits." },
+          { "model": "deepseek", "text": "Service public de la petite enfance, garantie d'autonomie pour les jeunes, refonte de l'école et de la dépendance, droits des femmes et anti-discriminations." },
+          { "model": "gemini-1.5-pro", "text": "Restauration de la retraite à 60 ans, 100% Sécu et garantie d'autonomie pour éradiquer la pauvreté." },
+          { "model": "mistral-le-chat-2026-04-25", "text": "Société d'entraide avec droits étendus pour les minorités et les plus vulnérables, mais sans garantie de financement pérenne." },
+          { "model": "qwen3.6", "text": "Universal service expansion: retirement at 60, guaranteed minimum income at poverty line, free education and healthcare." }
+        ]
+      },
+      "summary": "Le programme déploie une expansion structurelle de l'État social : garantie d'autonomie portant tout revenu au seuil de pauvreté (1216€/mois), retour de la retraite à 60 ans avec 40 annuités et plancher au SMIC, 100% Sécu (suppression des restes à charge sur prescription), service public de la petite enfance avec 500 000 places de crèche, gratuité des cantines et fournitures scolaires, plan de reconstruction de l'hôpital public, création de 10 000 places en EHPAD public/an, loi cadre contre les violences faites aux femmes (2,6 Md€). Modal A (3/6, deepseek/gemini/qwen) ; les dissents (gpt et claude → B) saluent l'ampleur mais notent la dépendance au recrutement public massif ; mistral (C) souligne l'absence de chiffrage pérenne du financement.",
+      "problems_addressed": [
+        {
+          "problem": "Pauvreté monétaire et précarité jeunes / chômeurs",
+          "approach": "Garantie d'autonomie individuelle portée au seuil de pauvreté (1216€/mois) y compris pour les jeunes adultes en rupture familiale, indexation sur le SMIC.",
+          "strength": 0.9,
+          "source_refs": ["sources.md#chapitre-7--la-force-de-lentraide", "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"],
+          "reasoning": "Transferts directs et automatiques permettant l'éradication statistique de la grande pauvreté monétaire ; cible et montant chiffrés.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Pauvreté des retraités et dégradation du taux de remplacement",
+          "approach": "Retour à 60 ans avec 40 annuités, indexation des pensions sur les salaires (et non plus l'inflation), plancher de pension au SMIC, suppression de la décote.",
+          "strength": 0.85,
+          "source_refs": ["sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"],
+          "reasoning": "Inversion paramétrique de la réforme de 2023 ; effet immédiat sur le revenu disponible des cohortes proches de la retraite.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Déserts médicaux et reste à charge sur soins prescrits",
+          "approach": "Plan de reconstruction de l'hôpital public, recrutement médical massif, généralisation du 100% Sécu sur soins prescrits, suppression des franchises et participations forfaitaires.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#chapitre-15--une-approche-de-sante-globale"],
+          "reasoning": "Mesures structurelles d'accès, dont la temporalité est conditionnée par le recrutement effectif de personnels qualifiés.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Inégalités scolaires et orientation précoce",
+          "approach": "Plan de 500 000 places de crèche, gratuité des cantines et fournitures, suppression de Parcoursup, baisse des effectifs par classe, reconstruction de la voie professionnelle publique.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#chapitre-5--elever-le-niveau-dinstruction"],
+          "reasoning": "Combinaison d'investissement amont (petite enfance) et d'égalité d'accès aval (Parcoursup, gratuité) ; cohérence pédagogique reconnue par tous les modèles.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Tension structurelle sur le ratio actifs/retraités sous l'abaissement de l'âge de départ",
+          "significance": "Le programme abaisse l'âge légal sans détailler l'élargissement de l'assiette des cotisations qui couvrirait le surcoût démographique de long terme ; trois modèles sur six relèvent l'absence de modélisation actuarielle.",
+          "source_refs": [],
+          "supported_by": ["gemini-1.5-pro", "qwen3.6", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Disponibilité réelle de la main-d'œuvre santé / petite enfance",
+          "significance": "Les plans de 500 000 places de crèche, 100% Sécu et 10 000 places EHPAD/an supposent une montée en charge des recrutements dans des filières en pénurie chronique, sans calendrier de formation.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coût structurel du système de retraite par répartition",
+          "mechanism": "Le retour à 60 ans avec 40 annuités combiné à la semaine de 32h dans certains secteurs réduit l'offre de travail au moment où le ratio démographique se dégrade ; les recettes nouvelles (cotisations dividendes) ne compensent pas mécaniquement le surcoût.",
+          "severity": 0.7,
+          "source_refs": ["sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"],
+          "reasoning": "Trois modèles (gemini, qwen, claude) signalent le même mécanisme ; les autres ne le contestent pas frontalement.",
+          "supported_by": ["gemini-1.5-pro", "qwen3.6", "claude-opus-4-7"],
+          "dissenters": ["deepseek"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Pénurie de personnel soignant et éducatif limitant l'objectif 100% Sécu et la création de places de crèche",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Les plans d'embauche supposent un vivier de personnels formés que l'appareil public ne possède pas aujourd'hui ; la formation prend 3 à 7 ans selon les filières.",
+          "source_refs": ["sources.md#chapitre-5--elever-le-niveau-dinstruction", "sources.md#chapitre-15--une-approche-de-sante-globale"],
+          "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        },
+        {
+          "risk": "Résistance des professions de santé libérales à la généralisation du 100% Sécu",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "La revalorisation salariale et le passage à un modèle de centres de santé publics prioritaires entrent en tension avec le statut libéral majoritaire en médecine de ville.",
+          "source_refs": ["sources.md#chapitre-15--une-approche-de-sante-globale"],
+          "supported_by": ["mistral-le-chat-2026-04-25", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Garantie d'autonomie individuelle au seuil de pauvreté (1216€/mois)",
+          "source_ref": "sources.md#chapitre-7--la-force-de-lentraide",
+          "quantified": true,
+          "magnitude": "1216€/mois",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Retraite à 60 ans avec 40 annuités, plancher de pension au SMIC, indexation sur les salaires",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "60 ans / 40 annuités",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Service public de la petite enfance : 500 000 places de crèche sur 5 ans",
+          "source_ref": "sources.md#chapitre-5--elever-le-niveau-dinstruction",
+          "quantified": true,
+          "magnitude": "500 000 places",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Loi-cadre contre les violences sexistes et sexuelles avec budget dédié de 2,6 Md€",
+          "source_ref": "sources.md#chapitre-10--faire-place-a-la-nouvelle-france",
+          "quantified": true,
+          "magnitude": "2,6 Md€",
+          "supported_by": ["mistral-le-chat-2026-04-25", "deepseek", "gemini-1.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Prestations universelles structurelles (autonomie, 100% Sécu, retraite à 60) génèrent une dépense récurrente massive partiellement gagée sur la fiscalité redistributive.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro"],
+          "dissenters": ["mistral-le-chat-2026-04-25", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Dépenses récurrentes universelles élevées." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Coût récurrent significatif des prestations universelles." },
+            { "model": "deepseek", "level": "high", "note": "Recettes redistributives conditionnent le financement durable." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Création de prestations universelles structurelles." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Partiellement compensées par la fiscalité redistributive." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Augmentation gageable sur élargissement de l'assiette de cotisation." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "S'appuie sur l'appareil CAF/Sécu existant mais exige un recrutement massif et coordonné dans la santé, l'éducation et la petite enfance.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25"],
+          "dissenters": ["gemini-1.5-pro", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Recrutement public massif." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Reconstruction simultanée hôpital + petite enfance + EHPAD." },
+            { "model": "deepseek", "level": "high", "note": "Coopération des professionnels du soin et de l'éducation requise." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Infrastructure CAF/Sécu existante absorbe la charge administrative." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Réforme profonde des services publics nécessaire." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Déploiement multi-annuel mais infrastructure publique existante." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Politiques sociales essentiellement domestiques ; faibles dépendances externes au-delà du financement budgétaire global.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek"],
+          "dissenters": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépendance budgétaire indirecte." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Lien indirect avec contraintes UE de soutenabilité." },
+            { "model": "deepseek", "level": "moderate", "note": "Dépendance limitée hors macro." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Politiques essentiellement domestiques." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "low", "note": "Peu de dépendances externes." },
+            { "model": "qwen3.6", "level": "limited", "note": "Leviers fiscaux et administratifs domestiques." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "high"],
+          "note": "Prestations et règles paramétriques amendables par finance lawes ultérieures ; coût politique élevé d'un retour en arrière.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["deepseek", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Paramètres modifiables par majorité ultérieure." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Réversibles juridiquement, coût politique élevé." },
+            { "model": "deepseek", "level": "limited", "note": "Mesures ancrées dans le programme." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Pensions et prestations modifiables par majorité simple." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Mesures sociales ajustables." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Loi de finance peut amender, mais coût politique élevé." }
+          ]
+        }
+      },
+      "confidence": 0.78
+    }
+  }
+}

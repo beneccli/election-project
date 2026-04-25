@@ -1,0 +1,4262 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "jeanluc-melanchon",
+  "version_date": "2026-04-24",
+  "source_models": [
+    {
+      "provider": "openai",
+      "version": "gpt-5.5-thinking"
+    },
+    {
+      "provider": "anthropic",
+      "version": "claude-opus-4-7"
+    },
+    {
+      "provider": "deepseek",
+      "version": "deepseek"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-1.5-pro"
+    },
+    {
+      "provider": "mistralai",
+      "version": "mistral-le-chat-2026-04-25"
+    },
+    {
+      "provider": "qwen",
+      "version": "qwen3.6"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "anthropic",
+      "version": "claude-opus-4-7"
+    },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-25T04:34:09Z"
+  },
+  "summary": "Programme de rupture systémique : 6e République via Assemblée constituante, planification écologique inscrite dans une « règle verte » constitutionnelle, plan d'investissement de 200 Md€, retour de la retraite à 60 ans avec 40 annuités, garantie d'autonomie au seuil de pauvreté (1216€), nationalisations de pôles publics stratégiques (énergie, transports, banque, médicaments, armement), barème d'impôt à 14 tranches, sortie du commandement intégré de l'OTAN et désobéissance assumée aux traités européens incompatibles avec ces objectifs. Les six modèles convergent sur un positionnement à l'extrême-gauche économique et écologiste avec une refonte institutionnelle profonde ; ils divergent surtout sur la magnitude du transfert intergénérationnel, la soutenabilité budgétaire à long terme du système de retraite et la trajectoire d'émissions sous sortie du nucléaire.",
+  "summary_agreement": 0.78,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        -5,
+        -4
+      ],
+      "modal_score": -5,
+      "anchor_narrative": "Six modèles unanimes sur un axe économique radicalement interventionniste (de -5 à -4), partagés à égalité (3-3) entre une lecture anticapitaliste explicite (-5) et une lecture d'économie mixte sous forte régulation publique (-4). Les éléments structurants : pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement ; barème d'impôt à 14 tranches ; ISF climatique ; encadrement des prix de première nécessité ; SMIC à 1600€ net ; conversion par la BCE de la dette publique en titres perpétuels à taux nul ; plan d'investissement de 200 Md€.",
+      "evidence": [
+        {
+          "quote": "Constituer des pôles publics dans les secteurs stratégiques : médicaments, transports et mobilité, banque, énergie, armement",
+          "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee"
+        },
+        {
+          "quote": "Faire la révolution fiscale pour répartir l'effort entre tous selon les revenus.",
+          "source_ref": "sources.md#chapitre-6--partage-des-richesses"
+        },
+        {
+          "quote": "Rompre avec le capitalisme. Et de substituer à la dictature des actionnaires un outil d'intérêt plus collectif pour guider l'économie : la planification écologique.",
+          "source_ref": "sources.md#introduction"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": -4,
+          "reasoning": "Socialisation bancaire, fiscalité progressive, hausse du SMIC, prix administrés et investissement public massif."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": -5,
+          "reasoning": "Program is structurally state-interventionist across pricing, ownership (public poles in banking, energy, pharma, transport, armament), labor (SMIC to €1600), and inheritance (€12M ceiling). Anchor places it at the anti-capitalist end of the axis."
+        },
+        {
+          "model": "deepseek",
+          "score": -5,
+          "reasoning": "Programme explicite sur la reprise en main publique de secteurs stratégiques, la régulation des prix et la fiscalité confiscatoire des hauts patrimoines. Propositions concrètes et affirmées."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": -4,
+          "reasoning": "Program centers on widespread nationalization, public monopolies, strict price controls, and heavy capital taxation."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "score": -4,
+          "reasoning": "Le programme propose une transformation structurelle de l'économie vers un modèle d'économie mixte avec une forte régulation publique, une taxation radicale des grands revenus et du capital, et une nationalisation des secteurs stratégiques."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -5,
+          "reasoning": "Program mandates price controls, nationalizations in energy/transport/banking, a 14-bracket income tax, wealth taxes, and BCE debt monetization, indicating maximum state intervention on the axis."
+        }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        -5,
+        -3
+      ],
+      "modal_score": -4,
+      "anchor_narrative": "Pôle progressiste fortement assumé : constitutionnalisation de l'IVG, du droit de mourir dans la dignité et de la non-marchandisation du corps ; auto-détermination de genre déjudiciarisée ; régularisation des sans-papiers ; droit de vote des étrangers aux élections locales ; lutte structurelle contre les discriminations. Le score modal de -4 (gpt, gemini, qwen) est encadré par claude et mistral (-3, jugés moins radicaux que des mouvements anti-système) et deepseek (-5, mesures « sans ambiguïté »).",
+      "evidence": [
+        {
+          "quote": "Déjudiciariser le changement de sexe à l'état-civil en le rendant libre et gratuit devant un officier d'état civil",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+        },
+        {
+          "quote": "Constitutionaliser le droit de mourir dans la dignité (y compris avec assistance) et l'accès garanti à des soins palliatifs dans la Constitution.",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+        },
+        {
+          "quote": "Constitutionnaliser la non-marchandisation du corps humain et le droit fondamental de disposer de soi en toutes circonstances",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": -3,
+          "reasoning": "Constitutionalising abortion, assisted dying, gender self-determination for minors with one-parent consent, full birthright citizenship, and voting rights for foreign residents in local elections place the program firmly progressive but within the recognisable French left tradition rather than at an extreme pole."
+        },
+        {
+          "model": "deepseek",
+          "position": -5,
+          "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "position": -3,
+          "reasoning": "Le programme radicalise les positions sur les droits individuels (IVG, euthanasie, droits LGBTQIA+), la protection de l'enfance, et la lutte contre les discriminations, mais reste moins radical que des mouvements anti-système."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": -4,
+          "reasoning": "Droits LGBTI, IVG, égalité, accueil des migrants et lutte contre les discriminations structurent l'axe social."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": -3,
+          "reasoning": "Constitutionalising abortion, assisted dying, gender self-determination, full birthright citizenship, and voting rights for foreign residents place the program firmly progressive but within the French left tradition rather than at an extreme pole."
+        },
+        {
+          "model": "deepseek",
+          "score": -5,
+          "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": -4,
+          "reasoning": "Proposes systematic deconstruction of patriarchal structures, free IVG, full constitutional reproductive rights, and strong anti-discrimination measures."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "score": -3,
+          "reasoning": "Le programme radicalise les positions sur les droits individuels (IVG, euthanasie, droits LGBTQIA+), la protection de l'enfance, et la lutte contre les discriminations."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -4,
+          "reasoning": "Strong emphasis on gender parity, LGBTI rights, reproductive freedom, anti-discrimination testing, and regularisation of migrants places the program firmly on the progressive pole."
+        }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        2,
+        3
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Souverainisme de gauche assumé : retrait du commandement intégré de l'OTAN puis sortie progressive de l'organisation, désobéissance aux traités européens incompatibles avec les objectifs écologiques et sociaux (Plan B), protectionnisme écologique et solidaire aux frontières, refus de la libre circulation des capitaux, relocalisation industrielle et alimentaire. Les six modèles distinguent ce souverainisme altermondialiste du nationalisme RN. Modal +3 (4 modèles) ; claude et gemini abaissent à +2, soulignant le maintien de cadres multilatéraux (UN, ONUDI) et l'identité plus internationaliste que nationale du projet.",
+      "evidence": [
+        {
+          "quote": "Se retirer immédiatement du commandement intégré de l'OTAN puis, par étapes, de l'organisation elle-même",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+        },
+        {
+          "quote": "Instaurer le protectionnisme solidaire pour protéger l'industrie d'une concurrence déloyale ou fondée sur le non-respect des droits humains ou l'extractivisme forcené.",
+          "source_ref": "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"
+        },
+        {
+          "quote": "Refuser la libre-circulation des capitaux nous empêche de reprendre le pouvoir sur le secteur financier.",
+          "source_ref": "sources.md#chapitre-17--europe"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 2,
+          "reasoning": "The Plan A/Plan B EU strategy explicitly elevates national constitutional norms above EU law and commits to unilateral disobedience — operationally a sovereigntist program. NATO withdrawal and ecological protectionism reinforce this, but the multilateral, UN-centric register and refusal of identitarian framing keep it below the high-sovereigntist anchor."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "position": 2,
+          "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence — but from an altermondialist rather than nationalist register."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 3,
+          "reasoning": "Sortie de l'OTAN, désobéissance européenne, veto commercial et souveraineté industrielle."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 2,
+          "reasoning": "Plan A/Plan B EU strategy elevates national constitutional norms above EU law; NATO withdrawal and ecological protectionism reinforce this, but multilateral UN-centric register keeps it below the high-sovereigntist anchor."
+        },
+        {
+          "model": "deepseek",
+          "score": 3,
+          "reasoning": "Programme articulant sortie de l'OTAN, désobéissance aux traités européens, protectionnisme et relocalisation. Le registre reste altermondialiste et internationaliste, ce qui le distingue du souverainisme identitaire."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 2,
+          "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "score": 3,
+          "reasoning": "Sortie de l'OTAN, protectionnisme écologique et social, désobéissance aux traités européens incompatibles avec les objectifs écologiques et sociaux. Souveraineté industrielle, alimentaire et énergétique."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 3,
+          "reasoning": "Program rejects EU fiscal/competition rules via Plan B disobedience, exits NATO command, imposes ecological protectionism and border taxes, while maintaining UN-centric multilateralism rather than ethnic nationalism."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        2,
+        2
+      ],
+      "modal_score": 2,
+      "anchor_narrative": "Consensus unanime à +2 : refonte institutionnelle radicale via Assemblée constituante, RIC (révocatoire, abrogatif, législatif, constituant), suppression du 49.3, proportionnelle intégrale, abaissement du droit de vote à 16 ans, séparation stricte État / intérêts financiers. Les modèles décrivent un projet « illibéral / populiste » au sens technique (rupture avec la 5e République et primauté des principes constitutionnels nationaux sur le droit européen) tout en notant la préservation des contre-pouvoirs (indépendance judiciaire renforcée, anti-corruption, pluralisme média).",
+      "evidence": [
+        {
+          "quote": "Convoquer une Constituante pour passer à la 6e République",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple"
+        },
+        {
+          "quote": "Instaurer le Référendum d'initiative citoyenne (RIC), par lequel les citoyens qui réunissent suffisamment de signatures peuvent révoquer des élus, proposer ou abroger une loi et modifier la Constitution",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 2,
+          "reasoning": "RIC, proportionnelle, révocation, parlementarisme et constituante modifient profondément la 5e République."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 2,
+          "reasoning": "Genuinely liberal-democratic reforms (proportional representation, restoration of jurors, anti-corruption, media pluralism, judicial independence) are paired with a constitutional rupture process and explicit primacy of constitutional norms over EU law."
+        },
+        {
+          "model": "deepseek",
+          "score": 2,
+          "reasoning": "Le projet de 6e République avec primauté populaire et contournement des traités existants place le programme dans la zone illibérale/populiste de l'axe, bien que les contre-pouvoirs soient préservés."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 2,
+          "reasoning": "Aims to abolish the 'presidential monarchy', institute the RIC, and strictly separate state and financial interests."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "score": 2,
+          "reasoning": "Refonte institutionnelle radicale : assemblée constituante souveraine, RIC, suppression du 49.3, et limitation des mandats. Démocratisation de la Ve République dans un cadre républicain."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 2,
+          "reasoning": "Constituent assembly, abolition of 49.3, proportional representation, and RIC shift power from executive to direct/parliamentary mechanisms, fitting left-populist institutional redesign."
+        }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [
+        4,
+        4
+      ],
+      "modal_score": 4,
+      "anchor_narrative": "Consensus unanime à +4 : programme le plus écologique évalué. Inscription constitutionnelle de la « règle verte » (ne pas prélever davantage à la nature qu'elle ne reconstitue), planification écologique comme méthode de gouvernement, sortie programmée du nucléaire, objectif 100% renouvelables d'ici 2050, baisse de 65% des émissions d'ici 2030, plan de 200 Md€, rénovation thermique de 700 000 logements/an, ZAN dès 2027, interdiction des pesticides systémiques et des coupes rases, transition agroécologique 100% bio à terme.",
+      "evidence": [
+        {
+          "quote": "Inscrire dans la Constitution le principe de la « règle verte », selon laquelle on ne prélève pas davantage à la nature que ce qu'elle est en état de reconstituer",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique"
+        },
+        {
+          "quote": "Sortir des énergies carbonées : arrêter les subventions aux énergies fossiles, y compris à l'étranger.",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+        }
+      ],
+      "confidence": 0.9,
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 4,
+          "reasoning": "Règle verte, planification, rénovation, biodiversité et sortie des fossiles sont au cœur du projet."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 4,
+          "reasoning": "Constitutional règle verte, 65% emissions cut by 2030, 100% renewables by 2050, nuclear phase-out, €200bn investment plan, 700,000 deep retrofits per year, ZAN by 2027, ban on glyphosate/neonicotinoids."
+        },
+        {
+          "model": "deepseek",
+          "score": 4,
+          "reasoning": "Les propositions écologiques sont centrales, détaillées et structurelles, couvrant l'énergie, l'agriculture, l'eau, la biodiversité et les transports."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 4,
+          "reasoning": "Ecology is the central organizing principle of the economic program, featuring constitutional green rules, an exit from nuclear, and 100% renewables."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "score": 4,
+          "reasoning": "Programme le plus ambitieux sur le plan écologique : constitutionnalisation de la règle verte, sortie du nucléaire, moratoire sur les grands projets inutiles, planification écologique."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 4,
+          "reasoning": "Constitutional green rule, 200bn ecological investment, nuclear phase-out, 100% renewables by 2050, and agroecological transition demonstrate high ecological prioritization and structural planning."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "extreme_gauche",
+      "label_distribution": {
+        "extreme_gauche": 5,
+        "gauche": 1
+      },
+      "anchor_narrative": "Pluralité large à l'extrême-gauche (5/6) : économie de rupture anticapitaliste, progressisme social maximal, écologie de planification constitutionnelle et souverainisme post-européen convergent vers le pôle radical. Qwen seul classe le programme « gauche » classique, jugeant que l'interventionnisme dur et l'écologie planifiée s'inscrivent dans la tradition de gauche historique sans franchir le seuil de l'extrême-gauche.",
+      "confidence": 0.8,
+      "dissent": [
+        {
+          "model": "qwen3.6",
+          "label": "gauche",
+          "reasoning": "Hard economic interventionism combined with strongly progressive social policies and ecologist planning anchors the program in the classical left band; sovereignty and institutional axes modify implementation but do not shift the left-right placement."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "label": "extreme_gauche",
+          "reasoning": "Le label vient surtout de l'économie de rupture, de la désobéissance européenne, de la socialisation financière et de la refondation institutionnelle."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "label": "extreme_gauche",
+          "reasoning": "Economic axis at -5 (anti-capitalist register: rupture with capitalism stated as objective, inheritance ceiling, ECB debt cancellation, broad renationalisation) combined with progressive social/cultural reforms and ecological constitutionalisation."
+        },
+        {
+          "model": "deepseek",
+          "label": "extreme_gauche",
+          "reasoning": "Économie étatiste et anticapitaliste, progressisme sociétal maximal, écologie de rupture et souverainisme post-européen placent le programme à l'extrême-gauche."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "label": "extreme_gauche",
+          "reasoning": "Hard-statist economics, deep social progressivism, and an institutional rupture agenda via a Constituent Assembly pull the program firmly into the extreme-left/radical-left band, breaking explicitly with capitalist norms."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "label": "extreme_gauche",
+          "reasoning": "Les axes économique (-4), social/culturel (-3), souveraineté (+3) et écologique (+4) convergent vers une position extrême-gauche. L'axe institutionnel (+2) renforce cette orientation par une radicalité démocratique."
+        },
+        {
+          "model": "qwen3.6",
+          "label": "gauche",
+          "reasoning": "Hard economic interventionism combined with strongly progressive social policies and ecologist planning anchors the program in the classical left band; sovereignty and institutional axes modify implementation but do not shift the left-right placement."
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "C",
+          "mistral-le-chat-2026-04-25": "D"
+        }
+      },
+      "headline": {
+        "text": "Révolution fiscale (14 tranches, ISF climatique, Zucman) et 200 Md€ d'investissement ; bouclage dépendant d'un bras de fer BCE/UE.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Rupture redistributive structurée, mais soutenabilité et compatibilité monétaire peu démontrées."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Hausse massive de la dépense publique et des prélèvements sur le capital, financée par fiscalité progressive et monétisation BCE; aucun chiffrage agrégé du solde budgétaire."
+          },
+          {
+            "model": "deepseek",
+            "text": "Révolution fiscale (14 tranches d'IR, ISF renforcé, taxe Zucman) et création de pôles publics, mais financement tributaire d'un affrontement avec la BCE et l'UE."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Hausse massive des dépenses via 200 milliards d'investissements, compensée par une révolution fiscale (14 tranches)."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "text": "Révolution fiscale radicale et hausse massive des dépenses publiques via nationalisations et planification écologique."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Redistribution via 14-bracket income tax, wealth taxes, price controls, and 200bn public investment funded by BCE debt monetization."
+          }
+        ]
+      },
+      "summary": "Le programme refonde la politique économique autour de trois leviers : (i) un barème d'impôt sur le revenu à 14 tranches assorti d'un ISF climatique et d'une taxe Zucman sur le patrimoine des milliardaires, (ii) la création de pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement (nationalisations partielles ou totales), et (iii) un plan d'investissement écologique et social de 200 Md€ sur la législature, dont le financement repose sur une conversion par la BCE de la dette publique détenue en titres perpétuels à taux nul. Le SMIC est porté à 1600€ net, les prix des biens de première nécessité sont encadrés et la flat tax est supprimée. Aucune trajectoire chiffrée de solde public n'est présentée. La majorité des modèles (B, 3/6) jugent l'architecture cohérente et concrète ; les dissents pointent l'absence de modélisation budgétaire (gpt, claude → C) ou la dépendance assumée à un affrontement avec la BCE et le Pacte de stabilité (mistral → D).",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du patrimoine et régressivité fiscale",
+          "approach": "Barème d'IR à 14 tranches, restauration et durcissement de l'ISF avec volet climatique, taxe Zucman à 2% sur les milliardaires, suppression de la flat tax, taxation permanente des superprofits, CSG progressive.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ],
+          "reasoning": "Mécanismes de redistribution explicites et chiffrés ciblant directement le décile supérieur ; les six modèles convergent sur la cohérence interne du dispositif.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Sortie de la dette publique des marchés financiers",
+          "approach": "Conversion par la BCE des titres souverains qu'elle détient en dettes perpétuelles à taux nul ; création d'un circuit du Trésor refinancé hors marchés.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ],
+          "reasoning": "Solution articulée mais qui suppose une rupture juridique avec le mandat actuel de la BCE et le traité de fonctionnement de l'UE — donc opérationnellement conditionnée à un affrontement institutionnel.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Précarité de l'emploi et chômage de longue durée",
+          "approach": "Garantie d'emploi pour les chômeurs de longue durée, quota de 5% maximum de contrats précaires dans les grandes entreprises, hausse du SMIC à 1600€ net, encadrement des prix des biens essentiels.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Outils structurels combinant relance par la consommation et stabilisation des contrats ; coût budgétaire récurrent reconnu mais non chiffré.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réaction des marchés et fuite des capitaux sous fiscalité unilatérale du patrimoine",
+          "significance": "Le programme suppose qu'une exit tax et le contrôle des capitaux suffisent à neutraliser les arbitrages d'expatriation fiscale et la repricing du risque souverain ; cette hypothèse n'est ni discutée ni quantifiée.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Effets de seuil sur la compétitivité industrielle et l'investissement étranger",
+          "significance": "Le cumul de la taxation des dividendes, du protectionnisme écologique et des nationalisations partielles peut peser sur la formation brute de capital fixe ; aucune analyse d'impact n'est fournie.",
+          "source_refs": [],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Conformité au cadre budgétaire et monétaire européen",
+          "mechanism": "Le programme assume explicitement la désobéissance au Pacte de stabilité et à l'indépendance de la BCE (dette perpétuelle, monétisation), ce qui dégrade mécaniquement la position juridique et financière de la France vis-à-vis de l'UE.",
+          "severity": 0.75,
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses",
+            "sources.md#chapitre-17--europe"
+          ],
+          "reasoning": "Les six modèles relèvent le même mécanisme : la rupture est revendiquée, donc le « pire » qu'elle pourrait produire est intrinsèque à la trajectoire choisie, pas un effet de bord.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Refus de la BCE de convertir la dette en titres perpétuels à taux nul",
+          "probability": 0.8,
+          "severity": 0.9,
+          "reasoning": "Le mandat d'indépendance de la BCE et la jurisprudence Gauweiler/Weiss interdisent le financement monétaire direct ; un refus rendrait inopérante la pierre angulaire du financement du plan d'investissement de 200 Md€.",
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ]
+        },
+        {
+          "risk": "Réaction des marchés financiers et envolée du spread OAT-Bund",
+          "probability": 0.55,
+          "severity": 0.85,
+          "reasoning": "Combinée aux contrôles de capitaux, la taxation radicale du patrimoine peut provoquer un repricing du risque souverain et une crise de refinancement avant que les rendements fiscaux espérés ne se matérialisent.",
+          "source_refs": [
+            "sources.md#chapitre-6--partage-des-richesses"
+          ],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Inefficacité opérationnelle des nationalisations et de la planification",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "L'expérience historique française montre des difficultés de gestion publique dans certains secteurs (énergie, transports) ; le programme ne détaille pas la gouvernance des pôles publics.",
+          "source_refs": [
+            "sources.md#chapitre-2--par-dela-la-propriete-privee"
+          ],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Barème d'impôt sur le revenu à 14 tranches, ISF restauré avec volet climatique, taxe Zucman à 2% sur le patrimoine des milliardaires",
+          "source_ref": "sources.md#chapitre-6--partage-des-richesses",
+          "quantified": true,
+          "magnitude": "14 tranches; ISF + 2% milliardaires",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan d'investissement écologique et social de 200 Md€ sur la législature",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "200 Md€",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "SMIC à 1600€ net, indexation sur l'inflation, semaine à 32h dans les métiers pénibles, retour aux 35h ailleurs",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "1600€ net / 32h",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Création de pôles publics dans l'énergie, les transports, la banque, les médicaments et l'armement",
+          "source_ref": "sources.md#chapitre-2--par-dela-la-propriete-privee",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Dépenses récurrentes massives (autonomie, 100% Sécu, retraite à 60, 200 Md€) sans solde modélisé ; financement adossé à des hypothèses fiscales et monétaires non garanties.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Hausse durable et structurelle de la dépense publique."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Hausse massive du périmètre des dépenses publiques sans solde chiffré."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Recettes fiscales et monétisation BCE supposées couvrir les dépenses, sans modèle macro publié."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Hypothèses massives sur les recettes et l'annulation BCE de la dette."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Dépenses publiques massives non couvertes par des recettes garanties."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Conversion BCE et rendements fiscaux conditionnent le respect du seuil de 3%."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Mise en œuvre simultanée d'une refonte fiscale, de nationalisations sectorielles et d'un encadrement des prix exige une capacité administrative très supérieure à l'existant.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": [
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Restructuration administrative profonde."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Nationalisations majeures et redéploiement de l'administration fiscale."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Refonte fiscale et nationalisations simultanées exigent des capacités importantes."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Nationalisation d'entités privées majeures et restructuration fiscale sans précédent."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Refonte institutionnelle et coopération européenne improbable."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Le contrôle des prix et la fiscalité requièrent extension des capacités d'enforcement, pas une rupture administrative complète."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Bouclage dépendant de la coopération forcée de la BCE et de la tolérance de l'UE ; sans cela, le plan d'investissement n'a pas de financement crédible.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Dépendance partielle aux contreparties européennes."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Forte dépendance à la coopération BCE/UE et aux partenaires commerciaux."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Dépendance à la coopération BCE et partenaires européens pour la dette perpétuelle."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Dépend de la conformité forcée de l'UE/BCE ou de la rupture institutionnelle."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Dépendance forte BCE et partenaires européens."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Stratégie de dette et tarifs commerciaux soumis aux seuils de tolérance européens."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Les nationalisations et les changements constitutionnels associés sont coûteux à défaire, mais le barème fiscal et le SMIC peuvent être amendés par une majorité ultérieure.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "deepseek",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Réversibilité partielle des outils budgétaires."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Nationalisations difficiles à défaire dans une seule législature."
+            },
+            {
+              "model": "deepseek",
+              "level": "moderate",
+              "note": "Outils fiscaux modifiables ; nationalisations plus difficiles."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Mandats fiscaux constitutionnels et nationalisations difficiles à inverser."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "limited",
+              "note": "Mesures constitutionnelles et nationalisations difficilement réversibles."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "SMIC et IR amendables; nationalisations exigent un démantèlement complexe."
+            }
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {
+          "gpt-5.5-thinking": "B",
+          "claude-opus-4-7": "B",
+          "mistral-le-chat-2026-04-25": "C"
+        }
+      },
+      "headline": {
+        "text": "Garantie d'autonomie 1216€, retraite à 60 ans, 100% Sécu, 500 000 places de crèche, refonte école et dépendance.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Couverture sociale large, freinée par coût et recrutement."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Reconstruction du service public hospitalier, gratuité de l'éducation publique, garantie d'autonomie au seuil de pauvreté, 100% Sécu pour les soins prescrits."
+          },
+          {
+            "model": "deepseek",
+            "text": "Service public de la petite enfance, garantie d'autonomie pour les jeunes, refonte de l'école et de la dépendance, droits des femmes et anti-discriminations."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Restauration de la retraite à 60 ans, 100% Sécu et garantie d'autonomie pour éradiquer la pauvreté."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "text": "Société d'entraide avec droits étendus pour les minorités et les plus vulnérables, mais sans garantie de financement pérenne."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Universal service expansion: retirement at 60, guaranteed minimum income at poverty line, free education and healthcare."
+          }
+        ]
+      },
+      "summary": "Le programme déploie une expansion structurelle de l'État social : garantie d'autonomie portant tout revenu au seuil de pauvreté (1216€/mois), retour de la retraite à 60 ans avec 40 annuités et plancher au SMIC, 100% Sécu (suppression des restes à charge sur prescription), service public de la petite enfance avec 500 000 places de crèche, gratuité des cantines et fournitures scolaires, plan de reconstruction de l'hôpital public, création de 10 000 places en EHPAD public/an, loi cadre contre les violences faites aux femmes (2,6 Md€). Modal A (3/6, deepseek/gemini/qwen) ; les dissents (gpt et claude → B) saluent l'ampleur mais notent la dépendance au recrutement public massif ; mistral (C) souligne l'absence de chiffrage pérenne du financement.",
+      "problems_addressed": [
+        {
+          "problem": "Pauvreté monétaire et précarité jeunes / chômeurs",
+          "approach": "Garantie d'autonomie individuelle portée au seuil de pauvreté (1216€/mois) y compris pour les jeunes adultes en rupture familiale, indexation sur le SMIC.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-7--la-force-de-lentraide",
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Transferts directs et automatiques permettant l'éradication statistique de la grande pauvreté monétaire ; cible et montant chiffrés.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pauvreté des retraités et dégradation du taux de remplacement",
+          "approach": "Retour à 60 ans avec 40 annuités, indexation des pensions sur les salaires (et non plus l'inflation), plancher de pension au SMIC, suppression de la décote.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Inversion paramétrique de la réforme de 2023 ; effet immédiat sur le revenu disponible des cohortes proches de la retraite.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Déserts médicaux et reste à charge sur soins prescrits",
+          "approach": "Plan de reconstruction de l'hôpital public, recrutement médical massif, généralisation du 100% Sécu sur soins prescrits, suppression des franchises et participations forfaitaires.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#chapitre-15--une-approche-de-sante-globale"
+          ],
+          "reasoning": "Mesures structurelles d'accès, dont la temporalité est conditionnée par le recrutement effectif de personnels qualifiés.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Inégalités scolaires et orientation précoce",
+          "approach": "Plan de 500 000 places de crèche, gratuité des cantines et fournitures, suppression de Parcoursup, baisse des effectifs par classe, reconstruction de la voie professionnelle publique.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-5--elever-le-niveau-dinstruction"
+          ],
+          "reasoning": "Combinaison d'investissement amont (petite enfance) et d'égalité d'accès aval (Parcoursup, gratuité) ; cohérence pédagogique reconnue par tous les modèles.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Tension structurelle sur le ratio actifs/retraités sous l'abaissement de l'âge de départ",
+          "significance": "Le programme abaisse l'âge légal sans détailler l'élargissement de l'assiette des cotisations qui couvrirait le surcoût démographique de long terme ; trois modèles sur six relèvent l'absence de modélisation actuarielle.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Disponibilité réelle de la main-d'œuvre santé / petite enfance",
+          "significance": "Les plans de 500 000 places de crèche, 100% Sécu et 10 000 places EHPAD/an supposent une montée en charge des recrutements dans des filières en pénurie chronique, sans calendrier de formation.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coût structurel du système de retraite par répartition",
+          "mechanism": "Le retour à 60 ans avec 40 annuités combiné à la semaine de 32h dans certains secteurs réduit l'offre de travail au moment où le ratio démographique se dégrade ; les recettes nouvelles (cotisations dividendes) ne compensent pas mécaniquement le surcoût.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux"
+          ],
+          "reasoning": "Trois modèles (gemini, qwen, claude) signalent le même mécanisme ; les autres ne le contestent pas frontalement.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "claude-opus-4-7"
+          ],
+          "dissenters": [
+            "deepseek"
+          ]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Pénurie de personnel soignant et éducatif limitant l'objectif 100% Sécu et la création de places de crèche",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Les plans d'embauche supposent un vivier de personnels formés que l'appareil public ne possède pas aujourd'hui ; la formation prend 3 à 7 ans selon les filières.",
+          "source_refs": [
+            "sources.md#chapitre-5--elever-le-niveau-dinstruction",
+            "sources.md#chapitre-15--une-approche-de-sante-globale"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Résistance des professions de santé libérales à la généralisation du 100% Sécu",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "La revalorisation salariale et le passage à un modèle de centres de santé publics prioritaires entrent en tension avec le statut libéral majoritaire en médecine de ville.",
+          "source_refs": [
+            "sources.md#chapitre-15--une-approche-de-sante-globale"
+          ],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Garantie d'autonomie individuelle au seuil de pauvreté (1216€/mois)",
+          "source_ref": "sources.md#chapitre-7--la-force-de-lentraide",
+          "quantified": true,
+          "magnitude": "1216€/mois",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Retraite à 60 ans avec 40 annuités, plancher de pension au SMIC, indexation sur les salaires",
+          "source_ref": "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+          "quantified": true,
+          "magnitude": "60 ans / 40 annuités",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Service public de la petite enfance : 500 000 places de crèche sur 5 ans",
+          "source_ref": "sources.md#chapitre-5--elever-le-niveau-dinstruction",
+          "quantified": true,
+          "magnitude": "500 000 places",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Loi-cadre contre les violences sexistes et sexuelles avec budget dédié de 2,6 Md€",
+          "source_ref": "sources.md#chapitre-10--faire-place-a-la-nouvelle-france",
+          "quantified": true,
+          "magnitude": "2,6 Md€",
+          "supported_by": [
+            "mistral-le-chat-2026-04-25",
+            "deepseek",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Prestations universelles structurelles (autonomie, 100% Sécu, retraite à 60) génèrent une dépense récurrente massive partiellement gagée sur la fiscalité redistributive.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": [
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Dépenses récurrentes universelles élevées."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Coût récurrent significatif des prestations universelles."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Recettes redistributives conditionnent le financement durable."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Création de prestations universelles structurelles."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Partiellement compensées par la fiscalité redistributive."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Augmentation gageable sur élargissement de l'assiette de cotisation."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "S'appuie sur l'appareil CAF/Sécu existant mais exige un recrutement massif et coordonné dans la santé, l'éducation et la petite enfance.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Recrutement public massif."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Reconstruction simultanée hôpital + petite enfance + EHPAD."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Coopération des professionnels du soin et de l'éducation requise."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Infrastructure CAF/Sécu existante absorbe la charge administrative."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Réforme profonde des services publics nécessaire."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Déploiement multi-annuel mais infrastructure publique existante."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Politiques sociales essentiellement domestiques ; faibles dépendances externes au-delà du financement budgétaire global.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Dépendance budgétaire indirecte."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Lien indirect avec contraintes UE de soutenabilité."
+            },
+            {
+              "model": "deepseek",
+              "level": "moderate",
+              "note": "Dépendance limitée hors macro."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Politiques essentiellement domestiques."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "low",
+              "note": "Peu de dépendances externes."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Leviers fiscaux et administratifs domestiques."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "high"
+          ],
+          "note": "Prestations et règles paramétriques amendables par finance lawes ultérieures ; coût politique élevé d'un retour en arrière.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Paramètres modifiables par majorité ultérieure."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Réversibles juridiquement, coût politique élevé."
+            },
+            {
+              "model": "deepseek",
+              "level": "limited",
+              "note": "Mesures ancrées dans le programme."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Pensions et prestations modifiables par majorité simple."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Mesures sociales ajustables."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Loi de finance peut amender, mais coût politique élevé."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "C"
+        }
+      },
+      "headline": {
+        "text": "Sortie du commandement OTAN, pôle public d'armement, police de proximité (fin BAC/BRAV-M), protectionnisme écologique.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Souveraineté cohérente, mais transition diplomatique risquée."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Sortie de l'OTAN, pôle public d'armement, conscription citoyenne de 9 mois au SMIC, refus de la militarisation européenne, posture pro-désarmement nucléaire multilatéral."
+          },
+          {
+            "model": "deepseek",
+            "text": "Sortie de l'OTAN, refondation de la police, politique migratoire humaniste et souveraineté industrielle par la relocalisation et le protectionnisme écologique."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Sortie de l'OTAN, refondation d'une police de proximité (fin des BAC/BRAV-M) et protectionnisme."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "text": "Sortie de l'OTAN, protectionnisme écologique et relocalisation industrielle pour assurer la souveraineté nationale."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "NATO withdrawal, UN-centric diplomacy, ecological protectionism, and proximity police reform with civil liberty safeguards."
+          }
+        ]
+      },
+      "summary": "Le programme déplace simultanément la doctrine de défense, la doctrine de police et la posture commerciale. Sur la défense : retrait du commandement intégré de l'OTAN puis sortie progressive de l'organisation, refus de la militarisation européenne, conscription citoyenne de 9 mois rémunérée au SMIC, création d'un pôle public de l'armement. Sur la police : suppression des BAC et BRAV-M, interdiction du LBD, du plaquage ventral et de la nasse, restauration d'une police de proximité, réforme de l'IGPN. Sur le commerce : protectionnisme écologique aux frontières (taxe carbone, exigences sociales et environnementales sur les importations), relocalisation industrielle, refus de la libre circulation des capitaux. Modal B (4/6) : programme cohérent avec coûts détaillés ; gpt et claude (C) soulignent les fenêtres de vulnérabilité de transition et l'absence de plan d'interopérabilité post-OTAN.",
+      "problems_addressed": [
+        {
+          "problem": "Violences policières et perte de confiance vis-à-vis de l'institution",
+          "approach": "Suppression des BAC et BRAV-M, interdiction des techniques létales (LBD, plaquage ventral, nasse), réforme de l'IGPN avec contrôle externe, formation aux droits humains, police de proximité.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte",
+            "sources.md#chapitre-7--la-force-de-lentraide"
+          ],
+          "reasoning": "Ensemble opérationnel ciblant les unités et techniques associées aux maintien de l'ordre les plus contestés.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Dépendance industrielle et énergétique stratégique",
+          "approach": "Plan de relocalisation industrielle, protectionnisme écologique aux frontières, sortie programmée du nucléaire et investissement renouvelables, pôle public de l'armement.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"
+          ],
+          "reasoning": "Combine outils tarifaires, capital public et planification ; coûts industriels reconnus mais non chiffrés au global.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Alignement militaire réduisant l'autonomie diplomatique",
+          "approach": "Retrait du commandement intégré de l'OTAN, diplomatie altermondialiste UN-centrique, refus de la militarisation européenne, désarmement nucléaire multilatéral.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+          ],
+          "reasoning": "Décrochage structurel du cadre atlantiste, partiellement compensé par la conscription citoyenne et la défense souveraine ; pas de plan d'interopérabilité détaillé.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Fenêtre de vulnérabilité défensive pendant la sortie de l'OTAN",
+          "significance": "Le retrait du commandement intégré sans plan détaillé de remontée capacitaire conventionnelle (renseignement, défense aérienne, logistique) crée un déficit transitoire de 5 à 10 ans non chiffré.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Conséquences sur l'industrie de défense exportatrice",
+          "significance": "L'opt-out des programmes européens de défense (Commissaire à la Défense, BITDE) fragilise les contrats coopératifs (Eurofighter, MGCS, SCAF) et les exports français.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coordination de défense européenne",
+          "mechanism": "L'opt-out des programmes européens de défense et l'opposition à un Commissaire européen à la Défense isole la BITDE française au moment où les budgets de défense de l'UE croissent.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#chapitre-17--europe"
+          ],
+          "reasoning": "Choix politique explicite ; conséquence reconnue par gemini, claude et qwen comme effet direct du programme.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Résistance interne des syndicats de police au démantèlement BAC/BRAV-M",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "Le démantèlement d'unités spécialisées et la réforme de l'IGPN heurtent frontalement les organisations professionnelles dominantes.",
+          "source_refs": [
+            "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Représailles commerciales contre la taxe carbone aux frontières et le protectionnisme écologique",
+          "probability": 0.65,
+          "severity": 0.65,
+          "reasoning": "Les mesures unilatérales de tarification carbone et de barrières non-tarifaires peuvent déclencher des contentieux OMC et des contractions d'exports.",
+          "source_refs": [
+            "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins",
+            "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"
+          ],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Dépendance aux matières premières critiques",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "La relocalisation industrielle et le déploiement renouvelable supposent un accès aux terres rares et métaux critiques aujourd'hui dominés par des puissances étrangères.",
+          "source_refs": [
+            "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Retrait immédiat du commandement intégré de l'OTAN, sortie progressive de l'organisation",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix",
+          "quantified": false,
+          "magnitude": "retrait complet",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Création d'un pôle public de l'armement et nationalisation des industries stratégiques de défense",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression des BAC et BRAV-M, interdiction du LBD, du plaquage ventral et de la nasse",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Protectionnisme écologique : taxe carbone aux frontières et exigences sociales/environnementales sur les importations",
+          "source_ref": "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "high"
+          ],
+          "note": "Reconfiguration des budgets de défense et de police plutôt que création nette ; remontée capacitaire post-OTAN justifie le niveau modéré.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Coût élevé de la transition."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Reconfiguration budgétaire avec investissement capacitaire ciblé."
+            },
+            {
+              "model": "deepseek",
+              "level": "moderate",
+              "note": "Coût significatif de la souveraineté industrielle."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Reconstruction de capacités conventionnelles indépendantes."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Coût élevé de la relocalisation et de la restructuration industrielle."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Réallocation budgétaire avec impact net modéré."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Reorganisation simultanée de la police, de la doctrine militaire et du dispositif douanier ; coordination interministérielle complexe.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Réforme multi-front."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Réorganisation complète de la doctrine et des unités."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Réforme institutionnelle et opérationnelle de la police et de la défense."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Logistique RH significative mais bornée."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Coordination État/industriels/partenaires sociaux complexe."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Restructuration policière et administration tarifaire bornées."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Diplomatie altermondialiste et chaînes critiques dépendent de la coopération de partenaires non-occidentaux et de l'accès aux matières premières.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Dépendance partielle."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Dépendance forte aux partenaires non-occidentaux."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Dépendance aux matières premières et partenaires non-OTAN."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Dépendance à la volonté des nations du Sud global."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Dépendance forte à la coopération européenne."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Réponses des partenaires conditionnent la posture commerciale et défensive."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Retraits de traités et démantèlements d'unités peuvent être inversés par décret ou loi ; pôles publics d'armement plus difficiles à défaire.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Retraits réversibles."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Pôle public d'armement et désarmement difficiles à inverser."
+            },
+            {
+              "model": "deepseek",
+              "level": "moderate",
+              "note": "Décisions diplomatiques réversibles."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Retraits de traités et unités réversibles."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "limited",
+              "note": "Nationalisations et protectionnisme difficilement réversibles."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Décrets exécutifs / législatifs réversibles."
+            }
+          ]
+        }
+      },
+      "confidence": 0.72
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {
+          "gpt-5.5-thinking": "B",
+          "claude-opus-4-7": "C",
+          "mistral-le-chat-2026-04-25": "B"
+        }
+      },
+      "headline": {
+        "text": "Constituante (article 11) pour la 6e République parlementaire avec RIC, proportionnelle intégrale et abolition du 49.3.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Refondation démocratique ambitieuse avec risque de transition."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Convocation d'une Constituante par référendum article 11 pour passer à la 6e République, RIC à 4 modalités, scrutin proportionnel, abolition du 49.3."
+          },
+          {
+            "model": "deepseek",
+            "text": "Assemblée constituante pour une 6e République parlementaire avec RIC, référendum révocatoire, et séparation stricte de l'argent et de l'État."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Abolition de la monarchie présidentielle via la 6e République et instauration du RIC."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "text": "Refonte radicale des institutions avec Assemblée Constituante, RIC, et suppression du 49.3."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Transition to 6th Republic via constituent assembly, proportional representation, RIC, and strict anti-lobbying rules."
+          }
+        ]
+      },
+      "summary": "Le programme propose une rupture institutionnelle complète : convocation d'un référendum article 11 pour engager le processus constituant, élection d'une Assemblée constituante non-cumulable avec un mandat parlementaire actuel, rédaction d'une nouvelle Constitution sur 24 mois, ratification par référendum. La 6e République est parlementaire avec proportionnelle intégrale, abolition du 49.3, droit de vote à 16 ans, RIC à 4 modalités (révocatoire, abrogatif, législatif, constituant). Mesures de séparation État/argent : période de viduité de 10 ans pour les passages public/privé, fin du monopole médiatique du Medef, lutte renforcée contre la corruption, indépendance judiciaire renforcée. Modal A (3/6, deepseek/gemini/qwen) ; gpt et mistral notent les risques de transition (B) ; claude (C) souligne la tension structurelle entre l'élargissement des contre-pouvoirs et l'élévation des principes constitutionnels nationaux au-dessus du droit européen.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du pouvoir exécutif et contournement du Parlement",
+          "approach": "Abolition du 49.3 et des votes bloqués, passage à une République parlementaire, proportionnelle intégrale, scrutin obligatoire, gouvernement responsable devant l'Assemblée.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Suppression directe des outils de domination exécutive ; tous les modèles convergent sur la cohérence du dispositif.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Crise de confiance et délégitimation du système politique",
+          "approach": "Référendum d'initiative citoyenne (RIC) à 4 modalités, droit de vote à 16 ans, abaissement du seuil de signatures, transparence des finances de campagne et anti-corruption.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Outils de réappropriation citoyenne du processus législatif ; tous les modèles citent la même architecture.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Capture des institutions par les intérêts économiques privés",
+          "approach": "Délai de viduité de 10 ans pour les passages public/privé, plan national anti-corruption, fin du monopole médiatique, indépendance judiciaire renforcée.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Combinaison de mesures structurelles et d'outils de contrôle ; cinq modèles sur six citent le délai de 10 ans.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Mécanismes de gestion d'un blocage de la Constituante",
+          "significance": "Le programme ne précise pas la procédure si l'Assemblée constituante échoue à produire un texte ratifiable dans le délai de 24 mois ; aucun mécanisme de sortie n'est décrit.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Stabilité législative à court terme",
+          "mechanism": "La proportionnelle intégrale combinée à un régime parlementaire pur augmente mathématiquement la probabilité de coalitions volatiles dans le contexte français actuel.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "reasoning": "Effet structurel reconnu par gemini, mistral et claude ; deepseek et qwen y voient un trait positif (parlementarisme assumé) plutôt qu'une dégradation.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "claude-opus-4-7"
+          ],
+          "dissenters": [
+            "deepseek",
+            "qwen3.6"
+          ]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Rejet du projet de Constitution par référendum",
+          "probability": 0.4,
+          "severity": 0.85,
+          "reasoning": "La nouvelle Constitution doit être approuvée par référendum après 2 ans ; un « non » remet à zéro l'ensemble du projet institutionnel et déclenche une crise de légitimité.",
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Conflits entre la nouvelle Constitution et le droit européen",
+          "probability": 0.7,
+          "severity": 0.75,
+          "reasoning": "L'élévation des principes constitutionnels nationaux au-dessus du droit dérivé européen entre en tension avec la jurisprudence Costa/ENEL et déclenche des contentieux structurels.",
+          "source_refs": [
+            "sources.md#chapitre-17--europe"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "mistral-le-chat-2026-04-25",
+            "deepseek"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Calendrier de la Constituante débordant la fenêtre de stabilité législative",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "24 mois de rédaction + référendum créent une période d'incertitude institutionnelle pendant laquelle deux ordres normatifs coexistent.",
+          "source_refs": [
+            "sources.md#chapitre-1--le-pouvoir-au-peuple"
+          ],
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Référendum article 11 pour engager le processus constituant et création d'une Assemblée constituante non-cumulable",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": "réécriture constitutionnelle complète",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "RIC à 4 modalités (révocatoire, abrogatif, législatif, constituant)",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression du 49.3 et des votes bloqués, proportionnelle intégrale, droit de vote à 16 ans",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Délai de viduité de 10 ans pour les passages public/privé",
+          "source_ref": "sources.md#chapitre-1--le-pouvoir-au-peuple",
+          "quantified": true,
+          "magnitude": "10 ans",
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Coût direct essentiellement logistique (élections supplémentaires, fonctionnement Constituante) ; faible face aux mesures macroéconomiques.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "deepseek"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Score générique (template) ; peu plausible pour le bloc institutionnel."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Coût direct faible."
+            },
+            {
+              "model": "deepseek",
+              "level": "limited",
+              "note": "Coût logistique limité."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Coût budgétaire négligeable."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "low",
+              "note": "Coût institutionnel principalement logistique."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Coût direct minimal."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Organisation de référendums multiples, élection d'une Constituante, rédaction sur 24 mois et ratification finale exigent une logistique électorale complexe.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Logistique élections multi-niveaux."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Calendrier référendaire chargé."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Mobilisation citoyenne et coopération politique requises."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Élections nationales complexes mais bornées."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Mobilisation citoyenne et coopération des acteurs politiques."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Logistique électorale, drafting juridique et seuils de ratification."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Processus essentiellement domestique ; dépendance externe principalement liée à la friction avec le droit européen.",
+          "supported_by": [
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Score générique (template)."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Friction avec ordre juridique européen."
+            },
+            {
+              "model": "deepseek",
+              "level": "low",
+              "note": "Processus principalement domestique."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Procédure légale interne."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "low",
+              "note": "Peu de dépendances externes."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Indépendance procédurale dominante."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Une nouvelle Constitution est l'instrument juridique le plus difficile à inverser ; les changements de mode de scrutin sont structurellement durables.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "deepseek",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Score générique (template)."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Constitution durable, mode de scrutin difficilement inversé."
+            },
+            {
+              "model": "deepseek",
+              "level": "limited",
+              "note": "Modifications constitutionnelles difficilement réversibles."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Cadre constitutionnel le plus difficile à inverser."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "limited",
+              "note": "Réformes constitutionnelles durables."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Entrenchment constitutionnel et système électoral durables sans supermajorité."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "deepseek": "A",
+          "gemini-1.5-pro": "A"
+        }
+      },
+      "headline": {
+        "text": "Règle verte constitutionnelle, -65% GES en 2030, sortie du nucléaire, 100% ENR en 2050, 200 Md€, 700 000 rénovations/an.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Ambition écologique forte, fragile sur énergie et capacité industrielle."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Règle verte constitutionnelle, -65% d'émissions GES en 2030, 100% renouvelables en 2050 sans nucléaire, plan d'investissement écologique de 200Md€, ZAN dès 2027."
+          },
+          {
+            "model": "deepseek",
+            "text": "Règle verte constitutionnelle, 200 Md€ d'investissement, 100% ENR en 2050, sortie du nucléaire, agriculture bio et protectionnisme écologique."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Planification écologique constitutionnelle (règle verte), sortie du nucléaire et 100% renouvelable."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "text": "Planification écologique radicale avec sortie du nucléaire, 100% renouvelables, et règle verte constitutionnalisée."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Constitutional green rule, 200bn ecological planning, nuclear phase-out, and 100% renewable energy target by 2050."
+          }
+        ]
+      },
+      "summary": "Le programme inscrit l'écologie au plus haut niveau juridique via la « règle verte » constitutionnelle (interdiction de prélever davantage à la nature qu'elle ne reconstitue) et organise la transition par la planification : trajectoire de -65% d'émissions GES en 2030, 100% renouvelables en 2050, sortie programmée du nucléaire (annulation des EPR2, fin de la prolongation au-delà de la durée de conception), 200 Md€ d'investissement, plan de rénovation thermique de 700 000 logements/an, ZAN dès 2027, moratoire sur les mégabassines, fin des subventions aux énergies fossiles y compris à l'étranger, transition agroécologique vers une agriculture 100% bio à terme, interdiction des coupes rases et des pesticides systémiques. Modal B (4/6) : ambition reconnue, fragilités sur la transition énergétique et la chaîne d'approvisionnement ; deepseek et gemini (A) jugent l'architecture suffisamment détaillée et chiffrée pour atteindre la note maximale.",
+      "problems_addressed": [
+        {
+          "problem": "Émissions de gaz à effet de serre et dette écologique",
+          "approach": "Trajectoire -65% d'émissions GES en 2030, plan d'investissement de 200 Md€, fin des subventions aux fossiles, taxe carbone aux frontières.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#chapitre-12--planification-ecologique",
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Objectifs chiffrés alignés sur l'Accord de Paris, financement explicite et instrument constitutionnel ; consensus large des modèles.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Précarité thermique et passoires énergétiques",
+          "approach": "Plan de rénovation thermique de 700 000 logements/an, financement public et obligation de rénovation, encadrement des loyers conditionné au DPE.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Cible chiffrée ambitieuse (vs ~370 000/an actuels) ; impact direct sur facture énergétique et émissions du bâtiment.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Érosion de la biodiversité et pression agro-industrielle",
+          "approach": "Interdiction des pesticides systémiques (glyphosate, néonicotinoïdes), interdiction des coupes rases sauf impasse sanitaire, ZAN dès 2027, moratoire sur les mégabassines, transition vers 100% bio.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#chapitre-14--protection-des-biens-communs-et-des-droits-de-lespece"
+          ],
+          "reasoning": "Combinaison d'interdictions, d'objectifs spatiaux (ZAN) et d'instruments économiques ; approche systémique.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Stabilité du réseau électrique pendant la sortie du nucléaire",
+          "significance": "L'objectif 100% renouvelables sans nucléaire en 2050, combiné à l'électrification des transports et du chauffage, exige des capacités de stockage et de pilotage de la demande dont le calendrier de déploiement n'est pas chiffré.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "claude-opus-4-7",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Acceptabilité sociale locale du déploiement renouvelable",
+          "significance": "Pas d'analyse des résistances locales (éolien terrestre, solaire au sol, lignes THT) ni des conflits d'usage avec l'agriculture et la forêt.",
+          "source_refs": [],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Dépendance aux matières premières critiques pour les renouvelables",
+          "mechanism": "Le déploiement 100% renouvelables requiert des terres rares, du cuivre, du lithium et du cobalt majoritairement importés, ce qui entre en tension avec l'objectif de relocalisation.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Tension structurelle reconnue par gemini, mistral et qwen ; partiellement adressée par les plans de relocalisation industrielle.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Risque transitoire sur les rendements agricoles",
+          "mechanism": "L'interdiction immédiate des pesticides clés et le passage accéléré au 100% bio peuvent réduire les rendements à court terme avant que les alternatives agroécologiques ne soient industrialisées.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "reasoning": "Effet bien documenté dans la littérature agronomique ; gemini et claude le signalent.",
+          "supported_by": [
+            "gemini-1.5-pro",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Goulots d'étranglement RH et matériaux pour la rénovation à 700 000 logements/an",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "L'objectif dépasse de loin la capacité actuelle du secteur (~370 000/an); formation et chaînes d'approvisionnement non détaillées.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro",
+            "qwen3.6",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Déploiement renouvelables limité par la chaîne d'approvisionnement en métaux critiques",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "Le 100% renouvelables suppose un accès aux terres rares et au lithium dont l'offre mondiale est contrainte.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "supported_by": [
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Recours juridiques et délais administratifs ralentissant les projets",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "Complexité du droit de l'environnement et risques contentieux peuvent décaler les jalons de la trajectoire 2030.",
+          "source_refs": [
+            "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+          ],
+          "supported_by": [
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Inscription constitutionnelle de la « règle verte »",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique",
+          "quantified": false,
+          "magnitude": "mandat constitutionnel",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Sortie du nucléaire et 100% renouvelables d'ici 2050",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "100% ENR / 2050",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Plan de rénovation thermique de 700 000 logements/an",
+          "source_ref": "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique",
+          "quantified": true,
+          "magnitude": "700 000/an",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Trajectoire -65% d'émissions GES en 2030",
+          "source_ref": "sources.md#chapitre-12--planification-ecologique",
+          "quantified": true,
+          "magnitude": "-65% vs référence",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Investissement de 200 Md€ et rénovation thermique massifs représentent un engagement public historique.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25"
+          ],
+          "dissenters": [
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Investissement public massif."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "200 Md€ et rénovations historiques."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Investissement écologique sans précédent."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Dépense publique historique pour la transition."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "high",
+              "note": "Investissements massifs nécessaires."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "200 Md€ partiellement gageables sur taxe carbone et redirection des dividendes."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Mise à l'échelle de la rénovation, démantèlement nucléaire et restructuration agricole sont des défis industriels et logistiques majeurs.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "mistral-le-chat-2026-04-25"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Capacité industrielle limitée."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Multi-secteur, coordination très complexe."
+            },
+            {
+              "model": "deepseek",
+              "level": "high",
+              "note": "Mise à l'échelle simultanée énergie/agriculture/bâti."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Démantèlement nucléaire et rénovations massives."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Coordination État/collectivités/privés réalisable."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Sortie nucléaire + réseau + rénovation requièrent coordination multi-secteur."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Dépendance aux matières premières critiques et aux technologies vertes importées ; partiellement compensée par la relocalisation programmée.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Technologies vertes partiellement importées."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Dépendance forte aux chaînes d'approvisionnement critiques."
+            },
+            {
+              "model": "deepseek",
+              "level": "moderate",
+              "note": "Dépendance partielle aux chaînes d'approvisionnement."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "Renouvelables dépendent de matières importées."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Dépendance aux technologies vertes."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Mitigée par les plans de relocalisation."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": null,
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Démantèlement nucléaire et règle verte constitutionnelle quasi-irréversibles ; investissements en infrastructure et rénovations créent une dépendance de sentier durable.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek",
+            "gemini-1.5-pro",
+            "mistral-le-chat-2026-04-25",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Score générique (template)."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Démantèlement nucléaire et règle constitutionnelle peu réversibles."
+            },
+            {
+              "model": "deepseek",
+              "level": "low",
+              "note": "Constitutionalisation et infra durables."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Démantèlement nucléaire et règles constitutionnelles essentiellement irréversibles."
+            },
+            {
+              "model": "mistral-le-chat-2026-04-25",
+              "level": "moderate",
+              "note": "Changements structurels difficiles à inverser."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Sunk cost et dépendance de sentier."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "intervalle qualitatif large : de ~+1400€/an net pour les <35 ans (qwen) à ~-1500€/an net pour les <35 ans (mistral), avec gpt/claude/gemini concluant à un effet net mixte selon le décile",
+      "units": "€/personne/an",
+      "confidence": 0.5,
+      "caveats": "Les modèles divergent sur le signe : qwen identifie un transfert old_to_young (front-loading vers les jeunes), mistral et deepseek un young_to_old (charge fiscale et coût pension), gpt/claude/gemini un effet mixte selon le décile. Aucun ne fournit de modélisation actuarielle ; tous reposent sur l'hypothèse de réussite du Plan B européen."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Effet ambigu : la garantie d'autonomie de 1216€/mois et la hausse du SMIC bénéficient aux jeunes adultes, mais l'extension de la fiscalité progressive et la cotisation BPP pèsent sur les jeunes actifs aisés. Modèles partagés entre gain net (claude, deepseek, gemini, qwen) et charge nette (mistral).",
+        "quantified": "+1216€/mois plancher pour les jeunes en autonomie ; effet net variable selon décile (-400€/an à +1216€/mois selon les modèles)"
+      },
+      "housing": {
+        "summary": "Encadrement des loyers, livraison de 200 000 logements publics/an, plafonds successoraux (5 logements max) et réquisition des biens vacants améliorent l'accès au logement.",
+        "quantified": "200 000 logements publics/an ; +15% indice d'accessibilité estimé (qwen)"
+      },
+      "pension_outlook": {
+        "summary": "Retour à 60 ans et plancher au SMIC sécurisent les paramètres ; soutenabilité long terme contestée — claude estime un taux de remplacement maintenu, mistral l'estime en baisse vers ~55%.",
+        "quantified": "âge 60 / 40 annuités ; taux de remplacement projeté : 55–74% selon les modèles"
+      },
+      "labor_market": {
+        "summary": "SMIC à 1600€ net, semaine de 32h dans les métiers pénibles, quota de 5% de contrats précaires dans les grandes entreprises augmentent salaires d'entrée et stabilité.",
+        "quantified": "+200€/mois minimum / quota 5% précaires"
+      },
+      "environmental_debt": {
+        "summary": "Investissement écologique de 200 Md€ et règle verte réduisent la dette écologique transmise ; effet positif structurel pour les jeunes générations.",
+        "quantified": "-65% émissions GES en 2030 ; -12% exposition projetée aux dommages climatiques en 2040 (qwen)"
+      },
+      "narrative_summary": "Pour un jeune de 25 ans en 2027, le programme combine un effet redistributif fortement positif (autonomie, logement, climat) et une fiscalité plus lourde sur les jeunes actifs aisés. Le solde dépend de la position dans la distribution des revenus et de la réussite du Plan B européen."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Effet redistributif intra-cohorte : indexation sur les salaires et plancher au SMIC pour les pensions modestes ; alourdissement de la fiscalité du capital et de la transmission pour les retraités aisés (ISF climatique, taxe Zucman, plafond successoral 12 M€).",
+        "quantified": "+800€/an pour le décile supérieur (qwen) ; pensions modestes alignées sur le SMIC"
+      },
+      "pension": {
+        "summary": "Indexation sur les salaires (et non plus l'inflation), plancher au SMIC, suppression de la décote ; gain net pour les pensions modestes et stabilité du pouvoir d'achat pour les pensions médianes.",
+        "quantified": "indexation salaire / plancher SMIC / +0 à +400€/mois selon la base"
+      },
+      "healthcare": {
+        "summary": "100% Sécu sur les soins prescrits, plan de reconstruction de l'hôpital public, expansion des EHPAD publics ; baisse marquée du reste à charge.",
+        "quantified": "-300€/an de RAC estimé (qwen) ; 100% couverture prescrits"
+      },
+      "narrative_summary": "Pour un retraité de 65 ans en 2027, l'effet est globalement positif (santé, pension modeste indexée), avec une charge fiscale concentrée sur les retraités à fort patrimoine via l'ISF climatique, la taxe Zucman et le plafonnement successoral."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Restauration immédiate de la retraite à 60 ans avec plancher SMIC ; soutenabilité long terme contestée selon que l'élargissement de l'assiette de cotisations couvre ou non la dérive démographique.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [
+              -1,
+              2
+            ],
+            "note": "Effet immédiat positif via retour à 60 ans et plancher SMIC ; gpt l'évalue négativement comme report de charge, mistral le juge limité.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Effet considéré comme avantage transféré aux cohortes plus âgées."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Restauration de la retraite à 60 ans bénéficie immédiatement aux cohortes proches du départ."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Mesures paramétriques effectives dès la première législature."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Restauration immédiate de l'âge 60 et plancher SMIC."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 0,
+                "note": "Effet à court terme limité sous hypothèses centrales."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Restauration de l'âge 60 et plancher relèvent les niveaux de prestation immédiats."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              -2,
+              1
+            ],
+            "note": "Stabilisation du système ; trois modèles (claude, gemini, mistral) maintiennent un gain modéré, gpt et deepseek anticipent une dérive.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -2,
+                "note": "Pression démographique non absorbée."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Niveau soutenu sous hypothèse d'élargissement de l'assiette."
+              },
+              {
+                "model": "deepseek",
+                "score": -1,
+                "note": "Pression structurelle sur le financement."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Bénéfices maintenus, pression sur le financement."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 1,
+                "note": "Effet central : retraite à 60 ans après 40 années de cotisation."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Stabilisation : pression démographique compense indexation."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": null,
+            "score_interval": [
+              -2,
+              2
+            ],
+            "note": "Désaccord profond sur la soutenabilité long terme : -2 (gpt, deepseek), -1 (claude, qwen), 0 (gemini), +2 (mistral) selon hypothèses.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -2,
+                "note": "Soutenabilité actuarielle dégradée à long terme."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Dérive sans réforme structurelle complémentaire."
+              },
+              {
+                "model": "deepseek",
+                "score": -2,
+                "note": "Dérive démographique non couverte."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Soutenabilité conditionnée à la relocalisation et plein emploi."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 2,
+                "note": "Effet long-horizon amplifié par dynamiques cumulatives."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Cohorte vieillissante distend le financement par répartition."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Forte expansion nominale à court terme financée par la conversion BCE espérée et par les recettes fiscales ; trajectoire long terme dépendante de la croissance et de l'aboutissement du Plan B.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -2,
+            "score_interval": [
+              -3,
+              -1
+            ],
+            "note": "Hausse marquée de la dette à court terme (consensus) ; gemini la qualifie de catastrophique, gpt la juge limitée.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Dégradation contenue à court terme."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -2,
+                "note": "Forte expansion budgétaire à court terme."
+              },
+              {
+                "model": "deepseek",
+                "score": -2,
+                "note": "Augmentation marquée du ratio dette/PIB."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": -3,
+                "note": "Augmentation nominale forte due à 200 Md€ et expansion sociale."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": -2,
+                "note": "Ratio dette/PIB croît avec dépenses et croissance ralentie."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -2,
+                "note": "Investissement et expansion déficitaire haussent le ratio."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              1
+            ],
+            "note": "Stabilisation pour la majorité (4/6) si la conversion BCE aboutit ; gemini et mistral divergent sur l'effet.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Dégradation contenue."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Pression maintenue sans conversion BCE effective."
+              },
+              {
+                "model": "deepseek",
+                "score": -1,
+                "note": "Charge persistante en l'absence d'intervention BCE."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": -2,
+                "note": "Charge structurelle élevée sans intervention BCE explicite."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 1,
+                "note": "Stabilisation par rebond de croissance et consolidation fiscale."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Stabilisation conditionnée à la conversion BCE."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              2
+            ],
+            "note": "Convergence vers une trajectoire neutre pour 4 modèles ; gemini et mistral divergent (gain ou contraction).",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Stabilisation à long terme sous hypothèses centrales."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Convergence vers la trajectoire de référence."
+              },
+              {
+                "model": "deepseek",
+                "score": 0,
+                "note": "Effet neutralisé par maturation des recettes."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": -1,
+                "note": "Retours d'investissement (économies d'énergie) compensent partiellement."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 2,
+                "note": "Soutenabilité améliorée via restructuration et croissance."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Convergence vers la baseline avec maturation des recettes."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Trajectoire structurellement favorable selon 5 modèles (planification, règle verte, ENR) ; mistral inverse le signe en interprétant la transition comme un coût économique net.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              -1,
+              2
+            ],
+            "note": "Effet positif initial via plastiques, planification, fin des subventions fossiles ; mistral, seul, l'évalue négativement (coût de transition).",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Effets immédiats forts."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Lancement du plan d'investissement."
+              },
+              {
+                "model": "deepseek",
+                "score": 1,
+                "note": "Investissement et règles entrent en vigueur."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Bascules statutaires immédiates : plastiques, objectif -65%."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": -1,
+                "note": "Cadre interprétatif inverse : coûts de transition à court terme."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Investissements et rénovations amorcent la baisse d'émissions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              -2,
+              3
+            ],
+            "note": "Décarbonation marquée pour 4 modèles ; gemini évalue +3, mistral conserve son signe inverse (-2).",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Massification du plan."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Diffusion structurelle de la transition."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "ENR et bâti livrent les premiers gains."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 3,
+                "note": "Rénovations et trajectoire 2030 livrent des baisses massives."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": -2,
+                "note": "Coût économique central de la transition."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Modernisation réseau et déploiement ENR atteignent une décarbonation substantielle."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 3,
+            "score_interval": [
+              -3,
+              3
+            ],
+            "note": "Trois modèles évaluent l'effet maximal positif ; gpt et claude maintiennent +2, mistral inverse à -3.",
+            "supported_by": [
+              "deepseek",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Effets cumulés soutenus."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Trajectoire de décarbonation maintenue."
+              },
+              {
+                "model": "deepseek",
+                "score": 3,
+                "note": "Atteinte de la neutralité, dette écologique réduite."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 3,
+                "note": "100% renouvelables et transition écologique atteints."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": -3,
+                "note": "Maximum du coût économique de transition."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 3,
+                "note": "100% ENR et agroécologie abaissent l'exposition climatique structurellement."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "mistral-le-chat-2026-04-25"
+        ]
+      },
+      {
+        "row": "health",
+        "dimension_note": "Reconstruction du service public hospitalier et 100% Sécu améliorent l'accès et réduisent le reste à charge sur les trois horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Effet positif initial pour 4 modèles via suppression franchises et embauches ; deepseek et mistral notent une montée en charge plus longue.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Embauches et 100% Sécu effectifs."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Suppression du reste à charge sur soins prescrits."
+              },
+              {
+                "model": "deepseek",
+                "score": 0,
+                "note": "Reconstitution prend du temps."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Suppression des franchises et embauches accroissent l'accès."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 0,
+                "note": "Effet limité à court terme : reconstruction prend du temps."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Réouverture de services et recrutements réduisent les déserts."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Effet structurel : pôles publics et stratégies déserts médicaux livrent leurs premiers résultats.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Effets en plein régime."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Pôles publics opérationnels."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Couverture prévention et soins étendue."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Pôles publics et stratégie déserts livrent leurs effets."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 1,
+                "note": "Accès amélioré, réouverture des hôpitaux."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Remboursement intégral et prévention diminuent la charge des maladies chroniques."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Effet positif maintenu via stabilité des infrastructures et bénéfices des politiques nutritionnelles et environnementales.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "deepseek",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Effet long terme cumulé."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Maturation tempérée par contraintes RH."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Système consolidé."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Santé populationnelle améliorée."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 2,
+                "note": "Couverture universelle et gains sanitaires environnementaux."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Infrastructure publique soutenue maintient les gains d'accès."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Gratuité étendue, fin de Parcoursup, baisse des effectifs par classe et reconstruction de la voie professionnelle améliorent l'accumulation de capital humain.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Effet positif immédiat via gratuité (cantines, fournitures) et abolition de Parcoursup ; gemini évalue +2, mistral 0.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Mise en place rapide."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Gratuité opérationnelle."
+              },
+              {
+                "model": "deepseek",
+                "score": 1,
+                "note": "Abolition Parcoursup, gratuité matérielle."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Gratuité immédiate et abolition de Parcoursup."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 0,
+                "note": "Effet limité : réformes prennent du temps."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Suppression des frais et recrutements abaissent les barrières d'accès."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Effet structurel : baisse effectifs, voie pro reconstruite, dispersion des résultats des cohortes.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Plein effet."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Cohortes complètes en système réformé."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Refonte structurelle effective."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Réduction des effectifs et reconstruction voie pro."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 1,
+                "note": "Accès amélioré, classes réduites."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Cohorte progresse dans le système restructuré, qualifications relevées."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Égalisation du capital humain et stabilité des résultats sur le long terme.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "deepseek",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Bénéfices cumulés."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Effet maintenu, contraintes RH."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Capital humain élargi."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Égalisation long terme du capital humain."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 2,
+                "note": "Niveau éducatif élevé, inégalités réduites."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Gains de capital humain stabilisent productivité et matching."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Construction publique massive (200 000 unités/an), encadrement des loyers, plafonds successoraux et réquisition des biens vacants améliorent l'accessibilité.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Effet immédiat via encadrement des loyers et interdiction des expulsions ; gpt évalue +2, mistral 0.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Effets immédiats marqués."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Encadrement loyers et lancement construction."
+              },
+              {
+                "model": "deepseek",
+                "score": 1,
+                "note": "Mise en place du dispositif."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Encadrement et interdiction d'expulsions amorcent l'effet."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 0,
+                "note": "Construction prend du temps."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "200k unités publiques/an et plafonds de loyer corrigent le déficit."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Livraison cumulée des 200 000 unités/an déforme l'offre et les loyers ; mistral seul reste à +1.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "mistral-le-chat-2026-04-25"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 2,
+                "note": "Stock public significatif."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Stock cumulé livré."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Effet structurel sur les prix."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Livraison de 200 000 unités/an modifie le marché."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 1,
+                "note": "Offre HLM et encadrement des loyers."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Stock cumulé réduit la pression locative."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Effets cumulés long terme via plafonds successoraux et réquisitions ; gpt et claude restent à +1.",
+            "supported_by": [
+              "deepseek",
+              "gemini-1.5-pro",
+              "mistral-le-chat-2026-04-25",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Effets stabilisés."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Saturation du marché public."
+              },
+              {
+                "model": "deepseek",
+                "score": 2,
+                "note": "Marché transformé durablement."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 2,
+                "note": "Plafonds successoraux redistribuent le capital."
+              },
+              {
+                "model": "mistral-le-chat-2026-04-25",
+                "score": 2,
+                "note": "Accès amélioré, réduction du sans-abrisme."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Expansion structurelle de l'offre et plafonds successoraux."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      }
+    ],
+    "reasoning": "Les six modèles convergent sur un programme qui redistribue simultanément des ressources vers les jeunes générations (autonomie, logement, éducation, climat, dette écologique réduite) et vers les retraités modestes (pensions indexées, 100% Sécu), financé par une fiscalité accrue sur le capital et le patrimoine, principalement détenu par les déciles supérieurs des cohortes plus âgées. Trois modèles concluent à un effet net mixte selon le décile (gpt, claude, gemini), deux à un transfert young_to_old porté par le coût pension et la charge fiscale future (deepseek, mistral), un à un transfert old_to_young porté par le front-loading des prestations et investissements ciblant les jeunes (qwen). Cette divergence est structurelle : elle reflète un désaccord sur la soutenabilité long terme du système de retraite et sur la magnitude des transferts qualifiables.",
+    "source_refs": [
+      "sources.md#chapitre-6--partage-des-richesses",
+      "sources.md#chapitre-7--la-force-de-lentraide",
+      "sources.md#chapitre-8--travailler-tous-travailler-moins-travailler-mieux",
+      "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+    ],
+    "confidence": 0.65,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        {
+          "model": "deepseek",
+          "view": "Direction nette young_to_old : la restauration de la retraite à 60 ans et l'expansion des services publics sociaux concentrent les gains sur les cohortes plus âgées tandis que la charge fiscale et démographique pèse sur les actifs futurs."
+        },
+        {
+          "model": "mistral-le-chat-2026-04-25",
+          "view": "Direction nette young_to_old : transfert estimé à ~+1500€/an des moins-de-35 vers les retraités et services publics, avec taux de remplacement projeté en baisse pour les 25 ans actuels (~55% vs 74%)."
+        },
+        {
+          "model": "qwen3.6",
+          "view": "Direction nette old_to_young : transfert estimé à ~+1400€/an vers les jeunes via planchers de revenu, investissement éducation/logement et stabilisation du marché du travail, financé par fiscalité du patrimoine concentrée sur les ménages aisés âgés."
+        },
+        {
+          "model": "gpt-5.5-thinking",
+          "view": "Effet mixte : la retraite à 60 ans bénéficie aux cohortes plus âgées (cellules pension à scores négatifs sur tous horizons), mais l'autonomie, l'éducation et le climat profitent aux jeunes."
+        }
+      ]
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Sans mise en œuvre du programme, la France poursuit une trajectoire de réformes structurelles incrémentales : maintien de l'âge de départ à 64 ans, modernisation tendancielle des services publics sous contrainte budgétaire, transition écologique pilotée par le marché et la réglementation européenne, dégradation continue de l'accès aux soins et au logement dans les zones tendues, et ancrage croissant des inégalités patrimoniales intergénérationnelles. La cohésion sociale et institutionnelle reste fragile, avec une démocratie représentative en perte de confiance.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_redistributive",
+      "social_cultural",
+      "institutional_democratic",
+      "environmental_intergenerational",
+      "security_sovereignty"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Le programme rompt avec la trajectoire de référence sur cinq dimensions structurantes : redistribution massive (SMIC à 1600€, ISF climatique, plafonds successoraux), reconstruction du service public (santé, éducation, logement), refondation institutionnelle (VIe République, RIC, scrutin proportionnel), accélération écologique (règle verte, planification, 100% ENR à 2050) et réorientation diplomatique (sortie du commandement intégré OTAN, refonte traités UE). Cinq modèles sur six (gpt, claude, deepseek, mistral, qwen) qualifient le résultat global de mixte : les gains sociaux/écologiques sont compensés par des risques économiques (croissance, attractivité, soutenabilité dette) et géopolitiques (isolement européen). Gemini, seul, qualifie la direction d'amélioration en valorisant les gains structurels et en jugeant les risques surmontables. Mistral identifie la dimension institutionnelle comme inchangée dans son cadre interprétatif (changement de procédure plutôt que de fond) ; qwen identifie la dimension sécurité-souveraineté comme inchangée dans le sien (rupture de forme, continuité des intérêts stratégiques). Ces deux dissensions sont marquées comme telles plutôt que conservées dans la liste agrégée.",
+    "confidence": 0.7,
+    "supported_by": [
+      "gpt-5.5-thinking",
+      "claude-opus-4-7",
+      "deepseek",
+      "mistral-le-chat-2026-04-25",
+      "qwen3.6"
+    ],
+    "dissenters": [
+      "gemini-1.5-pro"
+    ]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Soutenabilité actuarielle long terme du système de retraite à 60 ans face au vieillissement démographique",
+      "why_unsolved": "Le programme restaure les paramètres (âge 60, 40 annuités, plancher SMIC) et élargit l'assiette de cotisations, mais ne fournit pas de modélisation actuarielle complète couvrant le ratio actifs/retraités au-delà de 2040. Les modèles convergent sur l'incertitude : la dérive démographique pourrait dépasser les recettes additionnelles d'élargissement de l'assiette si la croissance et l'emploi sont en deçà des hypothèses centrales.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-7--la-force-de-lentraide"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "mistral-le-chat-2026-04-25",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro"
+      ]
+    },
+    {
+      "problem": "Sécurité d'approvisionnement électrique et industrialisation du mix 100% ENR à l'horizon 2050",
+      "why_unsolved": "L'objectif 100% renouvelables à 2050 et la sortie progressive du nucléaire reposent sur un déploiement massif d'éolien, solaire et biomasse, mais le programme ne précise pas la stratégie de stockage/flexibilité, de gestion de l'intermittence et de financement des infrastructures réseau associées. Le risque de tension sur la pointe hivernale et de déficit de capacité pilotable pendant la décennie 2030-2040 reste identifié par 5 modèles.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "gemini-1.5-pro",
+        "mistral-le-chat-2026-04-25"
+      ],
+      "dissenters": [
+        "qwen3.6"
+      ]
+    },
+    {
+      "problem": "Articulation entre la stratégie économique nationale (redistribution, planification) et le maintien de l'attractivité du capital productif et des compétences",
+      "why_unsolved": "L'ISF climatique, la cotisation BPP, les plafonds successoraux et la fiscalité du capital élevée pourraient déclencher des fuites de capitaux et de compétences si elles ne sont pas compensées par une politique d'attractivité positive (R&D, formation, infrastructure). Le programme mentionne la lutte contre l'évasion fiscale mais ne quantifie pas l'effet net attendu sur l'investissement productif domestique.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [
+        "sources.md#chapitre-6--partage-des-richesses",
+        "sources.md#chapitre-9--produire-en-france"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "mistral-le-chat-2026-04-25",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "deepseek",
+        "gemini-1.5-pro"
+      ]
+    },
+    {
+      "problem": "Modalités juridiques et politiques de mise en œuvre du Plan A (renégociation des traités) face à un refus probable des partenaires européens",
+      "why_unsolved": "Le programme conditionne une partie significative des engagements (règle verte, désobéissance budgétaire, conversion BCE) à un Plan A de renégociation des traités UE, avec un Plan B de désobéissance unilatérale en cas d'échec. Les modèles soulignent que les conditions politiques d'une renégociation à 27 sont quasiment inexistantes, et que le Plan B implique des coûts juridiques et économiques (sanctions, conflits institutionnels) que le programme ne quantifie pas.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#chapitre-15--la-france-au-service-de-la-paix-mondiale"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "mistral-le-chat-2026-04-25",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro"
+      ]
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Crise de la dette publique et de la balance des paiements",
+      "trigger": "Conjonction d'une expansion budgétaire forte (200 Md€ d'investissement, hausse des prestations sociales), d'une fuite des capitaux suite à l'ISF climatique et à la cotisation BPP, et d'un refus de la BCE de monétiser la dette française. Spread sur OAT élargi, ratings dégradés, refinancement plus coûteux.",
+      "probability": 0.4,
+      "severity": 0.85,
+      "reasoning": "Les six modèles identifient cette possibilité comme l'un des risques systémiques majeurs. La probabilité estimée varie de 0.30 (qwen, gemini) à 0.55 (mistral, gpt) selon l'évaluation de la crédibilité du Plan B et de la résilience des recettes fiscales.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "gemini-1.5-pro",
+        "mistral-le-chat-2026-04-25",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Échec du Plan B et confrontation institutionnelle avec l'UE",
+      "trigger": "Mise en œuvre unilatérale de la désobéissance budgétaire et de la règle verte sans accord avec les partenaires UE. Procédures d'infraction, sanctions, gel de fonds européens, isolement diplomatique sur les dossiers commerciaux et migratoires.",
+      "probability": 0.55,
+      "severity": 0.7,
+      "reasoning": "Cinq modèles évaluent cette probabilité comme élevée (>0.5). Gemini conserve la plus basse estimation (0.30). La sévérité dépend de la durée et de la nature des sanctions ; aucune n'est triviale, et la plupart des modèles l'évaluent à 0.65–0.80.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "mistral-le-chat-2026-04-25",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro"
+      ]
+    },
+    {
+      "scenario": "Sous-réalisation de la transition énergétique et tension d'approvisionnement",
+      "trigger": "Sortie du nucléaire combinée à un déploiement ENR plus lent que prévu (contraintes industrielles, foncières, sociales) et à un sous-investissement dans le stockage et le réseau. Délestages structurels, pertes industrielles, recours aux énergies fossiles importées.",
+      "probability": 0.4,
+      "severity": 0.65,
+      "reasoning": "Cinq modèles identifient ce risque comme matériel. La probabilité estimée varie selon l'évaluation de la vitesse de déploiement industriel ENR (gpt, claude, mistral à 0.45–0.55 ; deepseek, gemini à 0.30–0.35).",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "gemini-1.5-pro",
+        "mistral-le-chat-2026-04-25"
+      ],
+      "dissenters": [
+        "qwen3.6"
+      ]
+    },
+    {
+      "scenario": "Blocage institutionnel et constitutionnel de la VIe République",
+      "trigger": "Convocation d'une Assemblée constituante par référendum après un mandat 2027–2028, mais blocage parlementaire et conflits avec le Conseil constitutionnel sur les mesures économiques et fiscales. Période d'instabilité institutionnelle prolongée et incertitude réglementaire.",
+      "probability": 0.45,
+      "severity": 0.55,
+      "reasoning": "Quatre modèles identifient le risque ; mistral l'évalue comme limité (procédure démocratique encadrée), gemini comme négligeable. La sévérité dépend de la durée de la transition et de l'aboutissement de la nouvelle constitution.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro",
+        "mistral-le-chat-2026-04-25"
+      ]
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "retraite_60_ans_40_annuites_plancher_smic",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "regle_verte_constitutionnelle",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "ric_referendum_initiative_citoyenne_revocation",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "sortie_commandement_integre_otan",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "investissement_ecologique_200_milliards",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "smic_1600_euros_net_revalorisation",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "construction_200000_logements_publics_par_an",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "vie_republique_assemblee_constituante",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "100_pct_securite_sociale_soins_prescrits",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "isf_climatique_taxe_zucman",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "abolition_parcoursup_gratuite_education",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek",
+          "gemini-1.5-pro",
+          "mistral-le-chat-2026-04-25",
+          "qwen3.6"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "intergenerational_net_transfer_direction",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "Effet mixte selon le décile : pension favorise les âgés, autonomie/éducation/climat favorisent les jeunes."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "Effet mixte : redistribution intra-cohorte sur le patrimoine, gains structurels pour les jeunes via climat et éducation."
+          },
+          {
+            "model": "deepseek",
+            "position": "Direction nette young_to_old : la concentration des bénéfices sociaux sur les retraites et la charge fiscale future pèsent sur les jeunes."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "Effet mixte : bénéfices intergénérationnels via le climat et l'éducation, mais charge sur la dette publique pour les jeunes."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "position": "Direction nette young_to_old, ~+1500€/an des moins-de-35 vers les retraités et services publics ; taux de remplacement projeté en baisse."
+          },
+          {
+            "model": "qwen3.6",
+            "position": "Direction nette old_to_young, ~+1400€/an vers les jeunes via planchers de revenu, investissement éducation/logement et stabilisation du marché du travail."
+          }
+        ]
+      },
+      {
+        "claim_id": "climate_horizon_signe_intergenerationnel",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "Scores positifs +2/+2/+2 : décarbonation cumulée bénéficie aux jeunes générations."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "Scores +1/+2/+2 : trajectoire de transition durable."
+          },
+          {
+            "model": "deepseek",
+            "position": "Scores +1/+2/+3 : neutralité atteinte, dette écologique réduite."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "Scores +2/+3/+3 : 100% renouvelables et trajectoire 2030 livrent des baisses massives."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "position": "Scores -1/-2/-3 : interprétation inverse — la transition est un coût économique net plutôt qu'un bénéfice intergénérationnel."
+          },
+          {
+            "model": "qwen3.6",
+            "position": "Scores +1/+2/+3 : modernisation réseau et 100% ENR abaissent l'exposition climatique structurellement."
+          }
+        ]
+      },
+      {
+        "claim_id": "positioning_economic_modal_score",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "Score -5 : transformation systémique de l'ordre économique."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "Score -5 : programme à dominante anti-marché et redistributive."
+          },
+          {
+            "model": "deepseek",
+            "position": "Score -4 : très à gauche, redistribution forte sans renoncement complet à l'économie de marché."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "Score -4 : intervention massive de l'État sans nationalisation totale."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "position": "Score -5 : refonte structurelle."
+          },
+          {
+            "model": "qwen3.6",
+            "position": "Score -4 : interventionnisme fort mais capitalisme conservé."
+          }
+        ]
+      },
+      {
+        "claim_id": "social_cultural_axis_modal",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "Score -3 : laïcité républicaine classique, ouverture sociétale modérée."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "Score -4 : ouverture sociétale forte, antiracisme structurel."
+          },
+          {
+            "model": "deepseek",
+            "position": "Score -4 : progressisme sociétal explicite."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "Score -3 : ouverture marquée mais ancrée dans la République."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "position": "Score -5 : maximum de progressisme sur tous les axes sociétaux."
+          },
+          {
+            "model": "qwen3.6",
+            "position": "Score -4 : forte ouverture LGBTQI+, féminisme, antiracisme."
+          }
+        ]
+      },
+      {
+        "claim_id": "economic_dimension_grade",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "Grade C : risques d'exécution élevés (financement, attractivité, soutenabilité dette)."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "Grade C : ambition forte mais soutenabilité incertaine."
+          },
+          {
+            "model": "deepseek",
+            "position": "Grade B : cohérence interne et chiffrage suffisant."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "Grade B : programme cohérent, risques identifiés mais chiffrage solide."
+          },
+          {
+            "model": "mistral-le-chat-2026-04-25",
+            "position": "Grade D : risques majeurs sur la soutenabilité et la crédibilité du Plan B."
+          },
+          {
+            "model": "qwen3.6",
+            "position": "Grade B : programme structuré et chiffré."
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "gpt-5.5-thinking": "complete",
+      "claude-opus-4-7": "complete",
+      "deepseek": "complete",
+      "gemini-1.5-pro": "complete",
+      "mistral-le-chat-2026-04-25": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          -5,
+          -4
+        ],
+        "modal": null,
+        "dissent_count": 0
+      },
+      "social_cultural": {
+        "interval": [
+          -5,
+          -3
+        ],
+        "modal": -4,
+        "dissent_count": 3
+      },
+      "sovereignty": {
+        "interval": [
+          2,
+          3
+        ],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [
+          2,
+          2
+        ],
+        "modal": 2,
+        "dissent_count": 0
+      },
+      "ecological": {
+        "interval": [
+          4,
+          4
+        ],
+        "modal": 4,
+        "dissent_count": 0
+      },
+      "overall_spectrum": {
+        "modal_label": "extreme_gauche",
+        "distribution": {
+          "extreme_gauche": 5,
+          "gauche": 1
+        },
+        "dissent_count": 1
+      }
+    }
+  },
+  "coverage_warning": false,
+  "flagged_for_review": [
+    {
+      "claim": "Le fichier raw deepseek-manual.json déclare model.provider=\"anthropic\" et model.version=\"claude-opus-4-7\" alors que le nom de fichier et la signature stylistique indiquent une analyse produite par DeepSeek.",
+      "claimed_by": [
+        "deepseek"
+      ],
+      "issue": "Incohérence de provenance : la métadonnée de modèle dans le fichier raw ne correspond pas à l'identifiant inféré du nom de fichier. Risque de double-comptage avec claude-opus-4-7 si non corrigé.",
+      "suggested_action": "Demander à l'opérateur humain de confirmer le modèle réellement utilisé pour ce fichier (DeepSeek ou Claude) et corriger la métadonnée du fichier raw avant publication. L'agrégation traite ce fichier comme \"deepseek\" sur la base du nom de fichier.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-25T04:59:00.514Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "Mistral-le-chat-2026-04-25 attribue des scores horizon négatifs (-1/-2/-3) à la dimension climat sur les trois horizons intergénérationnels, alors que les cinq autres modèles attribuent des scores positifs (+1 à +3).",
+      "claimed_by": [
+        "mistral-le-chat-2026-04-25"
+      ],
+      "issue": "Inversion systématique de signe sur la dimension climat. Indique soit (a) une interprétation divergente de la matrice (\"coût de transition économique\" vs \"effet intergénérationnel net\"), soit (b) une erreur de signe non détectée dans la sortie raw du modèle.",
+      "suggested_action": "Reviewer humain : examiner la sortie raw mistral-le-chat-2026-04-25.json pour confirmer si l'inversion est intentionnelle (cadre interprétatif) ou erronée (erreur de signe). Si erronée, traiter cohorte mistral comme climate-incomplete.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-25T04:59:04.754Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "GPT-5.5-thinking attribue le motif uniforme {execution_difficulty: high, financing_credibility: high, political_feasibility: moderate, reversibility: moderate} à l'ensemble des cinq dimensions du programme.",
+      "claimed_by": [
+        "gpt-5.5-thinking"
+      ],
+      "issue": "Le risk_profile gpt-5.5-thinking présente un motif templaté identique d'une dimension à l'autre, ce qui suggère un défaut de différenciation du modèle plutôt qu'une analyse fine par dimension. Risque de biais d'agrégation si le motif sert de socle modal.",
+      "suggested_action": "Reviewer humain : vérifier si la sortie raw gpt-5.5-thinking-manual.json contient effectivement ce motif uniforme ou s'il s'agit d'un artefact de notre extraction. Le cas échéant, marquer gpt-5.5-thinking comme moins fiable sur risk_profile.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-25T04:59:05.490Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "Plusieurs entrées dans la sortie chatgpt-thinking-manual.json utilisent une formulation générique de placeholder du type \"Problème central explicitement ciblé par le programme\" plutôt qu'un libellé concret de problème.",
+      "claimed_by": [
+        "gpt-5.5-thinking"
+      ],
+      "issue": "Formulation générique répétée qui suggère que certaines parties de la sortie raw n'ont pas été remplies avec un contenu spécifique. Risque de noyer la qualité analytique des autres modèles dans l'agrégation.",
+      "suggested_action": "Reviewer humain : examiner la sortie raw gpt-5.5-thinking-manual.json pour identifier les sections génériques et décider si elles doivent être réinjectées ou si gpt-5.5-thinking doit être marqué \"partial\" sur les dimensions concernées.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-25T04:59:06.119Z",
+      "reviewer_id": "benoit"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "dimensions": {
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "C"
+        }
+      },
+      "headline": {
+        "text": "Sortie du commandement OTAN, pôle public d'armement, police de proximité (fin BAC/BRAV-M), protectionnisme écologique.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Souveraineté cohérente, mais transition diplomatique risquée." },
+          { "model": "claude-opus-4-7", "text": "Sortie de l'OTAN, pôle public d'armement, conscription citoyenne de 9 mois au SMIC, refus de la militarisation européenne, posture pro-désarmement nucléaire multilatéral." },
+          { "model": "deepseek", "text": "Sortie de l'OTAN, refondation de la police, politique migratoire humaniste et souveraineté industrielle par la relocalisation et le protectionnisme écologique." },
+          { "model": "gemini-1.5-pro", "text": "Sortie de l'OTAN, refondation d'une police de proximité (fin des BAC/BRAV-M) et protectionnisme." },
+          { "model": "mistral-le-chat-2026-04-25", "text": "Sortie de l'OTAN, protectionnisme écologique et relocalisation industrielle pour assurer la souveraineté nationale." },
+          { "model": "qwen3.6", "text": "NATO withdrawal, UN-centric diplomacy, ecological protectionism, and proximity police reform with civil liberty safeguards." }
+        ]
+      },
+      "summary": "Le programme déplace simultanément la doctrine de défense, la doctrine de police et la posture commerciale. Sur la défense : retrait du commandement intégré de l'OTAN puis sortie progressive de l'organisation, refus de la militarisation européenne, conscription citoyenne de 9 mois rémunérée au SMIC, création d'un pôle public de l'armement. Sur la police : suppression des BAC et BRAV-M, interdiction du LBD, du plaquage ventral et de la nasse, restauration d'une police de proximité, réforme de l'IGPN. Sur le commerce : protectionnisme écologique aux frontières (taxe carbone, exigences sociales et environnementales sur les importations), relocalisation industrielle, refus de la libre circulation des capitaux. Modal B (4/6) : programme cohérent avec coûts détaillés ; gpt et claude (C) soulignent les fenêtres de vulnérabilité de transition et l'absence de plan d'interopérabilité post-OTAN.",
+      "problems_addressed": [
+        {
+          "problem": "Violences policières et perte de confiance vis-à-vis de l'institution",
+          "approach": "Suppression des BAC et BRAV-M, interdiction des techniques létales (LBD, plaquage ventral, nasse), réforme de l'IGPN avec contrôle externe, formation aux droits humains, police de proximité.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#chapitre-4--etendre-le-domaine-de-la-liberte", "sources.md#chapitre-7--la-force-de-lentraide"],
+          "reasoning": "Ensemble opérationnel ciblant les unités et techniques associées aux maintien de l'ordre les plus contestés.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Dépendance industrielle et énergétique stratégique",
+          "approach": "Plan de relocalisation industrielle, protectionnisme écologique aux frontières, sortie programmée du nucléaire et investissement renouvelables, pôle public de l'armement.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"],
+          "reasoning": "Combine outils tarifaires, capital public et planification ; coûts industriels reconnus mais non chiffrés au global.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Alignement militaire réduisant l'autonomie diplomatique",
+          "approach": "Retrait du commandement intégré de l'OTAN, diplomatie altermondialiste UN-centrique, refus de la militarisation européenne, désarmement nucléaire multilatéral.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"],
+          "reasoning": "Décrochage structurel du cadre atlantiste, partiellement compensé par la conscription citoyenne et la défense souveraine ; pas de plan d'interopérabilité détaillé.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Fenêtre de vulnérabilité défensive pendant la sortie de l'OTAN",
+          "significance": "Le retrait du commandement intégré sans plan détaillé de remontée capacitaire conventionnelle (renseignement, défense aérienne, logistique) crée un déficit transitoire de 5 à 10 ans non chiffré.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Conséquences sur l'industrie de défense exportatrice",
+          "significance": "L'opt-out des programmes européens de défense (Commissaire à la Défense, BITDE) fragilise les contrats coopératifs (Eurofighter, MGCS, SCAF) et les exports français.",
+          "source_refs": [],
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Coordination de défense européenne",
+          "mechanism": "L'opt-out des programmes européens de défense et l'opposition à un Commissaire européen à la Défense isole la BITDE française au moment où les budgets de défense de l'UE croissent.",
+          "severity": 0.55,
+          "source_refs": ["sources.md#chapitre-17--europe"],
+          "reasoning": "Choix politique explicite ; conséquence reconnue par gemini, claude et qwen comme effet direct du programme.",
+          "supported_by": ["gemini-1.5-pro", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Résistance interne des syndicats de police au démantèlement BAC/BRAV-M",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "Le démantèlement d'unités spécialisées et la réforme de l'IGPN heurtent frontalement les organisations professionnelles dominantes.",
+          "source_refs": ["sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"],
+          "supported_by": ["gemini-1.5-pro", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "risk": "Représailles commerciales contre la taxe carbone aux frontières et le protectionnisme écologique",
+          "probability": 0.65,
+          "severity": 0.65,
+          "reasoning": "Les mesures unilatérales de tarification carbone et de barrières non-tarifaires peuvent déclencher des contentieux OMC et des contractions d'exports.",
+          "source_refs": ["sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins", "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix"],
+          "supported_by": ["mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Dépendance aux matières premières critiques",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "La relocalisation industrielle et le déploiement renouvelable supposent un accès aux terres rares et métaux critiques aujourd'hui dominés par des puissances étrangères.",
+          "source_refs": ["sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"],
+          "supported_by": ["gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Retrait immédiat du commandement intégré de l'OTAN, sortie progressive de l'organisation",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix",
+          "quantified": false,
+          "magnitude": "retrait complet",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Création d'un pôle public de l'armement et nationalisation des industries stratégiques de défense",
+          "source_ref": "sources.md#chapitre-16--une-diplomatie-altermondialiste-pour-la-paix",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression des BAC et BRAV-M, interdiction du LBD, du plaquage ventral et de la nasse",
+          "source_ref": "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Protectionnisme écologique : taxe carbone aux frontières et exigences sociales/environnementales sur les importations",
+          "source_ref": "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "high"],
+          "note": "Reconfiguration des budgets de défense et de police plutôt que création nette ; remontée capacitaire post-OTAN justifie le niveau modéré.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25"],
+          "dissenters": ["gpt-5.5-thinking", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Coût élevé de la transition." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Reconfiguration budgétaire avec investissement capacitaire ciblé." },
+            { "model": "deepseek", "level": "moderate", "note": "Coût significatif de la souveraineté industrielle." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Reconstruction de capacités conventionnelles indépendantes." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "moderate", "note": "Coût élevé de la relocalisation et de la restructuration industrielle." },
+            { "model": "qwen3.6", "level": "limited", "note": "Réallocation budgétaire avec impact net modéré." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Reorganisation simultanée de la police, de la doctrine militaire et du dispositif douanier ; coordination interministérielle complexe.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek", "mistral-le-chat-2026-04-25"],
+          "dissenters": ["gemini-1.5-pro", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Réforme multi-front." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Réorganisation complète de la doctrine et des unités." },
+            { "model": "deepseek", "level": "high", "note": "Réforme institutionnelle et opérationnelle de la police et de la défense." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Logistique RH significative mais bornée." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Coordination État/industriels/partenaires sociaux complexe." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Restructuration policière et administration tarifaire bornées." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Diplomatie altermondialiste et chaînes critiques dépendent de la coopération de partenaires non-occidentaux et de l'accès aux matières premières.",
+          "supported_by": ["claude-opus-4-7", "deepseek", "gemini-1.5-pro", "mistral-le-chat-2026-04-25", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépendance partielle." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Dépendance forte aux partenaires non-occidentaux." },
+            { "model": "deepseek", "level": "high", "note": "Dépendance aux matières premières et partenaires non-OTAN." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Dépendance à la volonté des nations du Sud global." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "high", "note": "Dépendance forte à la coopération européenne." },
+            { "model": "qwen3.6", "level": "high", "note": "Réponses des partenaires conditionnent la posture commerciale et défensive." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Retraits de traités et démantèlements d'unités peuvent être inversés par décret ou loi ; pôles publics d'armement plus difficiles à défaire.",
+          "supported_by": ["gpt-5.5-thinking", "deepseek", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "mistral-le-chat-2026-04-25"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Retraits réversibles." },
+            { "model": "claude-opus-4-7", "level": "limited", "note": "Pôle public d'armement et désarmement difficiles à inverser." },
+            { "model": "deepseek", "level": "moderate", "note": "Décisions diplomatiques réversibles." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Retraits de traités et unités réversibles." },
+            { "model": "mistral-le-chat-2026-04-25", "level": "limited", "note": "Nationalisations et protectionnisme difficilement réversibles." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Décrets exécutifs / législatifs réversibles." }
+          ]
+        }
+      },
+      "confidence": 0.72
+    }
+  }
+}
