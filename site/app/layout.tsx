@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="bg-bg text-text font-sans">
-        <LangProvider>{children}</LangProvider>
+        <LangProvider initial="fr">{children}</LangProvider>
       </body>
     </html>
   );
