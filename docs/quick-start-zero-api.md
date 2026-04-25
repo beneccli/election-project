@@ -236,6 +236,102 @@ rm -rf candidates/test-omega
 
 ---
 
+## 9. (Optional) Translate the aggregated analysis to English
+
+> **Spec:** [`specs/website/i18n.md`](specs/website/i18n.md)
+> **Prompt:** [`prompts/translate-aggregated.md`](../prompts/translate-aggregated.md)
+
+The site is locale-aware: when a candidate has a published
+`aggregated.<lang>.json`, the locale toggle surfaces the translated
+prose; otherwise the page falls back to the FR canonical artifact
+with a "Translation pending" banner. Translations are produced
+manually (no API mode in v1) and gated by human review, exactly
+like consolidation and aggregation.
+
+### 9.1 Prepare a copy-pasteable bundle
+
+```bash
+npm run prepare-manual-translation -- \
+  --candidate test-omega \
+  --version 2027-11-01 \
+  --lang en
+```
+
+This writes `candidates/test-omega/versions/2027-11-01/_translation/en/`
+containing:
+
+- `prompt-bundle.txt` — the verbatim translate-aggregated prompt with
+  the FR `aggregated.json` payload pre-pasted and the target language
+  substituted in.
+- `README.md` — exact next-step commands (re-displayed below for
+  convenience).
+
+### 9.2 Paste into a chat UI, save the reply
+
+Open any chat UI (Claude.ai, ChatGPT, Le Chat, …) and paste the
+contents of `prompt-bundle.txt`. The model returns a single JSON
+object: same schema as the FR aggregated, but with translatable prose
+fields rewritten in English. Save the reply as e.g.
+`~/Downloads/aggregated.en.json`.
+
+> ⚠️ The translator must keep all numeric values, IDs, and array
+> lengths byte-for-byte identical to the FR canonical file. The
+> ingest step below validates this with the same parity checker that
+> guards the published artifacts.
+
+### 9.3 Ingest the translation
+
+```bash
+npm run ingest-translation -- \
+  --candidate test-omega \
+  --version 2027-11-01 \
+  --lang en \
+  --attested-version "<exact model string from the chat UI>" \
+  --input ~/Downloads/aggregated.en.json
+```
+
+This writes `aggregated.en.draft.json` next to the FR canonical file
+and stamps a `translations.en` provenance block in
+`metadata.json` (prompt SHA256, prompt version, attested model,
+ingest timestamp, `human_review_completed: false`).
+
+### 9.4 Human review gate
+
+Open the draft, skim the prose, and check that:
+
+- No advocacy verbs (`sacrifice`, `betray`, `steal`, `crush`,
+  `rescue`) leaked in — translations report tradeoffs, never moral
+  verdicts.
+- French proper nouns (party names, institutions) are kept
+  untranslated where appropriate (e.g. *Assemblée nationale*).
+- The schema parses (`schema_version` and structure are unchanged).
+
+When satisfied, promote the draft and flip the review flag:
+
+```bash
+mv candidates/test-omega/versions/2027-11-01/aggregated.en.draft.json \
+   candidates/test-omega/versions/2027-11-01/aggregated.en.json
+```
+
+Then edit `metadata.json` to set
+`translations.en.human_review_completed: true` and add `reviewer`
++ `reviewed_at` (ISO 8601).
+
+### 9.5 Verify in the site build
+
+```bash
+npm run validate-translation -- --candidate test-omega --version 2027-11-01 --lang en
+npm run site:build
+```
+
+The `/en/candidat/test-omega` page now serves the EN prose, and the
+Transparency drawer's "Translation" subsection surfaces the prompt
+SHA256, attested model, ingest timestamp, and the human-review
+flag — exactly the same provenance shape as the analysis and
+aggregation blocks.
+
+---
+
 ## Recap
 
 You just ran a full multi-model analysis end-to-end without paying

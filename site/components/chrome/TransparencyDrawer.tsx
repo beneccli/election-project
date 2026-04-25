@@ -112,6 +112,7 @@ export function TransparencyDrawerChrome({
         lang={lang}
       />
       <SummaryRow versionMeta={versionMeta} aggregated={aggregated} lang={lang} />
+      <TranslationSubsection versionMeta={versionMeta} lang={lang} />
       <div
         role="tablist"
         aria-label={t(UI_STRINGS.A11Y_TRANSPARENCY_TABS, lang)}
@@ -289,6 +290,85 @@ function SummaryRow({
         </div>
       ))}
     </dl>
+  );
+}
+
+// See docs/specs/website/transparency.md §3 "Translation provenance"
+// See docs/specs/website/i18n.md §3.3
+export function TranslationSubsection({
+  versionMeta,
+  lang,
+}: {
+  versionMeta: VersionMetadata;
+  lang: Lang;
+}) {
+  // FR is canonical — never show a translation block.
+  if (lang === "fr") return null;
+  const entry = versionMeta.translations?.[lang];
+  // Missing translation → page-level banner handles the messaging.
+  if (!entry) return null;
+
+  const items: Array<{ label: string; value: string; mono?: boolean }> = [
+    {
+      label: t(UI_STRINGS.TRANSPARENCY_TRANSLATION_LOCALE, lang),
+      value: lang,
+      mono: true,
+    },
+    {
+      label: t(UI_STRINGS.TRANSPARENCY_TRANSLATION_MODEL, lang),
+      value: entry.attested_model_version,
+      mono: true,
+    },
+    {
+      label: t(UI_STRINGS.TRANSPARENCY_TRANSLATION_PROMPT_SHA, lang),
+      value: entry.prompt_sha256,
+      mono: true,
+    },
+    {
+      label: t(UI_STRINGS.TRANSPARENCY_TRANSLATION_INGESTED_AT, lang),
+      value: entry.ingested_at,
+      mono: true,
+    },
+  ];
+  const reviewLabel = entry.human_review_completed
+    ? t(UI_STRINGS.TRANSPARENCY_TRANSLATION_REVIEW_DONE, lang)
+    : t(UI_STRINGS.TRANSPARENCY_TRANSLATION_REVIEW_PENDING, lang);
+  return (
+    <section
+      data-testid="transparency-translation"
+      aria-label={t(UI_STRINGS.TRANSPARENCY_TRANSLATION_TITLE, lang)}
+      className="mt-3 rounded-md border border-rule bg-bg-subtle px-4 py-3 text-xs"
+    >
+      <h3 className="mb-2 text-[10.5px] font-semibold uppercase tracking-wider text-text-tertiary">
+        {t(UI_STRINGS.TRANSPARENCY_TRANSLATION_TITLE, lang)}
+      </h3>
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-4">
+        {items.map((it) => (
+          <div key={it.label} className="min-w-0">
+            <dt className="text-[10.5px] font-semibold uppercase tracking-wider text-text-tertiary">
+              {it.label}
+            </dt>
+            <dd
+              className={
+                "truncate text-text " + (it.mono ? "font-mono" : "")
+              }
+              title={it.value}
+            >
+              {it.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <p
+        className={
+          "mt-2 text-[11px] " +
+          (entry.human_review_completed ? "text-text-secondary" : "text-amber-700")
+        }
+      >
+        {reviewLabel}
+        {entry.reviewer ? ` — ${entry.reviewer}` : ""}
+      </p>
+    </section>
   );
 }
 

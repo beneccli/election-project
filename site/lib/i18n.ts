@@ -1390,6 +1390,34 @@ export const UI_STRINGS = {
     fr: "Sources",
     en: "Sources",
   },
+  TRANSPARENCY_TRANSLATION_INGESTED_AT: {
+    fr: "Ingéré le",
+    en: "Ingested at",
+  },
+  TRANSPARENCY_TRANSLATION_LOCALE: {
+    fr: "Langue cible",
+    en: "Target locale",
+  },
+  TRANSPARENCY_TRANSLATION_MODEL: {
+    fr: "Modèle attesté",
+    en: "Attested model",
+  },
+  TRANSPARENCY_TRANSLATION_PROMPT_SHA: {
+    fr: "Empreinte du prompt (SHA256)",
+    en: "Prompt SHA256",
+  },
+  TRANSPARENCY_TRANSLATION_REVIEW_DONE: {
+    fr: "Revue humaine terminée",
+    en: "Human review complete",
+  },
+  TRANSPARENCY_TRANSLATION_REVIEW_PENDING: {
+    fr: "Revue humaine en attente",
+    en: "Human review pending",
+  },
+  TRANSPARENCY_TRANSLATION_TITLE: {
+    fr: "Traduction",
+    en: "Translation",
+  },
   WORDMARK: {
     fr: "Élection 2027",
     en: "Election 2027",
