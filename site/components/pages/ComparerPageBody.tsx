@@ -34,7 +34,7 @@ export interface ComparerPageBodyProps {
 }
 
 export function ComparerPageBody({ lang }: ComparerPageBodyProps) {
-  const entries = listComparisonProjections();
+  const entries = listComparisonProjections(lang);
   const excludeFictional = process.env.EXCLUDE_FICTIONAL === "1";
   const copy = COPY[lang];
   return (

@@ -24,6 +24,7 @@ const BASE_ANALYZED: LandingCardAnalyzed = {
   updatedAt: "2026-04-01",
   modelsCount: 4,
   isFictional: false,
+  translation: { lang: "fr", status: "native_fr" },
 };
 
 const BASE_PENDING: LandingCardPending = {
@@ -37,6 +38,7 @@ const BASE_PENDING: LandingCardPending = {
   declaredDate: "2026-02-15",
   updatedAt: "2026-02-15",
   isFictional: false,
+  translation: { lang: "fr", status: "native_fr" },
 };
 
 describe("CandidateCard — analyzed", () => {

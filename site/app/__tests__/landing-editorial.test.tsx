@@ -57,6 +57,7 @@ const FIXTURE_CARDS: LandingCard[] = [
     updatedAt: "2026-01-15",
     modelsCount: 4,
     isFictional: true,
+    translation: { lang: "fr", status: "native_fr" },
   },
   {
     id: "pending-one",
@@ -69,6 +70,7 @@ const FIXTURE_CARDS: LandingCard[] = [
     declaredDate: "2026-01-05",
     updatedAt: "2026-01-05",
     isFictional: true,
+    translation: { lang: "fr", status: "native_fr" },
   },
   {
     id: "pending-two",
@@ -81,6 +83,7 @@ const FIXTURE_CARDS: LandingCard[] = [
     declaredDate: "2026-01-03",
     updatedAt: "2026-01-03",
     isFictional: true,
+    translation: { lang: "fr", status: "native_fr" },
   },
 ];
 

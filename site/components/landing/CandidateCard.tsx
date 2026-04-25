@@ -122,6 +122,19 @@ export default function CandidateCard({ card, lang }: Props) {
           partyColor={card.partyColor}
           party={card.party}
         />
+        {card.translation.status === "missing" ? (
+          <span
+            className="rounded border border-rule px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-text-tertiary"
+            data-fr-chip
+            title={
+              lang === "en"
+                ? "Translation pending — French content shown"
+                : "Traduction à venir — contenu en français"
+            }
+          >
+            FR
+          </span>
+        ) : null}
       </div>
 
       <h3 className="px-4 font-display text-2xl font-bold leading-tight tracking-tight text-text">

@@ -14,7 +14,7 @@ export interface LandingPageBodyProps {
 }
 
 export function LandingPageBody({ lang }: LandingPageBodyProps) {
-  const cards = listLandingCards();
+  const cards = listLandingCards(lang);
   return (
     <>
       <LandingNavBar lang={lang} />

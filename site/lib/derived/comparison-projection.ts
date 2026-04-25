@@ -101,6 +101,10 @@ export interface ComparisonProjection {
   spectrumLabelDisplay: string | null;
   /** Categorical status: present | split | inclassable | absent. */
   spectrumStatus: SpectrumStatus;
+  /** Locale provenance — surfaced on comparison surfaces so we can
+   *  render an `FR` chip for candidates whose translation file is
+   *  missing. See docs/specs/website/i18n.md §6. */
+  translation: import("../candidates").TranslationStatus;
 }
 
 export interface NonAnalyzableCandidate {
@@ -179,5 +183,6 @@ export function deriveComparisonProjection(
     intergen,
     spectrumLabelDisplay: spectrum.displayText,
     spectrumStatus: spectrum.status,
+    translation: bundle.translation,
   };
 }
