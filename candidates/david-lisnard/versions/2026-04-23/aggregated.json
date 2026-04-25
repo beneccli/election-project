@@ -13,7 +13,7 @@
     },
     {
       "provider": "google",
-      "version": "gemini-2.5-pro"
+      "version": "gemini-3-pro"
     },
     {
       "provider": "xai",
@@ -83,7 +83,7 @@
           "reasoning": "Orientation pro-marché cohérente sans trait d'extrême libéralisation : dépense <50% PIB, C3S/CVAE, contrat unique, capitalisation."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "score": 4,
           "reasoning": "Explicit cuts of 8 points of GDP, halved production taxes, and capitalized pensions indicate a strongly market-oriented, supply-side approach more ambitious than Fillon 2017."
         },
@@ -140,7 +140,7 @@
           "reasoning": "Forte réduction de l'immigration, réforme scolaire recentrée sur l'autorité et les savoirs fondamentaux, critique explicite de l'égalitarisme bureaucratique."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "score": 3,
           "reasoning": "Measures focus heavily on restoring traditional authority in schools and justice, abolishing the minor excuse, and enforcing cultural assimilation."
         },
@@ -202,7 +202,7 @@
           "reasoning": "Primauté du droit national, sortie conditionnelle de la CEDH, référendum en cas de blocage supranational : orientation souverainiste marquée."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "score": 3,
           "reasoning": "While supporting European industrial cooperation, the program explicitly calls for constitutional primacy over the ECHR and CJEU on migration and borders."
         },
@@ -252,7 +252,7 @@
           "reasoning": "Rééquilibrage des pouvoirs vers le Parlement, décentralisation radicale et réduction du champ de la loi : réforme institutionnelle libérale-démocratique sans dérive illibérale identifiée."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "position": 1,
           "reasoning": "Massive decentralization to Provinces diffuses power (liberal), but the willingness to override international courts via referendum adds a populist/plebiscitarian element."
         },
@@ -279,7 +279,7 @@
           "reasoning": "Décentralisation et réduction du champ de la loi : réforme libérale-démocratique sans dérive illibérale."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "score": 1,
           "reasoning": "Décentralisation libérale combinée à la volonté d'outrepasser les cours internationales via référendum : élément plébiscitaire."
         },
@@ -341,7 +341,7 @@
           "reasoning": "Rejet de la décroissance, priorité nucléaire, critique des subventions renouvelables ; composante techno-optimiste."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "score": -2,
           "reasoning": "Strong reliance on nuclear power, explicit rejection of ecological footprint metrics, and deregulation of agricultural environmental constraints."
         },
@@ -377,7 +377,7 @@
           "reasoning": "Axes économique (+3), social-culturel (+3) et souveraineté (+3) convergent vers la droite ; pas de remise en cause radicale des institutions démocratiques, donc pas d'extrême_droite."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "label": "droite",
           "reasoning": "High scores on market-oriented economics, conservative social policies, and sovereigntist border controls squarely place the program in the classical, albeit radicalized, right-wing spectrum."
         },
@@ -405,7 +405,7 @@
         "supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -420,7 +420,7 @@
             "text": "Règle d'or budgétaire, baisse des impôts de production de 11,5 Md€ et réforme des retraites vers la capitalisation, avec objectif de dépenses publiques <50% du PIB."
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "text": "Baisse de la dépense publique de 8 points de PIB, capitalisation partielle des retraites et fusion CDD/CDI."
           },
           {
@@ -447,7 +447,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -464,7 +464,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -481,7 +481,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -497,7 +497,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -511,7 +511,7 @@
           "source_refs": [],
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -550,7 +550,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -581,7 +581,7 @@
           ],
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -596,7 +596,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -612,7 +612,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -626,7 +626,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -640,7 +640,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -654,7 +654,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -668,7 +668,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -681,7 +681,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -708,7 +708,7 @@
           "note": "Baisses fiscales (11,5 Md€) et transition capitalisation sans table de compensation ; trajectoire de dépense aspirationale.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": [
             "deepseek-v3",
@@ -727,7 +727,7 @@
               "note": "Objectifs affichés mais non séquencés ; dépendance à la croissance."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Combining massive tax cuts with pension capitalization transition costs strains near-term deficits."
             },
@@ -753,7 +753,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -770,7 +770,7 @@
               "note": "Nécessite une révision constitutionnelle et des réformes systémiques à forte conflictualité sociale et politique."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Moving 450,000 civil servants to the field and reorganizing the state requires unprecedented administrative overhaul."
             },
@@ -795,7 +795,7 @@
           "note": "Règle d'or dépend d'une majorité constitutionnelle nationale ; réforme fiscale locale dépend d'un accord avec l'association des élus ; effet marchés/taux limité mais présent.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
@@ -814,7 +814,7 @@
               "note": "La plupart des mesures relèvent du cadre national ; quelques interactions avec les règles budgétaires européennes."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Pension capitalization yields depend heavily on global financial market returns."
             },
@@ -844,7 +844,7 @@
           ],
           "dissenters": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -858,7 +858,7 @@
               "note": "Révision constitutionnelle difficile à annuler, mesures infra-constitutionnelles modifiables par majorité ultérieure."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Once pension funds are capitalized into private accounts, reverting to pure repartition is legally complex."
             },
@@ -889,7 +889,7 @@
         "supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -904,7 +904,7 @@
             "text": "Réforme de l'école (suppression carte scolaire, chèque-éducation), doublement des étudiants en médecine, relance de la politique familiale et réduction drastique de l'immigration légale."
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "text": "Fin de la carte scolaire, autonomie des établissements, et suppression des ARS en santé."
           },
           {
@@ -931,7 +931,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -948,7 +948,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -979,7 +979,7 @@
           "reasoning": "Levier structurel identifié mais transition institutionnelle non triviale.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1028,7 +1028,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1042,7 +1042,7 @@
           "reasoning": "Claude et Gemini insistent sur ce risque ; le programme propose des bourses sociales comme mitigation sans quantification.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         }
@@ -1058,7 +1058,7 @@
           ],
           "supported_by": [
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1101,7 +1101,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1114,7 +1114,7 @@
           "magnitude": "+20% / 5 ans",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1126,7 +1126,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1138,7 +1138,7 @@
           "magnitude": null,
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1152,7 +1152,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1179,7 +1179,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4"
           ],
           "dissenters": [
@@ -1197,7 +1197,7 @@
               "note": "Économies AME (700 M€) mais coûts enseignants (+20%) et chèque-éducation non compensés en détail."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Teacher pay raises require localized funding offsets."
             },
@@ -1223,7 +1223,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1240,7 +1240,7 @@
               "note": "Réformes de l'école et de la santé impliquent une refonte complète des structures existantes."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Abolishing ARS and transferring healthcare governance to prefects requires massive logistical rewiring."
             },
@@ -1264,7 +1264,7 @@
           ],
           "note": "Réformes principalement internes ; négociation avec corps enseignant et médical ; sujets migratoires liés à la santé (AME) interagissent avec le droit UE.",
           "supported_by": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1284,7 +1284,7 @@
               "note": "Les mesures migratoires dépendent de la renégociation ou de la sortie de traités européens et d'accords bilatéraux."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Largely internal domestic policy."
             },
@@ -1309,7 +1309,7 @@
           "note": "Chèque-éducation et gouvernance hospitalière révisables par loi ; numerus clausus et mise en concurrence scolaire créent des parcours et droits acquis plus rigides.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1328,7 +1328,7 @@
               "note": "Réformes structurelles (chèque-éducation, numerus clausus) créent des droits acquis difficiles à inverser rapidement."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "School maps and administrative boundaries can be redrawn by subsequent governments."
             },
@@ -1352,7 +1352,7 @@
         "consensus": "A",
         "dissent": {
           "claude-opus-4-7": "B",
-          "gemini-2.5-pro": "B"
+          "gemini-3-pro": "B"
         }
       },
       "headline": {
@@ -1360,7 +1360,7 @@
         "supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -1375,7 +1375,7 @@
             "text": "Plan massif sur 10 ans pour police et justice, peines planchers, majorité pénale à 16 ans, décentralisation de la police territoriale et lutte prioritaire contre narcotrafic et islamisme."
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "text": "Quotas d'immigration, primauté du droit national, abaissement de la majorité pénale à 16 ans."
           },
           {
@@ -1402,7 +1402,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1435,7 +1435,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1451,7 +1451,7 @@
           "reasoning": "Modifications législatives claires ; efficacité empirique des structures fermées contestée.",
           "supported_by": [
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1499,7 +1499,7 @@
           "source_refs": [],
           "supported_by": [
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1524,7 +1524,7 @@
           "reasoning": "Le programme assume un rapport de force ; la réponse de la contrepartie n'est pas modélisée.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1597,7 +1597,7 @@
           ],
           "supported_by": [
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1636,7 +1636,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1659,7 +1659,7 @@
           "magnitude": null,
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1670,7 +1670,7 @@
           "magnitude": "700 M€ d'économies revendiquées",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1683,7 +1683,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1702,7 +1702,7 @@
             "deepseek-v3"
           ],
           "dissenters": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1718,7 +1718,7 @@
               "note": "Augmentation des budgets police et justice annoncée mais non chiffrée ; le financement repose sur les économies de la réforme de l'État."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Most measures are regulatory or generate minor savings (AME)."
             },
@@ -1742,7 +1742,7 @@
           ],
           "note": "Création d'une police territoriale, capacité de rétention 24 mois et refonte pénale exigent une montée en charge pluriannuelle.",
           "supported_by": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1762,7 +1762,7 @@
               "note": "Réformes impliquent des changements législatifs lourds et une réorganisation administrative profonde."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Requires significant police redeployment and judicial processing speed."
             },
@@ -1792,7 +1792,7 @@
           ],
           "dissenters": [
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -1806,7 +1806,7 @@
               "note": "La plupart des mesures relèvent de la souveraineté nationale, à l'exception de la coopération internationale contre le narcotrafic."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Requires renegotiation or denunciation of international treaties (ECHR, EU frameworks)."
             },
@@ -1832,7 +1832,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": [
             "grok-4",
@@ -1850,7 +1850,7 @@
               "note": "Modifications du code pénal révisables, mais création d'institutions plus difficile à démanteler."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Statutory changes can be reversed, but constitutional revisions are sticky."
             },
@@ -1881,7 +1881,7 @@
         "supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -1896,7 +1896,7 @@
             "text": "Décentralisation radicale avec création de 40-50 provinces, autonomie réglementaire locale et recentrage de l'État sur le régalien, après référendum constitutionnel."
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "text": "Remplacement des régions et départements par des Provinces dotées du pouvoir normatif."
           },
           {
@@ -1923,7 +1923,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -1981,7 +1981,7 @@
           "source_refs": [],
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -2033,7 +2033,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2048,7 +2048,7 @@
             "sources.md#etat-collectivites"
           ],
           "supported_by": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4"
           ],
           "dissenters": []
@@ -2076,7 +2076,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2089,7 +2089,7 @@
           "magnitude": null,
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2150,7 +2150,7 @@
           "note": "Réforme à coût net potentiellement positif via réduction du mille-feuille ; coût de transition non chiffré.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2169,7 +2169,7 @@
               "note": "Coûts de transition liés à la réorganisation administrative et au transfert de personnels."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Net savings expected from suppressing entire administrative layers (départements/régions)."
             },
@@ -2195,7 +2195,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2212,7 +2212,7 @@
               "note": "Refonte territoriale et institutionnelle complexe nécessitant un consensus politique large."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Massive structural reform requires wide political consensus and operational capacity."
             },
@@ -2238,7 +2238,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2255,7 +2255,7 @@
               "note": "Dépend du succès du référendum constitutionnel et de l'adhésion des élus locaux."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Conditional on constitutional revision but mostly internal levers."
             },
@@ -2281,7 +2281,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2298,7 +2298,7 @@
               "note": "Modifications constitutionnelles et territoriales difficilement réversibles."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Statutory changes more reversible than constitutional ones."
             },
@@ -2330,7 +2330,7 @@
         "supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -2345,7 +2345,7 @@
             "text": "Priorité au nucléaire (EPR, SMR), rejet de l'écologie punitive et de la décroissance, soutien aux innovations technologiques (captage CO2, hydrogène) sans objectifs chiffrés de réduction d'émissions."
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "text": "Dérégulation agricole, fin des subventions éoliennes/solaires, et investissement massif dans le nucléaire."
           },
           {
@@ -2372,7 +2372,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2403,7 +2403,7 @@
           "reasoning": "Mesures explicites en faveur de la production ; impact biodiversité et eau non chiffré.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -2430,7 +2430,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -2450,7 +2450,7 @@
           "significance": "ZAN, érosion biodiversité, pollutions diffuses non traités.",
           "source_refs": [],
           "supported_by": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -2476,7 +2476,7 @@
           "reasoning": "Décalage temporel structurel entre fenêtre 2026-2035 et disponibilité du nucléaire neuf.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "deepseek-v3"
           ],
           "dissenters": []
@@ -2490,7 +2490,7 @@
           ],
           "reasoning": "Subsidiarité revendiquée mais sans garde-fous explicites.",
           "supported_by": [
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         }
@@ -2507,7 +2507,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4",
             "qwen3.6"
           ],
@@ -2565,7 +2565,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4"
           ],
           "dissenters": []
@@ -2601,7 +2601,7 @@
           "magnitude": null,
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -2623,7 +2623,7 @@
           "magnitude": null,
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -2640,7 +2640,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": [
             "grok-4",
@@ -2658,7 +2658,7 @@
               "note": "Investissements nucléaires lourds nécessitant un financement public ou via EDF, sans engagement chiffré."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Carbon revenues recycled (tax neutral) but nuclear capital expenditure is intensive."
             },
@@ -2687,7 +2687,7 @@
             "qwen3.6"
           ],
           "dissenters": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4"
           ],
           "per_model": [
@@ -2702,7 +2702,7 @@
               "note": "Construction de nouveaux EPR techniquement complexe et longue."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Nuclear capacity is established, agricultural deregulation requires lifting EU rules."
             },
@@ -2731,7 +2731,7 @@
             "qwen3.6"
           ],
           "dissenters": [
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "grok-4"
           ],
           "per_model": [
@@ -2746,7 +2746,7 @@
               "note": "Dépend de la stabilité juridique européenne et de la coopération internationale."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Requires reciprocal carbon mechanisms and possibly EU treaty modification."
             },
@@ -2772,7 +2772,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek-v3",
-            "gemini-2.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
@@ -2790,7 +2790,7 @@
               "note": "Investissements nucléaires lourds difficilement réversibles."
             },
             {
-              "model": "gemini-2.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Nuclear infrastructure choices lock the energy mix for half a century."
             },
@@ -2871,7 +2871,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro"
+              "gemini-3-pro"
             ],
             "dissenters": [
               "grok-4",
@@ -2889,7 +2889,7 @@
                 "note": "Relèvement à 65 ans pénalise les cohortes proches du départ ; capitalisation non encore active."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": -1,
                 "note": "Pension reform raises retirement age; capitalization yet to mature."
               },
@@ -2914,7 +2914,7 @@
             "note": "Premières tranches de capitalisation matures ; minimum vieillesse actif ; solvabilité en amélioration.",
             "supported_by": [
               "claude-opus-4-7",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -2933,7 +2933,7 @@
                 "note": "Tranches en cours de constitution ; effets distributifs encore limités."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Capitalization tranches start producing returns; floor stabilizes low end."
               },
@@ -2959,7 +2959,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -2976,7 +2976,7 @@
                 "note": "Cible ~40% capitalisation atteinte progressivement ; soutenabilité renforcée."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "System reaches mature capitalization mix; demographic risk falls sharply."
               },
@@ -2996,7 +2996,7 @@
         "row_supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -3020,7 +3020,7 @@
             ],
             "dissenters": [
               "deepseek-v3",
-              "gemini-2.5-pro"
+              "gemini-3-pro"
             ],
             "per_model": [
               {
@@ -3034,7 +3034,7 @@
                 "note": "Effets de la règle d'or et des économies de dépense neutralisent partiellement les baisses fiscales."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Spending discipline begins; règle d'or framework anchors expectations."
               },
@@ -3059,7 +3059,7 @@
             "note": "Règle d'or pleinement effective et mi-trajectoire de baisse de dépense ; effet net dépend du respect des cibles. Vue Grok plus dégradée (transition coûteuse).",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3078,7 +3078,7 @@
                 "note": "Économies de dépense compensent baisses fiscales ; trajectoire dette stabilisée."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Règle d'or enforces discipline; spending cuts visible in debt trajectory."
               },
@@ -3104,7 +3104,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3122,7 +3122,7 @@
                 "note": "Baisse de dépense de 8 points de PIB et soutenabilité retraite réduisent fortement la dette."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Long-term spending cuts and capitalization payoff stabilize debt."
               },
@@ -3142,7 +3142,7 @@
         "row_supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "qwen3.6"
         ],
         "row_dissenters": [
@@ -3162,7 +3162,7 @@
             "note": "Régime dérogatoire des renouvelables prend fin avant la mise en service des nouveaux EPR ; risque d'écart d'émissions à court terme selon la durée du pont.",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3181,7 +3181,7 @@
                 "note": "Maintien du nucléaire existant compense partiellement le retrait des renouvelables."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 0,
                 "note": "Renewables retrenchment partly offset by carbon pricing."
               },
@@ -3206,7 +3206,7 @@
             "note": "Premiers EPR et SMR entrent en mise en service ; tarification carbone à fiscalité constante en place.",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3225,7 +3225,7 @@
                 "note": "Nouveaux EPR et SMR en service ; émissions amorcent une baisse."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "First EPRs come online; tax-constant carbon pricing supports transition."
               },
@@ -3250,7 +3250,7 @@
             "note": "Nouveau parc nucléaire pleinement intégré ; électricité décarbonée soutient l'électrification de l'industrie.",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4"
             ],
             "dissenters": [
@@ -3269,7 +3269,7 @@
                 "note": "Décarbonation de l'électricité acquise ; émissions structurellement réduites."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Mature nuclear fleet enables full electrification of energy uses."
               },
@@ -3289,7 +3289,7 @@
         "row_supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -3308,7 +3308,7 @@
             "note": "Dissolution ARS pendant la transition peut désorganiser la coordination ; nouveaux étudiants pas encore diplômés.",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3327,7 +3327,7 @@
                 "note": "Réorganisation gouvernance santé en cours ; effets cliniques limités à court terme."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 0,
                 "note": "Governance reform creates short-term churn but no immediate access loss."
               },
@@ -3353,7 +3353,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3370,7 +3370,7 @@
                 "note": "Doublement étudiants atteint maturité ; pression sur déserts médicaux baisse."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Medical-student doubling matures; access improves."
               },
@@ -3395,7 +3395,7 @@
             "note": "Métriques de désertification médicale s'améliorent ; consortium pharmaceutique européen stabilise les approvisionnements.",
             "supported_by": [
               "claude-opus-4-7",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3414,7 +3414,7 @@
                 "note": "Système de santé renforcé en personnel et en gouvernance ; soutenabilité accrue."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Stable medical workforce supports universal access."
               },
@@ -3434,7 +3434,7 @@
         "row_supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -3452,7 +3452,7 @@
             ],
             "note": "Évolution des programmes et certificat de fin de primaire entrent en vigueur ; déploiement du chèque éducation phasé.",
             "supported_by": [
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3472,7 +3472,7 @@
                 "note": "Phase de mise en place du chèque éducation et nouveaux programmes."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Initial curriculum reform and assessment milestones improve learning outcomes."
               },
@@ -3498,7 +3498,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3515,7 +3515,7 @@
                 "note": "Plein effet du chèque éducation ; recrutement enseignants stabilisé."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Reform fully felt; teacher salaries support recruitment quality."
               },
@@ -3540,7 +3540,7 @@
             "note": "Premières cohortes pleinement éduquées sous le système réformé entrent sur le marché du travail.",
             "supported_by": [
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3559,7 +3559,7 @@
                 "note": "Cohortes éduquées sous le système réformé montrent des résultats améliorés sur le marché du travail."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Reformed school system produces graduates with measurable outcomes."
               },
@@ -3579,7 +3579,7 @@
         "row_supported_by": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ],
@@ -3599,7 +3599,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro",
+              "gemini-3-pro",
               "grok-4",
               "qwen3.6"
             ],
@@ -3616,7 +3616,7 @@
                 "note": "Suppression SRU sans mesure compensatoire fragilise l'accès au logement social court terme."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": -1,
                 "note": "SRU abolition risks accelerated segregation in tense zones short term."
               },
@@ -3646,7 +3646,7 @@
             ],
             "dissenters": [
               "deepseek-v3",
-              "gemini-2.5-pro"
+              "gemini-3-pro"
             ],
             "per_model": [
               {
@@ -3660,7 +3660,7 @@
                 "note": "Effets ambigus : libération offre vs perte logement social en zones tendues."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": -1,
                 "note": "Long-term housing market more polarized without SRU compensatory mechanisms."
               },
@@ -3686,7 +3686,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek-v3",
-              "gemini-2.5-pro"
+              "gemini-3-pro"
             ],
             "dissenters": [
               "grok-4",
@@ -3704,7 +3704,7 @@
                 "note": "Marché logement rééquilibré, mais ségrégation territoriale possible."
               },
               {
-                "model": "gemini-2.5-pro",
+                "model": "gemini-3-pro",
                 "score": 0,
                 "note": "Long-term equilibrium uncertain; depends on local negotiations."
               },
@@ -3728,7 +3728,7 @@
           "qwen3.6"
         ],
         "row_dissenters": [
-          "gemini-2.5-pro"
+          "gemini-3-pro"
         ]
       }
     ],
@@ -3752,7 +3752,7 @@
           "view": "Considère que la trajectoire de dette se dégrade plus durablement (h_2031_2037 : -2 ; h_2038_2047 : -1) en raison du coût soutenu de la transition capitalisation et estime un effet pro-jeunes plus marqué sur le logement (h_2038_2047 : +2) et le climat (h_2027_2030 : +1) que les autres modèles."
         },
         {
-          "model": "gemini-2.5-pro",
+          "model": "gemini-3-pro",
           "view": "Vue plus négative à long terme sur le logement (h_2038_2047 : 0) et plus positive sur la dette publique (h_2027_2030 : +1) ; insiste sur la polarisation du marché du logement sans mécanismes compensatoires de la SRU."
         },
         {
@@ -3780,7 +3780,7 @@
     "supported_by": [
       "claude-opus-4-7",
       "deepseek-v3",
-      "gemini-2.5-pro",
+      "gemini-3-pro",
       "qwen3.6"
     ],
     "dissenters": [
@@ -3798,7 +3798,7 @@
       "supported_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -3822,7 +3822,7 @@
       "source_refs": [],
       "supported_by": [
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -3907,7 +3907,7 @@
       "supported_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -3922,7 +3922,7 @@
       "supported_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4"
       ],
       "dissenters": []
@@ -3957,7 +3957,7 @@
       "severity": 0.7,
       "reasoning": "Standoff juridique séquentiel décrit dans le programme ; risque de représailles commerciales ou de dégradation de la coopération sectorielle (Frontex, Schengen).",
       "supported_by": [
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -3971,7 +3971,7 @@
       "reasoning": "Précédents internationaux : la suppression de quotas territoriaux de logement social tend à concentrer le logement aidé dans les communes déjà pourvues.",
       "supported_by": [
         "qwen3.6",
-        "gemini-2.5-pro"
+        "gemini-3-pro"
       ],
       "dissenters": []
     }
@@ -3983,7 +3983,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -3993,7 +3993,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4003,7 +4003,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4013,7 +4013,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4023,7 +4023,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4033,7 +4033,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4043,7 +4043,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4053,7 +4053,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4063,7 +4063,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4073,7 +4073,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4083,7 +4083,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4093,7 +4093,7 @@
         "models": [
           "claude-opus-4-7",
           "deepseek-v3",
-          "gemini-2.5-pro",
+          "gemini-3-pro",
           "grok-4",
           "qwen3.6"
         ]
@@ -4112,7 +4112,7 @@
             "position": "A — bloc cohérent et structuré avec objectifs chiffrés"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "B — risques juridiques européens et tensions diplomatiques notables"
           },
           {
@@ -4137,7 +4137,7 @@
             "position": "B — réformes éducation et santé d'ampleur, bémol sur le volet redistribution"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "B — réformes structurelles offre, déficits redistributifs compensés par contrat unique"
           },
           {
@@ -4162,7 +4162,7 @@
             "position": "B — décentralisation radicale, péréquation à clarifier"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "B — réforme structurelle dépendant d'un consensus politique large"
           },
           {
@@ -4187,7 +4187,7 @@
             "position": "C — pas de cible 2030, dépendance technologique forte sans calendrier"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "C — dérégulation agricole et fin subventions renouvelables sans plan compensatoire"
           },
           {
@@ -4212,7 +4212,7 @@
             "position": "-1 — recentrage présidentiel et renforcement parlementaire dominent"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "+1 — recentrage présidentiel renforce l'État stratège"
           },
           {
@@ -4237,7 +4237,7 @@
             "position": "mixed — bénéfices structurels couplés à risques sociaux et juridiques"
           },
           {
-            "model": "gemini-2.5-pro",
+            "model": "gemini-3-pro",
             "position": "mixed — réformes massives à effets conditionnels"
           },
           {
@@ -4254,7 +4254,7 @@
     "coverage": {
       "claude-opus-4-7": "complete",
       "deepseek-v3": "complete",
-      "gemini-2.5-pro": "complete",
+      "gemini-3-pro": "complete",
       "grok-4": "complete",
       "qwen3.6": "complete"
     },
@@ -4326,7 +4326,7 @@
       "claimed_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -4341,7 +4341,7 @@
       "claimed_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -4356,7 +4356,7 @@
       "claimed_by": [
         "claude-opus-4-7",
         "deepseek-v3",
-        "gemini-2.5-pro",
+        "gemini-3-pro",
         "grok-4",
         "qwen3.6"
       ],
@@ -4367,7 +4367,7 @@
       "reviewer_id": "benoit"
     },
     {
-      "claim": "L'identifiant de modèle 'qwen3.6' contient un point ; les autres identifiants utilisent des tirets (`claude-opus-4-7`, `deepseek-v3`, `gemini-2.5-pro`, `grok-4`).",
+      "claim": "L'identifiant de modèle 'qwen3.6' contient un point ; les autres identifiants utilisent des tirets (`claude-opus-4-7`, `deepseek-v3`, `gemini-3-pro`, `grok-4`).",
       "claimed_by": [
         "qwen3.6"
       ],

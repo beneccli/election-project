@@ -17,7 +17,7 @@
     },
     {
       "provider": "google",
-      "version": "gemini-1.5-pro"
+      "version": "gemini-3-pro"
     },
     {
       "provider": "mistralai",
@@ -81,7 +81,7 @@
           "reasoning": "Programme explicite sur la reprise en main publique de secteurs stratégiques, la régulation des prix et la fiscalité confiscatoire des hauts patrimoines. Propositions concrètes et affirmées."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "score": -4,
           "reasoning": "Program centers on widespread nationalization, public monopolies, strict price controls, and heavy capital taxation."
         },
@@ -153,7 +153,7 @@
           "reasoning": "Le programme inclut des mesures sociétales très avancées sur le genre, les drogues, la fin de vie, le droit des étrangers, et l'antiracisme, sans ambiguïté."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "score": -4,
           "reasoning": "Proposes systematic deconstruction of patriarchal structures, free IVG, full constitutional reproductive rights, and strong anti-discrimination measures."
         },
@@ -198,7 +198,7 @@
           "reasoning": "The Plan A/Plan B EU strategy explicitly elevates national constitutional norms above EU law and commits to unilateral disobedience — operationally a sovereigntist program. NATO withdrawal and ecological protectionism reinforce this, but the multilateral, UN-centric register and refusal of identitarian framing keep it below the high-sovereigntist anchor."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "position": 2,
           "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence — but from an altermondialist rather than nationalist register."
         }
@@ -220,7 +220,7 @@
           "reasoning": "Programme articulant sortie de l'OTAN, désobéissance aux traités européens, protectionnisme et relocalisation. Le registre reste altermondialiste et internationaliste, ce qui le distingue du souverainisme identitaire."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "score": 2,
           "reasoning": "Advocates ecological protectionism, exiting NATO command, and disobedience to EU treaties, asserting strong national independence."
         },
@@ -272,7 +272,7 @@
           "reasoning": "Le projet de 6e République avec primauté populaire et contournement des traités existants place le programme dans la zone illibérale/populiste de l'axe, bien que les contre-pouvoirs soient préservés."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "score": 2,
           "reasoning": "Aims to abolish the 'presidential monarchy', institute the RIC, and strictly separate state and financial interests."
         },
@@ -324,7 +324,7 @@
           "reasoning": "Les propositions écologiques sont centrales, détaillées et structurelles, couvrant l'énergie, l'agriculture, l'eau, la biodiversité et les transports."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "score": 4,
           "reasoning": "Ecology is the central organizing principle of the economic program, featuring constitutional green rules, an exit from nuclear, and 100% renewables."
         },
@@ -372,7 +372,7 @@
           "reasoning": "Économie étatiste et anticapitaliste, progressisme sociétal maximal, écologie de rupture et souverainisme post-européen placent le programme à l'extrême-gauche."
         },
         {
-          "model": "gemini-1.5-pro",
+          "model": "gemini-3-pro",
           "label": "extreme_gauche",
           "reasoning": "Hard-statist economics, deep social progressivism, and an institutional rupture agenda via a Constituent Assembly pull the program firmly into the extreme-left/radical-left band, breaking explicitly with capitalist norms."
         },
@@ -405,7 +405,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -424,7 +424,7 @@
             "text": "Révolution fiscale (14 tranches d'IR, ISF renforcé, taxe Zucman) et création de pôles publics, mais financement tributaire d'un affrontement avec la BCE et l'UE."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "text": "Hausse massive des dépenses via 200 milliards d'investissements, compensée par une révolution fiscale (14 tranches)."
           },
           {
@@ -451,7 +451,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -468,7 +468,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -499,7 +499,7 @@
           "supported_by": [
             "gpt-5.5-thinking",
             "claude-opus-4-7",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -530,7 +530,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -549,11 +549,11 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ]
         },
         {
@@ -594,7 +594,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -609,7 +609,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -623,7 +623,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -637,7 +637,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -656,7 +656,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -678,7 +678,7 @@
               "note": "Recettes fiscales et monétisation BCE supposées couvrir les dépenses, sans modèle macro publié."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Hypothèses massives sur les recettes et l'annulation BCE de la dette."
             },
@@ -705,7 +705,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": [
@@ -728,7 +728,7 @@
               "note": "Refonte fiscale et nationalisations simultanées exigent des capacités importantes."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Nationalisation d'entités privées majeures et restructuration fiscale sans précédent."
             },
@@ -754,7 +754,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -778,7 +778,7 @@
               "note": "Dépendance à la coopération BCE et partenaires européens pour la dette perpétuelle."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Dépend de la conformité forcée de l'UE/BCE ou de la rupture institutionnelle."
             },
@@ -809,7 +809,7 @@
           "dissenters": [
             "gpt-5.5-thinking",
             "deepseek",
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -828,7 +828,7 @@
               "note": "Outils fiscaux modifiables ; nationalisations plus difficiles."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Mandats fiscaux constitutionnels et nationalisations difficiles à inverser."
             },
@@ -862,7 +862,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -881,7 +881,7 @@
             "text": "Service public de la petite enfance, garantie d'autonomie pour les jeunes, refonte de l'école et de la dépendance, droits des femmes et anti-discriminations."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "text": "Restauration de la retraite à 60 ans, 100% Sécu et garantie d'autonomie pour éradiquer la pauvreté."
           },
           {
@@ -909,7 +909,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -926,7 +926,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -942,7 +942,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -959,7 +959,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -972,7 +972,7 @@
           "significance": "Le programme abaisse l'âge légal sans détailler l'élargissement de l'assiette des cotisations qui couvrirait le surcoût démographique de long terme ; trois modèles sur six relèvent l'absence de modélisation actuarielle.",
           "source_refs": [],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "claude-opus-4-7"
           ],
@@ -984,7 +984,7 @@
           "source_refs": [],
           "supported_by": [
             "gpt-5.5-thinking",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "mistral-le-chat-2026-04-25"
           ],
@@ -1001,7 +1001,7 @@
           ],
           "reasoning": "Trois modèles (gemini, qwen, claude) signalent le même mécanisme ; les autres ne le contestent pas frontalement.",
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "claude-opus-4-7"
           ],
@@ -1022,7 +1022,7 @@
           ],
           "supported_by": [
             "gpt-5.5-thinking",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "mistral-le-chat-2026-04-25"
           ],
@@ -1052,7 +1052,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1067,7 +1067,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1080,7 +1080,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1094,7 +1094,7 @@
           "supported_by": [
             "mistral-le-chat-2026-04-25",
             "deepseek",
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         }
@@ -1111,7 +1111,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": [
             "mistral-le-chat-2026-04-25",
@@ -1134,7 +1134,7 @@
               "note": "Recettes redistributives conditionnent le financement durable."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Création de prestations universelles structurelles."
             },
@@ -1164,7 +1164,7 @@
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "per_model": [
@@ -1184,7 +1184,7 @@
               "note": "Coopération des professionnels du soin et de l'éducation requise."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Infrastructure CAF/Sécu existante absorbe la charge administrative."
             },
@@ -1213,7 +1213,7 @@
             "deepseek"
           ],
           "dissenters": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1234,7 +1234,7 @@
               "note": "Dépendance limitée hors macro."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Politiques essentiellement domestiques."
             },
@@ -1265,7 +1265,7 @@
           ],
           "dissenters": [
             "deepseek",
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -1284,7 +1284,7 @@
               "note": "Mesures ancrées dans le programme."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Pensions et prestations modifiables par majorité simple."
             },
@@ -1317,7 +1317,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -1336,7 +1336,7 @@
             "text": "Sortie de l'OTAN, refondation de la police, politique migratoire humaniste et souveraineté industrielle par la relocalisation et le protectionnisme écologique."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "text": "Sortie de l'OTAN, refondation d'une police de proximité (fin des BAC/BRAV-M) et protectionnisme."
           },
           {
@@ -1363,7 +1363,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1379,7 +1379,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1396,7 +1396,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1411,7 +1411,7 @@
           "supported_by": [
             "gpt-5.5-thinking",
             "claude-opus-4-7",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1421,7 +1421,7 @@
           "significance": "L'opt-out des programmes européens de défense (Commissaire à la Défense, BITDE) fragilise les contrats coopératifs (Eurofighter, MGCS, SCAF) et les exports français.",
           "source_refs": [],
           "supported_by": [
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         }
@@ -1436,7 +1436,7 @@
           ],
           "reasoning": "Choix politique explicite ; conséquence reconnue par gemini, claude et qwen comme effet direct du programme.",
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "claude-opus-4-7"
           ],
           "dissenters": []
@@ -1452,7 +1452,7 @@
             "sources.md#chapitre-4--etendre-le-domaine-de-la-liberte"
           ],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "claude-opus-4-7"
           ],
           "dissenters": []
@@ -1481,7 +1481,7 @@
             "sources.md#chapitre-9--produire-nous-memes-pour-repondre-aux-besoins"
           ],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": []
@@ -1497,7 +1497,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1523,7 +1523,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -1536,7 +1536,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1554,7 +1554,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": [
@@ -1578,7 +1578,7 @@
               "note": "Coût significatif de la souveraineté industrielle."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Reconstruction de capacités conventionnelles indépendantes."
             },
@@ -1608,7 +1608,7 @@
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "per_model": [
@@ -1628,7 +1628,7 @@
               "note": "Réforme institutionnelle et opérationnelle de la police et de la défense."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Logistique RH significative mais bornée."
             },
@@ -1654,7 +1654,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1678,7 +1678,7 @@
               "note": "Dépendance aux matières premières et partenaires non-OTAN."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Dépendance à la volonté des nations du Sud global."
             },
@@ -1704,7 +1704,7 @@
           "supported_by": [
             "gpt-5.5-thinking",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
@@ -1728,7 +1728,7 @@
               "note": "Décisions diplomatiques réversibles."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Retraits de traités et unités réversibles."
             },
@@ -1762,7 +1762,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -1781,7 +1781,7 @@
             "text": "Assemblée constituante pour une 6e République parlementaire avec RIC, référendum révocatoire, et séparation stricte de l'argent et de l'État."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "text": "Abolition de la monarchie présidentielle via la 6e République et instauration du RIC."
           },
           {
@@ -1808,7 +1808,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1826,7 +1826,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1843,7 +1843,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1856,7 +1856,7 @@
           "significance": "Le programme ne précise pas la procédure si l'Assemblée constituante échoue à produire un texte ratifiable dans le délai de 24 mois ; aucun mécanisme de sortie n'est décrit.",
           "source_refs": [],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": []
@@ -1872,7 +1872,7 @@
           ],
           "reasoning": "Effet structurel reconnu par gemini, mistral et claude ; deepseek et qwen y voient un trait positif (parlementarisme assumé) plutôt qu'une dégradation.",
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "claude-opus-4-7"
           ],
@@ -1892,7 +1892,7 @@
             "sources.md#chapitre-1--le-pouvoir-au-peuple"
           ],
           "supported_by": [
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -1934,7 +1934,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1948,7 +1948,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -1989,7 +1989,7 @@
           "note": "Coût direct essentiellement logistique (élections supplémentaires, fonctionnement Constituante) ; faible face aux mesures macroéconomiques.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2014,7 +2014,7 @@
               "note": "Coût logistique limité."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Coût budgétaire négligeable."
             },
@@ -2045,7 +2045,7 @@
             "qwen3.6"
           ],
           "dissenters": [
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -2064,7 +2064,7 @@
               "note": "Mobilisation citoyenne et coopération politique requises."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "moderate",
               "note": "Élections nationales complexes mais bornées."
             },
@@ -2089,7 +2089,7 @@
           "note": "Processus essentiellement domestique ; dépendance externe principalement liée à la friction avec le droit européen.",
           "supported_by": [
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2114,7 +2114,7 @@
               "note": "Processus principalement domestique."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Procédure légale interne."
             },
@@ -2139,7 +2139,7 @@
           "note": "Une nouvelle Constitution est l'instrument juridique le plus difficile à inverser ; les changements de mode de scrutin sont structurellement durables.",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
@@ -2164,7 +2164,7 @@
               "note": "Modifications constitutionnelles difficilement réversibles."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Cadre constitutionnel le plus difficile à inverser."
             },
@@ -2188,7 +2188,7 @@
         "consensus": "B",
         "dissent": {
           "deepseek": "A",
-          "gemini-1.5-pro": "A"
+          "gemini-3-pro": "A"
         }
       },
       "headline": {
@@ -2197,7 +2197,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -2216,7 +2216,7 @@
             "text": "Règle verte constitutionnelle, 200 Md€ d'investissement, 100% ENR en 2050, sortie du nucléaire, agriculture bio et protectionnisme écologique."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "text": "Planification écologique constitutionnelle (règle verte), sortie du nucléaire et 100% renouvelable."
           },
           {
@@ -2243,7 +2243,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2261,7 +2261,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2278,7 +2278,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2291,7 +2291,7 @@
           "significance": "L'objectif 100% renouvelables sans nucléaire en 2050, combiné à l'électrification des transports et du chauffage, exige des capacités de stockage et de pilotage de la demande dont le calendrier de déploiement n'est pas chiffré.",
           "source_refs": [],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "claude-opus-4-7",
             "mistral-le-chat-2026-04-25"
@@ -2318,7 +2318,7 @@
           ],
           "reasoning": "Tension structurelle reconnue par gemini, mistral et qwen ; partiellement adressée par les plans de relocalisation industrielle.",
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2333,7 +2333,7 @@
           ],
           "reasoning": "Effet bien documenté dans la littérature agronomique ; gemini et claude le signalent.",
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "claude-opus-4-7"
           ],
           "dissenters": []
@@ -2349,7 +2349,7 @@
             "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
           ],
           "supported_by": [
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6",
             "mistral-le-chat-2026-04-25"
           ],
@@ -2364,7 +2364,7 @@
             "sources.md#chapitre-13--les-grands-chantiers-de-la-bifurcation-ecologique"
           ],
           "supported_by": [
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "dissenters": []
         },
@@ -2392,7 +2392,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2406,7 +2406,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2420,7 +2420,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2433,7 +2433,7 @@
           "magnitude": "-65% vs référence",
           "supported_by": [
             "claude-opus-4-7",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": []
@@ -2451,7 +2451,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25"
           ],
           "dissenters": [
@@ -2474,7 +2474,7 @@
               "note": "Investissement écologique sans précédent."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Dépense publique historique pour la transition."
             },
@@ -2501,7 +2501,7 @@
             "gpt-5.5-thinking",
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "qwen3.6"
           ],
           "dissenters": [
@@ -2524,7 +2524,7 @@
               "note": "Mise à l'échelle simultanée énergie/agriculture/bâti."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Démantèlement nucléaire et rénovations massives."
             },
@@ -2555,7 +2555,7 @@
           ],
           "dissenters": [
             "claude-opus-4-7",
-            "gemini-1.5-pro"
+            "gemini-3-pro"
           ],
           "per_model": [
             {
@@ -2574,7 +2574,7 @@
               "note": "Dépendance partielle aux chaînes d'approvisionnement."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "high",
               "note": "Renouvelables dépendent de matières importées."
             },
@@ -2591,7 +2591,7 @@
           ]
         },
         "reversibility": {
-          "modal_level": null,
+          "modal_level": "limited",
           "level_interval": [
             "low",
             "moderate"
@@ -2600,7 +2600,7 @@
           "supported_by": [
             "claude-opus-4-7",
             "deepseek",
-            "gemini-1.5-pro",
+            "gemini-3-pro",
             "mistral-le-chat-2026-04-25",
             "qwen3.6"
           ],
@@ -2624,7 +2624,7 @@
               "note": "Constitutionalisation et infra durables."
             },
             {
-              "model": "gemini-1.5-pro",
+              "model": "gemini-3-pro",
               "level": "low",
               "note": "Démantèlement nucléaire et règles constitutionnelles essentiellement irréversibles."
             },
@@ -2705,7 +2705,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro"
+              "gemini-3-pro"
             ],
             "dissenters": [
               "gpt-5.5-thinking",
@@ -2729,7 +2729,7 @@
                 "note": "Mesures paramétriques effectives dès la première législature."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Restauration immédiate de l'âge 60 et plancher SMIC."
               },
@@ -2754,7 +2754,7 @@
             "note": "Stabilisation du système ; trois modèles (claude, gemini, mistral) maintiennent un gain modéré, gpt et deepseek anticipent une dérive.",
             "supported_by": [
               "claude-opus-4-7",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "dissenters": [
@@ -2779,7 +2779,7 @@
                 "note": "Pression structurelle sur le financement."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Bénéfices maintenus, pression sur le financement."
               },
@@ -2806,7 +2806,7 @@
               "gpt-5.5-thinking",
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25",
               "qwen3.6"
             ],
@@ -2828,7 +2828,7 @@
                 "note": "Dérive démographique non couverte."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 0,
                 "note": "Soutenabilité conditionnée à la relocalisation et plein emploi."
               },
@@ -2849,7 +2849,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -2874,7 +2874,7 @@
             ],
             "dissenters": [
               "gpt-5.5-thinking",
-              "gemini-1.5-pro"
+              "gemini-3-pro"
             ],
             "per_model": [
               {
@@ -2893,7 +2893,7 @@
                 "note": "Augmentation marquée du ratio dette/PIB."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": -3,
                 "note": "Augmentation nominale forte due à 200 Md€ et expansion sociale."
               },
@@ -2923,7 +2923,7 @@
               "qwen3.6"
             ],
             "dissenters": [
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "per_model": [
@@ -2943,7 +2943,7 @@
                 "note": "Charge persistante en l'absence d'intervention BCE."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": -2,
                 "note": "Charge structurelle élevée sans intervention BCE explicite."
               },
@@ -2973,7 +2973,7 @@
               "qwen3.6"
             ],
             "dissenters": [
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "per_model": [
@@ -2993,7 +2993,7 @@
                 "note": "Effet neutralisé par maturation des recettes."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": -1,
                 "note": "Retours d'investissement (économies d'énergie) compensent partiellement."
               },
@@ -3014,7 +3014,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -3038,7 +3038,7 @@
             ],
             "dissenters": [
               "gpt-5.5-thinking",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "per_model": [
@@ -3058,7 +3058,7 @@
                 "note": "Investissement et règles entrent en vigueur."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Bascules statutaires immédiates : plastiques, objectif -65%."
               },
@@ -3088,7 +3088,7 @@
               "qwen3.6"
             ],
             "dissenters": [
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "per_model": [
@@ -3108,7 +3108,7 @@
                 "note": "ENR et bâti livrent les premiers gains."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 3,
                 "note": "Rénovations et trajectoire 2030 livrent des baisses massives."
               },
@@ -3133,7 +3133,7 @@
             "note": "Trois modèles évaluent l'effet maximal positif ; gpt et claude maintiennent +2, mistral inverse à -3.",
             "supported_by": [
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3158,7 +3158,7 @@
                 "note": "Atteinte de la neutralité, dette écologique réduite."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 3,
                 "note": "100% renouvelables et transition écologique atteints."
               },
@@ -3179,7 +3179,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "qwen3.6"
         ],
         "row_dissenters": [
@@ -3200,7 +3200,7 @@
             "supported_by": [
               "gpt-5.5-thinking",
               "claude-opus-4-7",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3224,7 +3224,7 @@
                 "note": "Reconstitution prend du temps."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Suppression des franchises et embauches accroissent l'accès."
               },
@@ -3251,7 +3251,7 @@
               "gpt-5.5-thinking",
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3274,7 +3274,7 @@
                 "note": "Couverture prévention et soins étendue."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Pôles publics et stratégie déserts livrent leurs effets."
               },
@@ -3300,7 +3300,7 @@
             "supported_by": [
               "gpt-5.5-thinking",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25",
               "qwen3.6"
             ],
@@ -3324,7 +3324,7 @@
                 "note": "Système consolidé."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Santé populationnelle améliorée."
               },
@@ -3345,7 +3345,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -3369,7 +3369,7 @@
               "qwen3.6"
             ],
             "dissenters": [
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25"
             ],
             "per_model": [
@@ -3389,7 +3389,7 @@
                 "note": "Abolition Parcoursup, gratuité matérielle."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Gratuité immédiate et abolition de Parcoursup."
               },
@@ -3416,7 +3416,7 @@
               "gpt-5.5-thinking",
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3439,7 +3439,7 @@
                 "note": "Refonte structurelle effective."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Réduction des effectifs et reconstruction voie pro."
               },
@@ -3465,7 +3465,7 @@
             "supported_by": [
               "gpt-5.5-thinking",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25",
               "qwen3.6"
             ],
@@ -3489,7 +3489,7 @@
                 "note": "Capital humain élargi."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Égalisation long terme du capital humain."
               },
@@ -3510,7 +3510,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -3530,7 +3530,7 @@
             "supported_by": [
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3554,7 +3554,7 @@
                 "note": "Mise en place du dispositif."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 1,
                 "note": "Encadrement et interdiction d'expulsions amorcent l'effet."
               },
@@ -3581,7 +3581,7 @@
               "gpt-5.5-thinking",
               "claude-opus-4-7",
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "qwen3.6"
             ],
             "dissenters": [
@@ -3604,7 +3604,7 @@
                 "note": "Effet structurel sur les prix."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Livraison de 200 000 unités/an modifie le marché."
               },
@@ -3629,7 +3629,7 @@
             "note": "Effets cumulés long terme via plafonds successoraux et réquisitions ; gpt et claude restent à +1.",
             "supported_by": [
               "deepseek",
-              "gemini-1.5-pro",
+              "gemini-3-pro",
               "mistral-le-chat-2026-04-25",
               "qwen3.6"
             ],
@@ -3654,7 +3654,7 @@
                 "note": "Marché transformé durablement."
               },
               {
-                "model": "gemini-1.5-pro",
+                "model": "gemini-3-pro",
                 "score": 2,
                 "note": "Plafonds successoraux redistribuent le capital."
               },
@@ -3675,7 +3675,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ],
@@ -3735,7 +3735,7 @@
       "qwen3.6"
     ],
     "dissenters": [
-      "gemini-1.5-pro"
+      "gemini-3-pro"
     ]
   },
   "unsolved_problems": [
@@ -3754,7 +3754,7 @@
         "qwen3.6"
       ],
       "dissenters": [
-        "gemini-1.5-pro"
+        "gemini-3-pro"
       ]
     },
     {
@@ -3768,7 +3768,7 @@
         "gpt-5.5-thinking",
         "claude-opus-4-7",
         "deepseek",
-        "gemini-1.5-pro",
+        "gemini-3-pro",
         "mistral-le-chat-2026-04-25"
       ],
       "dissenters": [
@@ -3791,7 +3791,7 @@
       ],
       "dissenters": [
         "deepseek",
-        "gemini-1.5-pro"
+        "gemini-3-pro"
       ]
     },
     {
@@ -3809,7 +3809,7 @@
         "qwen3.6"
       ],
       "dissenters": [
-        "gemini-1.5-pro"
+        "gemini-3-pro"
       ]
     }
   ],
@@ -3824,7 +3824,7 @@
         "gpt-5.5-thinking",
         "claude-opus-4-7",
         "deepseek",
-        "gemini-1.5-pro",
+        "gemini-3-pro",
         "mistral-le-chat-2026-04-25",
         "qwen3.6"
       ],
@@ -3844,7 +3844,7 @@
         "qwen3.6"
       ],
       "dissenters": [
-        "gemini-1.5-pro"
+        "gemini-3-pro"
       ]
     },
     {
@@ -3857,7 +3857,7 @@
         "gpt-5.5-thinking",
         "claude-opus-4-7",
         "deepseek",
-        "gemini-1.5-pro",
+        "gemini-3-pro",
         "mistral-le-chat-2026-04-25"
       ],
       "dissenters": [
@@ -3877,7 +3877,7 @@
         "qwen3.6"
       ],
       "dissenters": [
-        "gemini-1.5-pro",
+        "gemini-3-pro",
         "mistral-le-chat-2026-04-25"
       ]
     }
@@ -3890,7 +3890,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3901,7 +3901,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3912,7 +3912,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3923,7 +3923,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3934,7 +3934,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3945,7 +3945,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3956,7 +3956,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3967,7 +3967,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3978,7 +3978,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -3989,7 +3989,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -4000,7 +4000,7 @@
           "gpt-5.5-thinking",
           "claude-opus-4-7",
           "deepseek",
-          "gemini-1.5-pro",
+          "gemini-3-pro",
           "mistral-le-chat-2026-04-25",
           "qwen3.6"
         ]
@@ -4023,7 +4023,7 @@
             "position": "Direction nette young_to_old : la concentration des bénéfices sociaux sur les retraites et la charge fiscale future pèsent sur les jeunes."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "position": "Effet mixte : bénéfices intergénérationnels via le climat et l'éducation, mais charge sur la dette publique pour les jeunes."
           },
           {
@@ -4052,7 +4052,7 @@
             "position": "Scores +1/+2/+3 : neutralité atteinte, dette écologique réduite."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "position": "Scores +2/+3/+3 : 100% renouvelables et trajectoire 2030 livrent des baisses massives."
           },
           {
@@ -4081,7 +4081,7 @@
             "position": "Score -4 : très à gauche, redistribution forte sans renoncement complet à l'économie de marché."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "position": "Score -4 : intervention massive de l'État sans nationalisation totale."
           },
           {
@@ -4110,7 +4110,7 @@
             "position": "Score -4 : progressisme sociétal explicite."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "position": "Score -3 : ouverture marquée mais ancrée dans la République."
           },
           {
@@ -4139,7 +4139,7 @@
             "position": "Grade B : cohérence interne et chiffrage suffisant."
           },
           {
-            "model": "gemini-1.5-pro",
+            "model": "gemini-3-pro",
             "position": "Grade B : programme cohérent, risques identifiés mais chiffrage solide."
           },
           {
@@ -4157,7 +4157,7 @@
       "gpt-5.5-thinking": "complete",
       "claude-opus-4-7": "complete",
       "deepseek": "complete",
-      "gemini-1.5-pro": "complete",
+      "gemini-3-pro": "complete",
       "mistral-le-chat-2026-04-25": "complete",
       "qwen3.6": "complete"
     },
