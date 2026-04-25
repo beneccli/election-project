@@ -248,7 +248,24 @@ with a "Translation pending" banner. Translations are produced
 manually (no API mode in v1) and gated by human review, exactly
 like consolidation and aggregation.
 
-### 9.1 Prepare a copy-pasteable bundle
+You have **two execution modes** to produce the translation, both
+zero-API:
+
+- **9.A — `manual-webchat`**: build a copy-pasteable bundle, paste
+  into any chat UI, save the reply, ingest. Best when you want to
+  drive a specific provider's web chat (Claude.ai, ChatGPT, Le Chat).
+- **9.B — `copilot-agent`**: drive the Copilot agent in this editor
+  via [`.github/prompts/translate-aggregated-via-copilot.prompt.md`](../.github/prompts/translate-aggregated-via-copilot.prompt.md).
+  Best when you are already in the Copilot loop and want the agent
+  to seed the draft and apply translations in place.
+
+Both paths converge at the human-review gate (§9.3) and produce the
+same artifacts (`aggregated.<lang>.draft.json` + a
+`translations.<lang>` provenance block in `metadata.json`).
+
+### 9.A — Path 1: manual web chat
+
+#### 9.A.1 Prepare a copy-pasteable bundle
 
 ```bash
 npm run prepare-manual-translation -- \
@@ -266,7 +283,7 @@ containing:
 - `README.md` — exact next-step commands (re-displayed below for
   convenience).
 
-### 9.2 Paste into a chat UI, save the reply
+#### 9.A.2 Paste into a chat UI, save the reply
 
 Open any chat UI (Claude.ai, ChatGPT, Le Chat, …) and paste the
 contents of `prompt-bundle.txt`. The model returns a single JSON
@@ -279,23 +296,46 @@ fields rewritten in English. Save the reply as e.g.
 > ingest step below validates this with the same parity checker that
 > guards the published artifacts.
 
-### 9.3 Ingest the translation
+#### 9.A.3 Ingest the translation
 
 ```bash
 npm run ingest-translation -- \
   --candidate test-omega \
   --version 2027-11-01 \
   --lang en \
+  --mode manual-webchat \
   --attested-version "<exact model string from the chat UI>" \
   --input ~/Downloads/aggregated.en.json
 ```
 
 This writes `aggregated.en.draft.json` next to the FR canonical file
-and stamps a `translations.en` provenance block in
-`metadata.json` (prompt SHA256, prompt version, attested model,
-ingest timestamp, `human_review_completed: false`).
+and stamps a `translations.en` provenance block in `metadata.json`
+(prompt SHA256, prompt version, attested model, ingest timestamp,
+`human_review_completed: false`).
 
-### 9.4 Human review gate
+### 9.B — Path 2: Copilot agent
+
+Open [`.github/prompts/translate-aggregated-via-copilot.prompt.md`](../.github/prompts/translate-aggregated-via-copilot.prompt.md)
+as a Copilot prompt file. Provide the candidate ID, version, target
+locale, attested model version (the exact model string Copilot
+reports), and your operator handle.
+
+The agent will:
+
+1. Load the FR `aggregated.json` and the translate prompt.
+2. `cp` the FR file to `aggregated.<lang>.draft.json` so every
+   non-prose byte starts identical.
+3. Apply targeted `str_replace` edits — one prose field at a time —
+   to translate the allowlisted paths in place.
+4. Run `npm run validate-translation` to confirm parity.
+5. Run `npm run ingest-translation -- --mode copilot-agent ...` to
+   stamp the `translations.<lang>` provenance block.
+
+The in-place-edit workflow (rather than regenerating the JSON
+end-to-end) is a deliberate parity-safety choice: copy first,
+translate prose only, never re-type a number or an identifier.
+
+### 9.3 Human review gate (both paths)
 
 Open the draft, skim the prose, and check that:
 
@@ -317,7 +357,7 @@ Then edit `metadata.json` to set
 `translations.en.human_review_completed: true` and add `reviewer`
 + `reviewed_at` (ISO 8601).
 
-### 9.5 Verify in the site build
+### 9.4 Verify in the site build
 
 ```bash
 npm run validate-translation -- --candidate test-omega --version 2027-11-01 --lang en
