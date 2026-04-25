@@ -238,6 +238,27 @@ export const VersionMetadataSchema = z.object({
     })
     .optional(),
   total_cost_estimate_usd: z.number().nonnegative().optional(),
+  // Per-locale translation provenance (additive, M_I18n).
+  // Key is an ISO 639-1 lowercase code (e.g. "en"). FR is canonical
+  // and is never recorded here. See docs/specs/website/i18n.md §3.3.
+  translations: z
+    .record(
+      z.string().regex(/^[a-z]{2}$/),
+      z
+        .object({
+          prompt_file: z.string().min(1),
+          prompt_sha256: z.string().regex(sha256Pattern),
+          prompt_version: z.string().min(1),
+          execution_mode: ExecutionModeSchema,
+          attested_model_version: z.string().min(1),
+          ingested_at: isoDatetime,
+          human_review_completed: z.boolean(),
+          reviewer: z.string().optional(),
+          reviewed_at: isoDatetime.optional(),
+        })
+        .strict(),
+    )
+    .optional(),
 });
 
 export type VersionMetadata = z.infer<typeof VersionMetadataSchema>;
