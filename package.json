@@ -31,6 +31,7 @@
     "ingest-translation": "tsx scripts/ingest-translation.ts",
     "site:dev": "pnpm --filter @election-2027/site dev",
     "site:build": "pnpm --filter @election-2027/site build",
+    "site:deploy": "pnpm --filter @election-2027/site build; npx wrangler pages deploy site/out --project-name election27",
     "test:site-build": "pnpm --filter @election-2027/site build",
     "test:site-smoke": "pnpm --filter @election-2027/site run verify-build"
   },
