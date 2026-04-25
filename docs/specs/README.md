@@ -39,7 +39,7 @@ specs/
     ├── comparison-page.md          # /comparer side-by-side view              [Stable]
     ├── landing-page.md              # / landing page + stakes charts           [Stable]
     ├── transparency.md             # Transparency drawer                      [Stable]
-    └── i18n.md                      # FR canonical + EN translation pipeline   [Draft]
+    └── i18n.md                      # FR canonical + EN translation pipeline   [Stable]
 ```
 
 ---
