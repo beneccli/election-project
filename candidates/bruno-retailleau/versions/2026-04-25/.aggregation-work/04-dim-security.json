@@ -1,0 +1,169 @@
+{
+  "dimensions": {
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "gpt-5.5-thinking": "D",
+          "Le Chat": "B"
+        }
+      },
+      "headline": {
+        "text": "Programme silencieux sur sécurité intérieure, défense, immigration ; volet souveraineté économique limité à la production.",
+        "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": ["gpt-5.5-thinking", "Le Chat"],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Production and trade-balance concerns are addressed; defense, immigration, policing, energy, and food are absent." },
+          { "model": "claude-opus-4-7", "text": "Programme silencieux sur sécurité intérieure, immigration, défense, énergie et souveraineté industrielle." },
+          { "model": "deepseek-chat", "text": "Programme ne traite pas des questions de sécurité intérieure, défense, immigration ou souveraineté énergétique et industrielle." },
+          { "model": "gemini-1.5-pro", "text": "Programme ne traite pas des questions de sécurité intérieure, de défense ou de frontières." },
+          { "model": "Le Chat", "text": "Renforcement de la compétitivité nationale via baisse du coût du travail et réforme de l'assurance chômage." },
+          { "model": "qwen3.6", "text": "Programme ne traite pas des questions de sécurité intérieure, immigration ou défense." }
+        ]
+      },
+      "summary": "Quatre modèles sur six classent cette dimension NOT_ADDRESSED : le programme « Travail Gagnant » ne traite ni la sécurité intérieure, ni la justice, ni la défense, ni l'immigration, ni la souveraineté énergétique, alimentaire ou industrielle au sens propre. Le silence est notable étant donné que Bruno Retailleau est ministre de l'Intérieur en exercice (Claude souligne qu'il peut refléter le périmètre éditorial du document plutôt que l'absence de positions). Deux modèles dissidents l'analysent quand même : Mistral attribue B en lisant les baisses de coût du travail comme une politique de souveraineté économique-compétitivité ; ChatGPT attribue D en relevant les éléments de production et balance commerciale tout en notant l'absence des autres sous-dimensions. La seule mesure à connotation souveraine est l'alignement de l'indemnisation des frontaliers sur des salaires français équivalents (0,5–0,7 Md€/an).",
+      "problems_addressed": [
+        {
+          "problem": "Asymétrie de financement entre travailleurs frontaliers et résidents",
+          "approach": "Calcul de l'allocation chômage des frontaliers sur un salaire de référence français équivalent, plutôt que sur leur salaire effectif à l'étranger.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#proposition-5"],
+          "reasoning": "Mesure technique chiffrée (0,5-0,7 Md€/an) à la marge de la dimension sécurité/souveraineté ; rattachée à l'équité du financement chômage plutôt qu'à un projet souverain.",
+          "supported_by": ["claude-opus-4-7", "Le Chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Faiblesse de la balance commerciale et de la base productive nationale",
+          "approach": "Augmenter le volume horaire travaillé et baisser le coût du travail pour permettre aux entreprises de produire davantage.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#constat", "sources.md#proposition-1"],
+          "reasoning": "Lecture spécifique à ChatGPT et Mistral qui rattachent le déficit commercial à un déficit de production ; les autres modèles considèrent ce levier comme purement économique et non souverain.",
+          "supported_by": ["gpt-5.5-thinking", "Le Chat"],
+          "dissenters": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Sécurité intérieure, police, justice pénale, ordre public",
+          "significance": "Aucune mesure dans le document, alors qu'il s'agit d'un domaine régalien central et que le candidat est ministre de l'Intérieur en exercice — silence notable, possiblement reflet du périmètre éditorial du document plutôt qu'absence de positions.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Immigration et politique migratoire",
+          "significance": "Aucune proposition sur l'asile, la citoyenneté, le regroupement familial, l'intégration ou le contrôle des frontières.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Défense et capacité militaire",
+          "significance": "Aucune mesure sur la dépense de défense, l'équipement, la dissuasion nucléaire ou les effectifs.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté énergétique et alimentaire",
+          "significance": "Aucune politique sur l'électricité, le nucléaire, les renouvelables, les hydrocarbures, l'agriculture ou la résilience alimentaire.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "Le Chat"],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté industrielle ciblée",
+          "significance": "Le programme évoque la « capacité de production » au sens macroéconomique mais ne propose aucune politique industrielle sectorielle ou de chaîne d'approvisionnement.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "Le Chat"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Les gains de compétitivité ne se traduisent pas en production domestique",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "La baisse du coût du travail incite les heures supplémentaires mais les résultats de production dépendent aussi de la demande, des prix de l'énergie, du capital installé et des chaînes d'approvisionnement non spécifiées dans le source.",
+          "source_refs": ["sources.md#constat", "sources.md#proposition-1"],
+          "supported_by": ["gpt-5.5-thinking", "Le Chat"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Alignement de l'indemnisation chômage des frontaliers sur un salaire français équivalent",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "0,5 à 0,7 Md€/an d'économies",
+          "supported_by": ["claude-opus-4-7", "Le Chat"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Programme silencieux sur la dimension ; mesures résiduelles intégrées au paquet de 30 Md€.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "Sovereignty measures are mainly labor-cost reallocations already counted in the fiscal package." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Programme silencieux sur les dépenses de sécurité et de défense." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "Savings from unemployment insurance reform directly fund program implementation." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed; no budgetary impact." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Aucune nouvelle agence ; mesures résiduelles via paie et Unédic.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "Le Chat"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "The specified production measures use payroll and work-time rules rather than new industrial agencies." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Aucune mesure à mettre en œuvre." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "limited", "note": "Relies on existing administrative structures (Unédic, France Travail)." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": ["low", "high"],
+          "note": "Désaccord substantiel : ChatGPT note une forte dépendance externe (demande, énergie, supply chains), les autres y voient un domaine non traité.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Trade and production effects depend on firms, foreign demand, input costs, and supply chains not detailed." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "No external dependencies; reforms are domestically managed." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Pas de mesure structurelle à inverser ; alignement frontaliers révocable par règlement Unédic.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "Le Chat"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Payroll exemptions can be reversed legislatively; firm investment responses may outlast rule changes." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "moderate", "note": "Unemployment insurance rules are politically sensitive and could be reversed." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        }
+      },
+      "confidence": 0.78
+    }
+  }
+}

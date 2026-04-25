@@ -1,0 +1,1025 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "openai",
+    "version": "gpt-5.5-thinking"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T06:52:53Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "The program is a labor-market and social-transfer package centered on higher work hours, lower payroll costs, tighter unemployment insurance, a unified social-benefit account, and a new activity-income scheme. It quantifies roughly €28.5bn to €31.7bn of annual gains and states that these gains would be fully returned to employees and firms rather than used for net deficit reduction.",
+  "positioning": {
+    "economic": {
+      "score": 3,
+      "anchor_comparison": "Close to Fillon 2017 on labor-cost reduction and welfare conditionality; more targeted and less comprehensive than a full public-spending retrenchment program.",
+      "evidence": [
+        {
+          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "L’ensemble des cinq mesures proposées permettra de dégager au moins 30 milliards d’euros par an.",
+          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+        }
+      ],
+      "confidence": 0.84,
+      "reasoning": "The concrete package lowers payroll contributions, tightens unemployment insurance, caps parts of non-contributory assistance, and reallocates gains toward employees and firms."
+    },
+    "social_cultural": {
+      "score": 2,
+      "anchor_comparison": "Near LR 2022 on work-first social policy; less culturally explicit than Zemmour 2022 because the supplied text focuses on welfare and work incentives.",
+      "evidence": [
+        {
+          "quote": "hors situations de dépendance ou de handicap, le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "L’allocation chômage doit être un filet de sécurité, pas un choix de vie.",
+          "source_ref": "sources.md#presentation-densemble"
+        }
+      ],
+      "confidence": 0.66,
+      "reasoning": "The source material gives a conservative work-and-assistance frame, but does not cover family law, immigration, secularism, or cultural policy."
+    },
+    "sovereignty": {
+      "score": 1,
+      "anchor_comparison": "More sovereigntist than Macron 2017 on production and trade-balance rhetoric; below LR 2022/RN 2022 because EU, immigration, defense, and borders are not specified.",
+      "evidence": [
+        {
+          "quote": "produire davantage est indispensable si nous voulons créer plus de richesse et cesser de financer notre modèle social par la dette.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "notre pays souffre d’une véritable panne de production, dont le déficit chronique de la balance commerciale est l’un des signes les plus visibles.",
+          "source_ref": "sources.md#constat"
+        }
+      ],
+      "confidence": 0.58,
+      "reasoning": "The program links work hours, production, competitiveness, and trade balance, but it lacks concrete measures on EU powers, borders, defense, energy, or strategic supply chains."
+    },
+    "institutional": {
+      "score": 0,
+      "anchor_comparison": "Between Macron 2017 technocratic state-capacity framing and a more populist referendum-centered program; no explicit constitutional shift appears in the text.",
+      "evidence": [
+        {
+          "quote": "Chaque adulte disposerait d’un CSU retraçant l’ensemble des aides perçues, quelle qu’en soit l’origine, et permettant de construire un revenu social de référence.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "Ceux qui financent doivent pouvoir piloter réellement la politique de l’emploi.",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.6,
+      "reasoning": "Institutional content is administrative rather than constitutional: a national benefits registry and shared employment-policy governance, without judicial, electoral, or media-system reforms."
+    },
+    "ecological": {
+      "score": -1,
+      "anchor_comparison": "Close to LR 2022 productivist baseline; less explicitly anti-environmental than RN 2022 because climate and energy measures are largely absent.",
+      "evidence": [
+        {
+          "quote": "Un gain substantiel de croissance de l’activité dont 2 % uniquement grâce aux nouvelles heures supplémentaires",
+          "source_ref": "sources.md#bilan"
+        },
+        {
+          "quote": "renouer avec une croissance tirée par la production",
+          "source_ref": "sources.md#constat"
+        }
+      ],
+      "confidence": 0.55,
+      "reasoning": "The program is oriented toward additional production and work volume, while climate, biodiversity, water, and transition-investment measures are not specified."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty"
+      ],
+      "evidence": [
+        {
+          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "hors situations de dépendance ou de handicap, le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "produire davantage est indispensable si nous voulons créer plus de richesse et cesser de financer notre modèle social par la dette.",
+          "source_ref": "sources.md#proposition-1"
+        }
+      ],
+      "confidence": 0.58,
+      "reasoning": "Market-oriented labor-cost cuts and work-conditional social policy drive the placement. Sovereignty evidence is production-centered but not RN-level nationalist; institutional and ecological axes do not override the economic and social-cultural placement."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Package chiffré à €28.5-31.7bn/an, restitué aux salariés et entreprises plutôt qu’au déficit.",
+      "summary": "The program directly addresses labor costs, work incentives, unemployment-insurance spending, and the fiscal weight of non-contributory social transfers. Its strongest evidence is the quantified savings envelope, but fiscal consolidation is limited because the gains are described as fully returned to employees and firms.",
+      "problems_addressed": [
+        {
+          "problem": "Low net pay and high marginal cost of additional work hours",
+          "approach": "Exempt hours above 1,623 annual hours from employee and employer social contributions while keeping CSG, CRDS, and existing income-tax treatment.",
+          "strength": 0.78,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "The program quantifies a 35% lower employer cost for hours beyond the threshold and gives a median-wage example with about €2,800/year extra net income."
+        },
+        {
+          "problem": "Unemployment-insurance expenditure and repeated unemployment cycles",
+          "approach": "Apply June 2024 rules and add limits on rupture-conventionnelle benefits, frontier-worker reference wages, and high-income alternating work-unemployment patterns.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#proposition-5",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ],
+          "reasoning": "The source provides a €12.5bn-€15.7bn annual savings range, including €4bn-€5bn from June 2024 rules and €7bn-€8bn from rupture-conventionnelle changes."
+        },
+        {
+          "problem": "Payroll-tax financing of non-contributory spending",
+          "approach": "Use reform gains to reduce labor costs and increase employee net pay, with roughly half returned to each side.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ],
+          "reasoning": "The program states a full €30bn annual restitution, with about €500/year for a median-wage employee and a durable labor-cost reduction for firms."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Interest-rate sensitivity of a €3,500bn debt stock",
+          "significance": "The program cites the debt level but does not specify debt-service assumptions or contingency measures if rates rise.",
+          "source_refs": []
+        },
+        {
+          "problem": "EU fiscal-rule compatibility",
+          "significance": "The source does not state a deficit, debt, or expenditure path compatible with EU fiscal surveillance.",
+          "source_refs": []
+        },
+        {
+          "problem": "Distribution of gains by sector and bargaining power",
+          "significance": "The source does not quantify how many firms will actually offer additional hours or how gains divide across sectors.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Net deficit reduction",
+          "mechanism": "The program returns the stated €30bn annual gains to employees and firms, so the gross savings are not used as direct deficit reduction.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ],
+          "reasoning": "This design may raise activity and tax bases, but the source does not allocate the savings to lower borrowing."
+        },
+        {
+          "problem": "Social-insurance revenue volatility",
+          "mechanism": "Social contributions are removed on selected overtime and senior-work earnings, making neutrality depend on additional hours and employment responses.",
+          "severity": 0.42,
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "The text claims neutrality through new activity, but the fiscal outcome depends on take-up and employer behavior."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Behavioral response lower than assumed",
+          "probability": 0.5,
+          "severity": 0.62,
+          "reasoning": "The €2% PIB activity claim and neutrality of contribution exemptions depend on firms offering and employees accepting additional hours.",
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#bilan"
+          ]
+        },
+        {
+          "risk": "Savings from fraud and CSU below target",
+          "probability": 0.45,
+          "severity": 0.6,
+          "reasoning": "The program books €10bn from CSU and fraud control, but the source gives no implementation schedule or recovery-rate model.",
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        {
+          "risk": "Employers substitute regular hours or hiring with subsidized overtime",
+          "probability": 0.38,
+          "severity": 0.45,
+          "reasoning": "The measure lowers the marginal cost of overtime by about 35%, which can change the relative cost of hours versus additional hiring.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Seuil zero cotisation above 1,623 annual hours",
+          "source_ref": "sources.md#proposition-1",
+          "quantified": true,
+          "magnitude": "35% lower employer cost on covered extra hours; about €11bn competitiveness gain"
+        },
+        {
+          "measure": "Unemployment-insurance reform package",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "€12.5bn-€15.7bn annual savings"
+        },
+        {
+          "measure": "Full restitution of reform gains",
+          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes",
+          "quantified": true,
+          "magnitude": "At least €30bn/year, half to employees and half to firms"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Savings are quantified, but neutrality relies on extra hours, employment take-up, fraud recovery, and tax-base effects.",
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Requires payroll-rule changes, benefit fusion, unemployment rules, and a national aid register.",
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-2",
+            "sources.md#proposition-4"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Output gains depend on employer demand, worker acceptance of hours, and information sharing by benefit bodies.",
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-4"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Payroll and unemployment changes can be altered by later finance and social-security legislation.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "social_demographic": {
+      "grade": "C",
+      "headline": "Social policy centered on work incentives; healthcare, education, and inequality mechanisms mostly absent.",
+      "summary": "The program addresses social transfers, unemployment, and senior employment with concrete mechanisms and examples. It does not provide a full social-demographic program on healthcare access, schools, childcare, poverty depth, or demographic policy.",
+      "problems_addressed": [
+        {
+          "problem": "Low financial gain from partial return to work",
+          "approach": "Replace RSA, prime d’activité, and ASS with a Revenu d’incitation à l’activité whose benefit falls by 30% of earned salary.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "reasoning": "The source gives a structure with a €300 socle, €250 insertion component, and a worked example where monthly income rises by about €400 for a half-time job."
+        },
+        {
+          "problem": "Low employment rate among 60-64-year-olds",
+          "approach": "Reduce social contributions for seniors with full contribution records before legal retirement age and create a revised employment-retirement combination after it.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "The program cites 36% employment among 60-64-year-olds versus 60% in Europe and quantifies about €3,400/year extra net pay at median wage before legal retirement age."
+        },
+        {
+          "problem": "Untracked accumulation of non-contributory social benefits",
+          "approach": "Create a Compte social unique and cap covered aid at 70% of net SMIC per adult, excluding disability, dependency, and old age.",
+          "strength": 0.62,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "The mechanism is specified and the household example shows a €410/month reduction in covered aid after applying the cap."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Healthcare access and medical deserts",
+          "significance": "The source mentions health only as spending financed by labor contributions, not as a service-delivery or access policy.",
+          "source_refs": []
+        },
+        {
+          "problem": "Education outcomes and youth skills",
+          "significance": "No school, apprenticeship-quality, university, or early-childhood mechanism is specified.",
+          "source_refs": []
+        },
+        {
+          "problem": "Childcare cost and availability for return to work",
+          "significance": "The RIA example mentions childcare costs, but no childcare supply or subsidy reform is proposed.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Disposable income for some non-employed low-income households",
+          "mechanism": "The CSU cap can reduce covered aid; the source example reduces monthly benefits by €410 for a two-adult household with children.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "The program intends a work-incentive effect, but the immediate cash-flow effect is negative for households above the proposed cap."
+        },
+        {
+          "problem": "Income security after negotiated job separation",
+          "mechanism": "Rupture-conventionnelle unemployment benefits would be limited to six months and capped.",
+          "severity": 0.42,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "The source example changes an average 11-month benefit period to six months for a worker after negotiated separation."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Benefit fusion creates transitional losses or administrative errors",
+          "probability": 0.45,
+          "severity": 0.58,
+          "reasoning": "RIA replaces RSA, prime d’activité, and ASS while leaving family benefits and housing aid outside the formula, requiring precise interaction rules.",
+          "source_refs": [
+            "sources.md#proposition-2"
+          ]
+        },
+        {
+          "risk": "CSU data consolidation delayed by heterogeneous benefit systems",
+          "probability": 0.55,
+          "severity": 0.6,
+          "reasoning": "The source states that benefits are currently paid by many bodies under varying rules and proposes a compulsory shared national register.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        {
+          "risk": "Senior-work incentives concentrate among healthier and higher-skill retirees",
+          "probability": 0.4,
+          "severity": 0.42,
+          "reasoning": "Eligibility is limited to seniors with all quarters validated and able to remain employed, so effects may not reach workers with disrupted careers.",
+          "source_refs": [
+            "sources.md#proposition-3"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Revenu d’incitation à l’activité",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "€300/month socle plus €250/month insertion, reduced by 30% of salary"
+        },
+        {
+          "measure": "Compte social unique and 70% net-SMIC aid cap",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "Covered aid capped at 70% of net SMIC per adult, excluding disability, dependency, and old age"
+        },
+        {
+          "measure": "Senior work exemption before and after legal retirement age",
+          "source_ref": "sources.md#proposition-3",
+          "quantified": true,
+          "magnitude": "About €3,400/year extra net pay and €4,800/year employer saving at median wage before legal age"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "RIA and senior measures depend on participation effects; CSU and unemployment savings are booked in the €30bn envelope.",
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-3",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Benefit fusion and a cross-body social account require rule alignment across CAF, state, and local aid systems.",
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-4"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Effects depend on employers offering hours, benefit bodies transmitting data, and recipients changing work decisions.",
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-4"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Benefit formulas and unemployment parameters can be revised, but IT systems and household transitions create inertia.",
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#proposition-5"
+          ]
+        }
+      },
+      "confidence": 0.72
+    },
+    "security_sovereignty": {
+      "grade": "D",
+      "headline": "Production and trade-balance concerns are addressed; defense, immigration, policing, energy, and food are absent.",
+      "summary": "The program contains an economic-sovereignty strand through production, competitiveness, and the trade deficit. It does not specify internal-security, immigration, defense, energy-sovereignty, food-sovereignty, or strategic-industry instruments.",
+      "problems_addressed": [
+        {
+          "problem": "Weak production base and trade-balance deficit",
+          "approach": "Increase work volume and reduce labor costs so firms can produce more and improve competitiveness.",
+          "strength": 0.48,
+          "source_refs": [
+            "sources.md#constat",
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "The source links the trade deficit to a production shortage and estimates about 2% additional GDP from new overtime hours."
+        },
+        {
+          "problem": "Labor-cost component of firm competitiveness",
+          "approach": "Use payroll-cost exemptions and broader cost reductions worth at least €25bn in competitiveness gains.",
+          "strength": 0.58,
+          "source_refs": [
+            "sources.md#bilan",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ],
+          "reasoning": "The program specifies €15bn on the first 1,623 hours and €10bn beyond the threshold as firm-side cost reduction."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Internal security and policing",
+          "significance": "No police, justice, prison, or crime-prevention policy appears in the supplied program.",
+          "source_refs": []
+        },
+        {
+          "problem": "Immigration and border policy",
+          "significance": "The source does not propose immigration, asylum, citizenship, or border-control measures.",
+          "source_refs": []
+        },
+        {
+          "problem": "Defense and military capacity",
+          "significance": "No defense-spending, procurement, nuclear deterrence, or armed-forces staffing policy is specified.",
+          "source_refs": []
+        },
+        {
+          "problem": "Energy and food sovereignty",
+          "significance": "No electricity, nuclear, renewables, fossil-fuel, agriculture, or food-resilience measures are specified.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Competitiveness gains do not translate into domestic production",
+          "probability": 0.42,
+          "severity": 0.52,
+          "reasoning": "The package lowers labor costs and encourages hours, but production outcomes also depend on demand, energy prices, capital stock, and supply chains not specified in the source.",
+          "source_refs": [
+            "sources.md#constat",
+            "sources.md#proposition-1"
+          ]
+        },
+        {
+          "risk": "Sovereignty framing remains dependent on macro response",
+          "probability": 0.5,
+          "severity": 0.45,
+          "reasoning": "The text addresses production through labor inputs, not sector-specific autonomy or procurement instruments.",
+          "source_refs": [
+            "sources.md#constat",
+            "sources.md#bilan"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Labor-cost reduction for additional hours",
+          "source_ref": "sources.md#proposition-1",
+          "quantified": true,
+          "magnitude": "About 35% lower employer cost beyond the threshold"
+        },
+        {
+          "measure": "Competitiveness restitution to firms",
+          "source_ref": "sources.md#bilan",
+          "quantified": true,
+          "magnitude": "At least €25bn in additional competitiveness gains"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Sovereignty measures are mainly labor-cost reallocations already counted in the fiscal package.",
+          "source_refs": [
+            "sources.md#bilan"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "The specified production measures use payroll and work-time rules rather than new industrial agencies.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Trade and production effects depend on firms, foreign demand, input costs, and supply chains not detailed.",
+          "source_refs": [
+            "sources.md#constat"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Payroll exemptions can be reversed legislatively; firm investment responses may outlast rule changes.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        }
+      },
+      "confidence": 0.56
+    },
+    "institutional_democratic": {
+      "grade": "C",
+      "headline": "Institutional content is administrative: social-benefit registry and shared employment-governance rules.",
+      "summary": "The program addresses state capacity in social transfers and unemployment governance through a Compte social unique and a larger role for Unédic, social partners, and regions. It does not propose constitutional, electoral, parliamentary, judicial, media, or decentralization reform outside employment policy.",
+      "problems_addressed": [
+        {
+          "problem": "Lack of consolidated information on non-contributory social benefits",
+          "approach": "Create a Compte social unique and a compulsory national register shared by public and social bodies.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "The source explicitly describes the current absence of a consolidated view and proposes a shared register across state, CAF, and local bodies."
+        },
+        {
+          "problem": "Split between Unédic financing and state decision-making",
+          "approach": "Associate Unédic, social partners, and regions with France Travail support design and data sharing.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "The program states the governance issue and names actors, but does not specify voting rights, legal hierarchy, or funding formulas."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Constitutional balance of powers",
+          "significance": "No presidency, parliament, referendum, or constitutional-court reform is described.",
+          "source_refs": []
+        },
+        {
+          "problem": "Electoral and party-finance reform",
+          "significance": "The source does not address voting rules, campaign finance, or representation.",
+          "source_refs": []
+        },
+        {
+          "problem": "Civil-liberties safeguards for consolidated social data",
+          "significance": "The CSU proposal does not specify data-retention limits, appeal procedures, or independent oversight.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Administrative concentration of welfare data",
+          "mechanism": "The CSU would centralize aid information across state, CAF, municipalities, and other bodies without specifying privacy or appeal safeguards.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "The source specifies compulsory shared data but not the governance controls around that shared register."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Interoperability and legal-basis constraints",
+          "probability": 0.52,
+          "severity": 0.58,
+          "reasoning": "The program says current aid is paid by many organisms under different rules, which makes a single registry administratively complex.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        {
+          "risk": "Governance reform remains declarative",
+          "probability": 0.46,
+          "severity": 0.42,
+          "reasoning": "The Unédic proposal identifies the financing-decision split but provides no institutional design for binding shared control.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte social unique",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": false,
+          "magnitude": "One account per adult covering aid from state, CAF, municipalities, and other bodies"
+        },
+        {
+          "measure": "Employment-policy governance rebalancing",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": false,
+          "magnitude": "Unédic, social partners, and regions associated with France Travail support and data sharing"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Administrative reforms are tied to booked CSU and fraud savings, but no separate IT cost is given.",
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "A compulsory national aid register requires data standardization across multiple benefit payers.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Requires cooperation from CAF, municipalities, Unédic, regions, social partners, and France Travail.",
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#proposition-5"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Legal rules can be reversed, but registry infrastructure and inter-body data flows create operational inertia.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        }
+      },
+      "confidence": 0.64
+    },
+    "environmental_long_term": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme does not specify climate, biodiversity, water, energy-transition, or adaptation measures.",
+      "summary": "The supplied program does not contain an environmental or long-term ecological policy package. It emphasizes higher production and work volume, but does not specify decarbonization, biodiversity, water, infrastructure adaptation, or agricultural transition instruments.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Climate mitigation and emissions trajectory",
+          "significance": "No sectoral emissions, energy, transport, housing-renovation, or carbon-pricing measure is specified.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversity and water stress",
+          "significance": "No land-use, water, soil, river, or ecosystem policy appears in the source material.",
+          "source_refs": []
+        },
+        {
+          "problem": "Adaptation infrastructure",
+          "significance": "No heat, flood, drought, coastal, grid-resilience, or insurance-adaptation mechanism is described.",
+          "source_refs": []
+        },
+        {
+          "problem": "Agricultural transition",
+          "significance": "The source does not provide measures for farm income, inputs, soil, food systems, or climate adaptation.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "No environmental spending, tax, or investment commitment is specified.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "low",
+          "note": "No implementation mechanism exists in the source for this cluster.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No external ecological dependency is identified because the cluster is not addressed.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "No environmental measure is specified to reverse.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.92
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "not cohort-estimable from sources; €28.5bn-€31.7bn/year aggregate gross gains claimed",
+      "units": "aggregate €/year, not age-cohort €/person/year",
+      "confidence": 0.38,
+      "caveats": "The source gives aggregate savings and selected examples, but not age distribution, take-up by cohort, decile incidence, or long-run macro response."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "No direct net deficit reduction is specified because gains are returned to workers and firms.",
+        "quantified": "€28.5bn-€31.7bn/year gross gains, fully restituted"
+      },
+      "housing": {
+        "summary": "Housing supply and purchase affordability are not addressed; housing aid may enter the CSU cap.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "No pension formula for a 25-year-old is specified; senior-work incentives may affect labor supply before and after legal retirement age.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "A young worker with additional hours could gain from lower contribution wedges; a young benefit recipient could face tighter aid and unemployment rules.",
+        "quantified": "about €500/year median-wage broad gain; up to about €2,800/year in the overtime example"
+      },
+      "environmental_debt": {
+        "summary": "No decarbonization or adaptation path is specified over 2027-2047.",
+        "quantified": null
+      },
+      "narrative_summary": "For a 25-year-old, the program is positive if employed and able to obtain extra hours, negative if relying on capped benefits, and neutral on housing, education, climate, and pension-formula visibility."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "No new tax contribution for retirees is specified; budget effects depend on employment continuation and aggregate growth.",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "A 65-year-old who works part-time under the revised cumulation example receives pension plus adjusted earnings above full-retirement income.",
+        "quantified": "€2,733/month versus €2,000/month in the source example"
+      },
+      "healthcare": {
+        "summary": "Healthcare access, spending, and age-related care are not specified.",
+        "quantified": null
+      },
+      "narrative_summary": "For a 65-year-old, the main specified effect is an option to combine work and pension under a new formula; non-working retirees and healthcare users receive little specified change."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Pension impact comes from work-retirement cumulation and senior contribution exemptions, not from a full pension-system reform.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Near-term senior workers can gain from exemptions and revised cumul emploi-retraite.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Effect persists if additional seniors keep working; no replacement-rate formula is specified.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify pension rules for cohorts retiring in this horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Program states debt is high but returns reform gains to labor and firms, so debt impact depends on growth rather than direct consolidation.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Gross gains are restituted, so near-term direct borrowing reduction is not specified.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "If the claimed activity gain persists, debt/GDP could improve through the denominator.",
+            "source_refs": [
+              "sources.md#bilan"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "No long-run debt rule, deficit target, or interest-rate path is specified.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Climate policy is not specified; the source emphasizes additional production without a transition pathway.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify climate measures over this horizon.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify climate measures over this horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify climate measures over this horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Health appears only as spending partly financed by labor contributions, not as a service-access or investment policy.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify healthcare delivery or funding changes.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify healthcare effects over this horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify age-related health financing over this horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Education policy is not specified, including skills, schools, universities, and early-life human-capital investment.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify education measures over this horizon.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify education measures over this horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify education measures over this horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Housing supply is not addressed; housing benefits are included among possible CSU-tracked aid streams.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Some households may see lower covered aid when housing aid enters the CSU cap.",
+            "source_refs": [
+              "sources.md#proposition-4"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify housing supply, rents, credit, or construction measures.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify long-run housing affordability measures.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "The package reallocates resources by labor-market status more than by age: employed workers and firms receive payroll-cost and net-pay gains, some benefit recipients and unemployment claimants face tighter formulas, and seniors able to work get specific earnings incentives. Long-run cohort effects remain under-specified because debt reduction, housing supply, education, and climate are not developed.",
+    "source_refs": [
+      "sources.md#proposition-1",
+      "sources.md#proposition-2",
+      "sources.md#proposition-3",
+      "sources.md#proposition-4",
+      "sources.md#proposition-5",
+      "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+    ],
+    "confidence": 0.52
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "The source describes a €175bn deficit, debt near €3,500bn or 116% of GDP, rising trajectory, weak production, trade deficit, and social transfers that reduce work incentives.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic"
+    ],
+    "dimensions_unchanged": [
+      "environmental_long_term"
+    ],
+    "reasoning": "The package changes labor-cost, benefit, unemployment, and social-data trajectories. It does not specify a net deficit-reduction path, EU fiscal path, healthcare, education, housing-supply, or environmental trajectory.",
+    "confidence": 0.68
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Debt-service risk under higher interest rates",
+      "why_unsolved": "The program cites debt and deficit levels but does not provide an interest-rate scenario, primary-balance target, or fiscal buffer.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Healthcare access and hospital capacity",
+      "why_unsolved": "The supplied program does not propose healthcare staffing, financing, access, or prevention measures.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Education and skill formation",
+      "why_unsolved": "The program focuses on labor incentives but does not address school performance, training quality, higher education, or youth skills.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Housing affordability for under-35s",
+      "why_unsolved": "Housing aid is mentioned as part of social-benefit accounting, but no supply, rent, credit, land, or construction policy is specified.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Climate adaptation and mitigation over 2027-2047",
+      "why_unsolved": "No climate, energy-transition, adaptation, biodiversity, or water policy is specified in the source material.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Gross savings fall below the €28.5bn-€31.7bn envelope.",
+      "trigger": "Lower-than-assumed CSU savings, fraud recovery, unemployment savings, or additional-hours take-up.",
+      "probability": 0.46,
+      "severity": 0.68,
+      "reasoning": "Several large budget lines depend on behavioral and administrative responses; the source gives targets but limited sensitivity analysis."
+    },
+    {
+      "scenario": "Low-income non-employed households face cash-flow losses before employment gains materialize.",
+      "trigger": "CSU cap applies faster than job access, childcare, transport, or local labor demand improves.",
+      "probability": 0.42,
+      "severity": 0.6,
+      "reasoning": "The source example itself shows a €410/month aid reduction, while employment response depends on local constraints not addressed in the program."
+    },
+    {
+      "scenario": "Firms use cheaper overtime more than new hiring.",
+      "trigger": "Demand rises enough to add hours but not enough to justify permanent recruitment.",
+      "probability": 0.38,
+      "severity": 0.45,
+      "reasoning": "A 35% lower marginal cost for additional hours changes the relative price of overtime versus hiring."
+    },
+    {
+      "scenario": "Environmental and infrastructure costs accumulate outside the program horizon.",
+      "trigger": "Additional production and activity occur without parallel climate, water, energy, or adaptation investment measures.",
+      "probability": 0.35,
+      "severity": 0.55,
+      "reasoning": "The source emphasizes production growth and does not specify environmental or infrastructure-offset measures."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "positioning.sovereignty.score",
+        "critique": "The sovereignty score relies mostly on production and trade-balance language, not on direct EU, border, defense, or industrial-policy instruments.",
+        "alternative_interpretation": "A score of 0 could be justified because the program is primarily economic rather than sovereigntist."
+      },
+      {
+        "claim_location": "intergenerational.horizon_matrix[1].cells.h_2031_2037.impact_score",
+        "critique": "The positive public-debt score infers a debt/GDP denominator effect from activity gains, while the program returns savings and gives no debt target.",
+        "alternative_interpretation": "A score of 0 across all public-debt horizons may be more conservative."
+      },
+      {
+        "claim_location": "dimensions.environmental_long_term.grade",
+        "critique": "The grade NOT_ADDRESSED treats the ecological cluster as absent, but the productivist activity-growth agenda could be scored as a negative ecological effect.",
+        "alternative_interpretation": "Grade F could be used if the evaluation weights growth-without-transition as an affirmative worsening rather than silence."
+      }
+    ],
+    "potential_bias": "The analysis may tilt toward public-finance and implementation scrutiny because the source itself is highly quantified on savings and labor incentives, while non-economic domains are thin.",
+    "evidence_gaps": "The largest gaps are take-up assumptions for overtime and senior work, implementation costs for the CSU, distribution by age and income decile, debt-interest sensitivity, and any environmental baseline.",
+    "confidence_in_critique": 0.74
+  },
+  "confidence_self_assessment": 0.7
+}

@@ -1,0 +1,684 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "google",
+    "version": "gemini-1.5-pro"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T06:52:53Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0.5
+  },
+  "summary": "The program proposes a supply-side economic model focused on increasing working hours and reducing the cost of labor through social contribution exemptions. It funds these tax reductions by cutting unemployment benefits and capping non-contributory social assistance.",
+  "positioning": {
+    "economic": {
+      "score": 4,
+      "anchor_comparison": "More market-oriented than Macron 2017, aligning closely with Fillon 2017 through aggressive labor cost reductions and welfare caps.",
+      "evidence": [
+        {
+          "quote": "nous proposons d’instaurer un seuil « zéro cotisation ». Fixé à 1 623 heures par an",
+          "source_ref": "sources.md#1-recompenser-ceux-qui-en-font-vraiment-plus-grace-au-seuil-zero-cotisation"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Explicit reduction of corporate and employee social contributions, funded by tightening unemployment and welfare eligibility, squarely fitting the right-wing supply-side economic model."
+    },
+    "social_cultural": {
+      "score": 2,
+      "anchor_comparison": "Aligns with LR 2022 on individual responsibility and conditionality of social aid.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#troisieme-principe-sortir-du-piege-de-lassistance"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Strong emphasis on work over 'assistance', framing welfare as a trap, characteristic of mainstream conservative social policy."
+    },
+    "sovereignty": {
+      "score": 1,
+      "anchor_comparison": "Slightly more nationalist than Macron 2017, but focused on economic sovereignty rather than hard borders.",
+      "evidence": [
+        {
+          "quote": "Aligner l’indemnisation des travailleurs frontaliers sur des salaires français équivalents",
+          "source_ref": "sources.md#5-reformer-lassurance-chomage-pour-accelerer-le-retour-a-lemploi"
+        }
+      ],
+      "confidence": 0.5,
+      "reasoning": "Minimal focus on sovereignty in the text beyond adjusting cross-border worker benefits to national standards."
+    },
+    "institutional": {
+      "score": -1,
+      "anchor_comparison": "Consistent with mainstream liberal-democratic structures, seeking administrative centralization for efficiency.",
+      "evidence": [
+        {
+          "quote": "Nous proposons donc la création d’un Compte social unique (CSU), sur le modèle du compte fiscal.",
+          "source_ref": "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "Proposes state capacity upgrades (CSU) and shifting governance of Unédic to give social partners more operational control, without illiberal changes."
+    },
+    "ecological": {
+      "score": 0,
+      "anchor_comparison": "Not addressed in the provided sources.",
+      "evidence": [
+        {
+          "quote": "Ce projet repose sur un principe clair : remettre le travail au cœur de notre modèle.",
+          "source_ref": "sources.md#conclusion"
+        }
+      ],
+      "confidence": 0.4,
+      "reasoning": "The extracted program focuses exclusively on labor, welfare, and fiscal mechanics; ecology is absent."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural"
+      ],
+      "evidence": [
+        {
+          "quote": "nous proposons d’instaurer un seuil « zéro cotisation ». Fixé à 1 623 heures par an",
+          "source_ref": "sources.md#1-recompenser-ceux-qui-en-font-vraiment-plus-grace-au-seuil-zero-cotisation"
+        },
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#troisieme-principe-sortir-du-piege-de-lassistance"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "The combination of aggressive tax cuts on labor, structured reductions in welfare limits, and rhetoric targeting 'assistanat' places the program firmly in the mainstream right."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "A",
+      "headline": "Réduction massive des cotisations et réformes sociales générant 30 Md€, intégralement restitués au travail.",
+      "summary": "Program outlines a clear mechanism to generate €30 billion via unemployment savings and welfare caps, directly transferring these funds to businesses (competitiveness) and workers (purchasing power).",
+      "problems_addressed": [
+        {
+          "problem": "Low effective working hours",
+          "approach": "Zero social contributions above 1,623 hours annually.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "Creates a hard, highly incentivized threshold to increase marginal labor supply."
+        },
+        {
+          "problem": "High labor costs for older workers",
+          "approach": "Targeted social contribution exemptions for seniors before and after legal retirement age.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "Reduces employer costs by ~15% for seniors, theoretically boosting retention."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Macroeconomic demand shock",
+          "significance": "Cutting €30B in welfare may reduce aggregate consumption among low-income households with high marginal propensity to consume.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Fiscal vulnerability to employment shocks",
+          "mechanism": "Linking fiscal balance strictly to continuous employment expansion makes the model fragile during recessions.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ],
+          "reasoning": "Self-funding nature assumes steady uptake of extra hours."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Failing to achieve projected unemployment savings",
+          "probability": 0.4,
+          "severity": 0.7,
+          "reasoning": "€12.5-15.7B relies on rapid labor market absorption; if jobs are unavailable, deficits rise.",
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Exemption of social contributions above 1,623 hours",
+          "source_ref": "sources.md#proposition-1",
+          "quantified": true,
+          "magnitude": "1,623 hours threshold"
+        },
+        {
+          "measure": "€30B transfer from social spending to labor tax cuts",
+          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes",
+          "quantified": true,
+          "magnitude": "€30B/year"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Savings are explicitly quantified, but rely heavily on behavior changes and high labor demand.",
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Requires significant payroll system overhauls and collective bargaining adjustments for annualization.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "Depends on employer willingness to offer additional hours.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Tax rates can be adjusted by subsequent finance laws.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Fusion des minima sociaux et plafonnement global des aides à 70% du SMIC pour inciter à l'emploi.",
+      "summary": "Program fundamentally restructures welfare by introducing a unified social account and a hard cap on cumulative non-contributory benefits to ensure work pays more than assistance.",
+      "problems_addressed": [
+        {
+          "problem": "Welfare cliffs and inactivity traps",
+          "approach": "Creation of RIA with a flat 30% benefit reduction rate against salary, plus an overarching 70% SMIC cap on total benefits.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Provides mathematical certainty that marginal work yields net income gains."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Healthcare access and hospital funding",
+          "significance": "Program is silent on demographic pressures on the healthcare system.",
+          "source_refs": []
+        },
+        {
+          "problem": "Education and training infrastructure",
+          "significance": "Does not explain how unemployed will be trained for the expanded labor hours.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Income stability for multi-barrier unemployed",
+          "mechanism": "Hard cap at 70% SMIC and stricter unemployment durations will reduce nominal income for those unable to find work.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Reduces safety net depth for populations distant from the labor market."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Data integration failure for the CSU",
+          "probability": 0.6,
+          "severity": 0.8,
+          "reasoning": "Merging state, CAF, and disparate local/municipal aid data into a single real-time system is historically difficult in France.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Creation of Revenu d’incitation à l’activité (RIA) merging RSA, Prime d'activité, ASS",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "300€ base + 250€ insertion"
+        },
+        {
+          "measure": "Cap social aid at 70% of net SMIC",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "70% SMIC cap"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Measures primarily reduce state expenditure.",
+          "source_refs": [
+            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "CSU requires massive IT integration across highly fragmented local and national administrative layers.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Requires cooperation from municipalities and departments to report local aid.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Once IT systems (CSU) are built and consolidated, reverting to fragmented systems is unlikely.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.8
+    },
+    "security_sovereignty": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme ne traite pas des questions de sécurité intérieure, de défense ou de frontières.",
+      "summary": "The provided text focuses entirely on economic and social models, omitting defense, policing, and physical sovereignty.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Internal security and justice",
+          "significance": "Core presidential domain absent from this specific platform document.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.9
+    },
+    "institutional_democratic": {
+      "grade": "C",
+      "headline": "Rééquilibrage de la gouvernance de l'Unédic et centralisation des données sociales.",
+      "summary": "Program addresses institutions narrowly through the lens of welfare administration, proposing to give Unédic and regions more control over employment policy and centralizing welfare data.",
+      "problems_addressed": [
+        {
+          "problem": "Disconnect between unemployment funding and policy",
+          "approach": "Give Unédic, social partners, and regions more control over France Travail.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Briefly mentioned without detailed legislative mechanics."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Democratic reform and voting systems",
+          "significance": "No constitutional or electoral changes proposed.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Social partner resistance",
+          "probability": 0.5,
+          "severity": 0.4,
+          "reasoning": "Unions may reject the underlying harshness of the unemployment cuts despite promised governance roles.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Associate Unédic with France Travail steering",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Governance changes have negligible direct costs.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Shifting administrative mandates is standard legislative procedure.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Relies on social partners accepting the new framework.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Governance structures can be altered by subsequent governments.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme ne traite pas de la transition écologique, du climat ou de l'énergie.",
+      "summary": "The provided text contains no references to climate change, energy transition, biodiversity, or long-term environmental infrastructure.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Decarbonization pathway",
+          "significance": "A fundamental long-term constraint completely missing from this economic platform.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "No measures proposed.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.95
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "approximately €500/year purchasing power gain at median wage",
+      "units": "€/person/year",
+      "confidence": 0.8,
+      "caveats": "Gains depend heavily on employment status; active workers gain, unemployed/welfare recipients face significant cuts."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Lower payroll taxes if employed, higher income potential via overtime.",
+        "quantified": "+€500/year at median wage"
+      },
+      "housing": {
+        "summary": "Program does not address housing costs.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Program does not alter long-term pension accrual rates.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "Stricter unemployment rules may increase pressure on younger entry-level workers.",
+        "quantified": "-€X in potential safety net"
+      },
+      "environmental_debt": {
+        "summary": "Not addressed.",
+        "quantified": null
+      },
+      "narrative_summary": "Net positive for employed youth able to work overtime; net negative for those facing early-career unemployment or relying on social assistance."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Large financial incentive to continue working post-retirement via tax exemptions.",
+        "quantified": "Pension minorated by only 30% of new income, full tax exemption"
+      },
+      "pension": {
+        "summary": "Allows cumul emploi-retraite with highly favorable tax conditions.",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Not addressed.",
+        "quantified": null
+      },
+      "narrative_summary": "Highly advantageous for healthy seniors willing to work past legal age; neutral for fully retired seniors."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Impacts labor market participation of seniors via tax incentives.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Immediate increase in senior workforce participation.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Sustained integration of seniors in workforce.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Cultural shift toward longer working lives.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Aims to stabilize debt via €30B in structural social spending cuts.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Immediate deficit reduction via unemployment/welfare cuts.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Structural adjustment to social spending trajectory.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-term stabilization assuming sustained employment.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Program does not specify measures on climate over any horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Program does not specify measures on health over any horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Program does not specify measures on education over any horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Program does not specify measures on housing over any horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "The program cuts welfare and unemployment (which disproportionately shield precarious or younger populations) to fund broad tax cuts for active workers and massive incentives for seniors to remain in the workforce.",
+    "source_refs": [
+      "sources.md#proposition-1",
+      "sources.md#proposition-3",
+      "sources.md#proposition-5",
+      "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+    ],
+    "confidence": 0.8
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Labor costs remain high, working hours trail EU averages, and social aid remains fragmented.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "improvement",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic"
+    ],
+    "dimensions_unchanged": [
+      "environmental_long_term",
+      "security_sovereignty"
+    ],
+    "reasoning": "Massive reallocation of GDP from social protection to direct wages and corporate margins alters the macroeconomic framework.",
+    "confidence": 0.85
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Healthcare capacity",
+      "why_unsolved": "Program focuses entirely on labor and welfare, omitting hospital and care provision.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Ecological transition financing",
+      "why_unsolved": "No capital allocation or regulatory framework provided for climate goals.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Welfare cuts fail to stimulate sufficient job creation.",
+      "trigger": "A European recession depresses labor demand despite lower labor costs.",
+      "probability": 0.3,
+      "severity": 0.8,
+      "reasoning": "If the €30B in welfare/unemployment cuts happen but the private sector does not provide the anticipated extra hours/jobs, poverty rates will sharply rise."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.risk_profile.budgetary",
+        "critique": "Rating budgetary risk as 'moderate' might be too generous given the reliance on behavioral macro-effects (people choosing to work more).",
+        "alternative_interpretation": "Budgetary risk could be 'high' if the €30B savings are pre-committed to tax cuts before the employment behavioral changes materialize."
+      }
+    ],
+    "potential_bias": "The analysis uses the source text's framing of 'welfare vs work', which inherently adopts a right-leaning macroeconomic vocabulary, though constrained by neutral measurement reporting.",
+    "evidence_gaps": "The text lacks detail on how the €30B in generated margins interact with broader state budget requirements (e.g., debt servicing).",
+    "confidence_in_critique": 0.8
+  },
+  "confidence_self_assessment": 0.85
+}

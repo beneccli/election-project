@@ -1,0 +1,974 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-25T00:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Le programme « Travail Gagnant » de Bruno Retailleau (Les Républicains) propose cinq mesures centrées sur le travail : un seuil « zéro cotisation » au-delà de 1 623 heures annuelles, un Revenu d'incitation à l'activité (RIA) fusionnant RSA/prime d'activité/ASS, un cumul emploi-retraite rénové pour les seniors, un Compte social unique (CSU) plafonnant les aides à 70% du SMIC net par adulte, et une réforme de l'assurance chômage. L'objectif chiffré est de dégager au moins 30 Md€/an, restitués à parts égales aux salariés (gain de pouvoir d'achat) et aux entreprises (baisse du coût du travail).",
+  "positioning": {
+    "economic": {
+      "score": 3,
+      "anchor_comparison": "Plus libéral que Macron 2017 (+1), proche de Fillon 2017 (+3) sur l'allègement du coût du travail et le resserrement de l'assistance.",
+      "evidence": [
+        {
+          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "Plafonner et rendre dégressive l'allocation chômage des salariés qui choisissent d'alterner emploi et chômage.",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Le programme combine baisse structurelle du coût du travail (exonérations de cotisations), resserrement des prestations sociales non-contributives via un plafond explicite, et durcissement de l'assurance chômage. La logique assumée — « chaque euro économisé sera un euro restitué » — est explicitement market-oriented. Score +3 plutôt que +4 car la dépense sociale n'est pas démantelée mais redistribuée vers l'incitation au travail."
+    },
+    "social_cultural": {
+      "score": 1,
+      "anchor_comparison": "Légèrement plus conservateur que Macron 2017 (-1), nettement moins que Zemmour 2022 (+4). Le programme est silencieux sur la plupart des marqueurs culturels classiques.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s'installer durablement dans l'assistance.",
+          "source_ref": "sources.md#presentation-ensemble"
+        }
+      ],
+      "confidence": 0.4,
+      "reasoning": "Le programme est presque entièrement économique et social-fiscal, sans propositions sur immigration, identité, mœurs, éducation culturelle, ou institutions familiales. Le seul marqueur culturel est rhétorique (valorisation du travail contre l'assistanat), ce qui reflète une sensibilité conservatrice modérée. Confidence basse car le document ne contient pas suffisamment de matériau sur cet axe pour scorer avec assurance."
+    },
+    "sovereignty": {
+      "score": 0,
+      "anchor_comparison": "Proche de la position centrale Macron 2017 (-1) à LR 2022 (+2). Le programme ne prend pas position explicite sur l'UE.",
+      "evidence": [
+        {
+          "quote": "rapprocher notre système des pratiques européennes",
+          "source_ref": "sources.md#proposition-5"
+        },
+        {
+          "quote": "Aligner l'indemnisation des travailleurs frontaliers sur des salaires français équivalents",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.3,
+      "reasoning": "L'UE est mentionnée principalement comme référent comparatif (durée du travail, indemnisation chômage). La mesure sur les frontaliers a une dimension de souveraineté nationale modérée mais reste compatible avec le cadre européen. Aucune proposition sur défense, énergie, industrie, ou cadre budgétaire européen. Confidence basse car le programme est silencieux sur la plupart des dimensions de souveraineté."
+    },
+    "institutional": {
+      "score": -1,
+      "anchor_comparison": "Conforme à la baseline Cinquième République pré-2017 (-3 à -1). Aucune proposition de rupture institutionnelle.",
+      "evidence": [
+        {
+          "quote": "Il est nécessaire d'associer pleinement l'Unédic, les partenaires sociaux et les régions à la définition de l'accompagnement assuré par France Travail",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.5,
+      "reasoning": "Le seul élément institutionnel substantiel est un rééquilibrage de la gouvernance Unédic vers les partenaires sociaux — une proposition technique, libérale-démocratique, plutôt qu'illibérale. Aucune proposition sur référendum, séparation des pouvoirs, justice, ou médias. Score légèrement négatif (libéral-démocratique) par défaut institutionnel."
+    },
+    "ecological": {
+      "score": -1,
+      "anchor_comparison": "Proche de LR 2022 (-1). Le programme ne traite pas de transition écologique, et pose explicitement la production comme priorité.",
+      "evidence": [
+        {
+          "quote": "produire davantage est indispensable si nous voulons créer plus de richesse",
+          "source_ref": "sources.md#constat"
+        },
+        {
+          "quote": "renforce leur capacité de production, à hauteur d'environ 2 % de PIB supplémentaire",
+          "source_ref": "sources.md#proposition-1"
+        }
+      ],
+      "confidence": 0.6,
+      "reasoning": "Le programme est productiviste par construction : l'objectif central est l'augmentation du volume horaire travaillé et de la production. Aucune mention de climat, biodiversité, transition énergétique, ou contrainte environnementale. Le silence est lui-même un signal productiviste modéré, mais sans rejet explicite des objectifs climatiques."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "produire davantage est indispensable si nous voulons créer plus de richesse",
+          "source_ref": "sources.md#constat"
+        }
+      ],
+      "confidence": 0.4,
+      "reasoning": "Score économique nettement à droite (+3), conjugué à une orientation productiviste (-1 écologique) et à un conservatisme social modéré (+1), place le programme dans la droite classique LR/Fillon. La revendication explicite « Les Républicains » et l'anchor Fillon 2017 sur l'économie soutiennent ce placement. Confidence bornée par la confidence sociale_culturelle (0.4)."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Au moins 30 Md€/an de gains via 5 mesures pro-travail (zéro cotisation, RIA, seniors, CSU, chômage), restitués 50/50 salariés/entreprises.",
+      "summary": "Le programme construit un cadre cohérent autour d'une thèse unique : le coût excessif du travail finance une protection sociale dévoyée, ce qui érode pouvoir d'achat et compétitivité. Cinq mesures chiffrées s'articulent autour de cette thèse. Les chiffrages sont fournis avec sources (Rexecode décembre 2025, Haut Conseil du financement de la protection sociale), mais reposent sur des hypothèses comportementales fortes (réponse de l'offre d'heures supplémentaires, taux d'emploi des seniors). Le programme ne traite pas du logement, ni de la fiscalité du capital, ni du cadre budgétaire européen, ni de la trajectoire de dette au-delà de l'horizon des 30 Md€ restitués.",
+      "problems_addressed": [
+        {
+          "problem": "Coût du travail élevé et faible volume horaire travaillé",
+          "approach": "Seuil « zéro cotisation » à 1 623h/an : exonération totale de cotisations (hors CSG/CRDS) au-delà du seuil, baisse d'environ 35% du coût horaire marginal.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "La mesure est précisément chiffrée (4,3 Md€ de restitution sur les heures supplémentaires existantes, 6,3 Md€ de potentiel additionnel) et l'argument comparatif (1 664h FR vs 1 784h UE) est documenté."
+        },
+        {
+          "problem": "Faibles incitations à la reprise d'activité depuis l'inactivité",
+          "approach": "Création du RIA fusionnant RSA, prime d'activité et ASS, avec un taux marginal de 30% sur le salaire et sortie à 1 833€/mois.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "reasoning": "Le mécanisme cumul-allocation/salaire est lisible et l'exemple de Sylvie chiffre un gain net (+400€/mois). Mais le programme ne quantifie pas le coût budgétaire net du RIA ni le nombre attendu de bénéficiaires."
+        },
+        {
+          "problem": "Faible taux d'emploi des seniors (36% des 60-64 ans en France vs 60% UE)",
+          "approach": "Exonération totale de cotisations retraite et chômage avant l'âge légal pour les salariés ayant tous leurs trimestres ; cumul emploi-retraite rénové après l'âge légal.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "L'effort de simplification est réel et les exemples chiffrés (Catherine, Michel) sont concrets. La neutralité budgétaire annoncée dépend d'un effet de comportement (10% de seniors supplémentaires prolongeant) qui n'est pas démontré."
+        },
+        {
+          "problem": "Empilement et opacité des aides sociales non-contributives",
+          "approach": "Compte social unique consolidant toutes les aides + plafond à 70% du SMIC net par adulte (hors handicap, dépendance, vieillesse).",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "La consolidation est techniquement justifiée (registre national des versements) et l'estimation de fraude (13 Md€) est sourcée au HCFiPS. Mais le chiffrage de gain (10 Md€ avec lutte contre la fraude) agrège deux effets distincts (plafond + fraude) sans les séparer."
+        },
+        {
+          "problem": "Coûts atypiques de l'assurance chômage (ruptures conventionnelles, frontaliers, alternance emploi-chômage)",
+          "approach": "Application des règles de juin 2024 + plafonnement et limitation à 6 mois des ruptures conventionnelles + alignement frontaliers + dégressivité accélérée au-dessus de 3 000€ nets.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Chiffrage détaillé poste par poste (4-5 Md€ + 7-8 Md€ + 0,5-0,7 Md€ + 1-2 Md€) avec mécanismes précis. La règle des trois refus s'appuie sur des comparables européens."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de dette publique au-delà des 30 Md€ restitués",
+          "significance": "Le programme constate la dette à 116% du PIB et 175 Md€ de déficit, mais oriente intégralement les économies générées vers la restitution, sans contribution au désendettement. La trajectoire de réduction du déficit n'est pas chiffrée.",
+          "source_refs": []
+        },
+        {
+          "problem": "Logement et accès à la propriété",
+          "significance": "Aucune mesure sur l'offre, la fiscalité immobilière, le foncier, ou les jeunes accédants — alors que le diagnostic de pouvoir d'achat dégradé inclut implicitement le logement.",
+          "source_refs": []
+        },
+        {
+          "problem": "Fiscalité du capital et du patrimoine",
+          "significance": "Le programme traite uniquement de la fiscalité du travail. La structure capital/travail n'est pas examinée.",
+          "source_refs": []
+        },
+        {
+          "problem": "Cadre budgétaire européen",
+          "significance": "La trajectoire 116% PIB est mentionnée mais le programme ne traite pas de la conformité aux règles du Pacte de stabilité révisé.",
+          "source_refs": []
+        },
+        {
+          "problem": "Trajectoire de financement des retraites",
+          "significance": "Le programme propose des incitations au cumul emploi-retraite mais ne traite pas de l'équilibre financier du régime de retraite ni de l'âge légal au-delà des dispositifs ciblés.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Sensibilité du financement de la protection sociale aux revenus du travail",
+          "mechanism": "L'exonération totale au-delà du seuil et l'exonération seniors retirent de la base de cotisation des heures à fort potentiel, ce qui transfère implicitement le financement vers la fiscalité générale (CSG/CRDS et autres). Le programme ne précise pas la compensation budgétaire vers les régimes concernés (Unédic, retraite).",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "L'auto-financement annoncé (« le dispositif finance ainsi sa propre mise en place ») dépend de l'élasticité de l'offre d'heures supplémentaires. Si l'élasticité est plus faible qu'anticipé, le manque à gagner pèse sur les régimes sociaux."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Sous-réalisation de l'élasticité de l'offre d'heures supplémentaires",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "La neutralité budgétaire de la proposition 1 repose sur 16 heures supplémentaires effectives par salarié n'en faisant pas aujourd'hui. La littérature économique sur les exonérations heures sup (loi TEPA 2007) suggère des effets d'aubaine substantiels.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ]
+        },
+        {
+          "risk": "Complexité de mise en œuvre du Compte social unique",
+          "probability": 0.6,
+          "severity": 0.5,
+          "reasoning": "La consolidation suppose l'interopérabilité de centaines d'organismes (CAF, État, mairies, départements, bailleurs sociaux). Le programme reconnaît implicitement cette difficulté en écartant la fusion pure et simple des aides.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        {
+          "risk": "Blocage parlementaire sur les mesures d'assurance chômage",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "Les règles de juin 2024 « jamais appliquées » illustrent la difficulté politique. Plafonner les ruptures conventionnelles touche un dispositif consensuel utilisé par 500 000 salariés/an.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        {
+          "risk": "Effets distributifs asymétriques du plafond CSU",
+          "probability": 0.4,
+          "severity": 0.5,
+          "reasoning": "Le plafond à 70% du SMIC net par adulte appliqué aux familles nombreuses ou aux territoires à forte intensité d'aides locales pourrait produire des baisses concentrées (exemple Sarah/Maxime : -410€/mois) avec un effet immédiat sur les conditions matérielles.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Seuil zéro cotisation à 1 623h/an, exonération totale au-delà (hors CSG/CRDS)",
+          "source_ref": "sources.md#proposition-1",
+          "quantified": true,
+          "magnitude": "~11 Md€ de gain entreprise potentiel ; +500€/an pour salarié médian au seuil ; +2 800€/an au-delà"
+        },
+        {
+          "measure": "RIA fusionnant RSA, prime d'activité, ASS — socle 300€ + insertion 250€/mois, sortie à 1 833€/mois",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "2,0 Md€ de gain budgétaire estimé"
+        },
+        {
+          "measure": "Cumul emploi-retraite rénové : exonération avant âge légal (+300€/mois net salarié, -450€/mois employeur au salaire médian) ; pension minorée de 30% du revenu d'activité après âge légal",
+          "source_ref": "sources.md#proposition-3",
+          "quantified": true,
+          "magnitude": "Coût employeur réduit ~35% ; neutralité budgétaire à +10% de seniors prolongeant"
+        },
+        {
+          "measure": "Compte social unique avec plafond à 70% du SMIC net par adulte (hors handicap/dépendance/vieillesse)",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "10 Md€ de gain (plafond + lutte contre la fraude estimée à 13 Md€)"
+        },
+        {
+          "measure": "Réforme assurance chômage : application juin 2024 + plafonnement ruptures conventionnelles à 6 mois + alignement frontaliers + dégressivité au-dessus de 3 000€ nets",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "12,5 à 15,7 Md€/an d'économies"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Chiffrage agrégé crédible (28,5-31,7 Md€) mais auto-financement de la proposition 1 dépend d'une élasticité comportementale non démontrée.",
+          "source_refs": [
+            "sources.md#impact-finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Le CSU et l'interopérabilité inter-organismes constituent un chantier administratif lourd ; la fusion RIA touche trois systèmes existants.",
+          "source_refs": [
+            "sources.md#proposition-4",
+            "sources.md#proposition-2"
+          ]
+        },
+        "dependency": {
+          "level": "limited",
+          "note": "Mesures essentiellement nationales ; alignement frontaliers suppose le maintien des accords de remboursement avec les pays d'emploi.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les exonérations de cotisations et le plafond CSU peuvent être révoqués par une loi de finances ; le CSU comme infrastructure est plus difficile à démanteler une fois construit.",
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-4"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "social_demographic": {
+      "grade": "C",
+      "headline": "Le programme reconfigure les minima sociaux (RIA, plafond CSU) sans traiter santé, éducation, famille ou cohésion territoriale.",
+      "summary": "La dimension sociale est traitée exclusivement sous l'angle des minima sociaux et de l'assurance chômage. Le RIA simplifie effectivement le paysage des aides à la reprise d'activité et le CSU instaure une transparence inédite sur les aides cumulées. Le plafond à 70% du SMIC net par adulte produit cependant des baisses substantielles pour certains foyers (exemple chiffré Sarah/Maxime : -410€/mois). Le programme ne traite ni de la santé, ni de l'éducation, ni de la politique familiale, ni de la cohésion sociale au sens large. Les inégalités sont implicitement abordées sous l'angle « travailleurs vs assistés » plutôt que sous celui des écarts de revenus ou de patrimoine.",
+      "problems_addressed": [
+        {
+          "problem": "Trappes à inactivité dans le système d'aides actuel",
+          "approach": "Le RIA garantit qu'« chaque heure travaillée apporte un bénéfice visible », avec un taux marginal explicite de 30% du salaire.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "reasoning": "Le mécanisme de cumul est lisible et l'exemple Sylvie démontre un gain net positif. La suppression de l'obligation des 24h hebdomadaires en temps partiel élimine un autre seuil identifié."
+        },
+        {
+          "problem": "Opacité du soutien public global perçu par foyer",
+          "approach": "Compte social unique consolidant l'ensemble des aides quelle qu'en soit l'origine.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Le parallèle avec le compte fiscal est techniquement cohérent et l'outil de transparence répond à un constat largement partagé."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Système de santé (accès, déserts médicaux, hôpital public)",
+          "significance": "Aucune mention dans le programme. La santé est citée seulement comme exemple de dépense de solidarité financée par les cotisations.",
+          "source_refs": []
+        },
+        {
+          "problem": "Éducation et formation initiale",
+          "significance": "Le programme évoque la formation uniquement dans le cadre du RIA Insertion (15h hebdo d'activité). Aucune politique éducative au sens large.",
+          "source_refs": []
+        },
+        {
+          "problem": "Politique familiale et démographie",
+          "significance": "Les allocations familiales sont mentionnées comme « neutralisées dans le calcul » de l'exemple CSU, sans politique propre.",
+          "source_refs": []
+        },
+        {
+          "problem": "Inégalités de patrimoine et de revenus",
+          "significance": "Le cadre est exclusivement « travail vs assistance », sans examen des écarts de richesse ni de la concentration patrimoniale.",
+          "source_refs": []
+        },
+        {
+          "problem": "Dépendance et grand âge",
+          "significance": "Mentionnés uniquement comme exception au plafond CSU, sans politique propre.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Niveau de vie de certains foyers à fortes prestations cumulées",
+          "mechanism": "L'application du plafond de 70% du SMIC net par adulte produit, dans l'exemple chiffré du programme lui-même (Sarah/Maxime), une baisse de 410€/mois (de 2 375€ à 1 865€), avant que la reprise d'emploi ne compense.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "L'effet est intentionnel (incitation à reprendre une activité) mais matériel : pour les foyers où la reprise d'emploi est entravée par d'autres contraintes (santé, mobilité, garde d'enfants), la baisse de revenu est immédiate."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Hétérogénéité territoriale des aides locales rendant le plafond CSU difficile à calibrer uniformément",
+          "probability": 0.6,
+          "severity": 0.4,
+          "reasoning": "Le programme reconnaît la diversité (« État, CAF, mairie, département, bailleur social ») mais le plafond uniforme à 70% du SMIC ne s'ajuste pas au coût de la vie local.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        {
+          "risk": "Tension entre simplification (RIA) et neutralisation des allocations familiales",
+          "probability": 0.4,
+          "severity": 0.3,
+          "reasoning": "L'articulation entre RIA, allocations familiales, APL et plafond CSU repose sur des règles de neutralisation que le programme évoque mais ne détaille pas complètement.",
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-4"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "RIA Socle 300€ + RIA Insertion 250€/mois (15h activité hebdo)",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "Sortie à 1 833€/mois ; taux marginal 30%"
+        },
+        {
+          "measure": "Suppression de l'obligation légale des 24h hebdo en temps partiel (sauf accord collectif)",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Plafond global des aides à 70% du SMIC net par adulte (hors handicap/dépendance/vieillesse)",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "Exemple chiffré : -410€/mois pour foyer à 85% du SMIC net par adulte"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Les mesures sociales sont les principales sources d'économies du programme ; le risque budgétaire est inversé (gain plutôt que coût).",
+          "source_refs": [
+            "sources.md#impact-finances-publiques"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Le CSU suppose l'interopérabilité d'organismes hétérogènes (État, CAF, collectivités, bailleurs) ; chantier de plusieurs années.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de la capacité des CAF, départements et collectivités à transmettre des données harmonisées.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Le RIA fusionne trois dispositifs existants ; la défusion serait techniquement complexe une fois la transition opérée.",
+          "source_refs": [
+            "sources.md#proposition-2"
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "security_sovereignty": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme silencieux sur sécurité intérieure, immigration, défense, énergie et souveraineté industrielle.",
+      "summary": "Le document « Travail Gagnant » ne traite aucune des sous-dimensions de sécurité ou de souveraineté. Aucune proposition sur la police, la justice pénale, l'immigration, la défense, l'énergie ou la souveraineté industrielle/alimentaire. Le seul élément à connotation souveraine est la mesure d'alignement de l'indemnisation chômage des travailleurs frontaliers sur un salaire français équivalent, qui relève davantage de l'équité du financement de l'assurance chômage que d'un projet de souveraineté.",
+      "problems_addressed": [
+        {
+          "problem": "Asymétrie de financement entre travailleurs frontaliers et résidents",
+          "approach": "Calcul de l'allocation sur un salaire de référence français équivalent.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Mesure technique, à la marge de la dimension sécurité/souveraineté."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Sécurité intérieure et ordre public",
+          "significance": "Bruno Retailleau étant ministre de l'Intérieur en exercice, le silence du document spécifiquement consacré au programme « Travail Gagnant » sur ces sujets est notable mais peut refléter le périmètre éditorial du document plutôt que l'absence de positions.",
+          "source_refs": []
+        },
+        {
+          "problem": "Immigration et politique migratoire",
+          "significance": "Aucune mention dans ce programme.",
+          "source_refs": []
+        },
+        {
+          "problem": "Défense et politique extérieure",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        },
+        {
+          "problem": "Souveraineté énergétique",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        },
+        {
+          "problem": "Souveraineté industrielle et alimentaire",
+          "significance": "Le programme évoque la « capacité de production » au sens macroéconomique mais ne propose aucune politique industrielle ciblée.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [],
+      "key_measures": [
+        {
+          "measure": "Alignement de l'indemnisation chômage des frontaliers sur un salaire français équivalent",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "0,5 à 0,7 Md€/an d'économies"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "institutional_democratic": {
+      "grade": "D",
+      "headline": "Une seule proposition institutionnelle : rééquilibrer la gouvernance Unédic vers les partenaires sociaux et les régions.",
+      "summary": "Le programme contient une proposition institutionnelle unique et localisée : associer pleinement l'Unédic, les partenaires sociaux et les régions à la définition de l'accompagnement par France Travail. Cette mesure relève d'un retour à la gouvernance paritaire classique de l'assurance chômage, après une période de reprise en main par l'État. Aucune proposition sur les institutions de la République, la Constitution, le Parlement, les collectivités territoriales (au-delà des régions sur l'emploi), la justice ou les médias.",
+      "problems_addressed": [
+        {
+          "problem": "Découplage entre financement (Unédic) et décision (État) sur l'assurance chômage",
+          "approach": "Associer Unédic, partenaires sociaux et régions à la gouvernance de France Travail et au partage des données.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "La proposition est cohérente avec une logique paritaire classique mais ne précise pas les modalités juridiques (loi organique, convention, etc.)."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réforme institutionnelle des pouvoirs publics",
+          "significance": "Aucune position sur l'équilibre exécutif/législatif, le mode de scrutin, ou les prérogatives parlementaires.",
+          "source_refs": []
+        },
+        {
+          "problem": "Décentralisation et capacité de l'État territorial",
+          "significance": "Les régions sont mentionnées dans la gouvernance Unédic, mais aucune doctrine globale sur la décentralisation.",
+          "source_refs": []
+        },
+        {
+          "problem": "Justice et État de droit",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        },
+        {
+          "problem": "Relation institutionnelle avec l'UE",
+          "significance": "L'UE est mobilisée comme référent comparatif, sans doctrine institutionnelle.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Conflit de compétences entre État, partenaires sociaux et régions sur France Travail",
+          "probability": 0.5,
+          "severity": 0.4,
+          "reasoning": "Une gouvernance multi-acteurs sans hiérarchie claire peut produire des blocages décisionnels. Le programme ne précise pas le mécanisme d'arbitrage.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Rééquilibrage de la gouvernance Unédic-État vers les partenaires sociaux et les régions",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Mesure de gouvernance sans coût budgétaire direct.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Suppose une réforme du cadre conventionnel et législatif de France Travail.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de l'acceptation des partenaires sociaux et de la coordination régionale.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Une majorité ultérieure pourrait re-centraliser par voie législative.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme silencieux sur climat, biodiversité, agriculture et infrastructures de transition.",
+      "summary": "Le programme « Travail Gagnant » ne traite d'aucune dimension environnementale. Le cadre productif est explicitement productiviste (objectif de +2% de PIB via davantage d'heures travaillées), sans mention de contrainte carbone, de transition énergétique, d'agriculture ou d'infrastructure verte. Les transports publics locaux et le logement social sont mentionnés uniquement comme exemples de dépenses de solidarité financées par le travail, sans politique propre.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Transition climatique et trajectoire bas-carbone",
+          "significance": "Aucune mention. L'objectif macroéconomique de production accrue ne s'accompagne pas de cadre de compatibilité climatique.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversité et ressource en eau",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        },
+        {
+          "problem": "Agriculture et transition agroécologique",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        },
+        {
+          "problem": "Infrastructures de transition (réseau électrique, ferroviaire, rénovation)",
+          "significance": "Aucune mention.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibilité de la stratégie productive avec les engagements climatiques",
+          "mechanism": "L'objectif de +2% de PIB via davantage d'heures travaillées dans une économie dont la composition sectorielle reste inchangée induit une hausse mécanique d'émissions, à moins que la croissance soit concentrée sur des secteurs faiblement carbonés — ce que le programme n'examine pas.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "L'aggravation est implicite (silence + objectif productif) plutôt qu'explicite (mesure anti-environnementale)."
+        }
+      ],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Programme ne traite pas substantiellement de cette dimension.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "approximately €250-500/year for median-wage worker under 35 (gain via heures sup) ; ~€280-300/month for working seniors with full quarters (gain via exonération anticipée) ; -410€/month chiffré pour foyer-type au plafond CSU",
+      "units": "€/person/year ou €/foyer/mois selon cohorte",
+      "confidence": 0.5,
+      "caveats": "Les gains pour les actifs supposent une réponse comportementale effective (acceptation d'heures supplémentaires, prolongation d'activité). Les pertes pour les bénéficiaires d'aides au-dessus du plafond sont plus directement quantifiables. Le programme ne traite pas de la trajectoire de retraite à 25-30 ans, ce qui rend l'estimation pour un 25-ans-en-2027 sur l'horizon 2047 partielle."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Gain potentiel direct via heures sup exonérées au-delà de 1 623h, conditionné à l'acceptation d'heures par l'employeur.",
+        "quantified": "+230 à +500€/an au seuil ; jusqu'à +2 800€/an au-delà"
+      },
+      "housing": {
+        "summary": "Aucune mesure logement ; les APL restent dans le périmètre du plafond CSU.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Le programme ne traite pas de la trajectoire de retraite des actifs jeunes ; l'exonération de cotisations retraite seniors et heures sup réduit marginalement les recettes du régime sans contrepartie explicite sur les droits futurs.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "Augmentation du volume d'heures offertes par les entreprises (baisse du coût marginal de 35%) ; suppression des 24h hebdo en temps partiel facilitant l'entrée sur le marché.",
+        "quantified": "Coût horaire entreprise -35% au-delà du seuil"
+      },
+      "environmental_debt": {
+        "summary": "Le programme ne traite pas de la trajectoire climatique ; l'objectif productif de +2% PIB sans cadre carbone reporte implicitement les coûts d'ajustement.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un 25-ans actif au salaire médian, gain net direct via heures sup et incitations à la reprise d'activité ; effets négatifs concentrés sur les sous-cohortes bénéficiaires de prestations cumulées au-dessus du plafond et sur la dette environnementale différée."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Aucune mesure spécifique sur les retraités inactifs ; pension de droit commun préservée.",
+        "quantified": "+0€/an pour retraité inactif"
+      },
+      "pension": {
+        "summary": "Cumul emploi-retraite rénové améliore les revenus des retraités qui poursuivent une activité (pension minorée de 30% du revenu d'activité, exonération de cotisations sociales hors CSG/CRDS).",
+        "quantified": "Exemple chiffré : +733€/mois nets pour Michel, retraité 65 ans à mi-temps"
+      },
+      "healthcare": {
+        "summary": "Aucune mesure ; l'accès aux soins n'est pas modifié par le programme.",
+        "quantified": null
+      },
+      "narrative_summary": "Effet net positif pour les seniors souhaitant prolonger leur activité ; neutre pour les retraités inactifs (la pension de droit commun n'est pas modifiée)."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Programme stimule le cumul emploi-retraite et l'activité avant l'âge légal mais ne traite pas de la soutenabilité du régime ; effets de comportement attendus à moyen terme.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Mise en place du cumul rénové et de l'exonération seniors anticipée ; effet net dépend de l'élasticité comportementale.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Si +10% de seniors prolongent, recettes de cotisations marginalement préservées et pensions cumulées augmentées.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Programme ne traite pas de la trajectoire de financement des retraites au-delà de l'horizon des incitations.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Les économies générées (28,5-31,7 Md€) sont intégralement restituées aux salariés et entreprises ; aucune contribution explicite au désendettement.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Restitution intégrale des économies aux actifs et entreprises ; trajectoire de déficit non explicitement réduite.",
+            "source_refs": [
+              "sources.md#impact-finances-publiques"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Effet sur la dette dépend de l'effet d'entraînement de la compétitivité (+2% PIB allégué) sur les recettes — non quantifié sur cet horizon.",
+            "source_refs": [
+              "sources.md#proposition-1"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Programme ne précise pas de trajectoire de dette à long terme.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Programme silencieux sur climat ; objectif productif sans cadre carbone reporte implicitement les coûts d'ajustement vers les horizons ultérieurs.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Hausse d'heures travaillées et de production sans cadre de compatibilité climatique.",
+            "source_refs": [
+              "sources.md#proposition-1"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Absence de politique de transition prolonge l'inertie carbone.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Coûts d'ajustement reportés sur cohortes plus jeunes ; absence de stratégie d'atténuation.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Programme ne propose aucune mesure de santé ; les exonérations de cotisations sur les heures sup et seniors réduisent marginalement le financement de l'Assurance maladie sans compensation explicite.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure de santé sur cet horizon.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure de santé sur cet horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure de santé sur cet horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Programme ne propose aucune politique éducative ; la formation est mentionnée uniquement comme condition du RIA Insertion (15h hebdo).",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Programme ne propose aucune politique du logement ; les APL et le logement social restent dans le périmètre du plafond CSU.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Plafond CSU peut réduire le revenu disponible logement de certains foyers locataires sociaux à fortes prestations cumulées.",
+            "source_refs": [
+              "sources.md#proposition-4"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "Le programme est conçu autour d'un transfert intra-générationnel (assistés vers actifs) plutôt qu'inter-générationnel. Pour les actifs jeunes, gain direct via heures sup et incitations à la reprise d'activité, pondéré par l'absence de mesures sur logement et retraite future. Pour les seniors actifs, gain net via cumul rénové ; pour les retraités inactifs, neutralité. La principale dimension où le programme produit un transfert temporel net défavorable aux jeunes est environnementale, par silence et objectif productif sans cadre carbone — un transfert implicite du coût d'ajustement vers les cohortes futures. La direction « young_to_old » classique (via dette ou pension) ne s'applique pas clairement ici car la dette n'est pas réduite mais pas non plus explicitement augmentée.",
+    "source_refs": [
+      "sources.md#proposition-1",
+      "sources.md#proposition-3",
+      "sources.md#proposition-4",
+      "sources.md#impact-finances-publiques"
+    ],
+    "confidence": 0.55
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Sans réforme : dette à 116% du PIB en hausse, taux d'emploi des seniors stable autour de 36% pour les 60-64 ans, dépenses sociales non-contributives en croissance (+30,8% entre 2012 et 2022 selon le programme), volume horaire annuel français (~1 664h) restant inférieur à la moyenne européenne (~1 784h).",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic"
+    ],
+    "dimensions_unchanged": [
+      "security_sovereignty",
+      "environmental_long_term"
+    ],
+    "reasoning": "Le programme modifie matériellement le coût marginal du travail, le paysage des minima sociaux et l'incitation à la prolongation d'activité — autant de leviers qui infléchiraient la trajectoire d'emploi et de dépense sociale. Il laisse en revanche inchangées les trajectoires de souveraineté, climat, santé, éducation et logement par silence. La direction est mixte : amélioration plausible sur emploi et compétitivité, dégradation sur certains foyers à fortes prestations cumulées, neutralité sur les dimensions non traitées avec implication d'un report d'ajustement (climat).",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Trajectoire de désendettement public",
+      "why_unsolved": "Le programme constate la dette à 116% du PIB mais oriente intégralement les économies vers la restitution aux actifs et entreprises, sans cible chiffrée de réduction du déficit ou de la dette.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Crise du logement et accès des jeunes ménages à la propriété",
+      "why_unsolved": "Aucune mesure dans le périmètre du programme.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Soutenabilité du système de retraite",
+      "why_unsolved": "Le programme propose des incitations marginales à la prolongation mais ne traite pas de l'équilibre démographique ni de l'âge légal.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Trajectoire climatique et compatibilité avec les engagements de la France",
+      "why_unsolved": "Le programme ne traite pas du climat ; l'objectif productif de +2% PIB est posé sans cadre de compatibilité carbone.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Accès aux soins et déserts médicaux",
+      "why_unsolved": "Aucune politique de santé dans le périmètre du programme.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Réforme institutionnelle et capacité de l'État",
+      "why_unsolved": "Le programme contient une seule mesure de gouvernance (Unédic) ; aucune doctrine institutionnelle plus large.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "L'élasticité de l'offre d'heures supplémentaires est nettement plus faible qu'anticipé, transformant l'exonération en effet d'aubaine fiscal sans hausse réelle de production.",
+      "trigger": "Moins de 50% des salariés supposés effectuer 16 heures supplémentaires les effectuent réellement.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "Le précédent de la loi TEPA 2007 (heures supplémentaires défiscalisées) a montré une élasticité comportementale modeste avec un coût budgétaire net pour les régimes sociaux. Si l'auto-financement annoncé ne se réalise pas, le manque à gagner pèse directement sur l'Unédic, l'Assurance maladie et le régime de retraite."
+    },
+    {
+      "scenario": "Le plafond CSU produit des effets de seuil concentrés sur des foyers fragiles incapables de reprendre rapidement un emploi (santé, mobilité, garde d'enfants), avec un effet immédiat sur les conditions matérielles.",
+      "trigger": "Mise en œuvre du plafond avant que le RIA et la suppression des 24h hebdo aient produit leurs effets sur l'emploi.",
+      "probability": 0.6,
+      "severity": 0.5,
+      "reasoning": "L'exemple chiffré du programme lui-même (Sarah/Maxime, -410€/mois) illustre l'ampleur potentielle du choc pour les foyers ciblés."
+    },
+    {
+      "scenario": "Conflit politique avec l'UE sur le respect des règles budgétaires (Pacte de stabilité révisé) si la trajectoire de déficit ne s'améliore pas malgré les économies générées.",
+      "trigger": "Maintien du déficit au-dessus de 4-5% du PIB après la mise en œuvre.",
+      "probability": 0.4,
+      "severity": 0.5,
+      "reasoning": "Les économies étant intégralement restituées plutôt qu'allouées au désendettement, la trajectoire de déficit dépend exclusivement de l'effet d'entraînement de la compétitivité — un mécanisme indirect et incertain."
+    },
+    {
+      "scenario": "Blocage parlementaire sur tout ou partie des mesures, en particulier le plafonnement des ruptures conventionnelles et l'application des règles juin 2024.",
+      "trigger": "Absence de majorité absolue après les législatives 2027.",
+      "probability": 0.5,
+      "severity": 0.5,
+      "reasoning": "Les règles de juin 2024 « jamais appliquées » illustrent une difficulté politique persistante. Le plafonnement des ruptures conventionnelles touche un dispositif consensuel utilisé par 500 000 salariés/an."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0].strength",
+        "critique": "L'attribution d'une force de 0,7 à la mesure de seuil zéro cotisation surévalue probablement la robustesse de la chaîne de causalité. La neutralité budgétaire annoncée repose sur 16 heures supplémentaires effectives par salarié n'en faisant pas — une hypothèse comportementale forte qui n'est pas étayée empiriquement par le programme.",
+        "alternative_interpretation": "La mesure pourrait être interprétée comme un simple effet d'aubaine fiscal sur les heures supplémentaires existantes (4,3 Md€ de restitution) sans hausse marginale du volume horaire."
+      },
+      {
+        "claim_location": "positioning.economic.score",
+        "critique": "Un score de +3 (proche Fillon 2017) peut sembler élevé étant donné que le programme préserve l'architecture générale de la protection sociale et ne propose pas de privatisations ni de baisse du niveau global de dépense publique. Le programme reconfigure plutôt qu'il ne démantèle.",
+        "alternative_interpretation": "Un score de +2 (entre Macron 2017 et Fillon 2017) serait également défendable, en notant que le programme reste dans la tradition LR mais sans les ruptures fillonistes de 2017 (ex : suppression de 500 000 postes de fonctionnaires)."
+      },
+      {
+        "claim_location": "intergenerational.net_transfer_direction",
+        "critique": "L'attribution « mixed » plutôt que « old_to_young » peut sous-estimer l'effet net favorable aux actifs jeunes (heures sup, RIA, suppression 24h hebdo). Le programme transfère explicitement ressources des bénéficiaires d'aides cumulées vers les actifs, dont une majorité sont jeunes.",
+        "alternative_interpretation": "« old_to_young » serait défendable si on considère les actifs comme la cohorte primaire bénéficiaire ; « mixed » est retenu ici parce que la dette environnementale différée et l'absence de mesure logement contrebalancent les gains directs."
+      }
+    ],
+    "potential_bias": "L'analyse pourrait sous-pondérer l'efficacité réelle des mesures incitatives en se reposant trop sur les précédents (TEPA 2007, règles juin 2024 non appliquées). Inversement, elle pourrait sur-pondérer le silence environnemental comme « problème aggravé » alors que l'omission peut refléter le périmètre éditorial du document plutôt qu'une opposition de principe à la transition. Légère tendance à appliquer un cadre macro-fiscaliste qui pourrait sous-estimer la dimension micro (lisibilité, simplification administrative) qui constitue une partie de la valeur du programme.",
+    "evidence_gaps": "Le programme fournit des chiffrages mais les sources (Rexecode décembre 2025, HCFiPS) ne sont pas disponibles dans le bundle pour vérification. L'estimation de fraude à 13 Md€ et les 10 Md€ de gain CSU agrègent deux effets distincts (plafond + lutte contre la fraude) sans répartition explicite. Les hypothèses comportementales (élasticité heures sup, +10% de seniors prolongeant) ne sont pas étayées par des références à la littérature économique.",
+    "confidence_in_critique": 0.65
+  },
+  "confidence_self_assessment": 0.7
+}

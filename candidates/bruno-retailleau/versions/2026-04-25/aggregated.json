@@ -1,0 +1,4191 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "source_models": [
+    {
+      "provider": "openai",
+      "version": "gpt-5.5-thinking"
+    },
+    {
+      "provider": "anthropic",
+      "version": "claude-opus-4-7"
+    },
+    {
+      "provider": "deepseek",
+      "version": "deepseek-chat"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-1.5-pro"
+    },
+    {
+      "provider": "Mistral",
+      "version": "Le Chat"
+    },
+    {
+      "provider": "qwen",
+      "version": "qwen3.6"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "copilot",
+      "version": "claude-opus-4.7"
+    },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-25T07:21:27Z"
+  },
+  "summary": "Le programme « Travail Gagnant » de Bruno Retailleau (LR) est un paquet de réformes côté offre qui combine un seuil zéro cotisation au-delà de 1 623 heures travaillées par an, la fusion du RSA, de la prime d'activité et de l'ASS dans un Revenu d'incitation à l'activité (RIA), un cumul emploi-retraite rénové, un Compte social unique (CSU) plafonnant les aides non contributives à 70 % du SMIC net par adulte, et un durcissement de l'assurance chômage. Les six modèles convergent sur un chiffrage de 28,5–31,7 Md€/an d'économies, intégralement restituées à parts égales aux salariés et aux entreprises plutôt qu'au désendettement. Le programme est silencieux sur le climat, la santé, l'éducation, le logement, la sécurité intérieure, l'immigration et la défense ; cinq modèles classent l'environnement « non traité », un seul (Mistral) attribue F au productivisme implicite. Le positionnement modal est « droite » (5/6), avec une dissidence centre-droit (Mistral).",
+  "summary_agreement": 0.78,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        3,
+        4
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Cinq modèles sur six placent le programme à +3 (proche Fillon 2017, plus libéral que Macron 2017) ; Gemini retient +4 en raison de l'agressivité conjointe des baisses de cotisations et des plafonnements de l'aide sociale. Le consensus repose sur trois piliers explicites : exonération de cotisations au-delà de 1 623 heures, restitution intégrale des 30 Md€ d'économies aux salariés et aux entreprises, et plafond global des aides à 70 % du SMIC net.",
+      "evidence": [
+        {
+          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "L'ensemble des cinq mesures proposées permettra de dégager au moins 30 milliards d'euros par an.",
+          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+        },
+        {
+          "quote": "hors situations de dépendance ou de handicap, le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#proposition-4"
+        }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        {
+          "model": "gemini-1.5-pro",
+          "position": 4,
+          "reasoning": "Aggressive labor cost reductions funded by tightening unemployment and welfare eligibility, squarely fitting the right-wing supply-side economic model."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 3,
+          "reasoning": "The concrete package lowers payroll contributions, tightens unemployment insurance, caps parts of non-contributory assistance, and reallocates gains toward employees and firms."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 3,
+          "reasoning": "Programme libéral classique : baisse massive des cotisations, plafonnement des aides, restitution des économies au privé."
+        },
+        {
+          "model": "deepseek-chat",
+          "score": 3,
+          "reasoning": "Le programme propose une baisse massive des charges sur le travail, une refonte restrictive de l'assurance chômage, un plafonnement des aides sociales et une restitution intégrale des économies au secteur privé, sans augmentation de dépenses publiques."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 4,
+          "reasoning": "Explicit reduction of corporate and employee social contributions, funded by tightening unemployment and welfare eligibility, squarely fitting the right-wing supply-side economic model."
+        },
+        {
+          "model": "Le Chat",
+          "score": 3,
+          "reasoning": "Program explicitly reduces the cost of labor and restores incentive structures, aligning with market-oriented economic policy."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 3,
+          "reasoning": "Structural reduction of labor costs, deregulation of overtime, and welfare caps indicate a supply-side, market-oriented approach."
+        }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        1,
+        2
+      ],
+      "modal_score": 2,
+      "anchor_narrative": "Cinq modèles retiennent +2 (proche LR 2022, plus conservateur que Macron 2017) sur la base du cadrage anti-assistanat et de la conditionnalité du RSA/ASS via le RIA. Claude descend à +1 estimant que le programme reste centré sur le travail et n'aborde pas explicitement les sujets familiaux, migratoires ou laïcité.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s'installer durablement dans l'assistance.",
+          "source_ref": "sources.md#presentation-densemble"
+        },
+        {
+          "quote": "L'allocation chômage doit être un filet de sécurité, pas un choix de vie.",
+          "source_ref": "sources.md#presentation-densemble"
+        }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 1,
+          "reasoning": "Cadrage conservateur sur la valeur travail mais pas de positions explicites sur famille, immigration, laïcité ou culture."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 2,
+          "reasoning": "The source material gives a conservative work-and-assistance frame, but does not cover family law, immigration, secularism, or cultural policy."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 1,
+          "reasoning": "Cadrage conservateur centré sur la valeur travail sans positions explicites sur les autres sujets sociaux-culturels."
+        },
+        {
+          "model": "deepseek-chat",
+          "score": 2,
+          "reasoning": "Le discours insiste sur la valeur travail, la lutte contre l'assistanat et la fraude sociale, et la responsabilité individuelle. Les propositions concrètes réduisent les prestations sans contrepartie nouvelle pour les publics vulnérables."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 2,
+          "reasoning": "Strong emphasis on work over 'assistance', framing welfare as a trap, characteristic of mainstream conservative social policy."
+        },
+        {
+          "model": "Le Chat",
+          "score": 2,
+          "reasoning": "Program explicitly targets reducing welfare dependency and emphasizes work as the primary social anchor."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 2,
+          "reasoning": "Strong conditionality on social benefits, explicit anti-welfare dependency framing, and work-ethic prioritization place the program on the conservative side of the social axis."
+        }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        0,
+        2
+      ],
+      "modal_score": 1,
+      "anchor_narrative": "Désaccord substantiel : Mistral à +2 (compétitivité nationale, alignement frontaliers), trois modèles à +1 (Chatgpt, Gemini, Qwen — souveraineté économique limitée), Claude et DeepSeek à 0 (programme silencieux sur EU, défense, immigration, frontières). Le modal +1 reflète la production et la balance commerciale comme axes faibles ; aucune mesure régalienne n'est spécifiée.",
+      "evidence": [
+        {
+          "quote": "produire davantage est indispensable si nous voulons créer plus de richesse et cesser de financer notre modèle social par la dette.",
+          "source_ref": "sources.md#proposition-1"
+        },
+        {
+          "quote": "Aligner l'indemnisation des travailleurs frontaliers sur des salaires français équivalents",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.55,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 0,
+          "reasoning": "Programme silencieux sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE."
+        },
+        {
+          "model": "deepseek-chat",
+          "position": 0,
+          "reasoning": "Le programme ne contient aucune proposition sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE, hormis une référence à l'alignement sur les normes européennes d'assurance chômage."
+        },
+        {
+          "model": "Le Chat",
+          "position": 2,
+          "reasoning": "Program focuses on national competitiveness and reducing reliance on debt-financed consumption, reflecting a sovereignist economic stance."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 1,
+          "reasoning": "The program links work hours, production, competitiveness, and trade balance, but it lacks concrete measures on EU powers, borders, defense, energy, or strategic supply chains."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 0,
+          "reasoning": "Programme silencieux sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE."
+        },
+        {
+          "model": "deepseek-chat",
+          "score": 0,
+          "reasoning": "Pas de positionnement explicite ; comparable à un candidat centre-droit européen sur l'UE."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 1,
+          "reasoning": "Minimal focus on sovereignty in the text beyond adjusting cross-border worker benefits to national standards."
+        },
+        {
+          "model": "Le Chat",
+          "score": 2,
+          "reasoning": "Program focuses on national competitiveness and reducing reliance on debt-financed consumption, reflecting a sovereignist economic stance."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 1,
+          "reasoning": "Program focuses on national labor market protection and cross-border benefit alignment, but lacks explicit EU or defense sovereignty proposals."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        -1,
+        0
+      ],
+      "modal_score": -1,
+      "anchor_narrative": "Quatre modèles à -1 (Compte social unique = centralisation administrative technocratique modeste sans réforme constitutionnelle), deux modèles à 0 (Chatgpt et Mistral — la création du CSU et la gouvernance partagée Unédic/régions/partenaires sociaux ne constituent pas un changement institutionnel matériel). Aucune réforme constitutionnelle, électorale, judiciaire ou de décentralisation n'est proposée.",
+      "evidence": [
+        {
+          "quote": "Nous proposons donc la création d'un Compte social unique (CSU), sur le modèle du compte fiscal.",
+          "source_ref": "sources.md#proposition-4"
+        },
+        {
+          "quote": "Il est nécessaire d'associer pleinement l'Unédic, les partenaires sociaux et les régions à la définition de l'accompagnement assuré par France Travail.",
+          "source_ref": "sources.md#proposition-5"
+        }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        {
+          "model": "gpt-5.5-thinking",
+          "position": 0,
+          "reasoning": "Institutional content is administrative rather than constitutional: a national benefits registry and shared employment-policy governance, without judicial, electoral, or media-system reforms."
+        },
+        {
+          "model": "Le Chat",
+          "position": 0,
+          "reasoning": "Program does not address institutional reforms or illiberal measures, leaving the Fifth Republic's framework intact."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 0,
+          "reasoning": "Institutional content is administrative rather than constitutional: a national benefits registry and shared employment-policy governance, without judicial, electoral, or media-system reforms."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": -1,
+          "reasoning": "Centralisation administrative modérée via le CSU, sans réforme constitutionnelle."
+        },
+        {
+          "model": "deepseek-chat",
+          "score": -1,
+          "reasoning": "Aucune mesure ne concerne les institutions, la décentralisation ou le fonctionnement démocratique. Le programme s'inscrit dans le cadre institutionnel existant sans le remettre en cause."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": -1,
+          "reasoning": "Proposes state capacity upgrades (CSU) and shifting governance of Unédic to give social partners more operational control, without illiberal changes."
+        },
+        {
+          "model": "Le Chat",
+          "score": 0,
+          "reasoning": "Program does not address institutional reforms or illiberal measures, leaving the Fifth Republic's framework intact."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -1,
+          "reasoning": "Governance reforms target employment agencies and social partners; no constitutional or democratic restructuring is proposed."
+        }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [
+        -3,
+        0
+      ],
+      "modal_score": -1,
+      "anchor_narrative": "Forte dispersion : Qwen à -3 (productivisme net comparable RN 2022), DeepSeek à -2, trois modèles à -1 (Chatgpt, Claude, Mistral — ligne LR productiviste avec absence de mesures), Gemini à 0 (sujet non traité, donc neutre par défaut). Le modal -1 reflète l'absence totale de mesures climat/biodiversité combinée à un objectif explicite de hausse de la production de 2 % du PIB.",
+      "evidence": [
+        {
+          "quote": "Un gain substantiel de croissance de l'activité dont 2 % uniquement grâce aux nouvelles heures supplémentaires",
+          "source_ref": "sources.md#bilan"
+        },
+        {
+          "quote": "renouer avec une croissance tirée par la production",
+          "source_ref": "sources.md#constat"
+        }
+      ],
+      "confidence": 0.5,
+      "dissent": [
+        {
+          "model": "deepseek-chat",
+          "position": -2,
+          "reasoning": "Le programme encourage une hausse de la production et des heures travaillées sans mentionner de contraintes ou d'investissements environnementaux."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "position": 0,
+          "reasoning": "The extracted program focuses exclusively on labor, welfare, and fiscal mechanics; ecology is absent, treated as not addressed rather than productivist."
+        },
+        {
+          "model": "qwen3.6",
+          "position": -3,
+          "reasoning": "Exclusive focus on labor volume expansion and GDP growth with zero mention of climate, biodiversity, or energy transition indicates a productivist stance."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": -1,
+          "reasoning": "The program is oriented toward additional production and work volume, while climate, biodiversity, water, and transition-investment measures are not specified."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": -1,
+          "reasoning": "Productivisme implicite, absence totale de mesures environnementales."
+        },
+        {
+          "model": "deepseek-chat",
+          "score": -2,
+          "reasoning": "Plus productiviste que LR 2022, proche de RN 2022 sur l'absence de mesures environnementales."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "score": 0,
+          "reasoning": "The extracted program focuses exclusively on labor, welfare, and fiscal mechanics; ecology is absent."
+        },
+        {
+          "model": "Le Chat",
+          "score": -1,
+          "reasoning": "Program omits ecological priorities, focusing instead on labor and competitiveness, resulting in a productivist stance."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -3,
+          "reasoning": "Exclusive focus on labor volume expansion and GDP growth with zero mention of climate, biodiversity, or energy transition indicates a productivist stance."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": {
+        "droite": 5,
+        "centre_droit": 1
+      },
+      "anchor_narrative": "Cinq modèles classent le programme « droite » (LR 2022, Fillon 2017) sur la base du combo économique (+3) et social-culturel (+2). Mistral retient « centre_droit » en pondérant l'absence de toute rhétorique régalienne ou identitaire. Aucun modèle ne classe le programme à l'extrême droite ni au centre.",
+      "confidence": 0.78,
+      "dissent": [
+        {
+          "model": "Le Chat",
+          "label": "centre_droit",
+          "reasoning": "Market-oriented economic policy combined with socially conservative and sovereignist stances places the program in the centre-right band."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "label": "droite",
+          "reasoning": "Market-oriented labor-cost cuts and work-conditional social policy drive the placement. Sovereignty evidence is production-centered but not RN-level nationalist; institutional and ecological axes do not override the economic and social-cultural placement."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "label": "droite",
+          "reasoning": "Combinaison économique libérale et conservatisme social-travail, sans dérive régalienne extrême."
+        },
+        {
+          "model": "deepseek-chat",
+          "label": "droite",
+          "reasoning": "Le score économique fortement libéral (+3) et le score social conservateur (+2) placent le programme dans la droite classique française, comparable au positionnement de LR 2022."
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "label": "droite",
+          "reasoning": "The combination of aggressive tax cuts on labor, structured reductions in welfare limits, and rhetoric targeting 'assistanat' places the program firmly in the mainstream right."
+        },
+        {
+          "model": "Le Chat",
+          "label": "centre_droit",
+          "reasoning": "Market-oriented economic policy combined with socially conservative and sovereignist stances places the program in the centre-right band."
+        },
+        {
+          "model": "qwen3.6",
+          "label": "droite",
+          "reasoning": "Supply-side economics, welfare conditionality, and a productivist growth model place the program firmly on the right; institutional and sovereignty axes are moderate and do not shift the classification."
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "gemini-1.5-pro": "A",
+          "Le Chat": "A"
+        }
+      },
+      "headline": {
+        "text": "30 Md€/an d'économies (zéro cotisation, RIA, CSU, chômage), restitués 50/50 salariés-entreprises sans réduction de dette.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Package chiffré à €28.5-31.7bn/an, restitué aux salariés et entreprises plutôt qu'au déficit."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Au moins 30 Md€/an de gains via 5 mesures pro-travail (zéro cotisation, RIA, seniors, CSU, chômage), restitués 50/50 salariés/entreprises."
+          },
+          {
+            "model": "deepseek-chat",
+            "text": "Redistribution de 30 Md€/an vers salariés et entreprises via exonérations de cotisations et réforme de l'assurance chômage, sans trajectoire de réduction de la dette."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Réduction massive des cotisations et réformes sociales générant 30 Md€, intégralement restitués au travail."
+          },
+          {
+            "model": "Le Chat",
+            "text": "Redistribution de 30 milliards d'euros aux salariés et entreprises via baisse du coût du travail et suppression de cotisations sociales ciblées."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Baisse du coût du travail et redistribution de 30 Md€ d'économies, sans détail sur la trajectoire de déficit ou la dette."
+          }
+        ]
+      },
+      "summary": "Le paquet est cohérent autour d'une thèse unique — le coût du travail finance une protection sociale dévoyée — déclinée en cinq mesures chiffrées totalisant 28,5–31,7 Md€/an d'économies (zéro cotisation au-delà de 1 623h, RIA, exonérations seniors, CSU+lutte contre la fraude, durcissement chômage). Tous les modèles soulignent que ces gains sont intégralement restitués au privé (50/50 salariés-entreprises) plutôt qu'utilisés pour le désendettement, ce qui fait dépendre tout effet sur la dette de la croissance dégagée. Deux modèles (Gemini, Mistral) attribuent A en valorisant la précision du chiffrage ; quatre modèles attribuent B en pondérant les hypothèses comportementales (élasticité de l'offre d'heures supplémentaires, taux d'emploi des seniors, recouvrement de la fraude). Le programme ne traite ni la trajectoire de dette au-delà de l'horizon des 30 Md€, ni le cadre budgétaire européen, ni la fiscalité du capital, ni le financement durable de la Sécurité sociale hors chômage.",
+      "problems_addressed": [
+        {
+          "problem": "Coût du travail élevé et faible volume horaire travaillé en France (1 664h FR vs 1 784h UE)",
+          "approach": "Seuil « zéro cotisation » à 1 623h/an : exonération totale des cotisations salariales et patronales sur les heures au-delà du seuil (hors CSG/CRDS), équivalent à une baisse d'environ 35% du coût horaire marginal et un gain de pouvoir d'achat de +500 à +2 800€/an pour un salarié médian.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "Mécanisme chiffré poste par poste avec exemples concrets ; la magnitude est convergente entre tous les modèles. La principale incertitude porte sur l'élasticité de l'offre d'heures supplémentaires (16h additionnelles supposées par salarié n'en faisant pas).",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Dépenses d'assurance chômage dans des situations atypiques (ruptures conventionnelles, frontaliers, alternance emploi-chômage)",
+          "approach": "Application des règles de juin 2024 + plafonnement et limitation à 6 mois des indemnités sur ruptures conventionnelles + alignement de l'indemnisation des frontaliers sur des salaires français équivalents + dégressivité accélérée au-dessus de 3 000€ nets.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Les économies sont chiffrées poste par poste (4-5 Md€ règles juin 2024, 7-8 Md€ ruptures conventionnelles, 0,5-0,7 Md€ frontaliers, 1-2 Md€ dégressivité) pour un total de 12,5 à 15,7 Md€/an. Le risque principal est le blocage parlementaire — les règles de juin 2024 n'ayant jamais été appliquées.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Empilement et opacité des aides sociales non-contributives",
+          "approach": "Création d'un Compte social unique consolidant l'ensemble des aides versées par l'État, la CAF, les départements, communes et autres organismes ; plafonnement du total des aides couvertes à 70% du SMIC net par adulte (hors handicap, dépendance, vieillesse).",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Le programme estime 10 Md€ d'économies (plafond + lutte contre la fraude évaluée à 13 Md€ par le HCFiPS). L'agrégation des deux effets sans les séparer affaiblit la lisibilité du chiffrage, et la mise en œuvre du registre national est un chantier informatique inter-organismes lourd.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de la dette publique au-delà des 30 Md€ restitués",
+          "significance": "Le programme constate la dette à 116% du PIB et 175 Md€ de déficit, mais oriente intégralement les économies générées vers la restitution privée, sans contribution au désendettement. Aucune trajectoire de déficit, cible de dette, ou hypothèse de service de la dette n'est fournie.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-1.5-pro",
+            "Le Chat"
+          ]
+        },
+        {
+          "problem": "Cadre budgétaire européen et conformité au Pacte de stabilité révisé",
+          "significance": "La trajectoire 116% PIB est mentionnée mais le programme ne traite pas de sa conformité aux règles européennes de surveillance budgétaire.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Fiscalité du capital et du patrimoine",
+          "significance": "Le programme traite uniquement de la fiscalité du travail (cotisations). La structure capital/travail, la fiscalité des successions, l'IR ou la fiscalité des entreprises hors cotisations ne sont pas examinées.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Financement durable des branches non-chômage de la Sécurité sociale (famille, santé, retraite)",
+          "significance": "La baisse massive des cotisations sociales sur les heures au-delà du seuil et sur l'emploi des seniors retire de la base de cotisation sans préciser la compensation budgétaire vers les régimes concernés.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Sensibilité du financement de la protection sociale aux revenus du travail",
+          "mechanism": "L'exonération totale au-delà de 1 623h et l'exonération seniors retirent de la base de cotisation des heures à fort potentiel. L'auto-financement annoncé suppose une élasticité de l'offre d'heures supplémentaires non démontrée ; à défaut, le manque à gagner pèse sur Unédic et les régimes de retraite.",
+          "severity": 0.42,
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "La littérature sur la loi TEPA 2007 a documenté des effets d'aubaine substantiels qui pourraient se reproduire ici sans inversion budgétaire matérielle.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": [
+            "Le Chat"
+          ]
+        },
+        {
+          "problem": "Concentration des gains de pouvoir d'achat sur les salariés pouvant accéder à des heures supplémentaires",
+          "mechanism": "Le mécanisme récompense le volume horaire ; les salariés à temps partiel contraint, dans des secteurs sans heures supplémentaires, ou en début de carrière n'en bénéficient pas. Le gain de 2 800€/an cité dans le programme suppose 88h supplémentaires par an, peu probable hors secteurs en tension.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "Les modèles GPT, DeepSeek et Qwen soulignent ce biais distributif que le programme lui-même ne quantifie pas.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Sous-réalisation de l'élasticité de l'offre d'heures supplémentaires (auto-financement compromis)",
+          "probability": 0.5,
+          "severity": 0.6,
+          "reasoning": "La neutralité budgétaire de la proposition 1 dépend de 16h supplémentaires effectives par salarié n'en faisant pas aujourd'hui. Si la demande de production est atone ou si les employeurs substituent des heures de base par des heures exonérées, le coût net est positif et les économies attendues ne se matérialisent pas.",
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "Le Chat"
+          ]
+        },
+        {
+          "risk": "Complexité technique et politique du déploiement du Compte social unique",
+          "probability": 0.55,
+          "severity": 0.65,
+          "reasoning": "Le CSU suppose l'interopérabilité de centaines d'organismes (CAF, État, mairies, départements, bailleurs sociaux, Pôle emploi) et une refonte législative et opérationnelle simultanée. Historiquement, ce type de chantier informatique connaît retards et surcoûts importants en France.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Blocage parlementaire et social sur le durcissement de l'assurance chômage",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Les règles de juin 2024 n'ont jamais été appliquées faute de majorité. Plafonner les ruptures conventionnelles touche un dispositif consensuel utilisé par 500 000 salariés/an et pourrait cristalliser une opposition syndicale forte.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Seuil zéro cotisation à 1 623h/an, exonération totale au-delà (hors CSG/CRDS)",
+          "source_ref": "sources.md#proposition-1",
+          "quantified": true,
+          "magnitude": "~11 Md€ de gain entreprise potentiel (4,3 Md€ existants + 6,7 Md€ additionnels) ; +500€/an pour salarié médian au seuil ; jusqu'à +2 800€/an au-delà ; baisse de ~35% du coût horaire marginal",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité et ASS",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "Socle 300€ + insertion 250€/mois ; taux marginal 30% sur le salaire ; sortie à 1 833€/mois ; 2 Md€ d'économies budgétaires",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Cumul emploi-retraite rénové et exonérations seniors",
+          "source_ref": "sources.md#proposition-3",
+          "quantified": true,
+          "magnitude": "Avant âge légal : ~+300€/mois net salarié, ~-450€/mois employeur au salaire médian ; après âge légal : pension minorée de 30% du revenu d'activité",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Compte social unique avec plafond à 70% du SMIC net par adulte (hors handicap/dépendance/vieillesse)",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "10 Md€ d'économies cumulant plafond et lutte contre la fraude (estimée à 13 Md€ par le HCFiPS) ; exemple chiffré : -410€/mois pour un foyer Sarah/Maxime",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Réforme assurance chômage en 5 volets (règles juin 2024, ruptures conventionnelles, frontaliers, dégressivité, gouvernance)",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "12,5 à 15,7 Md€/an d'économies",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Chiffrage agrégé crédible (28,5-31,7 Md€) mais auto-financement dépend d'élasticités comportementales non démontrées.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "Le Chat"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Savings are quantified, but neutrality relies on extra hours, employment take-up, fraud recovery, and tax-base effects."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Chiffrage agrégé crédible (28,5-31,7 Md€) mais auto-financement de la proposition 1 dépend d'une élasticité comportementale non démontrée."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "moderate",
+              "note": "Les économies affichées dépendent de réponses comportementales (heures supplémentaires, reprise d'emploi) et de la capacité à réduire effectivement la fraude ; aucun filet de sécurité budgétaire n'est prévu si la croissance ne suit pas."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Savings are explicitly quantified, but rely heavily on behavior changes and high labor demand."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "Gains are financed by spending reforms and labor cost reductions, with no new debt issuance."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Neutrality depends on behavioral response; no contingency if savings underperform."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "high"
+          ],
+          "note": "CSU et fusion RIA = chantier inter-organismes lourd ; payroll/Unédic plus léger.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Requires payroll-rule changes, benefit fusion, unemployment rules, and a national aid register."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Le CSU et l'interopérabilité inter-organismes constituent un chantier administratif lourd ; la fusion RIA touche trois systèmes existants."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "high",
+              "note": "La création du CSU nécessite l'interopérabilité entre de nombreux organismes (CAF, départements, communes) et un registre national des versements, projet informatique complexe."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Requires significant payroll system overhauls and collective bargaining adjustments for annualization."
+            },
+            {
+              "model": "Le Chat",
+              "level": "limited",
+              "note": "Relies on administrative streamlining and existing tax mechanisms; no new agencies required."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Relies on existing payroll and Unédic infrastructure."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": null,
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Mesures essentiellement nationales ; effets dépendent de la réponse des employeurs et des accords frontaliers.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Output gains depend on employer demand, worker acceptance of hours, and information sharing by benefit bodies."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Mesures essentiellement nationales ; alignement frontaliers suppose le maintien des accords de remboursement avec les pays d'emploi."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Les mesures sont principalement domestiques ; l'alignement des frontaliers dépend d'accords bilatéraux existants mais ne crée pas de dépendance nouvelle."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "limited",
+              "note": "Depends on employer willingness to offer additional hours."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No single external dependency identified; reforms are domestically managed."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Requires employer willingness to propose additional hours."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "moderate"
+          ],
+          "note": "Cotisations et règles chômage révocables par loi de finances ; CSU plus difficile à démanteler une fois construit.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Payroll and unemployment changes can be altered by later finance and social-security legislation."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Les exonérations de cotisations et le plafond CSU peuvent être révoqués par une loi de finances ; le CSU comme infrastructure est plus difficile à démanteler une fois construit."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "moderate",
+              "note": "Une majorité ultérieure pourrait rétablir les cotisations ou l'assurance chômage antérieure ; le CSU et le RIA sont structurellement plus difficiles à démanteler une fois en place."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Tax rates can be adjusted by subsequent finance laws."
+            },
+            {
+              "model": "Le Chat",
+              "level": "moderate",
+              "note": "Could be reversed by a subsequent majority, but gains are politically popular (purchasing power and competitiveness)."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Contribution exemptions and unemployment rules can be modified by subsequent finance or labor laws."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "gemini-1.5-pro": "B",
+          "Le Chat": "B"
+        }
+      },
+      "headline": {
+        "text": "RIA et plafond CSU à 70% du SMIC net : refonte des minima sociaux ; santé, éducation, famille non traités.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Social policy centered on work incentives; healthcare, education, and inequality mechanisms mostly absent."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Le programme reconfigure les minima sociaux (RIA, plafond CSU) sans traiter santé, éducation, famille ou cohésion territoriale."
+          },
+          {
+            "model": "deepseek-chat",
+            "text": "Plafonnement des aides sociales à 70 % du SMIC net et fusion des minima sociaux, sans mesures sur la santé, l'éducation ou la famille."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Fusion des minima sociaux et plafonnement global des aides à 70% du SMIC pour inciter à l'emploi."
+          },
+          {
+            "model": "Le Chat",
+            "text": "Réduction des trappes à inactivité via plafonnement des aides sociales à 70% du SMIC net et incitation au retour à l'emploi."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Fusion des minima sociaux et plafonnement des aides à 70% du SMIC, sans politique de santé ou d'éducation."
+          }
+        ]
+      },
+      "summary": "La dimension sociale est traitée exclusivement sous l'angle des minima sociaux et de l'incitation à l'emploi : le RIA fusionne RSA, prime d'activité et ASS avec un taux marginal lisible de 30%, et le CSU instaure une transparence inédite assortie d'un plafond de 70% du SMIC net par adulte (hors handicap, dépendance, vieillesse). Quatre modèles attribuent C en pondérant l'absence totale de mesures sur la santé, l'éducation, la politique familiale, le logement et la démographie ; deux modèles (Gemini, Mistral) attribuent B en valorisant la cohérence interne et la précision du calibrage anti-trappes. Tous les modèles relèvent que le plafond produit des baisses substantielles concentrées (exemple Sarah/Maxime : -410€/mois) sans création nette d'emplois garantie, créant un risque de paupérisation pour les ménages incapables de retrouver un emploi.",
+      "problems_addressed": [
+        {
+          "problem": "Trappes à inactivité et complexité du système d'aides actuel",
+          "approach": "Création du RIA fusionnant RSA, prime d'activité et ASS avec socle 300€ + insertion 250€/mois, taux marginal 30% sur le salaire, sortie à 1 833€/mois.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "reasoning": "Le mécanisme de cumul est plus lisible que le système actuel et supprime les effets de seuil ; l'exemple Sylvie chiffre +400€/mois pour une mère isolée reprenant un mi-temps. Le programme ne quantifie cependant pas le coût budgétaire net ni le nombre attendu de bénéficiaires.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Empilement non maîtrisé des aides non contributives et fraude estimée à 13 Md€",
+          "approach": "Compte social unique (CSU) consolidant les aides versées par État, CAF, départements, communes ; plafond global à 70% du SMIC net par adulte hors handicap/dépendance/vieillesse.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Outil de transparence justifié, mais l'agrégation des effets plafond et fraude dans le chiffrage de 10 Md€ affaiblit la lisibilité, et la mise en œuvre dépend d'un projet informatique inter-organismes lourd.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Faible taux d'emploi des seniors (36% des 60-64 ans en France vs 60% UE)",
+          "approach": "Exonération de cotisations retraite et chômage avant l'âge légal pour les salariés ayant tous leurs trimestres ; cumul emploi-retraite rénové après l'âge légal.",
+          "strength": 0.62,
+          "source_refs": [
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "Les exemples Catherine et Michel chiffrent ~+3 400€/an net salarié au salaire médian. La neutralité budgétaire annoncée dépend toutefois d'un effet de comportement (10% de seniors supplémentaires prolongeant) qui n'est pas démontré.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Accès aux soins, hôpital, démographie médicale, déserts médicaux",
+          "significance": "Aucune mesure sur la santé alors que les inégalités territoriales d'accès aux soins sont un enjeu structurant ; le programme mentionne la santé seulement comme dépense financée par les cotisations.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Éducation, formation professionnelle, jeunesse",
+          "significance": "Aucune mesure sur l'école, l'apprentissage, l'enseignement supérieur ou la formation continue, qui conditionnent pourtant la capacité à retrouver un emploi.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Politique familiale et garde d'enfants",
+          "significance": "Le programme mentionne les frais de garde comme frein à l'emploi (exemple Sylvie) mais ne propose aucune mesure pour les réduire ni soutien à l'offre de modes de garde.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Logement et accès à la propriété pour les jeunes et ménages modestes",
+          "significance": "Aucune mesure sur l'offre, la fiscalité immobilière, le foncier ou les jeunes accédants ; le plafonnement des APL via le CSU pourrait au contraire réduire l'accès au logement pour les allocataires.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Paupérisation des ménages modestes incapables d'accéder à un emploi",
+          "mechanism": "Le plafond CSU à 70% du SMIC net par adulte réduit immédiatement le revenu disponible des allocataires (exemple Sarah/Maxime : -410€/mois pour un couple sans emploi avec deux enfants), sans garantie que l'offre de travail locale absorbe ces ménages.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "La baisse des aides est présentée comme une incitation, mais le programme ne crée pas d'emplois nets ; le risque de basculement sous le seuil de pauvreté est documenté par les modèles ChatGPT, DeepSeek, Gemini, Mistral et Qwen.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Réduction de la sécurité de revenu après séparation négociée (rupture conventionnelle)",
+          "mechanism": "Plafonnement et limitation à 6 mois des indemnités sur ruptures conventionnelles, contre une durée moyenne actuelle de 11 mois.",
+          "severity": 0.42,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Effet documenté dans le programme lui-même via un exemple chiffré ; touche un dispositif utilisé par 500 000 salariés/an.",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Échec d'intégration des données du CSU à travers organismes hétérogènes",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "Consolider en temps réel les aides versées par CAF, État, départements, communes, bailleurs sociaux et autres organismes est historiquement difficile en France. Le programme reconnaît implicitement cette difficulté en écartant la fusion pure des aides.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Pertes transitionnelles ou erreurs administratives sur la fusion RSA/prime d'activité/ASS",
+          "probability": 0.45,
+          "severity": 0.55,
+          "reasoning": "Le RIA remplace trois dispositifs aux règles distinctes en laissant les prestations familiales et le logement hors formule, ce qui exige des règles d'interaction précises et un risque opérationnel sur la transition.",
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) remplaçant RSA, prime d'activité et ASS",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": true,
+          "magnitude": "Socle 300€ + insertion 250€/mois ; cumul partiel avec salaire à taux marginal 30% ; sortie à 1 833€/mois ; +400€/mois pour mère isolée en mi-temps (exemple Sylvie)",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Compte social unique avec plafond à 70% du SMIC net par adulte",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": true,
+          "magnitude": "Plafond hors handicap/dépendance/vieillesse ; exemple chiffré -410€/mois pour foyer Sarah/Maxime ; économies estimées 10 Md€/an",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Exonérations seniors avant âge légal et cumul emploi-retraite rénové après",
+          "source_ref": "sources.md#proposition-3",
+          "quantified": true,
+          "magnitude": "~+3 400€/an net salarié, -4 800€/an coût employeur au salaire médian avant âge légal ; pension minorée de 30% du revenu d'activité après âge légal",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "RIA et CSU générant 2-10 Md€ d'économies ; chiffrage dépendant du niveau effectif de fraude et de la capacité à la détecter.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "gemini-1.5-pro",
+            "Le Chat"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "RIA and senior measures depend on participation effects; CSU and unemployment savings are booked in the €30bn envelope."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Le RIA est présenté comme générant 2 Md€ d'économies, le CSU 10 Md€ via la lutte contre la fraude ; ces chiffres dépendent du niveau de fraude effectif."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "limited",
+              "note": "Le RIA est présenté comme générant 2 Md€ d'économies, le CSU 10 Md€ via la lutte contre la fraude ; ces chiffres dépendent du niveau de fraude effectif et de la capacité à la détecter."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Measures primarily reduce state expenditure."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "Aid caps and workforce activation reduce long-term spending pressures."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Savings are projected and earmarked for redistribution."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "CSU = chantier informatique inter-organismes majeur ; fusion RIA et registre national exigent une refonte législative et opérationnelle.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "Le Chat"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Benefit fusion and a cross-body social account require rule alignment across CAF, state, and local aid systems."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Le CSU et l'interopérabilité inter-organismes constituent un chantier administratif lourd ; la fusion RIA touche trois systèmes existants."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "high",
+              "note": "La fusion des trois minima sociaux et la création du CSU sont des projets de transformation numérique et organisationnelle de grande ampleur, avec un risque de délais et de surcoûts."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "high",
+              "note": "CSU requires massive IT integration across highly fragmented local and national administrative layers."
+            },
+            {
+              "model": "Le Chat",
+              "level": "moderate",
+              "note": "Requires coordination between multiple agencies and digital infrastructure for CSU."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "CSU requires cross-agency data sharing and real-time benefit adjustment."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": null,
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Pas de dépendance externe ; nécessite la coopération de CAF, communes, départements et France Travail.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Effects depend on employers offering hours, benefit bodies transmitting data, and recipients changing work decisions."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Coopération de CAF, communes, départements, Pôle emploi et autres organismes nécessaire pour le CSU."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Pas de dépendance externe majeure ; le CSU repose sur une coordination inter-administrations française."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Requires cooperation from municipalities and departments to report local aid."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No external dependencies; relies on domestic administrative capacity."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Primarily domestic administrative reform."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": null,
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Règles révocables par loi de finances ; CSU comme infrastructure plus difficile à démanteler une fois construit.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Benefit formulas and unemployment parameters can be revised, but IT systems and household transitions create inertia."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Le CSU comme infrastructure est plus difficile à démanteler une fois construit."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "moderate",
+              "note": "Une fois le CSU déployé, un gouvernement pourrait modifier le plafond ou les règles, mais l'infrastructure technique serait conservée."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "limited",
+              "note": "Once IT systems (CSU) are built and consolidated, reverting to fragmented systems is unlikely."
+            },
+            {
+              "model": "Le Chat",
+              "level": "limited",
+              "note": "Caps and simplified systems are politically sensitive to reverse."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Benefit structure can be altered by subsequent social security financing laws."
+            }
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "gpt-5.5-thinking": "D",
+          "Le Chat": "B"
+        }
+      },
+      "headline": {
+        "text": "Programme silencieux sur sécurité intérieure, défense, immigration ; volet souveraineté économique limité à la production.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [
+          "gpt-5.5-thinking",
+          "Le Chat"
+        ],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Production and trade-balance concerns are addressed; defense, immigration, policing, energy, and food are absent."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Programme silencieux sur sécurité intérieure, immigration, défense, énergie et souveraineté industrielle."
+          },
+          {
+            "model": "deepseek-chat",
+            "text": "Programme ne traite pas des questions de sécurité intérieure, défense, immigration ou souveraineté énergétique et industrielle."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Programme ne traite pas des questions de sécurité intérieure, de défense ou de frontières."
+          },
+          {
+            "model": "Le Chat",
+            "text": "Renforcement de la compétitivité nationale via baisse du coût du travail et réforme de l'assurance chômage."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Programme ne traite pas des questions de sécurité intérieure, immigration ou défense."
+          }
+        ]
+      },
+      "summary": "Quatre modèles sur six classent cette dimension NOT_ADDRESSED : le programme « Travail Gagnant » ne traite ni la sécurité intérieure, ni la justice, ni la défense, ni l'immigration, ni la souveraineté énergétique, alimentaire ou industrielle au sens propre. Le silence est notable étant donné que Bruno Retailleau est ministre de l'Intérieur en exercice (Claude souligne qu'il peut refléter le périmètre éditorial du document plutôt que l'absence de positions). Deux modèles dissidents l'analysent quand même : Mistral attribue B en lisant les baisses de coût du travail comme une politique de souveraineté économique-compétitivité ; ChatGPT attribue D en relevant les éléments de production et balance commerciale tout en notant l'absence des autres sous-dimensions. La seule mesure à connotation souveraine est l'alignement de l'indemnisation des frontaliers sur des salaires français équivalents (0,5–0,7 Md€/an).",
+      "problems_addressed": [
+        {
+          "problem": "Asymétrie de financement entre travailleurs frontaliers et résidents",
+          "approach": "Calcul de l'allocation chômage des frontaliers sur un salaire de référence français équivalent, plutôt que sur leur salaire effectif à l'étranger.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Mesure technique chiffrée (0,5-0,7 Md€/an) à la marge de la dimension sécurité/souveraineté ; rattachée à l'équité du financement chômage plutôt qu'à un projet souverain.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Faiblesse de la balance commerciale et de la base productive nationale",
+          "approach": "Augmenter le volume horaire travaillé et baisser le coût du travail pour permettre aux entreprises de produire davantage.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#constat",
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "Lecture spécifique à ChatGPT et Mistral qui rattachent le déficit commercial à un déficit de production ; les autres modèles considèrent ce levier comme purement économique et non souverain.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "Le Chat"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Sécurité intérieure, police, justice pénale, ordre public",
+          "significance": "Aucune mesure dans le document, alors qu'il s'agit d'un domaine régalien central et que le candidat est ministre de l'Intérieur en exercice — silence notable, possiblement reflet du périmètre éditorial du document plutôt qu'absence de positions.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Immigration et politique migratoire",
+          "significance": "Aucune proposition sur l'asile, la citoyenneté, le regroupement familial, l'intégration ou le contrôle des frontières.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Défense et capacité militaire",
+          "significance": "Aucune mesure sur la dépense de défense, l'équipement, la dissuasion nucléaire ou les effectifs.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté énergétique et alimentaire",
+          "significance": "Aucune politique sur l'électricité, le nucléaire, les renouvelables, les hydrocarbures, l'agriculture ou la résilience alimentaire.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "Le Chat"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté industrielle ciblée",
+          "significance": "Le programme évoque la « capacité de production » au sens macroéconomique mais ne propose aucune politique industrielle sectorielle ou de chaîne d'approvisionnement.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "Le Chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Les gains de compétitivité ne se traduisent pas en production domestique",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "La baisse du coût du travail incite les heures supplémentaires mais les résultats de production dépendent aussi de la demande, des prix de l'énergie, du capital installé et des chaînes d'approvisionnement non spécifiées dans le source.",
+          "source_refs": [
+            "sources.md#constat",
+            "sources.md#proposition-1"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "Le Chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Alignement de l'indemnisation chômage des frontaliers sur un salaire français équivalent",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": true,
+          "magnitude": "0,5 à 0,7 Md€/an d'économies",
+          "supported_by": [
+            "claude-opus-4-7",
+            "Le Chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Programme silencieux sur la dimension ; mesures résiduelles intégrées au paquet de 30 Md€.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "Sovereignty measures are mainly labor-cost reallocations already counted in the fiscal package."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Programme silencieux sur les dépenses de sécurité et de défense."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "Savings from unemployment insurance reform directly fund program implementation."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed; no budgetary impact."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Aucune nouvelle agence ; mesures résiduelles via paie et Unédic.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "Le Chat"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "The specified production measures use payroll and work-time rules rather than new industrial agencies."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Aucune mesure à mettre en œuvre."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "limited",
+              "note": "Relies on existing administrative structures (Unédic, France Travail)."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Désaccord substantiel : ChatGPT note une forte dépendance externe (demande, énergie, supply chains), les autres y voient un domaine non traité.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Trade and production effects depend on firms, foreign demand, input costs, and supply chains not detailed."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No external dependencies; reforms are domestically managed."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Pas de mesure structurelle à inverser ; alignement frontaliers révocable par règlement Unédic.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "Le Chat"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Payroll exemptions can be reversed legislatively; firm investment responses may outlast rule changes."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "moderate",
+              "note": "Unemployment insurance rules are politically sensitive and could be reversed."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        }
+      },
+      "confidence": 0.78
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "D",
+          "gemini-1.5-pro": "C"
+        }
+      },
+      "headline": {
+        "text": "Pas de réforme institutionnelle ; deux propositions administratives : registre social CSU et rééquilibrage de gouvernance Unédic.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "gemini-1.5-pro"
+        ],
+        "dissenters": [
+          "deepseek-chat",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Institutional content is administrative: social-benefit registry and shared employment-governance rules."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Une seule proposition institutionnelle : rééquilibrer la gouvernance Unédic vers les partenaires sociaux et les régions."
+          },
+          {
+            "model": "deepseek-chat",
+            "text": "Programme ne contient aucune proposition de réforme institutionnelle ou démocratique."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Rééquilibrage de la gouvernance de l'Unédic et centralisation des données sociales."
+          },
+          {
+            "model": "Le Chat",
+            "text": "Programme ne traite pas de réformes institutionnelles ou démocratiques."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Programme ne traite pas des réformes institutionnelles, décentralisation ou relation UE."
+          }
+        ]
+      },
+      "summary": "Désaccord net sur la classification : trois modèles (DeepSeek, Le Chat, Qwen) considèrent que le programme est silencieux et codent NOT_ADDRESSED ; trois autres (ChatGPT, Claude, Gemini) repèrent deux mesures à portée institutionnelle limitée — le Compte Social Unique (CSU) comme registre social inter-organismes et le rééquilibrage de la gouvernance de l'Unédic vers les partenaires sociaux et les régions — et codent C ou D. Aucun modèle ne trouve de réforme constitutionnelle, électorale, de décentralisation, de justice, de financement de la vie politique, de relation UE, ni de garantie de libertés civiles. La perception de coverage tient donc à savoir si les deux mesures administratives suffisent à constituer une « politique institutionnelle ». Claude (D) signale en outre un risque de conflit de compétences entre Unédic, partenaires sociaux et régions ; ChatGPT relève l'absence de garde-fous data-protection autour du CSU.",
+      "problems_addressed": [
+        {
+          "problem": "Manque de visibilité consolidée sur les aides sociales non-contributives",
+          "approach": "Création d'un Compte social unique (CSU) servant de registre national obligatoire partagé entre l'État, la CAF, les communes et les autres organismes versant des prestations.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Le programme décrit explicitement l'absence d'une vue consolidée et propose un registre partagé ; portée institutionnelle réelle mais limitée à la sphère sociale.",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ]
+        },
+        {
+          "problem": "Découplage entre financement de l'assurance chômage (Unédic) et décision publique",
+          "approach": "Associer Unédic, partenaires sociaux et régions à la conception de l'accompagnement par France Travail et au partage des données.",
+          "strength": 0.45,
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "reasoning": "Mesure repérée par trois modèles ; le programme nomme les acteurs mais ne précise ni les droits de vote, ni la hiérarchie juridique, ni les formules de financement.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réforme constitutionnelle et équilibre des pouvoirs (présidence, parlement, référendum, justice constitutionnelle)",
+          "significance": "Aucune proposition sur le fonctionnement de la Ve République ; le programme s'inscrit implicitement dans le cadre actuel.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Mode de scrutin, financement de la vie politique, représentation",
+          "significance": "Le document ne traite ni de la proportionnelle, ni du financement des campagnes, ni de la participation citoyenne.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Décentralisation et organisation territoriale de l'État",
+          "significance": "Aucune doctrine sur les compétences des collectivités hors mention indirecte des régions dans la gouvernance Unédic.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Relation institutionnelle avec l'Union européenne",
+          "significance": "Aucun positionnement sur le pacte de stabilité révisé, le marché unique ou les compétences de l'UE.",
+          "source_refs": [],
+          "supported_by": [
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Garanties data-protection et libertés civiles autour des données sociales consolidées",
+          "significance": "Le CSU mutualise des données entre État, CAF, communes et autres organismes sans préciser durée de conservation, voies de recours ou contrôle indépendant.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Concentration administrative des données de protection sociale",
+          "mechanism": "Le CSU centralise les informations d'aide entre État, CAF, communes et autres organismes sans spécifier les garanties de protection ou de recours.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "reasoning": "Le programme exige un partage obligatoire mais ne décrit pas le cadre de gouvernance des données.",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Conflit de compétences et résistance des partenaires sociaux dans la gouvernance Unédic/France Travail",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "Le programme nomme trois acteurs (Unédic, partenaires sociaux, régions) sans définir leur articulation juridique avec France Travail ni mécanisme de décision contraignant ; les syndicats peuvent rejeter la configuration globale au-delà du seul levier de gouvernance.",
+          "source_refs": [
+            "sources.md#proposition-5"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Interopérabilité et base juridique du registre CSU",
+          "probability": 0.52,
+          "severity": 0.58,
+          "reasoning": "Un registre obligatoire national exige une standardisation des données entre payeurs multiples sous régimes juridiques différents.",
+          "source_refs": [
+            "sources.md#proposition-4"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte Social Unique (CSU) — registre national obligatoire des aides non-contributives",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": false,
+          "magnitude": "Un compte par adulte couvrant les aides versées par l'État, la CAF, les communes et autres organismes ; plafond cumulé à 70% du SMIC net",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Rééquilibrage de la gouvernance Unédic / France Travail vers partenaires sociaux et régions",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": false,
+          "magnitude": "Association à la conception de l'accompagnement et au partage des données ; pas de droits de vote ni de hiérarchie juridique précisés",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Le coût IT et juridique du CSU n'est pas chiffré ; les autres mesures n'engagent pas de dépense distincte.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "Administrative reforms tied to CSU/fraud savings; no separate IT cost given."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Mesure de gouvernance unique, sans engagement budgétaire propre."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Programme silencieux."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "Governance changes have negligible direct costs."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No new spending or revenue implications."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Désaccord substantiel : ChatGPT note la complexité d'un registre social national, les autres y voient soit une mesure non traitée, soit une procédure standard.",
+          "supported_by": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "A compulsory national aid register requires data standardization across multiple benefit payers."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Coordination Unédic / partenaires sociaux / régions sans architecture juridique précisée."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Aucune mesure."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "limited",
+              "note": "Shifting administrative mandates is standard legislative procedure."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No new measures require implementation."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Pour les modèles qui voient des mesures, dépendance modérée à la coopération de plusieurs payeurs et acteurs sociaux.",
+          "supported_by": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Requires cooperation from CAF, municipalities, Unédic, regions, social partners, and France Travail."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Suppose un accord entre Unédic, partenaires sociaux et régions."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Relies on social partners accepting the new framework."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "N/A"
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Règles juridiques modifiables ; l'infrastructure de registre crée une inertie opérationnelle pour le sous-cas CSU.",
+          "supported_by": [
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-1.5-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "Legal rules can be reversed, but registry infrastructure and inter-body data flows create operational inertia."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Modifiable par révision conventionnelle des accords sociaux."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "moderate",
+              "note": "Governance structures can be altered by subsequent governments."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        }
+      },
+      "confidence": 0.62
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "Le Chat": "F"
+        }
+      },
+      "headline": {
+        "text": "Programme silencieux sur climat, biodiversité, eau, énergie et agriculture ; objectif productif sans cadre carbone.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [
+          "Le Chat"
+        ],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Programme does not specify climate, biodiversity, water, energy-transition, or adaptation measures."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Programme silencieux sur climat, biodiversité, agriculture et infrastructures de transition."
+          },
+          {
+            "model": "deepseek-chat",
+            "text": "Programme ne mentionne ni le climat, ni la biodiversité, ni la transition énergétique."
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "text": "Programme ne traite pas de la transition écologique, du climat ou de l'énergie."
+          },
+          {
+            "model": "Le Chat",
+            "text": "Absence totale de mesures explicites pour la transition écologique ou la biodiversité."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Programme ne traite pas du climat, biodiversité, agriculture ou infrastructures durables."
+          }
+        ]
+      },
+      "summary": "Consensus fort : aucun modèle ne trouve de politique environnementale dans le programme « Travail Gagnant ». Aucune mention du climat, de la biodiversité, de l'eau, des énergies renouvelables, du nucléaire, de la rénovation énergétique, des transports propres, ni de l'agriculture ou de la transition agroécologique. Cinq modèles classent cette dimension NOT_ADDRESSED ; Le Chat la note F en soulignant que ce silence vaut position au regard des engagements de la France (objectif -55% d'émissions en 2030, Accord de Paris). Trois modèles (Claude, DeepSeek, Le Chat) signalent en outre que l'objectif explicite de +2% de PIB via davantage d'heures travaillées, posé sans cadre de compatibilité carbone, induit un report implicite des coûts d'ajustement climatique vers les cohortes futures.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire climatique et décarbonation (Accord de Paris, Fit for 55, -55% en 2030)",
+          "significance": "Aucune mesure sectorielle sur les émissions, l'énergie, les transports, la rénovation, ni de tarification carbone. Engagement européen contraignant non instrumenté.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Biodiversité, sols, eau et ressources naturelles",
+          "significance": "Aucune politique de protection ou de gestion ; absente du document malgré les pressions documentées sur les écosystèmes français.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation aux risques climatiques (canicules, inondations, sécheresses, littoral)",
+          "significance": "Aucune politique d'investissement de résilience ni mécanisme assurantiel d'adaptation.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Transition agricole et alimentaire",
+          "significance": "Aucune mesure sur revenus agricoles, intrants, soutien à la transition agroécologique ou résilience alimentaire.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Infrastructures de transition (réseau électrique, ferroviaire, rénovation énergétique du bâti)",
+          "significance": "Aucun plan d'investissement vert ; aucune trajectoire d'infrastructure compatible avec la décarbonation.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibilité de la stratégie productive avec les engagements climatiques",
+          "mechanism": "L'objectif de +2% de PIB via davantage d'heures travaillées dans une économie dont la composition sectorielle reste inchangée induit une hausse mécanique d'émissions, à moins que la croissance soit concentrée sur des secteurs faiblement carbonés — ce que le programme n'examine pas.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-1"
+          ],
+          "reasoning": "Trois modèles (Claude, DeepSeek, Le Chat) identifient cette aggravation implicite ; sévérité notée 0,4 par Claude/DeepSeek et 0,9 par Le Chat. Le Chat est plus sévère car il évalue le programme comme F dans cette dimension, les deux autres comme NOT_ADDRESSED tout en signalant l'effet indirect.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "Le Chat"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "gemini-1.5-pro",
+            "qwen3.6"
+          ]
+        }
+      ],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "Aucun engagement budgétaire environnemental dans le programme.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "low",
+              "note": "No environmental spending, tax, or investment commitment is specified."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Aucun engagement budgétaire environnemental mentionné."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No new spending or revenue implications."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "Aucune mesure environnementale à mettre en œuvre.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "low",
+              "note": "No implementation mechanism exists in the source for this cluster."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Pas de mesure."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "No measures require implementation."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "Sans objet en l'absence de politique environnementale.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "low",
+              "note": "No external ecological dependency identified because the cluster is not addressed."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "N/A"
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "low"
+          ],
+          "note": "Aucune mesure environnementale à inverser.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-chat",
+            "gemini-1.5-pro",
+            "Le Chat",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "low",
+              "note": "No environmental measure is specified to reverse."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Programme ne traite pas substantiellement de cette dimension."
+            },
+            {
+              "model": "deepseek-chat",
+              "level": "low",
+              "note": "Sans objet."
+            },
+            {
+              "model": "gemini-1.5-pro",
+              "level": "low",
+              "note": "No measures proposed."
+            },
+            {
+              "model": "Le Chat",
+              "level": "low",
+              "note": "N/A"
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "No measures proposed."
+            }
+          ]
+        }
+      },
+      "confidence": 0.85
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "ordre de grandeur +250 à +500 €/an pour un actif au salaire médian via heures sup ; +250 à +733 €/mois pour un senior actif via cumul rénové ; -410 €/mois pour un foyer-type bénéficiaire de prestations cumulées au plafond CSU ; trajectoire de dette quasi-inchangée (économies restituées plutôt qu'allouées au désendettement)",
+      "units": "€/personne/an pour les actifs ; €/foyer/mois pour les bénéficiaires plafonnés ; aucune désagrégation par cohorte au-delà",
+      "confidence": 0.55,
+      "caveats": "Désaccord substantiel entre modèles : 4 voient un effet mixte par statut sur le marché du travail plus que par âge, DeepSeek voit un transfert net young_to_old via la coupe des aides aux actifs précaires, Le Chat voit un transfert old_to_young via gain en pouvoir d'achat des actifs jeunes. Aucun modèle ne propose de chiffrage fiable pour les horizons 2031-2037 et 2038-2047, ni de bilan cohorte-par-cohorte au-delà des exemples 25 ans / 65 ans."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Gain potentiel direct via heures supplémentaires exonérées au-delà du seuil de 1 623h ; conditionné à l'acceptation effective d'heures supplémentaires par l'employeur. Aucune réduction d'impôt directe sur le revenu pour les jeunes actifs.",
+        "quantified": "+230 à +500 €/an au seuil ; jusqu'à +2 800 €/an au-delà ; -410 €/mois si bénéficiaire de prestations cumulées au-dessus du plafond CSU"
+      },
+      "housing": {
+        "summary": "Aucune politique du logement ; les APL sont incluses dans le périmètre du plafond CSU, ce qui peut réduire l'aide au logement de jeunes ménages locataires sociaux à fortes prestations cumulées.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Le programme ne traite pas de la trajectoire de retraite des actifs jeunes ; les exonérations de cotisations retraite sur heures sup et seniors réduisent marginalement les recettes du régime sans contrepartie explicite sur les droits futurs.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "Hausse du volume d'heures offertes par les entreprises (coût marginal -35% au-delà du seuil) et suppression du plancher de 24 h/semaine en temps partiel, facilitant l'entrée et le multi-employeur. Règles d'assurance chômage durcies augmentent la pression sur les jeunes entrants en emploi précaire.",
+        "quantified": "Coût horaire entreprise -35% au-delà du seuil ; gain salarial net jusqu'à environ 2 800 €/an au-dessus du seuil"
+      },
+      "environmental_debt": {
+        "summary": "Programme silencieux sur la trajectoire climatique ; objectif productif de +2% PIB sans cadre carbone reporte implicitement les coûts d'ajustement climatique vers les cohortes plus jeunes.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un actif de 25 ans en 2027 au salaire médian, le programme est positif s'il est employé et capable d'obtenir des heures supplémentaires, négatif s'il dépend d'un panier de prestations sociales au-dessus du plafond CSU, et silencieux sur logement, éducation, climat et trajectoire de retraite à 40 ans. La dispersion d'effets selon le statut sur le marché du travail explique le caractère mixte du transfert."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Aucune nouvelle contribution fiscale ou sociale pour les retraités. Pension de droit commun préservée. Possibilité de cumuler revenus d'activité sous une formule rénovée (pension minorée de 30% du revenu d'activité).",
+        "quantified": "+0 €/an pour retraité inactif ; jusqu'à environ +733 €/mois pour un retraité à mi-temps dans l'exemple du programme"
+      },
+      "pension": {
+        "summary": "Pas de réforme paramétrique du régime ; cumul emploi-retraite rénové et exonération de cotisations sociales (hors CSG/CRDS) pour seniors ayant atteint la durée requise constituent les seules mesures pension.",
+        "quantified": "Pension minorée de 30% du revenu d'activité ; +280 à +300 €/mois en cas d'activité partielle selon les modèles"
+      },
+      "healthcare": {
+        "summary": "Aucune mesure ; l'accès aux soins n'est pas modifié par le programme. Les exonérations de cotisations retirent marginalement des recettes à l'Assurance maladie sans compensation explicite.",
+        "quantified": null
+      },
+      "narrative_summary": "Effet net positif pour les seniors souhaitant prolonger leur activité ; neutre pour les retraités inactifs (la pension de droit commun n'est pas modifiée). Aucune austérité programmée pour cette cohorte ; aucune contribution intergénérationnelle additionnelle non plus."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Pas de réforme paramétrique ; effets passent par cumul emploi-retraite rénové et exonération seniors. Effet positif probable à moyen terme ; aucun cadrage long terme.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Tie 3-3 entre 0 (mise en place sans effet net immédiat) et 1 (incitation activée dès 2027).",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "Le Chat"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Near-term senior workers can gain from exemptions and revised cumul emploi-retraite."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Mise en place du cumul rénové et de l'exonération seniors anticipée ; effet net dépend de l'élasticité comportementale."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Aucun changement immédiat des règles de pension."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Immediate increase in senior workforce participation."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "No change to pension rules or replacement rates."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Immediate uptake of cumulative scheme reduces near-term pension outflows."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Effet positif si l'incitation produit une hausse durable de l'activité des seniors ; recettes marginalement préservées.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "Le Chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Effect persists if additional seniors keep working; no replacement-rate formula is specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Si +10% de seniors prolongent, recettes de cotisations marginalement préservées et pensions cumulées augmentées."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 1,
+                "note": "Si 10% de seniors supplémentaires prolongent leur activité, l'impact devient légèrement positif pour les comptes sociaux."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Sustained integration of seniors in workforce."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "No change to pension rules or replacement rates."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Sustained senior employment extends contribution base."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Programme ne traite pas de la soutenabilité long terme ; effet incertain au-delà des incitations.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-chat",
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify pension rules for cohorts retiring in this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne traite pas de la trajectoire de financement des retraites au-delà de l'horizon des incitations."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 1,
+                "note": "L'effet cumulatif sur l'équilibre du régime est modeste mais positif, toutes choses égales par ailleurs."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Cultural shift toward longer working lives."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "No change to pension rules or replacement rates."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Long-term demographic pressure returns without structural reform."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "Le Chat"
+        ]
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Économies générées (28,5-31,7 Md€) restituées aux actifs/entreprises ; pas de cible explicite de désendettement. Le Chat seul anticipe une stabilisation forte du ratio dette/PIB.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -2,
+              1
+            ],
+            "note": "Restitution intégrale des économies aux actifs et entreprises ; trajectoire de déficit non explicitement réduite par le programme lui-même.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro",
+              "Le Chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Gross gains are restituted, so near-term direct borrowing reduction is not specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Restitution intégrale des économies aux actifs et entreprises ; trajectoire de déficit non explicitement réduite."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Pas de réduction du déficit structurel ; le ratio dette/PIB pourrait s'améliorer marginalement si la croissance atteint 2% comme visé."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Immediate deficit reduction via unemployment/welfare cuts."
+              },
+              {
+                "model": "Le Chat",
+                "score": -2,
+                "note": "Debt-to-GDP ratio stabilizes due to €30 billion redistribution and spending reforms."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Savings offset by redistribution; debt trajectory unchanged."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Effet sur la dette dépend de l'effet d'entraînement supposé de la compétitivité (+2% PIB allégué) sur les recettes — non quantifié sur cet horizon.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "Le Chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "If the claimed activity gain persists, debt/GDP could improve through the denominator."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Effet sur la dette dépend de l'effet d'entraînement de la compétitivité (+2% PIB allégué) sur les recettes — non quantifié."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Même effet incertain ; sans consolidation budgétaire explicite, la dette reste sur sa trajectoire tendancielle."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Structural adjustment to social spending trajectory."
+              },
+              {
+                "model": "Le Chat",
+                "score": -1,
+                "note": "Continued debt stabilization as growth resumes."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No structural deficit reduction mechanism specified."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Programme ne précise pas de cible de dette à long terme ni de mécanisme de réduction.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gemini-1.5-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No long-run debt rule, deficit target, or interest-rate path is specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne précise pas de trajectoire de dette à long terme."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Programme ne spécifie pas de cible de dette ni de mécanisme de réduction."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 1,
+                "note": "Long-term stabilization assuming sustained employment."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Long-term debt trajectory depends on growth sustainability."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Long-term debt dynamics depend on unmodeled growth and rate paths."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "gemini-1.5-pro",
+          "Le Chat"
+        ]
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Programme silencieux sur le climat ; objectif productif sans cadre carbone reporte implicitement les coûts d'ajustement vers les cohortes plus jeunes.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Hausse d'heures travaillées et de production sans cadre de compatibilité climatique pour les modèles qui chiffrent l'effet.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "deepseek-chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify climate measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Hausse d'heures travaillées et de production sans cadre de compatibilité climatique."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "Aucune mesure climatique ; la hausse de la production non conditionnée à des critères environnementaux augmente légèrement les émissions."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address climate transition."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on climate over this horizon."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Absence de politique de transition prolonge l'inertie carbone selon les modèles dissidents.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "deepseek-chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify climate measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Absence de politique de transition prolonge l'inertie carbone."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "Même absence d'action ; le retard d'investissement dans la transition accroît les coûts futurs."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address climate transition."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on climate over this horizon."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -3,
+              0
+            ],
+            "note": "Désaccord notable : Mistral note -3 (dette environnementale longue), Claude/DeepSeek -1 (report d'ajustement), trois autres 0 (silence du programme).",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "gemini-1.5-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "Le Chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify climate measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Coûts d'ajustement reportés sur cohortes plus jeunes ; absence de stratégie d'atténuation."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "L'absence de politique climatique sur 20 ans amplifie le décalage avec les objectifs nationaux et européens."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": -3,
+                "note": "Deferred transition costs accumulate, worsening long-term climate debt."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on climate over this horizon."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "Le Chat"
+        ]
+      },
+      {
+        "row": "health",
+        "dimension_note": "Programme silencieux sur la santé ; aucun modèle n'attribue d'impact non nul. Les exonérations réduisent marginalement les recettes Assurance maladie sans compensation.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucune mesure de santé ou d'assurance maladie ; impact neutre par silence du programme.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify healthcare delivery or funding changes."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure de santé sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Aucune mesure sur la santé ou l'assurance maladie."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address healthcare system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify healthcare effects over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure de santé sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Program does not specify health measures."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address healthcare system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify age-related health financing over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure de santé sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Program does not specify health measures."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address healthcare system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Programme silencieux sur l'éducation hors mention de la formation comme condition du RIA Insertion (15h hebdo) ; aucun impact non nul attribué.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucune politique éducative proposée.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify education measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Aucune mesure éducative proposée."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address education system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on education over this horizon."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify education measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Program does not specify education measures."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address education system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on education over this horizon."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify education measures over this horizon."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": 0,
+                "note": "Program does not specify education measures."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address education system."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on education over this horizon."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Programme silencieux sur l'offre et l'accès au logement ; les APL incluses dans le périmètre du plafond CSU peuvent réduire l'aide pour les bénéficiaires plafonnés à court terme.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Tie 3-3 entre 0 (aucune politique du logement) et -1 (foyers locataires sociaux à fortes prestations cumulées plafonnés via CSU).",
+            "supported_by": [
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Some households may see lower covered aid when housing aid enters the CSU cap."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Plafond CSU peut réduire le revenu disponible logement de certains foyers locataires sociaux à fortes prestations cumulées."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "Le plafonnement des aides inclut les APL ; les allocataires pourraient voir leur capacité à se loger réduite sans alternative proposée."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address housing policy."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on housing over this horizon."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "DeepSeek seul prolonge l'effet négatif structurel ; les autres modèles voient un silence sans impact.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify housing supply, rents, credit, or construction measures."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "Pas de construction de logements sociaux ni de soutien à l'accession ; la pression sur le logement des ménages modestes persiste."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address housing policy."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on housing over this horizon."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "DeepSeek seul anticipe une aggravation structurelle pour les jeunes générations ; les autres voient un silence sans impact.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "gemini-1.5-pro",
+              "Le Chat",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-chat"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Program does not specify long-run housing affordability measures."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon."
+              },
+              {
+                "model": "deepseek-chat",
+                "score": -1,
+                "note": "L'absence de politique du logement aggrave structurellement la crise pour les jeunes générations."
+              },
+              {
+                "model": "gemini-1.5-pro",
+                "score": 0,
+                "note": "Program does not specify measures."
+              },
+              {
+                "model": "Le Chat",
+                "score": 0,
+                "note": "Program does not address housing policy."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Program does not specify measures on housing over this horizon."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat"
+        ]
+      }
+    ],
+    "reasoning": "Le programme est conçu autour d'un transfert intra-générationnel (statut sur le marché du travail : assistés vers actifs) plus que d'un transfert inter-générationnel classique. Quatre modèles sur six retiennent donc une direction « mixed ». Pour les jeunes actifs employés, gain net direct via heures sup et incitations à la reprise d'activité ; pour les jeunes inactifs ou au-dessus du plafond CSU, perte directe quantifiée. Pour les seniors actifs, gain net via cumul rénové ; pour les retraités inactifs, neutralité. La principale dimension où les modèles s'accordent sur un transfert temporel défavorable aux cohortes futures est environnementale, par silence et objectif productif sans cadre carbone (Claude, DeepSeek, Le Chat). DeepSeek dissident en codant young_to_old (réduction nette des aides aux actifs précaires) ; Le Chat dissident en codant old_to_young (gain en pouvoir d'achat des actifs). La trajectoire de dette publique est quasi-inchangée puisque les économies sont restituées plutôt qu'allouées au désendettement.",
+    "source_refs": [
+      "sources.md#proposition-1",
+      "sources.md#proposition-2",
+      "sources.md#proposition-3",
+      "sources.md#proposition-4",
+      "sources.md#proposition-5",
+      "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+    ],
+    "confidence": 0.6,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        {
+          "model": "deepseek-chat",
+          "view": "Direction young_to_old : la coupe nette des aides (RSA, APL plafonnées via CSU, ASS, durcissement chômage ~15 Md€/an) frappe principalement les actifs précaires plus jeunes, alors que les pensions des retraités actuels sont préservées et que les seniors actifs reçoivent des exonérations nouvelles."
+        },
+        {
+          "model": "Le Chat",
+          "view": "Direction old_to_young : ~+1 500 €/personne/an de pouvoir d'achat pour les actifs sous 35 ans grâce à la baisse du coût du travail, tandis que les retraités gardent leurs droits ; effet net interprété comme un transfert vers les jeunes."
+        }
+      ]
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Sans réforme, la dette publique poursuit sa croissance vers 116-120% du PIB (déficit ~175 Md€), le volume horaire annuel français reste sous la moyenne européenne (~1 664h vs ~1 784h), le taux d'emploi des seniors stagne autour de 36% pour les 60-64 ans, les dépenses sociales non-contributives continuent leur hausse tendancielle (+30,8% entre 2012 et 2022), la balance commerciale reste dégradée et le pouvoir d'achat stagne. La trajectoire environnementale, institutionnelle et de souveraineté reste inchangée selon le périmètre du document.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic"
+    ],
+    "dimensions_unchanged": [
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "reasoning": "Six modèles sur six concluent que le programme infléchit substantiellement la trajectoire dans les dimensions économique-fiscale et sociale-démographique : modification du coût marginal du travail (-35% au-delà du seuil), durcissement et redéploiement des minima sociaux (CSU plafonné à 70% du SMIC net, RIA, réforme assurance chômage), incitations à la prolongation d'activité des seniors. Quatre modèles sur six (ChatGPT, Claude, DeepSeek, Qwen) qualifient le résultat de mixte : amélioration plausible sur emploi et compétitivité, dégradation pour certains foyers à fortes prestations cumulées, neutralité-par-silence sur les dimensions non traitées avec implication d'un report d'ajustement (notamment climatique). Deux modèles (Gemini, Le Chat) qualifient le changement de net positif (improvement) en mettant l'accent sur la consolidation budgétaire et la compétitivité ; Le Chat ajoute la souveraineté économique aux dimensions modifiées. Aucun modèle ne classe les dimensions souveraineté, institutionnelle et environnementale comme matériellement modifiées (sauf Le Chat sur la souveraineté).",
+    "confidence": 0.72,
+    "supported_by": [
+      "gpt-5.5-thinking",
+      "claude-opus-4-7",
+      "deepseek-chat",
+      "qwen3.6"
+    ],
+    "dissenters": [
+      "gemini-1.5-pro",
+      "Le Chat"
+    ]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Trajectoire de désendettement public et soutenabilité budgétaire",
+      "why_unsolved": "Le programme constate la dette à ~116% du PIB et un déficit de ~175 Md€ mais oriente intégralement les économies générées (28,5-31,7 Md€/an) vers la restitution aux actifs et entreprises, sans cible chiffrée de réduction du déficit ni mécanisme de désendettement. La trajectoire de dette dépend exclusivement de l'effet d'entraînement supposé de la compétitivité (+2% PIB allégué).",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro",
+        "Le Chat"
+      ]
+    },
+    {
+      "problem": "Trajectoire climatique et compatibilité avec les engagements de la France (Accord de Paris, Fit for 55)",
+      "why_unsolved": "Aucune mesure climatique, énergétique, de biodiversité ou d'adaptation. L'objectif explicite de +2% de PIB via davantage d'heures travaillées est posé sans cadre de compatibilité carbone, induisant un report implicite des coûts d'ajustement vers les cohortes futures.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "gemini-1.5-pro",
+        "Le Chat",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Accès aux soins et déserts médicaux",
+      "why_unsolved": "Aucune politique de santé, ni sur le financement, ni sur la démographie médicale, ni sur l'accès territorial. Les exonérations de cotisations retirent marginalement des recettes à l'Assurance maladie sans compensation explicite.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "gemini-1.5-pro",
+        "Le Chat"
+      ],
+      "dissenters": [
+        "qwen3.6"
+      ]
+    },
+    {
+      "problem": "Crise du logement et accès des jeunes ménages à un logement abordable",
+      "why_unsolved": "Le programme n'aborde ni l'offre, ni les loyers, ni le crédit, ni la construction. Les APL sont incluses dans le périmètre du plafond CSU, ce qui peut réduire l'aide pour les bénéficiaires plafonnés sans création d'offre alternative.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#proposition-4"
+      ],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "qwen3.6"
+      ],
+      "dissenters": [
+        "gemini-1.5-pro",
+        "Le Chat"
+      ]
+    },
+    {
+      "problem": "Soutenabilité long terme du système de retraite",
+      "why_unsolved": "Le programme propose des incitations marginales à la prolongation d'activité (cumul rénové, exonérations seniors) mais ne traite pas de l'équilibre démographique du régime, de l'âge légal, ni des taux de remplacement futurs.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7",
+        "Le Chat"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Éducation, formation initiale et continue, qualité du capital humain",
+      "why_unsolved": "Le programme se concentre sur les incitations au travail mais n'aborde ni les performances scolaires, ni l'enseignement supérieur, ni la qualité de la formation professionnelle. La formation est mentionnée uniquement comme contrepartie du RIA Insertion (15h hebdomadaires).",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Financement structurel de la protection sociale hors chômage (santé, famille, retraite)",
+      "why_unsolved": "La baisse massive des cotisations sociales sur heures supplémentaires et seniors n'est pas compensée par des ressources alternatives pour les branches famille, santé et vieillesse.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+      ],
+      "supported_by": [
+        "deepseek-chat"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Réforme institutionnelle et capacité de l'État au-delà de la sphère sociale",
+      "why_unsolved": "Une seule mesure de gouvernance (Unédic / France Travail) ; aucune doctrine institutionnelle plus large sur l'équilibre des pouvoirs, le mode de scrutin, la décentralisation, la justice ou la relation à l'UE.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Élasticité comportementale des heures supplémentaires nettement plus faible qu'anticipé : les économies déclarées (28,5-31,7 Md€/an) ne se matérialisent pas et la mesure devient un effet d'aubaine fiscal sans hausse réelle de production.",
+      "trigger": "Moins de 50% des salariés ciblés effectuent les 16 heures supplémentaires annuelles supposées par le chiffrage ; ou demande intérieure et extérieure insuffisante pour que les entreprises proposent ces heures.",
+      "probability": 0.45,
+      "severity": 0.65,
+      "reasoning": "Le précédent de la loi TEPA 2007 (heures supplémentaires défiscalisées) a montré une élasticité comportementale modeste avec un coût budgétaire net pour les régimes sociaux. Si l'auto-financement annoncé ne se réalise pas, le manque à gagner pèse directement sur l'Unédic, l'Assurance maladie et le régime de retraite.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Choc de pouvoir d'achat sur les foyers bénéficiaires de prestations cumulées au-dessus du plafond CSU avant que les emplois créés n'absorbent l'effet : hausse de la pauvreté monétaire, contraction de la consommation locale.",
+      "trigger": "Application du plafond CSU à 70% du SMIC net avant que le RIA et la suppression du plancher de 24h hebdo aient produit leurs effets sur l'emploi ; pour environ 1,3 M de foyers.",
+      "probability": 0.55,
+      "severity": 0.6,
+      "reasoning": "L'exemple chiffré du programme lui-même (Sarah/Maxime, -410 €/mois) illustre l'ampleur potentielle du choc pour les foyers ciblés. Les conséquences sociales, sanitaires et de demande locale peuvent partiellement compenser les gains de compétitivité escomptés.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "gemini-1.5-pro",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Blocage politique, parlementaire ou contentieux des réformes : absence de majorité, opposition syndicale forte, ou invalidation constitutionnelle (notamment du seuil « zéro cotisation »).",
+      "trigger": "Absence de majorité absolue après les législatives 2027 ; ou recours devant le Conseil constitutionnel ; ou reproduction du blocage de juin 2024 sur le durcissement de l'assurance chômage.",
+      "probability": 0.45,
+      "severity": 0.55,
+      "reasoning": "Les règles de juin 2024 « jamais appliquées » illustrent une difficulté politique persistante. Le plafonnement des ruptures conventionnelles touche un dispositif consensuel utilisé par environ 500 000 salariés/an. Le seuil-effet du « zéro cotisation » présente un risque de censure.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "Le Chat"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Substitution d'heures supplémentaires aux embauches : les entreprises utilisent le coût marginal réduit (-35%) pour faire travailler plus les salariés en place plutôt que pour embaucher.",
+      "trigger": "Demande agrégée croît assez pour ajouter des heures mais pas assez pour justifier des recrutements permanents ; ou rigidités de licenciement perçues comme dissuasives.",
+      "probability": 0.4,
+      "severity": 0.5,
+      "reasoning": "Une réduction de 35% du coût marginal des heures supplémentaires modifie le prix relatif overtime/embauche en faveur des heures, ce qui réduit l'effet d'emploi attendu et concentre le gain sur les salariés déjà en poste.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Coûts environnementaux et d'infrastructure s'accumulent hors horizon du programme : la production additionnelle accroît les émissions et la pression sur les ressources sans investissement compensatoire en transition.",
+      "trigger": "+2% de PIB supplémentaire matérialisé sur 2027-2030 sans mesure de transition énergétique, biodiversité, eau ou adaptation parallèle.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "Le programme met l'accent sur la croissance de la production sans spécifier de mesures environnementales ; trois modèles (Claude, DeepSeek, Le Chat) chiffrent un transfert temporel défavorable aux cohortes futures sur l'horizon 2038-2047.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-chat",
+        "Le Chat"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Conflit avec le cadre budgétaire européen : le pacte de stabilité révisé n'est pas respecté car les économies générées sont restituées plutôt qu'allouées au désendettement.",
+      "trigger": "Maintien du déficit au-dessus de 4-5% du PIB après mise en œuvre, malgré l'effet d'entraînement annoncé.",
+      "probability": 0.4,
+      "severity": 0.5,
+      "reasoning": "Les économies étant intégralement restituées plutôt qu'allouées au désendettement, la trajectoire de déficit dépend exclusivement d'un effet d'entraînement indirect et incertain.",
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "program_is_supply_side_labor_cost_centric",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "savings_envelope_28_5_to_31_7_bn_per_year_restituted",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "no_explicit_debt_reduction_target",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "csu_cap_at_70pct_smic_reduces_aid_for_capped_households",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "renewed_cumul_emploi_retraite_benefits_active_seniors",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "removal_of_24h_weekly_floor_for_part_time_work",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "Le Chat"
+        ]
+      },
+      {
+        "claim_id": "program_silent_on_climate_biodiversity_water_agriculture",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "program_silent_on_internal_security_defense_immigration",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "no_constitutional_or_electoral_reform",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "program_changes_economic_and_social_trajectory",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "gemini-1.5-pro",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "overtime_zero_contribution_above_1623h_threshold",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-chat",
+          "Le Chat",
+          "qwen3.6"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "intergenerational_net_transfer_direction",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "mixed — effets dépendent surtout du statut sur le marché du travail, peu du clivage générationnel"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "mixed — gains pour actifs jeunes employés et seniors actifs ; pertes pour bénéficiaires plafonnés ; transfert temporel défavorable aux jeunes via climat"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "young_to_old — coupe nette des aides sociales aux actifs précaires (~15 Md€/an) tandis que pensions des retraités préservées et exonérations seniors créées"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "mixed — net positif pour jeunes employés et seniors prêts à prolonger ; net négatif pour jeunes en chômage précoce ou dépendants des minima sociaux"
+          },
+          {
+            "model": "Le Chat",
+            "position": "old_to_young — gain de pouvoir d'achat ~+1 500 €/personne/an pour les actifs sous 35 ans, retraités neutres"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "mixed — positif pour actifs jeunes via heures sup ; neutre à négatif pour jeunes inactifs ; positif pour seniors prolongeant"
+          }
+        ]
+      },
+      {
+        "claim_id": "environmental_long_term_grade",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "NOT_ADDRESSED — programme ne spécifie pas de mesures climat, biodiversité, eau, énergie ou adaptation"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "NOT_ADDRESSED — silence + objectif productif sans cadre carbone"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "NOT_ADDRESSED — aucun axe environnemental dans le document"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "NOT_ADDRESSED — aucune référence climat / énergie / biodiversité"
+          },
+          {
+            "model": "Le Chat",
+            "position": "F — l'absence vaut position au regard des engagements de la France (-55% en 2030, Accord de Paris)"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "NOT_ADDRESSED — exclusivement productiviste, aucun engagement vert"
+          }
+        ]
+      },
+      {
+        "claim_id": "security_sovereignty_grade",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "D — la production et la balance commerciale sont traitées ; défense, immigration, police, énergie et alimentation sont absents"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "NOT_ADDRESSED — silence sur sécurité intérieure, immigration, défense, énergie, souveraineté industrielle"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "NOT_ADDRESSED — aucune mesure régalienne ou de souveraineté"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "NOT_ADDRESSED — aucune mesure sécurité, défense, frontières"
+          },
+          {
+            "model": "Le Chat",
+            "position": "B — la baisse du coût du travail et la réforme chômage constituent une politique de souveraineté économique"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "NOT_ADDRESSED — silence régalien complet"
+          }
+        ]
+      },
+      {
+        "claim_id": "institutional_democratic_grade",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "C — le CSU constitue un registre social inter-organismes et la gouvernance Unédic-France Travail est rééquilibrée"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "D — une seule mesure institutionnelle (gouvernance Unédic) ; pas de doctrine plus large"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "NOT_ADDRESSED — aucune réforme institutionnelle ou démocratique"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "C — rééquilibrage gouvernance Unédic et centralisation des données sociales"
+          },
+          {
+            "model": "Le Chat",
+            "position": "NOT_ADDRESSED — pas de réforme institutionnelle ou démocratique"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "NOT_ADDRESSED — silence institutionnel hors gouvernance Unédic"
+          }
+        ]
+      },
+      {
+        "claim_id": "counterfactual_direction_of_change",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "mixed — change la trajectoire travail/social, ne change pas santé/éducation/logement/climat"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "mixed — amélioration sur emploi/compétitivité, dégradation sur foyers à fortes prestations cumulées, neutralité-par-silence ailleurs"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "mixed — gains de compétitivité, réduction des filets de sécurité pour les plus vulnérables"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "improvement — réallocation massive du PIB de la protection sociale vers salaires directs et marges"
+          },
+          {
+            "model": "Le Chat",
+            "position": "improvement — infléchit la dette via consolidation, améliore cohésion sociale en réduisant la dépendance"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "mixed — modifie incitations marché du travail et distribution des aides ; silences ailleurs"
+          }
+        ]
+      },
+      {
+        "claim_id": "ecological_axis_score",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "-1 — productiviste sans politique écologique"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "-1 — productiviste explicite sans cadre carbone"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "-2 — productiviste avec aggravation implicite via heures sup non conditionnées"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "0 — silence éco interprété comme position neutre"
+          },
+          {
+            "model": "Le Chat",
+            "position": "-1 — productiviste différant la transition"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "-3 — exclusivement productiviste, aucun engagement vert, position fortement anti-écologique"
+          }
+        ]
+      },
+      {
+        "claim_id": "overall_spectrum_label",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "droite — supply-side, baisse coût du travail, durcissement chômage, registre social"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "droite — orthodoxie LR classique : compétitivité, ordre social, cumul emploi-retraite"
+          },
+          {
+            "model": "deepseek-chat",
+            "position": "droite — programme libéral conservateur centré sur travail/responsabilité individuelle"
+          },
+          {
+            "model": "gemini-1.5-pro",
+            "position": "droite — durcissement social et baisse des charges"
+          },
+          {
+            "model": "Le Chat",
+            "position": "centre_droit — réformes pragmatiques sans rupture institutionnelle ou identitaire"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "droite — orientation supply-side et durcissement social"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "gpt-5.5-thinking": "complete",
+      "claude-opus-4-7": "complete",
+      "deepseek-chat": "complete",
+      "gemini-1.5-pro": "complete",
+      "Le Chat": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          3,
+          4
+        ],
+        "modal": 3,
+        "dissent_count": 1
+      },
+      "social_cultural": {
+        "interval": [
+          1,
+          2
+        ],
+        "modal": 2,
+        "dissent_count": 1
+      },
+      "sovereignty": {
+        "interval": [
+          0,
+          2
+        ],
+        "modal": 1,
+        "dissent_count": 3
+      },
+      "institutional": {
+        "interval": [
+          -1,
+          0
+        ],
+        "modal": -1,
+        "dissent_count": 2
+      },
+      "ecological": {
+        "interval": [
+          -3,
+          0
+        ],
+        "modal": -1,
+        "dissent_count": 3
+      },
+      "overall_spectrum": {
+        "modal_label": "droite",
+        "distribution": {
+          "droite": 5,
+          "centre_droit": 1
+        },
+        "dissent_count": 1
+      }
+    }
+  },
+  "coverage_warning": true,
+  "flagged_for_review": []
+}

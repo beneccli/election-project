@@ -1,0 +1,197 @@
+{
+  "dimensions": {
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "gpt-5.5-thinking": "C",
+          "claude-opus-4-7": "D",
+          "gemini-1.5-pro": "C"
+        }
+      },
+      "headline": {
+        "text": "Pas de réforme institutionnelle ; deux propositions administratives : registre social CSU et rééquilibrage de gouvernance Unédic.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+        "dissenters": ["deepseek-chat", "Le Chat", "qwen3.6"],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Institutional content is administrative: social-benefit registry and shared employment-governance rules." },
+          { "model": "claude-opus-4-7", "text": "Une seule proposition institutionnelle : rééquilibrer la gouvernance Unédic vers les partenaires sociaux et les régions." },
+          { "model": "deepseek-chat", "text": "Programme ne contient aucune proposition de réforme institutionnelle ou démocratique." },
+          { "model": "gemini-1.5-pro", "text": "Rééquilibrage de la gouvernance de l'Unédic et centralisation des données sociales." },
+          { "model": "Le Chat", "text": "Programme ne traite pas de réformes institutionnelles ou démocratiques." },
+          { "model": "qwen3.6", "text": "Programme ne traite pas des réformes institutionnelles, décentralisation ou relation UE." }
+        ]
+      },
+      "summary": "Désaccord net sur la classification : trois modèles (DeepSeek, Le Chat, Qwen) considèrent que le programme est silencieux et codent NOT_ADDRESSED ; trois autres (ChatGPT, Claude, Gemini) repèrent deux mesures à portée institutionnelle limitée — le Compte Social Unique (CSU) comme registre social inter-organismes et le rééquilibrage de la gouvernance de l'Unédic vers les partenaires sociaux et les régions — et codent C ou D. Aucun modèle ne trouve de réforme constitutionnelle, électorale, de décentralisation, de justice, de financement de la vie politique, de relation UE, ni de garantie de libertés civiles. La perception de coverage tient donc à savoir si les deux mesures administratives suffisent à constituer une « politique institutionnelle ». Claude (D) signale en outre un risque de conflit de compétences entre Unédic, partenaires sociaux et régions ; ChatGPT relève l'absence de garde-fous data-protection autour du CSU.",
+      "problems_addressed": [
+        {
+          "problem": "Manque de visibilité consolidée sur les aides sociales non-contributives",
+          "approach": "Création d'un Compte social unique (CSU) servant de registre national obligatoire partagé entre l'État, la CAF, les communes et les autres organismes versant des prestations.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#proposition-4"],
+          "reasoning": "Le programme décrit explicitement l'absence d'une vue consolidée et propose un registre partagé ; portée institutionnelle réelle mais limitée à la sphère sociale.",
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        },
+        {
+          "problem": "Découplage entre financement de l'assurance chômage (Unédic) et décision publique",
+          "approach": "Associer Unédic, partenaires sociaux et régions à la conception de l'accompagnement par France Travail et au partage des données.",
+          "strength": 0.45,
+          "source_refs": ["sources.md#proposition-5"],
+          "reasoning": "Mesure repérée par trois modèles ; le programme nomme les acteurs mais ne précise ni les droits de vote, ni la hiérarchie juridique, ni les formules de financement.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": ["deepseek-chat", "Le Chat", "qwen3.6"]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réforme constitutionnelle et équilibre des pouvoirs (présidence, parlement, référendum, justice constitutionnelle)",
+          "significance": "Aucune proposition sur le fonctionnement de la Ve République ; le programme s'inscrit implicitement dans le cadre actuel.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Mode de scrutin, financement de la vie politique, représentation",
+          "significance": "Le document ne traite ni de la proportionnelle, ni du financement des campagnes, ni de la participation citoyenne.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "deepseek-chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Décentralisation et organisation territoriale de l'État",
+          "significance": "Aucune doctrine sur les compétences des collectivités hors mention indirecte des régions dans la gouvernance Unédic.",
+          "source_refs": [],
+          "supported_by": ["deepseek-chat", "Le Chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Relation institutionnelle avec l'Union européenne",
+          "significance": "Aucun positionnement sur le pacte de stabilité révisé, le marché unique ou les compétences de l'UE.",
+          "source_refs": [],
+          "supported_by": ["Le Chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Garanties data-protection et libertés civiles autour des données sociales consolidées",
+          "significance": "Le CSU mutualise des données entre État, CAF, communes et autres organismes sans préciser durée de conservation, voies de recours ou contrôle indépendant.",
+          "source_refs": ["sources.md#proposition-4"],
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Concentration administrative des données de protection sociale",
+          "mechanism": "Le CSU centralise les informations d'aide entre État, CAF, communes et autres organismes sans spécifier les garanties de protection ou de recours.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#proposition-4"],
+          "reasoning": "Le programme exige un partage obligatoire mais ne décrit pas le cadre de gouvernance des données.",
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Conflit de compétences et résistance des partenaires sociaux dans la gouvernance Unédic/France Travail",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "Le programme nomme trois acteurs (Unédic, partenaires sociaux, régions) sans définir leur articulation juridique avec France Travail ni mécanisme de décision contraignant ; les syndicats peuvent rejeter la configuration globale au-delà du seul levier de gouvernance.",
+          "source_refs": ["sources.md#proposition-5"],
+          "supported_by": ["claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "risk": "Interopérabilité et base juridique du registre CSU",
+          "probability": 0.52,
+          "severity": 0.58,
+          "reasoning": "Un registre obligatoire national exige une standardisation des données entre payeurs multiples sous régimes juridiques différents.",
+          "source_refs": ["sources.md#proposition-4"],
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte Social Unique (CSU) — registre national obligatoire des aides non-contributives",
+          "source_ref": "sources.md#proposition-4",
+          "quantified": false,
+          "magnitude": "Un compte par adulte couvrant les aides versées par l'État, la CAF, les communes et autres organismes ; plafond cumulé à 70% du SMIC net",
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Rééquilibrage de la gouvernance Unédic / France Travail vers partenaires sociaux et régions",
+          "source_ref": "sources.md#proposition-5",
+          "quantified": false,
+          "magnitude": "Association à la conception de l'accompagnement et au partage des données ; pas de droits de vote ni de hiérarchie juridique précisés",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Le coût IT et juridique du CSU n'est pas chiffré ; les autres mesures n'engagent pas de dépense distincte.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "Administrative reforms tied to CSU/fraud savings; no separate IT cost given." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Mesure de gouvernance unique, sans engagement budgétaire propre." },
+            { "model": "deepseek-chat", "level": "low", "note": "Programme silencieux." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Governance changes have negligible direct costs." },
+            { "model": "Le Chat", "level": "low", "note": "No new spending or revenue implications." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": ["low", "high"],
+          "note": "Désaccord substantiel : ChatGPT note la complexité d'un registre social national, les autres y voient soit une mesure non traitée, soit une procédure standard.",
+          "supported_by": ["deepseek-chat", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "A compulsory national aid register requires data standardization across multiple benefit payers." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Coordination Unédic / partenaires sociaux / régions sans architecture juridique précisée." },
+            { "model": "deepseek-chat", "level": "low", "note": "Aucune mesure." },
+            { "model": "gemini-1.5-pro", "level": "limited", "note": "Shifting administrative mandates is standard legislative procedure." },
+            { "model": "Le Chat", "level": "low", "note": "No new measures require implementation." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Pour les modèles qui voient des mesures, dépendance modérée à la coopération de plusieurs payeurs et acteurs sociaux.",
+          "supported_by": ["deepseek-chat", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Requires cooperation from CAF, municipalities, Unédic, regions, social partners, and France Travail." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Suppose un accord entre Unédic, partenaires sociaux et régions." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Relies on social partners accepting the new framework." },
+            { "model": "Le Chat", "level": "low", "note": "N/A" },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Règles juridiques modifiables ; l'infrastructure de registre crée une inertie opérationnelle pour le sous-cas CSU.",
+          "supported_by": ["deepseek-chat", "Le Chat", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "Legal rules can be reversed, but registry infrastructure and inter-body data flows create operational inertia." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Modifiable par révision conventionnelle des accords sociaux." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Governance structures can be altered by subsequent governments." },
+            { "model": "Le Chat", "level": "low", "note": "Sans objet." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        }
+      },
+      "confidence": 0.62
+    }
+  }
+}

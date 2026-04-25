@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "source_models": [
+    { "provider": "openai", "version": "gpt-5.5-thinking" },
+    { "provider": "anthropic", "version": "claude-opus-4-7" },
+    { "provider": "deepseek", "version": "deepseek-chat" },
+    { "provider": "google", "version": "gemini-1.5-pro" },
+    { "provider": "Mistral", "version": "Le Chat" },
+    { "provider": "qwen", "version": "qwen3.6" }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": { "provider": "copilot", "version": "claude-opus-4.7" },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-25T07:21:27Z"
+  },
+  "summary": "Le programme « Travail Gagnant » de Bruno Retailleau (LR) est un paquet de réformes côté offre qui combine un seuil zéro cotisation au-delà de 1 623 heures travaillées par an, la fusion du RSA, de la prime d'activité et de l'ASS dans un Revenu d'incitation à l'activité (RIA), un cumul emploi-retraite rénové, un Compte social unique (CSU) plafonnant les aides non contributives à 70 % du SMIC net par adulte, et un durcissement de l'assurance chômage. Les six modèles convergent sur un chiffrage de 28,5–31,7 Md€/an d'économies, intégralement restituées à parts égales aux salariés et aux entreprises plutôt qu'au désendettement. Le programme est silencieux sur le climat, la santé, l'éducation, le logement, la sécurité intérieure, l'immigration et la défense ; cinq modèles classent l'environnement « non traité », un seul (Mistral) attribue F au productivisme implicite. Le positionnement modal est « droite » (5/6), avec une dissidence centre-droit (Mistral).",
+  "summary_agreement": 0.78,
+  "coverage_warning": true,
+  "flagged_for_review": []
+}

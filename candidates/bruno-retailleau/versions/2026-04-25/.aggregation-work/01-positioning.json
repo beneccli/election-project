@@ -1,0 +1,132 @@
+{
+  "positioning": {
+    "economic": {
+      "consensus_interval": [3, 4],
+      "modal_score": 3,
+      "anchor_narrative": "Cinq modèles sur six placent le programme à +3 (proche Fillon 2017, plus libéral que Macron 2017) ; Gemini retient +4 en raison de l'agressivité conjointe des baisses de cotisations et des plafonnements de l'aide sociale. Le consensus repose sur trois piliers explicites : exonération de cotisations au-delà de 1 623 heures, restitution intégrale des 30 Md€ d'économies aux salariés et aux entreprises, et plafond global des aides à 70 % du SMIC net.",
+      "evidence": [
+        { "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.", "source_ref": "sources.md#proposition-1" },
+        { "quote": "L'ensemble des cinq mesures proposées permettra de dégager au moins 30 milliards d'euros par an.", "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes" },
+        { "quote": "hors situations de dépendance ou de handicap, le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.", "source_ref": "sources.md#proposition-4" }
+      ],
+      "confidence": 0.85,
+      "dissent": [
+        { "model": "gemini-1.5-pro", "position": 4, "reasoning": "Aggressive labor cost reductions funded by tightening unemployment and welfare eligibility, squarely fitting the right-wing supply-side economic model." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 3, "reasoning": "The concrete package lowers payroll contributions, tightens unemployment insurance, caps parts of non-contributory assistance, and reallocates gains toward employees and firms." },
+        { "model": "claude-opus-4-7", "score": 3, "reasoning": "Programme libéral classique : baisse massive des cotisations, plafonnement des aides, restitution des économies au privé." },
+        { "model": "deepseek-chat", "score": 3, "reasoning": "Le programme propose une baisse massive des charges sur le travail, une refonte restrictive de l'assurance chômage, un plafonnement des aides sociales et une restitution intégrale des économies au secteur privé, sans augmentation de dépenses publiques." },
+        { "model": "gemini-1.5-pro", "score": 4, "reasoning": "Explicit reduction of corporate and employee social contributions, funded by tightening unemployment and welfare eligibility, squarely fitting the right-wing supply-side economic model." },
+        { "model": "Le Chat", "score": 3, "reasoning": "Program explicitly reduces the cost of labor and restores incentive structures, aligning with market-oriented economic policy." },
+        { "model": "qwen3.6", "score": 3, "reasoning": "Structural reduction of labor costs, deregulation of overtime, and welfare caps indicate a supply-side, market-oriented approach." }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [1, 2],
+      "modal_score": 2,
+      "anchor_narrative": "Cinq modèles retiennent +2 (proche LR 2022, plus conservateur que Macron 2017) sur la base du cadrage anti-assistanat et de la conditionnalité du RSA/ASS via le RIA. Claude descend à +1 estimant que le programme reste centré sur le travail et n'aborde pas explicitement les sujets familiaux, migratoires ou laïcité.",
+      "evidence": [
+        { "quote": "Notre système social ne doit plus permettre de s'installer durablement dans l'assistance.", "source_ref": "sources.md#presentation-densemble" },
+        { "quote": "L'allocation chômage doit être un filet de sécurité, pas un choix de vie.", "source_ref": "sources.md#presentation-densemble" }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        { "model": "claude-opus-4-7", "position": 1, "reasoning": "Cadrage conservateur sur la valeur travail mais pas de positions explicites sur famille, immigration, laïcité ou culture." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 2, "reasoning": "The source material gives a conservative work-and-assistance frame, but does not cover family law, immigration, secularism, or cultural policy." },
+        { "model": "claude-opus-4-7", "score": 1, "reasoning": "Cadrage conservateur centré sur la valeur travail sans positions explicites sur les autres sujets sociaux-culturels." },
+        { "model": "deepseek-chat", "score": 2, "reasoning": "Le discours insiste sur la valeur travail, la lutte contre l'assistanat et la fraude sociale, et la responsabilité individuelle. Les propositions concrètes réduisent les prestations sans contrepartie nouvelle pour les publics vulnérables." },
+        { "model": "gemini-1.5-pro", "score": 2, "reasoning": "Strong emphasis on work over 'assistance', framing welfare as a trap, characteristic of mainstream conservative social policy." },
+        { "model": "Le Chat", "score": 2, "reasoning": "Program explicitly targets reducing welfare dependency and emphasizes work as the primary social anchor." },
+        { "model": "qwen3.6", "score": 2, "reasoning": "Strong conditionality on social benefits, explicit anti-welfare dependency framing, and work-ethic prioritization place the program on the conservative side of the social axis." }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [0, 2],
+      "modal_score": 1,
+      "anchor_narrative": "Désaccord substantiel : Mistral à +2 (compétitivité nationale, alignement frontaliers), trois modèles à +1 (Chatgpt, Gemini, Qwen — souveraineté économique limitée), Claude et DeepSeek à 0 (programme silencieux sur EU, défense, immigration, frontières). Le modal +1 reflète la production et la balance commerciale comme axes faibles ; aucune mesure régalienne n'est spécifiée.",
+      "evidence": [
+        { "quote": "produire davantage est indispensable si nous voulons créer plus de richesse et cesser de financer notre modèle social par la dette.", "source_ref": "sources.md#proposition-1" },
+        { "quote": "Aligner l'indemnisation des travailleurs frontaliers sur des salaires français équivalents", "source_ref": "sources.md#proposition-5" }
+      ],
+      "confidence": 0.55,
+      "dissent": [
+        { "model": "claude-opus-4-7", "position": 0, "reasoning": "Programme silencieux sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE." },
+        { "model": "deepseek-chat", "position": 0, "reasoning": "Le programme ne contient aucune proposition sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE, hormis une référence à l'alignement sur les normes européennes d'assurance chômage." },
+        { "model": "Le Chat", "position": 2, "reasoning": "Program focuses on national competitiveness and reducing reliance on debt-financed consumption, reflecting a sovereignist economic stance." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 1, "reasoning": "The program links work hours, production, competitiveness, and trade balance, but it lacks concrete measures on EU powers, borders, defense, energy, or strategic supply chains." },
+        { "model": "claude-opus-4-7", "score": 0, "reasoning": "Programme silencieux sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE." },
+        { "model": "deepseek-chat", "score": 0, "reasoning": "Pas de positionnement explicite ; comparable à un candidat centre-droit européen sur l'UE." },
+        { "model": "gemini-1.5-pro", "score": 1, "reasoning": "Minimal focus on sovereignty in the text beyond adjusting cross-border worker benefits to national standards." },
+        { "model": "Le Chat", "score": 2, "reasoning": "Program focuses on national competitiveness and reducing reliance on debt-financed consumption, reflecting a sovereignist economic stance." },
+        { "model": "qwen3.6", "score": 1, "reasoning": "Program focuses on national labor market protection and cross-border benefit alignment, but lacks explicit EU or defense sovereignty proposals." }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [-1, 0],
+      "modal_score": -1,
+      "anchor_narrative": "Quatre modèles à -1 (Compte social unique = centralisation administrative technocratique modeste sans réforme constitutionnelle), deux modèles à 0 (Chatgpt et Mistral — la création du CSU et la gouvernance partagée Unédic/régions/partenaires sociaux ne constituent pas un changement institutionnel matériel). Aucune réforme constitutionnelle, électorale, judiciaire ou de décentralisation n'est proposée.",
+      "evidence": [
+        { "quote": "Nous proposons donc la création d'un Compte social unique (CSU), sur le modèle du compte fiscal.", "source_ref": "sources.md#proposition-4" },
+        { "quote": "Il est nécessaire d'associer pleinement l'Unédic, les partenaires sociaux et les régions à la définition de l'accompagnement assuré par France Travail.", "source_ref": "sources.md#proposition-5" }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        { "model": "gpt-5.5-thinking", "position": 0, "reasoning": "Institutional content is administrative rather than constitutional: a national benefits registry and shared employment-policy governance, without judicial, electoral, or media-system reforms." },
+        { "model": "Le Chat", "position": 0, "reasoning": "Program does not address institutional reforms or illiberal measures, leaving the Fifth Republic's framework intact." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 0, "reasoning": "Institutional content is administrative rather than constitutional: a national benefits registry and shared employment-policy governance, without judicial, electoral, or media-system reforms." },
+        { "model": "claude-opus-4-7", "score": -1, "reasoning": "Centralisation administrative modérée via le CSU, sans réforme constitutionnelle." },
+        { "model": "deepseek-chat", "score": -1, "reasoning": "Aucune mesure ne concerne les institutions, la décentralisation ou le fonctionnement démocratique. Le programme s'inscrit dans le cadre institutionnel existant sans le remettre en cause." },
+        { "model": "gemini-1.5-pro", "score": -1, "reasoning": "Proposes state capacity upgrades (CSU) and shifting governance of Unédic to give social partners more operational control, without illiberal changes." },
+        { "model": "Le Chat", "score": 0, "reasoning": "Program does not address institutional reforms or illiberal measures, leaving the Fifth Republic's framework intact." },
+        { "model": "qwen3.6", "score": -1, "reasoning": "Governance reforms target employment agencies and social partners; no constitutional or democratic restructuring is proposed." }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [-3, 0],
+      "modal_score": -1,
+      "anchor_narrative": "Forte dispersion : Qwen à -3 (productivisme net comparable RN 2022), DeepSeek à -2, trois modèles à -1 (Chatgpt, Claude, Mistral — ligne LR productiviste avec absence de mesures), Gemini à 0 (sujet non traité, donc neutre par défaut). Le modal -1 reflète l'absence totale de mesures climat/biodiversité combinée à un objectif explicite de hausse de la production de 2 % du PIB.",
+      "evidence": [
+        { "quote": "Un gain substantiel de croissance de l'activité dont 2 % uniquement grâce aux nouvelles heures supplémentaires", "source_ref": "sources.md#bilan" },
+        { "quote": "renouer avec une croissance tirée par la production", "source_ref": "sources.md#constat" }
+      ],
+      "confidence": 0.5,
+      "dissent": [
+        { "model": "deepseek-chat", "position": -2, "reasoning": "Le programme encourage une hausse de la production et des heures travaillées sans mentionner de contraintes ou d'investissements environnementaux." },
+        { "model": "gemini-1.5-pro", "position": 0, "reasoning": "The extracted program focuses exclusively on labor, welfare, and fiscal mechanics; ecology is absent, treated as not addressed rather than productivist." },
+        { "model": "qwen3.6", "position": -3, "reasoning": "Exclusive focus on labor volume expansion and GDP growth with zero mention of climate, biodiversity, or energy transition indicates a productivist stance." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": -1, "reasoning": "The program is oriented toward additional production and work volume, while climate, biodiversity, water, and transition-investment measures are not specified." },
+        { "model": "claude-opus-4-7", "score": -1, "reasoning": "Productivisme implicite, absence totale de mesures environnementales." },
+        { "model": "deepseek-chat", "score": -2, "reasoning": "Plus productiviste que LR 2022, proche de RN 2022 sur l'absence de mesures environnementales." },
+        { "model": "gemini-1.5-pro", "score": 0, "reasoning": "The extracted program focuses exclusively on labor, welfare, and fiscal mechanics; ecology is absent." },
+        { "model": "Le Chat", "score": -1, "reasoning": "Program omits ecological priorities, focusing instead on labor and competitiveness, resulting in a productivist stance." },
+        { "model": "qwen3.6", "score": -3, "reasoning": "Exclusive focus on labor volume expansion and GDP growth with zero mention of climate, biodiversity, or energy transition indicates a productivist stance." }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": { "droite": 5, "centre_droit": 1 },
+      "anchor_narrative": "Cinq modèles classent le programme « droite » (LR 2022, Fillon 2017) sur la base du combo économique (+3) et social-culturel (+2). Mistral retient « centre_droit » en pondérant l'absence de toute rhétorique régalienne ou identitaire. Aucun modèle ne classe le programme à l'extrême droite ni au centre.",
+      "confidence": 0.78,
+      "dissent": [
+        { "model": "Le Chat", "label": "centre_droit", "reasoning": "Market-oriented economic policy combined with socially conservative and sovereignist stances places the program in the centre-right band." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "label": "droite", "reasoning": "Market-oriented labor-cost cuts and work-conditional social policy drive the placement. Sovereignty evidence is production-centered but not RN-level nationalist; institutional and ecological axes do not override the economic and social-cultural placement." },
+        { "model": "claude-opus-4-7", "label": "droite", "reasoning": "Combinaison économique libérale et conservatisme social-travail, sans dérive régalienne extrême." },
+        { "model": "deepseek-chat", "label": "droite", "reasoning": "Le score économique fortement libéral (+3) et le score social conservateur (+2) placent le programme dans la droite classique française, comparable au positionnement de LR 2022." },
+        { "model": "gemini-1.5-pro", "label": "droite", "reasoning": "The combination of aggressive tax cuts on labor, structured reductions in welfare limits, and rhetoric targeting 'assistanat' places the program firmly in the mainstream right." },
+        { "model": "Le Chat", "label": "centre_droit", "reasoning": "Market-oriented economic policy combined with socially conservative and sovereignist stances places the program in the centre-right band." },
+        { "model": "qwen3.6", "label": "droite", "reasoning": "Supply-side economics, welfare conditionality, and a productivist growth model place the program firmly on the right; institutional and sovereignty axes are moderate and do not shift the classification." }
+      ]
+    }
+  }
+}

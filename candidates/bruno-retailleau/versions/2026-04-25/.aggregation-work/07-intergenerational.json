@@ -1,0 +1,387 @@
+{
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "ordre de grandeur +250 à +500 €/an pour un actif au salaire médian via heures sup ; +250 à +733 €/mois pour un senior actif via cumul rénové ; -410 €/mois pour un foyer-type bénéficiaire de prestations cumulées au plafond CSU ; trajectoire de dette quasi-inchangée (économies restituées plutôt qu'allouées au désendettement)",
+      "units": "€/personne/an pour les actifs ; €/foyer/mois pour les bénéficiaires plafonnés ; aucune désagrégation par cohorte au-delà",
+      "confidence": 0.55,
+      "caveats": "Désaccord substantiel entre modèles : 4 voient un effet mixte par statut sur le marché du travail plus que par âge, DeepSeek voit un transfert net young_to_old via la coupe des aides aux actifs précaires, Le Chat voit un transfert old_to_young via gain en pouvoir d'achat des actifs jeunes. Aucun modèle ne propose de chiffrage fiable pour les horizons 2031-2037 et 2038-2047, ni de bilan cohorte-par-cohorte au-delà des exemples 25 ans / 65 ans."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Gain potentiel direct via heures supplémentaires exonérées au-delà du seuil de 1 623h ; conditionné à l'acceptation effective d'heures supplémentaires par l'employeur. Aucune réduction d'impôt directe sur le revenu pour les jeunes actifs.",
+        "quantified": "+230 à +500 €/an au seuil ; jusqu'à +2 800 €/an au-delà ; -410 €/mois si bénéficiaire de prestations cumulées au-dessus du plafond CSU"
+      },
+      "housing": {
+        "summary": "Aucune politique du logement ; les APL sont incluses dans le périmètre du plafond CSU, ce qui peut réduire l'aide au logement de jeunes ménages locataires sociaux à fortes prestations cumulées.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Le programme ne traite pas de la trajectoire de retraite des actifs jeunes ; les exonérations de cotisations retraite sur heures sup et seniors réduisent marginalement les recettes du régime sans contrepartie explicite sur les droits futurs.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "Hausse du volume d'heures offertes par les entreprises (coût marginal -35% au-delà du seuil) et suppression du plancher de 24 h/semaine en temps partiel, facilitant l'entrée et le multi-employeur. Règles d'assurance chômage durcies augmentent la pression sur les jeunes entrants en emploi précaire.",
+        "quantified": "Coût horaire entreprise -35% au-delà du seuil ; gain salarial net jusqu'à environ 2 800 €/an au-dessus du seuil"
+      },
+      "environmental_debt": {
+        "summary": "Programme silencieux sur la trajectoire climatique ; objectif productif de +2% PIB sans cadre carbone reporte implicitement les coûts d'ajustement climatique vers les cohortes plus jeunes.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un actif de 25 ans en 2027 au salaire médian, le programme est positif s'il est employé et capable d'obtenir des heures supplémentaires, négatif s'il dépend d'un panier de prestations sociales au-dessus du plafond CSU, et silencieux sur logement, éducation, climat et trajectoire de retraite à 40 ans. La dispersion d'effets selon le statut sur le marché du travail explique le caractère mixte du transfert."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Aucune nouvelle contribution fiscale ou sociale pour les retraités. Pension de droit commun préservée. Possibilité de cumuler revenus d'activité sous une formule rénovée (pension minorée de 30% du revenu d'activité).",
+        "quantified": "+0 €/an pour retraité inactif ; jusqu'à environ +733 €/mois pour un retraité à mi-temps dans l'exemple du programme"
+      },
+      "pension": {
+        "summary": "Pas de réforme paramétrique du régime ; cumul emploi-retraite rénové et exonération de cotisations sociales (hors CSG/CRDS) pour seniors ayant atteint la durée requise constituent les seules mesures pension.",
+        "quantified": "Pension minorée de 30% du revenu d'activité ; +280 à +300 €/mois en cas d'activité partielle selon les modèles"
+      },
+      "healthcare": {
+        "summary": "Aucune mesure ; l'accès aux soins n'est pas modifié par le programme. Les exonérations de cotisations retirent marginalement des recettes à l'Assurance maladie sans compensation explicite.",
+        "quantified": null
+      },
+      "narrative_summary": "Effet net positif pour les seniors souhaitant prolonger leur activité ; neutre pour les retraités inactifs (la pension de droit commun n'est pas modifiée). Aucune austérité programmée pour cette cohorte ; aucune contribution intergénérationnelle additionnelle non plus."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Pas de réforme paramétrique ; effets passent par cumul emploi-retraite rénové et exonération seniors. Effet positif probable à moyen terme ; aucun cadrage long terme.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [0, 1],
+            "note": "Tie 3-3 entre 0 (mise en place sans effet net immédiat) et 1 (incitation activée dès 2027).",
+            "supported_by": ["claude-opus-4-7", "deepseek-chat", "Le Chat"],
+            "dissenters": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Near-term senior workers can gain from exemptions and revised cumul emploi-retraite." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Mise en place du cumul rénové et de l'exonération seniors anticipée ; effet net dépend de l'élasticité comportementale." },
+              { "model": "deepseek-chat", "score": 0, "note": "Aucun changement immédiat des règles de pension." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Immediate increase in senior workforce participation." },
+              { "model": "Le Chat", "score": 0, "note": "No change to pension rules or replacement rates." },
+              { "model": "qwen3.6", "score": 1, "note": "Immediate uptake of cumulative scheme reduces near-term pension outflows." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [0, 1],
+            "note": "Effet positif si l'incitation produit une hausse durable de l'activité des seniors ; recettes marginalement préservées.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["Le Chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Effect persists if additional seniors keep working; no replacement-rate formula is specified." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Si +10% de seniors prolongent, recettes de cotisations marginalement préservées et pensions cumulées augmentées." },
+              { "model": "deepseek-chat", "score": 1, "note": "Si 10% de seniors supplémentaires prolongent leur activité, l'impact devient légèrement positif pour les comptes sociaux." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Sustained integration of seniors in workforce." },
+              { "model": "Le Chat", "score": 0, "note": "No change to pension rules or replacement rates." },
+              { "model": "qwen3.6", "score": 1, "note": "Sustained senior employment extends contribution base." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 1],
+            "note": "Programme ne traite pas de la soutenabilité long terme ; effet incertain au-delà des incitations.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "Le Chat", "qwen3.6"],
+            "dissenters": ["deepseek-chat", "gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify pension rules for cohorts retiring in this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne traite pas de la trajectoire de financement des retraites au-delà de l'horizon des incitations." },
+              { "model": "deepseek-chat", "score": 1, "note": "L'effet cumulatif sur l'équilibre du régime est modeste mais positif, toutes choses égales par ailleurs." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Cultural shift toward longer working lives." },
+              { "model": "Le Chat", "score": 0, "note": "No change to pension rules or replacement rates." },
+              { "model": "qwen3.6", "score": 0, "note": "Long-term demographic pressure returns without structural reform." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": ["Le Chat"]
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Économies générées (28,5-31,7 Md€) restituées aux actifs/entreprises ; pas de cible explicite de désendettement. Le Chat seul anticipe une stabilisation forte du ratio dette/PIB.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [-2, 1],
+            "note": "Restitution intégrale des économies aux actifs et entreprises ; trajectoire de déficit non explicitement réduite par le programme lui-même.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro", "Le Chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Gross gains are restituted, so near-term direct borrowing reduction is not specified." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Restitution intégrale des économies aux actifs et entreprises ; trajectoire de déficit non explicitement réduite." },
+              { "model": "deepseek-chat", "score": 0, "note": "Pas de réduction du déficit structurel ; le ratio dette/PIB pourrait s'améliorer marginalement si la croissance atteint 2% comme visé." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Immediate deficit reduction via unemployment/welfare cuts." },
+              { "model": "Le Chat", "score": -2, "note": "Debt-to-GDP ratio stabilizes due to €30 billion redistribution and spending reforms." },
+              { "model": "qwen3.6", "score": 0, "note": "Savings offset by redistribution; debt trajectory unchanged." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [-1, 1],
+            "note": "Effet sur la dette dépend de l'effet d'entraînement supposé de la compétitivité (+2% PIB allégué) sur les recettes — non quantifié sur cet horizon.",
+            "supported_by": ["claude-opus-4-7", "deepseek-chat", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "gemini-1.5-pro", "Le Chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "If the claimed activity gain persists, debt/GDP could improve through the denominator." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Effet sur la dette dépend de l'effet d'entraînement de la compétitivité (+2% PIB allégué) sur les recettes — non quantifié." },
+              { "model": "deepseek-chat", "score": 0, "note": "Même effet incertain ; sans consolidation budgétaire explicite, la dette reste sur sa trajectoire tendancielle." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Structural adjustment to social spending trajectory." },
+              { "model": "Le Chat", "score": -1, "note": "Continued debt stabilization as growth resumes." },
+              { "model": "qwen3.6", "score": 0, "note": "No structural deficit reduction mechanism specified." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 1],
+            "note": "Programme ne précise pas de cible de dette à long terme ni de mécanisme de réduction.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "Le Chat", "qwen3.6"],
+            "dissenters": ["gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No long-run debt rule, deficit target, or interest-rate path is specified." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne précise pas de trajectoire de dette à long terme." },
+              { "model": "deepseek-chat", "score": 0, "note": "Programme ne spécifie pas de cible de dette ni de mécanisme de réduction." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Long-term stabilization assuming sustained employment." },
+              { "model": "Le Chat", "score": 0, "note": "Long-term debt trajectory depends on growth sustainability." },
+              { "model": "qwen3.6", "score": 0, "note": "Long-term debt dynamics depend on unmodeled growth and rate paths." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "qwen3.6"],
+        "row_dissenters": ["gemini-1.5-pro", "Le Chat"]
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Programme silencieux sur le climat ; objectif productif sans cadre carbone reporte implicitement les coûts d'ajustement vers les cohortes plus jeunes.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "Hausse d'heures travaillées et de production sans cadre de compatibilité climatique pour les modèles qui chiffrent l'effet.",
+            "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "deepseek-chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify climate measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Hausse d'heures travaillées et de production sans cadre de compatibilité climatique." },
+              { "model": "deepseek-chat", "score": -1, "note": "Aucune mesure climatique ; la hausse de la production non conditionnée à des critères environnementaux augmente légèrement les émissions." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address climate transition." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on climate over this horizon." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "Absence de politique de transition prolonge l'inertie carbone selon les modèles dissidents.",
+            "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "deepseek-chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify climate measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Absence de politique de transition prolonge l'inertie carbone." },
+              { "model": "deepseek-chat", "score": -1, "note": "Même absence d'action ; le retard d'investissement dans la transition accroît les coûts futurs." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address climate transition." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on climate over this horizon." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [-3, 0],
+            "note": "Désaccord notable : Mistral note -3 (dette environnementale longue), Claude/DeepSeek -1 (report d'ajustement), trois autres 0 (silence du programme).",
+            "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "deepseek-chat", "Le Chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify climate measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Coûts d'ajustement reportés sur cohortes plus jeunes ; absence de stratégie d'atténuation." },
+              { "model": "deepseek-chat", "score": -1, "note": "L'absence de politique climatique sur 20 ans amplifie le décalage avec les objectifs nationaux et européens." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": -3, "note": "Deferred transition costs accumulate, worsening long-term climate debt." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on climate over this horizon." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": ["claude-opus-4-7", "deepseek-chat", "Le Chat"]
+      },
+      {
+        "row": "health",
+        "dimension_note": "Programme silencieux sur la santé ; aucun modèle n'attribue d'impact non nul. Les exonérations réduisent marginalement les recettes Assurance maladie sans compensation.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucune mesure de santé ou d'assurance maladie ; impact neutre par silence du programme.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify healthcare delivery or funding changes." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure de santé sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Aucune mesure sur la santé ou l'assurance maladie." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address healthcare system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on health over this horizon." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify healthcare effects over this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure de santé sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Program does not specify health measures." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address healthcare system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on health over this horizon." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify age-related health financing over this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure de santé sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Program does not specify health measures." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address healthcare system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on health over this horizon." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Programme silencieux sur l'éducation hors mention de la formation comme condition du RIA Insertion (15h hebdo) ; aucun impact non nul attribué.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucune politique éducative proposée.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify education measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Aucune mesure éducative proposée." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address education system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on education over this horizon." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify education measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Program does not specify education measures." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address education system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on education over this horizon." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucun changement programmé sur cet horizon.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify education measures over this horizon." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure d'éducation sur cet horizon." },
+              { "model": "deepseek-chat", "score": 0, "note": "Program does not specify education measures." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address education system." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on education over this horizon." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Programme silencieux sur l'offre et l'accès au logement ; les APL incluses dans le périmètre du plafond CSU peuvent réduire l'aide pour les bénéficiaires plafonnés à court terme.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [-1, 0],
+            "note": "Tie 3-3 entre 0 (aucune politique du logement) et -1 (foyers locataires sociaux à fortes prestations cumulées plafonnés via CSU).",
+            "supported_by": ["gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Some households may see lower covered aid when housing aid enters the CSU cap." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Plafond CSU peut réduire le revenu disponible logement de certains foyers locataires sociaux à fortes prestations cumulées." },
+              { "model": "deepseek-chat", "score": -1, "note": "Le plafonnement des aides inclut les APL ; les allocataires pourraient voir leur capacité à se loger réduite sans alternative proposée." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address housing policy." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on housing over this horizon." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "DeepSeek seul prolonge l'effet négatif structurel ; les autres modèles voient un silence sans impact.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": ["deepseek-chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify housing supply, rents, credit, or construction measures." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon." },
+              { "model": "deepseek-chat", "score": -1, "note": "Pas de construction de logements sociaux ni de soutien à l'accession ; la pression sur le logement des ménages modestes persiste." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address housing policy." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on housing over this horizon." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "DeepSeek seul anticipe une aggravation structurelle pour les jeunes générations ; les autres voient un silence sans impact.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+            "dissenters": ["deepseek-chat"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Program does not specify long-run housing affordability measures." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne spécifie aucune mesure de politique du logement sur cet horizon." },
+              { "model": "deepseek-chat", "score": -1, "note": "L'absence de politique du logement aggrave structurellement la crise pour les jeunes générations." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures." },
+              { "model": "Le Chat", "score": 0, "note": "Program does not address housing policy." },
+              { "model": "qwen3.6", "score": 0, "note": "Program does not specify measures on housing over this horizon." }
+            ]
+          }
+        },
+        "row_supported_by": ["gemini-1.5-pro", "Le Chat", "qwen3.6"],
+        "row_dissenters": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat"]
+      }
+    ],
+    "reasoning": "Le programme est conçu autour d'un transfert intra-générationnel (statut sur le marché du travail : assistés vers actifs) plus que d'un transfert inter-générationnel classique. Quatre modèles sur six retiennent donc une direction « mixed ». Pour les jeunes actifs employés, gain net direct via heures sup et incitations à la reprise d'activité ; pour les jeunes inactifs ou au-dessus du plafond CSU, perte directe quantifiée. Pour les seniors actifs, gain net via cumul rénové ; pour les retraités inactifs, neutralité. La principale dimension où les modèles s'accordent sur un transfert temporel défavorable aux cohortes futures est environnementale, par silence et objectif productif sans cadre carbone (Claude, DeepSeek, Le Chat). DeepSeek dissident en codant young_to_old (réduction nette des aides aux actifs précaires) ; Le Chat dissident en codant old_to_young (gain en pouvoir d'achat des actifs). La trajectoire de dette publique est quasi-inchangée puisque les économies sont restituées plutôt qu'allouées au désendettement.",
+    "source_refs": [
+      "sources.md#proposition-1",
+      "sources.md#proposition-2",
+      "sources.md#proposition-3",
+      "sources.md#proposition-4",
+      "sources.md#proposition-5",
+      "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+    ],
+    "confidence": 0.6,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        { "model": "deepseek-chat", "view": "Direction young_to_old : la coupe nette des aides (RSA, APL plafonnées via CSU, ASS, durcissement chômage ~15 Md€/an) frappe principalement les actifs précaires plus jeunes, alors que les pensions des retraités actuels sont préservées et que les seniors actifs reçoivent des exonérations nouvelles." },
+        { "model": "Le Chat", "view": "Direction old_to_young : ~+1 500 €/personne/an de pouvoir d'achat pour les actifs sous 35 ans grâce à la baisse du coût du travail, tandis que les retraités gardent leurs droits ; effet net interprété comme un transfert vers les jeunes." }
+      ]
+    }
+  }
+}

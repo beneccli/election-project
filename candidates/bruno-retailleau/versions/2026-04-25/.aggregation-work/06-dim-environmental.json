@@ -1,0 +1,140 @@
+{
+  "dimensions": {
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "NOT_ADDRESSED",
+        "dissent": {
+          "Le Chat": "F"
+        }
+      },
+      "headline": {
+        "text": "Programme silencieux sur climat, biodiversité, eau, énergie et agriculture ; objectif productif sans cadre carbone.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": ["Le Chat"],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Programme does not specify climate, biodiversity, water, energy-transition, or adaptation measures." },
+          { "model": "claude-opus-4-7", "text": "Programme silencieux sur climat, biodiversité, agriculture et infrastructures de transition." },
+          { "model": "deepseek-chat", "text": "Programme ne mentionne ni le climat, ni la biodiversité, ni la transition énergétique." },
+          { "model": "gemini-1.5-pro", "text": "Programme ne traite pas de la transition écologique, du climat ou de l'énergie." },
+          { "model": "Le Chat", "text": "Absence totale de mesures explicites pour la transition écologique ou la biodiversité." },
+          { "model": "qwen3.6", "text": "Programme ne traite pas du climat, biodiversité, agriculture ou infrastructures durables." }
+        ]
+      },
+      "summary": "Consensus fort : aucun modèle ne trouve de politique environnementale dans le programme « Travail Gagnant ». Aucune mention du climat, de la biodiversité, de l'eau, des énergies renouvelables, du nucléaire, de la rénovation énergétique, des transports propres, ni de l'agriculture ou de la transition agroécologique. Cinq modèles classent cette dimension NOT_ADDRESSED ; Le Chat la note F en soulignant que ce silence vaut position au regard des engagements de la France (objectif -55% d'émissions en 2030, Accord de Paris). Trois modèles (Claude, DeepSeek, Le Chat) signalent en outre que l'objectif explicite de +2% de PIB via davantage d'heures travaillées, posé sans cadre de compatibilité carbone, induit un report implicite des coûts d'ajustement climatique vers les cohortes futures.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire climatique et décarbonation (Accord de Paris, Fit for 55, -55% en 2030)",
+          "significance": "Aucune mesure sectorielle sur les émissions, l'énergie, les transports, la rénovation, ni de tarification carbone. Engagement européen contraignant non instrumenté.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Biodiversité, sols, eau et ressources naturelles",
+          "significance": "Aucune politique de protection ou de gestion ; absente du document malgré les pressions documentées sur les écosystèmes français.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "Le Chat", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation aux risques climatiques (canicules, inondations, sécheresses, littoral)",
+          "significance": "Aucune politique d'investissement de résilience ni mécanisme assurantiel d'adaptation.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Transition agricole et alimentaire",
+          "significance": "Aucune mesure sur revenus agricoles, intrants, soutien à la transition agroécologique ou résilience alimentaire.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat"],
+          "dissenters": []
+        },
+        {
+          "problem": "Infrastructures de transition (réseau électrique, ferroviaire, rénovation énergétique du bâti)",
+          "significance": "Aucun plan d'investissement vert ; aucune trajectoire d'infrastructure compatible avec la décarbonation.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-chat"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibilité de la stratégie productive avec les engagements climatiques",
+          "mechanism": "L'objectif de +2% de PIB via davantage d'heures travaillées dans une économie dont la composition sectorielle reste inchangée induit une hausse mécanique d'émissions, à moins que la croissance soit concentrée sur des secteurs faiblement carbonés — ce que le programme n'examine pas.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#proposition-1"],
+          "reasoning": "Trois modèles (Claude, DeepSeek, Le Chat) identifient cette aggravation implicite ; sévérité notée 0,4 par Claude/DeepSeek et 0,9 par Le Chat. Le Chat est plus sévère car il évalue le programme comme F dans cette dimension, les deux autres comme NOT_ADDRESSED tout en signalant l'effet indirect.",
+          "supported_by": ["claude-opus-4-7", "deepseek-chat", "Le Chat"],
+          "dissenters": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6"]
+        }
+      ],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "low"],
+          "note": "Aucun engagement budgétaire environnemental dans le programme.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "low", "note": "No environmental spending, tax, or investment commitment is specified." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Aucun engagement budgétaire environnemental mentionné." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "No new spending or revenue implications." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "low",
+          "level_interval": ["low", "low"],
+          "note": "Aucune mesure environnementale à mettre en œuvre.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "low", "note": "No implementation mechanism exists in the source for this cluster." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Pas de mesure." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "No measures require implementation." },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": ["low", "low"],
+          "note": "Sans objet en l'absence de politique environnementale.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "low", "note": "No external ecological dependency identified because the cluster is not addressed." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "N/A" },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "low"],
+          "note": "Aucune mesure environnementale à inverser.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "low", "note": "No environmental measure is specified to reverse." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Programme ne traite pas substantiellement de cette dimension." },
+            { "model": "deepseek-chat", "level": "low", "note": "Sans objet." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "No measures proposed." },
+            { "model": "Le Chat", "level": "low", "note": "N/A" },
+            { "model": "qwen3.6", "level": "low", "note": "No measures proposed." }
+          ]
+        }
+      },
+      "confidence": 0.85
+    }
+  }
+}
