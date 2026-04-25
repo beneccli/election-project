@@ -35,7 +35,7 @@ export function NavBar({
           {t(UI_STRINGS.NAV_TRANSPARENCE, lang)}
         </a>
         <LanguageToggle />
-        <ThemeToggle />
+        <ThemeToggle lang={lang} />
       </div>
     </header>
   );

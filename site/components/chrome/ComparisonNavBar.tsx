@@ -28,7 +28,7 @@ export function ComparisonNavBar({ lang = "fr" }: { lang?: Lang } = {}) {
           {t(UI_STRINGS.NAV_HOME, lang)}
         </Link>
         <LanguageToggle />
-        <ThemeToggle />
+        <ThemeToggle lang={lang} />
       </div>
     </header>
   );
