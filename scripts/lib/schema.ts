@@ -49,6 +49,14 @@ export const CandidateMetadataSchema = z.object({
    */
   is_fictional: z.boolean().optional(),
   /**
+   * When true, this candidate is excluded from public site listings
+   * (landing grid, comparison picker, candidate index). The data
+   * remains on disk and is still loadable via `loadCandidate(id)`;
+   * only listing surfaces filter it out. Orthogonal to `is_fictional`.
+   * Absence means false. See docs/specs/candidates/visibility.md.
+   */
+  hidden: z.boolean().optional(),
+  /**
    * Optional landing-page family override. When set to "ecologie", the
    * candidate is bucketed under the "Écologie" family filter on the
    * landing page regardless of their left/right spectrum modal. Additive

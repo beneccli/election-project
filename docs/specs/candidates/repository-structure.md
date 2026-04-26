@@ -66,9 +66,17 @@ When a candidate's identity is unknown (e.g., "likely Macron successor" in early
   "declared_candidate_date": "2026-02-15",
   "official_website": "https://example.com",
   "created": "2026-04-19",
-  "updated": "2026-04-19"
+  "updated": "2026-04-19",
+  "is_fictional": false,
+  "hidden": false
 }
 ```
+
+Optional fields:
+
+- `is_fictional` (boolean, default `false`) — synthetic test candidate. Gates `publish.ts` (requires `--allow-fictional`). See [`../data-pipeline/analysis-modes.md`](../data-pipeline/analysis-modes.md).
+- `hidden` (boolean, default `false`) — exclude from public site listings (landing grid, comparison picker, candidate index) without removing the data. Orthogonal to `is_fictional`. See [`visibility.md`](visibility.md).
+- `family_override` (`"ecologie"`) — landing-page family bucket override. See [`../website/landing-page.md`](../website/landing-page.md) §4.3.
 
 The photo URL is external. We do not store photos in the repo (to avoid image licensing issues in git). The site references them via URL at build time.
 

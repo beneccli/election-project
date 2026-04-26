@@ -274,6 +274,9 @@ export function listLandingCards(lang: Lang = "fr"): LandingCard[] {
     } catch {
       continue;
     }
+    // See docs/specs/candidates/visibility.md — hidden candidates are
+    // excluded from every listing surface unconditionally.
+    if (meta.hidden === true) continue;
     if (excludeFictional && meta.is_fictional === true) continue;
 
     const aggregatedPath = path.join(candidateDir, "current", "aggregated.json");

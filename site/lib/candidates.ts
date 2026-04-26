@@ -129,6 +129,9 @@ export function listCandidates(): CandidateIndexEntry[] {
       continue;
     }
 
+    // See docs/specs/candidates/visibility.md — hidden candidates are
+    // excluded from every listing surface unconditionally.
+    if (meta.hidden === true) continue;
     if (excludeFictional && meta.is_fictional === true) continue;
 
     const currentDir = path.join(candidateDir, "current");

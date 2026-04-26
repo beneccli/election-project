@@ -23,7 +23,8 @@ specs/
 │   └── intergenerational-audit.md  # Measurement-not-indictment approach     [Stable]
 │
 ├── candidates/         # Candidate data layout
-│   └── repository-structure.md     # Per-candidate folder + versioning        [Stable]
+│   ├── repository-structure.md     # Per-candidate folder + versioning        [Stable]
+│   └── visibility.md               # Per-candidate `hidden` flag              [Draft]
 │
 ├── data-pipeline/      # Ingestion and orchestration
 │   ├── overview.md                 # End-to-end pipeline                      [Stable]

@@ -128,6 +128,44 @@ describe("schema CandidateMetadataSchema", () => {
       expect(result.data.is_fictional).toBeUndefined();
     }
   });
+
+  it("schema_validates_candidate_with_hidden_true", () => {
+    const result = CandidateMetadataSchema.safeParse({
+      ...validCandidate,
+      hidden: true,
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.hidden).toBe(true);
+    }
+  });
+
+  it("schema_validates_candidate_with_hidden_false", () => {
+    const result = CandidateMetadataSchema.safeParse({
+      ...validCandidate,
+      hidden: false,
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.hidden).toBe(false);
+    }
+  });
+
+  it("schema_validates_candidate_with_hidden_absent_treated_as_false", () => {
+    const result = CandidateMetadataSchema.safeParse(validCandidate);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.hidden).toBeUndefined();
+    }
+  });
+
+  it("schema_rejects_candidate_with_hidden_non_boolean", () => {
+    const result = CandidateMetadataSchema.safeParse({
+      ...validCandidate,
+      hidden: "yes",
+    });
+    expect(result.success).toBe(false);
+  });
 });
 
 // ---------------------------------------------------------------------------

@@ -203,6 +203,41 @@ describe("listLandingCards (filesystem)", () => {
       delete process.env.EXCLUDE_FICTIONAL;
     }
   });
+
+  it("excludes candidates with `hidden: true` from listings unconditionally", () => {
+    // See docs/specs/candidates/visibility.md.
+    makePending("visible-pending", "Visible", "2026-08-01");
+    // Add a hidden pending candidate.
+    const hiddenDir = path.join(tmpDir, "hidden-pending");
+    fs.mkdirSync(hiddenDir, { recursive: true });
+    fs.writeFileSync(
+      path.join(hiddenDir, "metadata.json"),
+      JSON.stringify({
+        id: "hidden-pending",
+        display_name: "Hidden",
+        party: "Parti Test",
+        party_id: "test",
+        created: "2025-01-01",
+        updated: "2026-09-01",
+        hidden: true,
+      }),
+    );
+    // Also add a hidden analyzed candidate.
+    copyAnalyzed("hidden-analyzed", "2026-09-15");
+    const analyzedMetaPath = path.join(
+      tmpDir,
+      "hidden-analyzed",
+      "metadata.json",
+    );
+    const analyzedMeta = JSON.parse(
+      fs.readFileSync(analyzedMetaPath, "utf8"),
+    );
+    analyzedMeta.hidden = true;
+    fs.writeFileSync(analyzedMetaPath, JSON.stringify(analyzedMeta));
+
+    const ids = listLandingCards().map((c) => c.id);
+    expect(ids).toEqual(["visible-pending"]);
+  });
 });
 
 describe("listLandingCards (locale-aware)", () => {
