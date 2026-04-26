@@ -1,0 +1,1043 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "nathalie-arthaud",
+  "version_date": "2026-04-27",
+  "model": {
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-27T00:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Nathalie Arthaud (Lutte Ouvrière) presents not a program of government but a 'campagne de classe' centered on revolutionary trotskyist communism: expropriation without compensation of banks and CAC 40 groups, ban on layoffs in profitable firms, retirement at 60 with 37.5 annuities, open borders with regularization of all undocumented workers, NATO exit, and rejection of the Fifth Republic institutional framework. The candidate explicitly states that no presidential measure can change conditions; only working-class self-organization through strikes can impose these demands. Quantitative envelopes, financing arithmetic, and implementation pathways within the constitutional framework are deliberately absent.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "Substantially more interventionist than Mélenchon LFI 2022 (-4): LO calls for expropriation without compensation rather than nationalization with indemnity, planning over markets, and rejects reformist management of capitalism.",
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#nationalisations-et-economie"
+        },
+        {
+          "quote": "Planification de la production sur la base des besoins humains réels, et non du marché.",
+          "source_ref": "sources.md#nationalisations-et-economie"
+        },
+        {
+          "quote": "Interdiction effective des licenciements dans toute entreprise qui réalise des profits ou qui verse des dividendes, sans exception.",
+          "source_ref": "sources.md#salaires-emploi"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "The program calls for expropriation without indemnity of banks and large industrial groups, central planning replacing market allocation, ban on layoffs in profitable firms, monopoly on foreign trade, and confiscatory taxation of capital income. Each measure exceeds the LFI 2022 anchor in scope and in rejection of compensation mechanisms."
+    },
+    "social_cultural": {
+      "score": -3,
+      "anchor_comparison": "Comparable to or slightly more progressive than EELV 2022 (-3) on identity, immigration, and gender; LO frames these in class terms rather than identity terms.",
+      "evidence": [
+        {
+          "quote": "Régularisation immédiate, sans condition et sans tri, de tous les sans-papiers présents sur le territoire.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Droit de vote à toutes les élections (locales, nationales, européennes) pour tous les résidents étrangers, quels que soient leur origine, leur nationalité ou leur statut juridique.",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Défense inconditionnelle du droit à l'avortement et à la contraception, accès gratuit et de proximité.",
+          "source_ref": "sources.md#droits-des-femmes"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Open borders, voting rights for all foreign residents regardless of status, unconditional abortion access, and rejection of all immigration laws place the program firmly on the progressive pole. Score is -3 rather than -4 because LO subordinates identity-cultural politics to class politics and rejects what it calls divisive identitarian framings."
+    },
+    "sovereignty": {
+      "score": 0,
+      "anchor_comparison": "Orthogonal to the Glucksmann (-3) — RN (+4) axis: LO rejects both EU institutions as instruments of capital and national sovereigntism as an impasse for workers.",
+      "evidence": [
+        {
+          "quote": "Refus de l'UE telle qu'elle existe, instrument du grand capital européen",
+          "source_ref": "sources.md#union-europeenne"
+        },
+        {
+          "quote": "Mais refus aussi du « repli national » et du souverainisme, considérés comme une impasse pour les travailleurs",
+          "source_ref": "sources.md#union-europeenne"
+        },
+        {
+          "quote": "Pas de Frexit revendiqué : la solution est dans la lutte de classe internationale, pas dans le retour aux frontières nationales",
+          "source_ref": "sources.md#union-europeenne"
+        },
+        {
+          "quote": "Sortie immédiate de l'OTAN",
+          "source_ref": "sources.md#international"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Proletarian internationalism rejects both EU federalism and national sovereignty as bourgeois constructs. NATO exit pulls toward sovereigntism but open borders and rejection of trade barriers pull the other way. The axis is genuinely orthogonal to LO's framing — neutral score reflects measurement, not ambiguity."
+    },
+    "institutional": {
+      "score": 0,
+      "anchor_comparison": "Does not map cleanly onto the liberal-democratic / illiberal-populist anchors. LO rejects the Fifth Republic but proposes workers' direct democracy rather than executive concentration.",
+      "evidence": [
+        {
+          "quote": "Refus du présidentialisme et des « hommes providentiels »",
+          "source_ref": "sources.md#institutions"
+        },
+        {
+          "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués",
+          "source_ref": "sources.md#institutions"
+        },
+        {
+          "quote": "Renforcement des libertés publiques face au glissement autoritaire (lois sécuritaires, surveillance, répression des manifestations)",
+          "source_ref": "sources.md#institutions"
+        }
+      ],
+      "confidence": 0.55,
+      "reasoning": "The program rejects existing institutions as bourgeois but proposes workplace direct democracy, recallable mandates, and reinforced public liberties — anti-authoritarian on civil rights but anti-parliamentary on representative form. The revolutionary horizon (proletarian dictatorship in classical trotskyist theory) is not articulated as concrete institutional design in source material, leaving genuine ambiguity. Confidence held at 0.55 because the program does not specify constitutional architecture for the post-revolutionary state."
+    },
+    "ecological": {
+      "score": 0,
+      "anchor_comparison": "Between LR 2022 (-1) and Macron 2017 (+1). LO rejects climate-skepticism but also rejects the carbon-tax / green-finance toolkit central to ecologist programs (EELV +4).",
+      "evidence": [
+        {
+          "quote": "Refus de toute mesure « écologique » qui pèse sur la consommation populaire (taxes carbone, péages urbains, hausse des prix de l'énergie ou des carburants).",
+          "source_ref": "sources.md#ecologie"
+        },
+        {
+          "quote": "Refus du « green capitalism » et des marchés du carbone, considérés comme des escroqueries permettant aux multinationales de continuer à polluer",
+          "source_ref": "sources.md#ecologie"
+        },
+        {
+          "quote": "Développement massif des transports en commun gratuits ou à très bas coût",
+          "source_ref": "sources.md#ecologie"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "LO acknowledges ecological crisis as structural to capitalism but rejects every concrete decarbonization instrument used by ecologist programs (carbon pricing, fuel taxes, sectoral phase-outs). Public transport expansion and thermal renovation financed by capital are pro-ecology measures, but no emissions trajectory or sectoral plan is specified. Score is neutral rather than negative because productivism is also rejected."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural"
+      ],
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#nationalisations-et-economie"
+        },
+        {
+          "quote": "Planification de la production sur la base des besoins humains réels, et non du marché.",
+          "source_ref": "sources.md#nationalisations-et-economie"
+        },
+        {
+          "quote": "Régularisation immédiate, sans condition et sans tri, de tous les sans-papiers présents sur le territoire.",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Economic axis at -5 (expropriation without indemnity, central planning, anti-capitalist revolutionary register) combined with social_cultural axis at -3 places the program at the anti-capitalist post-EU pole. The candidate's own framing as 'campagne de classe' aiming at proletarian revolution and rejection of reformist 'gauche de gouvernement' confirms the placement. Sovereignty and ecological axes neutral, institutional ambiguous — none contradict the placement."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "D",
+      "headline": "Expropriation sans indemnité des banques et grands groupes, interdiction des licenciements, retraite à 60 ans — sans envelope chiffrée ni mécanisme institutionnel d'application.",
+      "summary": "The program articulates a coherent revolutionary economic vision — expropriation without compensation, planning, ban on layoffs in profitable firms, return to 60/37.5 retirement, abolition of TVA replaced by progressive capital taxation — but presents no quantified financing path, no transitional fiscal arithmetic, and explicitly rejects the framework of presidential economic policymaking. The program is internally consistent within trotskyist political economy but provides no implementation envelope within the Fifth Republic.",
+      "problems_addressed": [
+        {
+          "problem": "Wage stagnation relative to cost of living",
+          "approach": "Échelle mobile indexing wages, pensions and allocations to real price increases as measured by workers themselves; minimum threshold aligned across wages, pensions, minima sociaux.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#salaires-emploi"
+          ],
+          "reasoning": "Mechanism is specified (sliding scale) but quantified threshold is deliberately left to class struggle rather than fixed in program."
+        },
+        {
+          "problem": "Mass layoffs in profitable firms",
+          "approach": "Legal ban on layoffs in any firm posting profits or paying dividends; requisition of firms closing sites for relocation.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#salaires-emploi"
+          ],
+          "reasoning": "Direct legal mechanism stated; scope (all profitable firms, no exception) is precisely defined."
+        },
+        {
+          "problem": "Pension reform reversal",
+          "approach": "Return to 60-year retirement age with 37.5 annuities, financed by levy on profits and capital income rather than payroll contributions.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#retraites"
+          ],
+          "reasoning": "Specific parametric proposal with named financing source."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Public debt service trajectory and bond market funding",
+          "significance": "France's debt-to-GDP near 115% and annual financing needs of €300bn+ are not addressed; expropriation of banks would terminate domestic primary dealer infrastructure with no replacement specified.",
+          "source_refs": []
+        },
+        {
+          "problem": "EU treaty obligations and capital controls",
+          "significance": "Expropriation without indemnity contradicts ECHR Protocol 1 and TFEU free-movement-of-capital provisions; program does not specify legal pathway.",
+          "source_refs": []
+        },
+        {
+          "problem": "Quantified deficit and revenue arithmetic",
+          "significance": "No envelope figures for embauches massives, public investment, or tax base replacement after TVA abolition.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Investment climate and capital flight",
+          "mechanism": "Announcement of expropriation without indemnity and confiscatory taxation of capital income would precipitate capital outflows; program acknowledges no transitional capital control framework.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#nationalisations-et-economie"
+          ],
+          "reasoning": "The measure is stated unambiguously; the macro consequence of unilateral announcement within an open EU capital account is mechanical."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Constitutional incompatibility within Fifth Republic framework",
+          "probability": 0.95,
+          "severity": 0.9,
+          "reasoning": "Expropriation without indemnity violates Article 17 DDHC (constitutional bloc) requiring 'juste et préalable indemnité'; no constitutional revision pathway is specified.",
+          "source_refs": [
+            "sources.md#nationalisations-et-economie",
+            "sources.md#institutions"
+          ]
+        },
+        {
+          "risk": "Self-acknowledged dependence on extra-electoral process",
+          "probability": 0.9,
+          "severity": 0.7,
+          "reasoning": "Program explicitly states measures cannot be implemented from the Élysée and require strikes, occupations, and ultimately revolutionary rupture.",
+          "source_refs": [
+            "sources.md#conclusion"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Indexation automatique (échelle mobile) des salaires, retraites, pensions et allocations sur la hausse réelle des prix",
+          "source_ref": "sources.md#salaires-emploi",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Interdiction des licenciements dans toute entreprise réalisant des profits ou versant des dividendes",
+          "source_ref": "sources.md#salaires-emploi",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Retraite à 60 ans, 37,5 annuités, financée par prélèvement sur profits et capital",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "60 years / 37.5 annuities"
+        },
+        {
+          "measure": "Expropriation sans indemnité ni rachat des banques et grands groupes du CAC 40",
+          "source_ref": "sources.md#nationalisations-et-economie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Impôt sur les sociétés à 50% minimum pour les grands groupes",
+          "source_ref": "sources.md#nationalisations-et-economie",
+          "quantified": true,
+          "magnitude": "50% IS floor for large groups"
+        },
+        {
+          "measure": "Suppression progressive de la TVA, remplacée par taxation progressive du capital et des hauts revenus",
+          "source_ref": "sources.md#nationalisations-et-economie",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "No quantified envelopes; TVA removal (≈€200bn receipts) replaced by capital taxation without arithmetic; expropriation of banks alters debt funding mechanism without alternative specified.",
+          "source_refs": [
+            "sources.md#nationalisations-et-economie"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Program self-describes as not implementable through presidential channels; requires self-organized class action.",
+          "source_refs": [
+            "sources.md#conclusion"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Open capital account, EU treaty law, and bond market access form binding constraints that program acknowledges only via rejection rather than transition design.",
+          "source_refs": [
+            "sources.md#union-europeenne"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Expropriation without indemnity, once executed, is hard to reverse without compensation cost; the program's logic precludes incremental rollback.",
+          "source_refs": [
+            "sources.md#nationalisations-et-economie"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "social_demographic": {
+      "grade": "C",
+      "headline": "Embauches massives à l'hôpital et à l'école, gratuité des études, allocation d'autonomie étudiante, sans chiffrage ni recensement des effectifs cibles.",
+      "summary": "The program addresses healthcare and education through a single instrument — massive public hiring sized by workers themselves rather than central planning — and proposes universal protections (full Sécu coverage, free higher education, student autonomy allowance). The mechanism is consistent across services public, but quantified targets, sequencing, and training pipeline considerations are absent.",
+      "problems_addressed": [
+        {
+          "problem": "Hospital and EHPAD understaffing",
+          "approach": "Massive recruitment of caregivers sized by needs identified by staff themselves; reopening of closed beds, services and maternités.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#services-publics"
+          ],
+          "reasoning": "Mechanism is precisely defined (worker-sized recruitment) though scale is not quantified."
+        },
+        {
+          "problem": "Class size and educational stratification in working-class districts",
+          "approach": "Tens of thousands of teacher hires prioritized in working-class neighborhoods; ATSEM hires for two-year-old reception.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#services-publics"
+          ],
+          "reasoning": "Magnitude order is given ('tens of thousands') and prioritization is specified."
+        },
+        {
+          "problem": "Gendered labor market inequality",
+          "approach": "Real and immediate equal pay enforced by women workers themselves at firm level; revaluation of care occupations; combat against imposed part-time.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#droits-des-femmes"
+          ],
+          "reasoning": "Multi-instrument approach but enforcement vector (worker-led monitoring) lacks legal articulation."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Demographic aging and dependency ratio dynamics",
+          "significance": "Program treats dependency as financing question solved by capital levy; biological-demographic structure (caregivers per dependent person) is not addressed.",
+          "source_refs": []
+        },
+        {
+          "problem": "Medical training pipeline lead times",
+          "significance": "Numerus apertus, internat capacity, and specialty distribution take 9-11 years; program does not address transition lag for soignant supply.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Public sector wage bill sustainability without specified financing",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Massive embauches across health, education, transports, logement social compound on fixed labor cost without quantified revenue counterpart.",
+          "source_refs": [
+            "sources.md#services-publics"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Embauches massives soignants à hauteur des besoins recensés par les soignants eux-mêmes",
+          "source_ref": "sources.md#services-publics",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Recrutement de dizaines de milliers d'enseignants",
+          "source_ref": "sources.md#services-publics",
+          "quantified": true,
+          "magnitude": "tens of thousands"
+        },
+        {
+          "measure": "Allocation d'autonomie pour étudiants indexée sur coût de la vie",
+          "source_ref": "sources.md#jeunesse",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Prise en charge intégrale par la Sécurité sociale, financée par cotisations patronales accrues",
+          "source_ref": "sources.md#services-publics",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Public hires across multiple services with no envelope; financing routed through 'profits' without quantification.",
+          "source_refs": [
+            "sources.md#services-publics"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Worker-sized recruitment lacks central administrative architecture; medical training lag not addressed.",
+          "source_refs": [
+            "sources.md#services-publics"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Health professional training capacity and labor market supply constrain feasible recruitment rate.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Public sector hires create CDI obligations difficult to reverse but legal framework remains majoritary-revisable.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.65
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Sortie immédiate de l'OTAN, ouverture des frontières, opposition à toute hausse du budget militaire, régularisation de l'ensemble des sans-papiers.",
+      "summary": "The program articulates a coherent internationalist-pacifist position: NATO withdrawal, opposition to military budget increases, no troop deployments in 'imperialist conflicts', open borders combined with mass regularization. The framework is consistent within proletarian internationalism. Operational details on defense posture, border infrastructure transition, and food/industrial sovereignty under planning are not specified.",
+      "problems_addressed": [
+        {
+          "problem": "Status of approximately 700,000 undocumented workers",
+          "approach": "Immediate, unconditional regularization without sorting; régularisation by work for those sustaining sectors like aide à domicile, BTP, hôtellerie, nettoyage.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#immigration",
+            "sources.md#salaires-emploi"
+          ],
+          "reasoning": "Population estimate is cited (~700,000), sectoral concentration documented (40-62% of workforce in IDF in named sectors), mechanism is unambiguous."
+        },
+        {
+          "problem": "Diversion of social budgets to military spending",
+          "approach": "Opposition to all military budget increases; cancellation of porte-avions and major armament programs; NATO exit.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#international"
+          ],
+          "reasoning": "Direction is clear, but program does not specify a target defense GDP share or transitional posture."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Defense industrial base and strategic autonomy",
+          "significance": "France's nuclear deterrent, defense exports, and dual-use industrial capacity are not addressed; planning for industrial sovereignty under expropriated multinationals is unspecified.",
+          "source_refs": []
+        },
+        {
+          "problem": "Energy sovereignty under nuclear ambiguity",
+          "significance": "Program criticizes nuclear under multinational management but does not specify whether expropriated EDF would maintain, expand, or phase out the fleet.",
+          "source_refs": []
+        },
+        {
+          "problem": "Russian and Chinese strategic posture",
+          "significance": "NATO exit is proposed without specifying alternative collective security architecture or bilateral arrangements.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Coordination problem with EU partners on border opening",
+          "probability": 0.85,
+          "severity": 0.5,
+          "reasoning": "Schengen and EU asylum framework mean unilateral border opening triggers immediate partner responses.",
+          "source_refs": [
+            "sources.md#immigration"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Régularisation immédiate de l'ensemble des sans-papiers (~700 000)",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "~700,000 persons"
+        },
+        {
+          "measure": "Sortie immédiate de l'OTAN",
+          "source_ref": "sources.md#international",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Liberté de circulation et d'installation : ouverture des frontières",
+          "source_ref": "sources.md#immigration",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Opposition à toute hausse du budget militaire",
+          "source_ref": "sources.md#international",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Defense budget reduction would lower expenditure; regularization carries fiscal costs offset by tax-base broadening.",
+          "source_refs": [
+            "sources.md#international"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "NATO exit and unilateral border opening confront immediate diplomatic, legal, and infrastructure realities.",
+          "source_refs": [
+            "sources.md#international",
+            "sources.md#immigration"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Outcomes depend on EU partners (Schengen), allied responses to NATO exit, and global capital reactions.",
+          "source_refs": [
+            "sources.md#immigration"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Border policy and military posture revisable by subsequent majority; regularizations granted are difficult to revoke.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "institutional_democratic": {
+      "grade": "D",
+      "headline": "Refus du présidentialisme, démocratie directe sur les lieux de travail, indemnités d'élus alignées sur salaire ouvrier — sans architecture constitutionnelle de remplacement.",
+      "summary": "The program rejects the Fifth Republic as an instrument of bourgeois domination but explicitly declines to make institutional reform a priority axis. Concrete measures address civil liberties (rejection of security laws, criminalization of strikes), elected officials' compensation (aligned to skilled worker wage), and recall mechanisms. The post-revolutionary institutional architecture is not articulated as concrete constitutional design.",
+      "problems_addressed": [
+        {
+          "problem": "Authoritarian drift through security and surveillance laws",
+          "approach": "Reinforcement of public liberties; rejection of the criminalization of trade union action and strikes.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "reasoning": "Direction is unambiguous; specific laws to repeal are not enumerated."
+        },
+        {
+          "problem": "Elected official remuneration disconnect",
+          "approach": "Cap elected official compensation at the average skilled worker wage; introduce mandate revocability.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "reasoning": "Specific anchor (skilled worker average wage) and mechanism (recall) provided."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Constitutional revision pathway",
+          "significance": "Program rejects the Fifth Republic but does not specify Article 89 / referendum / constituante pathway for replacement.",
+          "source_refs": []
+        },
+        {
+          "problem": "Decentralization and territorial governance",
+          "significance": "Program does not address relationship between communes, départements, régions, and central state.",
+          "source_refs": []
+        },
+        {
+          "problem": "Judicial independence in post-revolutionary architecture",
+          "significance": "Program criticizes 'glissement autoritaire' but does not specify magistrates' status, parquet independence, or constitutional council reform.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Revolutionary horizon explicitly outside electoral framework",
+          "probability": 0.95,
+          "severity": 0.7,
+          "reasoning": "Program states institutional change is not the priority and that liberation requires the overthrow of capitalism through proletarian revolution.",
+          "source_refs": [
+            "sources.md#institutions",
+            "sources.md#conclusion"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Rémunération des élus alignée sur le salaire moyen d'un ouvrier qualifié",
+          "source_ref": "sources.md#institutions",
+          "quantified": true,
+          "magnitude": "skilled-worker average wage"
+        },
+        {
+          "measure": "Limitation et révocabilité des mandats électifs",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Démocratie directe par assemblées générales souveraines sur les lieux de travail",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Salary alignment of elected officials would reduce public payroll; no significant fiscal impact.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Workplace direct democracy as substitute for parliamentary representation lacks legal architecture and would require constitutional rupture.",
+          "source_refs": [
+            "sources.md#institutions"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Realization depends on extra-electoral mobilization the program itself acknowledges as prerequisite.",
+          "source_refs": [
+            "sources.md#conclusion"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Recall and salary cap revisable by subsequent majority; full institutional rupture would not be.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "D",
+      "headline": "Rejet du marché du carbone et des taxes pesant sur les ménages, transports en commun gratuits, planification — sans trajectoire d'émissions ni plan sectoriel.",
+      "summary": "The program identifies capitalism as the structural cause of ecological crisis and rejects market-based decarbonization tools (carbon tax, emissions trading, fuel taxes) as transferring costs to popular consumption. Constructive measures are limited to free public transport, thermal renovation financed by capital, and combat against planned obsolescence. No emissions trajectory, sectoral plan, biodiversity framework, or water/agriculture transition is specified.",
+      "problems_addressed": [
+        {
+          "problem": "Energy precarity from carbon-pricing instruments",
+          "approach": "Rejection of carbon taxes, urban tolls, fuel and energy price increases on households; thermal renovation financed by 'profits' rather than households.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#ecologie"
+          ],
+          "reasoning": "Distributional concern is well-articulated; alternative decarbonization instrument is not specified."
+        },
+        {
+          "problem": "Mobility costs for working-class households",
+          "approach": "Massive development of free or very low-cost public transport.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#ecologie"
+          ],
+          "reasoning": "Direction and instrument clear; quantified investment envelope absent."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "France's emissions trajectory toward 2030 / 2050 net-zero",
+          "significance": "No GHG target, no SNBC reference, no sectoral plan; the program does not engage with the legally binding 2030 -55% target.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversity, water resources, and agricultural transition",
+          "significance": "The program notes support for small farmers but does not address pesticides, water tables, soil, or biodiversity policy.",
+          "source_refs": []
+        },
+        {
+          "problem": "Nuclear fleet trajectory",
+          "significance": "Program criticizes private nuclear management but does not specify build/extend/phase-out under planning.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Replacement of carbon-pricing tools by planning without transitional emissions architecture",
+          "probability": 0.7,
+          "severity": 0.5,
+          "reasoning": "Rejection of all market-based decarbonization tools without alternative quantified roadmap leaves emissions reduction mechanism unspecified.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Transports en commun gratuits ou à très bas coût",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Réhabilitation thermique des logements financée par les profits",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Refus des taxes carbone, péages urbains, hausses énergie/carburants",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Combat contre l'obsolescence programmée",
+          "source_ref": "sources.md#ecologie",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Free public transport at national scale and full thermal renovation envelope would represent tens of billions annually with no quantified financing.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Decarbonization without market signals requires planning capacity that program presumes but does not specify.",
+          "source_refs": [
+            "sources.md#ecologie"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "EU climate package, ETS membership, and supply chains constrain unilateral planning approach.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Tariff structures and infrastructure investments revisable but with sunk costs.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "not quantifiable from program",
+      "units": "€/person/year",
+      "confidence": 0.3,
+      "caveats": "Program rejects standard fiscal arithmetic and operates outside the budgetary framework; net transfer cannot be derived from quantified envelopes because none are provided."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "TVA abolition reduces consumption-tax burden disproportionately benefiting low-income young; capital taxation does not fall on most under-35s.",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "Requisition of vacant properties, rent control, and ban on evictions would expand near-term access; supply-side dynamics under expropriated property regime undefined.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Return to 60/37.5 financed by capital levy improves nominal entitlement; long-run sustainability depends on expropriated-capital flow assumed but not quantified.",
+        "quantified": "60 ans / 37.5 annuités"
+      },
+      "labor_market": {
+        "summary": "CDI from first job, ban on layoffs in profitable firms, abolition of Parcoursup selection — direct improvement in entry conditions; aggregate employment effect of layoff ban contested.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "No emissions trajectory specified; rejection of carbon pricing without quantified substitute leaves decarbonization timeline indeterminate.",
+        "quantified": null
+      },
+      "narrative_summary": "Direct distributional gains for under-35s on housing access, labor entry, and education costs; long-run outcomes contingent on revolutionary rupture explicitly stated as prerequisite by the program itself."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pensions indexed on real cost-of-living and aligned with revalued minimum wage threshold; TVA removal reduces consumption-tax burden.",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "Pensions raised to align with minimum decent threshold; minimum vieillesse aligned with salaire minimum.",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Suppression of franchises médicales doubling, reopening of hospitals, public coverage of dependency.",
+        "quantified": null
+      },
+      "narrative_summary": "Direct gains on pension level and healthcare access for current retirees; gains conditional on the same revolutionary rupture as for under-35s."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Return to 60/37.5 with capital-financed pensions raises near-term levels; long-horizon depends on assumed capital-flow durability.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Direct restoration of 60-year retirement and 37.5 annuités lifts replacement rates in the program's own framework.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Sustainability depends on capital-levy yield and on expropriation execution not specified for this horizon.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon outcome indeterminate without specified financing trajectory under post-expropriation regime.",
+            "source_refs": [
+              "sources.md#retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Debt trajectory under expropriation of banks and TVA abolition is structurally undefined within the program.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not engage with debt-service mechanics; expropriation of banks would alter funding architecture without specified replacement.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "No debt trajectory specified.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "No debt trajectory specified.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Free public transport and thermal renovation lift mitigation in popular sectors; absence of emissions trajectory or sectoral plan limits aggregate effect estimate.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Free transport and renovation effects are positive but unquantified; rejection of carbon pricing removes a marginal-abatement instrument.",
+            "source_refs": [
+              "sources.md#ecologie"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "No SNBC-style trajectory specified for the central horizon.",
+            "source_refs": [
+              "sources.md#ecologie"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "No long-horizon climate plan specified.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Massive caregiver hires and reopened facilities lift access; training pipeline lag affects time-distribution of effect.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Reopening of beds and franchise reversal effective near-term; soignant supply constrained by training lead times.",
+            "source_refs": [
+              "sources.md#services-publics"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cumulative recruitment cohort enters service over central horizon if hiring pace sustained.",
+            "source_refs": [
+              "sources.md#services-publics"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-horizon depends on whether financing model proves stable.",
+            "source_refs": [
+              "sources.md#services-publics"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Tens of thousands of teacher hires concentrated in working-class districts compress class size and expand age-2 reception; sustained over horizons.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Initial recruitment cohort reduces class size in priority districts.",
+            "source_refs": [
+              "sources.md#services-publics"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Cohort effect compounds; gratuité réelle des études supérieures lifts higher-education access.",
+            "source_refs": [
+              "sources.md#services-publics",
+              "sources.md#jeunesse"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-horizon outcome depends on financing durability.",
+            "source_refs": [
+              "sources.md#services-publics"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Vacant-property requisition, rent control, and eviction ban directly expand access; supply dynamics under expropriated property regime undefined.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Requisition and rent control would compress prices and expand access in the near term.",
+            "source_refs": [
+              "sources.md#logement"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Massive social-housing construction depends on construction sector mobilization not quantified.",
+            "source_refs": [
+              "sources.md#logement"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-horizon supply effect under non-market property regime indeterminate from program text.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "The program describes simultaneous gains for both cohorts financed by expropriation of capital rather than by intergenerational transfer. Within its own framework, the transfer is from capital owners to labor across generations, not from young to old or vice versa — hence 'mixed'. The realism of the financing source is contested but is the program's own logic and must be reported as such. Magnitude cannot be quantified because no envelopes are provided and the program operates outside standard fiscal arithmetic.",
+    "source_refs": [
+      "sources.md#salaires-emploi",
+      "sources.md#retraites",
+      "sources.md#nationalisations-et-economie",
+      "sources.md#logement",
+      "sources.md#jeunesse"
+    ],
+    "confidence": 0.55
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Continued capital concentration (cited UBS figure: 287 new billionaires in 2025), persistent layoff plans (~400 in France in 2025), wage stagnation against real prices, pension parameters at 64 ans / 43 annuités, ongoing immigration restrictions, NATO-aligned defense posture, EU-framework fiscal trajectory toward debt above 115% of GDP.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "institutional_democratic"
+    ],
+    "reasoning": "The program articulates a comprehensive rupture from the status quo trajectory in economic, social, security and environmental dimensions, but explicitly states that the change requires extra-electoral revolutionary mobilization rather than presidential implementation. The institutional dimension is listed as unchanged because LO does not propose a constitutional architecture but rather a horizon of revolutionary rupture not reducible to institutional design. Direction is 'mixed' because outcomes depend on macro consequences (capital flight, EU response) that the program acknowledges via rejection rather than transition design.",
+    "confidence": 0.65
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Constitutional pathway from Fifth Republic to post-revolutionary architecture",
+      "why_unsolved": "Program rejects institutional reform as priority and points to revolutionary rupture; no Article 89 / referendum / constituante pathway is articulated.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Quantified fiscal arithmetic for major measures",
+      "why_unsolved": "LO's political logic treats quantification as a reformist exercise; envelopes for embauches, gratuité, free transport, renovation, and tax-base replacement after TVA abolition are not provided.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Defense industrial base and collective security after NATO exit",
+      "why_unsolved": "Program proposes immediate withdrawal without specifying alternative architecture or transition arrangements.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Emissions trajectory toward EU 2030 -55% and 2050 net-zero targets",
+      "why_unsolved": "Program rejects carbon-pricing instruments without specifying alternative quantified abatement plan.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Capital flight and balance-of-payments mechanics during expropriation",
+      "why_unsolved": "Program announces expropriation without indemnity but specifies no capital control framework or transitional currency arrangement.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Announcement effect triggers immediate capital flight and OAT spread blowout before any measure is enacted.",
+      "trigger": "Unilateral announcement of expropriation without indemnity within open EU capital account.",
+      "probability": 0.85,
+      "severity": 0.85,
+      "reasoning": "France's external financing requirement and integration into EU capital markets mean an unhedged announcement of confiscatory policy generates near-immediate market response; the program does not specify capital controls."
+    },
+    {
+      "scenario": "Constitutional Council blocks core measures as violating Article 17 DDHC; legislative deadlock.",
+      "trigger": "First budget law containing expropriation or confiscatory taxation provision.",
+      "probability": 0.95,
+      "severity": 0.7,
+      "reasoning": "Constitutional case law on 'juste et préalable indemnité' is settled; without prior constitutional revision, core measures cannot pass DC review."
+    },
+    {
+      "scenario": "Recruitment surge in public services exceeds training pipeline capacity, creating service quality degradation.",
+      "trigger": "Massive embauches initiated without phased medical and teacher training expansion.",
+      "probability": 0.6,
+      "severity": 0.4,
+      "reasoning": "Lead times for soignant and enseignant qualification (5-11 years) are mechanical; program does not address transition staffing."
+    },
+    {
+      "scenario": "EU response to unilateral border opening and Schengen rupture isolates France diplomatically.",
+      "trigger": "Open-borders implementation outside EU asylum framework.",
+      "probability": 0.7,
+      "severity": 0.5,
+      "reasoning": "Schengen and Dublin coordination structures cannot accommodate unilateral departure without partner reaction; program does not specify a coordinated path."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "positioning.economic.score",
+        "critique": "Scoring economic at -5 (more interventionist than the Mélenchon LFI 2022 anchor) treats expropriation rhetoric as fully equivalent to operational program weight; LO itself states the measures will not be applied from the Élysée, which arguably reduces their operational weight in the program's own framework.",
+        "alternative_interpretation": "A score of -4, equal to the Mélenchon anchor, could be defended on the grounds that LO's program is rhetorically maximal but operationally reduced to a 'campagne de classe', placing it alongside rather than beyond the LFI anchor in operational terms."
+      },
+      {
+        "claim_location": "intergenerational.net_transfer_direction",
+        "critique": "Reporting 'mixed' rather than 'old_to_young' may understate that the program offers concrete near-term gains to under-35s (CDI, gratuité, allocation autonomie, requisition logements) while gains for retirees are largely indexation-style adjustments already baked in elsewhere.",
+        "alternative_interpretation": "A defensible alternative is 'old_to_young' on the grounds that the program's marginal beneficiary set tilts toward younger cohorts, with retirees gaining mainly through universal floors rather than targeted measures."
+      },
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_worsened[0]",
+        "critique": "Citing capital flight as a 'worsened' problem implicitly treats integration into open capital markets as a baseline good; a trotskyist framework would describe the same dynamic as a feature of the program's break with capitalism, not a bug.",
+        "alternative_interpretation": "Within LO's own logic, capital flight is the expected counterpart of expropriation and would be addressed by capital controls; the 'worsening' frame is partly external."
+      }
+    ],
+    "potential_bias": "The analysis applies a neoclassical-mainstream operational lens (debt service, capital markets, EU treaty law, training pipeline mechanics) that LO explicitly rejects as the framework of capitalist normalcy. This produces lower grades on operational dimensions because the program is consistent within a different framework. The bias direction is toward the consensus-economic frame used by mainstream French institutions; the cause is the analytical schema's emphasis on quantified envelopes and implementation pathways within the Fifth Republic.",
+    "evidence_gaps": "Source material consists of editorial and brochure-level statements rather than a fully articulated programmatic document, since LO declines to produce the latter as a matter of political principle. Many quantification gaps in the analysis reflect actual gaps in source material, not analytical omission. The horizon matrix scoring beyond 2030 is necessarily speculative given the program's revolutionary horizon and absence of macro projections.",
+    "confidence_in_critique": 0.7
+  },
+  "confidence_self_assessment": 0.7
+}

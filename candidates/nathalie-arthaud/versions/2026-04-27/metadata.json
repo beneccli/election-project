@@ -1,5 +1,78 @@
 {
   "candidate_id": "nathalie-arthaud",
   "version_date": "2026-04-27",
-  "schema_version": "1.0"
+  "schema_version": "1.0",
+  "analysis": {
+    "prompt_file": "prompts/analyze-candidate.md",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "prompt_version": "0.1",
+    "models": {
+      "mistral-manual": {
+        "provider": "manual",
+        "exact_version": "mistral-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:25:11.987Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "mistral-thinking",
+        "provider_metadata_available": false
+      },
+      "chatgpt-manual": {
+        "provider": "manual",
+        "exact_version": "chatgpt-5.5-thinking-extended",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:26:04.788Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "chatgpt-5.5-thinking-extended",
+        "provider_metadata_available": false
+      },
+      "gemini-manual": {
+        "provider": "manual",
+        "exact_version": "gemini-3-pro",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:26:36.445Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "gemini-3-pro",
+        "provider_metadata_available": false
+      },
+      "qwen-manual": {
+        "provider": "manual",
+        "exact_version": "qwen3.6-max-preview-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:27:49.972Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "qwen3.6-max-preview-thinking",
+        "provider_metadata_available": false
+      },
+      "claude-manual": {
+        "provider": "manual",
+        "exact_version": "claude-opus-4.7",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:29:14.203Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "claude-opus-4.7",
+        "provider_metadata_available": false
+      },
+      "deepseek-manual": {
+        "provider": "manual",
+        "exact_version": "deepseek-expert-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-26T17:29:49.033Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "deepseek-expert-thinking",
+        "provider_metadata_available": false
+      }
+    }
+  }
 }
