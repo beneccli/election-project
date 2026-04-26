@@ -31,6 +31,11 @@ function withCandidatesDir<T>(dir: string, fn: () => T): T {
  * `current/` directory holds the aggregated.json + metadata.json required
  * by the loader. Deliberately does NOT copy the full real tree so
  * destructive mutations stay safely scoped inside the tmp dir.
+ *
+ * The copied root metadata has the `hidden` flag stripped so the fixture
+ * represents a visible candidate; tests that need the hidden behaviour
+ * either re-add the flag explicitly or rely on the real candidates dir.
+ * See docs/specs/candidates/visibility.md.
  */
 function buildTmpFixture(): { dir: string; omegaDir: string } {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "e27-loader-"));
@@ -38,9 +43,13 @@ function buildTmpFixture(): { dir: string; omegaDir: string } {
   const currentDir = path.join(omegaDir, "current");
   fs.mkdirSync(currentDir, { recursive: true });
 
-  fs.copyFileSync(
-    path.join(REAL_OMEGA_DIR, "metadata.json"),
+  const meta = JSON.parse(
+    fs.readFileSync(path.join(REAL_OMEGA_DIR, "metadata.json"), "utf8"),
+  );
+  delete meta.hidden;
+  fs.writeFileSync(
     path.join(omegaDir, "metadata.json"),
+    JSON.stringify(meta, null, 2),
   );
   for (const name of ["aggregated.json", "metadata.json"]) {
     fs.copyFileSync(
@@ -52,29 +61,53 @@ function buildTmpFixture(): { dir: string; omegaDir: string } {
 }
 
 describe("listCandidates", () => {
-  it("returns test-omega from the real candidates directory", () => {
+  it("excludes test-omega from the real candidates dir because it is hidden", () => {
     const entries = withCandidatesDir(REAL_CANDIDATES_DIR, () =>
       listCandidates(),
     );
-    const ids = entries.map((e) => e.id);
-    expect(ids).toContain("test-omega");
-    const omega = entries.find((e) => e.id === "test-omega");
-    expect(omega?.isFictional).toBe(true);
-    expect(omega?.displayName.length).toBeGreaterThan(0);
-    expect(omega?.versionDate).toBe(REAL_OMEGA_VERSION);
+    expect(entries.find((e) => e.id === "test-omega")).toBeUndefined();
+  });
+
+  it("returns test-omega when its `hidden` flag is removed (tmp fixture)", () => {
+    const { dir } = buildTmpFixture();
+    try {
+      const entries = withCandidatesDir(dir, () => listCandidates());
+      const omega = entries.find((e) => e.id === "test-omega");
+      expect(omega).toBeDefined();
+      expect(omega?.isFictional).toBe(true);
+      expect(omega?.versionDate).toBe(REAL_OMEGA_VERSION);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it("excludes a candidate whose metadata sets `hidden: true`", () => {
+    const { dir, omegaDir } = buildTmpFixture();
+    try {
+      const metaPath = path.join(omegaDir, "metadata.json");
+      const meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
+      meta.hidden = true;
+      fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2));
+      const entries = withCandidatesDir(dir, () => listCandidates());
+      expect(entries.find((e) => e.id === "test-omega")).toBeUndefined();
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
   });
 
   it("filters fictional candidates when EXCLUDE_FICTIONAL=1", () => {
+    // Use a tmp fixture where test-omega is visible (no `hidden` flag) so
+    // we exercise the `is_fictional` filter independently of `hidden`.
+    const { dir } = buildTmpFixture();
     const prev = process.env.EXCLUDE_FICTIONAL;
     process.env.EXCLUDE_FICTIONAL = "1";
     try {
-      const entries = withCandidatesDir(REAL_CANDIDATES_DIR, () =>
-        listCandidates(),
-      );
+      const entries = withCandidatesDir(dir, () => listCandidates());
       expect(entries.find((e) => e.id === "test-omega")).toBeUndefined();
     } finally {
       if (prev === undefined) delete process.env.EXCLUDE_FICTIONAL;
       else process.env.EXCLUDE_FICTIONAL = prev;
+      fs.rmSync(dir, { recursive: true, force: true });
     }
   });
 
