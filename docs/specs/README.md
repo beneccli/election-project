@@ -39,6 +39,7 @@ specs/
     ├── candidate-page-polish.md    # Screenshot-worthy section redesigns      [Stable]
     ├── comparison-page.md          # /comparer side-by-side view              [Stable]
     ├── landing-page.md              # / landing page + stakes charts           [Stable]
+    ├── methodology-page.md          # /methodologie public methodology page    [Draft]
     ├── transparency.md             # Transparency drawer                      [Stable]
     └── i18n.md                      # FR canonical + EN translation pipeline   [Stable]
 ```

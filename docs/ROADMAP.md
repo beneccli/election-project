@@ -1,6 +1,6 @@
 # Élection 2027 — Roadmap
 
-> **Last Updated:** April 22, 2026
+> **Last Updated:** April 26, 2026
 > **Status:** Foundation phase
 > **Target:** Full public launch by Q3 2026, with candidates added and updated through election day
 
@@ -67,8 +67,8 @@ Format: `M_<FeatureCluster>`
 | Milestone | Status | Description |
 |-----------|--------|-------------|
 | M_UpdateWorkflow | 📋 Planned | Scripts and docs for "one week later" candidate updates |
-| M_CandidateVisibility | 📋 Planned | Per-candidate `hidden` flag to exclude staged/synthetic candidates from site listings ([`specs/candidates/visibility.md`](specs/candidates/visibility.md)) |
-| M_Methodology | 📋 Planned | Methodology page; how everything works, funding, governance |
+| M_CandidateVisibility | ✅ Done | Per-candidate `hidden` flag to exclude staged/synthetic candidates from site listings ([`specs/candidates/visibility.md`](specs/candidates/visibility.md)) |
+| M_Methodology | � In Progress | Public-facing methodology page (`/methodologie`); pipeline explainer, editorial guardrails, governance / no-funding disclosure ([`specs/website/methodology-page.md`](specs/website/methodology-page.md)) |
 | M_Legal | 📋 Planned | Legal review, election-period compliance, disclosures |
 | M_Accessibility | 📋 Planned | WCAG 2.1 AA, mobile, slow-connection optimization |
 
@@ -566,9 +566,40 @@ Format: `M_<FeatureCluster>`
 
 ### M_Methodology
 
-**Goal:** A dedicated methodology page users can read to understand how every claim on the site was produced.
+**Goal:** A public-facing `/methodologie` page that explains, for a sceptical first-time reader, how the project produces an analysis, the editorial guardrails it enforces, what it deliberately does **not** do, its known limitations, and its governance / no-funding posture. Closes the dead `/methodologie` link in the landing page's `MethodologyBlock` and the candidate-page transparency footer.
 
-**Depends on:** M_Aggregation (needs the methodology to be stable)
+**Depends on:** M_WebsiteCore + M_I18n (needs FR canonical / EN parity routing)
+
+**Status:** 🚧 In Progress. Spike `0140` active (2026-04-26); implementation tasks `0141`–`0145` in `tasks/backlog/M_Methodology/`.
+
+**Spike produces:**
+- `docs/specs/website/methodology-page.md` (finalized **Stable** by spike `0140`)
+- New `METHODOLOGY_*` UI string family in `site/lib/i18n.ts` (task `0141`)
+- Static route shells `site/app/methodologie/page.tsx` + `site/app/[lang]/methodologie/page.tsx` (task `0142`)
+- Eleven section components + `MethodologyPageBody` server component + `methodology-content.ts` static module (task `0143`)
+- Patch hard-coded `/methodologie` hrefs in `MethodologyBlock` + `TransparencyFooter` to flow through `localePath()` (task `0144`)
+- Editorial smoke test on exported HTML (forbidden vocabulary, no candidate names, anchor parity FR/EN) + build smoke (task `0145`)
+
+**Non-negotiables:**
+- Page is candidate-agnostic — no 2027 candidate name appears in any rendered string (enforced by the smoke test in task `0145`).
+- Same forbidden vocabulary list as `/comparer` and `/` editorial regressions — no carve-out for the methodology page.
+- No advocacy framing on motivation: the project is described as an experiment in objective-driven AI analysis, not as a corrective to "biased media".
+- Zero changes to prompts, schemas, aggregation, or candidate data.
+- Governance section discloses plainly: single maintainer, no funding, no political affiliation declared, bus-factor risk acknowledged.
+
+**Key design decisions (spike `0140`):**
+- Server-only rendering. No client islands. The pipeline diagram is a static SVG with mobile-stack fallback.
+- Methodology content is the projection of `docs/specs/` onto a public reader; specs remain the binding source. Spec drift = page drift, not vice versa.
+- Static `EDITORIAL_PRINCIPLES` and `PIPELINE_STAGES` arrays in `methodology-content.ts` give the page a single source-of-truth for ordering and i18n keys.
+- FR canonical at `/methodologie`; EN at `/en/methodologie` — same shell pattern as `/comparer`.
+
+**Scope boundary (what this milestone does NOT cover):**
+- Election-period legal compliance copy (→ M_Legal).
+- Mentions légales / about page / contact form / analytics widget.
+- Full WCAG 2.1 AA audit (→ M_Accessibility); the page reuses existing tokens and is pure HTML/CSS.
+- Changelog page (separate route per `structure.md`).
+- "How to reproduce on another election" tutorial (potential follow-up).
+- Any change to prompts, schemas, aggregation, or candidate-pipeline behaviour.
 
 ---
 
