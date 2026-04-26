@@ -674,6 +674,14 @@ export const UI_STRINGS = {
     fr: "Élection 2027 · Analyse multi-IA des programmes",
     en: "Election 2027 · Multi-AI analysis of programmes",
   },
+  META_METHODOLOGIE_DESCRIPTION: {
+    fr: "Comment ce site produit ses analyses : pipeline, garde-fous éditoriaux, limites, gouvernance.",
+    en: "How this site produces its analyses: pipeline, editorial guardrails, limitations, governance.",
+  },
+  META_METHODOLOGIE_TITLE: {
+    fr: "Méthodologie · Élection 2027",
+    en: "Methodology · Election 2027",
+  },
   META_ROOT_DESCRIPTION: {
     fr: "Analyse transparente multi-IA des programmes des candidats à la présidentielle 2027.",
     en: "Transparent multi-AI analysis of the 2027 French presidential candidate programmes.",
@@ -681,6 +689,270 @@ export const UI_STRINGS = {
   META_ROOT_TITLE: {
     fr: "Élection 2027 — Analyse IA des programmes présidentiels",
     en: "Election 2027 — AI analysis of presidential programmes",
+  },
+  METHODOLOGY_AGGREGATION_BODY: {
+    fr: "Les sorties des modèles sont fusionnées par un méta-modèle désigné, qui produit un agrégat structuré. Chaque énoncé porte un agreement_map indiquant les modèles qui le soutiennent et ceux qui le contestent. Aucune note de positionnement n’est moyennée arithmétiquement. Une revue humaine valide ou rejette chaque agrégation avant publication.",
+    en: "Model outputs are merged by a designated meta-model that produces a structured aggregate. Every claim carries an agreement_map listing the models that support it and those that contest it. No positioning score is arithmetic-mean averaged. A human review validates or rejects each aggregation before publication.",
+  },
+  METHODOLOGY_AGGREGATION_TITLE: {
+    fr: "Comment les modèles sont agrégés",
+    en: "How models are aggregated",
+  },
+  METHODOLOGY_DIMENSIONS_INTRO: {
+    fr: "Chaque programme est analysé sur le même jeu fixe de dimensions, dans le même ordre, avec le même prompt. Si une dimension n’est pas adressée par un programme, « non adressé » est en soi le constat — la dimension n’est jamais retirée pour ce candidat.",
+    en: "Each programme is analysed on the same fixed set of dimensions, in the same order, with the same prompt. If a dimension is not addressed by a programme, “not addressed” is itself the finding — the dimension is never dropped for that candidate.",
+  },
+  METHODOLOGY_DIMENSIONS_TITLE: {
+    fr: "Dimensions analysées",
+    en: "Analytical dimensions",
+  },
+  METHODOLOGY_GOVERNANCE_AFFILIATION: {
+    fr: "Affiliation politique : aucune déclarée. Le code, les prompts et les agrégats sont publics et vérifiables.",
+    en: "Political affiliation: none declared. The code, prompts and aggregates are public and verifiable.",
+  },
+  METHODOLOGY_GOVERNANCE_COST: {
+    fr: "Coût marginal : les appels d’API LLM sont payés par le mainteneur, et exécutés le plus souvent via les modes manuel ou Copilot pour limiter la dépense.",
+    en: "Marginal cost: LLM API calls are paid by the maintainer, and most often executed via the manual or Copilot modes to limit expense.",
+  },
+  METHODOLOGY_GOVERNANCE_FUNDING: {
+    fr: "Financement : aucun. Pas de sponsor, pas de don, pas de subvention, pas de partenariat média.",
+    en: "Funding: none. No sponsor, no donations, no grants, no media partnership.",
+  },
+  METHODOLOGY_GOVERNANCE_MAINTAINER: {
+    fr: "Mainteneur : une seule personne. Projet personnel mené sur du temps libre.",
+    en: "Maintainer: a single person. Side project run on spare time.",
+  },
+  METHODOLOGY_GOVERNANCE_SOURCE: {
+    fr: "Code source ouvert. Toute personne peut auditer la méthodologie ou la reproduire sur d’autres scrutins.",
+    en: "Open source code. Anyone can audit the methodology or reproduce it for other elections.",
+  },
+  METHODOLOGY_GOVERNANCE_TITLE: {
+    fr: "Gouvernance et financement",
+    en: "Governance and funding",
+  },
+  METHODOLOGY_HERO_BODY: {
+    fr: "Ce site est une expérience : peut-on, à l’aide de plusieurs modèles d’IA et de garde-fous éditoriaux stricts, produire une analyse de programmes politiques qui reste utile à des lecteurs aux opinions opposées ? Tous les artefacts (sources, prompts, sorties brutes) sont publics. Le lecteur est invité à vérifier, pas à faire confiance.",
+    en: "This site is an experiment: can multiple AI models and strict editorial guardrails produce a programme analysis that remains useful to readers with opposite opinions? Every artefact (sources, prompts, raw outputs) is public. The reader is invited to verify, not to trust.",
+  },
+  METHODOLOGY_HERO_TAGLINE: {
+    fr: "Une analyse multi-IA, pilotée par l’objectif d’éviter la prise de parti.",
+    en: "A multi-AI analysis driven by the goal of avoiding partisanship.",
+  },
+  METHODOLOGY_HERO_TITLE: {
+    fr: "Pourquoi ce site existe",
+    en: "Why this site exists",
+  },
+  METHODOLOGY_LIMITS_HUMAN: {
+    fr: "Limite humaine. Une seule personne relit chaque sources.md et chaque aggregated.json. Le débit du projet est borné par cette relecture, et le risque bus-factor est connu.",
+    en: "Human limit. A single person reviews every sources.md and every aggregated.json. Project throughput is bounded by that review, and the bus-factor risk is acknowledged.",
+  },
+  METHODOLOGY_LIMITS_MODELS: {
+    fr: "Limites des modèles. Les modèles d’IA partagent une partie de leurs données d’entraînement, de leurs biais de pré-entraînement et d’un fort tropisme anglophone. Agréger plusieurs modèles réduit la variance individuelle ; cela n’élimine pas l’erreur corrélée.",
+    en: "Model limitations. AI models share part of their training data, pretraining biases, and a strong English-corpus skew. Aggregating several models reduces individual variance; it does not eliminate correlated error.",
+  },
+  METHODOLOGY_LIMITS_SOURCES: {
+    fr: "Limites des sources. Le pipeline lit ce que chaque candidat a publié. Un programme éloquent dont les chiffres ne tiennent pas est noté différemment d’un programme épars : ce constat reflète le programme, pas la personne.",
+    en: "Source limitations. The pipeline reads what each candidate has published. An eloquent programme whose figures do not add up grades differently from a sparse programme: this finding reflects the programme, not the person.",
+  },
+  METHODOLOGY_LIMITS_TITLE: {
+    fr: "Limites connues",
+    en: "Known limitations",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_AGGREGATOR: {
+    fr: "Pas un agrégateur de préférences politiques qui vous indique quel candidat correspond à vos opinions.",
+    en: "Not a policy-preference aggregator telling you which candidate matches your opinions.",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_ENDORSEMENT: {
+    fr: "Pas une plate-forme de soutien à un candidat ou à un parti.",
+    en: "Not an endorsement platform for a candidate or party.",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_FACTCHECK: {
+    fr: "Pas un service de fact-checking sur les déclarations en débat ou sur les réseaux.",
+    en: "Not a fact-checking service for debate statements or social-media posts.",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_FUNDED: {
+    fr: "Pas un service financé par un parti, un média, une fondation ou un sponsor.",
+    en: "Not a service funded by a party, a media outlet, a foundation or a sponsor.",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_NEUTRAL: {
+    fr: "Pas une plate-forme « neutre » qui refuse les constats — les constats sont énoncés clairement, sans éditorial superposé.",
+    en: "Not a “neutral” platform that refuses to state findings — findings are stated clearly, without overlaid editorial.",
+  },
+  METHODOLOGY_NOT_THIS_BULLET_VOTING_GUIDE: {
+    fr: "Pas un guide de vote.",
+    en: "Not a voting guide.",
+  },
+  METHODOLOGY_NOT_THIS_TITLE: {
+    fr: "Ce que ce site n’est pas",
+    en: "What this site is not",
+  },
+  METHODOLOGY_PIPELINE_ARTIFACT_LABEL: {
+    fr: "Voir l’artefact",
+    en: "View artefact",
+  },
+  METHODOLOGY_PIPELINE_INTRO: {
+    fr: "Six étapes, chacune liée à un artefact public. Suivre la chaîne permet de remonter de toute affirmation jusqu’à la phrase du programme qui la fonde.",
+    en: "Six steps, each linked to a public artefact. Following the chain lets you trace any claim back to the programme sentence that grounds it.",
+  },
+  METHODOLOGY_PIPELINE_SPEC_LABEL: {
+    fr: "Voir la spécification",
+    en: "View specification",
+  },
+  METHODOLOGY_PIPELINE_STAGE_AGGREGATE_BODY: {
+    fr: "Un méta-modèle agrège les sorties par modèle en un seul aggregated.json structuré, en conservant les désaccords dans un agreement_map. Les notes de positionnement ne sont jamais moyennées.",
+    en: "A meta-model aggregates per-model outputs into a single structured aggregated.json, preserving disagreements in an agreement_map. Positioning scores are never averaged.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_AGGREGATE_TITLE: {
+    fr: "3. Agréger",
+    en: "3. Aggregate",
+  },
+  METHODOLOGY_PIPELINE_STAGE_ANALYZE_BODY: {
+    fr: "Le même prompt versionné est envoyé à plusieurs modèles d’IA en parallèle. Chaque modèle produit un JSON structuré indépendant, stocké tel quel dans raw-outputs/.",
+    en: "The same versioned prompt is sent in parallel to several AI models. Each model produces an independent structured JSON, stored as-is in raw-outputs/.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_ANALYZE_TITLE: {
+    fr: "2. Analyser (× N modèles)",
+    en: "2. Analyse (× N models)",
+  },
+  METHODOLOGY_PIPELINE_STAGE_CONSOLIDATE_BODY: {
+    fr: "Les sources brutes (PDF, pages web, transcriptions) sont consolidées en un document unique sources.md, relu et validé par un humain avant toute analyse.",
+    en: "Raw sources (PDFs, web pages, transcripts) are consolidated into a single sources.md document, reviewed and validated by a human before any analysis runs.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_CONSOLIDATE_TITLE: {
+    fr: "1. Consolider les sources",
+    en: "1. Consolidate sources",
+  },
+  METHODOLOGY_PIPELINE_STAGE_PUBLISH_BODY: {
+    fr: "Une fois la revue humaine terminée, la version est publiée en mettant à jour le lien symbolique current. Le site est rebâti à partir des artefacts validés.",
+    en: "Once human review is complete, the version is published by updating the current symlink. The site is rebuilt from the validated artefacts.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_PUBLISH_TITLE: {
+    fr: "6. Publier",
+    en: "6. Publish",
+  },
+  METHODOLOGY_PIPELINE_STAGE_REVIEW_BODY: {
+    fr: "Une CLI ouvre chaque énoncé contesté ou signalé. Tant qu’un point reste non tranché par un humain, l’étape de publication est bloquée.",
+    en: "A CLI opens every contested or flagged claim. As long as one item remains unresolved by a human, the publish step is blocked.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_REVIEW_TITLE: {
+    fr: "4. Revue humaine",
+    en: "4. Human review",
+  },
+  METHODOLOGY_PIPELINE_STAGE_TRANSLATE_BODY: {
+    fr: "Optionnel. Un prompt dédié traduit uniquement les champs de prose listés dans une liste blanche, sans toucher aux structures ni aux nombres. Le résultat est revu avant ingestion.",
+    en: "Optional. A dedicated prompt translates only the prose fields listed in an allowlist, leaving structures and numbers untouched. The result is reviewed before ingestion.",
+  },
+  METHODOLOGY_PIPELINE_STAGE_TRANSLATE_TITLE: {
+    fr: "5. Traduire (optionnel)",
+    en: "5. Translate (optional)",
+  },
+  METHODOLOGY_PIPELINE_TITLE: {
+    fr: "Comment une analyse est produite",
+    en: "How an analysis is produced",
+  },
+  METHODOLOGY_POSITIONING_BODY: {
+    fr: "Chaque modèle place le programme sur cinq axes (économique, sociétal, institutionnel, environnemental, international) à l’aide d’entiers de −5 à +5. Ces notes sont ordinales : elles indiquent un rang relatif à des figures historiques fixes, pas une distance mesurable. Pour cette raison, le site ne calcule jamais une moyenne arithmétique entre modèles ; il affiche la valeur modale, l’intervalle de consensus, et chaque position individuelle.",
+    en: "Each model places the programme on five axes (economic, societal, institutional, environmental, international) using integers from −5 to +5. These scores are ordinal: they indicate a rank relative to fixed historical anchor figures, not a measurable distance. For that reason, the site never computes an arithmetic mean between models; it displays the modal value, the consensus interval, and each individual position.",
+  },
+  METHODOLOGY_POSITIONING_TITLE: {
+    fr: "Positionnement politique : ordinal, pas cardinal",
+    en: "Political positioning: ordinal, not cardinal",
+  },
+  METHODOLOGY_PRINCIPLES_TITLE: {
+    fr: "Les cinq garde-fous éditoriaux",
+    en: "The five editorial guardrails",
+  },
+  METHODOLOGY_PRINCIPLE_ANALYSIS_EXAMPLE: {
+    fr: "Un programme qui creuse le déficit est décrit comme « augmente l’écart budgétaire de X Md€/an » et non « ruine les finances publiques ».",
+    en: "A programme that widens the deficit is described as “increases the budget gap by €X bn/year”, not as “wrecks the public finances”.",
+  },
+  METHODOLOGY_PRINCIPLE_ANALYSIS_STATEMENT: {
+    fr: "Le site décrit des arbitrages. Le verdict appartient au lecteur.",
+    en: "The site describes tradeoffs. The verdict belongs to the reader.",
+  },
+  METHODOLOGY_PRINCIPLE_ANALYSIS_TITLE: {
+    fr: "Analyse, pas plaidoyer",
+    en: "Analysis, not advocacy",
+  },
+  METHODOLOGY_PRINCIPLE_DISSENT_EXAMPLE: {
+    fr: "Si trois modèles placent un programme à +2 sur l’axe économique et deux le placent à +4, l’écart est affiché tel quel — pas réduit à une moyenne de +2,8.",
+    en: "If three models place a programme at +2 on the economic axis and two place it at +4, the gap is displayed as-is — not reduced to an average of +2.8.",
+  },
+  METHODOLOGY_PRINCIPLE_DISSENT_STATEMENT: {
+    fr: "Lorsque les modèles divergent, le désaccord est conservé dans la structure, pas effacé par une moyenne.",
+    en: "When models diverge, the disagreement is preserved in the structure, not erased by an average.",
+  },
+  METHODOLOGY_PRINCIPLE_DISSENT_TITLE: {
+    fr: "Désaccord préservé",
+    en: "Dissent preserved",
+  },
+  METHODOLOGY_PRINCIPLE_MEASUREMENT_EXAMPLE: {
+    fr: "Une dette intergénérationnelle est exprimée en « X €/personne/an transférés de la cohorte A vers la cohorte B », pas en « vol fait aux jeunes ».",
+    en: "An intergenerational debt is expressed as “€X/person/year transferred from cohort A to cohort B”, not as “theft from the young”.",
+  },
+  METHODOLOGY_PRINCIPLE_MEASUREMENT_STATEMENT: {
+    fr: "Là où une grandeur existe, elle est nommée. Les adjectifs ne remplacent pas les nombres.",
+    en: "Where a quantity exists, it is named. Adjectives do not replace numbers.",
+  },
+  METHODOLOGY_PRINCIPLE_MEASUREMENT_TITLE: {
+    fr: "Mesure, pas réquisitoire",
+    en: "Measurement, not indictment",
+  },
+  METHODOLOGY_PRINCIPLE_SYMMETRY_EXAMPLE: {
+    fr: "Si une note critique est appliquée au programme A sur sa trajectoire de dette, la même grille est appliquée à tous les autres programmes — sans exception, sans atténuation.",
+    en: "If a critical note is applied to programme A on its debt trajectory, the same grid is applied to every other programme — no exception, no softening.",
+  },
+  METHODOLOGY_PRINCIPLE_SYMMETRY_STATEMENT: {
+    fr: "Chaque candidat est analysé sur les mêmes dimensions, avec le même prompt, dans le même ordre.",
+    en: "Each candidate is analysed on the same dimensions, with the same prompt, in the same order.",
+  },
+  METHODOLOGY_PRINCIPLE_SYMMETRY_TITLE: {
+    fr: "Examen symétrique",
+    en: "Symmetric scrutiny",
+  },
+  METHODOLOGY_PRINCIPLE_TRANSPARENCY_EXAMPLE: {
+    fr: "Pour toute affirmation visible sur le site, on peut atteindre en deux clics la phrase d’origine du programme et le JSON brut produit par chaque modèle.",
+    en: "For any claim visible on the site, the originating programme sentence and the raw JSON produced by each model are reachable in two clicks.",
+  },
+  METHODOLOGY_PRINCIPLE_TRANSPARENCY_STATEMENT: {
+    fr: "Sources, prompts, sorties brutes et code sont publics. Tout artefact ayant servi à produire une affirmation est consultable.",
+    en: "Sources, prompts, raw outputs and code are public. Every artefact used to produce a claim is inspectable.",
+  },
+  METHODOLOGY_PRINCIPLE_TRANSPARENCY_TITLE: {
+    fr: "Transparence radicale",
+    en: "Radical transparency",
+  },
+  METHODOLOGY_TOC_TITLE: {
+    fr: "Sommaire",
+    en: "Contents",
+  },
+  METHODOLOGY_TRANSPARENCY_INTRO: {
+    fr: "Tout est public. Voici les points d’entrée pour vérifier n’importe quelle affirmation portée par le site.",
+    en: "Everything is public. Here are the entry points to verify any claim made on the site.",
+  },
+  METHODOLOGY_TRANSPARENCY_LINK_ARTIFACTS: {
+    fr: "Artefacts par version (sources.md, raw-outputs/, aggregated.json, metadata.json)",
+    en: "Per-version artefacts (sources.md, raw-outputs/, aggregated.json, metadata.json)",
+  },
+  METHODOLOGY_TRANSPARENCY_LINK_EDITORIAL: {
+    fr: "Spécification des principes éditoriaux",
+    en: "Editorial principles specification",
+  },
+  METHODOLOGY_TRANSPARENCY_LINK_PAGE_SOURCE: {
+    fr: "Code source de cette page",
+    en: "Source code of this page",
+  },
+  METHODOLOGY_TRANSPARENCY_LINK_PROMPTS: {
+    fr: "Prompts versionnés (analyse, agrégation, traduction) avec leurs hashs SHA256",
+    en: "Versioned prompts (analysis, aggregation, translation) with their SHA256 hashes",
+  },
+  METHODOLOGY_TRANSPARENCY_LINK_REPO: {
+    fr: "Dépôt de code sur GitHub",
+    en: "Code repository on GitHub",
+  },
+  METHODOLOGY_TRANSPARENCY_TITLE: {
+    fr: "Transparence : où vérifier",
+    en: "Transparency: where to verify",
   },
   NAV_HOME: {
     fr: "Accueil",
