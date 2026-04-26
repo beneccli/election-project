@@ -39,7 +39,7 @@ Format: `M_<FeatureCluster>`
 
 ## 📊 Current Status
 
-### 🚧 Phase 1: Foundation (in progress)
+### 🚧 Phase 1: Foundation (completed)
 
 | Milestone | Status | Description |
 |-----------|--------|-------------|
@@ -48,7 +48,7 @@ Format: `M_<FeatureCluster>`
 | M_AnalysisPrompts | ✅ Done | The analysis prompt, schema, inline adversarial pass |
 | M_Aggregation | ✅ Done | Aggregator prompt, agreement_map, dissent preservation, human review CLI |
 | M_AnalysisModes | ✅ Done | Manual web-chat + Copilot-agent execution modes, test-candidate scaffolding, publish guard |
-| M_FirstCandidate | 📋 Planned | End-to-end run on one candidate as proof |
+| M_FirstCandidate | ✅ Done | End-to-end run on one candidate as proof |
 
 ### 📅 Phase 2: Website (planned)
 
@@ -67,6 +67,7 @@ Format: `M_<FeatureCluster>`
 | Milestone | Status | Description |
 |-----------|--------|-------------|
 | M_UpdateWorkflow | 📋 Planned | Scripts and docs for "one week later" candidate updates |
+| M_CandidateVisibility | 📋 Planned | Per-candidate `hidden` flag to exclude staged/synthetic candidates from site listings ([`specs/candidates/visibility.md`](specs/candidates/visibility.md)) |
 | M_Methodology | 📋 Planned | Methodology page; how everything works, funding, governance |
 | M_Legal | 📋 Planned | Legal review, election-period compliance, disclosures |
 | M_Accessibility | 📋 Planned | WCAG 2.1 AA, mobile, slow-connection optimization |
@@ -78,7 +79,7 @@ Format: `M_<FeatureCluster>`
 | M_PublicLaunch | 📋 Planned | First public version |
 | M_CandidateOnboarding | 📋 Planned | Process to add a newly declared candidate |
 | M_DebateIntegration | 📋 Planned | React to debate moments with supplementary analysis |
-| M_I18n | 📋 Planned | English locale: locale-prefixed routes, translatable `aggregated.<lang>.json`, parity validator, translator prompt + manual workflow ([`specs/website/i18n.md`](specs/website/i18n.md)) |
+| M_I18n | ✅ Done | English locale: locale-prefixed routes, translatable `aggregated.<lang>.json`, parity validator, translator prompt + manual workflow ([`specs/website/i18n.md`](specs/website/i18n.md)) |
 
 ---
 
