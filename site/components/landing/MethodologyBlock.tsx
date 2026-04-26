@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 
 const PILL_KEYS = [
   "LANDING_METHOD_PILL_DIVERSITY",
@@ -39,7 +40,7 @@ export default function MethodologyBlock({ lang }: { lang: Lang }) {
         </ul>
         <div className="mt-6">
           <Link
-            href="/methodologie"
+            href={localePath("/methodologie", lang)}
             className="text-sm font-medium text-accent underline decoration-dotted underline-offset-4"
           >
             {t(UI_STRINGS.LANDING_METHOD_LEARN_MORE, lang)}
