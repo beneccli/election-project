@@ -16,6 +16,7 @@ import {
 import { RiskSummaryMatrix } from "@/components/widgets/RiskSummaryMatrix";
 import { useLang } from "@/lib/lang-context";
 import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { Tooltip } from "../widgets/Tooltip";
 
 function dimensionLabel(key: DimensionKey, lang: Lang): string {
   switch (key) {
@@ -55,7 +56,16 @@ export function RisquesSection({
     >
       <SectionHead label={t(UI_STRINGS.RISQUES_SECTION_LABEL, lang)} />
       <p className="mb-8 max-w-3xl text-base leading-[1.6] text-text-secondary">
-        {t(UI_STRINGS.RISQUES_INTRO_BODY, lang)}
+        {t(UI_STRINGS.RISQUE_BUDGETARY_INTRO_BODY, lang)}{' '}
+        {t(UI_STRINGS.RISQUE_IMPLEMENTATION_INTRO_BODY, lang)}{' '}
+        {t(UI_STRINGS.RISQUE_DEPENDENCY_INTRO_BODY, lang)}
+        <Tooltip
+          as="span"
+          content={t(UI_STRINGS.RISQUE_DEPENDENCY_NOTE, lang)}
+        >
+          <span className="mx-2 font-bold text-xs text-text-tertiary opacity-50 hover:opacity-100 border border-text-tertiary rounded-full px-1">?</span>
+        </Tooltip>
+        {t(UI_STRINGS.RISQUE_REVERSIBILITY_INTRO_BODY, lang)}
       </p>
       <RiskSummaryMatrix dimensions={aggregated.dimensions} lang={lang} />
 

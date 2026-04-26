@@ -999,8 +999,30 @@ export const UI_STRINGS = {
     en: "Full list",
   },
   RISQUES_INTRO_BODY: {
-    fr: "Lecture synthétique du profil de risque du programme, par domaine et par catégorie de risque. Les niveaux sont ordinaux (Faible, Limité, Modéré, Élevé) et rapportés par modèle — aucun score cardinal agrégé. Les divergences entre modèles sont signalées par ⚡.",
-    en: "A synthetic view of the programme’s risk profile, by domain and risk category. Levels are ordinal (Low, Limited, Moderate, High) and reported per model — no aggregated cardinal score. Disagreements between models are flagged with ⚡.",
+    fr: "Budgétaire : coût potentiel non financé. Mise en œuvre : complexité d'exécution. Dépendance : risque de lock-in*. Réversibilité : probabilité qu'une majorité adverse révoque la mesure.",
+    en: "Budgetary: potential unfunded cost. Implementation: complexity of execution. Dependency: risk of lock-in. Reversibility: probability that an opposing majority will revoke the measure.",
+    // fr: "Lecture synthétique du profil de risque du programme, par domaine et par catégorie de risque. Les niveaux sont ordinaux (Faible, Limité, Modéré, Élevé) et rapportés par modèle — aucun score cardinal agrégé. Les divergences entre modèles sont signalées par ⚡.",
+    // en: "A synthetic view of the programme’s risk profile, by domain and risk category. Levels are ordinal (Low, Limited, Moderate, High) and reported per model — no aggregated cardinal score. Disagreements between models are flagged with ⚡.",
+  },
+  RISQUE_BUDGETARY_INTRO_BODY: {
+    fr: "Budgétaire : coût potentiel non financé.",
+    en: "Budgetary: potential unfunded cost.",
+  },
+  RISQUE_IMPLEMENTATION_INTRO_BODY: {
+    fr: "Mise en œuvre : complexité d'exécution.",
+    en: "Implementation: complexity of execution.",
+  },
+  RISQUE_DEPENDENCY_INTRO_BODY: {
+    fr: "Dépendance : risque de lock-in*.",
+    en: "Dependency: risk of lock-in.",
+  },
+  RISQUE_REVERSIBILITY_INTRO_BODY: {
+    fr: "Réversibilité : probabilité qu'une majorité adverse révoque la mesure.",
+    en: "Reversibility: probability that an opposing majority will revoke the measure.",
+  },
+  RISQUE_DEPENDENCY_NOTE: {
+    fr: "* Le « risque de lock-in » (ou effet d'enfermement) désigne une situation où une décision ou un investissement public crée une dépendance si forte envers une technologie, un acteur privé ou un État tiers, qu'il devient juridiquement, financièrement ou techniquement très difficile, voire impossible, de faire marche arrière ou de changer de fournisseur par la suite.",
+    en: "* The \"lock-in risk\" (or lock-in effect) refers to a situation where a public decision or investment creates such a strong dependence on a technology, a private actor or a third state that it becomes legally, financially or technically very difficult, or even impossible, to reverse course or change suppliers later."
   },
   RISQUES_SECTION: {
     fr: "Risques",

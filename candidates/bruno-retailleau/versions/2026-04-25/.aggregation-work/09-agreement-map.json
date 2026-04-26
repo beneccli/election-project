@@ -2,135 +2,115 @@
   "agreement_map": {
     "high_confidence_claims": [
       {
-        "claim_id": "program_is_supply_side_labor_cost_centric",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "40 Md€ d'allègements ciblés (cotisations + impôts de production)",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "savings_envelope_28_5_to_31_7_bn_per_year_restituted",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "30 Md€ d'économies via réforme assurance chômage et plafonnement aides non contributives à 70% SMIC",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "no_explicit_debt_reduction_target",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "Le Chat", "qwen3.6"]
+        "claim_id": "Absence de trajectoire pluriannuelle chiffrée de déficit/dette publique",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "csu_cap_at_70pct_smic_reduces_aid_for_capped_households",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "Suppression du ZAN, du principe de précaution (révision constitutionnelle référendaire) et arrêt des soutiens publics aux nouvelles capacités ENR",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "renewed_cumul_emploi_retraite_benefits_active_seniors",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "Objectif 400 TWh/an de nucléaire avec contrats long terme à 30 TWh/an pour les électro-intensifs",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "removal_of_24h_weekly_floor_for_part_time_work",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "Le Chat"]
+        "claim_id": "Aucune trajectoire chiffrée d'émissions de gaz à effet de serre",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "program_silent_on_climate_biodiversity_water_agriculture",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "Silence des sources sur la santé, le logement résidentiel, l'éducation générale et la défense",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "program_silent_on_internal_security_defense_immigration",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "qwen3.6"]
+        "claim_id": "Cumul emploi-retraite rénové et exonération anticipée pour seniors ayant validé tous leurs trimestres",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "no_constitutional_or_electoral_reform",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "Création du Revenu d'incitation à l'activité (RIA, fusion RSA + prime d'activité + ASS) avec dégressivité 30%",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "program_changes_economic_and_social_trajectory",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "gemini-1.5-pro", "Le Chat", "qwen3.6"]
+        "claim_id": "Réorientation des aides à l'apprentissage vers infra-Bac+2 et industrie",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       },
       {
-        "claim_id": "overtime_zero_contribution_above_1623h_threshold",
-        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-chat", "Le Chat", "qwen3.6"]
+        "claim_id": "Réautorisation de néonicotinoïdes (acétamipride) et inscription de l'agriculture comme intérêt fondamental",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Recentrage du Code du travail sur 50 principes indépassables et autorité indépendante de veto sur les normes",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"]
+      },
+      {
+        "claim_id": "Absence de réforme paramétrique des retraites; étage de capitalisation volontaire seul levier sur le long terme",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
       }
     ],
     "contested_claims": [
       {
-        "claim_id": "intergenerational_net_transfer_direction",
+        "claim_id": "Position sur l'axe social/culturel",
         "positions": [
-          { "model": "gpt-5.5-thinking", "position": "mixed — effets dépendent surtout du statut sur le marché du travail, peu du clivage générationnel" },
-          { "model": "claude-opus-4-7", "position": "mixed — gains pour actifs jeunes employés et seniors actifs ; pertes pour bénéficiaires plafonnés ; transfert temporel défavorable aux jeunes via climat" },
-          { "model": "deepseek-chat", "position": "young_to_old — coupe nette des aides sociales aux actifs précaires (~15 Md€/an) tandis que pensions des retraités préservées et exonérations seniors créées" },
-          { "model": "gemini-1.5-pro", "position": "mixed — net positif pour jeunes employés et seniors prêts à prolonger ; net négatif pour jeunes en chômage précoce ou dépendants des minima sociaux" },
-          { "model": "Le Chat", "position": "old_to_young — gain de pouvoir d'achat ~+1 500 €/personne/an pour les actifs sous 35 ans, retraités neutres" },
-          { "model": "qwen3.6", "position": "mixed — positif pour actifs jeunes via heures sup ; neutre à négatif pour jeunes inactifs ; positif pour seniors prolongeant" }
+          { "model": "gpt-5.5-thinking", "position": "score 1 — droite modérée, fondé sur conditionnalité de l'assistance sans virage identitaire explicite" },
+          { "model": "claude-opus-4-7", "position": "score 2 — droite affirmée, conditionnalité forte de l'assistance" },
+          { "model": "deepseek-manual", "position": "score 3 — droite traditionnelle, conditionnalité et inscription d'intérêts fondamentaux" },
+          { "model": "gemini-1.5-pro", "position": "score 3 — droite traditionnelle structurée autour du travail" },
+          { "model": "qwen3.6", "position": "score 2 — conservatisme social modéré, pas d'agenda culturel explicite" }
         ]
       },
       {
-        "claim_id": "environmental_long_term_grade",
+        "claim_id": "Direction du transfert intergénérationnel net",
         "positions": [
-          { "model": "gpt-5.5-thinking", "position": "NOT_ADDRESSED — programme ne spécifie pas de mesures climat, biodiversité, eau, énergie ou adaptation" },
-          { "model": "claude-opus-4-7", "position": "NOT_ADDRESSED — silence + objectif productif sans cadre carbone" },
-          { "model": "deepseek-chat", "position": "NOT_ADDRESSED — aucun axe environnemental dans le document" },
-          { "model": "gemini-1.5-pro", "position": "NOT_ADDRESSED — aucune référence climat / énergie / biodiversité" },
-          { "model": "Le Chat", "position": "F — l'absence vaut position au regard des engagements de la France (-55% en 2030, Accord de Paris)" },
-          { "model": "qwen3.6", "position": "NOT_ADDRESSED — exclusivement productiviste, aucun engagement vert" }
+          { "model": "gpt-5.5-thinking", "position": "mixed — gains pour seniors actifs et actifs faisant des heures sup., dette différée" },
+          { "model": "claude-opus-4-7", "position": "mixed — bénéfices concentrés sur seniors actifs et actifs, dette climatique reportée" },
+          { "model": "deepseek-manual", "position": "mixed — non quantifiable globalement; gains seniors actifs vs dette climatique différée" },
+          { "model": "gemini-1.5-pro", "position": "young_to_old — exonérations seniors et baisse aides apprentissage du supérieur l'emportent" },
+          { "model": "qwen3.6", "position": "mixed — gains diffus avec coûts d'adaptation différés sur les jeunes" }
         ]
       },
       {
-        "claim_id": "security_sovereignty_grade",
+        "claim_id": "Magnitude du transfert intergénérationnel",
         "positions": [
-          { "model": "gpt-5.5-thinking", "position": "D — la production et la balance commerciale sont traitées ; défense, immigration, police, énergie et alimentation sont absents" },
-          { "model": "claude-opus-4-7", "position": "NOT_ADDRESSED — silence sur sécurité intérieure, immigration, défense, énergie, souveraineté industrielle" },
-          { "model": "deepseek-chat", "position": "NOT_ADDRESSED — aucune mesure régalienne ou de souveraineté" },
-          { "model": "gemini-1.5-pro", "position": "NOT_ADDRESSED — aucune mesure sécurité, défense, frontières" },
-          { "model": "Le Chat", "position": "B — la baisse du coût du travail et la réforme chômage constituent une politique de souveraineté économique" },
-          { "model": "qwen3.6", "position": "NOT_ADDRESSED — silence régalien complet" }
+          { "model": "gpt-5.5-thinking", "position": "qualitative + cas-types €/an, pas de magnitude globale" },
+          { "model": "claude-opus-4-7", "position": "+500 €/an sur heures sup; -410 €/mois pour ménages précaires plafonnés CSU; pas d'agrégation" },
+          { "model": "deepseek-manual", "position": "non quantifiable au niveau macroéconomique faute de bouclage" },
+          { "model": "gemini-1.5-pro", "position": "magnitude qualifiée de variable, sans estimation centrale" },
+          { "model": "qwen3.6", "position": "ordre de grandeur ~800 €/personne/an pour les bénéficiaires nets, sans agrégation" }
         ]
       },
       {
-        "claim_id": "institutional_democratic_grade",
+        "claim_id": "Note de la dimension institutionnelle/démocratique",
         "positions": [
-          { "model": "gpt-5.5-thinking", "position": "C — le CSU constitue un registre social inter-organismes et la gouvernance Unédic-France Travail est rééquilibrée" },
-          { "model": "claude-opus-4-7", "position": "D — une seule mesure institutionnelle (gouvernance Unédic) ; pas de doctrine plus large" },
-          { "model": "deepseek-chat", "position": "NOT_ADDRESSED — aucune réforme institutionnelle ou démocratique" },
-          { "model": "gemini-1.5-pro", "position": "C — rééquilibrage gouvernance Unédic et centralisation des données sociales" },
-          { "model": "Le Chat", "position": "NOT_ADDRESSED — pas de réforme institutionnelle ou démocratique" },
-          { "model": "qwen3.6", "position": "NOT_ADDRESSED — silence institutionnel hors gouvernance Unédic" }
+          { "model": "gpt-5.5-thinking", "position": "C — verrouillage institutionnel risqué mais cohérent" },
+          { "model": "claude-opus-4-7", "position": "C — révisions constitutionnelles référendaires posent risque de rigidification" },
+          { "model": "deepseek-manual", "position": "D — cumul des révisions constitutionnelles et de l'autorité indépendante crée un risque démocratique" },
+          { "model": "gemini-1.5-pro", "position": "B — clarté procédurale et mandats référendaires sont jugés démocratiques" },
+          { "model": "qwen3.6", "position": "C — équilibre entre clarté et concentration du pouvoir normatif" }
         ]
       },
       {
-        "claim_id": "counterfactual_direction_of_change",
+        "claim_id": "Note de la dimension sécurité/souveraineté",
         "positions": [
-          { "model": "gpt-5.5-thinking", "position": "mixed — change la trajectoire travail/social, ne change pas santé/éducation/logement/climat" },
-          { "model": "claude-opus-4-7", "position": "mixed — amélioration sur emploi/compétitivité, dégradation sur foyers à fortes prestations cumulées, neutralité-par-silence ailleurs" },
-          { "model": "deepseek-chat", "position": "mixed — gains de compétitivité, réduction des filets de sécurité pour les plus vulnérables" },
-          { "model": "gemini-1.5-pro", "position": "improvement — réallocation massive du PIB de la protection sociale vers salaires directs et marges" },
-          { "model": "Le Chat", "position": "improvement — infléchit la dette via consolidation, améliore cohésion sociale en réduisant la dépendance" },
-          { "model": "qwen3.6", "position": "mixed — modifie incitations marché du travail et distribution des aides ; silences ailleurs" }
-        ]
-      },
-      {
-        "claim_id": "ecological_axis_score",
-        "positions": [
-          { "model": "gpt-5.5-thinking", "position": "-1 — productiviste sans politique écologique" },
-          { "model": "claude-opus-4-7", "position": "-1 — productiviste explicite sans cadre carbone" },
-          { "model": "deepseek-chat", "position": "-2 — productiviste avec aggravation implicite via heures sup non conditionnées" },
-          { "model": "gemini-1.5-pro", "position": "0 — silence éco interprété comme position neutre" },
-          { "model": "Le Chat", "position": "-1 — productiviste différant la transition" },
-          { "model": "qwen3.6", "position": "-3 — exclusivement productiviste, aucun engagement vert, position fortement anti-écologique" }
-        ]
-      },
-      {
-        "claim_id": "overall_spectrum_label",
-        "positions": [
-          { "model": "gpt-5.5-thinking", "position": "droite — supply-side, baisse coût du travail, durcissement chômage, registre social" },
-          { "model": "claude-opus-4-7", "position": "droite — orthodoxie LR classique : compétitivité, ordre social, cumul emploi-retraite" },
-          { "model": "deepseek-chat", "position": "droite — programme libéral conservateur centré sur travail/responsabilité individuelle" },
-          { "model": "gemini-1.5-pro", "position": "droite — durcissement social et baisse des charges" },
-          { "model": "Le Chat", "position": "centre_droit — réformes pragmatiques sans rupture institutionnelle ou identitaire" },
-          { "model": "qwen3.6", "position": "droite — orientation supply-side et durcissement social" }
+          { "model": "gpt-5.5-thinking", "position": "B — souveraineté énergétique et industrielle bien articulée" },
+          { "model": "claude-opus-4-7", "position": "C — cohérence du volet souveraineté mais douanes à effectifs constants" },
+          { "model": "deepseek-manual", "position": "C — souveraineté productive renforcée mais zones d'ombre sur défense et immigration" },
+          { "model": "gemini-1.5-pro", "position": "C — défense et police absentes" },
+          { "model": "qwen3.6", "position": "B — réciprocité et nucléaire forment un cadre de souveraineté solide" }
         ]
       }
     ],
     "coverage": {
       "gpt-5.5-thinking": "complete",
       "claude-opus-4-7": "complete",
-      "deepseek-chat": "complete",
+      "deepseek-manual": "complete",
       "gemini-1.5-pro": "complete",
-      "Le Chat": "complete",
       "qwen3.6": "complete"
     },
     "positioning_consensus": {
@@ -140,33 +120,38 @@
         "dissent_count": 1
       },
       "social_cultural": {
-        "interval": [1, 2],
-        "modal": 2,
-        "dissent_count": 1
+        "interval": [1, 3],
+        "modal": null,
+        "dissent_count": 5
       },
       "sovereignty": {
-        "interval": [0, 2],
-        "modal": 1,
-        "dissent_count": 3
+        "interval": [2, 3],
+        "modal": 3,
+        "dissent_count": 2
       },
       "institutional": {
-        "interval": [-1, 0],
-        "modal": -1,
+        "interval": [-1, 2],
+        "modal": 1,
         "dissent_count": 2
       },
       "ecological": {
-        "interval": [-3, 0],
-        "modal": -1,
-        "dissent_count": 3
+        "interval": [-4, -2],
+        "modal": -2,
+        "dissent_count": 2
       },
       "overall_spectrum": {
         "modal_label": "droite",
-        "distribution": {
-          "droite": 5,
-          "centre_droit": 1
-        },
-        "dissent_count": 1
+        "distribution": { "droite": 5 },
+        "dissent_count": 0
       }
     }
-  }
+  },
+  "flagged_for_review": [
+    {
+      "claim": "Le fichier raw-output deepseek-manual.json déclare model.provider='anthropic' et model.version='claude-opus-4-7', identique aux métadonnées de claude-manual.json.",
+      "claimed_by": ["deepseek-manual"],
+      "issue": "Erreur d'attestation manuelle: deux raw-outputs partagent le même identifiant modèle, ce qui empêcherait une coverage par identifiant unique. L'agrégation utilise l'identifiant 'deepseek-manual' (déduit du nom de fichier) pour préserver la séparation des contributions et éviter une collision dans agreement_map.coverage.",
+      "suggested_action": "L'opérateur doit ré-attester le raw-output deepseek avec les métadonnées correctes (provider='deepseek', version effective du modèle utilisé) avant ré-ingestion."
+    }
+  ]
 }

@@ -7,66 +7,55 @@
     "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "prompt_version": "0.1",
     "models": {
-      "deepseek-manual": {
-        "provider": "manual",
-        "exact_version": "deepseek-expert-deep-thinking",
-        "temperature": 0,
-        "run_at": "2026-04-25T07:08:02.601Z",
-        "status": "success",
-        "execution_mode": "manual-webchat",
-        "attested_by": "benoit",
-        "attested_model_version": "deepseek-expert-deep-thinking",
-        "provider_metadata_available": false
-      },
-      "claude-manual": {
-        "provider": "manual",
-        "exact_version": "claude-opus-4.7",
-        "temperature": 0,
-        "run_at": "2026-04-25T07:09:56.019Z",
-        "status": "success",
-        "execution_mode": "manual-webchat",
-        "attested_by": "benoit",
-        "attested_model_version": "claude-opus-4.7",
-        "provider_metadata_available": false
-      },
       "gemini-manual": {
         "provider": "manual",
         "exact_version": "gemini-3-pro",
         "temperature": 0,
-        "run_at": "2026-04-25T07:10:22.997Z",
+        "run_at": "2026-04-25T19:01:45.063Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
         "attested_model_version": "gemini-3-pro",
         "provider_metadata_available": false
       },
-      "mistral-manual": {
-        "provider": "manual",
-        "exact_version": "mistral-thinking",
-        "temperature": 0,
-        "run_at": "2026-04-25T07:14:06.871Z",
-        "status": "success",
-        "execution_mode": "manual-webchat",
-        "attested_by": "benoit",
-        "attested_model_version": "mistral-thinking",
-        "provider_metadata_available": false
-      },
       "qwen-manual": {
         "provider": "manual",
-        "exact_version": "qwen3.6-Max-Preview",
+        "exact_version": "qwen3.6-Max-Preview-thinking",
         "temperature": 0,
-        "run_at": "2026-04-25T07:14:31.860Z",
+        "run_at": "2026-04-25T19:02:50.123Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
-        "attested_model_version": "qwen3.6-Max-Preview",
+        "attested_model_version": "qwen3.6-Max-Preview-thinking",
+        "provider_metadata_available": false
+      },
+      "claude-manual": {
+        "provider": "manual",
+        "exact_version": "claude-opus-4.7",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:03:52.997Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "claude-opus-4.7",
+        "provider_metadata_available": false
+      },
+      "deepseek-manual": {
+        "provider": "manual",
+        "exact_version": "deepseek-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:07:23.415Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "deepseek-thinking",
         "provider_metadata_available": false
       },
       "chatgpt-manual": {
         "provider": "manual",
         "exact_version": "chatgpt-5.5-thinking-extended",
         "temperature": 0,
-        "run_at": "2026-04-25T07:15:28.566Z",
+        "run_at": "2026-04-25T19:10:04.727Z",
         "status": "success",
         "execution_mode": "manual-webchat",
         "attested_by": "benoit",
@@ -82,7 +71,7 @@
     "aggregator_model": {
       "provider": "copilot",
       "exact_version": "claude-opus-4-7",
-      "run_at": "2026-04-25T07:44:53.213Z",
+      "run_at": "2026-04-26T01:56:17.261Z",
       "execution_mode": "copilot-agent",
       "attested_by": "copilot-aggregator",
       "attested_model_version": "claude-opus-4-7",
@@ -90,6 +79,6 @@
     },
     "human_review_completed": true,
     "reviewer": "benoit",
-    "reviewed_at": "2026-04-25T07:44:59.434Z"
+    "reviewed_at": "2026-04-26T01:56:28.122Z"
   }
 }

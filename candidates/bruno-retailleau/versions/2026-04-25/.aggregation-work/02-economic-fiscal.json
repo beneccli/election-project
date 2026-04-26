@@ -1,0 +1,250 @@
+{
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "40 Md€ d'allègements ciblés (entreprises, heures travaillées) gagés sur 30 Md€ d'économies (assistance, chômage); bouclage non démontré.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Programme économique très structuré sur travail, entreprises et production, mais sans trajectoire de déficit consolidée." },
+          { "model": "claude-opus-4-7", "text": "30 Md€ redistribués au travail et 40 Md€ d'allègements de prélèvements, financés par économies sur l'assistance et le chômage; trajectoire de dette non chiffrée." },
+          { "model": "deepseek-manual", "text": "Restitution de 30 Md€ aux salariés/entreprises via économies sur le chômage et les aides sociales, sans trajectoire complète de finances publiques." },
+          { "model": "gemini-1.5-pro", "text": "Baisse de 40 Md€ des prélèvements sur les entreprises et déréglementation du temps de travail." },
+          { "model": "qwen3.6", "text": "Baisse de 40 Md€ de prélèvements sur la production et le travail, financée par 30 Md€ d'économies sur l'assurance chômage et les aides." }
+        ]
+      },
+      "summary": "Le programme combine un seuil zéro cotisation au-delà de 1 623 heures, la suppression de la CVAE, C3S et CFE industrielle (~15 Md€), une refonte des aides via le RIA et le Compte social unique (plafond 70% du SMIC) et une réforme de l'assurance chômage (12,5–15,7 Md€ d'économies). L'ensemble vise 40 Md€ d'allègements gagés sur 30 Md€ d'économies, soit un écart de financement d'environ 10 Md€ non explicité. Aucune trajectoire pluriannuelle de déficit ou de dette publique n'est fournie; le bouclage suppose des effets dynamiques (heures supplémentaires, retour à l'emploi, hausse mécanique d'IS) non modélisés.",
+      "problems_addressed": [
+        {
+          "problem": "Coût du travail et handicap fiscal des entreprises",
+          "approach": "Seuil zéro cotisation au-delà de 1 623 h, baisse des cotisations patronales non contributives, suppression CVAE, C3S, CFE industrielle et forfait social, pour ~40 Md€ (25 Md€ coût du travail + 15 Md€ impôts de production).",
+          "strength": 0.75,
+          "source_refs": ["sources.md#proposition-5-prelevements", "sources.md#produire-plus", "sources.md#travail-gagnant"],
+          "reasoning": "Mesures chiffrées et articulées à un diagnostic quantifié du handicap fiscal de 67 Md€; cinq modèles convergent sur l'identification et l'ampleur des allègements.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Trappes à inactivité et empilement des aides sociales",
+          "approach": "Création du Revenu d'incitation à l'activité (RIA, fusion RSA + prime d'activité + ASS) et du Compte Social Unique plafonnant l'ensemble des aides non contributives à 70% du SMIC net par adulte.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#proposition-2-ria", "sources.md#proposition-4-csu"],
+          "reasoning": "Mécanique précise (recensement, plafond, allocation socle 300 €/insertion 250 €) avec exemples chiffrés; économies estimées 2 Md€ (RIA) et 10 Md€ (CSU).",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Déséquilibre de l'assurance chômage",
+          "approach": "Application des règles de juin 2024, plafonnement et limitation à 6 mois pour ruptures conventionnelles, alignement des frontaliers, fin des stratégies d'alternance.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#proposition-5-chomage"],
+          "reasoning": "Économies chiffrées 12,5–15,7 Md€/an; corrige des dérives documentées avec exemples cas-type.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Emploi des seniors",
+          "approach": "Cumul emploi-retraite rénové et exonération anticipée pour seniors ayant validé tous leurs trimestres.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#proposition-3-seniors"],
+          "reasoning": "Diagnostic précis (taux d'emploi 36% vs 60% en Europe) et mesure incitative chiffrée par cas-type.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Friction sur la transmission du capital productif",
+          "approach": "Imposition zéro sur la transmission de capital productif tant que l'activité économique se poursuit.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#proposition-11-transmission-capital"],
+          "reasoning": "Mécanisme défère l'imposition indéfiniment sauf liquidation des actifs.",
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de dette publique et de retour à l'équilibre du déficit (~175 Md€, 116% du PIB)",
+          "significance": "Le diagnostic cite dette et déficit, mais aucun sentier pluriannuel de dette/PIB, charge d'intérêt, solde primaire ou calendrier de retour à l'équilibre n'est fourni. Les cinq modèles relèvent cette absence.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Réforme paramétrique des retraites par répartition",
+          "significance": "Le programme évoque un étage de capitalisation mais n'aborde ni l'âge légal, ni la durée de cotisation, ni les taux ou l'équilibre du régime par répartition.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Incidence redistributive par décile / âge / patrimoine",
+          "significance": "Les exemples chiffrent certains ménages et salariés-types, mais pas l'impact net agrégé par revenu, patrimoine, âge ou statut d'emploi.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Logement et accès au foncier résidentiel",
+          "significance": "Le logement n'est traité qu'incidemment via le plafonnement des aides au logement; aucune mesure d'offre, de fiscalité immobilière ou de zonage résidentiel.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Solde budgétaire de court terme",
+          "mechanism": "Les 40 Md€ d'allègements de prélèvements sont supposés gagés sur 30 Md€ d'économies (chômage, CSU, RIA), créant un écart de financement explicite d'~10 Md€; les baisses d'impôts de production interviennent immédiatement alors que les économies comportementales se matérialisent à moyen terme.",
+          "severity": 0.6,
+          "source_refs": ["sources.md#proposition-5-prelevements", "sources.md#impact-finances-publiques", "sources.md#travail-gagnant", "sources.md#produire-plus"],
+          "reasoning": "Cinq modèles convergent: la cohérence dépend des recettes de croissance, de l'emploi et des économies effectives, non démontrées par une maquette macrofiscale.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Concentration patrimoniale intergénérationnelle",
+          "mechanism": "L'exonération de transmission du capital productif retire un mécanisme majeur d'imposition des transferts patrimoniaux entre générations.",
+          "severity": 0.6,
+          "source_refs": ["sources.md#proposition-11-transmission-capital"],
+          "reasoning": "Favorise les détenteurs actuels d'actifs productifs et accroît mécaniquement la concentration du capital.",
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Économies Unédic et CSU inférieures aux annonces si comportements de retour à l'emploi insuffisants",
+          "probability": 0.55,
+          "severity": 0.6,
+          "reasoning": "Les montants annoncés (12,5–15,7 Md€ chômage, 10 Md€ CSU) dépendent des contrôles, de l'agrégation effective des aides et de la réinsertion; la résistance sociale et juridique au plafonnement (-410 €/mois pour certains foyers) est probable.",
+          "source_refs": ["sources.md#travail-gagnant", "sources.md#proposition-4-csu"],
+          "supported_by": ["gpt-5.5-thinking", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "risk": "Recettes IS et compensations dynamiques conditionnées à des hypothèses de croissance",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "4 Md€ de hausse mécanique d'IS et la compensation du seuil zéro cotisation supposent une élasticité de l'offre de travail (104 h/an supplémentaires moyennes) et un retour à la rentabilité agrégée non garantis.",
+          "source_refs": ["sources.md#impact-finances-publiques", "sources.md#proposition-1-zero-cotisation"],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Construction du Compte Social Unique exigeant interopérabilité État/CAF/collectivités",
+          "probability": 0.7,
+          "severity": 0.5,
+          "reasoning": "Le programme reconnaît qu'aucun outil consolidé n'existe; l'agrégation des aides locales et en nature relève d'un chantier informatique pluriannuel.",
+          "source_refs": ["sources.md#proposition-4-csu"],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Seuil zéro cotisation au-delà de 1 623 heures annuelles",
+          "source_ref": "sources.md#proposition-1-zero-cotisation",
+          "quantified": true,
+          "magnitude": "~11 Md€ de gain pour les entreprises; baisse de 35% du coût horaire au-delà du seuil; ~500 €/an pour un salarié médian",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression CVAE, C3S, CFE industrielle, forfait social",
+          "source_ref": "sources.md#proposition-5-prelevements",
+          "quantified": true,
+          "magnitude": "~15 Md€/an d'allègements d'impôts de production",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Compte Social Unique plafonnant les aides à 70% du SMIC net par adulte",
+          "source_ref": "sources.md#proposition-4-csu",
+          "quantified": true,
+          "magnitude": "~10 Md€ d'économies attendues",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "measure": "Réforme assurance chômage (règles juin 2024, plafonnement ruptures conventionnelles, alignement frontaliers)",
+          "source_ref": "sources.md#proposition-5-chomage",
+          "quantified": true,
+          "magnitude": "12,5 à 15,7 Md€/an",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité et ASS",
+          "source_ref": "sources.md#proposition-2-ria",
+          "quantified": true,
+          "magnitude": "Allocation socle 300 €/mois + insertion 250 €/mois si 15 h d'activité; ~2 Md€ d'économies",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Bouclage 40 Md€ d'allègements vs 30 Md€ d'économies non démontré; sensibilité forte aux hypothèses de retour à l'emploi et de croissance.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": ["gpt-5.5-thinking", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Plusieurs économies sont chiffrées mais le solde public net n'est pas consolidé." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Bouclage 30 Md€ d'économies vs 40 Md€ d'allègements non démontré au niveau macro; sensibilité forte aux hypothèses de retour à l'emploi." },
+            { "model": "deepseek-manual", "level": "high", "note": "Compensation partiellement hypothétique des exonérations, et baisses d'impôts de production non gagées sur des économies structurelles détaillées." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Tax cuts (€40bn) exceed explicit savings (€30bn); relies on dynamic growth effects." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Self-financing claimed but depends on employment elasticity and growth multipliers." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Mise en place CSU et fusion d'aides en RIA exigent des chantiers informatiques et juridiques pluriannuels; refonte du Code du travail (50 principes) lourde.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": ["qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Réformes fiscales, sociales, Unédic et droit du travail demandent coordination législative et administrative." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Mise en place du CSU et fusion d'aides en RIA exigent des chantiers informatiques et juridiques pluriannuels." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Nécessite la création d'un Compte Social Unique (système d'information inter-administrations) et la refonte de plusieurs prestations." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Requires heavy legislative overhaul of the Labor Code (50 principles)." },
+            { "model": "qwen3.6", "level": "high", "note": "Requires major payroll system updates and tax code restructuring." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Dépend de la réaction des employeurs et salariés, de l'acceptabilité sociale, et de la non-transposition européenne de nouvelles charges.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "qwen3.6"],
+          "dissenters": ["deepseek-manual", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépend de la réaction des employeurs, salariés, chômeurs, collectivités et partenaires européens." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Allègement réel du coût du travail dépend de la non-transposition européenne de nouvelles charges sociales." },
+            { "model": "deepseek-manual", "level": "limited", "note": "Peu de dépendances extérieures directes, sauf acceptabilité sociale et syndicale pour les réformes du travail." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Most fiscal and labor levers are purely domestic." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Relies on firm demand for extra hours and EU state-aid compatibility." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Mesures fiscales et sociales révocables par lois de finances ou de financement de la sécurité sociale ultérieures.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": ["deepseek-manual", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Les baisses d'impôts et règles sociales sont réversibles par lois ultérieures mais créent des attentes fortes." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Mesures fiscales et sociales révocables par majorité parlementaire suivante, hors révisions constitutionnelles." },
+            { "model": "deepseek-manual", "level": "low", "note": "Les exonérations de cotisations et le plafonnement des aides peuvent être modifiés par une loi de finances ou de financement de la sécurité sociale ultérieure." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Tax cuts and code modifications can be reversed by future majorities." },
+            { "model": "qwen3.6", "level": "limited", "note": "Tax cuts and labor exemptions are easily reversible by subsequent finance laws." }
+          ]
+        }
+      },
+      "confidence": 0.75
+    }
+  }
+}

@@ -7,148 +7,138 @@
     "version": "qwen3.6"
   },
   "run_metadata": {
-    "run_at": "2026-04-25T06:52:53Z",
+    "run_at": "2026-04-25T18:54:25.304Z",
     "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "temperature": 0
   },
-  "summary": "Program centers on supply-side labor market reforms, welfare consolidation, and unemployment tightening, claiming €30B in savings redistributed to workers and firms. Environmental, institutional, and security dimensions are not addressed. Fiscal neutrality relies on behavioral responses to overtime incentives and administrative consolidation of social benefits.",
+  "summary": "Program centers on restoring work value and industrial/agricultural production through deregulation, targeted tax cuts, and welfare/unemployment reform. It proposes €30bn+ in savings redistributed to workers and firms, while subordinating environmental constraints to economic sovereignty and output growth.",
   "positioning": {
     "economic": {
       "score": 3,
-      "anchor_comparison": "More market-oriented than Macron 2017 (+1), aligned with Fillon 2017 (+3).",
+      "anchor_comparison": "More market-oriented than Macron 2017, aligned with Fillon 2017 supply-side approach.",
       "evidence": [
         {
-          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
-          "source_ref": "sources.md#proposition-1"
+          "quote": "Nous proposons de libérer le temps de travail en supprimant toutes les cotisations sociales au-delà de 1 623 heures par an.",
+          "source_ref": "sources.md#premier-principe"
         }
       ],
-      "confidence": 0.8,
-      "reasoning": "Structural reduction of labor costs, deregulation of overtime, and welfare caps indicate a supply-side, market-oriented approach."
+      "confidence": 0.85,
+      "reasoning": "Structural reduction of labor costs, production tax cuts, and labor code flexibility indicate a strong market-oriented, supply-side framework."
     },
     "social_cultural": {
       "score": 2,
-      "anchor_comparison": "More conservative on welfare than Macron 2017 (-1), aligns with LR 2022 (+2).",
+      "anchor_comparison": "More conservative on welfare conditionality than LR 2022, emphasizing traditional work ethic.",
       "evidence": [
         {
-          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
-          "source_ref": "sources.md#principe-3"
+          "quote": "Le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#troisieme-principe"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Welfare consolidation, strict unemployment eligibility, and anti-assistanat framing reflect a conservative, responsibility-focused social model."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "More sovereigntist than LR 2022, less than RN 2022, focused on economic and agricultural independence.",
+      "evidence": [
+        {
+          "quote": "La France portera au niveau européen l’imposition systématique de clauses de réciprocité dans tous les accords commerciaux.",
+          "source_ref": "sources.md#proposition-7"
         }
       ],
       "confidence": 0.75,
-      "reasoning": "Strong conditionality on social benefits, explicit anti-welfare dependency framing, and work-ethic prioritization place the program on the conservative side of the social axis."
-    },
-    "sovereignty": {
-      "score": 1,
-      "anchor_comparison": "Between Macron 2017 (-1) and LR 2022 (+2).",
-      "evidence": [
-        {
-          "quote": "Aligner l’indemnisation des travailleurs frontaliers sur des salaires français équivalents.",
-          "source_ref": "sources.md#proposition-5"
-        }
-      ],
-      "confidence": 0.6,
-      "reasoning": "Program focuses on national labor market protection and cross-border benefit alignment, but lacks explicit EU or defense sovereignty proposals."
+      "reasoning": "Strong emphasis on trade reciprocity, import controls, and opposition to Ukrainian agricultural integration signals economic nationalism within EU frameworks."
     },
     "institutional": {
-      "score": -1,
-      "anchor_comparison": "Close to Fifth Republic pre-2017 baseline (-3), slightly more technocratic.",
+      "score": 1,
+      "anchor_comparison": "More executive-driven than Macron 2017, prioritizing deregulation and agency oversight reform.",
       "evidence": [
         {
-          "quote": "Il est nécessaire d’associer pleinement l’Unédic, les partenaires sociaux et les régions à la définition de l’accompagnement assuré par France Travail.",
-          "source_ref": "sources.md#proposition-5"
-        }
-      ],
-      "confidence": 0.65,
-      "reasoning": "Governance reforms target employment agencies and social partners; no constitutional or democratic restructuring is proposed."
-    },
-    "ecological": {
-      "score": -3,
-      "anchor_comparison": "More productivist than LR 2022 (-1), similar to RN 2022 (-3).",
-      "evidence": [
-        {
-          "quote": "Relancer la production par la compétitivité... 2% de PIB supplémentaire.",
-          "source_ref": "sources.md#proposition-1"
+          "quote": "Le Code du travail sera refondé autour d’un principe clair, la subsidiarité sociale... Un socle de 50 principes fondamentaux sera rendu indépassable.",
+          "source_ref": "sources.md#proposition-2"
         }
       ],
       "confidence": 0.7,
-      "reasoning": "Exclusive focus on labor volume expansion and GDP growth with zero mention of climate, biodiversity, or energy transition indicates a productivist stance."
+      "reasoning": "Shifts regulatory power to collective bargaining and political executive, reduces agency autonomy, and proposes constitutional changes for agricultural priority."
+    },
+    "ecological": {
+      "score": -3,
+      "anchor_comparison": "More productivist than RN 2022, explicitly subordinating environmental norms to industrial output.",
+      "evidence": [
+        {
+          "quote": "Nous mettrons fin aux soutiens publics aux nouvelles capacités solaires et éoliennes et reporterons les projets déjà autorisés lorsque la situation de surcapacité l’exigera.",
+          "source_ref": "sources.md#proposition-6"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Suppression of precautionary principle, halt to renewable subsidies, and deregulation of environmental assessments place the program firmly on the productivist pole."
     },
     "overall_spectrum": {
       "label": "droite",
       "derived_from_axes": [
         "economic",
         "social_cultural",
-        "ecological"
+        "sovereignty"
       ],
       "evidence": [
         {
-          "quote": "Au-delà, les heures travaillées sont exonérées de cotisations sociales, salariales comme patronales.",
-          "source_ref": "sources.md#proposition-1"
+          "quote": "Nous proposons de libérer le temps de travail en supprimant toutes les cotisations sociales au-delà de 1 623 heures par an.",
+          "source_ref": "sources.md#premier-principe"
         },
         {
-          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
-          "source_ref": "sources.md#principe-3"
+          "quote": "Le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte.",
+          "source_ref": "sources.md#troisieme-principe"
+        },
+        {
+          "quote": "La France portera au niveau européen l’imposition systématique de clauses de réciprocité dans tous les accords commerciaux.",
+          "source_ref": "sources.md#proposition-7"
         }
       ],
-      "confidence": 0.7,
-      "reasoning": "Supply-side economics, welfare conditionality, and a productivist growth model place the program firmly on the right; institutional and sovereignty axes are moderate and do not shift the classification."
+      "confidence": 0.75,
+      "reasoning": "Strong market orientation, welfare conditionality, and economic sovereignty place the program firmly on the right; ecological productivism reinforces this placement."
     }
   },
   "dimensions": {
     "economic_fiscal": {
       "grade": "B",
-      "headline": "Baisse du coût du travail et redistribution de 30 Md€ d'économies, sans détail sur la trajectoire de déficit ou la dette.",
-      "summary": "Program targets labor cost reduction via overtime exemptions and welfare savings, claiming fiscal neutrality through full redistribution to workers and firms. Macro-fiscal trajectory beyond labor market is unspecified.",
+      "headline": "Baisse de 40 Md€ de prélèvements sur la production et le travail, financée par 30 Md€ d’économies sur l’assurance chômage et les aides.",
+      "summary": "Program targets a supply-side shock via deregulation, labor cost reduction, and production tax cuts, claiming self-financing through welfare and unemployment savings.",
       "problems_addressed": [
         {
-          "problem": "High marginal labor cost discouraging overtime",
-          "approach": "Zero social contribution threshold beyond 1623 hours/year.",
+          "problem": "High labor cost and low industrial competitiveness",
+          "approach": "Zero social contributions beyond 1623h/year and €15bn production tax cut.",
           "strength": 0.75,
           "source_refs": [
-            "sources.md#proposition-1"
-          ],
-          "reasoning": "Directly reduces employer hourly cost by ~35% for additional hours, creating a clear price signal."
-        },
-        {
-          "problem": "Structural unemployment duration",
-          "approach": "Tightened indemnification rules, 6-month cap on conventional breaks, degressivity for high earners.",
-          "strength": 0.65,
-          "source_refs": [
+            "sources.md#proposition-1",
             "sources.md#proposition-5"
           ],
-          "reasoning": "Aligns with European benchmarks; projected savings of €12.5-15.7B rely on accelerated job search behavior."
+          "reasoning": "Directly lowers marginal cost of labor and removes structural tax handicaps relative to EU peers."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Interest-rate sensitivity of public debt",
-          "significance": "Omitting debt-service dynamics leaves a central fiscal risk unexamined.",
-          "source_refs": []
-        },
-        {
-          "problem": "Non-labor taxation and corporate investment incentives",
-          "significance": "Program focuses exclusively on payroll costs without addressing capital taxation or R&D credits.",
+          "problem": "Debt trajectory sensitivity if growth targets underperform",
+          "significance": "Self-financing relies on behavioral responses and GDP expansion that are not guaranteed.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Short-term consumption contraction in low-income areas",
-          "mechanism": "Welfare caps and unemployment tightening reduce disposable income for non-active households.",
-          "severity": 0.5,
+          "problem": "Short-term fiscal balance",
+          "mechanism": "Upfront tax reductions precede realization of welfare/unemployment savings.",
+          "severity": 0.6,
           "source_refs": [
-            "sources.md#proposition-4",
-            "sources.md#proposition-5"
+            "sources.md#impact-finances-publiques"
           ],
-          "reasoning": "Redistribution targets active workers; passive households face net income reductions that may dampen local demand."
+          "reasoning": "Timing mismatch between immediate tax cuts and medium-term savings creates transitional deficit pressure."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Self-financing mechanism fails if overtime volume does not materialize",
-          "probability": 0.45,
+          "risk": "Lower-than-expected overtime uptake",
+          "probability": 0.4,
           "severity": 0.6,
-          "reasoning": "Fiscal neutrality assumes 16 new hours per worker; employer substitution or demand weakness could create a shortfall.",
+          "reasoning": "Firms may not propose additional hours if demand remains weak, limiting self-financing mechanism.",
           "source_refs": [
             "sources.md#proposition-1"
           ]
@@ -156,29 +146,29 @@
       ],
       "key_measures": [
         {
-          "measure": "Seuil zéro cotisation au-delà de 1623 heures",
+          "measure": "Seuil zéro cotisation au-delà de 1 623 heures",
           "source_ref": "sources.md#proposition-1",
           "quantified": true,
-          "magnitude": "~11 Md€ de gains entreprises, baisse de 35% du coût horaire marginal"
+          "magnitude": "~11 Md€ de gain compétitivité/pouvoir d'achat"
         },
         {
-          "measure": "Réforme assurance chômage et ruptures conventionnelles",
+          "measure": "Suppression/recentrage de 4 impôts de production",
           "source_ref": "sources.md#proposition-5",
           "quantified": true,
-          "magnitude": "12,5 à 15,7 Md€ d'économies annuelles"
+          "magnitude": "15 Md€/an"
         }
       ],
       "risk_profile": {
         "budgetary": {
           "level": "moderate",
-          "note": "Neutrality depends on behavioral response; no contingency if savings underperform.",
+          "note": "Self-financing claimed but depends on employment elasticity and growth multipliers.",
           "source_refs": [
             "sources.md#impact-finances-publiques"
           ]
         },
         "implementation": {
-          "level": "limited",
-          "note": "Relies on existing payroll and Unédic infrastructure.",
+          "level": "high",
+          "note": "Requires major payroll system updates and tax code restructuring.",
           "source_refs": [
             "sources.md#proposition-1",
             "sources.md#proposition-5"
@@ -186,500 +176,661 @@
         },
         "dependency": {
           "level": "moderate",
-          "note": "Requires employer willingness to propose additional hours.",
+          "note": "Relies on firm demand for extra hours and EU state-aid compatibility.",
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#proposition-5"
           ]
         },
         "reversibility": {
-          "level": "moderate",
-          "note": "Contribution exemptions and unemployment rules can be modified by subsequent finance or labor laws.",
+          "level": "limited",
+          "note": "Tax cuts and labor exemptions are easily reversible by subsequent finance laws.",
           "source_refs": []
         }
       },
-      "confidence": 0.7
+      "confidence": 0.75
     },
     "social_demographic": {
       "grade": "C",
-      "headline": "Fusion des minima sociaux et plafonnement des aides à 70% du SMIC, sans politique de santé ou d'éducation.",
-      "summary": "Consolidates RSA, Prime d'activité, and ASS into a tapered RIA. Caps total non-contributory benefits at 70% of net SMIC via a CSU. Healthcare, education, and family policy are not addressed.",
+      "headline": "Refonte des minima sociaux et de l’assurance chômage pour conditionner les prestations à la reprise d’activité, sans volet santé ou famille.",
+      "summary": "Focuses on labor market incentives and welfare consolidation, merging RSA/prime d'activité/ASS into RIA and capping total aid at 70% SMIC.",
       "problems_addressed": [
         {
-          "problem": "Inactivity traps and benefit complexity",
-          "approach": "Single RIA with 30% taper rate and CSU tracking all non-contributory aids.",
+          "problem": "Inactivity traps and welfare complexity",
+          "approach": "RIA fusion and CSU tracking with 70% SMIC cap.",
           "strength": 0.7,
           "source_refs": [
             "sources.md#proposition-2",
             "sources.md#proposition-4"
           ],
-          "reasoning": "Simplifies threshold effects; ensures marginal return to work is always positive."
+          "reasoning": "Simplifies benefit architecture and ensures marginal return to work remains positive."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Healthcare access and medical deserts",
-          "significance": "No measures on provider distribution, insurance coverage, or hospital funding.",
-          "source_refs": []
-        },
-        {
-          "problem": "Education funding and skill mismatch",
-          "significance": "Labor market reforms assume available skills; no training or education investment detailed.",
+          "problem": "Healthcare financing and medical deserts",
+          "significance": "No structural proposals for hospital funding or primary care access.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Income volatility for welfare-dependent households",
-          "mechanism": "70% SMIC cap and RIA taper reduce baseline income for multi-aid recipients.",
+          "problem": "Income stability for precarious households",
+          "mechanism": "Welfare cap and tighter unemployment rules reduce safety net depth.",
           "severity": 0.55,
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#proposition-4",
+            "sources.md#proposition-5"
           ],
-          "reasoning": "Example in source shows a €410/month reduction for a household; transition to employment may not be immediate."
+          "reasoning": "Households unable to secure stable employment face reduced aggregate transfers."
         }
       ],
       "execution_risks": [
         {
-          "risk": "CSU data integration across multiple agencies",
+          "risk": "Administrative rollout of CSU and RIA",
           "probability": 0.5,
-          "severity": 0.6,
-          "reasoning": "Consolidating CAF, local, and state benefits into a single registry requires significant IT and legal coordination.",
+          "severity": 0.7,
+          "reasoning": "Cross-agency data consolidation and payment recalibration require complex IT and legal harmonization.",
           "source_refs": [
+            "sources.md#proposition-2",
             "sources.md#proposition-4"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Création du Revenu d'incitation à l'activité (RIA)",
+          "measure": "Création du Revenu d’incitation à l’activité (RIA)",
           "source_ref": "sources.md#proposition-2",
           "quantified": true,
-          "magnitude": "Socle 300€ + Insertion 250€, dégressivité 30%, sortie à 1833€"
+          "magnitude": "2 Md€ d'économies/an"
         },
         {
-          "measure": "Compte social unique et plafond à 70% du SMIC net",
+          "measure": "Plafonnement des aides à 70% du SMIC net via CSU",
           "source_ref": "sources.md#proposition-4",
           "quantified": true,
-          "magnitude": "10 Md€ d'économies et lutte contre la fraude"
+          "magnitude": "10 Md€ d'économies/an"
         }
       ],
       "risk_profile": {
         "budgetary": {
           "level": "limited",
-          "note": "Savings are projected and earmarked for redistribution.",
+          "note": "Savings are structurally identified but depend on fraud reduction and eligibility enforcement.",
           "source_refs": [
-            "sources.md#impact-finances-publiques"
+            "sources.md#proposition-4"
           ]
         },
         "implementation": {
           "level": "high",
-          "note": "CSU requires cross-agency data sharing and real-time benefit adjustment.",
+          "note": "Requires nationwide registry integration and CAF/Unédic system overhaul.",
           "source_refs": [
+            "sources.md#proposition-2",
             "sources.md#proposition-4"
           ]
         },
         "dependency": {
           "level": "low",
-          "note": "Primarily domestic administrative reform.",
+          "note": "Primarily domestic administrative reform with minimal external dependencies.",
           "source_refs": []
         },
         "reversibility": {
           "level": "moderate",
-          "note": "Benefit structure can be altered by subsequent social security financing laws.",
+          "note": "Legislative reversal possible but administrative consolidation creates path dependency.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "Priorité à la souveraineté économique et alimentaire via réciprocité commerciale, contrôle des importations et refus de la concurrence déloyale.",
+      "summary": "Emphasizes industrial and agricultural sovereignty, EU reciprocity, import controls, and opposition to Ukrainian agricultural integration.",
+      "problems_addressed": [
+        {
+          "problem": "Trade deficit and unfair import competition",
+          "approach": "50% control reallocation to imports, reciprocity clauses, CBAM extension.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-7",
+            "sources.md#proposition-10"
+          ],
+          "reasoning": "Shifts enforcement burden to point-of-sale and aligns market access with production standards."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Internal security and defense spending trajectory",
+          "significance": "Program focuses on economic sovereignty without detailing police/military resourcing.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU single market friction",
+          "mechanism": "Unilateral control shifts and reciprocity demands may trigger infringement procedures.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-7"
+          ],
+          "reasoning": "EU competition and customs rules limit national discretion on import verification quotas."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Legal challenges to import control reallocation",
+          "probability": 0.45,
+          "severity": 0.6,
+          "reasoning": "DGCCRF/customs mandate changes require EU coordination and may face judicial review.",
+          "source_refs": [
+            "sources.md#proposition-7"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "50% des contrôles administratifs réorientés vers les importations",
+          "source_ref": "sources.md#proposition-7",
+          "quantified": false,
+          "magnitude": "Reallocation at constant headcount"
+        },
+        {
+          "measure": "Opposition à l’intégration agricole de l’Ukraine au marché européen",
+          "source_ref": "sources.md#proposition-10",
+          "quantified": false,
+          "magnitude": "Political veto stance"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Control reallocation operates at constant staffing; minimal direct fiscal impact.",
+          "source_refs": [
+            "sources.md#proposition-7"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Requires inter-agency coordination and EU notification for control doctrine shifts.",
+          "source_refs": [
+            "sources.md#proposition-7"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Reciprocity and market access rules depend on EU negotiation outcomes.",
+          "source_refs": [
+            "sources.md#proposition-7",
+            "sources.md#proposition-10"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Trade doctrine shifts are politically sticky but administratively adjustable.",
           "source_refs": []
         }
       },
       "confidence": 0.65
     },
-    "security_sovereignty": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne traite pas des questions de sécurité intérieure, immigration ou défense.",
-      "summary": "The provided document contains no proposals on internal security, immigration control, defense spending, energy sovereignty, or industrial policy beyond labor cost competitiveness.",
-      "problems_addressed": [],
-      "problems_ignored": [
-        {
-          "problem": "Internal security and policing",
-          "significance": "Core sovereign function left unspecified.",
-          "source_refs": []
-        },
-        {
-          "problem": "Immigration and border management",
-          "significance": "No framework for migration flows or integration.",
-          "source_refs": []
-        }
-      ],
-      "problems_worsened": [],
-      "execution_risks": [],
-      "key_measures": [],
-      "risk_profile": {
-        "budgetary": {
-          "level": "low",
-          "note": "No measures proposed; no budgetary impact.",
-          "source_refs": []
-        },
-        "implementation": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
-        },
-        "dependency": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
-        },
-        "reversibility": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
-        }
-      },
-      "confidence": 0.9
-    },
     "institutional_democratic": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne traite pas des réformes institutionnelles, décentralisation ou relation UE.",
-      "summary": "Silent on constitutional reform, electoral rules, decentralization, EU institutional relationship, or state capacity beyond Unédic governance adjustments.",
-      "problems_addressed": [],
+      "grade": "C",
+      "headline": "Déréglementation massive et refonte du Code du travail autour de 50 principes, avec transfert du reste à la négociation collective.",
+      "summary": "Proposes radical simplification of labor law, creation of an independent regulatory veto, and constitutional recognition of agricultural interest.",
+      "problems_addressed": [
+        {
+          "problem": "Regulatory inflation and administrative complexity",
+          "approach": "Repeal of 50 blocking rules, one-for-one rule, independent veto authority.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#proposition-1",
+            "sources.md#proposition-3"
+          ],
+          "reasoning": "Structural brake on norm production with ex-ante impact assessment and veto power."
+        }
+      ],
       "problems_ignored": [
         {
-          "problem": "Institutional reform and democratic representation",
-          "significance": "No proposals on parliamentary balance, electoral system, or citizen participation.",
-          "source_refs": []
-        },
-        {
-          "problem": "EU fiscal and regulatory framework alignment",
-          "significance": "Program does not specify interaction with EU stability rules or single market regulations.",
+          "problem": "Democratic oversight of deregulation authority",
+          "significance": "Independent veto body lacks specified accountability mechanisms.",
           "source_refs": []
         }
       ],
-      "problems_worsened": [],
-      "execution_risks": [],
-      "key_measures": [],
+      "problems_worsened": [
+        {
+          "problem": "Legal uncertainty during labor code transition",
+          "mechanism": "Shift to supplementary code status creates interim interpretation gaps.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-2"
+          ],
+          "reasoning": "SMEs may lack bargaining capacity, leading to fragmented employment standards."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Constitutional revision failure",
+          "probability": 0.6,
+          "severity": 0.7,
+          "reasoning": "Suppressing precautionary principle and adding agricultural interest requires referendum or 3/5 congress majority.",
+          "source_refs": [
+            "sources.md#proposition-1-agri"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Refonte du Code du travail sur 50 principes indépassables",
+          "source_ref": "sources.md#proposition-2",
+          "quantified": false,
+          "magnitude": "Structural legal reset"
+        },
+        {
+          "measure": "Création d’une autorité indépendante de contrôle préalable des normes",
+          "source_ref": "sources.md#proposition-3",
+          "quantified": false,
+          "magnitude": "Veto power on economic impact rules"
+        }
+      ],
       "risk_profile": {
         "budgetary": {
           "level": "low",
-          "note": "No measures proposed.",
+          "note": "Institutional reforms have minimal direct budgetary footprint.",
           "source_refs": []
         },
         "implementation": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
+          "level": "high",
+          "note": "Labor code overhaul and constitutional changes face legislative and procedural hurdles.",
+          "source_refs": [
+            "sources.md#proposition-2",
+            "sources.md#proposition-1-agri"
+          ]
         },
         "dependency": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
+          "level": "moderate",
+          "note": "Relies on parliamentary majorities and union engagement for collective bargaining shift.",
+          "source_refs": [
+            "sources.md#proposition-2"
+          ]
         },
         "reversibility": {
-          "level": "low",
-          "note": "No measures proposed.",
+          "level": "moderate",
+          "note": "Constitutional changes are sticky; labor code defaults can be legislatively restored.",
           "source_refs": []
         }
       },
-      "confidence": 0.9
+      "confidence": 0.65
     },
     "environmental_long_term": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne traite pas du climat, biodiversité, agriculture ou infrastructures durables.",
-      "summary": "Exclusively productivist; contains no climate targets, biodiversity protections, water management, agricultural transition, or green infrastructure investments.",
-      "problems_addressed": [],
+      "grade": "D",
+      "headline": "Subordination des normes environnementales à la production, arrêt des subventions éoliennes/solaires et suppression du principe de précaution.",
+      "summary": "Adopts a productivist stance, halting renewable subsidies, prioritizing nuclear, and removing environmental constraints deemed blocking for industry/agriculture.",
+      "problems_addressed": [
+        {
+          "problem": "High industrial energy costs and project delays",
+          "approach": "Nuclear contract stabilization, water storage prioritization, environmental deregulation.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-6",
+            "sources.md#proposition-4-agri"
+          ],
+          "reasoning": "Anchors electricity pricing on nuclear fundamentals and accelerates agricultural infrastructure."
+        }
+      ],
       "problems_ignored": [
         {
-          "problem": "Climate mitigation and adaptation",
-          "significance": "No decarbonization pathway or energy transition funding.",
-          "source_refs": []
-        },
-        {
-          "problem": "Biodiversity and water resource management",
-          "significance": "Ecological constraints on production are not addressed.",
+          "problem": "Climate mitigation and biodiversity loss trajectories",
+          "significance": "No binding emissions reduction or ecosystem preservation targets specified.",
           "source_refs": []
         }
       ],
-      "problems_worsened": [],
-      "execution_risks": [],
-      "key_measures": [],
+      "problems_worsened": [
+        {
+          "problem": "EU climate compliance and carbon neutrality path",
+          "mechanism": "Renewable subsidy halt and precautionary principle suppression conflict with Green Deal frameworks.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#proposition-6",
+            "sources.md#proposition-1-agri"
+          ],
+          "reasoning": "Defers transition investments and increases reliance on existing nuclear/lifecycle extensions."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "EU state aid and environmental directive infringement",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "Unilateral renewable subsidy cuts and ICPE alignment may trigger Commission proceedings.",
+          "source_refs": [
+            "sources.md#proposition-6",
+            "sources.md#proposition-3-agri"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Fin des soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#proposition-6",
+          "quantified": false,
+          "magnitude": "Policy moratorium"
+        },
+        {
+          "measure": "Suppression du principe de précaution dans la Charte de l’environnement",
+          "source_ref": "sources.md#proposition-1-agri",
+          "quantified": false,
+          "magnitude": "Constitutional revision"
+        }
+      ],
       "risk_profile": {
         "budgetary": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
+          "level": "limited",
+          "note": "Subsidy halt reduces direct spending but may increase grid balancing costs.",
+          "source_refs": [
+            "sources.md#proposition-6"
+          ]
         },
         "implementation": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
+          "level": "high",
+          "note": "Constitutional and regulatory rollbacks face legal, political, and EU compliance barriers.",
+          "source_refs": [
+            "sources.md#proposition-1-agri",
+            "sources.md#proposition-6"
+          ]
         },
         "dependency": {
-          "level": "low",
-          "note": "No measures proposed.",
-          "source_refs": []
+          "level": "high",
+          "note": "Energy and environmental trajectories depend on EU regulatory tolerance and nuclear performance.",
+          "source_refs": [
+            "sources.md#proposition-6"
+          ]
         },
         "reversibility": {
-          "level": "low",
-          "note": "No measures proposed.",
+          "level": "high",
+          "note": "Moratoriums and deregulation can be rapidly reinstated by subsequent majority or EU mandate.",
           "source_refs": []
         }
       },
-      "confidence": 0.9
+      "confidence": 0.7
     }
   },
   "intergenerational": {
     "net_transfer_direction": "mixed",
     "magnitude_estimate": {
-      "value": "approximately €500/person/year for median active worker",
+      "value": "approximately €800/person/year",
       "units": "€/person/year",
       "confidence": 0.6,
-      "caveats": "Applies only to active employees; welfare-dependent households face net reductions; macroeconomic feedback loops not modeled."
+      "caveats": "Depends on employment response, overtime uptake, and welfare cap enforcement."
     },
     "impact_on_25yo_in_2027": {
       "fiscal": {
-        "summary": "Lower social contributions on overtime hours.",
-        "quantified": "+€500/year at median salary"
+        "summary": "Lower labor taxes on overtime hours.",
+        "quantified": "+€500/year at median wage"
       },
       "housing": {
-        "summary": "No supply-side relief or rent regulation.",
+        "summary": "No supply-side or affordability measures specified.",
         "quantified": null
       },
       "pension_outlook": {
-        "summary": "No structural reform; status quo trajectory continues.",
+        "summary": "Extended senior careers may compress entry-level progression.",
         "quantified": null
       },
       "labor_market": {
-        "summary": "Lower entry cost for employers, but part-time deregulation may increase precarity.",
+        "summary": "Improved overtime pay, tighter welfare access for inactive cohorts.",
         "quantified": null
       },
       "environmental_debt": {
-        "summary": "No transition measures; environmental costs deferred.",
+        "summary": "Transition deferred, adaptation costs shift forward.",
         "quantified": null
       },
-      "narrative_summary": "Net positive for active young workers via overtime gains and lower labor costs; neutral-to-negative for inactive youth due to tighter welfare and unemployment rules."
+      "narrative_summary": "Net mixed impact: gains for employed youth via tax exemptions, but reduced safety net for inactive or precarious cohorts."
     },
     "impact_on_65yo_in_2027": {
       "fiscal": {
-        "summary": "Exemptions from pension/unemployment contributions if working past quarter validation.",
-        "quantified": "+€3400/year at median salary"
+        "summary": "Tax exemptions for extended work periods.",
+        "quantified": "+€300/month net at median"
       },
       "pension": {
-        "summary": "New cumulative scheme replaces surcote; pension reduced by 30% of activity income.",
+        "summary": "Cumulative employment-retirement improved, surcote replaced.",
         "quantified": null
       },
       "healthcare": {
-        "summary": "Access unchanged under central assumptions.",
+        "summary": "No structural changes proposed.",
         "quantified": null
       },
-      "narrative_summary": "Net positive for seniors willing to work longer via contribution exemptions and cumulative pension scheme; neutral for full retirees."
+      "narrative_summary": "Net positive for seniors willing to work longer; pension system stability relies on extended contributions rather than benefit cuts."
     },
     "horizon_matrix": [
       {
         "row": "pensions",
-        "dimension_note": "Senior work incentives delay full retirement claims; no structural parametric reform.",
+        "dimension_note": "Senior work incentives and cumulative retirement gradually improve system balance.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 1,
-            "note": "Immediate uptake of cumulative scheme reduces near-term pension outflows.",
+            "impact_score": 0,
+            "note": "Limited near-term effect as behavioral adjustment takes time.",
             "source_refs": [
               "sources.md#proposition-3"
             ]
           },
           "h_2031_2037": {
             "impact_score": 1,
-            "note": "Sustained senior employment extends contribution base.",
+            "note": "Extended careers increase contribution base and delay payouts.",
             "source_refs": [
               "sources.md#proposition-3"
             ]
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Long-term demographic pressure returns without structural reform.",
-            "source_refs": []
+            "impact_score": 1,
+            "note": "Structural improvement in dependency ratio if uptake sustains.",
+            "source_refs": [
+              "sources.md#proposition-3"
+            ]
           }
         }
       },
       {
         "row": "public_debt",
-        "dimension_note": "Program claims fiscal neutrality via savings redistribution; no explicit debt reduction path.",
+        "dimension_note": "Upfront tax cuts offset by medium-term welfare/unemployment savings.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Savings offset by redistribution; debt trajectory unchanged.",
+            "note": "Transitional deficit pressure before savings materialize.",
             "source_refs": [
               "sources.md#impact-finances-publiques"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 0,
-            "note": "No structural deficit reduction mechanism specified.",
-            "source_refs": []
+            "impact_score": -1,
+            "note": "Savings and growth effects begin to stabilize debt path.",
+            "source_refs": [
+              "sources.md#impact-finances-publiques"
+            ]
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Long-term debt dynamics depend on unmodeled growth and rate paths.",
-            "source_refs": []
+            "impact_score": -1,
+            "note": "Debt trajectory improves if productivity gains persist.",
+            "source_refs": [
+              "sources.md#impact-finances-publiques"
+            ]
           }
         }
       },
       {
         "row": "climate",
-        "dimension_note": "No climate or energy transition measures proposed.",
+        "dimension_note": "Renewable halt and deregulation defer mitigation investments.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Program does not specify measures on climate over this horizon.",
-            "source_refs": []
+            "impact_score": -1,
+            "note": "Near-term slowdown in capacity additions.",
+            "source_refs": [
+              "sources.md#proposition-6"
+            ]
           },
           "h_2031_2037": {
-            "impact_score": 0,
-            "note": "Program does not specify measures on climate over this horizon.",
-            "source_refs": []
+            "impact_score": -2,
+            "note": "Cumulative gap in decarbonization trajectory widens.",
+            "source_refs": [
+              "sources.md#proposition-6"
+            ]
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Program does not specify measures on climate over this horizon.",
-            "source_refs": []
+            "impact_score": -2,
+            "note": "Long-term adaptation costs increase without early mitigation.",
+            "source_refs": [
+              "sources.md#proposition-6"
+            ]
           }
         }
       },
       {
         "row": "health",
-        "dimension_note": "Healthcare financing and access are not addressed.",
+        "dimension_note": "Program does not specify measures on healthcare financing or access.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Program does not specify measures on health over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           },
           "h_2031_2037": {
             "impact_score": 0,
-            "note": "Program does not specify measures on health over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           },
           "h_2038_2047": {
             "impact_score": 0,
-            "note": "Program does not specify measures on health over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           }
         }
       },
       {
         "row": "education",
-        "dimension_note": "Education funding, training, and skill development are not addressed.",
+        "dimension_note": "Vocational and apprenticeship refocusing improves labor insertion.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Program does not specify measures on education over this horizon.",
-            "source_refs": []
+            "note": "Governance shift and aid reallocation take effect.",
+            "source_refs": [
+              "sources.md#proposition-9"
+            ]
           },
           "h_2031_2037": {
-            "impact_score": 0,
-            "note": "Program does not specify measures on education over this horizon.",
-            "source_refs": []
+            "impact_score": 1,
+            "note": "Better alignment of training with industrial needs.",
+            "source_refs": [
+              "sources.md#proposition-9"
+            ]
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Program does not specify measures on education over this horizon.",
-            "source_refs": []
+            "impact_score": 1,
+            "note": "Sustained improvement in technical skill supply.",
+            "source_refs": [
+              "sources.md#proposition-9"
+            ]
           }
         }
       },
       {
         "row": "housing",
-        "dimension_note": "Housing supply, affordability, and construction incentives are not addressed.",
+        "dimension_note": "Program does not specify measures on housing supply or affordability.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Program does not specify measures on housing over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           },
           "h_2031_2037": {
             "impact_score": 0,
-            "note": "Program does not specify measures on housing over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           },
           "h_2038_2047": {
             "impact_score": 0,
-            "note": "Program does not specify measures on housing over this horizon.",
+            "note": "No material change from counterfactual.",
             "source_refs": []
           }
         }
       }
     ],
-    "reasoning": "Program targets active population and seniors via labor incentives; silent on long-term structural investments, environmental debt, and non-labor public services.",
+    "reasoning": "Program shifts resources toward active workers and seniors extending careers, while consolidating welfare. Environmental costs are deferred via productivist pivot.",
     "source_refs": [
-      "sources.md#proposition-1",
+      "sources.md#travail-gagnant",
       "sources.md#proposition-3",
-      "sources.md#impact-finances-publiques"
+      "sources.md#proposition-4",
+      "sources.md#proposition-6"
     ],
     "confidence": 0.65
   },
   "counterfactual": {
-    "status_quo_trajectory": "Continued high structural deficit, stable unemployment duration, gradual pension system strain, and unchanged environmental trajectory.",
+    "status_quo_trajectory": "Debt stabilizes near 115% GDP, gradual renewable expansion, welfare spending grows with inflation and demographic pressure.",
     "does_program_change_trajectory": true,
     "direction_of_change": "mixed",
     "dimensions_changed": [
       "economic_fiscal",
-      "social_demographic"
-    ],
-    "dimensions_unchanged": [
+      "social_demographic",
       "security_sovereignty",
       "institutional_democratic",
       "environmental_long_term"
     ],
-    "reasoning": "Alters labor market incentives, welfare distribution, and unemployment duration; leaves institutional, security, and environmental trajectories unchanged due to program silence.",
-    "confidence": 0.75
+    "dimensions_unchanged": [],
+    "reasoning": "Program structurally alters fiscal, labor, and environmental trajectories via deregulation and tax shifts, while leaving defense/internal security unspecified.",
+    "confidence": 0.7
   },
   "unsolved_problems": [
     {
-      "problem": "Structural public deficit outside labor market",
-      "why_unsolved": "Program relies on welfare and labor savings without addressing healthcare, pension, or education structural costs.",
+      "problem": "Healthcare system financing and medical desert expansion",
+      "why_unsolved": "Program does not propose hospital funding reforms or primary care incentive structures.",
       "severity_if_unsolved": "high",
       "source_refs": []
     },
     {
-      "problem": "Climate transition financing and decarbonization",
-      "why_unsolved": "No environmental measures, carbon pricing, or green investment framework addressed.",
+      "problem": "Housing supply constraints and affordability for under-35s",
+      "why_unsolved": "No construction deregulation, land release, or rental market measures detailed.",
       "severity_if_unsolved": "high",
       "source_refs": []
     },
     {
-      "problem": "Housing supply and affordability crisis",
-      "why_unsolved": "Program does not specify measures on housing construction, zoning, or rent regulation.",
+      "problem": "Long-term climate adaptation and infrastructure resilience",
+      "why_unsolved": "Focus on production and nuclear defers broader adaptation investment planning.",
       "severity_if_unsolved": "medium",
       "source_refs": []
     }
   ],
   "downside_scenarios": [
     {
-      "scenario": "Welfare cap reduces consumption in low-income areas",
-      "trigger": "CSU implementation reduces household disposable income by >10% for benefit-dependent families.",
-      "probability": 0.4,
-      "severity": 0.6,
-      "reasoning": "Reduced non-contributory benefits may contract local demand, partially offsetting corporate competitiveness gains."
+      "scenario": "Growth shortfall fails to offset upfront tax cuts, widening structural deficit.",
+      "trigger": "Annual GDP growth below 1.2% for two consecutive years.",
+      "probability": 0.35,
+      "severity": 0.75,
+      "reasoning": "Self-financing mechanism relies on employment elasticity and corporate investment response that may not materialize in weak demand environments."
     },
     {
-      "scenario": "Overtime exemption fails to generate projected hours",
-      "trigger": "Employers substitute base hours for overtime rather than expanding total volume, or demand remains weak.",
-      "probability": 0.45,
-      "severity": 0.55,
-      "reasoning": "Self-financing mechanism relies on 16 new hours per worker; behavioral mismatch creates a fiscal shortfall requiring alternative funding."
+      "scenario": "EU legal challenges block reciprocity and import control doctrines.",
+      "trigger": "European Commission infringement procedure on customs reallocation.",
+      "probability": 0.4,
+      "severity": 0.6,
+      "reasoning": "Single market rules limit unilateral verification quotas and reciprocity mandates, forcing policy rollback."
+    },
+    {
+      "scenario": "Welfare caps trigger poverty spike without sufficient job absorption.",
+      "trigger": "Unemployment remains above 7% while CSU enforcement begins.",
+      "probability": 0.3,
+      "severity": 0.7,
+      "reasoning": "Reduced transfer depth without corresponding labor demand increases household financial stress and social service utilization."
     }
   ],
   "adversarial_pass": {
     "weakest_claims": [
       {
         "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
-        "critique": "Strength 0.75 may overstate the reliability of the self-financing mechanism.",
-        "alternative_interpretation": "Employer substitution effects or weak demand could prevent the projected 16-hour increase, turning a neutral measure into a net fiscal cost."
+        "critique": "Strength 0.75 may overstate the immediacy of competitiveness gains given implementation lags.",
+        "alternative_interpretation": "Tax cuts may initially compress margins before volume effects offset them."
       },
       {
-        "claim_location": "intergenerational.magnitude_estimate",
-        "critique": "Magnitude focuses on median worker gain, underweighting distributional losses for welfare-dependent households.",
-        "alternative_interpretation": "Net transfer may be negative for the bottom income quintile, altering the intergenerational and distributional balance."
+        "claim_location": "intergenerational.horizon_matrix[2].cells.h_2031_2037",
+        "critique": "Climate impact score of -2 assumes no private-sector renewable investment substitution.",
+        "alternative_interpretation": "Market-driven capacity additions could partially offset public subsidy withdrawal."
       }
     ],
-    "potential_bias": "Analysis may over-emphasize fiscal neutrality claims due to the program's detailed accounting, while under-weighting macroeconomic consumption risks from welfare cuts and the absence of environmental costing.",
-    "evidence_gaps": "Program lacks macroeconomic modeling assumptions, labor supply elasticity estimates, detailed CSU implementation roadmap, and any environmental or healthcare impact assessment.",
+    "potential_bias": "Analysis may overstate fiscal self-financing feasibility due to supply-side framing and underweight distributional risks for non-working households.",
+    "evidence_gaps": "Limited source material on healthcare, housing, defense spending, and long-term macroeconomic assumptions underpinning the €30bn savings claim.",
     "confidence_in_critique": 0.7
   },
-  "confidence_self_assessment": 0.65
+  "confidence_self_assessment": 0.72
 }

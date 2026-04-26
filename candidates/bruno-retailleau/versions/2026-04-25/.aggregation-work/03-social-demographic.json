@@ -1,0 +1,230 @@
+{
+  "dimensions": {
+    "social_demographic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": { "gemini-1.5-pro": "B" }
+      },
+      "headline": {
+        "text": "Refonte de l'assistance via plafond à 70% du SMIC et fusion des minima; santé, école générale, famille et logement absents.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Réforme sociale centrée sur incitation au travail; santé, logement, école et dépendance restent peu traités." },
+          { "model": "claude-opus-4-7", "text": "Refonte de l'assistance par plafonnement à 70% du SMIC et fusion des minima sociaux; santé, éducation et inégalités traités à la marge." },
+          { "model": "deepseek-manual", "text": "Réduction des aides sociales, réforme de l'apprentissage vers l'industrie, absence de mesures sur la santé, l'éducation générale et le logement." },
+          { "model": "gemini-1.5-pro", "text": "Plafonnement des aides sociales à 70% du SMIC et durcissement de l'assurance chômage." },
+          { "model": "qwen3.6", "text": "Refonte des minima sociaux et de l'assurance chômage pour conditionner les prestations à la reprise d'activité, sans volet santé ou famille." }
+        ]
+      },
+      "summary": "Le volet social se concentre sur la conditionnalité des aides (RIA fusionnant RSA/prime d'activité/ASS, Compte Social Unique plafonnant les aides non contributives à 70% du SMIC net par adulte) et la formation professionnelle (réorientation de l'apprentissage vers infra-Bac+2 et l'industrie, transfert des lycées professionnels aux régions). La santé, l'école primaire/secondaire générale, la politique familiale, le logement et les inégalités territoriales hors industrie ne sont pas traités dans les sources fournies. Le programme assume une baisse des transferts pour les ménages à fort cumul d'aides (exemple cité : -410 €/mois).",
+      "problems_addressed": [
+        {
+          "problem": "Trappes à inactivité, effets de seuil et complexité du système d'aides",
+          "approach": "Fusion en RIA (allocation socle 300 €/mois + insertion 250 €/mois si 15h d'activité, dégressivité de 30% du salaire repris) et plafonnement à 70% du SMIC net par adulte via le Compte Social Unique.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#proposition-2-ria", "sources.md#proposition-4-csu"],
+          "reasoning": "Cinq modèles convergent: simplification de l'architecture des aides, garantie d'un gain net à la reprise d'activité, mécanique chiffrée par cas-types.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Inadéquation de la formation professionnelle aux besoins industriels",
+          "approach": "Réorientation des aides à l'apprentissage vers les niveaux infra-Bac+2 et les filières industrielles, transfert des lycées professionnels et de l'orientation aux régions et aux 500 missions locales.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#proposition-9-formation"],
+          "reasoning": "Diagnostic chiffré (apprentissage 15 Md€, coût/apprenti 14 700 € vs 4 700 € en Allemagne, faible insertion industrielle) et arbitrages explicites de redéploiement.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Renouvellement démographique des agriculteurs et professions agricoles",
+          "approach": "Hausse des effectifs en formation: +30% enseignement agricole, +75% vétérinaires, +30% ingénieurs agronomes d'ici 2030.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#proposition-6-formation-agricole"],
+          "reasoning": "Objectifs quantifiés mais financement par redéploiement non détaillé.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Système de santé, hôpital public et déserts médicaux",
+          "significance": "Aucune réforme de santé, ni régulation de l'offre de soins, ni financement hospitalier dans les sources fournies (hors agriculture/vétérinaires). Les cinq modèles relèvent cette absence sur un poste de dépense majeur.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Logement, accès au foncier résidentiel et ménages modestes",
+          "significance": "Le logement n'apparaît qu'incidemment via le plafonnement des aides au logement; aucune mesure d'offre, de fiscalité immobilière, de régulation des loyers ou d'accession à la propriété.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Éducation primaire, secondaire générale et inégalités scolaires",
+          "significance": "L'enseignement général n'est pas abordé; seul le professionnel et l'agricole sont traités. Aucune mesure sur le collège, le lycée général ou la lutte contre les inégalités éducatives.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Politique familiale, natalité et modes de garde",
+          "significance": "Aucune mesure sur les allocations familiales (hors mention CSU), congés parentaux ou modes de garde de la petite enfance.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Cohésion territoriale, banlieues et services publics de proximité",
+          "significance": "Pas d'approche cohésion sociale ou de services publics de proximité hors industrie/agriculture.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Revenu disponible des ménages structurellement éloignés de l'emploi et fort-cumulants d'aides",
+          "mechanism": "Le plafond à 70% du SMIC net par adulte combiné au durcissement de l'assurance chômage réduit les transferts agrégés vers les populations inactives ou précaires; l'exemple fourni indique -410 €/mois pour un couple avec deux enfants en HLM (-17%).",
+          "severity": 0.6,
+          "source_refs": ["sources.md#proposition-4-csu", "sources.md#proposition-5-chomage"],
+          "reasoning": "Cinq modèles convergent: le programme assume cette baisse comme incitation à l'emploi, mais l'effet distributif net dépend de la reprise effective d'activité, non garantie pour les ménages les plus éloignés du travail.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Construction du Compte Social Unique (interopérabilité État/CAF/collectivités/Unédic)",
+          "probability": 0.6,
+          "severity": 0.65,
+          "reasoning": "Consolidation en temps réel d'aides nationales, locales et facultatives sans précédent en France; chantier informatique et organisationnel pluriannuel reconnu par le programme.",
+          "source_refs": ["sources.md#proposition-4-csu", "sources.md#proposition-2-ria"],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Résistance des syndicats de l'Éducation nationale au transfert des lycées professionnels aux régions",
+          "probability": 0.75,
+          "severity": 0.5,
+          "reasoning": "Le transfert d'une compétence historique de l'État aux régions et aux entreprises se heurtera à une opposition forte; rétrocession de moyens conventionnelle nécessaire.",
+          "source_refs": ["sources.md#proposition-9-formation"],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "risk": "Risque de contentieux constitutionnels (principe d'égalité, droit à la subsistance) sur le plafonnement",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "Le plafonnement uniforme à 70% du SMIC net peut soulever des questions d'inégalité de traitement et de minimum vital.",
+          "source_refs": ["sources.md#proposition-4-csu"],
+          "supported_by": ["deepseek-manual"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte Social Unique plafonnant les aides non contributives à 70% du SMIC net par adulte",
+          "source_ref": "sources.md#proposition-4-csu",
+          "quantified": true,
+          "magnitude": "Plafond 70% SMIC net/adulte; ~10 Md€ d'économies attendues",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité et ASS",
+          "source_ref": "sources.md#proposition-2-ria",
+          "quantified": true,
+          "magnitude": "Allocation socle 300 €/mois + insertion 250 €/mois si 15h d'activité; dégressivité 30% du salaire repris; ~2 Md€ d'économies",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Réforme de l'assurance chômage (règles juin 2024, plafonnement ruptures conventionnelles, alignement frontaliers)",
+          "source_ref": "sources.md#proposition-5-chomage",
+          "quantified": true,
+          "magnitude": "12,5–15,7 Md€/an d'économies",
+          "supported_by": ["gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Réorientation des aides à l'apprentissage et transfert des lycées professionnels aux régions",
+          "source_ref": "sources.md#proposition-9-formation",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "measure": "Travail des seniors ayant tous leurs trimestres validés (cumul emploi-retraite rénové)",
+          "source_ref": "sources.md#proposition-3-seniors",
+          "quantified": true,
+          "magnitude": "+300 €/mois net au salaire médian; -450 €/mois coût employeur",
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "limited",
+          "level_interval": ["low", "limited"],
+          "note": "Le bloc est principalement présenté comme générateur d'économies (RIA, CSU, chômage); l'impact distributif et social non budgétisé est le risque résiduel.",
+          "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "Le bloc est présenté comme générateur d'économies mais sans incidence complète par ménages." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Mesures principalement neutres budgétairement (redéploiements et plafonnements)." },
+            { "model": "deepseek-manual", "level": "limited", "note": "Le RIA et le CSU génèrent des économies nettes selon le programme; le risque principal est l'impact social non budgétisé des baisses de prestations." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Measures are designed entirely to generate savings." },
+            { "model": "qwen3.6", "level": "limited", "note": "Savings are structurally identified but depend on fraud reduction and eligibility enforcement." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Construction du CSU et fusion d'aides en RIA exigent une interopérabilité multi-organismes (État, CAF, collectivités, Unédic) inédite en France.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Fusion d'aides, plafonds, chômage et contrôle exigent systèmes sociaux et règles unifiés." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Construction du CSU exige interopérabilité multi-organismes inédite en France." },
+            { "model": "deepseek-manual", "level": "high", "note": "La création du CSU et l'harmonisation de multiples organismes payeurs est un chantier informatique et organisationnel lourd." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "CSU requires unifying data across fragmented national and local agencies." },
+            { "model": "qwen3.6", "level": "high", "note": "Requires nationwide registry integration and CAF/Unédic system overhaul." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Réussite suppose adhésion des collectivités locales, des CAF et de France Travail; risque de contentieux constitutionnels.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": ["qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépend de France Travail, Unédic, CAF, collectivités, employeurs et marché local du travail." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Réussite suppose adhésion des collectivités locales pour partager données et plafonner aides facultatives." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Dépend de l'acceptation par les collectivités territoriales et les CAF; risque de contentieux constitutionnels." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Relies on local authorities (mairies, départements) complying with the CSU." },
+            { "model": "qwen3.6", "level": "low", "note": "Primarily domestic administrative reform with minimal external dependencies." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Plafond, fusions d'aides et règles d'indemnisation révocables par voie législative ordinaire; consolidation administrative crée néanmoins une dépendance de sentier.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["deepseek-manual"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Durées, plafonds et règles d'indemnisation peuvent être modifiés par loi ou convention chômage." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Plafond et fusions d'aides révocables par voie législative ordinaire." },
+            { "model": "deepseek-manual", "level": "low", "note": "Les réformes paramétriques du RIA et du plafonnement peuvent être ajustées par voie législative ou réglementaire." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Benefit caps can be lifted by subsequent legislation." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Legislative reversal possible but administrative consolidation creates path dependency." }
+          ]
+        }
+      },
+      "confidence": 0.68
+    }
+  }
+}

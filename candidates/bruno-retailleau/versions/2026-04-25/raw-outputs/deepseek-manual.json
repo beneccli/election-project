@@ -3,229 +3,239 @@
   "candidate_id": "bruno-retailleau",
   "version_date": "2026-04-25",
   "model": {
-    "provider": "deepseek",
-    "version": "deepseek-chat"
+    "provider": "anthropic",
+    "version": "claude-opus-4-7"
   },
   "run_metadata": {
-    "run_at": "2026-04-25T06:52:53.447Z",
+    "run_at": "2026-04-25T18:54:25.304Z",
     "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
     "temperature": 0
   },
-  "summary": "Programme centré sur la réduction des cotisations sociales au-delà de 1 623 heures/an et la réforme de l'assurance chômage, dégageant au moins 30 Md€/an restitués pour moitié aux salariés et moitié aux entreprises. Les propositions visent à renforcer la compétitivité et le pouvoir d'achat par le travail, tout en plafonnant les aides sociales à 70 % du SMIC net. Le programme est silencieux sur les questions environnementales, institutionnelles, de défense et de souveraineté.",
+  "summary": "Programme de Bruno Retailleau (LR) pour 2027 axé sur la revalorisation du travail via un seuil 'zéro cotisation' au-delà de 1623 h/an, la refonte des aides sociales (plafonnement à 70 % du SMIC net), la réforme de l'assurance chômage, une déréglementation massive et une relance industrielle et agricole par la baisse des prélèvements et le rejet des normes environnementales contraignantes.",
   "positioning": {
     "economic": {
       "score": 3,
-      "anchor_comparison": "Aussi orienté marché que Fillon 2017, plus à droite que Macron 2017.",
+      "anchor_comparison": "Plus libéral que Fillon 2017 (score +3), proche de celui-ci, avec réduction significative des prélèvements obligatoires et déréglementation du marché du travail.",
       "evidence": [
         {
-          "quote": "Redonner au moins 30 milliards d’euros aux salariés et aux entreprises, pour moitié en gains de pouvoir d’achat, pour moitié par une baisse durable du coût du travail.",
-          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          "quote": "Les mesures proposées permettront de redonner au moins 30 milliards d’euros aux salariés et aux entreprises, pour moitié en gains de pouvoir d’achat, pour moitié par une baisse durable du coût du travail.",
+          "source_ref": "sources.md#Impact-sur-les-finances-publiques-et-prochaines-etapes"
+        },
+        {
+          "quote": "Supprimer, dès le lendemain de l’élection, les 50 règles qui paralysent le plus nos entreprises",
+          "source_ref": "sources.md#Proposition-1-Dereglementer"
         }
       ],
-      "confidence": 0.8,
-      "reasoning": "Le programme propose une baisse massive des charges sur le travail, une refonte restrictive de l'assurance chômage, un plafonnement des aides sociales et une restitution intégrale des économies au secteur privé, sans augmentation de dépenses publiques."
+      "confidence": 0.85,
+      "reasoning": "Le programme propose des baisses d'impôts de production de près de 15 Md€, une exonération massive de cotisations sur les heures supplémentaires, un plafonnement strict des aides sociales et une déréglementation profonde du droit du travail et des normes économiques, ce qui correspond à une orientation très favorable au marché."
     },
     "social_cultural": {
       "score": 2,
-      "anchor_comparison": "Proche de LR 2022, plus conservateur que Macron 2017.",
+      "anchor_comparison": "Position conservative comparable à LR 2022 (score +2), avec un discours de valorisation du travail, de lutte contre l'assistanat et un cadrage traditionnel de la famille absent mais implicite dans la réforme des aides.",
       "evidence": [
         {
-          "quote": "Sortir du piège de l'assistance : notre système social ne doit plus permettre de s'installer durablement dans l'assistance.",
-          "source_ref": "sources.md#presentation-densemble"
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance. Ce confort apparent crée une dépendance dont il est difficile de s’extraire.",
+          "source_ref": "sources.md#TROISIEME-PRINCIPE"
+        },
+        {
+          "quote": "L’idée est simple : l’allocation chômage doit être un filet de sécurité, pas un choix de vie.",
+          "source_ref": "sources.md#TROISIEME-PRINCIPE"
         }
       ],
-      "confidence": 0.7,
-      "reasoning": "Le discours insiste sur la valeur travail, la lutte contre l'assistanat et la fraude sociale, et la responsabilité individuelle. Les propositions concrètes réduisent les prestations sans contrepartie nouvelle pour les publics vulnérables."
+      "confidence": 0.75,
+      "reasoning": "Le programme insiste sur la responsabilité individuelle, la rigueur des conditions d'indemnisation et la primauté du travail sur l'assistance, sans aborder les questions de mœurs ou de laïcité, mais l'orientation sociale est nettement conservatrice."
     },
     "sovereignty": {
-      "score": 0,
-      "anchor_comparison": "Absence de positionnement explicite ; comparable à un candidat centre-droit européen sur l'UE.",
+      "score": 2,
+      "anchor_comparison": "Souverainiste modéré, comparable à LR 2022 (+2), défend la souveraineté alimentaire, industrielle et énergétique, veut imposer la réciprocité commerciale, mais reste dans le cadre européen.",
       "evidence": [
         {
-          "quote": "Rapprocher notre système des pratiques européennes.",
-          "source_ref": "sources.md#proposition-5"
+          "quote": "Nous nous opposerons à l’intégration de l’Ukraine au marché agricole européen.",
+          "source_ref": "sources.md#Assurer-enfin-la-reciprocite-aux-frontieres"
+        },
+        {
+          "quote": "La France portera au niveau européen l’imposition systématique de clauses de réciprocité dans tous les accords commerciaux.",
+          "source_ref": "sources.md#Rompre-avec-plusieurs-decennies-de-naivete"
         }
       ],
-      "confidence": 0.3,
-      "reasoning": "Le programme ne contient aucune proposition sur la souveraineté nationale, la défense, l'immigration ou les relations avec l'UE, hormis une référence à l'alignement sur les normes européennes d'assurance chômage. L'absence de contenu substantiel limite la confiance de ce score."
+      "confidence": 0.8,
+      "reasoning": "Forte insistance sur la souveraineté productive et agricole, le refus de la surtransposition européenne, la défense du nucléaire et la réciprocité commerciale, mais sans remise en cause de l'appartenance à l'UE."
     },
     "institutional": {
       "score": -1,
-      "anchor_comparison": "Dans la norme de la Ve République, sans proposition de réforme institutionnelle majeure.",
+      "anchor_comparison": "Similaire à Macron 2017 (-1), avec une volonté de réforme constitutionnelle ciblée (agriculture) et de restauration du contrôle politique, sans dérive illibérale.",
       "evidence": [
         {
-          "quote": "Les Républicains, voulons montrer aux Français qu'un autre choix est possible.",
-          "source_ref": "sources.md#travail-gagnant-nos-propositions-pour-la-france"
+          "quote": "Nous engagerons une réforme constitutionnelle afin de rétablir la capacité de l’État à décider lorsque l’intérêt agricole et alimentaire est en jeu.",
+          "source_ref": "sources.md#Proposition-4-Agri"
+        },
+        {
+          "quote": "Réaffirmer la primauté du pouvoir politique sur les agences administratives",
+          "source_ref": "sources.md#Reprendre-la-main-sur-l-Etat-et-ses-agences"
         }
       ],
-      "confidence": 0.4,
-      "reasoning": "Aucune mesure ne concerne les institutions, la décentralisation ou le fonctionnement démocratique. Le programme s'inscrit dans le cadre institutionnel existant sans le remettre en cause, ce qui le place dans la continuité libérale-démocratique par défaut. Le faible nombre d'éléments probants réduit la confiance."
+      "confidence": 0.6,
+      "reasoning": "Le programme propose une révision constitutionnelle pour l'agriculture, une suppression du principe de précaution par référendum, et un renforcement de l'exécutif face aux agences, mais ne développe pas de réforme institutionnelle globale ni d'atteinte aux contre-pouvoirs démocratiques."
     },
     "ecological": {
       "score": -2,
-      "anchor_comparison": "Plus productiviste que LR 2022, proche de RN 2022 sur l'absence de mesures environnementales.",
+      "anchor_comparison": "Plus productiviste que LR 2022 (-1), proche de RN 2022 (-3) dans la remise en cause des normes environnementales, mais conserve un soutien au nucléaire bas-carbone.",
       "evidence": [
         {
-          "quote": "Produire davantage est indispensable si nous voulons créer plus de richesse.",
-          "source_ref": "sources.md#proposition-1"
+          "quote": "Les considérations environnementales ne pourront plus constituer un frein automatique à la réalisation des projets industriels.",
+          "source_ref": "sources.md#PREMIER-PRINCIPE-PRODUIRE"
+        },
+        {
+          "quote": "Le zéro artificialisation nette (ZAN) ... sera supprimé. Les bâtiments agricoles et leurs extensions sortiront définitivement du champ des règles d’artificialisation",
+          "source_ref": "sources.md#Aligner-nos-regles-sur-l-Europe-pas-au-dela"
         }
       ],
-      "confidence": 0.5,
-      "reasoning": "Le programme encourage une hausse de la production et des heures travaillées sans mentionner de contraintes ou d'investissements environnementaux. L'absence totale de propositions sur le climat, la biodiversité ou la transition énergétique indique une priorité productiviste."
+      "confidence": 0.8,
+      "reasoning": "Le programme supprime des contraintes environnementales majeures (ZAN, principe de précaution, Ecophyto, OFB, normes AGEC), met fin aux soutiens publics aux ENR solaires/éoliens et privilégie explicitement la production sur la protection de l'environnement."
     },
     "overall_spectrum": {
       "label": "droite",
       "derived_from_axes": [
         "economic",
-        "social_cultural"
+        "social_cultural",
+        "sovereignty"
       ],
       "evidence": [
         {
-          "quote": "Redonner au moins 30 milliards d’euros aux salariés et aux entreprises, pour moitié en gains de pouvoir d’achat, pour moitié par une baisse durable du coût du travail.",
-          "source_ref": "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+          "quote": "Les mesures proposées permettront de redonner au moins 30 milliards d’euros aux salariés et aux entreprises, pour moitié en gains de pouvoir d’achat, pour moitié par une baisse durable du coût du travail.",
+          "source_ref": "sources.md#Impact-sur-les-finances-publiques-et-prochaines-etapes"
         },
         {
-          "quote": "Sortir du piège de l'assistance : notre système social ne doit plus permettre de s'installer durablement dans l'assistance.",
-          "source_ref": "sources.md#presentation-densemble"
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#TROISIEME-PRINCIPE"
         }
       ],
-      "confidence": 0.7,
-      "reasoning": "Le score économique fortement libéral (+3) et le score social conservateur (+2) placent le programme dans la droite classique française, comparable au positionnement de LR 2022. Les axes de souveraineté (neutre), institutionnel et écologique (négatif) ne modifient pas ce classement."
+      "confidence": 0.75,
+      "reasoning": "Un programme économique libéral (score +3), socialement conservateur (+2) et souverainiste modéré (+2) le place clairement à droite de l'échiquier politique français, sans atteindre l'extrême droite."
     }
   },
   "dimensions": {
     "economic_fiscal": {
       "grade": "B",
-      "headline": "Redistribution de 30 Md€/an vers salariés et entreprises via exonérations de cotisations et réforme de l'assurance chômage, sans trajectoire de réduction de la dette.",
-      "summary": "Le programme détaille cinq mesures chiffrées visant à réduire le coût du travail et les dépenses sociales, pour un gain estimé à 28,5-31,7 Md€/an intégralement restitué au privé. L'accent est mis sur l'offre : seuil zéro cotisation à 1 623 heures, fusion des minima sociaux (RIA), cumul emploi-retraite rénové, plafonnement des aides à 70 % du SMIC via un Compte social unique, et durcissement de l'assurance chômage. Les effets sur la dette publique ne sont pas traités car les économies sont reversées aux acteurs privés, et la trajectoire budgétaire d'ensemble n'est pas précisée.",
+      "headline": "Restitution de 30 Md€ aux salariés/entreprises via économies sur le chômage et les aides sociales, sans trajectoire complète de finances publiques.",
+      "summary": "Le programme articule cinq mesures principales (seuil zéro cotisation, RIA, cumul emploi-retraite rénové, CSU, réforme chômage) pour générer au moins 30 milliards d'économies annuelles, intégralement restituées sous forme de baisse de prélèvements. Il complète par une réduction des impôts de production de 15 Md€ et une réforme du financement de l'électricité. Le chiffrage est partiel : la compensation du seuil zéro cotisation repose sur une hypothèse de croissance des heures supplémentaires, et la soutenabilité globale du déficit n'est pas modélisée.",
       "problems_addressed": [
         {
-          "problem": "Faible pouvoir d'achat des salariés",
-          "approach": "Exonération de cotisations sociales au-delà de 1 623 heures/an, gains directs de 230 à 2 800 €/an selon le volume d'heures.",
+          "problem": "Faible pouvoir d'achat des salariés et coût du travail élevé",
+          "approach": "Exonération totale de cotisations sociales au-delà de 1623 h/an, baisse des cotisations patronales non contributives et des impôts de production.",
           "strength": 0.7,
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#Proposition-1-Seuil-zero-cotisation",
+            "sources.md#Reduire-franchement-les-prelevements-obligatoires"
           ],
-          "reasoning": "Mécanisme chiffré avec exemple précis au salaire médian, effet immédiat sur le net à payer."
+          "reasoning": "Mécanisme direct de réduction du coin fiscalo-social, chiffré à 11 Md€ de gain pour les entreprises et 500 €/an pour un salarié médian."
         },
         {
-          "problem": "Compétitivité-coût des entreprises",
-          "approach": "Baisse du coût horaire des heures supplémentaires d'environ 35 %, gain total estimé à près de 11 Md€ pour les entreprises.",
-          "strength": 0.7,
+          "problem": "Trappes à inactivité et complexité des aides sociales",
+          "approach": "Création du RIA fusionnant RSA, prime d'activité, ASS ; instauration du CSU plafonnant le total des aides à 70 % du SMIC net.",
+          "strength": 0.65,
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#Proposition-2-RIA",
+            "sources.md#Proposition-4-CSU"
           ],
-          "reasoning": "L'exonération totale de cotisations patronales sur les heures au-delà du seuil réduit le coût marginal du travail et incite à produire davantage."
+          "reasoning": "Simplifie l'architecture des aides et assure un gain net à la reprise d'activité, mais la baisse potentielle des prestations pour certains foyers (exemple 410 €/mois en moins) est significative."
         },
         {
-          "problem": "Dépenses d'assurance chômage excessives dans certaines situations",
-          "approach": "Application des règles de juin 2024, limitation des ruptures conventionnelles à 6 mois, alignement des frontaliers, plafonnement de l'alternance emploi-chômage.",
-          "strength": 0.6,
+          "problem": "Déséquilibre et coût de l'assurance chômage",
+          "approach": "Application des règles de juin 2024, plafonnement/limitation à 6 mois pour ruptures conventionnelles, alignement des frontaliers, fin des stratégies d'alternance.",
+          "strength": 0.8,
           "source_refs": [
-            "sources.md#proposition-5"
+            "sources.md#Proposition-5-Reforme-chomage"
           ],
-          "reasoning": "Économies estimées entre 12,5 et 15,7 Md€/an, détail par sous-mesure fourni."
+          "reasoning": "Génère 12,5-15,7 Md€ d'économies annuelles, corrige des dérives documentées avec des exemples chiffrés."
         }
       ],
       "problems_ignored": [
         {
-          "problem": "Trajectoire de la dette publique",
-          "significance": "Le programme restitue la totalité des économies au secteur privé sans réduction du déficit, laissant la dette sur sa trajectoire actuelle hors effet croissance.",
+          "problem": "Soutenabilité de la dette publique (116 % du PIB)",
+          "significance": "Le programme ne précise pas de trajectoire de déficit ou de ratio dette/PIB, ni l'impact des baisses de recettes (exonérations) sur le solde public à court terme.",
           "source_refs": []
         },
         {
-          "problem": "Financement des services publics et de la protection sociale hors chômage",
-          "significance": "La baisse massive des cotisations sociales réduit les ressources de la Sécurité sociale ; le programme ne précise pas comment les branches famille, santé ou retraite seront compensées.",
-          "source_refs": []
-        },
-        {
-          "problem": "Fiscalité du capital et des revenus du patrimoine",
-          "significance": "Aucune mesure sur l'impôt sur le revenu, la fiscalité des successions ou des entreprises en dehors des cotisations.",
+          "problem": "Financement des retraites par répartition à long terme",
+          "significance": "Aucun paramètre de durée de cotisation ou d'âge n'est modifié ; l'introduction d'un étage par capitalisation est évoquée mais non chiffrée.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Inégalités de revenu entre salariés pouvant et ne pouvant pas faire d'heures supplémentaires",
-          "mechanism": "Le gain de pouvoir d'achat est concentré sur les salariés dont l'employeur propose des heures au-delà du seuil ; les salariés à temps partiel contraint ou dans des secteurs sans heures supplémentaires n'en bénéficient pas.",
-          "severity": 0.4,
+          "problem": "Déficit public immédiat lié au coût de la transition",
+          "mechanism": "La suppression des cotisations sur les heures supplémentaires existantes coûte 4,3 Md€ avant que les heures nouvelles compensent. Les baisses d'impôts de production (15 Md€) ne sont adossées qu'à des hypothèses de croissance.",
+          "severity": 0.6,
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#Proposition-1-Seuil-zero-cotisation"
           ],
-          "reasoning": "Le mécanisme récompense le volume horaire, créant un écart potentiel entre salariés selon leur capacité à travailler plus."
+          "reasoning": "Le programme affirme un coût zéro ex ante, mais la compensation repose sur une élasticité de l'offre de travail non documentée."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Hypothèses comportementales optimistes sur la demande d'heures supplémentaires",
+          "risk": "Hypothèse optimiste de croissance des heures supplémentaires",
           "probability": 0.5,
-          "severity": 0.6,
-          "reasoning": "Le modèle suppose que les entreprises proposeront massivement des heures supplémentaires et que les salariés les accepteront ; si la demande de production est atone, l'effet sera limité.",
+          "severity": 0.4,
+          "reasoning": "La compensation du seuil zéro cotisation suppose que les salariés n'effectuant pas d'heures sup. en feront en moyenne 104 h/an (16+88). Une réalisation inférieure creuserait le déficit.",
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#Proposition-1-Seuil-zero-cotisation"
           ]
         },
         {
-          "risk": "Blocage parlementaire sur la réforme de l'assurance chômage",
-          "probability": 0.4,
-          "severity": 0.5,
-          "reasoning": "Les mesures de juin 2024 n'ont jamais été appliquées faute de majorité ; le durcissement supplémentaire pourrait rencontrer une opposition politique et syndicale forte.",
+          "risk": "Résistance sociale et juridique au plafonnement des aides (CSU) et à la réforme du chômage",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "La réduction drastique de certaines prestations (ex. -410 €/mois dans le cas de Sarah et Maxime) et les restrictions sur les ruptures conventionnelles peuvent générer des contentieux et des mouvements sociaux.",
           "source_refs": [
-            "sources.md#proposition-5"
+            "sources.md#Proposition-4-CSU"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Seuil zéro cotisation au-delà de 1 623 heures/an",
-          "source_ref": "sources.md#proposition-1",
+          "measure": "Seuil zéro cotisation au-delà de 1623 h/an",
+          "source_ref": "sources.md#Proposition-1-Seuil-zero-cotisation",
           "quantified": true,
-          "magnitude": "Gain de pouvoir d'achat jusqu'à 2 800 €/an pour un salarié médian, 11 Md€ pour les entreprises"
+          "magnitude": "Gain moyen 500 €/an pour salarié médian, 11 Md€ pour les entreprises"
         },
         {
-          "measure": "Réforme de l'assurance chômage (5 volets)",
-          "source_ref": "sources.md#proposition-5",
+          "measure": "Revenu d'incitation à l'activité (RIA) fusionnant RSA, prime d'activité, ASS",
+          "source_ref": "sources.md#Proposition-2-RIA",
           "quantified": true,
-          "magnitude": "12,5 à 15,7 Md€ d'économies par an"
+          "magnitude": "Allocation socle 300 €/mois, insertion 250 €/mois si 15 h d'activité ; économie 2 Md€"
         },
         {
-          "measure": "Création du Revenu d'incitation à l'activité (RIA)",
-          "source_ref": "sources.md#proposition-2",
+          "measure": "Réforme de l'assurance chômage avec économies de 12,5-15,7 Md€/an",
+          "source_ref": "sources.md#Proposition-5-Reforme-chomage",
           "quantified": true,
-          "magnitude": "2 Md€ d'économies, socle de 300 €/mois par adulte sans activité"
-        },
-        {
-          "measure": "Compte social unique (CSU) avec plafonnement à 70 % du SMIC net par adulte",
-          "source_ref": "sources.md#proposition-4",
-          "quantified": true,
-          "magnitude": "10 Md€ d'économies via réduction de la fraude et plafonnement"
+          "magnitude": "12,5-15,7 Md€/an"
         }
       ],
       "risk_profile": {
         "budgetary": {
-          "level": "moderate",
-          "note": "Les économies affichées dépendent de réponses comportementales (heures supplémentaires, reprise d'emploi) et de la capacité à réduire effectivement la fraude ; aucun filet de sécurité budgétaire n'est prévu si la croissance ne suit pas.",
+          "level": "high",
+          "note": "Compensation partiellement hypothétique des exonérations, et baisses d'impôts de production non gagées sur des économies structurelles détaillées.",
           "source_refs": [
-            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            "sources.md#Proposition-1-Seuil-zero-cotisation"
           ]
         },
         "implementation": {
-          "level": "high",
-          "note": "La création du CSU nécessite l'interopérabilité entre de nombreux organismes (CAF, départements, communes) et un registre national des versements, projet informatique complexe. La fusion RSA/prime d'activité/ASS demande une refonte législative et opérationnelle.",
+          "level": "moderate",
+          "note": "Nécessite la création d'un Compte Social Unique (système d'information inter-administrations) et la refonte de plusieurs prestations ; complexité administrative élevée.",
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#Proposition-4-CSU"
           ]
         },
         "dependency": {
-          "level": "low",
-          "note": "Les mesures sont principalement domestiques ; l'alignement des frontaliers dépend d'accords bilatéraux existants mais ne crée pas de dépendance nouvelle.",
-          "source_refs": [
-            "sources.md#proposition-5"
-          ]
+          "level": "limited",
+          "note": "Peu de dépendances extérieures directes, sauf acceptabilité sociale et syndicale pour les réformes du travail.",
+          "source_refs": []
         },
         "reversibility": {
-          "level": "moderate",
-          "note": "Une majorité ultérieure pourrait rétablir les cotisations ou l'assurance chômage antérieure ; le CSU et le RIA sont structurellement plus difficiles à démanteler une fois en place.",
+          "level": "low",
+          "note": "Les exonérations de cotisations et le plafonnement des aides peuvent être modifiés par une loi de finances ou de financement de la sécurité sociale ultérieure.",
           "source_refs": []
         }
       },
@@ -233,531 +243,663 @@
     },
     "social_demographic": {
       "grade": "C",
-      "headline": "Plafonnement des aides sociales à 70 % du SMIC net et fusion des minima sociaux, sans mesures sur la santé, l'éducation ou la famille.",
-      "summary": "Le programme réforme les prestations sociales non contributives (RSA, prime d'activité, ASS, APL) via le RIA et le CSU, avec un plafond global de 70 % du SMIC net par adulte. L'objectif est d'inciter au retour à l'emploi et de réduire l'assistanat. Les questions de santé, d'éducation, de politique familiale ou de logement sont absentes, de même que les enjeux démographiques (vieillissement, natalité). Les effets redistributifs sur les ménages modestes qui ne peuvent pas travailler davantage ne sont pas évalués.",
+      "headline": "Réduction des aides sociales, réforme de l'apprentissage vers l'industrie, absence de mesures sur la santé, l'éducation générale et le logement.",
+      "summary": "Le programme se concentre sur le lien entre protection sociale et emploi (RIA, CSU, réforme chômage) et sur la formation professionnelle (réorientation de l'apprentissage, transfert des lycées professionnels aux régions). Les questions de santé, d'accès aux soins, d'éducation nationale (hors professionnel), de politique familiale et de logement ne sont pas abordées. La cohésion sociale est abordée indirectement via la lutte contre l'assistanat, mais les inégalités ne sont pas traitées frontalement.",
       "problems_addressed": [
         {
-          "problem": "Trappes à inactivité et cumul d'aides décourageant le retour à l'emploi",
-          "approach": "Création du RIA permettant un cumul partiel allocation/salaire avec taux de réduction de 30 %, remplaçant les dispositifs existants.",
-          "strength": 0.6,
+          "problem": "Complexité et désincitation au retour à l'emploi du système d'aides",
+          "approach": "Fusion en RIA et plafonnement à 70 % du SMIC net via CSU.",
+          "strength": 0.65,
           "source_refs": [
-            "sources.md#proposition-2"
+            "sources.md#Proposition-2-RIA",
+            "sources.md#Proposition-4-CSU"
           ],
-          "reasoning": "Le mécanisme de cumul est plus lisible que le système actuel et supprime les effets de seuil ; un exemple chiffré montre un gain de 400 €/mois pour une mère isolée reprenant un mi-temps."
+          "reasoning": "Simplifie les dispositifs et garantit un gain financier à la reprise d'activité, avec une modélisation sur un cas-type."
         },
         {
-          "problem": "Illisibilité et absence de plafond global des aides sociales",
-          "approach": "Création d'un Compte social unique (CSU) recensant toutes les aides et instaurant un plafond à 70 % du SMIC net par adulte.",
-          "strength": 0.5,
+          "problem": "Inadéquation de la formation professionnelle aux besoins industriels",
+          "approach": "Réorientation des aides à l'apprentissage vers les niveaux infra-Bac+2 et les filières industrielles, transfert des lycées professionnels aux régions.",
+          "strength": 0.6,
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#Proposition-9-Formation"
           ],
-          "reasoning": "L'outil de suivi répond à un problème réel d'empilement non maîtrisé ; le plafond est une règle simple mais son application à des situations familiales hétérogènes n'est pas détaillée."
+          "reasoning": "Diagnostic étayé (coût par apprenti 3x supérieur à l'Allemagne, faible insertion des jeunes) et mesures de redéploiement."
         }
       ],
       "problems_ignored": [
         {
           "problem": "Accès aux soins et déserts médicaux",
-          "significance": "Le programme ne contient aucune proposition sur la santé, l'hôpital ou la couverture maladie, alors que les inégalités territoriales d'accès aux soins sont documentées.",
+          "significance": "Aucune mesure de santé publique, de régulation de l'offre de soins ou de financement de l'hôpital.",
           "source_refs": []
         },
         {
-          "problem": "Éducation et formation professionnelle",
-          "significance": "Aucune mesure sur l'école, l'enseignement supérieur ou la formation continue, qui conditionnent pourtant la capacité à retrouver un emploi.",
+          "problem": "Inégalités scolaires et éducation nationale",
+          "significance": "Le programme ne traite pas de l'école primaire, du collège ou du lycée général, ni des inégalités éducatives.",
           "source_refs": []
         },
         {
-          "problem": "Politique familiale et garde d'enfants",
-          "significance": "Le programme évoque les frais de garde comme frein à l'emploi mais ne propose pas de mesure pour les réduire.",
-          "source_refs": []
-        },
-        {
-          "problem": "Inégalités de revenu et pauvreté des inactifs non indemnisés",
-          "significance": "Le plafonnement des aides à 70 % du SMIC pourrait réduire le revenu de ménages sans capacité de travailler (exemple du couple Sarah et Maxime voit ses aides réduites de 410 €).",
+          "problem": "Politique du logement et accès au logement des jeunes",
+          "significance": "Aucune proposition sur le logement social, l'accession à la propriété, la régulation des loyers ou les APL au-delà du plafonnement CSU.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Situation des ménages modestes sans perspective d'heures supplémentaires",
-          "mechanism": "Le plafonnement des aides réduit le revenu disponible des allocataires sans garantie qu'ils trouvent un emploi ; l'exemple du programme montre une baisse de 410 €/mois pour un couple sans emploi avec deux enfants.",
+          "problem": "Situation des ménages modestes fortement dépendants des aides",
+          "mechanism": "Le plafonnement des aides à 70 % du SMIC net réduit les ressources de certains foyers (exemple de 410 €/mois dans le document), ce qui peut accroître la pauvreté monétaire à court terme.",
           "severity": 0.5,
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#Proposition-4-CSU"
           ],
-          "reasoning": "La baisse des aides est présentée comme une incitation à reprendre une activité, mais le programme ne crée pas de nouveaux emplois ; le risque de paupérisation est réel si l'offre de travail ne suit pas."
+          "reasoning": "La redistribution intra-foyer de l'exemple montre une baisse de prestations de 17 %, sans garantie de retour immédiat à l'emploi."
         }
       ],
       "execution_risks": [
         {
-          "risk": "Difficulté technique et politique du déploiement du CSU",
-          "probability": 0.6,
-          "severity": 0.7,
-          "reasoning": "Coordonner l'ensemble des organismes sociaux (CAF, départements, communes, Pôle emploi) autour d'un registre unique est un chantier informatique et institutionnel majeur, avec des résistances locales.",
+          "risk": "Résistance des syndicats de l'Éducation nationale au transfert des lycées professionnels",
+          "probability": 0.8,
+          "severity": 0.5,
+          "reasoning": "Le transfert aux régions et aux entreprises d'une compétence historique de l'État se heurtera à une opposition forte.",
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#Proposition-9-Formation"
           ]
         }
       ],
       "key_measures": [
         {
-          "measure": "Revenu d'incitation à l'activité (RIA) remplaçant RSA, prime d'activité et ASS",
-          "source_ref": "sources.md#proposition-2",
+          "measure": "Création du RIA (fusion RSA, prime d'activité, ASS) et plafonnement CSU à 70 % du SMIC net",
+          "source_ref": "sources.md#Proposition-2-RIA",
           "quantified": true,
-          "magnitude": "Socle 300 €/mois, cumul partiel avec salaire"
+          "magnitude": "RIA socle 300 €/mois, insertion 250 €/mois ; plafond CSU 70 % SMIC net"
         },
         {
-          "measure": "Compte social unique avec plafond à 70 % du SMIC net par adulte",
-          "source_ref": "sources.md#proposition-4",
-          "quantified": true,
-          "magnitude": "Réduction des aides estimée à 410 €/mois dans l'exemple donné"
+          "measure": "Réorientation des aides à l'apprentissage et transfert des lycées professionnels aux régions",
+          "source_ref": "sources.md#Proposition-9-Formation",
+          "quantified": false,
+          "magnitude": null
         }
       ],
       "risk_profile": {
         "budgetary": {
           "level": "limited",
-          "note": "Le RIA est présenté comme générant 2 Md€ d'économies, le CSU 10 Md€ via la lutte contre la fraude ; ces chiffres dépendent du niveau de fraude effectif et de la capacité à la détecter.",
+          "note": "Le RIA et le CSU génèrent des économies nettes selon le programme ; le risque principal est l'impact social non budgétisé des baisses de prestations.",
           "source_refs": [
-            "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+            "sources.md#Impact-sur-les-finances-publiques"
           ]
         },
         "implementation": {
           "level": "high",
-          "note": "La fusion des trois minima sociaux et la création du CSU sont des projets de transformation numérique et organisationnelle de grande ampleur, avec un risque de délais et de surcoûts.",
+          "note": "La création du CSU et l'harmonisation de multiples organismes payeurs est un chantier informatique et organisationnel lourd.",
           "source_refs": [
-            "sources.md#proposition-4"
+            "sources.md#Proposition-4-CSU"
           ]
         },
         "dependency": {
-          "level": "low",
-          "note": "Pas de dépendance externe majeure ; le CSU repose sur une coordination inter-administrations française.",
+          "level": "moderate",
+          "note": "Dépend à l'acceptation par les collectivités territoriales et les CAF ; risque de contentieux constitutionnels (principe d'égalité, droit à la subsistance).",
           "source_refs": []
         },
         "reversibility": {
+          "level": "low",
+          "note": "Les réformes paramétriques du RIA et du plafonnement peuvent être ajustées par voie législative ou réglementaire.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.6
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Forte insistance sur la souveraineté agricole et industrielle, mais absence de propositions sur la défense, la sécurité intérieure et l'immigration.",
+      "summary": "Le programme développe en détail la reconquête de la souveraineté alimentaire et la réindustrialisation pour réduire les dépendances, avec des mesures concrètes sur l'énergie nucléaire et la réciprocité commerciale. En revanche, il ne traite pas de la sécurité intérieure, de la défense nationale, de la lutte contre le terrorisme, de la politique migratoire ou de la souveraineté numérique au-delà de quelques secteurs stratégiques. La dimension de sécurité est donc très partielle.",
+      "problems_addressed": [
+        {
+          "problem": "Dépendance alimentaire et baisse de la balance commerciale agricole",
+          "approach": "Suppression de normes environnementales (ZAN, principe de précaution), soutien au stockage d'eau, refonte de la PAC, réciprocité aux frontières.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#REARMER-NOTRE-AGRICULTURE",
+            "sources.md#Assurer-enfin-la-reciprocite-aux-frontieres"
+          ],
+          "reasoning": "Plan complet avec objectifs chiffrés, mesures législatives et constitutionnelles."
+        },
+        {
+          "problem": "Dépendance industrielle et décrochage compétitif",
+          "approach": "Baisse des impôts de production, fonds France Production de 600 M€/an, réorientation de l'épargne, contrat nucléaire long terme.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#Reduire-franchement-les-prelevements-obligatoires",
+            "sources.md#Garantir-un-prix-de-l-electricite"
+          ],
+          "reasoning": "Détail de la suppression de la C3S, CVAE, forfait social, CFE industrielle (15 Md€) et mécanisme de prix nucléaire."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Politique de défense et de sécurité intérieure",
+          "significance": "Aucune mention des armées, de la dissuasion, de la cybersécurité opérationnelle, de la police ou de la justice.",
+          "source_refs": []
+        },
+        {
+          "problem": "Politique migratoire",
+          "significance": "Le programme n'aborde ni les flux migratoires, ni l'asile, ni l'intégration, alors que le candidat est connu pour des positions dures sur le sujet.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Tensions avec l'UE sur les clauses de réciprocité et l'opposition à l'intégration ukrainienne",
+          "probability": 0.7,
+          "severity": 0.5,
+          "reasoning": "Les exigences de réciprocité systématique et le refus d'élargissement du marché agricole peuvent isoler la France dans les négociations commerciales.",
+          "source_refs": [
+            "sources.md#Assurer-enfin-la-reciprocite-aux-frontieres"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression du ZAN et révision constitutionnelle pour l'agriculture comme intérêt fondamental",
+          "source_ref": "sources.md#Proposition-4-Agri",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Baisse de 15 Md€ d'impôts de production et contrat nucléaire de long terme",
+          "source_ref": "sources.md#Reduire-franchement-les-prelevements-obligatoires",
+          "quantified": true,
+          "magnitude": "15 Md€/an"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
           "level": "moderate",
-          "note": "Une fois le CSU déployé, un gouvernement pourrait modifier le plafond ou les règles, mais l'infrastructure technique serait conservée.",
+          "note": "Les baisses d'impôts de production (15 Md€) ne sont pas gagées à court terme sur des économies équivalentes.",
+          "source_refs": [
+            "sources.md#Reduire-franchement-les-prelevements-obligatoires"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "La révision constitutionnelle et la suppression d'agences (OFB) exigent des majorités qualifiées et des chantiers législatifs complexes.",
+          "source_refs": [
+            "sources.md#Proposition-4-Agri"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de la capacité à faire accepter les dérogations aux règles européennes (PAC, commerce) et à renégocier des traités.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Une révision constitutionnelle est difficile à revenir ; les baisses d'impôts peuvent être réintroduites par une loi de finances ultérieure.",
           "source_refs": []
         }
       },
       "confidence": 0.55
     },
-    "security_sovereignty": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne traite pas des questions de sécurité intérieure, défense, immigration ou souveraineté énergétique et industrielle.",
-      "summary": "Le document sources.md est exclusivement consacré aux réformes économiques et sociales autour du travail, des cotisations et des aides. Aucune proposition ne concerne la sécurité intérieure, la lutte contre le terrorisme, la défense nationale, la politique migratoire, l'indépendance énergétique, la souveraineté alimentaire ou industrielle, ni la relation de la France avec l'Union européenne. L'absence de contenu sur ce pilier ne permet pas d'analyse.",
-      "problems_addressed": [],
-      "problems_ignored": [
-        {
-          "problem": "Ensemble du pilier sécurité et souveraineté",
-          "significance": "Le programme ne couvre pas ce domaine, ce qui constitue un silence complet sur des enjeux majeurs de la présidentielle.",
-          "source_refs": []
-        }
-      ],
-      "problems_worsened": [],
-      "execution_risks": [],
-      "key_measures": [],
-      "risk_profile": {
-        "budgetary": {
-          "level": "low",
-          "note": "Programme silencieux sur les dépenses de sécurité et de défense.",
-          "source_refs": []
-        },
-        "implementation": {
-          "level": "low",
-          "note": "Aucune mesure à mettre en œuvre.",
-          "source_refs": []
-        },
-        "dependency": {
-          "level": "low",
-          "note": "Sans objet.",
-          "source_refs": []
-        },
-        "reversibility": {
-          "level": "low",
-          "note": "Sans objet.",
-          "source_refs": []
-        }
-      },
-      "confidence": 0.9
-    },
     "institutional_democratic": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne contient aucune proposition de réforme institutionnelle ou démocratique.",
-      "summary": "Le document ne propose aucune évolution du cadre constitutionnel, du mode de scrutin, de la décentralisation, de la justice, de la lutte contre la corruption, du statut des élus ou de la relation entre l'exécutif et le législatif. Le programme s'inscrit implicitement dans le fonctionnement actuel des institutions de la Ve République. Aucune référence n'est faite à la démocratie participative, au référendum ou à la réforme de l'État.",
-      "problems_addressed": [],
-      "problems_ignored": [
+      "grade": "D",
+      "headline": "Réformes institutionnelles ponctuelles pour l'agriculture et la dérégulation, mais pas de vision d'ensemble de la gouvernance démocratique.",
+      "summary": "Le programme propose une révision constitutionnelle pour sanctuariser l'agriculture et supprimer le principe de précaution, un renforcement du pouvoir exécutif face aux agences, et une loi organique contre la surtransposition. Il ne traite pas de la réforme des institutions (Parlement, mode de scrutin, décentralisation générale) ni de l'État de droit au-delà du domaine productif. La refonte du Code du travail autour de 50 principes et la négociation collective relève plus de la politique économique que de l'architecture institutionnelle.",
+      "problems_addressed": [
         {
-          "problem": "Fonctionnement des institutions et réforme de l'État",
-          "significance": "Absence totale de diagnostic ou de proposition sur ce thème pourtant présent dans le débat public.",
-          "source_refs": []
+          "problem": "Blocage des projets agricoles et industriels par des normes et contentieux",
+          "approach": "Inscription de l'agriculture comme intérêt fondamental dans la Constitution, suppression du principe de précaution, limitation des recours.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#Proposition-4-Agri"
+          ],
+          "reasoning": "Modification substantielle de l'équilibre entre protection de l'environnement et intérêts productifs, mais limitée à un secteur."
         }
       ],
-      "problems_worsened": [],
-      "execution_risks": [],
-      "key_measures": [],
-      "risk_profile": {
-        "budgetary": {
-          "level": "low",
-          "note": "Programme silencieux.",
-          "source_refs": []
-        },
-        "implementation": {
-          "level": "low",
-          "note": "Aucune mesure.",
-          "source_refs": []
-        },
-        "dependency": {
-          "level": "low",
-          "note": "Sans objet.",
-          "source_refs": []
-        },
-        "reversibility": {
-          "level": "low",
-          "note": "Sans objet.",
-          "source_refs": []
-        }
-      },
-      "confidence": 0.85
-    },
-    "environmental_long_term": {
-      "grade": "NOT_ADDRESSED",
-      "headline": "Programme ne mentionne ni le climat, ni la biodiversité, ni la transition énergétique.",
-      "summary": "Le document ne contient aucun axe consacré à l'environnement : pas d'objectifs climatiques, de plan d'investissement vert, de mesures sur la biodiversité, l'eau, l'agriculture durable, la rénovation énergétique ou les transports propres. Le seul levier environnemental implicite est l'absence de mesures, tandis que la priorité donnée à l'augmentation de la production et des heures travaillées pourrait accroître la pression sur les ressources. Ce silence complet justifie la note NOT_ADDRESSED.",
-      "problems_addressed": [],
       "problems_ignored": [
         {
-          "problem": "Transition écologique et climatique",
-          "significance": "Le programme ignore les engagements climatiques de la France (Accord de Paris, Fit for 55) et n'alloue aucune ressource à la décarbonation.",
+          "problem": "Réforme globale des institutions (Parlement, exécutif, collectivités territoriales)",
+          "significance": "Le programme n'aborde ni la proportionnelle, ni le cumul des mandats, ni la décentralisation hors régions pour la formation.",
           "source_refs": []
         },
         {
-          "problem": "Biodiversité, eau, agriculture durable",
-          "significance": "Aucune proposition sur ces enjeux pourtant structurants à long terme.",
+          "problem": "Indépendance de la justice et État de droit",
+          "significance": "Aucune mention de la justice, des libertés publiques ou de la lutte contre la corruption.",
           "source_refs": []
         }
       ],
       "problems_worsened": [
         {
-          "problem": "Empreinte carbone liée à l'augmentation des heures travaillées",
-          "mechanism": "L'objectif explicite d'augmenter la production de 2 % de PIB via les heures supplémentaires n'est accompagné d'aucune mesure de compensation environnementale, ce qui pourrait accroître les émissions.",
+          "problem": "Équilibre des pouvoirs entre exécutif et autorités administratives indépendantes",
+          "mechanism": "La reprise en main politique des agences et la suppression de l'OFB réduisent les contre-pouvoirs administratifs sans créer de nouveaux mécanismes de contrôle.",
           "severity": 0.4,
           "source_refs": [
-            "sources.md#proposition-1"
+            "sources.md#Reprendre-la-main-sur-l-Etat-et-ses-agences"
           ],
-          "reasoning": "Effet indirect non chiffré mais mécaniquement probable sans découplage énergie/PIB documenté."
+          "reasoning": "La suppression de l'OFB et l'audit des agences pour 'dérive militante' accroît la concentration du pouvoir mais de manière sectorielle."
         }
       ],
-      "execution_risks": [],
-      "key_measures": [],
+      "execution_risks": [
+        {
+          "risk": "Blocage de la révision constitutionnelle par le Congrès ou référendum",
+          "probability": 0.8,
+          "severity": 0.7,
+          "reasoning": "Une révision constitutionnelle nécessite 3/5e du Congrès ou un référendum ; l'opposition de la gauche et des écologistes rend son adoption improbable.",
+          "source_refs": [
+            "sources.md#Proposition-4-Agri"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Révision constitutionnelle pour l'agriculture et suppression du principe de précaution",
+          "source_ref": "sources.md#Proposition-4-Agri",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
       "risk_profile": {
         "budgetary": {
           "level": "low",
-          "note": "Aucun engagement budgétaire environnemental mentionné.",
+          "note": "Les réformes institutionnelles n'ont pas d'impact budgétaire direct significatif.",
           "source_refs": []
         },
         "implementation": {
-          "level": "low",
-          "note": "Pas de mesure.",
-          "source_refs": []
+          "level": "high",
+          "note": "La révision constitutionnelle requiert une majorité très large ou une campagne référendaire à haut risque.",
+          "source_refs": [
+            "sources.md#Proposition-4-Agri"
+          ]
         },
         "dependency": {
-          "level": "low",
-          "note": "Sans objet.",
+          "level": "moderate",
+          "note": "Dépend du soutien parlementaire et de la validation par le Conseil constitutionnel de la conformité de la révision.",
           "source_refs": []
         },
         "reversibility": {
           "level": "low",
-          "note": "Sans objet.",
+          "note": "Une fois constitutionnalisé, le changement est difficile à défaire ; une nouvelle révision serait nécessaire.",
           "source_refs": []
         }
       },
-      "confidence": 0.9
+      "confidence": 0.5
+    },
+    "environmental_long_term": {
+      "grade": "D",
+      "headline": "Démantèlement des normes environnementales, soutien au nucléaire, pas d'objectif climatique ni de protection de la biodiversité.",
+      "summary": "Le programme supprime ou affaiblit explicitement les principaux outils de la politique environnementale française : ZAN, principe de précaution, stratégie Ecophyto, OFB, loi AGEC, interdictions plastiques/PFAS, soutiens aux ENR solaires et éoliens. Il favorise une approche productiviste de l'agriculture et de l'industrie sans objectifs de réduction d'émissions de GES ni de préservation des écosystèmes. Le seul levier bas-carbone conservé est le nucléaire, avec une ambition de prolongation des réacteurs et de nouveau nucléaire.",
+      "problems_addressed": [
+        {
+          "problem": "Coût de l'énergie pour l'industrie",
+          "approach": "Contrat nucléaire de long terme, arrêt des subventions aux ENR pour stabiliser le prix de l'électricité.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#Garantir-un-prix-de-l-electricite"
+          ],
+          "reasoning": "Mécanisme contractuel précis visant une baisse de 10 % du prix pour l'industrie, tout en maintenant une production décarbonée."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réduction des émissions de gaz à effet de serre et trajectoire de neutralité carbone",
+          "significance": "Aucun objectif chiffré de réduction, aucune mention de la SNBC ou du paquet Fit for 55.",
+          "source_refs": []
+        },
+        {
+          "problem": "Protection de la biodiversité et des espaces naturels",
+          "significance": "Suppression de l'OFB, fin du ZAN, pas de mesures de conservation.",
+          "source_refs": []
+        },
+        {
+          "problem": "Adaptation au changement climatique (hors agriculture)",
+          "significance": "Le programme ne traite pas des risques littoraux, des canicules urbaines ou de la ressource en eau potable.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Artificialisation des sols et perte de biodiversité",
+          "mechanism": "Suppression du ZAN et exemption des bâtiments agricoles, couplée à une réindustrialisation consommatrice de foncier (25 000 ha).",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#Aligner-nos-regles-sur-l-Europe-pas-au-dela",
+            "sources.md#Restaurer-notre-souverainete-industrielle"
+          ],
+          "reasoning": "La suppression du ZAN lève la principale contrainte quantitative à l'étalement, sans mécanisme de compensation."
+        },
+        {
+          "problem": "Usage de produits phytosanitaires",
+          "mechanism": "Abandon de l'objectif de -50 %, autorisation de substances interdites (néonicotinoïdes) et fin de l'approche de précaution.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#Assumer-une-strategie-d-innovation-agronomique"
+          ],
+          "reasoning": "Risque d'augmentation des intrants chimiques et des résidus dans l'environnement."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Contentieux européens pour non-respect des directives environnementales (eau, biodiversité, ZAN)",
+          "probability": 0.6,
+          "severity": 0.5,
+          "reasoning": "La suppression du ZAN et le relèvement des seuils ICPE pourraient contrevenir au droit de l'UE, entraînant des procédures d'infraction.",
+          "source_refs": [
+            "sources.md#Aligner-nos-regles-sur-l-Europe-pas-au-dela"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression du ZAN et exemption des bâtiments agricoles",
+          "source_ref": "sources.md#Aligner-nos-regles-sur-l-Europe-pas-au-dela",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Arrêt des soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#Garantir-un-prix-de-l-electricite",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Les mesures consistent principalement en abrogations, sans coût direct, mais la perte de recettes liée à l'absence de fiscalité carbone ou à la renégociation de la PAC est non évaluée.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Les abrogations par voie réglementaire ou législative sont relativement simples, mais la révision constitutionnelle est complexe.",
+          "source_refs": [
+            "sources.md#Proposition-4-Agri"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Forte dépendance à la compatibilité avec le droit européen de l'environnement et à l'absence de contentieux.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Le rétablissement des normes est possible par un futur gouvernement mais politiquement difficile.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.65
     }
   },
   "intergenerational": {
-    "net_transfer_direction": "young_to_old",
+    "net_transfer_direction": "mixed",
     "magnitude_estimate": {
-      "value": "environ 15 Md€/an de réduction nette des transferts sociaux vers les actifs, avec des effets incertains sur les jeunes entrants",
-      "units": "€/an",
-      "confidence": 0.45,
-      "caveats": "Estimation fondée sur l'ordre de grandeur des économies sur les aides sociales (10 Md€ CSU, 2 Md€ RIA, une partie des 12,5-15,7 Md€ assurance chômage) concentrées sur les actifs, alors que les pensions des retraités actuels ne sont pas réduites et que les seniors actifs bénéficient d'exonérations nouvelles."
+      "value": "non quantifiable avec les seules sources du programme",
+      "units": "N/A",
+      "confidence": 0.3,
+      "caveats": "Le programme ne fournit pas de projection intergénérationnelle ; il abaisse le coût du travail pour les actifs tout en maintenant les pensions des retraités ; la réduction des prestations d'assistance affecte davantage les jeunes précaires."
     },
     "impact_on_25yo_in_2027": {
       "fiscal": {
-        "summary": "Perte potentielle de prestations sociales (RSA/APL réduits ou plafonnés) sans garantie d'emploi supplémentaire, et cotisations sociales réduites seulement si heures supplémentaires accessibles.",
-        "quantified": "Variable, jusqu'à -410 €/mois pour un allocataire sans emploi selon l'exemple du programme."
+        "summary": "Allègement des cotisations sur les heures supplémentaires améliore le revenu net des jeunes salariés acceptant ces heures, mais réduction du filet de sécurité social (RSA remplacé par RIA plus restrictif, plafonnement CSU) si en difficulté.",
+        "quantified": "Gain potentiel ~230 € nets/an pour 16 h sup. ; perte possible de prestations si chômage/inactivité"
       },
       "housing": {
-        "summary": "Aucune mesure sur le logement ; le plafonnement des APL via le CSU pourrait réduire l'accès au logement pour les jeunes précaires.",
+        "summary": "Aucune mesure spécifique pour l'accès au logement ; le plafonnement des APL dans le CSU peut réduire l'aide au logement des jeunes les plus modestes.",
         "quantified": null
       },
       "pension_outlook": {
-        "summary": "Pas de réforme systémique des retraites ; la mesure favorisant le cumul emploi-retraite pourrait améliorer l'équilibre à long terme, mais l'effet pour un jeune de 25 ans en 2027 est lointain et non chiffré.",
+        "summary": "Introduction d'un étage de retraite par capitalisation volontaire, bénéfique à long terme pour ceux qui épargnent, mais aucun paramètre de répartition n'est modifié ; la charge future demeure.",
         "quantified": null
       },
       "labor_market": {
-        "summary": "La baisse du coût du travail pourrait stimuler l'emploi, mais l'avantage se concentre sur les salariés en poste pouvant faire des heures supplémentaires ; les jeunes entrants pourraient bénéficier d'un marché du travail légèrement plus dynamique si la croissance suit.",
+        "summary": "Baisse du coût du travail, réforme de l'apprentissage et de la formation professionnelle pourraient améliorer l'employabilité ; suppression du CDI de chantier et flexibilité du temps partiel facilitent l'entrée.",
         "quantified": null
       },
       "environmental_debt": {
-        "summary": "Aucune mesure de transition écologique ; le renchérissement futur des dommages climatiques pèsera sur cette cohorte.",
+        "summary": "Dérégulation environnementale accroît la dette écologique transmise aux jeunes générations (artificialisation, climat).",
         "quantified": null
       },
-      "narrative_summary": "Le programme réduit les transferts sociaux nets vers les actifs jeunes sans créer de droits nouveaux en matière de logement, de formation ou de transition écologique. Les gains de pouvoir d'achat sont conditionnés à la capacité d'obtenir des heures supplémentaires, ce qui est moins probable pour les jeunes en insertion. L'impact net est négatif à court-moyen terme."
+      "narrative_summary": "Effet net contrasté : gains potentiels de revenu d'activité mais affaiblissement des protections sociales et environnementales."
     },
     "impact_on_65yo_in_2027": {
       "fiscal": {
-        "summary": "Pensions inchangées ; possibilité de cumuler emploi et retraite avec une minoration de 30 % de la pension sur le revenu d'activité, offrant un gain net en cas de reprise d'activité.",
-        "quantified": "Jusqu'à 17 500 € de revenus supplémentaires sur deux ans dans l'exemple du programme pour un retraité à mi-temps."
+        "summary": "Maintien du niveau des pensions de retraite (pas de désindexation prévue).",
+        "quantified": "+0 €/an"
       },
       "pension": {
-        "summary": "Aucune désindexation ou baisse des pensions n'est proposée ; le système actuel est préservé.",
-        "quantified": "Stable"
+        "summary": "Cumul emploi-retraite rénové permet de cumuler revenu d'activité et pension ajustée à 70 % du revenu, sans cotisations sociales, améliorant le revenu des retraités actifs.",
+        "quantified": "Gain jusqu'à 17 500 € sur 2 ans pour un mi-temps au salaire médian"
       },
       "healthcare": {
-        "summary": "Aucune mesure mentionnée ; le statu quo est implicite.",
+        "summary": "Aucune mesure spécifique aux seniors ; l'accès aux soins n'est pas modifié.",
         "quantified": null
       },
-      "narrative_summary": "Les retraités actuels conservent leurs droits intacts et gagnent une option supplémentaire de revenu via le cumul emploi-retraite rénové. Aucune perte n'est programmée. L'impact net est positif pour cette cohorte."
+      "narrative_summary": "Effet globalement positif pour les retraités, surtout ceux pouvant ou souhaitant travailler."
     },
     "horizon_matrix": [
       {
         "row": "pensions",
-        "dimension_note": "Pas de réforme paramétrique des retraites ; l'effet principal passe par l'incitation au cumul emploi-retraite qui pourrait améliorer l'équilibre financier si le taux de participation des seniors augmente.",
+        "dimension_note": "Pas de réforme paramétrique ; le cumul emploi-retraite rénové et l'étage de capitalisation peuvent améliorer la situation individuelle sans changer l'équilibre global du régime par répartition.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Aucun changement immédiat des règles de pension.",
+            "note": "Effet très limité, seuls les départs en cumul emploi-retraite augmentent progressivement.",
             "source_refs": [
-              "sources.md#proposition-3"
+              "sources.md#Proposition-3-Seniors"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 1,
-            "note": "Si 10 % de seniors supplémentaires prolongent leur activité, l'impact devient légèrement positif pour les comptes sociaux.",
-            "source_refs": [
-              "sources.md#proposition-3"
-            ]
+            "impact_score": 0,
+            "note": "Pas de modification des paramètres de la répartition ; le capitalisation volontaire commence à peine à produire des effets.",
+            "source_refs": []
           },
           "h_2038_2047": {
             "impact_score": 1,
-            "note": "L'effet cumulatif sur l'équilibre du régime est modeste mais positif, toutes choses égales par ailleurs.",
+            "note": "L'étage par capitalisation, si largement adopté, pourrait fournir un complément de revenu aux futurs retraités.",
             "source_refs": [
-              "sources.md#proposition-3"
+              "sources.md#Encourager-l-epargne-a-soutenir-le-financement-de-l-economie"
             ]
           }
         }
       },
       {
         "row": "public_debt",
-        "dimension_note": "Les économies réalisées sont intégralement restituées au privé et ne réduisent pas le déficit ; seule la croissance supplémentaire pourrait améliorer le ratio dette/PIB.",
+        "dimension_note": "Les baisses de prélèvements massives et l'incertitude sur le rendement des mesures pourraient dégrader le solde public à court et moyen terme.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Pas de réduction du déficit structurel ; le ratio dette/PIB pourrait s'améliorer marginalement si la croissance atteint 2 % comme visé.",
+            "impact_score": -2,
+            "note": "Coût initial des exonérations et baisses d'impôts non entièrement compensé ; risque de creusement du déficit.",
             "source_refs": [
-              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+              "sources.md#Proposition-1-Seuil-zero-cotisation"
             ]
           },
           "h_2031_2037": {
-            "impact_score": 0,
-            "note": "Même effet incertain ; sans consolidation budgétaire explicite, la dette reste sur sa trajectoire tendancielle.",
+            "impact_score": -1,
+            "note": "Si la croissance revient grâce aux réformes, l'impact négatif pourrait s'atténuer.",
             "source_refs": []
           },
           "h_2038_2047": {
             "impact_score": 0,
-            "note": "Programme ne spécifie pas de cible de dette ni de mécanisme de réduction.",
+            "note": "À long terme, les effets sur la dette dépendent de la réalisation des hypothèses de croissance et des économies ; le programme ne fournit pas de trajectoire.",
             "source_refs": []
           }
         }
       },
       {
         "row": "climate",
-        "dimension_note": "Programme silencieux sur le climat ; l'augmentation de la production pourrait accroître les émissions en l'absence de mesures compensatoires.",
+        "dimension_note": "Le démantèlement des politiques environnementales réduit la capacité de la France à atteindre ses objectifs climatiques.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": -1,
-            "note": "Aucune mesure climatique ; la hausse de la production non conditionnée à des critères environnementaux augmente légèrement les émissions.",
-            "source_refs": []
+            "impact_score": -2,
+            "note": "Fin du ZAN, reprise des néonicotinoïdes, arrêt des subventions ENR : augmentation des émissions et de l'artificialisation.",
+            "source_refs": [
+              "sources.md#Aligner-nos-regles-sur-l-Europe-pas-au-dela"
+            ]
           },
           "h_2031_2037": {
-            "impact_score": -1,
-            "note": "Même absence d'action ; le retard d'investissement dans la transition accroît les coûts futurs.",
+            "impact_score": -2,
+            "note": "L'absence de contraintes normatives prolonge la trajectoire défavorable, même si le nucléaire atténue partiellement.",
             "source_refs": []
           },
           "h_2038_2047": {
-            "impact_score": -1,
-            "note": "L'absence de politique climatique sur 20 ans amplifie le décalage avec les objectifs nationaux et européens.",
+            "impact_score": -2,
+            "note": "L'effet cumulé de décennies sans politique climatique ambitieuse aggrave l'écart aux engagements européens.",
             "source_refs": []
           }
         }
       },
       {
         "row": "health",
-        "dimension_note": "Programme ne traite pas de la santé ; l'impact est neutre par absence de proposition.",
+        "dimension_note": "Aucune mesure sur le système de santé.",
         "cells": {
           "h_2027_2030": {
             "impact_score": 0,
-            "note": "Aucune mesure sur la santé ou l'assurance maladie.",
+            "note": "Programme ne spécifie pas de mesure sur la santé.",
             "source_refs": []
           },
           "h_2031_2037": {
             "impact_score": 0,
-            "note": "Program does not specify health measures.",
+            "note": "Programme ne spécifie pas de mesure sur la santé.",
             "source_refs": []
           },
           "h_2038_2047": {
             "impact_score": 0,
-            "note": "Program does not specify health measures.",
+            "note": "Programme ne spécifie pas de mesure sur la santé.",
             "source_refs": []
           }
         }
       },
       {
         "row": "education",
-        "dimension_note": "Programme ne contient aucune mesure sur l'éducation, la formation initiale ou continue.",
+        "dimension_note": "Réorientation de l'apprentissage et transfert des lycées professionnels ; impact essentiellement sur la formation professionnelle.",
         "cells": {
           "h_2027_2030": {
-            "impact_score": 0,
-            "note": "Aucune mesure éducative proposée.",
-            "source_refs": []
+            "impact_score": -1,
+            "note": "Réallocation des aides à l'apprentissage peut réduire les places en supérieur tertiaire, affectant certains étudiants.",
+            "source_refs": [
+              "sources.md#Proposition-9-Formation"
+            ]
           },
           "h_2031_2037": {
             "impact_score": 0,
-            "note": "Program does not specify education measures.",
+            "note": "Effet net incertain, dépend de l'amélioration de l'insertion des jeunes via les filières réorientées.",
             "source_refs": []
           },
           "h_2038_2047": {
-            "impact_score": 0,
-            "note": "Program does not specify education measures.",
+            "impact_score": 1,
+            "note": "À long terme, une meilleure adéquation formation-emploi pourrait renforcer le capital humain technique.",
             "source_refs": []
           }
         }
       },
       {
         "row": "housing",
-        "dimension_note": "Le programme n'aborde pas le logement, hormis l'intégration des APL dans le plafonnement du CSU, ce qui pourrait réduire l'accès au logement pour les allocataires.",
+        "dimension_note": "Aucune politique du logement mentionnée ; le plafonnement CSU peut réduire les aides au logement.",
         "cells": {
           "h_2027_2030": {
             "impact_score": -1,
-            "note": "Le plafonnement des aides inclut les APL ; les allocataires pourraient voir leur capacité à se loger réduite sans alternative proposée.",
+            "note": "Plafonnement CSU réduit potentiellement les APL pour les ménages les plus dépendants.",
             "source_refs": [
-              "sources.md#proposition-4"
+              "sources.md#Proposition-4-CSU"
             ]
           },
           "h_2031_2037": {
-            "impact_score": -1,
-            "note": "Pas de construction de logements sociaux ni de soutien à l'accession ; la pression sur le logement des ménages modestes persiste.",
+            "impact_score": 0,
+            "note": "Pas de mesure structurelle sur l'offre ou la demande de logement.",
             "source_refs": []
           },
           "h_2038_2047": {
-            "impact_score": -1,
-            "note": "L'absence de politique du logement aggrave structurellement la crise pour les jeunes générations.",
+            "impact_score": 0,
+            "note": "Pas de mesure structurelle sur l'offre ou la demande de logement.",
             "source_refs": []
           }
         }
       }
     ],
-    "reasoning": "Le programme réduit les aides sociales aux actifs (RSA, APL, ASS, chômage) tout en préservant les pensions et en créant des exonérations pour les seniors en emploi. Ces derniers peuvent cumuler revenu d'activité et pension, ce qui augmente leurs ressources potentielles. La charge de l'ajustement budgétaire porte sur les actifs sans emploi ou à bas revenus, majoritairement plus jeunes.",
+    "reasoning": "Le programme réduit le coût du travail et augmente le revenu des actifs (y compris jeunes) tout en préservant les droits des retraités actuels et en leur offrant des incitations à prolonger leur activité. Les coupes dans les aides sociales touchent disproportionnellement les jeunes sans emploi. L'absence d'action climatique alourdit la dette environnementale future.",
     "source_refs": [
-      "sources.md#proposition-2",
-      "sources.md#proposition-3",
-      "sources.md#proposition-4",
-      "sources.md#proposition-5",
-      "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
+      "sources.md#Proposition-1-Seuil-zero-cotisation",
+      "sources.md#Proposition-3-Seniors",
+      "sources.md#Proposition-4-CSU"
     ],
     "confidence": 0.5
   },
   "counterfactual": {
-    "status_quo_trajectory": "Sans réforme, la dette publique continue de croître vers 120 % du PIB, les dépenses sociales augmentent tendanciellement, le pouvoir d'achat stagne, la compétitivité reste dégradée et le taux d'emploi des seniors demeure à 36 % contre 60 % en Europe.",
+    "status_quo_trajectory": "Poursuite de la désindustrialisation, maintien d'un déficit commercial élevé, progression de la dette publique vers 120 % du PIB, politique environnementale inchangée mais insuffisante pour les objectifs 2030, accès au logement de plus en plus difficile pour les jeunes.",
     "does_program_change_trajectory": true,
     "direction_of_change": "mixed",
     "dimensions_changed": [
       "economic_fiscal",
-      "social_demographic"
-    ],
-    "dimensions_unchanged": [
       "security_sovereignty",
-      "institutional_democratic",
       "environmental_long_term"
     ],
-    "reasoning": "Le programme modifie substantiellement les paramètres du marché du travail et des transferts sociaux, avec un potentiel de hausse de la production et de l'emploi. En revanche, il ne réduit pas la dette publique, n'engage pas de transition écologique et laisse inchangés les cadres institutionnel et de souveraineté. L'effet net est contrasté : gains de compétitivité et de pouvoir d'achat pour ceux qui travaillent davantage, mais réduction des filets de sécurité pour les plus vulnérables.",
-    "confidence": 0.65
+    "dimensions_unchanged": [
+      "institutional_democratic"
+    ],
+    "reasoning": "Le programme modifie significativement la trajectoire économique par des baisses de prélèvements et une dérégulation, renforce la souveraineté productive mais affaiblit la protection environnementale. La trajectoire institutionnelle et sociale reste peu modifiée dans ses grandes lignes.",
+    "confidence": 0.7
   },
   "unsolved_problems": [
     {
-      "problem": "Changement climatique et transition énergétique",
-      "why_unsolved": "Le programme n'aborde pas la décarbonation de l'économie, la rénovation énergétique ou la sortie des énergies fossiles.",
+      "problem": "Accès aux soins et déserts médicaux",
+      "why_unsolved": "Le programme ne propose aucune mesure pour la santé, qu'il s'agisse de la démographie médicale, du financement hospitalier ou de la prévention.",
       "severity_if_unsolved": "high",
       "source_refs": []
     },
     {
-      "problem": "Accès au logement pour les jeunes et les ménages modestes",
-      "why_unsolved": "Le plafonnement des APL dans le CSU réduit le soutien au logement sans créer d'offre nouvelle.",
+      "problem": "Crise du logement pour les jeunes et les ménages modestes",
+      "why_unsolved": "Aucune proposition sur le logement social, l'accession, la régulation des loyers ou la construction.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Inégalités scolaires et éducation nationale",
+      "why_unsolved": "Le programme ne traite que de la formation professionnelle et de l'apprentissage ; l'école primaire, le collège et le lycée général sont absents.",
       "severity_if_unsolved": "medium",
-      "source_refs": [
-        "sources.md#proposition-4"
-      ]
-    },
-    {
-      "problem": "Déserts médicaux et accès aux soins",
-      "why_unsolved": "Aucune mesure sur la santé, l'hôpital ou la démographie médicale.",
-      "severity_if_unsolved": "high",
       "source_refs": []
-    },
-    {
-      "problem": "Financement de la protection sociale hors chômage",
-      "why_unsolved": "La baisse massive des cotisations sociales n'est pas compensée par des ressources alternatives pour les branches famille, santé et retraite.",
-      "severity_if_unsolved": "high",
-      "source_refs": [
-        "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes"
-      ]
     }
   ],
   "downside_scenarios": [
     {
-      "scenario": "Absence de réponse des entreprises à l'incitation aux heures supplémentaires",
-      "trigger": "Demande intérieure ou extérieure insuffisante, carnets de commandes vides.",
+      "scenario": "Le seuil zéro cotisation ne génère pas les heures supplémentaires espérées, creusant le déficit.",
+      "trigger": "Élasticité de l'offre de travail inférieure à 1 ; les entreprises n'augmentent pas la durée du travail en raison d'une demande atone.",
       "probability": 0.4,
       "severity": 0.7,
-      "reasoning": "Si la croissance reste atone, les entreprises ne proposeront pas plus d'heures malgré la baisse de leur coût ; les gains de pouvoir d'achat et de compétitivité ne se matérialisent pas, mais les économies sur les aides sociales réduisent déjà le revenu des ménages modestes, aggravant la consommation."
+      "reasoning": "La compensation intégrale repose sur une augmentation de 120 heures/an en moyenne pour les salariés sans heures sup., hypothèse forte."
     },
     {
-      "scenario": "Augmentation de la pauvreté des allocataires sans emploi",
-      "trigger": "Plafonnement du CSU à 70 % du SMIC net sans création nette d'emplois.",
+      "scenario": "Tensions sociales majeures liées au plafonnement des aides et à la réforme du chômage.",
+      "trigger": "Mouvements sociaux de grande ampleur, blocage des réformes au Parlement ou censure du Conseil constitutionnel.",
       "probability": 0.5,
-      "severity": 0.6,
-      "reasoning": "La réduction des aides (410 €/mois dans l'exemple) peut faire basculer des ménages sous le seuil de pauvreté si l'emploi ne suit pas, avec des conséquences sociales et sanitaires."
+      "severity": 0.8,
+      "reasoning": "La réduction de prestations de plusieurs centaines d'euros par mois pour certains foyers peut déclencher une contestation forte."
     },
     {
-      "scenario": "Blocage politique et social des réformes de l'assurance chômage",
-      "trigger": "Opposition syndicale et parlementaire, manifestations.",
-      "probability": 0.6,
-      "severity": 0.5,
-      "reasoning": "Les mesures de juin 2024 n'ont jamais été appliquées faute de majorité ; un durcissement supplémentaire pourrait cristalliser une opposition encore plus forte et paralyser la réforme."
+      "scenario": "Procédure d'infraction européenne pour non-respect des directives environnementales.",
+      "trigger": "La suppression du ZAN et l'abrogation de normes ICPE sans alternative compatible avec le droit de l'UE.",
+      "probability": 0.3,
+      "severity": 0.6,
+      "reasoning": "La Commission européenne pourrait engager un contentieux, avec des sanctions financières."
     }
   ],
   "adversarial_pass": {
     "weakest_claims": [
       {
-        "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
-        "critique": "Le gain de pouvoir d'achat de 2 800 €/an repose sur l'hypothèse que tous les salariés pourront et voudront effectuer 88 heures supplémentaires par an, ce que le programme lui-même ne garantit pas.",
-        "alternative_interpretation": "Le gain moyen par salarié pourrait être très inférieur si la distribution des heures supplémentaires est concentrée sur une minorité de secteurs en tension."
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0].strength",
+        "critique": "La force de 0.7 attribuée au seuil zéro cotisation repose sur l'hypothèse que les entreprises proposeront massivement des heures supplémentaires et que les salariés les accepteront. Cette élasticité n'est pas démontrée dans le programme.",
+        "alternative_interpretation": "Le gain réel pourrait être bien moindre si la demande de travail supplémentaire est contrainte par la conjoncture."
       },
       {
         "claim_location": "intergenerational.net_transfer_direction",
-        "critique": "L'estimation de 15 Md€/an de transfert jeunes vers âgés est une agrégation grossière ; une partie des économies sur le chômage bénéficie indirectement aux jeunes via la baisse du coût du travail et la création potentielle d'emplois.",
-        "alternative_interpretation": "Le transfert pourrait être en partie 'mixed' si la croissance de l'emploi compense la perte de prestations pour les jeunes actifs."
+        "critique": "La direction 'mixed' pourrait masquer un transfert net en faveur des plus de 50-65 ans, car le cumul emploi-retraite sans cotisations avantage fortement les seniors actifs sans compensation pour les jeunes cotisants.",
+        "alternative_interpretation": "Le transfert pourrait en réalité être 'young_to_old' si l'on intègre l'effet du maintien des pensions sans hausse de cotisations pour les actifs seniors."
       },
       {
-        "claim_location": "dimensions.social_demographic.problems_worsened[0]",
-        "critique": "La sévérité de 0,5 pour la paupérisation des allocataires pourrait être sous-estimée si le marché du travail ne crée pas les emplois attendus ; inversement, elle pourrait être surestimée si le RIA incite effectivement au retour à l'emploi.",
-        "alternative_interpretation": "Les effets du RIA et du CSU pourraient être plus neutres si l'économie réagit positivement aux mesures de compétitivité."
+        "claim_location": "positioning.ecological.score",
+        "critique": "Un score de -2 est peut-être conservateur ; le programme supprime des piliers de la politique environnementale (ZAN, OFB, Ecophyto) et pourrait être noté -3 comme le RN 2022.",
+        "alternative_interpretation": "La différence vient de la promotion du nucléaire bas-carbone, qui distingue le programme de celui du RN et justifie -2 plutôt que -3."
       }
     ],
-    "potential_bias": "L'analyse tend à souligner les risques sociaux du plafonnement des aides sans accorder le même poids aux bénéfices potentiels de la reprise d'activité pour les allocataires, reflétant une sensibilité plus favorable au maintien des filets de sécurité qu'à l'activation. Inversement, l'évaluation économique est plutôt favorable au programme sur le volet compétitivité, ce qui peut indiquer une adhésion implicite au diagnostic libéral.",
-    "evidence_gaps": "Le programme ne fournit pas de modèle macroéconomique indépendant ni d'étude d'impact ex ante ; les chiffres d'économies sont produits par l'équipe du candidat sans validation externe. L'absence de données sur l'élasticité de l'offre de travail aux mesures proposées limite la robustesse des projections.",
-    "confidence_in_critique": 0.7
+    "potential_bias": "L'analyse tend à décrire les mesures de dérégulation environnementale comme des 'problèmes ignorés' ou 'worsened', ce qui pourrait refléter un biais favorable au statu quo réglementaire. La confiance accordée aux plans industriels (Fonds France Production) peut paraître excessive au regard de l'absence de détail.",
+    "evidence_gaps": "Les effets macroéconomiques de long terme des exonérations de cotisations et des baisses d'impôts ne sont pas modélisés dans les sources, ce qui affaiblit les évaluations de la trajectoire de dette et de croissance.",
+    "confidence_in_critique": 0.65
   },
-  "confidence_self_assessment": 0.6
+  "confidence_self_assessment": 0.7
 }
