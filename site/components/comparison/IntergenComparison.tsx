@@ -13,16 +13,18 @@ import {
 } from "@/lib/derived/comparison-projection";
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 import { useComparison } from "./ComparisonBody";
 import { SectionHead } from "../chrome/SectionHead";
 
 const ROW_LABELS: Record<HorizonRowKey, { fr: string; en: string }> = {
-  pensions: { fr: "Retraites", en: "Pensions" },
-  public_debt: { fr: "Dette publique", en: "Public debt" },
-  climate: { fr: "Climat", en: "Climate" },
-  health: { fr: "Santé", en: "Health" },
-  education: { fr: "Éducation", en: "Education" },
-  housing: { fr: "Logement", en: "Housing" },
+  pensions: UI_STRINGS.INTERGEN_CATEGORY_PENSIONS,
+  public_debt: UI_STRINGS.INTERGEN_CATEGORY_PUBLIC_DEBT,
+  climate: UI_STRINGS.INTERGEN_CATEGORY_CLIMATE,
+  health: UI_STRINGS.INTERGEN_CATEGORY_HEALTHCARE,
+  education: UI_STRINGS.INTERGEN_CATEGORY_EDUCATION,
+  housing: UI_STRINGS.INTERGEN_CATEGORY_HOUSING,
 };
 
 function scoreColor(score: number | null): string {
@@ -68,18 +70,16 @@ export function IntergenTable({
   lang,
 }: {
   selected: ComparisonProjection[];
-  lang: "fr" | "en";
+  lang: Lang;
 }) {
   const anchorCandidate = selected[0]?.id ?? "";
   return (
     <section id="intergenerationnel" className="mb-16">
       <header className="mb-5">
-        <SectionHead label={lang === "en" ? "Intergenerational" : "Intergénérationnel"} />
+        <SectionHead label={t(UI_STRINGS.COMPARISON_INTERGEN_TITLE, lang)} />
         
         <p className="mt-1 max-w-prose text-sm text-text-secondary">
-          {lang === "en"
-            ? "Estimated net impact on future generations (−3 very negative, +3 very positive) at the 2047 horizon."
-            : "Impact net estimé sur les générations futures (−3 très négatif, +3 très positif) à l'horizon 2047."}
+          {t(UI_STRINGS.COMPARISON_INTERGEN_INTRO, lang)}
         </p>
       </header>
       <div className="overflow-x-auto">
@@ -90,7 +90,7 @@ export function IntergenTable({
                 scope="col"
                 className="w-44 border-b border-rule px-3 pb-2 text-left text-xs font-medium uppercase tracking-wide text-text-secondary"
               >
-                {lang === "en" ? "Topic" : "Domaine"}
+                {t(UI_STRINGS.COMPARISON_INTERGEN_DOMAIN_LABEL, lang)}
               </th>
               {selected.map((c, slot) => {
                 const color = COMPARISON_COLORS[slot % COMPARISON_COLORS.length];
@@ -114,7 +114,10 @@ export function IntergenTable({
           <tbody>
             {HORIZON_ROW_KEYS.map((row) => {
               const labels = ROW_LABELS[row];
-              const href = `/candidat/${anchorCandidate}#horizon-${row}`;
+              const href = localePath(
+                `/candidat/${anchorCandidate}#horizon-${row}`,
+                lang,
+              );
               return (
                 <tr key={row}>
                   <th
@@ -124,13 +127,9 @@ export function IntergenTable({
                     <Link
                       href={href}
                       className="underline decoration-dotted underline-offset-4 hover:text-text"
-                      title={
-                        lang === "en"
-                          ? "See the full horizon matrix on the candidate page"
-                          : "Voir la matrice complète sur la fiche candidat"
-                      }
+                      title={t(UI_STRINGS.COMPARISON_INTERGEN_LINK, lang)}
                     >
-                      {lang === "en" ? labels.en : labels.fr}
+                      {t(labels, lang)}
                     </Link>
                   </th>
                   {selected.map((c) => {

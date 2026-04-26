@@ -1,0 +1,4381 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "david-lisnard",
+  "version_date": "2026-04-23",
+  "source_models": [
+    {
+      "provider": "anthropic",
+      "version": "claude-opus-4-7"
+    },
+    {
+      "provider": "deepseek",
+      "version": "deepseek-v3"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-3-pro"
+    },
+    {
+      "provider": "xai",
+      "version": "grok-4"
+    },
+    {
+      "provider": "qwen",
+      "version": "qwen3.6"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "copilot",
+      "version": "claude opus 4.7"
+    },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-23T14:00:00Z"
+  },
+  "summary": "David Lisnard's program (Nouvelle Énergie) articulates three breaks: a tightening of the central State through a constitutional balanced-budget rule and a target to bring public spending below 50% of GDP within ten years; a radical decentralization that replaces départements and régions with 40 to 50 Provinces; and a hardened regalian agenda (ten-year police-justice plan, an 8-fold reduction in residence permits, constitutional primacy of national law over the CJEU and ECHR on migration). The pension reform raises the legal retirement age to 65 and shifts roughly 40% of the system to mandatory capitalization (€116 billion target). The school system introduces an education voucher, school autonomy and the end of the carte scolaire; healthcare abolishes the ARS and doubles the medical-student numerus clausus by 2030. Ecology is technophile and pro-nuclear (60-year reactor life-extension, next-generation EPR, SMR), explicitly rejects the precautionary principle and degrowth, with no quantified emissions target. The fiscal block removes the C3S and CVAE (€11.5 billion), merges CDI and CDD into a single contract and repeals Article 55 of the SRU Act. The five models converge on a classical right-wing positioning, with no shift to the far right.",
+  "summary_agreement": 0.78,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        3,
+        4
+      ],
+      "modal_score": 4,
+      "anchor_narrative": "All five models place the economic axis clearly on the right, near or above the Fillon-2017 anchor: removal of the C3S and CVAE (€11.5 billion), unified CDI/CDD labor contract, transition to ~40% pension capitalization, public-spending target below 50% of GDP within ten years. Gemini, Grok and Qwen score +4 (more liberal than Fillon); Claude and DeepSeek hold +3 (aligned with Fillon, with no marked libertarian streak).",
+      "evidence": [
+        {
+          "quote": "La suppression de la C3S (Contribution sociale de solidarité au bénéfice de la Sécurité Sociale) et, le cas échéant, de la CVAE",
+          "source_ref": "sources.md#une-economie-plus-prospere"
+        },
+        {
+          "quote": "faire évoluer tous les autres régimes vers la capitalisation",
+          "source_ref": "sources.md#retraites"
+        },
+        {
+          "quote": "l'instauration d'un contrat de travail unique pour les nouveaux emplois, fusionnant CDI et CDD",
+          "source_ref": "sources.md#une-economie-plus-prospere"
+        }
+      ],
+      "confidence": 0.83,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 3,
+          "reasoning": "Concrete measures include halving production taxes (€11.5bn), moving 40% of pensions to capitalization, unified labor contract, removing SRU Article 55, and reducing public spending by 8 GDP points over 10 years. This is a sustained market-oriented package comparable to Fillon's 2017 platform."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": 3,
+          "reasoning": "Explicit measures to reduce public spending (<50% of GDP), cut production taxes, deregulate the labor market and shift pensions to capitalization, indicating a coherent pro-market orientation without extreme-liberalization markers."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "score": 3,
+          "reasoning": "Coherent supply-side package comparable to Fillon 2017 (halving production taxes, pension capitalization, unified contract, SRU abolition, -8 GDP points)."
+        },
+        {
+          "model": "deepseek-v3",
+          "score": 3,
+          "reasoning": "Coherent pro-market orientation without extreme-liberalization markers: spending <50% of GDP, C3S/CVAE, unified contract, capitalization."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 4,
+          "reasoning": "Explicit cuts of 8 points of GDP, halved production taxes, and capitalized pensions indicate a strongly market-oriented, supply-side approach more ambitious than Fillon 2017."
+        },
+        {
+          "model": "grok-4",
+          "score": 4,
+          "reasoning": "More market-oriented than Fillon 2017: removal of C3S/CVAE, unified contract, negative employer charges for RSA hires, 50% reduction in business regulations, spending target <50% of GDP via decentralization."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 4,
+          "reasoning": "Deregulation, production-tax cuts, CDI/CDD merger and pension capitalization mark an assertive market orientation that goes beyond Fillon 2017."
+        }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        2,
+        3
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Four of five models score +3 (more conservative than LR 2022): school authority, humanities, meritocracy, strict assimilation, criminal majority at 16, removal of the family-quotient cap. Claude holds at +2, arguing that the program does not pick up the identity or moral markers (LGBTQ+, abortion) that would push the score higher.",
+      "evidence": [
+        {
+          "quote": "rétablir l'autorité du professeur, le primat du cours sur l'animation, et la logique de progression sur celle du ressenti",
+          "source_ref": "sources.md#education"
+        },
+        {
+          "quote": "Une nouvelle politique d'assimilation par l'éducation, le respect rigoureux de la loi, l'emploi et le logement",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "abaisser la majorité pénale à 16 ans, inverser le principe de l'excuse de minorité dès 13 ans",
+          "source_ref": "sources.md#securite"
+        }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 2,
+          "reasoning": "Program combines restoration of classical-humanities curriculum, authority-centered school model, assimilation frame and explicit opposition to political Islam. Family policy is natalist. Absent are conservative positions on LGBTQ rights, abortion, or civil-society moral questions, which keeps the score below +3."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "score": 2,
+          "reasoning": "Authority- and assimilation-driven conservatism without identity/moral markers (LGBTQ, abortion); stays below LR 2022."
+        },
+        {
+          "model": "deepseek-v3",
+          "score": 3,
+          "reasoning": "Sharp reduction in immigration, school reform refocused on authority and core knowledge, explicit critique of bureaucratic egalitarianism."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 3,
+          "reasoning": "Measures focus heavily on restoring traditional authority in schools and justice, abolishing the minor excuse, and enforcing cultural assimilation."
+        },
+        {
+          "model": "grok-4",
+          "score": 3,
+          "reasoning": "Pro-natalist family revival, school refocused on fundamentals, authority, merit and French literature; assimilation required."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 3,
+          "reasoning": "Emphasis on merit, fundamentals, the end of pedagogism, criminal majority at 16, and strict assimilation."
+        }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        1,
+        3
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Three models score +3 (more sovereigntist than LR 2022) on the basis of constitutional primacy of national law over the CJEU and ECHR on migration, and the possible withdrawal from the ECHR. Claude (+1) and Qwen (+2) qualify this by noting that Europe is described as a « conquest » and that sectoral cooperation (industry, nuclear) is preserved.",
+      "evidence": [
+        {
+          "quote": "Inscrire la primauté du droit national en matière migratoire dans la Constitution afin de rendre inapplicables les décisions de la CJUE et de la CEDH contraires à l'intérêt national",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "Sortir de la CEDH en dernier recours",
+          "source_ref": "sources.md#immigration"
+        },
+        {
+          "quote": "l'Europe institutionnelle est une conquête et un outil nécessaire dans le monde multipolaire actuel",
+          "source_ref": "sources.md#europe"
+        }
+      ],
+      "confidence": 0.72,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 1,
+          "reasoning": "Program is neither federalist nor exit-oriented. 'Treaty of democratization' to rebalance toward Council and Parliament, keeps cooperation on strategic sectors; explicit constitutional primacy on migration with ECHR exit only as last resort. Net score mildly sovereigntist."
+        },
+        {
+          "model": "qwen3.6",
+          "position": 2,
+          "reasoning": "The program rejects both federalism and withdrawal, advocating a Europe of projects while asserting strict legal and migration sovereignty, with the threat of ECHR exit as a last resort."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "score": 1,
+          "reasoning": "Neither federalist nor exit-oriented; constitutional primacy on migration with ECHR exit as last resort; European cooperation preserved."
+        },
+        {
+          "model": "deepseek-v3",
+          "score": 3,
+          "reasoning": "Primacy of national law, conditional ECHR exit, referendum in case of supranational deadlock: a marked sovereigntist orientation."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 3,
+          "reasoning": "While supporting European industrial cooperation, the program explicitly calls for constitutional primacy over the ECHR and CJEU on migration and borders."
+        },
+        {
+          "model": "grok-4",
+          "score": 3,
+          "reasoning": "Quotas, end of automatic jus soli, referendum to lift supranational constraints, but European cooperation on concrete projects."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 2,
+          "reasoning": "Europe of projects rejecting both federalism and withdrawal, strict legal and migration sovereignty with the ECHR threat as last resort."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        -1,
+        1
+      ],
+      "modal_score": null,
+      "anchor_narrative": "The institutional axis has no single mode: two models (DeepSeek, Qwen) score -1 (liberal-democratic decentralization), two (Gemini, Grok) score +1 (referendum and constitutional revision pull toward the plebiscitary instrument), Claude holds at 0 (balance between the two forces). The consensus interval [-1, +1] reflects a genuine analytical disagreement on the institutional reading: massive decentralization and parliamentary recentering (liberal) vs constitutional revisions and referendums (populist).",
+      "evidence": [
+        {
+          "quote": "un nouveau schéma institutionnel à trois niveaux : Etat/ Province/ Bloc communal selon un choix à faire valider par un référendum constitutionnel",
+          "source_ref": "sources.md#decentralisation"
+        },
+        {
+          "quote": "le Parlement vote la loi. Il contrôle l'action du Gouvernement. Il évalue les politiques publiques",
+          "source_ref": "sources.md#institutions"
+        },
+        {
+          "quote": "Un référendum sera nécessaire.",
+          "source_ref": "sources.md#immigration"
+        }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 0,
+          "reasoning": "Program reinforces Parliament's legislative initiative and oversight, decentralizes regulatory power, and recenters the presidency — all liberal-democratic markers. Counterbalanced by referendum-first framing on migration sovereignty and constitutional revision to override supranational courts. Net near zero."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": -1,
+          "reasoning": "Rebalancing of powers toward Parliament, radical decentralization and a narrowing of the law's scope: a liberal-democratic institutional reform with no identified illiberal drift."
+        },
+        {
+          "model": "gemini-3-pro",
+          "position": 1,
+          "reasoning": "Massive decentralization to Provinces diffuses power (liberal), but the willingness to override international courts via referendum adds a populist/plebiscitarian element."
+        },
+        {
+          "model": "grok-4",
+          "position": 1,
+          "reasoning": "Radical decentralization, refocusing of the law on principles, strengthened parliamentary oversight; a constitutional referendum on territorial architecture and migration adds a plebiscitary dimension."
+        },
+        {
+          "model": "qwen3.6",
+          "position": -1,
+          "reasoning": "Overhaul aimed at limiting the central executive, strengthening Parliament and devolving regulatory power to the Provinces, within a liberal-democratic and subsidiarity-based framework."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "score": 0,
+          "reasoning": "Balance between liberal markers (decentralization, Parliament) and populist instruments (migration referendum, constitutional revision)."
+        },
+        {
+          "model": "deepseek-v3",
+          "score": -1,
+          "reasoning": "Decentralization and a narrowing of the law's scope: liberal-democratic reform with no illiberal drift."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 1,
+          "reasoning": "Liberal decentralization combined with a willingness to override international courts via referendum: a plebiscitary element."
+        },
+        {
+          "model": "grok-4",
+          "score": 1,
+          "reasoning": "Deep institutional reform with a plebiscitary dimension via constitutional referendum."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -1,
+          "reasoning": "Subsidiarity-based decentralization within a liberal-democratic framework, no illiberal elements identified."
+        }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [
+        -2,
+        0
+      ],
+      "modal_score": -2,
+      "anchor_narrative": "Three models score -2 (more productivist than LR 2022): nuclear as priority, rejection of the precautionary principle, denunciation of « punitive ecology », end of the derogatory regime for renewables, NGTs authorized. DeepSeek (-1) and Claude (0) note however that the program claims a low-carbon leadership, invests in hydrogen and CO₂ capture, and introduces a tax-constant carbon pricing — elements that limit the productivist slope.",
+      "evidence": [
+        {
+          "quote": "le remplacement du principe constitutionnel de précaution par un principe de responsabilité",
+          "source_ref": "sources.md#economie"
+        },
+        {
+          "quote": "Les notions d'« empreinte écologique » et de « jour du dépassement » sont également des impostures.",
+          "source_ref": "sources.md#ambition-ecologique"
+        },
+        {
+          "quote": "Favoriser la production d'énergie décarbonée en s'appuyant sur le nucléaire",
+          "source_ref": "sources.md#ambition-ecologique"
+        }
+      ],
+      "confidence": 0.72,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 0,
+          "reasoning": "Program commits to decarbonization via nuclear expansion and carbon pricing, which places it above pure productivism. However, explicit rejection of precautionary principle, rejection of planetary boundaries concepts, pro-NTG and renewables scaled back pull it down from Macron-2017 baseline. Net near zero."
+        },
+        {
+          "model": "deepseek-v3",
+          "position": -1,
+          "reasoning": "Explicit rejection of degrowth, nuclear as priority, challenge to renewables subsidies, but technological investments in low-carbon. Productivist approach with a techno-optimist component."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "score": 0,
+          "reasoning": "Nuclear decarbonization + tax-constant carbon above pure productivism; but rejection of precaution + NGTs + scaled-back renewables pull it down."
+        },
+        {
+          "model": "deepseek-v3",
+          "score": -1,
+          "reasoning": "Rejection of degrowth, nuclear as priority, critique of renewables subsidies; techno-optimist component."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": -2,
+          "reasoning": "Strong reliance on nuclear power, explicit rejection of ecological footprint metrics, and deregulation of agricultural environmental constraints."
+        },
+        {
+          "model": "grok-4",
+          "score": -2,
+          "reasoning": "Nuclear as priority, hyper-technologies, rejection of the precautionary principle and of punitive ecology."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -2,
+          "reasoning": "Rejection of degrowth and of the precautionary principle, nuclear and technological innovation as pillars of the transition."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": {
+        "droite": 5
+      },
+      "anchor_narrative": "All five models agree on a classical right-wing positioning (5/5). The combination of a markedly pro-market economic axis (+3 to +4), a conservative social-cultural axis (+2 to +3) and an assertive sovereignty axis (+1 to +3) places the program in the broad right-wing band. No model holds far-right: absence of identity rhetoric, preservation of the democratic framework, European cooperation maintained.",
+      "confidence": 0.73,
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "claude-opus-4-7",
+          "label": "droite",
+          "reasoning": "Economic axis +3 combined with social-cultural +2 places the program in the right-wing band, at the level of the Fillon/LR mainstream anchor; sovereignty +1 does not pull toward far-right because pro-EU and rejection of identity rhetoric."
+        },
+        {
+          "model": "deepseek-v3",
+          "label": "droite",
+          "reasoning": "Economic axes (+3), social-cultural (+3) and sovereignty (+3) converge toward the right; no radical challenge to democratic institutions, hence not far-right."
+        },
+        {
+          "model": "gemini-3-pro",
+          "label": "droite",
+          "reasoning": "High scores on market-oriented economics, conservative social policies, and sovereigntist border controls squarely place the program in the classical, albeit radicalized, right-wing spectrum."
+        },
+        {
+          "model": "grok-4",
+          "label": "droite",
+          "reasoning": "Strong pro-market positioning and tax cuts combined with traditional family revival, strict assimilation and border sovereignty: clearly placed on the classical right."
+        },
+        {
+          "model": "qwen3.6",
+          "label": "droite",
+          "reasoning": "Structural economic liberalism, social-educational conservatism and a sovereigntist line on immigration place the program in the classical right-wing band."
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Balanced-budget rule, -8 GDP points of spending in 10 years, removal of C3S/CVAE (€11.5bn), shift of ~40% of pensions to capitalization.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-7",
+            "text": "Reduction of 8 GDP points in public spending over 10 years, removal of C3S/CVAE (€11.5bn), partially capitalized pensions."
+          },
+          {
+            "model": "deepseek-v3",
+            "text": "Constitutional balanced-budget rule, €11.5bn cut in production taxes and pension reform toward capitalization, with public-spending target below 50% of GDP."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Reduction of public spending by 8 GDP points, partial pension capitalization and CDD/CDI merger."
+          },
+          {
+            "model": "grok-4",
+            "text": "Balanced-budget rule, public spending <50% of GDP and major cuts to production/labor taxes without overall revenue figures."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Reduction of public spending below 50% of GDP within 10 years, cuts to production taxes and a unified labor contract."
+          }
+        ]
+      },
+      "summary": "The five models converge on grade B: a dense and coherent supply-side program (constitutional balanced-budget rule excluding investment, removal of C3S/CVAE for €11.5bn, unified CDI/CDD labor contract, retirement at 65 + capitalization with a €116bn target across 8 tranches, removal of Article 55 of the SRU Act, redeployment of 450,000 civil servants from administrative to operational roles). Costing is partial: the trajectory of consolidation (8 GDP points), the financing of the dual-burden pension transition, the revenue policy outside production taxes and the degraded-growth scenarios are not detailed. The models also agree on the execution risks (constitutional revision, social mobilization on the 65 retirement age) and on the confidence note (~0.7-0.8).",
+      "problems_addressed": [
+        {
+          "problem": "Public spending and structural deficit",
+          "approach": "Constitutional balanced-budget rule excluding investment, 5-year anti-waste plan, target of -8 GDP points within 10 years, benchmarked against Swedish and German trajectories.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#maitrise-des-deficits",
+            "sources.md#regle-dor"
+          ],
+          "reasoning": "Quantified targets and international benchmarks; constitutional anchoring mechanism specified by all five models.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Production taxes and industrial competitiveness",
+          "approach": "Removal of C3S and CVAE (€11.5bn) on top of the €10bn already committed; halving of production taxes (2% → 1% of GDP).",
+          "strength": 0.78,
+          "source_refs": [
+            "sources.md#fiscalite-de-production"
+          ],
+          "reasoning": "Specific tax lines named, amount quantified; unanimous consensus on the strength of this measure.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Duality of the labor market (CDI/CDD)",
+          "approach": "Unified labor contract merging CDI and CDD with a progressive severance allowance; negative employer charges for hiring people on RSA for >2 years.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#plein-emploi"
+          ],
+          "reasoning": "Direction and target are clear, but transition costing is not published.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pension-system solvency and intergenerational balance",
+          "approach": "Legal retirement age raised to 65; minimum old-age pension at €1,000/month; transition over 8 tranches toward capitalization (~40% target, €116bn) via a Public Central Agency.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#retraites"
+          ],
+          "reasoning": "Architecture is specified but financing of the dual burden during the transition is not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Financing of the capitalization transition (dual burden)",
+          "significance": "Shifting ~40% of pensions to capitalization while honoring pay-as-you-go commitments creates a multi-year financing gap not quantified by the program.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Sensitivity of the debt trajectory to interest rates",
+          "significance": "Debt at 120% of GDP without an explicit interest-rate scenario above 3% or a degraded-growth scenario.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Taxation of high incomes and wealth",
+          "significance": "The revenue side of the consolidation is silent on income tax, wealth tax and capital gains.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Access to social housing in tight zones",
+          "mechanism": "Removal of Article 55 of the SRU Act (20-25% social-housing quota) without a binding substitute mechanism on the stock.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#compétitivité-territoires"
+          ],
+          "reasoning": "Three models identify an explicit risk of contraction of affordable social supply in tight zones; the flow target is not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Failure of the constitutional revision establishing the balanced-budget rule",
+          "probability": 0.55,
+          "severity": 0.65,
+          "reasoning": "Constitutional revision requires a 3/5 majority in Congress or a referendum; historical failure under Sarkozy (all five models converge).",
+          "source_refs": [
+            "sources.md#regle-dor"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Liquidity pressure during the capitalization transition",
+          "probability": 0.45,
+          "severity": 0.7,
+          "reasoning": "Dual financing observed in other transitions (Chile, partial Sweden).",
+          "source_refs": [
+            "sources.md#retraites"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Social mobilization against the move to age 65",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "The 2023 reform to age 64 triggered the largest mobilization of the Fifth Republic; age 65 raises the stakes further.",
+          "source_refs": [
+            "sources.md#retraites"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Reduction of public spending by 8 GDP points over 10 years",
+          "source_ref": "sources.md#maitrise-des-deficits",
+          "quantified": true,
+          "magnitude": "8 GDP points / 10 years",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of the C3S and the CVAE",
+          "source_ref": "sources.md#fiscalite-de-production",
+          "quantified": true,
+          "magnitude": "€11.5bn/year",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Raising the legal retirement age to 65",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "65 years",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Shift of ~40% of the pension system to capitalization",
+          "source_ref": "sources.md#retraites",
+          "quantified": true,
+          "magnitude": "€116bn target; ~40% of pensions",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Unified labor contract replacing CDI/CDD",
+          "source_ref": "sources.md#plein-emploi",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of Article 55 of the SRU Act",
+          "source_ref": "sources.md#compétitivité-territoires",
+          "quantified": true,
+          "magnitude": "20-25% quota lifted",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Redeployment of 450,000 civil servants to operational roles",
+          "source_ref": "sources.md#action-publique-competitivite",
+          "quantified": true,
+          "magnitude": "450,000 staff; 33% → 25% administrative tasks",
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Tax cuts (€11.5bn) and capitalization transition without an offsetting table; spending trajectory aspirational.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "deepseek-v3",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Tax cuts and capitalization transition stated without counter-financing table; spending-cut trajectory aspirational."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Targets stated but not sequenced; reliance on growth."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Combining massive tax cuts with pension capitalization transition costs strains near-term deficits."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Partial quantified targets but no low-growth scenario."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Clear spending targets but no safeguard clause if growth underperforms."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Unanimous: rewriting the Labor Code, overhauling the pension architecture and redeploying 450,000 civil servants in one term exceeds historical administrative capacity.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Requires simultaneous labor-code rewrite, pension architecture reconstruction, and 450k civil servant redeployment within one term."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Requires constitutional revision and systemic reforms with high social and political conflict potential."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Moving 450,000 civil servants to the field and reorganizing the state requires unprecedented administrative overhaul."
+            },
+            {
+              "model": "grok-4",
+              "level": "high",
+              "note": "Radical decentralization and outsourcing of 450,000 civil servants require unprecedented coordination."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Reorganization of the civil service and the labor code requires a dense legislative calendar."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Balanced-budget rule depends on a national constitutional majority; local fiscal reform depends on agreement with elected officials; market/rate effect limited.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Règle d'or requires constitutional amendment; local fiscal reform requires agreement with elected officials."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "limited",
+              "note": "Most measures fall within the national framework; some interactions with European budgetary rules."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Pension capitalization yields depend heavily on global financial market returns."
+            },
+            {
+              "model": "grok-4",
+              "level": "limited",
+              "note": "No explicit EU dependency on the national balanced-budget rule."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Depends on European conditions and on market reaction to the balanced-budget rule."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Capitalization with vested rights structurally hard to undo; tax cuts and the unified contract are easier to revise by a later majority.",
+          "supported_by": [
+            "deepseek-v3",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "limited",
+              "note": "Capitalization cohort-tranche design is structurally hard to reverse once accrued rights are established."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Constitutional revision hard to cancel, sub-constitutional measures revisable by a later majority."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Once pension funds are capitalized into private accounts, reverting to pure repartition is legally complex."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Institutional balanced-budget rule and decentralization reversible by the next majority."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "A later majority could restore the taxes or the contract duality through ordinary law."
+            }
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "claude-opus-4-7": "C"
+        }
+      },
+      "headline": {
+        "text": "Education voucher, end of carte scolaire, doubling of medical students, abolition of ARS, removal of family-quotient cap.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-7",
+            "text": "School reform via education voucher and school autonomy; abolition of ARS; return of an uncapped family quotient."
+          },
+          {
+            "model": "deepseek-v3",
+            "text": "School reform (abolition of carte scolaire, education voucher), doubling of medical students, revival of family policy and sharp reduction in legal immigration."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "End of carte scolaire, school autonomy, and abolition of ARS in healthcare."
+          },
+          {
+            "model": "grok-4",
+            "text": "Pension reforms (65 + capitalization), subsidiarity-based healthcare and pro-natalist family revival with removal of the quotient cap."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Retirement at 65 with pay-as-you-go base and capitalization, abolition of ARS, education voucher and school autonomy."
+          }
+        ]
+      },
+      "summary": "Four models hold B; Claude marks down to C, arguing the dimension is treated as a structural lever (education voucher, autonomy, ARS, natality) rather than a redistributive agenda: poverty, minimum income and wage policy are barely addressed. The educational levers (carte scolaire, voucher, refocus on fundamentals, +20% teacher pay), healthcare levers (ARS abolished, doubling of numerus clausus by 2030, differentiated conventionnement) and family levers (family quotient, early-childhood care) are detailed. The removal of AME (€700m claimed savings) is identified by all models as a degradation of access to care for a vulnerable population.",
+      "problems_addressed": [
+        {
+          "problem": "Decline of school standards and territorial segmentation",
+          "approach": "End of carte scolaire, education voucher, autonomy of head-teacher recruitment, refocus on fundamentals, primary-school certificate as a prerequisite for entering collège, +20% teacher pay over 5 years.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#education",
+            "sources.md#revolution-de-lecole"
+          ],
+          "reasoning": "Multi-lever bouquet with explicit indicators (national exams, school rankings); consensus on the direction.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Medical deserts and shortage of healthcare workers",
+          "approach": "Differentiated conventionnement in under-served areas, doubling of medical students by 2030, end of Parcoursup for medicine, supervised practice from the 5th year, recognition of paramedical skills.",
+          "strength": 0.67,
+          "source_refs": [
+            "sources.md#sante"
+          ],
+          "reasoning": "Concrete supply-side levers and quantified timeline; training delays (10-12 years) limit short-term impact.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Falling birth rate and dismantling of family policy",
+          "approach": "Raising the ceiling on family allowances, removal of the family-quotient cap, investment in childcare modes, family-housing policy.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#famille"
+          ],
+          "reasoning": "Directional commitments without quantified envelope.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Hospital bureaucratization",
+          "approach": "Abolition of ARS, mayors chairing hospital councils, regulation by local medical communities.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#sante"
+          ],
+          "reasoning": "Structural lever identified but the institutional transition is non-trivial.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Income and wealth inequalities",
+          "significance": "The program does not address top-decile/percentile dynamics or the fiscal instruments that shape them.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Early-childhood care and parental leave",
+          "significance": "Family policy is mentioned without details on childcare modes and parental leave, both central to work-family reconciliation.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Psychiatric capacity and mental health",
+          "significance": "The program notes record psychotropic-drug consumption but proposes no measure dedicated to mental health.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Healthcare access for irregular migrants",
+          "mechanism": "Removal of AME replaced by a limited emergency aid (€700m claimed savings) without costing the deferred costs (TB, HIV, public health).",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "Four models identify the reduction in health coverage as a degradation with externalities not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Risk of school segregation under voucher + end of carte scolaire",
+          "mechanism": "Voucher and head-teacher recruitment can amplify sorting; international literature on vouchers shows mixed effects on segregation.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#revolution-de-lecole"
+          ],
+          "reasoning": "Claude and Gemini emphasize this risk; the program offers means-tested grants as mitigation without quantification.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Teachers' union opposition to the redesign of the status",
+          "probability": 0.8,
+          "severity": 0.75,
+          "reasoning": "Recruitment by head teachers and the end of the national status conflict head-on with teachers' organizations.",
+          "source_refs": [
+            "sources.md#revolution-de-lecole"
+          ],
+          "supported_by": [
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Doubling of the numerus clausus constrained by training capacity",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "Hospital placements, faculty and clinical placements are bottlenecks beyond the numerus clausus.",
+          "source_refs": [
+            "sources.md#sante"
+          ],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Abolition of ARS disrupts regional coordination during transition",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Transfer to prefects and mayors requires a multi-year capacity build-up.",
+          "source_refs": [
+            "sources.md#sante"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Education voucher and abolition of carte scolaire",
+          "source_ref": "sources.md#education",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "+20% teacher pay over 5 years",
+          "source_ref": "sources.md#revolution-de-lecole",
+          "quantified": true,
+          "magnitude": "+20% / 5 years",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Doubling of the number of medical students by 2030",
+          "source_ref": "sources.md#sante",
+          "quantified": true,
+          "magnitude": "x2 by 2030",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Abolition of ARS, transfer to prefects and mayors",
+          "source_ref": "sources.md#sante",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of AME, replaced by emergency aid",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "€700m claimed savings",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of the family-quotient cap",
+          "source_ref": "sources.md#famille",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Teacher pay raises, doubling of numerus clausus and education voucher create recurring costs; AME savings are partial.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4"
+          ],
+          "dissenters": [
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Teacher pay rise and medical-student doubling carry recurring costs; voucher presented as budget-neutral but transition costs unquantified."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "AME savings (€700m) but teacher costs (+20%) and education voucher not offset in detail."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Teacher pay raises require localized funding offsets."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Pension savings expected but capitalization transition not precisely costed."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Pension transition and teacher/health pay raises require precise financial calibration."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Simultaneous reorganization of schools (voucher, status, curricula) and healthcare (ARS, hospital governance) saturates administrative capacity.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Simultaneous reorganization of education (voucher, autonomy, curricula) and health (ARS, hospital governance) within one term stretches administrative capacity."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "School and healthcare reforms require a complete overhaul of existing structures."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Abolishing ARS and transferring healthcare governance to prefects requires massive logistical rewiring."
+            },
+            {
+              "model": "grok-4",
+              "level": "high",
+              "note": "Abolition of ARS, transfer of hospitals to mayors and school autonomy are complex."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Overhaul of statuses, abolition of ARS and rollout of the education voucher are administratively heavy."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Reforms mostly internal; negotiation with teaching and medical bodies; migration-related health topics (AME) interact with EU law.",
+          "supported_by": [
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Requires negotiation with teaching and medical professional bodies; success conditioned on local-government capability."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Migration measures depend on renegotiating or exiting European treaties and bilateral agreements."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Largely internal domestic policy."
+            },
+            {
+              "model": "grok-4",
+              "level": "low",
+              "note": "Internal measures with no major external dependency."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Reforms mostly internal, with little dependence on external factors."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "moderate"
+          ],
+          "note": "Education voucher and hospital governance revisable by statute; numerus clausus and the introduction of competition in schools create more rigid pathways and vested rights.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-v3"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Voucher and ARS abolition can be revisited by statute; quotient familial déplafonnement is a finance-law item."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "limited",
+              "note": "Structural reforms (education voucher, numerus clausus) create vested rights that are hard to reverse quickly."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "School maps and administrative boundaries can be redrawn by subsequent governments."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Pension and education reforms reversible by the next law."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Pension and school architecture reversible by law, but the capitalization anchoring creates a ratchet effect."
+            }
+          ]
+        }
+      },
+      "confidence": 0.68
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "A",
+        "dissent": {
+          "claude-opus-4-7": "B",
+          "gemini-3-pro": "B"
+        }
+      },
+      "headline": {
+        "text": "10-year police-justice plan, territorial police, residence permits ÷8, constitutional primacy over CJEU/ECHR, criminal majority at 16.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-7",
+            "text": "Ten-year police plan, armed territorial police, eightfold reduction of residence permits, sectoral quotas, constitutional revision on migration."
+          },
+          {
+            "model": "deepseek-v3",
+            "text": "Massive 10-year plan for police and justice, mandatory minimum sentences, criminal majority at 16, decentralized territorial police, and priority action against narco-trafficking and political Islam."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Immigration quotas, primacy of national law, lowering of the criminal majority to 16."
+          },
+          {
+            "model": "grok-4",
+            "text": "10-year plan upgrading police and justice, decentralized territorial police, immigration quotas and strict assimilation."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Tougher penal regime, immigration quotas, removal of AME, constitutional primacy and ten-year police plan."
+          }
+        ]
+      },
+      "summary": "A dense and coherent regalian block: ten-year plan to upgrade the police, creation of a decentralized territorial police with judicial-officer status, target of 50% on-the-ground presence (vs 37% today), justice budget raised to the European average, doubling of public prosecutors, end of automatic sentence reductions, reintroduction of mandatory minimum sentences, criminal majority at 16 with reversal of the minor's excuse from age 13. Immigration: residence permits cut by 8, repeal of the 1968 Franco-Algerian agreement, end of automatic jus soli, 24-month detention, constitutional primacy over the CJEU/ECHR, ECHR exit as a last resort. Three models give A for overall coherence and ambition; Claude and Gemini hold B given the blind spots on diplomatic dependency (countries of origin, Frontex), European legal constraints (ECHR/CJEU) and prison-capacity issues.",
+      "problems_addressed": [
+        {
+          "problem": "Rise in violence and street crime",
+          "approach": "Ten-year modernization plan, target of 50% on-the-ground presence, decentralized territorial police with judicial-officer status.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#securite",
+            "sources.md#securite-liberte"
+          ],
+          "reasoning": "Quantified targets and organizational reform; explicit timeline.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Underfunding and slowness of justice",
+          "approach": "Budget raised to the European average (from 0.20% of GDP), doubling of prosecutors and JAP, separation of the prison budget.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#justice"
+          ],
+          "reasoning": "European benchmark, quantified doubling targets.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Migration flows and weak enforcement of returns",
+          "approach": "Eightfold reduction of residence permits, sectoral quotas, end of regularizations after illegal entry, 24-month detention, constitutional primacy.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#immigration",
+            "sources.md#souverainete-frontieres"
+          ],
+          "reasoning": "Multiple concrete levers; the eightfold reduction target is specific but not broken down by category.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Juvenile delinquency",
+          "approach": "Criminal majority at 16, reversal of the minor's excuse from age 13, closed disciplinary boarding schools.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#securite"
+          ],
+          "reasoning": "Clear legislative changes; empirical effectiveness of closed structures contested.",
+          "supported_by": [
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Islamist entryism",
+          "approach": "Ban on the Muslim Brotherhood, oversight of out-of-contract schools, expulsion of radical preachers, ban on the veil at university.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#securite"
+          ],
+          "reasoning": "Clear enumeration; legal feasibility of some measures (university veil, Muslim Brotherhood ban) uncertain.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Drug trafficking",
+          "approach": "Anti-narcotics units under prefectoral authority, asset confiscations, digital infiltration, task forces in overseas territories.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#securite"
+          ],
+          "reasoning": "Governance architecture specified without quantified envelope.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Defense spending trajectory and NATO 2% commitment",
+          "significance": "The program speaks of regalian rebalancing but sets no defense budget target or equipment plan.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Prison capacity and detention conditions",
+          "significance": "The program adds prison places without detailing construction methods, financing or alternatives to incarceration that would relieve overcrowding.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Diplomatic absorption capacity for an ECHR exit",
+          "significance": "Consequences for bilateral treaties and European law are not assessed.",
+          "source_refs": [],
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Diplomatic relations with Algeria and cooperation with countries of departure",
+          "mechanism": "Unilateral repeal of the 1968 agreement and visa/ODA reprisals can harden bilateral relations and reduce cooperation on returns in the short term.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "The program embraces a power play; the counterparty's response is not modeled.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "France's standing with the Council of Europe",
+          "mechanism": "Constitutional primacy over the ECHR + potential exit create a conflict with conventional obligations.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "reasoning": "Sequential legal standoff described; consequences on the conventional architecture not assessed.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Failure of the constitutional revision on migration",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "3/5 threshold or referendum uncertainty; ECHR exit would require a separate procedure.",
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Police decentralization creates coordination gaps",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "Transfer of judicial-police powers to the municipal level raises chain-of-command risks.",
+          "source_refs": [
+            "sources.md#securite-liberte"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Doubling of the justice budget constrained by the recruitment chain",
+          "probability": 0.45,
+          "severity": 0.4,
+          "reasoning": "ENM capacity and lateral recruitment limit a rapid build-up.",
+          "source_refs": [
+            "sources.md#justice"
+          ],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Constitutional/European review striking down migration measures",
+          "probability": 0.7,
+          "severity": 0.85,
+          "reasoning": "Challenges to jus soli, quotas, primacy of national law: high risk of being struck down.",
+          "source_refs": [
+            "sources.md#immigration"
+          ],
+          "supported_by": [
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Ten-year police plan with 50% on-the-ground presence target",
+          "source_ref": "sources.md#securite-liberte",
+          "quantified": true,
+          "magnitude": "50% (vs 37% today); 10-year horizon",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Doubling of prosecutors and justice budget to the European average",
+          "source_ref": "sources.md#justice",
+          "quantified": true,
+          "magnitude": "x2 prosecutors; target >0.20% of GDP",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Eightfold reduction of residence permits",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "÷8 (-87.5%)",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Administrative detention extended to 24 months",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "24 months",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Repeal of the 1968 Franco-Algerian agreement",
+          "source_ref": "sources.md#immigration",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of AME, replaced by emergency aid",
+          "source_ref": "sources.md#immigration",
+          "quantified": true,
+          "magnitude": "€700m claimed savings",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Criminal majority at 16, reversal of the minor's excuse from age 13",
+          "source_ref": "sources.md#securite",
+          "quantified": true,
+          "magnitude": "16 / 13 years",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Police-justice plans with recurring costs partially offset by AME and administrative redeployment; precise financing not detailed.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": [
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Justice and police upgrades carry recurring costs; partial offset from AME suppression and bureaucratic redeployment."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Increases in police and justice budgets announced but not costed; financing relies on savings from State reform."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Most measures are regulatory or generate minor savings (AME)."
+            },
+            {
+              "model": "grok-4",
+              "level": "limited",
+              "note": "10-year police/justice plans implicitly costed by catching up to the European average."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "10-year police plan and doubling of justice budget financed by regalian redeployment."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Creation of a territorial police, 24-month detention capacity and penal-code overhaul require a multi-year build-up.",
+          "supported_by": [
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Territorial police creation, ARS abolition, 24-month retention capacity all require multi-year administrative build-up."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Reforms imply heavy legislative changes and a deep administrative reorganization."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Requires significant police redeployment and judicial processing speed."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Decentralization of the territorial police requires training and coordination."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Reorganization of the police and justice requires a gradual build-up."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Migration agenda depends on the constitutional revision, on cooperation from countries of origin, and potentially on ECHR exit.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Migration agenda depends on constitutional revision, renegotiation of bilateral treaties, and potentially ECHR exit."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "low",
+              "note": "Most measures fall under national sovereignty, except international cooperation against narco-trafficking."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Requires renegotiation or denunciation of international treaties (ECHR, EU frameworks)."
+            },
+            {
+              "model": "grok-4",
+              "level": "high",
+              "note": "Country-of-origin agreements and Frontex are essential for returns."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Depends on international legal feasibility and on cooperation from countries of origin."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Constitutional changes hard to reverse; statutory elements (AME, sentencing) easier.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "grok-4",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Constitutional changes hard to reverse; statutory elements (AME, sentencing) easier."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "limited",
+              "note": "Penal-code changes revisable, but the creation of institutions is harder to dismantle."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Statutory changes can be reversed, but constitutional revisions are sticky."
+            },
+            {
+              "model": "grok-4",
+              "level": "low",
+              "note": "Constitutional referendum and the entrenchment of national-law primacy make reversibility difficult."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Constitutional entrenchment and penal-code overhaul create a structural lock-in that is difficult to reverse."
+            }
+          ]
+        }
+      },
+      "confidence": 0.81
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "qwen3.6": "A"
+        }
+      },
+      "headline": {
+        "text": "Merger of departments/regions into 40-50 Provinces, transfer of regulatory power, statute law refocused on principles, golden rule.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-7",
+            "text": "Replacement of departments/regions with ~40-50 Provinces, transfer of regulatory power, constitutional budgetary golden rule."
+          },
+          {
+            "model": "deepseek-v3",
+            "text": "Radical decentralization with creation of 40-50 provinces, local regulatory autonomy and refocusing of the State on regalian functions, after a constitutional referendum."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Replacement of regions and departments with Provinces vested with rule-making power."
+          },
+          {
+            "model": "grok-4",
+            "text": "Radical decentralization (provinces, local regulatory power) and refocusing of statute law on fundamental principles."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Radical three-tier decentralization, restriction of statute law to fundamental principles, and reinforcement of Parliament."
+          }
+        ]
+      },
+      "summary": "Structural overhaul of the Fifth Republic: three tiers (State / Province / municipal bloc), 40-50 Provinces merging departments and regions, massive transfer of regulatory power to local authorities, statute law restricted to 'broad principles' (except tax and criminal law), Parliament granted reserved legislative initiative and reinforced oversight powers, presidency refocused on strategy and crisis management. Administrative target: 33% → 25% of the workforce in administration. Constitutional budgetary golden rule. Validation by constitutional referendum. Four models grade B due to the theoretical character of the transition (equalization mechanisms and personnel transfer arrangements little detailed); Qwen grades A for the overall coherence of the new tripartite framework.",
+      "problems_addressed": [
+        {
+          "problem": "Territorial mille-feuille and overlapping competences",
+          "approach": "Suppression of departments and regions, creation of 40-50 Provinces, transfer of regulatory power to local authorities.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#institutions",
+            "sources.md#etat-collectivites"
+          ],
+          "reasoning": "Explicit target architecture; volume of competences transferred not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Regulatory inflation and legal instability",
+          "approach": "Statute law refocused on broad principles; regulatory power devolved to Provinces; legislator withdrawn from the regulatory domain.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "reasoning": "Implicit constitutional reform of Article 34; practical effects depend on implementation.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Weakness of parliamentary oversight",
+          "approach": "Strengthening of reserved legislative initiative, oversight powers, and increased evaluation capacity.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "reasoning": "Reinforcement announced but concrete levers (commissions of inquiry, ex post oversight) little detailed.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Hyper-presidentialism and confusion of roles",
+          "approach": "Presidential refocusing on strategic functions and crisis management; consolidated government quarter.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "reasoning": "Principle stated without explicit revision of constitutional prerogatives.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Representativeness and the legislative voting system",
+          "significance": "No reform of the voting system (proportional representation, partial proportional dose) or of direct-democracy mechanisms beyond the referendum.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Status of civil servants of the suppressed departments/regions",
+          "significance": "The HR transition (40-50% of territorial agents affected) is neither framed nor quantified.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Inter-territorial equalization after creation of the Provinces",
+          "significance": "Financial-solidarity mechanisms between Provinces are not specified; risk of widening territorial inequalities.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Administrative continuity and stability of public action during the transition",
+          "mechanism": "Simultaneous merger of departments + regions + regulatory transfer creates a multi-year window of friction.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#etat-collectivites"
+          ],
+          "reasoning": "Temporary but documented effect; no phasing is made explicit.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Failure or delay of the constitutional referendum",
+          "probability": 0.5,
+          "severity": 0.85,
+          "reasoning": "The whole framework is conditional on a constitutional revision; any blockage breaks the architecture.",
+          "source_refs": [
+            "sources.md#institutions"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Drift of inequalities between Provinces",
+          "probability": 0.55,
+          "severity": 0.6,
+          "reasoning": "Regulatory and fiscal autonomy without explicit equalization may increase divergence.",
+          "source_refs": [
+            "sources.md#etat-collectivites"
+          ],
+          "supported_by": [
+            "gemini-3-pro",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Local capture of the new regulatory powers",
+          "probability": 0.4,
+          "severity": 0.45,
+          "reasoning": "Massive transfer without explicit reinforcement of legality oversight.",
+          "source_refs": [
+            "sources.md#etat-collectivites"
+          ],
+          "supported_by": [
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Creation of 40-50 Provinces merging departments and regions",
+          "source_ref": "sources.md#etat-collectivites",
+          "quantified": true,
+          "magnitude": "40-50 Provinces",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Transfer of regulatory power to local authorities",
+          "source_ref": "sources.md#etat-collectivites",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Target of 25% of the workforce in administration (vs. 33%)",
+          "source_ref": "sources.md#etat",
+          "quantified": true,
+          "magnitude": "33% → 25% (-8 pts)",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Constitutional budgetary golden rule",
+          "source_ref": "sources.md#economie-finances-publiques",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Restriction of statute law to 'broad principles' (except tax and criminal law)",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Constitutional referendum to validate the architecture",
+          "source_ref": "sources.md#institutions",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Reform with potentially net positive cost via reduction of the mille-feuille; transition cost not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-v3"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Reform potentially net positive via mille-feuille reduction; transition cost unquantified."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Transition costs tied to administrative reorganization and personnel transfer."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Net savings expected from suppressing entire administrative layers (départements/régions)."
+            },
+            {
+              "model": "grok-4",
+              "level": "limited",
+              "note": "Suppression of the mille-feuille generates savings over time."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Institutional reorganization with net negative cost if the transition is well managed."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Simultaneous overhaul of the territorial architecture, of competences and of the law domain over a short horizon.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Complete territorial overhaul, competence transfers, and law-domain restriction simultaneously."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Complex territorial and institutional overhaul requiring broad political consensus."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Massive structural reform requires wide political consensus and operational capacity."
+            },
+            {
+              "model": "grok-4",
+              "level": "high",
+              "note": "Heavy overhaul of the Fifth Republic, merger of provinces and competence transfers spread over several years."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Large-scale constitutional and territorial reform requiring HR and legal support."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Everything depends on a constitutional revision (3/5 or referendum) and on the buy-in of local elected officials.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Whole architecture conditional on constitutional revision passing 3/5 or referendum."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Depends on the success of the constitutional referendum and on the buy-in of local elected officials."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Conditional on constitutional revision but mostly internal levers."
+            },
+            {
+              "model": "grok-4",
+              "level": "high",
+              "note": "Constitutional referendum + buy-in of local elected officials."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Subject to constitutional revision and to adjustment of territorial balances."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Once enshrined in the Constitution, these transformations are structurally difficult to reverse.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Once provinces are constitutionally entrenched, difficult to undo without another referendum."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "low",
+              "note": "Constitutional and territorial changes hard to reverse."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Statutory changes more reversible than constitutional ones."
+            },
+            {
+              "model": "grok-4",
+              "level": "low",
+              "note": "Constitutional Provinces architecture difficult to revisit."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Constitutional overhaul creating a locked-in new institutional triptych."
+            }
+          ]
+        }
+      },
+      "confidence": 0.72
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "grok-4": "B",
+          "qwen3.6": "B"
+        }
+      },
+      "headline": {
+        "text": "Nuclear-centric (60-year, EPRs, SMRs), revenue-neutral carbon pricing, rejection of precautionary principle, agricultural deregulation.",
+        "supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "claude-opus-4-7",
+            "text": "Low-carbon G20 leader via nuclear (EPRs, SMRs, 60-year life extension), rejection of the precautionary principle, revenue-neutral carbon taxation."
+          },
+          {
+            "model": "deepseek-v3",
+            "text": "Priority on nuclear (EPRs, SMRs), rejection of punitive ecology and degrowth, support for technological innovation (CO2 capture, hydrogen) without quantified emissions-reduction targets."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Agricultural deregulation, end of wind/solar subsidies, and massive investment in nuclear."
+          },
+          {
+            "model": "grok-4",
+            "text": "Low-carbon leadership via nuclear-first strategy, reciprocal carbon taxation and hyper-tech without degrowth."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Nuclear-first priority, revenue-neutral carbon pricing, rejection of the precautionary principle and agricultural deregulation."
+          }
+        ]
+      },
+      "summary": "Techno-philic and pro-growth ecological component: decarbonization treated as an industrial and sovereignty issue with nuclear at the centre (life extension to 60 years, next-generation EPRs, SMRs, research on laser treatment of waste). Carbon taxation accepted under three conditions (revenue-neutral, redistribution to losers/virtuous actors, preservation of competitiveness, international reciprocity). Renewables brought back under common law. Precautionary principle replaced by a responsibility principle. Agriculture: authorization of NGTs, reasoned use of phytosanitary products, water-storage reservoirs handled at subsidiarity level. Three models grade C due to the absence of quantified emissions-reduction targets, of a fossil-exit timetable and of a biodiversity strategy; Grok and Qwen grade B for the coherence of the pro-nuclear stance and of redistributive carbon pricing.",
+      "problems_addressed": [
+        {
+          "problem": "Decarbonization of the electricity mix",
+          "approach": "Reactor life extension to 60 years, new EPRs, deployment of SMRs.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#climat",
+            "sources.md#energie"
+          ],
+          "reasoning": "Clear and quantified technological pillar (60 years, EPRs, SMRs); timeline however indicative.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Industrial competitiveness in the face of energy prices",
+          "approach": "Competitive electricity tariff via legacy nuclear, revenue-neutral carbon taxation with international reciprocity.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#climat",
+            "sources.md#economie-fiscalite"
+          ],
+          "reasoning": "Coherent economic logic; quantification of redistributive transfers absent.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Agricultural sovereignty and sectoral competitiveness",
+          "approach": "Authorization of NGTs, reasoned phytosanitaries, water-storage reservoirs at subsidiarity level.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#agriculture"
+          ],
+          "reasoning": "Explicit measures supporting production; impact on biodiversity and water not quantified.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Emissions of international super-polluters",
+          "approach": "Diplomatic action targeting the largest emitters (China, India, United States) rather than penalizing France unilaterally.",
+          "strength": 0.45,
+          "source_refs": [
+            "sources.md#climat"
+          ],
+          "reasoning": "Diagnosis sound but diplomatic levers little specified.",
+          "supported_by": [
+            "grok-4"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Quantified GHG-emissions reduction targets",
+          "significance": "No -55% by 2030 target or SNBC trajectory; European commitment not explicitly reaffirmed.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation to climate change",
+          "significance": "Heat waves, sea-level rise, extreme events: no quantified territorial adaptation strategy.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Biodiversity and soil artificialization",
+          "significance": "ZAN (zero net artificialization), biodiversity erosion, diffuse pollution not addressed.",
+          "source_refs": [],
+          "supported_by": [
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Decarbonization of transport and buildings",
+          "significance": "Beyond electricity, the transport (low-emission zones, mobility) and building (thermal renovation) sectors are little addressed.",
+          "source_refs": [],
+          "supported_by": [
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Trajectory of installable renewables",
+          "mechanism": "End of wind/solar subsidies + return to common law slows mix diversification in the short term, while new EPRs/SMRs ramp up (>10 years).",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#energie"
+          ],
+          "reasoning": "Structural temporal gap between the 2026-2035 window and the availability of new nuclear.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Pressure on water resources and biodiversity",
+          "mechanism": "Support for water reservoirs, NGTs and reasoned phytosanitaries without a strict national framework can locally increase environmental pressure.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#agriculture"
+          ],
+          "reasoning": "Subsidiarity claimed but without explicit safeguards.",
+          "supported_by": [
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Delay or cost overrun on EPR/SMR programmes",
+          "probability": 0.65,
+          "severity": 0.7,
+          "reasoning": "EPR track record (Flamanville, Olkiluoto); SMRs not yet commercialized at scale.",
+          "source_refs": [
+            "sources.md#energie"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Failure of revenue-neutral carbon taxation (social acceptability, redistributive balance)",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Yellow Vests memory; redistributive mechanism not quantified.",
+          "source_refs": [
+            "sources.md#climat"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Incompatibility with European objectives (Fit for 55, taxonomy)",
+          "probability": 0.45,
+          "severity": 0.6,
+          "reasoning": "Absence of 2030 targets and withdrawal of renewables subsidies may create conflict with the EU framework.",
+          "source_refs": [
+            "sources.md#climat",
+            "sources.md#energie"
+          ],
+          "supported_by": [
+            "deepseek-v3",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Life extension of nuclear reactors to 60 years",
+          "source_ref": "sources.md#energie",
+          "quantified": true,
+          "magnitude": "60 years",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Construction of next-generation EPRs",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Deployment of small modular reactors (SMRs)",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "grok-4"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenue-neutral carbon taxation with redistribution",
+          "source_ref": "sources.md#climat",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "grok-4",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "End of wind/solar subsidies (return to common law)",
+          "source_ref": "sources.md#energie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Replacement of the precautionary principle by a responsibility principle",
+          "source_ref": "sources.md#climat",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Authorization of NGTs (new genomic techniques) in agriculture",
+          "source_ref": "sources.md#agriculture",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Nuclear programme (EPRs, SMRs, life extensions) is highly capital-intensive over 15-20 years; quantification absent.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "grok-4",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Nuclear program (EPRs, SMRs, life-extensions) is highly capital-intensive over 15-20 years; cost not detailed."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Heavy nuclear investments requiring public financing or via EDF, with no quantified commitment."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Carbon revenues recycled (tax neutral) but nuclear capital expenditure is intensive."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "EPR/SMR nuclear costly but financed via EDF and long-term contracts."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Heavy nuclear investments offset by carbon-tax revenues."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Nuclear industry (EDF, supply chain, ASN) under stress; SMRs not yet commercialized at scale.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-3-pro",
+            "grok-4"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Nuclear industry (EDF, supply chain, ASN) under stress; SMRs not yet commercial at scale."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "high",
+              "note": "Construction of new EPRs is technically complex and lengthy."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Nuclear capacity is established, agricultural deregulation requires lifting EU rules."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Industrial nuclear well-mastered but SMRs not yet commercialized."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Nuclear construction and life extension require strained industrial skills."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Uranium supply chain and European cooperation (taxonomy); CETA/Mercosur negotiations.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-3-pro",
+            "grok-4"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Uranium supply, ECB-comparable industrial financing, EU taxonomy alignment."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "moderate",
+              "note": "Depends on European legal stability and on international cooperation."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Requires reciprocal carbon mechanisms and possibly EU treaty modification."
+            },
+            {
+              "model": "grok-4",
+              "level": "low",
+              "note": "National energy sovereignty reduces external dependence."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Depends on fuel availability and European authorizations."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Heavy nuclear investments lock the electricity mix for 60+ years; tax framework reversible.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-v3",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "grok-4"
+          ],
+          "per_model": [
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Heavy nuclear investments lock electricity mix for 60+ years; tax framework reversible."
+            },
+            {
+              "model": "deepseek-v3",
+              "level": "low",
+              "note": "Heavy nuclear investments hard to reverse."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Nuclear infrastructure choices lock the energy mix for half a century."
+            },
+            {
+              "model": "grok-4",
+              "level": "moderate",
+              "note": "Carbon taxation reversible, nuclear infrastructure less so."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Nuclear investments structurally locking in the long term."
+            }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Pension reform shifts ~40% of entitlements to capitalization with a long transition; net direction depends on the cohort's position relative to the tranches. Pro-young effects (labour-market liberalization, housing access, accumulated capitalization) coexist with exposure of intermediate cohorts to the double-financing of the transition.",
+      "units": "qualitative; capitalization target ~40%; 8-tranche transition",
+      "confidence": 0.55,
+      "caveats": "The programme does not publish cohort-by-cohort distributional tables; estimates are derived from the stated architecture (age-65 threshold, 8 tranches, ~40% capitalization target, golden rule, 8-GDP-point spending reduction)."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Lasting reduction of production taxes and labour charges across the whole career; possible VAT/contributions rebalancing in case of a competitiveness VAT.",
+        "quantified": "Production-tax cut: €11.5bn/year; VAT trajectory not settled"
+      },
+      "housing": {
+        "summary": "Repeal of SRU article 55 may increase non-social housing supply in tight markets; unlocking capitalization for primary residence supports homeownership.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Full exposure to the capitalization tranche (~40% of entitlements) over the entire career; old-age minimum of €1,000/month guaranteed at 65.",
+        "quantified": "~40% capitalization; floor at 65 + minimum vieillesse €1,000/month"
+      },
+      "labor_market": {
+        "summary": "Single employment contract reduces the insiders/outsiders divide; negative employer charges for those exiting long-term RSA.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "New nuclear capacity comes online in the middle of this cohort's career; near-term emissions-gap risk depending on the duration of the bridge.",
+        "quantified": null
+      },
+      "narrative_summary": "The under-35 cohort captures the gains from labour-market liberalization and the accumulation of capitalization over a full career, while bearing exposure to the financing of the pension transition and to a near-term emissions risk if renewables slow down."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension already paid under the pay-as-you-go regime; no direct reduction of accrued entitlements announced.",
+        "quantified": "No reduction of accrued entitlements"
+      },
+      "pension": {
+        "summary": "Current retirees not affected by the capitalization shift; uprating of small pensions via minimum vieillesse of €1,000/month.",
+        "quantified": "Minimum vieillesse = €1,000/month"
+      },
+      "healthcare": {
+        "summary": "Suppression of ARS reshuffles governance; hospital access during the transition depends on the capacity of local medical communities.",
+        "quantified": null
+      },
+      "narrative_summary": "Accrued entitlements of the current cohort are preserved by design of the transition; institutional turbulence in healthcare may introduce volatility of access in the early years."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Age-65 threshold acts immediately; capitalization accumulation compounds across all horizons; old-age minimum stabilizes the low end.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Raising the retirement age to 65 reduces pension access for early-departure cohorts; capitalization not yet accumulated.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro"
+            ],
+            "dissenters": [
+              "grok-4",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Age-65 raise reduces benefit access for early-retirement cohorts; capitalization not yet accrued."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": -1,
+                "note": "Raise to 65 penalizes cohorts close to retirement; capitalization not yet active."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "Pension reform raises retirement age; capitalization yet to mature."
+              },
+              {
+                "model": "grok-4",
+                "score": 0,
+                "note": "Roll-out of capitalization tranches neutral in the short term; €1,000 minimum vieillesse already active."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Gradual ramp-up of tranches; neutral effects in the short term."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "First capitalization tranches mature; minimum vieillesse active; solvency improving.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-v3"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "First capitalization tranches mature; system solvency improves; minimum-vieillesse floor active."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Tranches still being built up; distributional effects still limited."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Capitalization tranches start producing returns; floor stabilizes low end."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "Capitalization tranches mature; system rebalances."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "First positive effects of capitalized tranches on young cohorts."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Capitalization approaches the ~40% target; reliance on the demographic ratio recedes.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 2,
+                "note": "Capitalization approaches ~40% target; system reliance on demographic ratio declines."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 1,
+                "note": "~40% capitalization target reached gradually; sustainability strengthened."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "System reaches mature capitalization mix; demographic risk falls sharply."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "40% target reached; young cohorts capture capital returns."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Full effect of capitalization; structural relief for the pay-as-you-go system."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Spending-cut target + production-tax cuts interact with the double-financing of the capitalization transition and with the constitutional golden rule.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Tax cuts (€11.5bn/year) and capitalization-transition costs precede spending savings; debt trajectory worsens in the short term.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-v3",
+              "gemini-3-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Tax cuts and capitalization transition costs precede spending-cut dividends; debt trajectory may worsen initially."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Effects of the golden rule and spending savings partly offset tax cuts."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Spending discipline begins; règle d'or framework anchors expectations."
+              },
+              {
+                "model": "grok-4",
+                "score": -1,
+                "note": "Capitalization-transition costs and tax cuts come ahead of spending savings."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Initial transition costs weigh on the public accounts."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              -2,
+              2
+            ],
+            "note": "Golden rule fully effective and mid-trajectory of spending cuts; net effect depends on target compliance. Grok view more degraded (costly transition).",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "grok-4"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Règle d'or takes effect; spending-cut trajectory reaches mid-path; net effect neutral if targets met."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 1,
+                "note": "Spending savings offset tax cuts; debt trajectory stabilized."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "Règle d'or enforces discipline; spending cuts visible in debt trajectory."
+              },
+              {
+                "model": "grok-4",
+                "score": -2,
+                "note": "Capitalization transition costly, debt worsens at mid-period."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Positive effects of structural savings start to offset tax cuts."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              -1,
+              2
+            ],
+            "note": "Eight-GDP-point spending-reduction target reached on Sweden/Germany trajectory; debt declining. Grok dissents on the scale of residual costs.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "grok-4"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "8-GDP-point spending reduction achieved on Sweden/Germany trajectory; debt ratio declines."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 2,
+                "note": "Eight-GDP-point spending cut and pension sustainability sharply reduce debt."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "Long-term spending cuts and capitalization payoff stabilize debt."
+              },
+              {
+                "model": "grok-4",
+                "score": -1,
+                "note": "Capitalization costs persist beyond 10 years; net benefits deferred."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Cumulative effects of the reforms; structural relief for public debt."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "grok-4"
+        ]
+      },
+      {
+        "row": "climate",
+        "dimension_note": "New nuclear capacity arrives with delay; renewables-derogation exit acts immediately; revenue-neutral carbon pricing.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Renewables derogation regime ends before new EPRs come online; near-term emissions-gap risk depending on the duration of the bridge.",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "grok-4"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Renewables dérogatoire regime ends before new nuclear commissions; bridging gap raises near-term emissions risk."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Maintaining the existing nuclear fleet partly offsets the withdrawal from renewables."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Renewables retrenchment partly offset by carbon pricing."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "Renewables brought back under common law; existing nuclear maintained, redistributive carbon pricing active."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Neutral effects in the short term; decarbonization trajectory carried by legacy nuclear."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "First EPRs and SMRs enter commissioning; revenue-neutral carbon pricing in place.",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "grok-4"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "First new EPRs and SMRs enter commissioning; tax-constant carbon pricing at play."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 1,
+                "note": "New EPRs and SMRs in service; emissions begin to fall."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "First EPRs come online; tax-constant carbon pricing supports transition."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "New nuclear operational; emissions trajectory accelerates downward."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Start-up of EPRs and SMRs; structuring of carbon taxation."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "New nuclear fleet fully integrated; decarbonized electricity supports industrial electrification.",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "New nuclear fleet fully integrated; decarbonized electricity supports industry electrification."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 2,
+                "note": "Decarbonization of electricity achieved; emissions structurally reduced."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "Mature nuclear fleet enables full electrification of energy uses."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "Full decarbonization effect; G20 low-carbon leadership achievable."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Structural benefits of decarbonization consolidate."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Suppression of ARS creates a transition period; doubling of medical-school students reaches maturity over a decadal horizon.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "ARS dissolution during the transition may disrupt coordination; new students not yet graduated.",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "ARS dissolution during transition may disrupt coordination; new medical students not yet graduated."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Health-governance reorganization in progress; clinical effects limited in the short term."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Governance reform creates short-term churn but no immediate access loss."
+              },
+              {
+                "model": "grok-4",
+                "score": 0,
+                "note": "ARS gradually suppressed; care provision little affected immediately."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Institutional reorganization with no direct impact on access to care."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "First doubled cohorts of doctors enter practice; differentiated conventionnement reshapes territorial access.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "First doubled cohorts enter practice; differentiated conventionnement reshapes spatial access."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 1,
+                "note": "Doubling of students reaches maturity; pressure on medical deserts decreases."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Medical-student doubling matures; access improves."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "Doubled students in practice; differentiated conventionnement relieves deserts."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Positive effects of structural reforms on access to care."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "Medical-desert metrics improve; European pharmaceutical consortium stabilizes supply.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-v3"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Medical-desert metrics improve; European pharmaceutical consortium stabilizes supply."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 2,
+                "note": "Health system strengthened in personnel and governance; sustainability improved."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Stable medical workforce supports universal access."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "Desertification reduced, strategic supply secured."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Maturity of the reformed system; access to care consolidated."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Education-voucher and school-autonomy reforms act gradually on cohort experience as cycles progress.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Curriculum changes and end-of-primary certificate take effect; education-voucher rollout phased.",
+            "supported_by": [
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "deepseek-v3"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Curriculum shift and certificate-of-primary introduction begin; voucher rollout phased."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Roll-out phase of the education voucher and new curricula."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Initial curriculum reform and assessment milestones improve learning outcomes."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "End-of-primary certificate and phased education voucher improve quality."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "First effects of the education-voucher rollout."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": null,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "No single mode: full exposure to the education voucher and +20% rise in teacher pay; views diverge on the magnitude of the effect.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Full-cohort voucher exposure; teacher-pay rise (+20%) stabilizes recruitment."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 1,
+                "note": "Full effect of the education voucher; teacher recruitment stabilized."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "Reform fully felt; teacher salaries support recruitment quality."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "Cohorts fully exposed to the education voucher; +20% teacher pay."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Stabilization of recruitment and improvement of school quality."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 2,
+            "score_interval": [
+              1,
+              2
+            ],
+            "note": "First cohorts fully educated under the reformed system enter the labour market.",
+            "supported_by": [
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "First cohorts fully educated under reformed system enter labor market."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 2,
+                "note": "Cohorts educated under the reformed system show improved labour-market outcomes."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 2,
+                "note": "Reformed school system produces graduates with measurable outcomes."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "Cohorts educated under the reformed system enter employment."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "Cumulative effects on productivity and social cohesion."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Suppression of SRU reshapes supply in tight markets; capitalization unlock for primary residence supports demand.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "No single mode: legal changes effective; private supply response delayed 2-4 years; immediate effect on social mix possibly negative.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Legal change takes effect; supply response lags by 2-4 years."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": -1,
+                "note": "SRU repeal without compensatory measure weakens short-term access to social housing."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "SRU abolition risks accelerated segregation in tense zones short term."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "SRU repeal and capitalization unlock immediately free up homeownership."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Capitalization unlock and supply liberalization support homeownership."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              -1,
+              1
+            ],
+            "note": "Private supply response in previously-constrained zones; capitalization unlock supports homeownership.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "grok-4",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-v3",
+              "gemini-3-pro"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Private-development supply response in previously-constrained zones."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Ambiguous effects: supply liberalization vs. loss of social housing in tight markets."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "Long-term housing market more polarized without SRU compensatory mechanisms."
+              },
+              {
+                "model": "grok-4",
+                "score": 1,
+                "note": "Private supply response in zones freed from SRU; capitalization-funded homeownership."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Effects of supply liberalization start to materialize."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              2
+            ],
+            "note": "Supply rebalanced; social-mix outcomes depend on the negotiation of flow targets with municipalities.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-v3",
+              "gemini-3-pro"
+            ],
+            "dissenters": [
+              "grok-4",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Supply rebalanced; mixité-sociale outcomes depend on flow-target negotiation with communes."
+              },
+              {
+                "model": "deepseek-v3",
+                "score": 0,
+                "note": "Housing market rebalanced, but territorial segregation possible."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Long-term equilibrium uncertain; depends on local negotiations."
+              },
+              {
+                "model": "grok-4",
+                "score": 2,
+                "note": "Market rebalanced; supply matched to areas under pressure."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 2,
+                "note": "More fluid market; structural benefits for young households."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "grok-4",
+          "qwen3.6"
+        ],
+        "row_dissenters": [
+          "gemini-3-pro"
+        ]
+      }
+    ],
+    "reasoning": "The programme simultaneously protects the accrued entitlements of current retirees (pay-as-you-go) and shifts active cohorts toward capitalization (~40% over time). The net intergenerational direction is rated 'mixed' by the five models: the under-35s bear the exposure to the double-financing of the transition but capture labour-market liberalization, accumulated capitalization and housing unlock (capitalization for primary residence, SRU repeal); those 65+ retain accrued entitlements with minimal direct impact. Near-term emissions-gap risk (renewables → new nuclear) and potential weakening of the social mix are the main counter-effects for younger cohorts.",
+    "source_refs": [
+      "sources.md#retraites",
+      "sources.md#fiscalite-de-production",
+      "sources.md#regle-dor",
+      "sources.md#sante",
+      "sources.md#revolution-de-lecole",
+      "sources.md#compétitivité-territoires",
+      "sources.md#ambition-ecologique"
+    ],
+    "confidence": 0.62,
+    "agreement": {
+      "direction_consensus": true,
+      "magnitude_consensus": "interval",
+      "dissenting_views": [
+        {
+          "model": "grok-4",
+          "view": "Considers that the debt trajectory deteriorates more durably (h_2031_2037: -2; h_2038_2047: -1) due to the sustained cost of the capitalization transition, and estimates a more pronounced pro-young effect on housing (h_2038_2047: +2) and on climate (h_2027_2030: +1) than the other models."
+        },
+        {
+          "model": "gemini-3-pro",
+          "view": "More negative long-term view on housing (h_2038_2047: 0) and more positive on public debt (h_2027_2030: +1); insists on the polarization of the housing market without compensatory mechanisms for the SRU."
+        },
+        {
+          "model": "deepseek-v3",
+          "view": "Contrasted view on short-term housing (h_2027_2030: -1) due to the loss of social housing without compensation."
+        }
+      ]
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Under unchanged trajectory: public debt rises from ~120% to ~130% of GDP by mid-2030; the pension system undergoes recurring parametric adjustments without structural rebalancing; the share of medical deserts continues to grow; the nuclear fleet ages without a clear renewal programme; legislative and regulatory inflation continues; migration flows and their removal-execution rate remain unchanged.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "social_demographic"
+    ],
+    "reasoning": "The programme bends the trajectory on public finances (golden rule + -8 GDP-point spending target), pensions (age 65 + ~40% capitalization), institutional architecture (40-50 Provinces + regulatory devolution), energy (new nuclear fleet, exit from the renewables derogation regime) and migration (constitutional primacy, eightfold reduction in residence permits). The redistributive social-demographic base is less transformed: anti-poverty and inequality tools remain structurally similar; education/health reforms are governance and supply levers more than redistributive levers. Four models conclude on a 'mixed' trajectory (long-term structural gains, short-term frictions and exposure); Grok judges the net effect 'improvement' given the scale of the regalian and budgetary package.",
+    "confidence": 0.7,
+    "supported_by": [
+      "claude-opus-4-7",
+      "deepseek-v3",
+      "gemini-3-pro",
+      "qwen3.6"
+    ],
+    "dissenters": [
+      "grok-4"
+    ]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Financing the pension transition (double-payment during the capitalization shift)",
+      "why_unsolved": "The programme targets ~40% capitalization and a tranche-based framework but does not publish a financing plan for the double-payment period (current contributions + tranche accumulation); external estimates put the need at several tens of €bn/year for 10-15 years.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#retraites"
+      ],
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Decarbonization of transport (road, aviation, maritime) and of buildings",
+      "why_unsolved": "The programme's decarbonization is centred on electricity and nuclear; transport and building emissions receive no dedicated instrument.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Fiscal equalization between Provinces after radical decentralization",
+      "why_unsolved": "The massive transfer of competences and regulatory power is not accompanied by an explicit inter-territorial equalization mechanism; risk of divergence in public services.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Defence-spending trajectory and NATO 2% commitment",
+      "why_unsolved": "The programme strengthens domestic regalian functions without setting a defence budget target or an equipment plan.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Diplomatic and trade consequences of an ECHR exit",
+      "why_unsolved": "The programme enshrines constitutional primacy over the ECHR/CJEU and contemplates exit as a last resort without modelling the impacts on bilateral treaties and on European law.",
+      "severity_if_unsolved": "high",
+      "source_refs": [
+        "sources.md#immigration"
+      ],
+      "supported_by": [
+        "claude-opus-4-7",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Long-term care and loss of autonomy",
+      "why_unsolved": "No structural solution (5th branch, financing) to address the demographic shock of old age.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Thermal renovation of the building stock",
+      "why_unsolved": "No quantified strategy for renovating energy-leaking dwellings.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Reform of the voting system and representation after creation of the Provinces",
+      "why_unsolved": "The Provinces architecture is not coupled with a reform of the legislative voting system or of territorial representation in the Senate.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3"
+      ],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "The pension capitalization transition triggers stress on the sovereign-debt market during the double-financing period",
+      "trigger": "The programme cuts revenues (production tax -€11.5bn/year, corporate tax 25%→20%) while financing the first capitalization tranches, with no explicit financing plan and no calendar for spending savings.",
+      "probability": 0.4,
+      "severity": 0.8,
+      "reasoning": "Historically risky combination for a debt at 120% of GDP; markets may react before spending savings materialize the golden-rule effect.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Failure of the constitutional migration revision in Congress and then in referendum; several regalian reforms lose their legal anchor",
+      "trigger": "3/5 threshold not reached or referendum rejection; primacy over ECHR/CJEU not enshrined, measures (quotas, jus soli, 24-month detention) struck down.",
+      "probability": 0.5,
+      "severity": 0.75,
+      "reasoning": "The programme conditions the entire migration agenda on the revision; a blockage neutralizes the coherence of the regalian package.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Creation of the Provinces produces a lasting blockage of territorial administration",
+      "trigger": "Simultaneous merger of departments + regions, transfer of competences and personnel without explicit phasing; conflictual HR negotiations; capture by major local elected officials.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "Territorial overhaul of unprecedented scale; precedent of the 2016 regional mergers on absorption time.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Slippage of the new nuclear fleet's commissioning timetable beyond a decade compromises the credibility of decarbonization",
+      "trigger": "EPR precedents (Flamanville, Olkiluoto), absence of commercialized SMRs, strained supply chain.",
+      "probability": 0.55,
+      "severity": 0.65,
+      "reasoning": "If the exit from the renewables-derogation regime precedes nuclear commissioning, the emissions gap widens in the short term.",
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Massive social mobilization against the move to age 65 blocks the global reform agenda",
+      "trigger": "Announcement of raising the legal age to 65 while the previous reform (64 years, 2023) has already crystallized opposition.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "Recent precedent of prolonged mobilization; combination with the Labour Code reform amplifies the conflict potential.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-v3"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Major legal and diplomatic friction with the EU and the Council of Europe",
+      "trigger": "Enshrinement of constitutional primacy, repeal of the 1968 Franco-Algerian agreement, CJEU/ECHR rulings not enforced.",
+      "probability": 0.45,
+      "severity": 0.7,
+      "reasoning": "Sequential legal standoff described in the programme; risk of trade retaliation or degradation of sectoral cooperation (Frontex, Schengen).",
+      "supported_by": [
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Heightened spatial segregation after repeal of the SRU law",
+      "trigger": "Repeal of article 55 without compensatory mechanism; negotiation of flow targets by municipality.",
+      "probability": 0.5,
+      "severity": 0.6,
+      "reasoning": "International precedents: removal of territorial social-housing quotas tends to concentrate subsidized housing in already well-served municipalities.",
+      "supported_by": [
+        "qwen3.6",
+        "gemini-3-pro"
+      ],
+      "dissenters": []
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "positioning.overall_spectrum.droite",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "positioning.economic.droite_economique_libérale",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "positioning.sovereignty.regalien_renforce",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "intergenerational.net_transfer_direction.mixed",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.grade.B",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.measure.production_tax_cut_11_5_bn",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.economic_fiscal.measure.pension_age_65_capitalisation_40pct",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.security_sovereignty.measure.divide_by_8_residence_permits",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.institutional_democratic.measure.40_50_provinces",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "dimensions.environmental_long_term.measure.nuclear_centric_60_year_extension",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "unsolved.pension_capitalisation_transition_financing",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "execution_risk.constitutional_revision_failure",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-v3",
+          "gemini-3-pro",
+          "grok-4",
+          "qwen3.6"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "dimensions.security_sovereignty.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "B — blind spot on diplomatic dependence on countries of origin, ECHR constraints, and prison capacity"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "A — coherent and structured package with quantified targets"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "B — notable European legal risks and diplomatic tensions"
+          },
+          {
+            "model": "grok-4",
+            "position": "A — massive and coherent regalian package"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "A — overall coherence of the regalian and legal apparatus"
+          }
+        ]
+      },
+      {
+        "claim_id": "dimensions.social_demographic.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "C — social measures structurally secondary; AME repeal and SRU repeal weigh negatively"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "B — large-scale education and health reforms; reservation on the redistributive component"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "B — structural supply-side reforms; redistributive shortfalls offset by single contract"
+          },
+          {
+            "model": "grok-4",
+            "position": "B — ambitious education/health package, weakness on poverty"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "B — modernization of school and health, gaps on the fight against poverty"
+          }
+        ]
+      },
+      {
+        "claim_id": "dimensions.institutional_democratic.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "B — ambitious overhaul but operational transition little detailed"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "B — radical decentralization, equalization to be clarified"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "B — structural reform conditional on broad political consensus"
+          },
+          {
+            "model": "grok-4",
+            "position": "B — radical decentralization and refocusing of statute law are coherent"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "A — coherent and logical overhaul of the three levers (territory, statute law, Parliament)"
+          }
+        ]
+      },
+      {
+        "claim_id": "dimensions.environmental_long_term.grade",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "C — absence of quantified emissions-reduction targets and of a biodiversity strategy"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "C — no 2030 target, strong technological dependence without a timetable"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "C — agricultural deregulation and end of renewables subsidies without a compensatory plan"
+          },
+          {
+            "model": "grok-4",
+            "position": "B — nuclear-centric strategy coherent with redistributive carbon pricing"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "B — credible pro-nuclear package and redistributive carbon pricing"
+          }
+        ]
+      },
+      {
+        "claim_id": "positioning.institutional.modal_score_indeterminate",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "0 — presidential refocusing + reinforcement of Parliament + Provinces balance"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "-1 — presidential refocusing and parliamentary reinforcement dominate"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "+1 — presidential refocusing strengthens the strategist State"
+          },
+          {
+            "model": "grok-4",
+            "position": "+1 — presidential reinforcement via regalian redeployment"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "-1 — radical decentralization and parliamentary reinforcement predominate"
+          }
+        ]
+      },
+      {
+        "claim_id": "counterfactual.direction_of_change",
+        "positions": [
+          {
+            "model": "claude-opus-4-7",
+            "position": "mixed — long-term gains, short-term frictions and exposure"
+          },
+          {
+            "model": "deepseek-v3",
+            "position": "mixed — structural benefits coupled with social and legal risks"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "mixed — massive reforms with conditional effects"
+          },
+          {
+            "model": "grok-4",
+            "position": "improvement — large regalian and budgetary package, net improved trajectory"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "mixed — macroeconomic gains tempered by social and institutional tensions"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "claude-opus-4-7": "complete",
+      "deepseek-v3": "complete",
+      "gemini-3-pro": "complete",
+      "grok-4": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          3,
+          4
+        ],
+        "modal": 4,
+        "dissent_count": 2
+      },
+      "social_cultural": {
+        "interval": [
+          2,
+          3
+        ],
+        "modal": 3,
+        "dissent_count": 1
+      },
+      "sovereignty": {
+        "interval": [
+          1,
+          3
+        ],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [
+          -1,
+          1
+        ],
+        "modal": null,
+        "dissent_count": 5
+      },
+      "ecological": {
+        "interval": [
+          -2,
+          0
+        ],
+        "modal": -2,
+        "dissent_count": 2
+      },
+      "overall_spectrum": {
+        "modal_label": "droite",
+        "distribution": {
+          "droite": 5
+        },
+        "dissent_count": 0
+      }
+    }
+  },
+  "coverage_warning": false,
+  "flagged_for_review": [
+    {
+      "claim": "The raw file `deepseek-manual.json` indicates in its `model` field the values `provider: \"anthropic\"` and `version: \"claude-opus-4-7\"`, which contradict the file name and the content (signed DeepSeek-V3 in `analyst_meta`). The aggregation used the identifier derived from the file name (`deepseek-v3`) in all `supported_by`/`dissenters`/`per_model` fields, but the metadata inconsistency must be corrected at source before publication.",
+      "claimed_by": [
+        "deepseek-v3"
+      ],
+      "issue": "metadata_mismatch",
+      "suggested_action": "Verify with the operator (benoit) the actual provenance of the file; correct `deepseek-manual.json::model.provider/version` so they reflect the effective author (probably `provider=\"deepseek\"`, `version=\"deepseek-v3\"`), then re-run raw ingestion.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-23T16:54:39.965Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "The `positioning.institutional` axis has no single mode: 2× +1 (gemini, grok), 2× -1 (deepseek, qwen), 1× 0 (claude). `modal_score` is set to `null` in accordance with the schema.",
+      "claimed_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "issue": "tied_modal",
+      "suggested_action": "No action required (legitimate case of non-unique plurality). Mention explicitly in the editorial prose that the models diverge on the institutional reading (strategic centralization vs. effective decentralization).",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-23T16:54:40.933Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "The horizon cell `education.h_2031_2037` has no single mode (3× score 1, 2× score 2). `modal_score` is set to `null`.",
+      "claimed_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "issue": "tied_modal",
+      "suggested_action": "No action; the site rendering must display the interval [1, 2] with an explanatory note.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-23T16:54:42.076Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "The horizon cell `housing.h_2027_2030` has no single mode (2× -1, 2× +1, 1× 0). `modal_score` is set to `null`.",
+      "claimed_by": [
+        "claude-opus-4-7",
+        "deepseek-v3",
+        "gemini-3-pro",
+        "grok-4",
+        "qwen3.6"
+      ],
+      "issue": "tied_modal",
+      "suggested_action": "No action; display the interval [-1, 1] with an ambivalence note (SRU repeal / capitalization unlock).",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-23T16:54:42.710Z",
+      "reviewer_id": "benoit"
+    },
+    {
+      "claim": "The model identifier 'qwen3.6' contains a dot; the other identifiers use hyphens (`claude-opus-4-7`, `deepseek-v3`, `gemini-3-pro`, `grok-4`).",
+      "claimed_by": [
+        "qwen3.6"
+      ],
+      "issue": "id_format_inconsistency",
+      "suggested_action": "Decide on a convention (probably `qwen3-6` or `qwen-3-6`) and harmonize in `qwen-manual.json` and then in the `supported_by`/`dissenters`/`per_model` fields. Non-blocking for ingestion (the schema accepts `z.string().min(1)`).",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-23T16:54:43.402Z",
+      "reviewer_id": "benoit"
+    }
+  ]
+}

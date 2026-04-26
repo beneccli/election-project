@@ -150,7 +150,7 @@ export default function StakesAreaChart({
   const years = labelYears ?? defaultYearLabels(series.points);
   const ariaLabel = t(series.title, lang);
   const sourceLabel = t(series.source.label, lang);
-  const projectionLabel = lang === "fr" ? "projection →" : "projection →";
+  const projectionLabel = "projection →";
 
   return (
     <div className="flex flex-col gap-2">
@@ -254,7 +254,7 @@ export default function StakesAreaChart({
         rel="noopener noreferrer"
         className="self-start text-sm text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] underline underline-offset-2 decoration-dotted"
       >
-        {lang === "fr" ? "Source" : "Source"}: {sourceLabel}
+        Source: {sourceLabel}
       </a>
     </div>
   );

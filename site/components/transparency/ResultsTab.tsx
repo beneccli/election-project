@@ -21,13 +21,16 @@ import type {
 } from "@/lib/transparency-hash";
 import { AXIS_KEYS } from "@/lib/derived/keys";
 import { AXES } from "@/lib/anchors";
-import { t } from "@/lib/i18n";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { useLang } from "@/lib/lang-context";
 
-const VIEW_LABELS: Record<ResultsView, string> = {
-  notes: "Notes d’agrégation",
-  "per-model": "Sorties par modèle",
-  agreement: "Accord / désaccord",
-};
+function useViewLabels(lang: Lang): Record<ResultsView, string> {
+  return {
+    notes: t(UI_STRINGS.RESULTS_AGGREGATION_NOTES, lang),
+    "per-model": t(UI_STRINGS.RESULTS_PER_MODEL, lang),
+    agreement: t(UI_STRINGS.RESULTS_AGREEMENT, lang),
+  };
+}
 
 const VIEWS: readonly ResultsView[] = ["notes", "per-model", "agreement"];
 
@@ -44,6 +47,8 @@ export function ResultsTab({
   state: TransparencyHashState | null;
   onStateChange: (next: TransparencyHashState | null) => void;
 }) {
+  const { lang } = useLang();
+  const VIEW_LABELS = useViewLabels(lang);
   const view: ResultsView =
     state && state.tab === "results" ? (state.view ?? "notes") : "notes";
 
@@ -55,7 +60,7 @@ export function ResultsTab({
     <div className="flex flex-col gap-4">
       <div
         role="tablist"
-        aria-label="Vues de résultats"
+        aria-label={t(UI_STRINGS.A11Y_TRANSPARENCY_RESULTS_TABS, lang)}
         className="flex flex-wrap gap-1 border-b border-rule"
       >
         {VIEWS.map((v) => {
@@ -80,12 +85,13 @@ export function ResultsTab({
         })}
       </div>
       {view === "notes" ? (
-        <NotesView id={id} versionDate={versionMeta.version_date} />
+        <NotesView id={id} versionDate={versionMeta.version_date} lang={lang} />
       ) : null}
       {view === "per-model" ? (
         <PerModelView
           id={id}
           versionMeta={versionMeta}
+          lang={lang}
           focusedModel={
             state && state.tab === "results" ? state.model : undefined
           }
@@ -99,7 +105,7 @@ export function ResultsTab({
         />
       ) : null}
       {view === "agreement" ? (
-        <AgreementMapView aggregated={aggregated} />
+        <AgreementMapView aggregated={aggregated} lang={lang} />
       ) : null}
     </div>
   );
@@ -112,9 +118,11 @@ export function ResultsTab({
 export function NotesView({
   id,
   versionDate,
+  lang = "fr",
 }: {
   id: string;
   versionDate: string;
+  lang?: Lang;
 }) {
   const url = `/candidates/${id}/${versionDate}/aggregation-notes.md`;
   const [state, setState] = React.useState<
@@ -145,37 +153,39 @@ export function NotesView({
     };
   }, [url]);
 
-  return <NotesViewBody state={state} url={url} />;
+  return <NotesViewBody state={state} url={url} lang={lang} />;
 }
 
 export function NotesViewBody({
   state,
   url,
+  lang = "fr",
 }: {
   state:
     | { phase: "loading" }
     | { phase: "loaded"; body: string }
     | { phase: "error"; message: string };
   url: string;
+  lang?: Lang;
 }) {
   if (state.phase === "loading") {
     return (
       <p className="rounded-md border border-rule bg-bg-subtle px-4 py-4 text-xs text-text-tertiary">
-        Chargement des notes d’agrégation…
+        {t(UI_STRINGS.LOADING_AGGREGATION_NOTES, lang)}
       </p>
     );
   }
   if (state.phase === "error") {
     return (
       <p className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-xs text-amber-950">
-        Échec du chargement ({state.message}).{" "}
+        {t(UI_STRINGS.LOADING_FAILED, lang)} ({state.message}).{" "}
         <a
           href={url}
           target="_blank"
           rel="noreferrer noopener"
           className="underline decoration-dotted underline-offset-2"
         >
-          Ouvrir le fichier brut
+          {t(UI_STRINGS.RESULTS_OPEN_RAW_FILE, lang)}
         </a>
         .
       </p>
@@ -197,18 +207,20 @@ export function PerModelView({
   versionMeta,
   focusedModel,
   onFocusModel,
+  lang = "fr",
 }: {
   id: string;
   versionMeta: VersionMetadata;
   focusedModel: string | undefined;
   onFocusModel: (modelId: string) => void;
+  lang?: Lang;
 }) {
   const models = versionMeta.analysis?.models ?? {};
   const entries = Object.entries(models);
   if (entries.length === 0) {
     return (
       <p className="rounded-md border border-rule bg-bg-subtle px-4 py-4 text-xs text-text-secondary">
-        Aucun modèle enregistré.
+        {t(UI_STRINGS.RESULTS_NO_MODELS, lang)}
       </p>
     );
   }
@@ -223,6 +235,7 @@ export function PerModelView({
             entry={entry}
             expanded={modelId === focusedModel}
             onToggle={() => onFocusModel(modelId)}
+            lang={lang}
           />
         </li>
       ))}
@@ -237,6 +250,7 @@ function ModelCard({
   entry,
   expanded,
   onToggle,
+  lang,
 }: {
   id: string;
   versionDate: string;
@@ -244,6 +258,7 @@ function ModelCard({
   entry: NonNullable<VersionMetadata["analysis"]>["models"][string];
   expanded: boolean;
   onToggle: () => void;
+  lang: Lang;
 }) {
   const failed = entry.status === "failed";
   const rawUrl = `/candidates/${id}/${versionDate}/raw-outputs/${encodeURIComponent(modelId)}.json`;
@@ -264,27 +279,27 @@ function ModelCard({
             <span>{entry.provider}</span>
             <span className="font-mono">{entry.exact_version}</span>
             <StatusBadge status={entry.status} />
-            <span>mode : {entry.execution_mode}</span>
-            <span className="font-mono">run : {entry.run_at}</span>
+            <span>{format(t(UI_STRINGS.RESULTS_MODE_LABEL, lang), { mode: entry.execution_mode })}</span>
+            <span className="font-mono">{format(t(UI_STRINGS.RESULTS_RUN_LABEL, lang), { time: entry.run_at })}</span>
             {entry.attested_by ? (
-              <span>attesté par {entry.attested_by}</span>
+              <span>{format(t(UI_STRINGS.RESULTS_ATTESTED_BY, lang), { by: entry.attested_by })}</span>
             ) : null}
             {entry.attested_model_version ? (
               <span className="font-mono">
-                version attestée : {entry.attested_model_version}
+                {format(t(UI_STRINGS.RESULTS_ATTESTED_VERSION, lang), { version: entry.attested_model_version })}
               </span>
             ) : null}
           </div>
           {entry.provider_metadata_available !== false ? (
             <div className="mt-1 flex flex-wrap gap-x-3 text-[11px] text-text-tertiary">
               {typeof entry.tokens_in === "number" ? (
-                <span>tokens in : {entry.tokens_in}</span>
+                <span>{format(t(UI_STRINGS.RESULTS_TOKENS_IN, lang), { n: entry.tokens_in })}</span>
               ) : null}
               {typeof entry.tokens_out === "number" ? (
-                <span>tokens out : {entry.tokens_out}</span>
+                <span>{format(t(UI_STRINGS.RESULTS_TOKENS_OUT, lang), { n: entry.tokens_out })}</span>
               ) : null}
               {typeof entry.cost_estimate_usd === "number" ? (
-                <span>coût : ${entry.cost_estimate_usd.toFixed(4)}</span>
+                <span>{format(t(UI_STRINGS.RESULTS_COST_ESTIMATE, lang), { value: entry.cost_estimate_usd.toFixed(4) })}</span>
               ) : null}
             </div>
           ) : null}
@@ -295,7 +310,7 @@ function ModelCard({
               href={failedUrl}
               className="rounded-sm border border-rule px-2 py-1 hover:bg-bg-subtle"
             >
-              Voir le rapport d’échec
+              {t(UI_STRINGS.RESULTS_SEE_FAILURE_REPORT, lang)}
             </a>
           ) : (
             <>
@@ -305,14 +320,14 @@ function ModelCard({
                 aria-expanded={expanded}
                 className="rounded-sm border border-rule px-2 py-1 hover:bg-bg-subtle"
               >
-                {expanded ? "Masquer" : "Voir le JSON brut"}
+                {expanded ? t(UI_STRINGS.RESULTS_HIDE_RAW, lang) : t(UI_STRINGS.RESULTS_VIEW_RAW_JSON, lang)}
               </button>
               <a
                 href={rawUrl}
                 download={`${modelId}.json`}
                 className="rounded-sm border border-rule px-2 py-1 hover:bg-bg-subtle"
               >
-                Télécharger
+                {t(UI_STRINGS.RESULTS_DOWNLOAD, lang)}
               </a>
             </>
           )}
@@ -320,14 +335,14 @@ function ModelCard({
       </header>
       {expanded && !failed ? (
         <div className="border-t border-rule px-4 py-3">
-          <RawJsonViewer url={rawUrl} />
+          <RawJsonViewer url={rawUrl} lang={lang} />
         </div>
       ) : null}
     </section>
   );
 }
 
-function RawJsonViewer({ url }: { url: string }) {
+function RawJsonViewer({ url, lang }: { url: string; lang: Lang }) {
   const [state, setState] = React.useState<
     | { phase: "loading" }
     | { phase: "loaded"; body: string }
@@ -366,11 +381,11 @@ function RawJsonViewer({ url }: { url: string }) {
   }, [url]);
 
   if (state.phase === "loading")
-    return <p className="text-xs text-text-tertiary">Chargement…</p>;
+    return <p className="text-xs text-text-tertiary">{t(UI_STRINGS.RESULTS_LOADING_INLINE, lang)}</p>;
   if (state.phase === "error")
     return (
       <p className="text-xs text-text-tertiary">
-        Échec du chargement : {state.message}
+        {format(t(UI_STRINGS.RESULTS_LOADING_FAILED_INLINE, lang), { message: state.message })}
       </p>
     );
   return (
@@ -405,18 +420,20 @@ function StatusBadge({ status }: { status: string }) {
 
 export function AgreementMapView({
   aggregated,
+  lang = "fr",
 }: {
   aggregated: AggregatedOutput;
+  lang?: Lang;
 }) {
   const map = aggregated.agreement_map;
   return (
     <div className="flex flex-col gap-6">
       <section>
         <h3 className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
-          Consensus — {map.high_confidence_claims.length} affirmations
+          {format(t(UI_STRINGS.RESULTS_CONSENSUS_HEADER, lang), { n: map.high_confidence_claims.length })}
         </h3>
         {map.high_confidence_claims.length === 0 ? (
-          <p className="text-xs text-text-tertiary">Aucune affirmation consensuelle.</p>
+          <p className="text-xs text-text-tertiary">{t(UI_STRINGS.RESULTS_NO_CONSENSUS, lang)}</p>
         ) : (
           <ul className="flex flex-col gap-2">
             {map.high_confidence_claims.map((c) => (
@@ -439,10 +456,10 @@ export function AgreementMapView({
 
       <section>
         <h3 className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
-          Désaccords — {map.contested_claims.length} affirmations
+          {format(t(UI_STRINGS.RESULTS_DISSENT_HEADER, lang), { n: map.contested_claims.length })}
         </h3>
         {map.contested_claims.length === 0 ? (
-          <p className="text-xs text-text-tertiary">Aucun désaccord.</p>
+          <p className="text-xs text-text-tertiary">{t(UI_STRINGS.RESULTS_NO_DISSENT, lang)}</p>
         ) : (
           <ul className="flex flex-col gap-3">
             {map.contested_claims.map((c) => (
@@ -471,18 +488,17 @@ export function AgreementMapView({
 
       <section data-positioning-consensus="">
         <h3 className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
-          Positionnement agrégé
+          {t(UI_STRINGS.RESULTS_AGGREGATED_POSITIONING, lang)}
         </h3>
         <p className="mb-3 text-[11px] text-text-tertiary">
-          Valeurs entières ordinales. Aucune moyenne arithmétique n’est
-          calculée — voir la spec §7.
+          {t(UI_STRINGS.RESULTS_AGGREGATED_POSITIONING_NOTE, lang)}
         </p>
         <ul className="flex flex-col gap-2">
           {AXIS_KEYS.map((axisKey) => {
             const row = map.positioning_consensus[axisKey];
             if (!row) return null;
             const axisMeta = AXES.find((a) => a.axis === axisKey);
-            const label = axisMeta ? t(axisMeta.label, "fr") : axisKey;
+            const label = axisMeta ? t(axisMeta.label, lang) : axisKey;
             const [lo, hi] = row.interval;
             return (
               <li
@@ -491,13 +507,13 @@ export function AgreementMapView({
               >
                 <span className="font-medium text-text">{label}</span>
                 <span className="font-mono text-text-tertiary">
-                  intervalle : [{formatInt(lo)}, {formatInt(hi)}]
+                  {format(t(UI_STRINGS.RESULTS_INTERVAL_LABEL, lang), { lo: formatInt(lo), hi: formatInt(hi) })}
                 </span>
                 <span className="font-mono text-text">
-                  modal : {row.modal === null ? "∅" : formatInt(row.modal)}
+                  {format(t(UI_STRINGS.RESULTS_MODAL_LABEL, lang), { value: row.modal === null ? "∅" : formatInt(row.modal) })}
                 </span>
                 <span className="text-text-tertiary">
-                  désaccords : {row.dissent_count}
+                  {format(t(UI_STRINGS.RESULTS_DISSENT_COUNT_INLINE, lang), { n: row.dissent_count })}
                 </span>
               </li>
             );

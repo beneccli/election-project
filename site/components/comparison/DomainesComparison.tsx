@@ -5,6 +5,7 @@ import { dimensionLabel } from "@/lib/dimension-labels";
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import { COMPARISON_COLORS } from "@/lib/comparison-colors";
 import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 import { gradeValue } from "@/lib/grade-value";
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
 import { useComparison } from "./ComparisonBody";
@@ -44,12 +45,12 @@ export function DomainesTable({
   lang,
 }: {
   selected: ComparisonProjection[];
-  lang: "fr" | "en";
+  lang: Lang;
 }) {
   return (
     <section id="domaines" className="mb-16">
       <header className="mb-5">
-        <SectionHead label={lang === "en" ? "Domains" : "Domaines"} />
+        <SectionHead label={t(UI_STRINGS.COMPARISON_DOMAINES_TITLE, lang)} />
         {/* <p className="mt-1 max-w-prose text-sm text-text-secondary">
           {lang === "en"
             ? "Consensus grade per dimension. The ↑ marker signals the unique top of each row; Écart is the ordinal distance max − min."
@@ -64,7 +65,7 @@ export function DomainesTable({
                 scope="col"
                 className="w-48 border-b border-rule px-3 pb-2 text-left text-xs font-medium uppercase tracking-wide text-text-secondary"
               >
-                {lang === "en" ? "Dimension" : "Dimension"}
+                {t(UI_STRINGS.COMPARISON_DOMAINES_DIMENSION_LABEL, lang)}
               </th>
               {selected.map((c, slot) => {
                 const color = COMPARISON_COLORS[slot % COMPARISON_COLORS.length];
@@ -90,7 +91,7 @@ export function DomainesTable({
                 scope="col"
                 className="border-b border-rule px-3 pb-2 text-center text-xs font-medium uppercase tracking-wide text-text-secondary"
               >
-                {lang === "en" ? "Spread" : "Écart"}
+                {t(UI_STRINGS.COMPARISON_DOMAINES_SPREAD, lang)}
               </th>
             </tr>
           </thead>
@@ -132,16 +133,8 @@ export function DomainesTable({
                           <GradeBadge grade={letter} size="xs" />
                           {isTop ? (
                             <span
-                              aria-label={
-                                lang === "en"
-                                  ? "Top grade in this selection"
-                                  : "Meilleure note de la sélection"
-                              }
-                              title={
-                                lang === "en"
-                                  ? "Top grade in this selection"
-                                  : "Meilleure note de la sélection"
-                              }
+                              aria-label={t(UI_STRINGS.COMPARISON_DOMAINES_BEST_GRADE, lang)}
+                              title={t(UI_STRINGS.COMPARISON_DOMAINES_BEST_GRADE, lang)}
                               className="text-text-secondary"
                               data-top-marker={c.id}
                             >

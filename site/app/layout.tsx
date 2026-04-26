@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { LangProvider } from "../lib/lang-context";
 import { THEME_INIT_SCRIPT } from "../lib/theme-init";
+import { t, UI_STRINGS } from "../lib/i18n";
 import "../styles/globals.css";
 
 const display = Cormorant_Garamond({
@@ -21,9 +22,8 @@ const text = DM_Sans({
 });
 
 export const metadata = {
-  title: "Élection 2027 — Analyse IA des programmes présidentiels",
-  description:
-    "Analyse transparente multi-IA des programmes des candidats à la présidentielle 2027.",
+  title: t(UI_STRINGS.META_ROOT_TITLE, "fr"),
+  description: t(UI_STRINGS.META_ROOT_DESCRIPTION, "fr"),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="bg-bg text-text font-sans">
-        <LangProvider>{children}</LangProvider>
+        <LangProvider initial="fr">{children}</LangProvider>
       </body>
     </html>
   );

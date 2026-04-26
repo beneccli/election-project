@@ -78,7 +78,7 @@ Format: `M_<FeatureCluster>`
 | M_PublicLaunch | 📋 Planned | First public version |
 | M_CandidateOnboarding | 📋 Planned | Process to add a newly declared candidate |
 | M_DebateIntegration | 📋 Planned | React to debate moments with supplementary analysis |
-| M_I18n | 🤔 Under consideration | English version? |
+| M_I18n | 📋 Planned | English locale: locale-prefixed routes, translatable `aggregated.<lang>.json`, parity validator, translator prompt + manual workflow ([`specs/website/i18n.md`](specs/website/i18n.md)) |
 
 ---
 
@@ -586,6 +586,54 @@ Format: `M_<FeatureCluster>`
 **Goal:** WCAG 2.1 AA, mobile-first checks, performance budget (LCP <1.5s on mobile), works on slow connections.
 
 **Depends on:** M_WebsiteCore + M_VisualComponents
+
+---
+
+### M_I18n
+
+**Goal:** Ship the public site in English alongside French. The data pipeline stays monolingual French; translation is a separate, human-gated post-processing step on the already-aggregated JSON.
+
+**Depends on:** M_WebsiteCore + M_Comparison + M_Landing (all three page types must be locale-aware)
+
+**Status:** 📋 Planned. Spike `0119` archived (2026-04-25); implementation tasks `0120`–`0129` in `tasks/backlog/M_I18n/`.
+
+**Spike produces:**
+- `docs/specs/website/i18n.md` (Stable on promotion via task `0120`)
+- Filename convention: `aggregated.json` is canonical FR; `aggregated.<lang>.json` are sibling translation files (additive, no rename).
+- Translatable-paths allowlist + parity validator `scripts/validate-translation.ts` (task `0121`).
+- Additive `translations.<lang>` block on `VersionMetadataSchema` (prompt SHA, attested model, execution mode, human-review flag).
+- Translator prompt `prompts/translate-aggregated.md` + `prepare-manual-translation` / `ingest-translation` scripts (task `0122`).
+- Locale-aware `loadCandidate(id, lang)` with FR fallback and `availableLocales` per candidate (task `0123`).
+- `[lang]` route segment under `app/[lang]/` mirroring FR for landing, candidate, comparison; FR canonical at bare path; EN at `/en/...` (task `0124`).
+- Locale-aware comparison + landing wiring with explicit "FR" tag for FR-only candidates in EN locale (task `0125`).
+- `LanguageToggle` rewritten as URL navigator (URL is the source of truth, `localStorage` removed); `TranslationFallbackBanner` (task `0126`).
+- Real EN translations for every `UI_STRINGS` entry, no `[EN] …` placeholders (task `0127`).
+- `test-omega` translated EN fixture + dual-locale build smoke + `test-delta` as the missing-translation case (task `0128`).
+- Quick-start docs addendum + Transparency drawer locale provenance subsection (task `0129`).
+
+**Non-negotiables:**
+- **Pipeline stays FR.** Analyst and aggregator prompts unchanged. Translation operates only on `aggregated.json`. No new analysis version is created by translation.
+- **Structural parity.** Translation files re-validate against the same `AggregatedOutputSchema`; numbers, scores, IDs, array lengths, agreement maps, and `source_refs` are byte-identical to FR. Only allowlisted prose strings differ.
+- **Symmetric scrutiny across locales.** Every FR candidate appears in EN. Missing translations fall back to FR with an explicit banner — never dropped from the locale.
+- **Party + candidate names not translated.** Enforced by exclusion of `metadata.json` from the translatable surface.
+- **Sources never translated.** `sources.md`, `sources-raw/`, and `raw-outputs/*.json` stay FR (transparency contract).
+- **Translation prompt versioned + hashed.** SHA256 + attested model recorded in metadata for each translation, just like analyst and aggregator prompts.
+- **Human-review gate.** `aggregated.<lang>.draft.json` → `aggregated.<lang>.json` is a manual `mv`; ingest sets `human_review_completed: false` until the human flips it.
+
+**Key design decisions (spike `0119`):**
+- Bare `aggregated.json` = canonical FR; locale suffix marks derivatives. Backward compatible; no rename of existing fixtures.
+- Routing: `[lang]` segment, FR canonical at bare path, EN at `/en/...`. Built-in Next.js i18n routing rejected (incompatible with `output: "export"`).
+- Loader runs parity check at build time as a warning; hard enforcement happens at ingest. Editorial gate stays human.
+- `LangProvider` becomes URL-derived, `localStorage` removed — sharable URLs are the canonical "current locale".
+
+**Scope boundary (what this milestone does NOT cover):**
+- Translating `sources.md` or `raw-outputs/*.json` — primary-source fidelity is the transparency contract.
+- Translating `aggregation-notes.md` (Transparency drawer surfaces a "FR only" tag in EN; deferred follow-up).
+- Translating `metadata.json` (party + display names verbatim across locales).
+- Automated MT in CI — every translation is human-reviewed.
+- More than two locales (schema and routing extensible; v1 ships only `en`).
+- RTL support, locale-aware number formatting, separate EN methodology page (M_Methodology owns).
+- Re-running analyses to "improve" EN-readable phrasing in FR — strictly out of scope.
 
 ---
 

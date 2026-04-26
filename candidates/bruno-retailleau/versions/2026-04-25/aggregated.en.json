@@ -1,0 +1,4209 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "source_models": [
+    {
+      "provider": "openai",
+      "version": "gpt-5.5-thinking"
+    },
+    {
+      "provider": "anthropic",
+      "version": "claude-opus-4-7"
+    },
+    {
+      "provider": "deepseek",
+      "version": "deepseek-manual"
+    },
+    {
+      "provider": "google",
+      "version": "gemini-3-pro"
+    },
+    {
+      "provider": "qwen",
+      "version": "qwen3.6"
+    }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": {
+      "provider": "copilot",
+      "version": "claude-opus-4-7"
+    },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-26T12:00:00Z"
+  },
+  "summary": "A program structured around three pillars (Travail gagnant, Produire plus, Réarmer l'agriculture) proposing ~€30 billion of savings on unemployment insurance and welfare redistributed as ~€40 billion in tax cuts (labor cost ~€25 billion, production taxes ~€15 billion), regulatory deregulation (removal of 50 blocking rules, a one-for-one value rule, an independent veto authority) and a Labor Code refocused on 50 unassailable principles. The social pillar caps the cumulative non-contributory benefits at 70% of net SMIC per adult (CSU), merges RSA/prime d'activité/ASS into the RIA, and introduces a zero-contribution threshold beyond 1,623 hours per year. The energy-agriculture pillar targets 400 TWh/year of nuclear with long-term contracts of 30 TWh/year, ends public support for new solar and wind capacity, removes the ZAN and the precautionary principle through a referendum-based constitutional revision, reauthorizes certain neonicotinoids and enshrines agriculture as a fundamental interest. The sources cover neither health, residential housing, general education, defense, immigration, nor any quantified trajectory for public debt or emissions.",
+  "summary_agreement": 0.8,
+  "positioning": {
+    "economic": {
+      "consensus_interval": [
+        3,
+        4
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Four out of five models place the economic axis at +3 (LR/Fillon 2017), gemini-3-pro at +4. The concentration centers on €40 billion in tax cuts (labor cost ~€25 billion, production taxes ~€15 billion), the zero-contribution threshold beyond 1,623 hours, the cap on benefits at 70% of net SMIC, and the supplementary refoundation of the Labor Code.",
+      "evidence": [
+        {
+          "quote": "Plus de 25 milliards d'euros d'allègements porteront sur le coût du travail, en combinant la mise en place du seuil « zéro cotisation »",
+          "source_ref": "sources.md#proposition-5-prelevements"
+        },
+        {
+          "quote": "Dès l'entame du quinquennat, nous réduirons de 40 milliards d'euros notre handicap fiscal évalué à 67 milliards d'euros, soit une baisse de 60 %.",
+          "source_ref": "sources.md#produire-plus"
+        },
+        {
+          "quote": "le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte",
+          "source_ref": "sources.md#proposition-4-csu"
+        }
+      ],
+      "confidence": 0.82,
+      "dissent": [
+        {
+          "model": "gemini-3-pro",
+          "position": 4,
+          "reasoning": "Proposes massive reduction in production taxes, strict limits on welfare, and fundamental deregulation of labor laws in favor of enterprise-level agreements."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 3,
+          "reasoning": "The proposals lower the cost of labor, reduce production taxes, flexibilize labor law, and tighten incentives to return to work. The score is not +4 because the State retains a strong role in electricity, industrial strategy, and sectoral organization."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 3,
+          "reasoning": "The program proposes €40 billion in tax cuts concentrated on businesses (removal of CVAE, C3S, industrial CFE), strict capping of social benefits, and a supplementary refoundation of the Labor Code. The pro-market orientation is explicit and quantified."
+        },
+        {
+          "model": "deepseek-manual",
+          "score": 3,
+          "reasoning": "The program proposes nearly €15 billion in production-tax cuts, a massive exemption from social contributions on overtime hours, strict capping of welfare benefits, and a deep deregulation of labor law and economic norms, which corresponds to a strongly market-friendly orientation."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 4,
+          "reasoning": "Proposes massive reduction in production taxes, strict limits on welfare, and fundamental deregulation of labor laws in favor of enterprise-level agreements."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 3,
+          "reasoning": "Structural reduction of labor costs, production tax cuts, and labor code flexibility indicate a strong market-oriented, supply-side framework."
+        }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [
+        1,
+        3
+      ],
+      "modal_score": null,
+      "anchor_narrative": "No single mode: two models at +3, two at +2, one at +1. The dispersion reflects the absence of direct material on immigration, secularism, family, or societal issues in the provided sources; the positions rest on benefit conditionality and the valorization of work. See contested_claims.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s'installer durablement dans l'assistance.",
+          "source_ref": "sources.md#travail-gagnant"
+        },
+        {
+          "quote": "L'allocation chômage doit être un filet de sécurité, pas un choix de vie.",
+          "source_ref": "sources.md#travail-gagnant"
+        }
+      ],
+      "confidence": 0.45,
+      "dissent": [
+        {
+          "model": "gpt-5.5-thinking",
+          "position": 3,
+          "reasoning": "The provided content focuses mainly on welfare assistance, unemployment, and the value of work. It supports a conservative score, but confidence remains limited because the corpus does not address the other cultural topics."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "position": 1,
+          "reasoning": "The program does not explicitly address immigration, secularism, family issues, or identity, which are absent from the provided sources. The conservative cues come from heritage-oriented framing (national narrative, peasantry, transmission), insufficient for a higher score."
+        },
+        {
+          "model": "deepseek-manual",
+          "position": 2,
+          "reasoning": "The program emphasizes individual responsibility, the rigor of unemployment-eligibility conditions, and the primacy of work over welfare, without addressing morals or secularism, but the social orientation is clearly conservative."
+        },
+        {
+          "model": "gemini-3-pro",
+          "position": 3,
+          "reasoning": "Rhetoric and policies actively target 'assistanat', severely capping benefits and introducing strict conditions for unemployment and welfare."
+        },
+        {
+          "model": "qwen3.6",
+          "position": 2,
+          "reasoning": "Welfare consolidation, strict unemployment eligibility, and anti-assistanat framing reflect a conservative, responsibility-focused social model."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 3,
+          "reasoning": "The provided content focuses mainly on welfare assistance, unemployment, and the value of work. It supports a conservative score, but confidence remains limited because the corpus does not address the other cultural topics."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 1,
+          "reasoning": "The program does not explicitly address immigration, secularism, family issues, or identity, which are absent from the provided sources. The conservative cues come from heritage-oriented framing (national narrative, peasantry, transmission), insufficient for a higher score."
+        },
+        {
+          "model": "deepseek-manual",
+          "score": 2,
+          "reasoning": "The program emphasizes individual responsibility, the rigor of unemployment-eligibility conditions, and the primacy of work over welfare, without addressing morals or secularism, but the social orientation is clearly conservative."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 3,
+          "reasoning": "Rhetoric and policies actively target 'assistanat', severely capping benefits and introducing strict conditions for unemployment and welfare."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 2,
+          "reasoning": "Welfare consolidation, strict unemployment eligibility, and anti-assistanat framing reflect a conservative, responsibility-focused social model."
+        }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [
+        2,
+        3
+      ],
+      "modal_score": 3,
+      "anchor_narrative": "Three models at +3, two at +2. Productive, electrical, and food sovereignty is structuring (trade reciprocity, refusal of Ukrainian enlargement, long-term nuclear contracts, import controls at 50% of staffing) without an EU break; comparable to LR 2022 in the high reading, more sovereigntist than Macron 2017 in the low reading.",
+      "evidence": [
+        {
+          "quote": "nous nous opposerons à l'intégration de l'Ukraine au marché agricole européen",
+          "source_ref": "sources.md#proposition-10-reciprocite"
+        },
+        {
+          "quote": "imposition systématique de clauses de réciprocité dans tous les accords commerciaux",
+          "source_ref": "sources.md#proposition-7-concurrence"
+        },
+        {
+          "quote": "Enfin, nous refuserons résolument toute évolution européenne conduisant à diluer l'avantage comparatif de la France en matière électrique.",
+          "source_ref": "sources.md#produire-plus"
+        }
+      ],
+      "confidence": 0.75,
+      "dissent": [
+        {
+          "model": "claude-opus-4-7",
+          "position": 2,
+          "reasoning": "Strong economic sovereignty (reciprocity, anti-over-transposition, refusal of Ukrainian enlargement), but maintained within the European framework and defense of a European CAP. No challenge to the treaties."
+        },
+        {
+          "model": "deepseek-manual",
+          "position": 2,
+          "reasoning": "Strong emphasis on productive and agricultural sovereignty, refusal of European over-transposition, defense of nuclear, and trade reciprocity, but without challenging EU membership."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 3,
+          "reasoning": "Sovereignty is structuring: national nuclear energy, import controls, reciprocity clauses, reindustrialization, productive savings, and agriculture. The framework remains nonetheless compatible with a strategy of European influence rather than exit."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 2,
+          "reasoning": "Strong economic sovereignty (reciprocity, anti-over-transposition, refusal of Ukrainian enlargement), but maintained within the European framework and defense of a European CAP. No challenge to the treaties."
+        },
+        {
+          "model": "deepseek-manual",
+          "score": 2,
+          "reasoning": "Strong emphasis on productive and agricultural sovereignty, refusal of European over-transposition, defense of nuclear, and trade reciprocity, but without challenging EU membership."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 3,
+          "reasoning": "Rejects EU agricultural enlargement regarding Ukraine, insists on aggressive border checks, and constitutionally forbids EU over-transposition."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 3,
+          "reasoning": "Strong emphasis on trade reciprocity, import controls, and opposition to Ukrainian agricultural integration signals economic nationalism within EU frameworks."
+        }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [
+        -1,
+        2
+      ],
+      "modal_score": 1,
+      "anchor_narrative": "Three models at +1, gemini at +2, deepseek at -1. Concentration of political arbitration on norms (independent veto authority, one-for-one rule, political primacy over agencies), targeted constitutional revisions (agriculture, precautionary principle), restriction of the environmental judge's role, without a general electoral or parliamentary reform.",
+      "evidence": [
+        {
+          "quote": "Réaffirmer la primauté du pouvoir politique sur les agences administratives",
+          "source_ref": "sources.md#proposition-2-agences"
+        },
+        {
+          "quote": "nous assumons de le supprimer tel qu'il figure aujourd'hui dans la Charte de l'environnement. Cette décision impliquera une révision constitutionnelle soumise au référendum",
+          "source_ref": "sources.md#proposition-1-cadre-juridique"
+        },
+        {
+          "quote": "Le juge exercera un contrôle limité à l'erreur manifeste d'appréciation",
+          "source_ref": "sources.md#proposition-7-agribashing"
+        }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        {
+          "model": "deepseek-manual",
+          "position": -1,
+          "reasoning": "The program proposes a constitutional revision for agriculture, removal of the precautionary principle by referendum, and a strengthening of the executive vis-à-vis the agencies, but does not develop a comprehensive institutional reform nor an attack on democratic checks and balances."
+        },
+        {
+          "model": "gemini-3-pro",
+          "position": 2,
+          "reasoning": "Proposes modifying the Constitution to bypass environmental review, defunding critical NGOs, and placing scientific agencies (ANSES) under direct political control."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": 1,
+          "reasoning": "The program transfers part of the regulatory power toward veto, evaluation, and political-primacy mechanisms over agencies. It does not describe a comprehensive reform of democratic checks and balances."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": 1,
+          "reasoning": "The program proposes a constitutional revision to enshrine agriculture as a fundamental interest, remove the precautionary principle, restrict the accreditation of environmental associations, and limit the role of the judge. These measures concentrate political arbitration at the expense of judicial and associative oversight, without going as far as characterized illiberal proposals."
+        },
+        {
+          "model": "deepseek-manual",
+          "score": -1,
+          "reasoning": "The program proposes a constitutional revision for agriculture, removal of the precautionary principle by referendum, and a strengthening of the executive vis-à-vis the agencies, but does not develop a comprehensive institutional reform nor an attack on democratic checks and balances."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": 2,
+          "reasoning": "Proposes modifying the Constitution to bypass environmental review, defunding critical NGOs, and placing scientific agencies (ANSES) under direct political control."
+        },
+        {
+          "model": "qwen3.6",
+          "score": 1,
+          "reasoning": "Shifts regulatory power to collective bargaining and political executive, reduces agency autonomy, and proposes constitutional changes for agricultural priority."
+        }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [
+        -4,
+        -2
+      ],
+      "modal_score": -2,
+      "anchor_narrative": "Three models at -2, qwen at -3, gemini at -4. Avowed productivism: halt of support for new solar and wind capacity, removal of ZAN and the precautionary principle, reauthorization of acetamiprid, abandonment of the Ecophyto -50% target. Extended nuclear (target 400 TWh/year, 80 years) and the broadened CBAM limit the most negative score in some models.",
+      "evidence": [
+        {
+          "quote": "Nous mettrons fin aux soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#proposition-6-electricite"
+        },
+        {
+          "quote": "Le zéro artificialisation nette (ZAN) [...] sera supprimé",
+          "source_ref": "sources.md#proposition-3-aligner-europe"
+        },
+        {
+          "quote": "Nous autoriserons de nouveau l'usage de certains néonicotinoïdes, dont l'acétamipride",
+          "source_ref": "sources.md#proposition-3-aligner-europe"
+        }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        {
+          "model": "gemini-3-pro",
+          "position": -4,
+          "reasoning": "Explicitly halts renewable energy deployment, suppresses soil artificialization limits (ZAN) for agriculture, reauthorizes banned pesticides, and removes the precautionary principle."
+        },
+        {
+          "model": "qwen3.6",
+          "position": -3,
+          "reasoning": "Suppression of precautionary principle, halt to renewable subsidies, and deregulation of environmental assessments place the program firmly on the productivist pole."
+        }
+      ],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "score": -2,
+          "reasoning": "The measures relax several environmental constraints, end public support for new solar and wind capacity, and prioritize production, agricultural water, and industry. Nuclear and the carbon border adjustment limit the negative score."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "score": -2,
+          "reasoning": "Productivism is explicit: priority to agricultural and industrial production, rollback of environmental constraints (ZAN, precautionary principle, BCAE, plant protection products), halt of support for renewables. Nuclear and the carbon border adjustment mechanism prevent a more negative score."
+        },
+        {
+          "model": "deepseek-manual",
+          "score": -2,
+          "reasoning": "The program removes major environmental constraints (ZAN, precautionary principle, Ecophyto, OFB, AGEC norms), ends public support for solar/wind renewables, and explicitly prioritizes production over environmental protection."
+        },
+        {
+          "model": "gemini-3-pro",
+          "score": -4,
+          "reasoning": "Explicitly halts renewable energy deployment, suppresses soil artificialization limits (ZAN) for agriculture, reauthorizes banned pesticides, and removes the precautionary principle."
+        },
+        {
+          "model": "qwen3.6",
+          "score": -3,
+          "reasoning": "Suppression of precautionary principle, halt to renewable subsidies, and deregulation of environmental assessments place the program firmly on the productivist pole."
+        }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": {
+        "droite": 5
+      },
+      "anchor_narrative": "The five models converge on droite. A liberal-conservative combination: tax reductions, labor-market flexibilization, benefit conditionality, productive sovereignty, and ecology subordinated to production. The absence of institutional extremism and continued participation in the European framework rule out extreme_droite for all models.",
+      "confidence": 0.66,
+      "dissent": [],
+      "per_model": [
+        {
+          "model": "gpt-5.5-thinking",
+          "label": "droite",
+          "reasoning": "The placement results from a liberal-conservative combination: tax reductions, labor flexibilization, social conditionality, productive sovereignty, and ecology subordinated to production."
+        },
+        {
+          "model": "claude-opus-4-7",
+          "label": "droite",
+          "reasoning": "A markedly pro-market economy (+3), avowed productivism (-2 ecological), and moderate sovereigntism (+2) converge on the LR 2022 / Fillon 2017 anchor. The absence of institutional extremism and continued participation in the European framework rule out extreme_droite."
+        },
+        {
+          "model": "deepseek-manual",
+          "label": "droite",
+          "reasoning": "A liberal economic program (score +3), socially conservative (+2), and moderately sovereigntist (+2) places it clearly on the right of the French political spectrum, without reaching the far right."
+        },
+        {
+          "model": "gemini-3-pro",
+          "label": "droite",
+          "reasoning": "Massive supply-side tax cuts, strict welfare caps, deregulation of labor, and a highly productivist/anti-regulatory stance on the environment place the program firmly on the right wing."
+        },
+        {
+          "model": "qwen3.6",
+          "label": "droite",
+          "reasoning": "Strong market orientation, welfare conditionality, and economic sovereignty place the program firmly on the right; ecological productivism reinforces this placement."
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "€40bn in targeted tax cuts (firms, working hours) financed by €30bn in savings (welfare, unemployment); funding loop unproven.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Highly structured economic program on labor, firms, and production, but without a consolidated deficit trajectory."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "€30bn redistributed to labor and €40bn in tax cuts, financed by savings on welfare and unemployment; debt trajectory not quantified."
+          },
+          {
+            "model": "deepseek-manual",
+            "text": "Restitution of €30bn to employees/firms via savings on unemployment and social benefits, without a complete public-finances trajectory."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "€40bn cut in business tax burdens and deregulation of working time."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "€40bn cut in production and labor tax burdens, financed by €30bn in savings on unemployment insurance and benefits."
+          }
+        ]
+      },
+      "summary": "The program combines a zero-contribution threshold beyond 1,623 hours, the removal of CVAE, C3S, and industrial CFE (~€15bn), an overhaul of benefits via the RIA and the Compte social unique (cap at 70% of SMIC), and an unemployment-insurance reform (€12.5–15.7bn in savings). Together these aim at €40bn in tax cuts financed by €30bn in savings, leaving an unexplained funding gap of about €10bn. No multi-year deficit or public-debt trajectory is provided; the funding loop assumes dynamic effects (overtime, return to work, mechanical rise in corporate tax) that are not modeled.",
+      "problems_addressed": [
+        {
+          "problem": "Cost of labor and firms' fiscal handicap",
+          "approach": "Zero-contribution threshold beyond 1,623h, reduction of non-contributory employer payroll taxes, removal of CVAE, C3S, industrial CFE and the forfait social, for ~€40bn (€25bn labor cost + €15bn production taxes).",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#proposition-5-prelevements",
+            "sources.md#produire-plus",
+            "sources.md#travail-gagnant"
+          ],
+          "reasoning": "Quantified measures articulated against a quantified diagnosis of a €67bn fiscal handicap; five models converge on the identification and the magnitude of the cuts.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Inactivity traps and stacking of social benefits",
+          "approach": "Creation of the Revenu d'incitation à l'activité (RIA, merging RSA + prime d'activité + ASS) and the Compte Social Unique capping all non-contributory benefits at 70% of net SMIC per adult.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-2-ria",
+            "sources.md#proposition-4-csu"
+          ],
+          "reasoning": "Precise mechanics (census, cap, base allocation €300/insertion €250) with quantified examples; estimated savings of €2bn (RIA) and €10bn (CSU).",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Imbalance of unemployment insurance",
+          "approach": "Application of the June 2024 rules, capping and 6-month limit for ruptures conventionnelles, alignment of cross-border workers, end of alternance strategies.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#proposition-5-chomage"
+          ],
+          "reasoning": "Quantified savings of €12.5–15.7bn/year; corrects documented drifts with case-type examples.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Senior employment",
+          "approach": "Reformed cumul emploi-retraite and early exemption for seniors having validated all their quarters.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-3-seniors"
+          ],
+          "reasoning": "Precise diagnosis (employment rate 36% vs. 60% in Europe) and an incentive measure quantified by case type.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Friction on the transmission of productive capital",
+          "approach": "Zero taxation on the transmission of productive capital as long as the economic activity continues.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#proposition-11-transmission-capital"
+          ],
+          "reasoning": "The mechanism defers taxation indefinitely except upon liquidation of the assets.",
+          "supported_by": [
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectory of public debt and return to fiscal balance (~€175bn deficit, 116% of GDP)",
+          "significance": "The diagnosis cites debt and deficit, but no multi-year debt-to-GDP path, interest charge, primary balance or schedule for returning to balance is provided. All five models flag this absence.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Parametric reform of the pay-as-you-go pension system",
+          "significance": "The program mentions a funded pillar but addresses neither the legal age, contribution duration, rates nor the balance of the pay-as-you-go regime.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Distributive incidence by decile / age / wealth",
+          "significance": "The examples quantify some households and reference wage earners, but not the aggregate net impact by income, wealth, age or employment status.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Housing and access to residential land",
+          "significance": "Housing is treated only incidentally via the cap on housing benefits; no supply-side measure, real-estate taxation or residential zoning is proposed.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Short-term budget balance",
+          "mechanism": "The €40bn in tax cuts are supposedly offset by €30bn of savings (unemployment, CSU, RIA), creating an explicit funding gap of ~€10bn; production-tax cuts take effect immediately while behavioral savings materialize over the medium term.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#proposition-5-prelevements",
+            "sources.md#impact-finances-publiques",
+            "sources.md#travail-gagnant",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Five models converge: coherence depends on growth, employment and effective savings revenues, none of which are demonstrated by a macro-fiscal model.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Intergenerational concentration of wealth",
+          "mechanism": "Exempting the transmission of productive capital removes a major mechanism for taxing wealth transfers between generations.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#proposition-11-transmission-capital"
+          ],
+          "reasoning": "Favors current holders of productive assets and mechanically increases concentration of capital.",
+          "supported_by": [
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Unédic and CSU savings below announcements if return-to-work behaviors are insufficient",
+          "probability": 0.55,
+          "severity": 0.6,
+          "reasoning": "The announced amounts (€12.5–15.7bn unemployment, €10bn CSU) depend on controls, effective aggregation of benefits and reinsertion; social and legal resistance to the cap (-€410/month for some households) is likely.",
+          "source_refs": [
+            "sources.md#travail-gagnant",
+            "sources.md#proposition-4-csu"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Corporate-tax revenues and dynamic offsets contingent on growth assumptions",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "€4bn of mechanical IS uplift and the offset of the zero-contribution threshold assume a labor-supply elasticity (104 additional hours/year on average) and an aggregate return to profitability that are not guaranteed.",
+          "source_refs": [
+            "sources.md#impact-finances-publiques",
+            "sources.md#proposition-1-zero-cotisation"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Building the Compte Social Unique requires interoperability across the State, CAFs and local authorities",
+          "probability": 0.7,
+          "severity": 0.5,
+          "reasoning": "The program acknowledges that no consolidated tool exists; aggregating local and in-kind benefits is a multi-year IT project.",
+          "source_refs": [
+            "sources.md#proposition-4-csu"
+          ],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Zero-contribution threshold beyond 1,623 annual hours",
+          "source_ref": "sources.md#proposition-1-zero-cotisation",
+          "quantified": true,
+          "magnitude": "~€11bn gain for firms; 35% reduction in hourly cost above the threshold; ~€500/year for a median employee",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of CVAE, C3S, industrial CFE, forfait social",
+          "source_ref": "sources.md#proposition-5-prelevements",
+          "quantified": true,
+          "magnitude": "~€15bn/year of production-tax cuts",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Compte Social Unique capping benefits at 70% of net SMIC per adult",
+          "source_ref": "sources.md#proposition-4-csu",
+          "quantified": true,
+          "magnitude": "~€10bn of expected savings",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Unemployment-insurance reform (June 2024 rules, cap on ruptures conventionnelles, alignment of cross-border workers)",
+          "source_ref": "sources.md#proposition-5-chomage",
+          "quantified": true,
+          "magnitude": "€12.5–15.7bn/year",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) merging RSA, prime d'activité and ASS",
+          "source_ref": "sources.md#proposition-2-ria",
+          "quantified": true,
+          "magnitude": "Base allocation €300/month + insertion €250/month if 15h of activity; ~€2bn of savings",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "€40bn in tax cuts vs. €30bn in savings: closing the loop is unproven; high sensitivity to return-to-work and growth assumptions.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Several savings are quantified but the net public balance is not consolidated."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Closing the loop €30bn in savings vs. €40bn in tax cuts is unproven at the macro level; high sensitivity to return-to-work assumptions."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "high",
+              "note": "Partially hypothetical offsets for the exemptions, and production-tax cuts not backed by detailed structural savings."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Tax cuts (€40bn) exceed explicit savings (€30bn); relies on dynamic growth effects."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Self-financing claimed but depends on employment elasticity and growth multipliers."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Setting up the CSU and merging benefits into the RIA require multi-year IT and legal projects; rewriting the Labor Code (50 principles) is heavy.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Fiscal, social, Unédic and labor-law reforms require legislative and administrative coordination."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Setting up the CSU and merging benefits into the RIA require multi-year IT and legal projects."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "Requires creation of a Compte Social Unique (cross-administration information system) and the redesign of several benefits."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Requires heavy legislative overhaul of the Labor Code (50 principles)."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Requires major payroll system updates and tax code restructuring."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Depends on the response of employers and employees, social acceptability, and the absence of EU transposition of new charges.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Depends on the response of employers, employees, the unemployed, local authorities and European partners."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Real reduction of labor cost depends on no EU transposition of new social charges."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "limited",
+              "note": "Few direct external dependencies, except social and union acceptability for labor-law reforms."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Most fiscal and labor levers are purely domestic."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Relies on firm demand for extra hours and EU state-aid compatibility."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Fiscal and social measures revocable by subsequent finance or social-security financing laws.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Tax cuts and social rules are reversible by subsequent laws but create strong expectations."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Fiscal and social measures revocable by the next parliamentary majority, excluding constitutional revisions."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Contribution exemptions and the cap on benefits can be modified by a subsequent finance or social-security financing law."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Tax cuts and code modifications can be reversed by future majorities."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Tax cuts and labor exemptions are easily reversible by subsequent finance laws."
+            }
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "social_demographic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "gemini-3-pro": "B"
+        }
+      },
+      "headline": {
+        "text": "Overhaul of welfare via a 70% of SMIC cap and merger of minima; health, general schooling, family and housing absent.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Social reform centered on work incentives; health, housing, schooling and dependency remain little addressed."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Overhaul of welfare via a 70% of SMIC cap and merger of social minima; health, education and inequalities addressed only marginally."
+          },
+          {
+            "model": "deepseek-manual",
+            "text": "Reduction of welfare benefits, reform of apprenticeship toward industry, absence of measures on health, general education and housing."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Cap on welfare benefits at 70% of SMIC and tightening of unemployment insurance."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Overhaul of social minima and unemployment insurance to condition benefits on return to work, with no health or family component."
+          }
+        ]
+      },
+      "summary": "The social block focuses on conditionality of benefits (RIA merging RSA / prime d'activité / ASS, Compte Social Unique capping non-contributory benefits at 70% of net SMIC per adult) and vocational training (refocusing apprenticeship toward sub-Bac+2 levels and industry, transferring vocational high schools to the regions). Health, primary/general secondary schooling, family policy, housing and territorial inequalities outside industry are not treated in the sources provided. The program acknowledges a reduction of transfers for households with high benefit-stacking (cited example: -€410/month).",
+      "problems_addressed": [
+        {
+          "problem": "Inactivity traps, threshold effects and complexity of the benefits system",
+          "approach": "Merger into the RIA (base allocation €300/month + insertion €250/month if 15h of activity, 30% taper on resumed wages) and 70% of net SMIC per adult cap via the Compte Social Unique.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-2-ria",
+            "sources.md#proposition-4-csu"
+          ],
+          "reasoning": "Five models converge: simplified benefits architecture, guaranteed net gain on returning to work, mechanics quantified by case type.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Mismatch between vocational training and industrial needs",
+          "approach": "Refocus apprenticeship subsidies on sub-Bac+2 levels and industrial sectors, transfer vocational high schools and guidance to the regions and the 500 missions locales.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-9-formation"
+          ],
+          "reasoning": "Quantified diagnosis (apprenticeship €15bn, cost per apprentice €14,700 vs. €4,700 in Germany, low industrial placement) and explicit reallocation tradeoffs.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Demographic renewal of farmers and agricultural professions",
+          "approach": "Increase headcount in training: +30% agricultural education, +75% veterinarians, +30% agricultural engineers by 2030.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#proposition-6-formation-agricole"
+          ],
+          "reasoning": "Quantified targets but funding via reallocation not detailed.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Healthcare system, public hospitals and medical deserts",
+          "significance": "No healthcare reform, regulation of care supply or hospital financing in the sources provided (apart from agriculture/veterinarians). Five models flag this absence on a major spending block.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Housing, access to residential land and modest-income households",
+          "significance": "Housing appears only incidentally via the cap on housing benefits; no supply, real-estate taxation, rent regulation or homeownership measure.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Primary, general secondary education and educational inequalities",
+          "significance": "General education is not addressed; only vocational and agricultural tracks are treated. No measures on collège, lycée général or the fight against educational inequalities.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Family policy, fertility and childcare",
+          "significance": "No measure on family allowances (apart from CSU mention), parental leave or early-childhood care arrangements.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Territorial cohesion, banlieues and local public services",
+          "significance": "No social-cohesion or local public-service approach outside industry/agriculture.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Disposable income of households structurally far from employment and high benefit-stackers",
+          "mechanism": "The 70% of net SMIC cap per adult, combined with the tightening of unemployment insurance, reduces aggregate transfers to inactive or precarious populations; the example provided indicates -€410/month for a couple with two children in social housing (-17%).",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#proposition-4-csu",
+            "sources.md#proposition-5-chomage"
+          ],
+          "reasoning": "Five models converge: the program assumes this reduction as a work incentive, but the net distributive effect depends on the actual return to employment, which is not guaranteed for households furthest from work.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Building the Compte Social Unique (interoperability across the State, CAFs, local authorities and Unédic)",
+          "probability": 0.6,
+          "severity": 0.65,
+          "reasoning": "Real-time consolidation of national, local and discretionary benefits is unprecedented in France; multi-year IT and organizational project acknowledged by the program.",
+          "source_refs": [
+            "sources.md#proposition-4-csu",
+            "sources.md#proposition-2-ria"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Resistance from Éducation nationale unions to transferring vocational high schools to the regions",
+          "probability": 0.75,
+          "severity": 0.5,
+          "reasoning": "Transferring a historic State competence to the regions and firms will face strong opposition; conventional reallocation of resources required.",
+          "source_refs": [
+            "sources.md#proposition-9-formation"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Risk of constitutional litigation (principle of equality, right to subsistence) on the cap",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "A uniform cap at 70% of net SMIC may raise issues of unequal treatment and minimum subsistence.",
+          "source_refs": [
+            "sources.md#proposition-4-csu"
+          ],
+          "supported_by": [
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte Social Unique capping non-contributory benefits at 70% of net SMIC per adult",
+          "source_ref": "sources.md#proposition-4-csu",
+          "quantified": true,
+          "magnitude": "Cap 70% net SMIC/adult; ~€10bn of expected savings",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Revenu d'incitation à l'activité (RIA) merging RSA, prime d'activité and ASS",
+          "source_ref": "sources.md#proposition-2-ria",
+          "quantified": true,
+          "magnitude": "Base allocation €300/month + insertion €250/month if 15h of activity; 30% taper on resumed wages; ~€2bn of savings",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Unemployment-insurance reform (June 2024 rules, cap on ruptures conventionnelles, alignment of cross-border workers)",
+          "source_ref": "sources.md#proposition-5-chomage",
+          "quantified": true,
+          "magnitude": "€12.5–15.7bn/year of savings",
+          "supported_by": [
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Refocus of apprenticeship subsidies and transfer of vocational high schools to the regions",
+          "source_ref": "sources.md#proposition-9-formation",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Senior employment with all quarters validated (refurbished cumul emploi-retraite)",
+          "source_ref": "sources.md#proposition-3-seniors",
+          "quantified": true,
+          "magnitude": "+€300/month net at the median wage; -€450/month employer cost",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "The block is mainly framed as a savings generator (RIA, CSU, unemployment); the residual risk is the un-budgeted distributive and social impact.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "The block is presented as a savings generator but without a complete household-level incidence."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Measures mostly budget-neutral (reallocations and caps)."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "limited",
+              "note": "The RIA and CSU generate net savings according to the program; the main risk is the un-budgeted social impact of benefit reductions."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Measures are designed entirely to generate savings."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Savings are structurally identified but depend on fraud reduction and eligibility enforcement."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Building the CSU and merging benefits into the RIA require multi-organization interoperability (State, CAFs, local authorities, Unédic) unprecedented in France.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Merging benefits, caps, unemployment and controls require unified social systems and rules."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Building the CSU requires multi-organization interoperability unprecedented in France."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "high",
+              "note": "Creation of the CSU and harmonization of multiple paying organizations is a heavy IT and organizational project."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "CSU requires unifying data across fragmented national and local agencies."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Requires nationwide registry integration and CAF/Unédic system overhaul."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Success requires buy-in from local authorities, CAFs and France Travail; risk of constitutional litigation.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Depends on France Travail, Unédic, CAFs, local authorities, employers and the local labor market."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Success requires buy-in from local authorities to share data and cap discretionary benefits."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "Depends on acceptance by territorial authorities and CAFs; risk of constitutional litigation."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Relies on local authorities (mairies, départements) complying with the CSU."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Primarily domestic administrative reform with minimal external dependencies."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Cap, benefit mergers and indemnification rules revocable by ordinary legislation; administrative consolidation nonetheless creates path dependency.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-manual"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Durations, caps and indemnification rules can be modified by law or unemployment-insurance agreement."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Cap and benefit mergers revocable by ordinary legislation."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Parametric reforms of the RIA and the cap can be adjusted by law or regulation."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Benefit caps can be lifted by subsequent legislation."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Legislative reversal possible but administrative consolidation creates path dependency."
+            }
+          ]
+        }
+      },
+      "confidence": 0.68
+    },
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "gpt-5.5-thinking": "B",
+          "qwen3.6": "B"
+        }
+      },
+      "headline": {
+        "text": "Productive, energy and food sovereignty detailed; defense, police, justice and immigration absent from sources.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Productive, electric and food sovereignty detailed; defense and internal security absent from the corpus."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Strong economic sovereignty (nuclear energy, trade reciprocity, seven strategic sectors); defense, internal security and immigration absent from sources."
+          },
+          {
+            "model": "deepseek-manual",
+            "text": "Strong emphasis on agricultural and industrial sovereignty, but no proposals on defense, internal security or immigration."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Energy sovereignty centered on nuclear and agricultural/industrial protectionism."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Priority to economic and food sovereignty via trade reciprocity, import controls and refusal of unfair competition."
+          }
+        ]
+      },
+      "summary": "The program builds productive sovereignty (reindustrialization, 7 strategic sectors, France Production Fund €600M/year), energy sovereignty (15-year long-term nuclear contracts/30 TWh, extension of reactors up to 80 years, ending support for new solar/wind renewables) and food sovereignty (constitutional inscription of agriculture as a fundamental interest, CAP overhaul, refusal of Ukraine enlargement). The trade dimension is marked by systematic reciprocity clauses, the reorientation of 50% of customs/sanitary controls toward imports, and the extension of CBAM. Defense, deterrence, internal security, criminal justice, terrorism, immigration and migration policy are not treated in the sources provided — a major absence flagged by all five models.",
+      "problems_addressed": [
+        {
+          "problem": "Price and stability of industrial electricity",
+          "approach": "Replacement of ARENH / Universal Nuclear Payment by long-term contracts (15 years, up to 30 TWh/year) inspired by Exeltium, extension of reactors to 80 years, target 400 TWh/year, end of support for new renewables.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Precise contractual architecture (duration, volume, indexation), quantified target -10% on the industrial price; five models confirm.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Food sovereignty and agricultural renewal",
+          "approach": "Constitutional inscription of agriculture as a fundamental interest, CAP overhaul oriented toward active farmers, water access (storage), reciprocity at the borders, quantified per-sector targets in the PSN, refusal of Ukraine's agricultural integration.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-1-cadre-juridique",
+            "sources.md#proposition-9-pac",
+            "sources.md#proposition-10-reciprocite",
+            "sources.md#re-armer-notre-agriculture"
+          ],
+          "reasoning": "Factual diagnosis (agricultural trade deficit, 50% imported chicken, 200,000 farms to transfer, 60% of farmers near retirement by 2030); unprecedented institutional lever.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Unfair competition and import controls",
+          "approach": "Redirect 50% of customs/DGCCRF/sanitary controls toward imports (with constant headcount), systematic reciprocity clauses in trade agreements, extension of CBAM.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-7-concurrence",
+            "sources.md#proposition-10-reciprocite"
+          ],
+          "reasoning": "Five models converge: shifting the administrative burden to the point of entry; however Gemini notes that the absolute control rate (0.008%) limits the macro impact.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Technological and industrial sovereignty",
+          "approach": "Concentration of public funding on 7 strategic sectors (energies of the future, AI, biotech, materials/batteries, microelectronics, cybersecurity, quantum), preservation of the CIR, France Production Fund €600M/year, €15bn cut in production taxes.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-10-anticipation",
+            "sources.md#proposition-8-investissement",
+            "sources.md#proposition-5-prelevements"
+          ],
+          "reasoning": "Explicit list aligned with European strategies; funding not quantified beyond the Fund.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Defense policy, deterrence and defense industry",
+          "significance": "No defense trajectory, force structure, LPM, operational cybersecurity or NATO positioning in the sources provided, despite the post-Ukraine geopolitical context.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Internal security, police, criminal justice and the fight against drug trafficking",
+          "significance": "Absent from the scope of the sources despite the author's previous role (former Minister of the Interior). No measures on police, justice, prisons.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Immigration, asylum, integration and control of population flows",
+          "significance": "The program addresses the circulation of goods and products, not of persons — a notable absence given the candidate's public positions.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Tensions with the EU and the single market",
+          "mechanism": "Unilateral imposition of reciprocity clauses, refusal of agricultural enlargement to Ukraine, redirection of controls, long-term nuclear contract: each exposes France to infringement procedures or state-aid risk.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-7-concurrence",
+            "sources.md#proposition-10-reciprocite",
+            "sources.md#proposition-6-electricite"
+          ],
+          "reasoning": "Trade is an exclusive European competence; state aid on the nuclear contract must be secured. Four models flag this as an active risk.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Headroom on the electricity mix in case of nuclear delays",
+          "mechanism": "Ending support for new solar and wind capacity, with nuclear extension/renewal on a tight schedule (EPR2): any technical or financial setback at EDF reduces both the sovereignty-price effect and the resilience of the mix.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "The program accepts this bet; two models identify it as a potential aggravation.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "European agreement on systematic reciprocity and extended CBAM",
+          "probability": 0.7,
+          "severity": 0.55,
+          "reasoning": "Requires alignment of 26 partners with divergent commercial interests; trade is an exclusive EU competence and unilateralism exposes to infringement procedures.",
+          "source_refs": [
+            "sources.md#proposition-7-concurrence",
+            "sources.md#proposition-10-reciprocite"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "European compatibility of the long-term nuclear contract (state aid)",
+          "probability": 0.45,
+          "severity": 0.55,
+          "reasoning": "The scheme depends on EDF, willing alternative suppliers, an initial contribution and a pass-through control; compatibility with European competition rules must be secured.",
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#produire-plus"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Long-term nuclear contracts EDF/alternative suppliers",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": true,
+          "magnitude": "15 years; up to 30 TWh/year; target -10% on average industrial supply price",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Redirect 50% of administrative controls toward imports",
+          "source_ref": "sources.md#proposition-7-concurrence",
+          "quantified": true,
+          "magnitude": "50% with constant headcount",
+          "supported_by": [
+            "claude-opus-4-7",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Constitutional inscription of agriculture as a fundamental interest",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Agricultural reconquest and farm renewal",
+          "source_ref": "sources.md#re-armer-notre-agriculture",
+          "quantified": true,
+          "magnitude": "200,000 farms to transfer; 60% of farmers near retirement by 2030",
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Opposition to Ukraine's agricultural integration into the European market",
+          "source_ref": "sources.md#proposition-10-reciprocite",
+          "quantified": false,
+          "magnitude": "Political veto",
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Regulated/public costs not consolidated (electricity, water, agriculture); €15bn production-tax cuts unfunded short-term; risk shifted to EDF and industrial buyers.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": [
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Electricity prices, water, agriculture and reindustrialization imply unconsolidated public or regulated costs."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "France Production Fund €600M/year and protected CIR; cost of the long-term nuclear contract depends on the negotiated price."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "The cuts in production taxes (€15bn) are not backed in the short term by equivalent savings."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "limited",
+              "note": "Energy contracts transfer risk to EDF and industrial buyers."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Control reallocation operates at constant staffing; minimal direct fiscal impact."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Controls reoriented at constant headcount, EU negotiation (reciprocity, CBAM), constitutional revisions, removal of OFB, EDF management: cumulative projects.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": [
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Requires EDF, regulators, trade controls, CAP, agencies, water and farm transfers."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Reorientation of controls at constant headcount, European negotiation, constitutional revision."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "high",
+              "note": "Constitutional revision and removal of agencies (OFB) require qualified majorities and complex legislative projects."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Reallocating 50% of customs/DGCCRF controls requires significant operational shift."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Requires inter-agency coordination and EU notification for control doctrine shifts."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Trade reciprocity and extended CBAM depend on a 27-state agreement and the WTO; nuclear depends on EDF, European law and energy markets; agriculture depends on the CAP.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "deepseek-manual"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Depends on nuclear, European law, energy markets, CAP and farmers."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Trade reciprocity and extended CBAM depend on a 27-state agreement and WTO negotiations."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "Depends on the ability to obtain derogations from European rules (CAP, trade) and to renegotiate treaties."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Trade reciprocity heavily dependent on European Commission alignment."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Reciprocity and market access rules depend on EU negotiation outcomes."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Constitutional inscription requires Congress/referendum; 15-year nuclear contracts and long industrial infrastructure; customs rules administratively adjustable.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Rules may change, but long contracts and investments create inertia."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Constitutional inscription requires referendum/Congress, 15-year nuclear contracts, long industrial infrastructure."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "A constitutional revision is difficult to undo; tax cuts can be reintroduced by a subsequent finance law."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Customs directives can be easily reversed; long-term energy contracts are binding."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Trade doctrine shifts are politically sticky but administratively adjustable."
+            }
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "deepseek-manual": "D",
+          "gemini-3-pro": "B"
+        }
+      },
+      "headline": {
+        "text": "Targeted constitutional revisions, veto authority over standards, primacy over agencies; no comprehensive democratic reform.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Reform of the regulatory state and of standards, without a complete democratic reform."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Constitutional revision by referendum (removal of the precautionary principle, agriculture as a fundamental interest), restriction of associations' standing to sue, independent authority overseeing standards."
+          },
+          {
+            "model": "deepseek-manual",
+            "text": "Targeted institutional reforms for agriculture and deregulation, but no overall vision of democratic governance."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Constitutional reform removing the precautionary principle and primacy of politics over agencies."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Massive deregulation and rewriting of the Labor Code around 50 principles, with the rest transferred to collective bargaining."
+          }
+        ]
+      },
+      "summary": "The program concentrates political tradeoffs on standards and expertise: removal of 50 blocking rules, one-in-one-out by value, independent authority with prior-veto power (Dutch model), organic law banning gold-plating (Italian model), political primacy over agencies (removal of OFB, audit of ANSES), supplementary rewriting of the Labor Code (50 inviolable principles). Several targeted constitutional revisions are proposed by referendum: removal of the precautionary principle and inscription of agriculture as a fundamental interest. The role of the environmental judge is restricted and the certification of associations is limited. The general institutional architecture (electoral system, Parliament, Senate, Conseil constitutionnel, decentralization beyond targeted areas) is not reformed.",
+      "problems_addressed": [
+        {
+          "problem": "Regulatory inflation and administrative complexity",
+          "approach": "Removal of 50 blocking rules (50-employee threshold, CSE, BDESE, AGEC/PFAS, ICPE), one-in-one-out by value, independent authority with veto power inspired by the Netherlands (-25% in administrative burden since 2003), opposable prior assessment and SME test.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-3-stopper-surproduction",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Five models converge: a quantified structural mechanism inspired by a cited international precedent.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Rewriting labor law and rigidity of the Code",
+          "approach": "Limit the inviolable core to 50 principles; the rest of the Code becomes supplementary absent collective agreement, transferring tradeoffs to the branch and the firm.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Hierarchy among principles, collective agreements, branch and supplementary rule made explicit.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Articulation between French and European law and gold-plating",
+          "approach": "Organic law banning gold-plating (Italian model), monitoring cell in Brussels.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#proposition-3-aligner-europe"
+          ],
+          "reasoning": "Reference to a national precedent; the legal scope of an organic law on this topic remains to be confirmed.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Strengthening political authority over administrative agencies",
+          "approach": "Removal of OFB (return to AFB+ONCFS), general audit of agencies, political primacy over ANSES via automatic European mutual recognition.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#proposition-2-agences"
+          ],
+          "reasoning": "Concrete measures but focused on the agricultural and environmental perimeter.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Blocking of agricultural and industrial projects by standards and litigation",
+          "approach": "Inscription of agriculture as a fundamental interest in the Constitution, removal of the precautionary principle (referendum), limitation of associations' standing to sue and of the judge's role.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#proposition-1-cadre-juridique",
+            "sources.md#proposition-7-agribashing"
+          ],
+          "reasoning": "Substantial change to the balance between environmental protection and productive interests at the constitutional level; three models classify it as addressed, two as worsening (cf. problems_worsened).",
+          "supported_by": [
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Electoral system, parliamentary representation and citizen participation",
+          "significance": "No reform of the legislative or presidential ballot, no proportional representation, no anti-cumul rules, no role for Parliament, no citizen-initiative referendum.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Judicial guarantees, independence of the judiciary and general rule of law",
+          "significance": "The program speaks to the judge's role in labor matters and to restricting environmental litigation, but does not address general judicial independence, public liberties or the fight against corruption.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Reform of the Senate, the Conseil constitutionnel or the CESE",
+          "significance": "No mention.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Decentralization beyond economic and training matters (territorial mille-feuille)",
+          "significance": "The program strengthens the regions on targeted areas (guidance, vocational high schools, France Production Fund) but does not redesign the territorial mille-feuille.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Accountability mechanisms of the independent veto authority",
+          "significance": "The veto authority over standards is created without explicit modalities of parliamentary or democratic control.",
+          "source_refs": [],
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Balance between judicial review and administrative action",
+          "mechanism": "Explicit restriction of the judge's role (« review limited to manifest error of assessment »), shortening of appeal deadlines, withdrawal of association certification on grounds including « abusive litigation ».",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#proposition-7-agribashing"
+          ],
+          "reasoning": "Concentrates tradeoffs on the administration's side; compatibility with the Aarhus Convention and the ECHR remains to be verified.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Constitutional framework of environmental protection",
+          "mechanism": "Removal of the precautionary principle from the Charter of the Environment by referendum.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#proposition-1-cadre-juridique"
+          ],
+          "reasoning": "Modifies the balance between environmental and productive objectives at the constitutional level.",
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Independence of scientific expertise",
+          "mechanism": "Direct political control over ANSES to prevent bans on plant-protection products; removal of OFB and audit for « activist drift ».",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#proposition-2-agences"
+          ],
+          "reasoning": "Subordinates scientific autonomy to production objectives; reduces administrative checks and balances.",
+          "supported_by": [
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Uniform guarantees in labor law",
+          "mechanism": "Outside the 50 inviolable principles, collective agreements may derogate from many current rules; SMEs may lack bargaining capacity, creating fragmentation.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "The exact list of the 50 principles is not provided in the corpus, creating a transitional zone of legal uncertainty.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Adoption of the constitutional revisions (3/5 of Congress or referendum)",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Several cumulative revisions required (precaution, agriculture as a fundamental interest); parliamentary arithmetic uncertain, opposition likely from the left and ecologists.",
+          "source_refs": [
+            "sources.md#proposition-1-cadre-juridique",
+            "sources.md#proposition-4-agri"
+          ],
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "European and treaty-based litigation on the restriction of associations' standing to sue",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "The Aarhus Convention and the ECHR guarantee access to the environmental judge; the proposed restrictions may be struck down.",
+          "source_refs": [
+            "sources.md#proposition-7-agribashing"
+          ],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Legal certainty during the rewrite of the Labor Code",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "The rewrite may shift litigation toward defining the inviolable core; the precision of the principles and judges' interpretation determine stability.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Removal of 50 blocking rules and one-in-one-out by value",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 rules removed; examples: 50-employee threshold, CSE, BDESE, AGEC/PFAS, ICPE",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Rewriting the Labor Code around 50 inviolable principles",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 principles; the rest is supplementary absent collective agreement",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Independent authority for prior review of standards with veto power",
+          "source_ref": "sources.md#proposition-3-stopper-surproduction",
+          "quantified": false,
+          "magnitude": "Dutch model; veto on standards with high economic impact",
+          "supported_by": [
+            "claude-opus-4-7",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Organic law banning European gold-plating",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Constitutional revision: removal of the precautionary principle and inscription of agriculture as a fundamental interest",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": "Referendum or 3/5 of Congress",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of OFB (return to AFB + ONCFS) and political primacy over agencies",
+          "source_ref": "sources.md#proposition-2-agences",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "limited"
+          ],
+          "note": "Mostly organic reforms; administrative transition costs not quantified but marginal.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "limited",
+              "note": "Little direct cost announced, but administrative transition costs not quantified."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Mostly organic measures with no significant direct cost."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Institutional reforms have no significant direct budgetary impact."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Institutional changes do not carry structural costs."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "low",
+              "note": "Institutional reforms have minimal direct budgetary footprint."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": [
+            "high",
+            "high"
+          ],
+          "note": "Multiple constitutional revisions, organic laws, authorities to be created simultaneously, rewriting the Labor Code: high legislative and procedural complexity.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Legal rewriting, veto authority, collective agreements and controls require strong administrative capacity."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Multiple constitutional revisions, organic laws and new authorities to be created simultaneously."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "high",
+              "note": "Constitutional revision requires a very large majority or a high-risk referendum campaign."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Requires Constitutional amendment and referendum."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Labor code overhaul and constitutional changes face legislative and procedural hurdles."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Compliance with EU law (Aarhus, fundamental rights), parliamentary arithmetic, validation by the Conseil constitutionnel, engagement of social partners.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Depends on administrations, social partners, firms, judges and European law."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Compliance with European law (Aarhus, fundamental rights) and parliamentary arithmetic for revisions."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "Depends on parliamentary support and validation by the Conseil constitutionnel of the revision's compliance."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "high",
+              "note": "Constitutional changes require parliamentary supermajority or public referendum."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Relies on parliamentary majorities and union engagement for collective bargaining shift."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Constitutional revisions very hard to undo (a new revision is required); contracts and administrative practices create inertia. Labor Code reversible by law.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "gpt-5.5-thinking",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Removed rules can be reinstated, but agreements and practices create inertia."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "low",
+              "note": "Constitutional revisions very hard to undo by a subsequent simple majority."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Once constitutionalized, the change is difficult to undo; a new revision would be required."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Constitutional changes are highly resistant to reversal."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "moderate",
+              "note": "Constitutional changes are sticky; labor code defaults can be legislatively restored."
+            }
+          ]
+        }
+      },
+      "confidence": 0.65
+    },
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Productivism asserted: end of renewables support, removal of ZAN/precaution principle, neonicotinoids; nuclear extended, CBAM extended.",
+        "supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "dissenters": [],
+        "per_model": [
+          {
+            "model": "gpt-5.5-thinking",
+            "text": "Productivist program with nuclear and border carbon, but rollback of renewables support and green constraints."
+          },
+          {
+            "model": "claude-opus-4-7",
+            "text": "Productivism asserted: end of renewables support, removal of ZAN and the precautionary principle, re-authorization of neonicotinoids; nuclear extended and CBAM extended."
+          },
+          {
+            "model": "deepseek-manual",
+            "text": "Dismantling of environmental standards, support for nuclear, no climate target or biodiversity protection."
+          },
+          {
+            "model": "gemini-3-pro",
+            "text": "Ecological moratorium, exclusive nuclear push and re-authorization of pesticides."
+          },
+          {
+            "model": "qwen3.6",
+            "text": "Subordination of environmental standards to production, end of wind/solar subsidies and removal of the precautionary principle."
+          }
+        ]
+      },
+      "summary": "The environment is treated as an adjustment variable for production. Nuclear is consolidated (extension to 80 years, long-term contract, target 400 TWh/year) and CBAM extended to processed goods. Conversely: end of public support for new solar and wind capacity, removal of ZAN, removal of the precautionary principle (constitutional revision), re-authorization of acetamiprid, abandonment of the Ecophyto -50% trajectory, easing of BCAE rules, removal of OFB. No SNBC trajectory, no sectoral carbon budget, no quantified national emissions-reduction target, no mention of Fit for 55 or 2050 neutrality; no biodiversity, adaptation (PNACC) or low-carbon mobility plan in the sources provided.",
+      "problems_addressed": [
+        {
+          "problem": "Decarbonization through nuclear and price stability of low-carbon electricity",
+          "approach": "Extension of reactors up to 80 years (subject to ASN review), target 400 TWh/year, long-term nuclear contract (15 years, 30 TWh/year) to stabilize the industrial price.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Five models confirm: nuclear is largely decarbonized, ambitious industrial schedule but consistent with the sovereignty strategy.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Carbon leakage at imports and environmental dumping",
+          "approach": "Strengthening and extension of CBAM to processed goods.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#proposition-7-concurrence",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Existing European tool to extend; implementation depends on the Commission.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Available land for industry and agriculture",
+          "approach": "Removal of ZAN for agricultural buildings and industrial extensions, water access (storage), derogations for reindustrialization (25,000 ha).",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#proposition-3-aligner-europe",
+            "sources.md#proposition-8-souverainete-industrielle"
+          ],
+          "reasoning": "Lifts the quantitative constraint on physical expansion; three models classify it as addressing a productive issue (the others as environmental aggravation — see problems_worsened).",
+          "supported_by": [
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Greenhouse-gas emissions reduction trajectory (SNBC, Fit for 55, 2050 neutrality)",
+          "significance": "No quantified national target, no sectoral carbon budget, no mention of European commitments or 2050 neutrality. Five models flag this major absence.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation to climate change (PNACC) outside agriculture",
+          "significance": "Adaptation is treated only via the agricultural water lever; transport, coastal urbanism, heatwaves, infrastructure and drinking water are absent.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Positive biodiversity strategy (beyond the conflict with agriculture)",
+          "significance": "Biodiversity is addressed only through the removal of OFB, the re-authorization of neonicotinoids and the end of ZAN; no conservation measure or positive strategy.",
+          "source_refs": [],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Low-carbon mobility and transport",
+          "significance": "No mention of transport (rail, urban, air, automotive) outside the mention of industrial vehicles.",
+          "source_refs": [],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Land sobriety and soil artificialization",
+          "mechanism": "Removal of ZAN (cap of 125,000 ha 2021-2031) and exemption for agricultural buildings, combined with land-consuming reindustrialization (25,000 ha) without compensation mechanism.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#proposition-3-aligner-europe",
+            "sources.md#proposition-8-souverainete-industrielle"
+          ],
+          "reasoning": "ZAN is the central instrument limiting artificialization; its removal without an equivalent degrades the trajectory of soil and ecosystem protection.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Diversification of the electricity mix and non-nuclear low-carbon deployment",
+          "mechanism": "End of public support for new solar and wind capacity, possible deferral of already-authorized projects in case of overcapacity.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "The measure explicitly reduces a low-carbon capacity channel and increases reliance on the nuclear schedule (EPR2, extensions).",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Chemical pressure on agricultural biodiversity and pollinators",
+          "mechanism": "Re-authorization of acetamiprid (neonicotinoid), abandonment of the Ecophyto -50% target, easing of BCAE rules, end of the precautionary approach.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#proposition-3-aligner-europe",
+            "sources.md#proposition-1-cadre-juridique"
+          ],
+          "reasoning": "Effects on pollinators are documented; the program accepts the tradeoff in favor of production. Risk of higher chemical inputs and residues.",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "problem": "Compliance with the European climate trajectory (Green Deal, Fit for 55)",
+          "mechanism": "Ending renewables subsidies and removing the precautionary principle defer transition investments and increase reliance on nuclear extension.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#proposition-6-electricite",
+            "sources.md#proposition-1-cadre-juridique"
+          ],
+          "reasoning": "Structural tension with European commitments; exposes France to compliance litigation.",
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "European litigation for non-compliance with environmental directives (water, biodiversity, ZAN, ICPE)",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "Removing ZAN, raising ICPE thresholds and re-authorizing substances may breach EU law and trigger infringement procedures; state aid and renewables subsidies affected.",
+          "source_refs": [
+            "sources.md#proposition-3-aligner-europe",
+            "sources.md#proposition-6-electricite"
+          ],
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "risk": "Schedule for nuclear extension to 80 years subject to ASN approvals",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Each decennial extension is a separate review; nuclear industry under strain (EPR2, welding, recruitment).",
+          "source_refs": [
+            "sources.md#proposition-6-electricite"
+          ],
+          "supported_by": [
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "End of public support for new solar and wind capacity",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": false,
+          "magnitude": "Possible deferral of already-authorized projects in case of overcapacity",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Extension of nuclear reactors up to 80 years, target 400 TWh/year",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": true,
+          "magnitude": "400 TWh/year; possible extension up to 80 years subject to safety",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of ZAN and exemption for agricultural buildings",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": true,
+          "magnitude": "125,000 ha cap 2021-2031 removed",
+          "supported_by": [
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Re-authorization of acetamiprid and abandonment of the Ecophyto -50% target",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": [
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": []
+        },
+        {
+          "measure": "Removal of the precautionary principle (constitutional revision)",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": "Referendum route",
+          "supported_by": [
+            "qwen3.6"
+          ],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "limited",
+          "level_interval": [
+            "low",
+            "moderate"
+          ],
+          "note": "Savings on renewables support and repeals at no direct cost, but nuclear CAPEX shifted to tariffs/industrial customers; revenue losses not assessed.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Nuclear, grid and adaptation costs are not consolidated."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Savings on renewables support; nuclear CAPEX shifted to tariffs and industrial customers."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Measures consist mainly of repeals at no direct cost, but the revenue loss from no carbon taxation or CAP renegotiation is not assessed."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "low",
+              "note": "Halting renewable subsidies generates state savings."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "limited",
+              "note": "Subsidy halt reduces direct spending but may increase grid balancing costs."
+            }
+          ]
+        },
+        "implementation": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "limited",
+            "high"
+          ],
+          "note": "Nuclear industry under strain (EPR2, welding, recruitment) and constitutional revision complex; repeals, conversely, are administratively simple.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "gemini-3-pro",
+            "qwen3.6"
+          ],
+          "dissenters": [],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Modifies standards, projects, grids, nuclear, water and imports."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "Nuclear industry under strain (EPR2, welding, recruitment); 2027-2035 schedule tight."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "moderate",
+              "note": "Repeals via regulation or law are relatively simple, but constitutional revision is complex."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "limited",
+              "note": "Stopping programs is administratively simpler than building them."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Constitutional and regulatory rollbacks face legal, political, and EU compliance barriers."
+            }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": [
+            "moderate",
+            "high"
+          ],
+          "note": "Strong dependence on nuclear safety (ASN), European law (CBAM, electricity market, environment), energy markets, hydrology and the courts.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "dissenters": [
+            "gemini-3-pro"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "high",
+              "note": "Depends on nuclear safety, European law, energy markets, hydrology and local arbitrations."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "high",
+              "note": "ASN validation, European trade agreements (CBAM, electricity market), courts (associations' standing to sue)."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "high",
+              "note": "Strong dependence on compatibility with European environmental law and the absence of litigation."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Reauthorizing chemicals depends on interpretations of EU mutual recognition."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Energy and environmental trajectories depend on EU regulatory tolerance and nuclear performance."
+            }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": [
+            "low",
+            "high"
+          ],
+          "note": "Renewables support and national rules can be reinstated; ZAN removal and constitutional revision hard to undo; lost time on renewables partially irreversible.",
+          "supported_by": [
+            "gpt-5.5-thinking",
+            "claude-opus-4-7",
+            "gemini-3-pro"
+          ],
+          "dissenters": [
+            "deepseek-manual",
+            "qwen3.6"
+          ],
+          "per_model": [
+            {
+              "model": "gpt-5.5-thinking",
+              "level": "moderate",
+              "note": "Renewables support and national rules can be reinstated, but contracts and investments create inertia."
+            },
+            {
+              "model": "claude-opus-4-7",
+              "level": "moderate",
+              "note": "Renewables support reversible by decree; removing ZAN requires legislation."
+            },
+            {
+              "model": "deepseek-manual",
+              "level": "low",
+              "note": "Reinstating standards is possible under a future government but politically difficult."
+            },
+            {
+              "model": "gemini-3-pro",
+              "level": "moderate",
+              "note": "Subsidies can be reinstated, though lost time in renewable deployment is permanent."
+            },
+            {
+              "model": "qwen3.6",
+              "level": "high",
+              "note": "Moratoriums and deregulation can be rapidly reinstated by subsequent majority or EU mandate."
+            }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Net gains concentrated on working seniors (~+€3,600/year via cumul emploi-retraite) and active workers doing overtime hours (~+€500/year); 25-year-olds benefit marginally (zero contributions beyond 1,623h, voluntary funded pillar) but inherit a climate debt and a housing deficit that are not addressed; no quantified emissions or debt trajectory is provided.",
+      "units": "€/person/year and qualitative (trajectories not quantified)",
+      "confidence": 0.4,
+      "caveats": "Individual magnitudes documented only via case types; general-equilibrium macroeconomic effects (debt, climate, housing) qualitative due to the absence of a quantified loop in the sources."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Cuts in employee/employer contributions on overtime hours (zero contribution beyond 1,623h) benefit young active workers; the absence of a public-debt trajectory shifts the budgetary cost onto future generations.",
+        "quantified": "+~€500/year on overtime case types; ~€10bn unclosed gap between €40bn in tax cuts and €30bn in savings"
+      },
+      "housing": {
+        "summary": "No housing supply or access policy is formulated; the 70% of SMIC cap of the Compte Social Unique may reduce APL housing benefits for households stacking benefits, with no supply-side alternative.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "No parametric reform of the pay-as-you-go regime; opening of a voluntary funded pillar whose benefits would materialize in the very long term without employer commitment.",
+        "quantified": "capital base evoked ~€1,000bn in the long run (not quantified for 25-year-olds)"
+      },
+      "labor_market": {
+        "summary": "Refocusing apprenticeship toward sub-Bac+2 and industry reduces support for higher-education apprentices; the RIA conditions support on activity with a 30% taper; net effect depends on placement in redirected sectors.",
+        "quantified": "RIA: base €300/insertion €250, 30% taper; reduction of apprenticeship support at Bac+2 and above"
+      },
+      "environmental_debt": {
+        "summary": "Removal of ZAN, end of public support for new solar/wind capacity and constitutional revision of the precautionary principle defer the decarbonization effort and increase future adaptation costs.",
+        "quantified": null
+      },
+      "narrative_summary": "For an active 25-year-old in 2027, the program brings a measurable net gain on overtime hours and on the employment of seniors with whom they coexist, but defers onto them an unquantified climate and budgetary debt, an unaddressed housing market and a pension reform left to a voluntary funded mechanism."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Refurbished cumul emploi-retraite and early exemption for seniors having validated all their quarters significantly improve net income for working seniors wishing to extend their activity.",
+        "quantified": "case type Michel: +€17,500 over 2 years; ~+€300/month net for 65-year-olds combining work and retirement"
+      },
+      "pension": {
+        "summary": "Current pensions preserved without parametric reform; purchasing power of inactive retirees unchanged apart from indirect effects (energy, transmission taxation).",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Program silent on the organization and financing of the healthcare system; health remains mentioned as expenditure covered by contributions without specific reform.",
+        "quantified": null
+      },
+      "narrative_summary": "For a 65-year-old retiree in 2027, the program strengthens incentives to extend activity (case-type net gains of several hundred euros per month) and preserves existing pensions, but does not address health or dependency issues."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "No parametric reform of the pay-as-you-go regime; refurbished cumul emploi-retraite and a voluntary funded pillar produce gradual gains without changing system balance.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Limited immediate effects: cumul emploi-retraite incentivizes seniors with all quarters but ramp-up is gradual; voluntary funding barely launched.",
+            "supported_by": [
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Senior-work exemptions raise income for those still working after full contribution quarters."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Refurbished cumul emploi-retraite incentivizes seniors with all quarters to extend their activity; limited effect."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "Very limited effect, only cumul emploi-retraite departures gradually increase."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Near-term effect focuses on senior tax exemptions."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Limited near-term effect as behavioral adjustment takes time."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "Ramp-up of individual retirement savings and rise in the senior employment rate; visible effects but conditional on adoption.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-manual"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Voluntary retirement savings can accumulate, but required contributions are not specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Gradual ramp-up of individual retirement savings; effect on senior employment rate."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "No change to pay-as-you-go parameters; voluntary funding only beginning to produce effects."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Capitalization layer begins building assets."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Extended careers increase contribution base and delay payouts."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [
+              1,
+              1
+            ],
+            "note": "Productive capital base (~€1,000bn in the long run) and improvement of the dependency ratio via senior employment; effect on sustainability not quantified.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 1,
+                "note": "Long saving stock may matter, but replacement-rate impact remains unquantified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "Build-up of a productive capital base ~€1,000bn evoked in the long run; effect on sustainability not quantified."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 1,
+                "note": "The funded pillar, if widely adopted, could provide supplementary income to future retirees."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 1,
+                "note": "Capitalization supplements baseline pensions."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Structural improvement in dependency ratio if uptake sustains."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "€40bn in tax cuts backed by €30bn in savings without explicit closure; no multi-year deficit or debt trajectory provided; long-term effect contingent on growth gains.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              0
+            ],
+            "note": "Initial cost of tax cuts (€40bn) not fully offset by savings (€30bn); risk of widening the deficit during the rollout phase.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Savings and restitution are both stated; net deficit path is not specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Unexplained ~€10bn gap between tax cuts and savings during the rollout phase."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -2,
+                "note": "Initial cost of exemptions and tax cuts not fully offset; risk of widening the deficit."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "€40bn tax cut risks expanding deficit if €30bn savings underperform."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Transitional deficit pressure before savings materialize."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Effect contingent on growth gains (overtime, return to employment); risk of permanent revenue loss if assumptions are not verified.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Permanent tax cuts create debt risk if savings and growth disappoint."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Effect contingent on expected growth gains (2% of GDP via overtime hours)."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -1,
+                "note": "If growth returns thanks to the reforms, the negative impact could ease."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "Structural revenue loss persists."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Savings and growth effects begin to stabilize debt path."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Long-term trajectory not specified; effect depends on productivity assumptions and the materialization of second-round effects absent from the program.",
+            "supported_by": [
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Long-run debt effect remains exposed to growth and rate assumptions absent from the text."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Long-term trajectory not specified; depends on the materialization of second-round effects."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "In the long run, debt effects depend on the realization of growth and savings assumptions."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Long-term effect depends heavily on industrial capacity rebuild."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Debt trajectory improves if productivity gains persist."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "climate",
+        "dimension_note": "No emissions trajectory; nuclear strengthened (400 TWh/year, long-term contracts 30 TWh/year) but end of renewables support, removal of ZAN, neonicotinoids re-authorized.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -2,
+              -1
+            ],
+            "note": "End of support for new renewables and deferral of projects slow decarbonization; removal of ZAN and neonicotinoids weigh in immediately.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-manual",
+              "gemini-3-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Wind and solar support stops while nuclear gains take longer to materialize."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "End of support for new renewables and deferral of authorized projects slow the decarbonization trajectory."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -2,
+                "note": "End of ZAN, return of neonicotinoids, end of renewables subsidies: increased emissions and artificialization."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -2,
+                "note": "Stops renewable deployment, reauthorizes pesticides."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -1,
+                "note": "Near-term slowdown in capacity additions."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -2,
+            "score_interval": [
+              -2,
+              -1
+            ],
+            "note": "The combined end of renewables support and removal of regulatory constraints prolongs the unfavorable trajectory, partly offset by the nuclear mix.",
+            "supported_by": [
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "Lower renewable build-out is partly offset by nuclear and carbon-border policy."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "If 80-year nuclear extension is enacted, the electricity mix remains decarbonized; land sobriety degraded by ZAN removal."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -2,
+                "note": "The absence of regulatory constraints prolongs the unfavorable trajectory, even if nuclear partially offsets it."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -2,
+                "note": "Cumulative effect of suppressed ZAN and halted renewables."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -2,
+                "note": "Cumulative gap in decarbonization trajectory widens."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": -2,
+            "score_interval": [
+              -2,
+              -1
+            ],
+            "note": "Decades without an ambitious climate policy widen the gap with European commitments; adaptation costs concentrated on the long horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "deepseek-manual",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "gemini-3-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -2,
+                "note": "Weaker constraints and slower non-nuclear build-out compound without an emissions path."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "Delay of the transition will concentrate adaptation costs on the long horizon."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -2,
+                "note": "The cumulative effect of decades without an ambitious climate policy widens the gap with European commitments."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "Nuclear expansion (if successful) eventually begins to cap emissions."
+              },
+              {
+                "model": "qwen3.6",
+                "score": -2,
+                "note": "Long-term adaptation costs increase without early mitigation."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Program silent on the organization and financing of the health system; health is mentioned as expenditure covered by contributions, with no specific reform.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "No measure is specified on the organization of care, hospitals, medical deserts, or long-term care.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No healthcare measure is specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Program does not explicitly address the organization of care over this horizon."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "Program does not specify any measure on health."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Absence of structural reform of healthcare; no framework for financing in the face of ageing.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No healthcare financing or access path is provided."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "No measure on medical deserts, hospitals, or long-term care."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "Program does not specify any measure on health."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Ageing and the associated health spending are not addressed over the long horizon.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Ageing-related health spending is not addressed."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Program does not specify any structural healthcare reform over this horizon."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "Program does not specify any measure on health."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on health over this horizon."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Reorientation of apprenticeship toward sub-Bac+2 levels and industry, 30% increase in agricultural education; primary/secondary and general higher education not addressed.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "Reallocation of apprenticeship subsidies produces winners (sub-Bac+2 tracks) and losers (higher-education apprenticeship); net short-term effect uncertain.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "qwen3.6"
+            ],
+            "dissenters": [
+              "deepseek-manual",
+              "gemini-3-pro"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No school or university package is specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Gradual reorientation of apprenticeship subsidies; net effects on employment integration measurable in the medium term."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -1,
+                "note": "Reallocation of apprenticeship subsidies may reduce slots in higher-tertiary education, affecting some students."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": -1,
+                "note": "Immediate reduction in subsidies for higher education apprenticeships."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "Governance shift and aid reallocation take effect."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "30% increase in agricultural-education enrollment and better training/employment alignment for industrial sectors; no action on general education.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "deepseek-manual",
+              "gemini-3-pro"
+            ],
+            "dissenters": [
+              "claude-opus-4-7",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No education investment or attainment target is supplied."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 1,
+                "note": "30% increase in agricultural-education enrollment and targeted industrial training programs."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "Net effect uncertain; depends on improved labor-market integration of young people via the redirected tracks."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Equilibrium reached in vocational pathways."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Better alignment of training with industrial needs."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              1
+            ],
+            "note": "In the long run, possible technical human-capital gains but no general-education trajectory; long-term effect contingent on the success of the refocusing.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "gemini-3-pro"
+            ],
+            "dissenters": [
+              "deepseek-manual",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No long-run human-capital trajectory is provided."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Program silent on general education over this horizon."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 1,
+                "note": "In the long run, better training/employment alignment could strengthen technical human capital."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Long-term effect stabilizes."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 1,
+                "note": "Sustained improvement in technical skill supply."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Residential housing not addressed; APL and social housing included in the CSU cap at 70% of net SMIC; ZAN removal frees rural land but without an urban supply policy.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [
+              -1,
+              0
+            ],
+            "note": "CSU cap may reduce APL for households cumulating benefits; no supply or housing-access measure is formulated.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual"
+            ],
+            "dissenters": [
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": -1,
+                "note": "APL-like aid can be capped for non-working adults; supply is not addressed."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": -1,
+                "note": "CSU cap may reduce APL for households cumulating benefits; no supply measure."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": -1,
+                "note": "CSU cap potentially reduces APL for the most dependent households."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on urban housing access."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "No medium-term housing supply strategy; no urban policy or measure on prices.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "No housing supply or price policy is specified."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Program does not propose a housing-supply strategy over this horizon."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "No structural measure on housing supply or demand."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on urban housing access."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [
+              0,
+              0
+            ],
+            "note": "Long-term affordability not addressed; no structural housing-supply trajectory.",
+            "supported_by": [
+              "gpt-5.5-thinking",
+              "claude-opus-4-7",
+              "deepseek-manual",
+              "gemini-3-pro",
+              "qwen3.6"
+            ],
+            "dissenters": [],
+            "per_model": [
+              {
+                "model": "gpt-5.5-thinking",
+                "score": 0,
+                "note": "Long-run affordability is not addressed."
+              },
+              {
+                "model": "claude-opus-4-7",
+                "score": 0,
+                "note": "Program silent on long-term housing."
+              },
+              {
+                "model": "deepseek-manual",
+                "score": 0,
+                "note": "No structural measure on housing supply or demand."
+              },
+              {
+                "model": "gemini-3-pro",
+                "score": 0,
+                "note": "Program does not specify measures on urban housing access."
+              },
+              {
+                "model": "qwen3.6",
+                "score": 0,
+                "note": "No material change from counterfactual."
+              }
+            ]
+          }
+        },
+        "row_supported_by": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ],
+        "row_dissenters": []
+      }
+    ],
+    "reasoning": "Four models out of five conclude that the intergenerational effect is mixed: net gains for active seniors extending their working life (refurbished cumul emploi-retraite, early exemption) and marginal benefits for young workers (overtime hours, voluntary funded pillar), offset by climate and budgetary debt deferred onto future generations. gemini-3-pro is the only model concluding to a young-to-old transfer, weighing more heavily the senior exemptions and the reduction of higher-education apprenticeship subsidies. Magnitudes are quantified only at the individual case-type level; no macroeconomic trajectory of debt, emissions, or housing is provided, which makes a global quantification of the net transfer impossible.",
+    "source_refs": [
+      "sources.md#proposition-1-zero-cotisation",
+      "sources.md#proposition-2-ria",
+      "sources.md#proposition-3-seniors",
+      "sources.md#proposition-4-csu",
+      "sources.md#proposition-5-prelevements",
+      "sources.md#proposition-6-electricite",
+      "sources.md#proposition-9-formation",
+      "sources.md#proposition-10",
+      "sources.md#proposition-11-transmission-capital",
+      "sources.md#proposition-12-epargne",
+      "sources.md#travail-gagnant",
+      "sources.md#produire-plus",
+      "sources.md#re-armer-notre-agriculture"
+    ],
+    "confidence": 0.55,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        {
+          "model": "gemini-3-pro",
+          "view": "Young-to-old transfer: senior exemptions and the reduction of higher-education apprenticeship subsidies outweigh the diffuse gains accruing to young workers."
+        }
+      ]
+    }
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Public debt at 116% of GDP and rising, deficit ~€175 billion, continued deindustrialization (industry <10% of GDP, industrial trade deficit >€80 billion/year), agricultural trade deficit near zero, senior employment rate at 36% vs. 60% in Europe, expanding environmental regulation, increasingly difficult housing access for young people.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "healthcare",
+      "housing",
+      "general_education",
+      "defense"
+    ],
+    "reasoning": "The five models converge on a mixed bifurcation: structural reorientation of production taxation, of the labor market (RIA, CSU, zero-contribution threshold), of industrial/agricultural sovereignty, and of the environmental trajectory (halting renewable subsidies, ZAN removal, neonicotinoids), with institutional entrenchment (referendum-based constitutional revisions, independent norms authority, Labor Code refocus). The dimensions where the silence of the sources implies near-status-quo are health, residential housing, general education, and defense. On climate, the trajectory is explicitly bent downward relative to the current framework, which constitutes a net change even though it does not improve the situation.",
+    "confidence": 0.7,
+    "supported_by": [
+      "gpt-5.5-thinking",
+      "claude-opus-4-7",
+      "deepseek-manual",
+      "gemini-3-pro",
+      "qwen3.6"
+    ],
+    "dissenters": []
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Trajectory for restoring fiscal balance",
+      "why_unsolved": "The program acknowledges debt at 116% of GDP and a €175 billion deficit but provides neither a timetable nor a quantified deficit-reduction target; the €30 billion in savings are returned as tax cuts rather than allocated to debt reduction.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-manual"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Long-term sustainability of the pay-as-you-go pension system",
+      "why_unsolved": "No parametric reform (age, contribution period, rates) is proposed; the funded pillar is voluntary and does not address the structural deficit of the pay-as-you-go system.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Access to care, medical deserts, and financing of the health system",
+      "why_unsolved": "The sources are entirely silent on care organization, medical demographics, hospital financing, prevention, and long-term care.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "gemini-3-pro",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Housing crisis and access to housing for young people and modest-income households",
+      "why_unsolved": "No supply-side, rent-regulation, homeownership-access or social-housing policy is formulated; the CSU cap may, on the contrary, reduce APL for some households.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Quantified greenhouse gas emissions trajectory and climate adaptation",
+      "why_unsolved": "No national emissions target is provided; the measures restrain renewables and land-use sobriety without a quantified counterpart on transport, buildings, or agriculture; adaptation to physical risks is explicitly deferred.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "gemini-3-pro",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "General education (primary school, collège, lycée, university)",
+      "why_unsolved": "The program addresses only vocational training and apprenticeship; general education is not addressed.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "problem": "Defense policy and military budget",
+      "why_unsolved": "No mention in the provided sources, even though the sovereign-state dimension is emphasized elsewhere.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": [
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "The zero-contribution threshold and expected savings fail to materialize: actual overtime hours/savings fall below assumptions, widening the deficit without production gains.",
+      "trigger": "Weak GDP growth or recession; labor-supply elasticity below 1; effective savings below the announced €28.5–31.7 billion range.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "The program's funding loop relies on an average increase of ~120 hours/year for employees without overtime and on return-to-work behaviors that are not modeled; in the event of weak demand or less-elastic behavior, the exemptions widen the deficit without materializing the expected revenues.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Major social tensions linked to the CSU cap at 70% of SMIC and to the unemployment reform; possible parliamentary blockage or constitutional invalidation.",
+      "trigger": "Large-scale social movements; referral to the Conseil constitutionnel; appeals based on the European Convention on Human Rights.",
+      "probability": 0.5,
+      "severity": 0.75,
+      "reasoning": "The mathematical cap reduces the income of highly precarious households accumulating benefits (cited examples: up to -€410/month); absorption assumes a rapid rise in employment that is not guaranteed. The scope of environmental appeals and the role of the judge are also exposed to invalidation under European Convention law.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "gemini-3-pro",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "European infringement proceedings for non-compliance with environmental directives and single-market rules.",
+      "trigger": "Unilateral removal of the ZAN, repeal of ICPE norms, reauthorization of neonicotinoids, and trade-reciprocity clauses incompatible with EU law; customs reorientation outside the harmonized framework.",
+      "probability": 0.45,
+      "severity": 0.55,
+      "reasoning": "The program publicly assumes the challenge of certain harmonized European rules (agriculture, customs, standards); the Commission can launch litigation leading to financial penalties and a partial rollback of the measures.",
+      "supported_by": [
+        "claude-opus-4-7",
+        "deepseek-manual",
+        "gemini-3-pro",
+        "qwen3.6"
+      ],
+      "dissenters": []
+    },
+    {
+      "scenario": "Nuclear schedule delayed without renewable backup; target reduction in industrial electricity prices not achieved.",
+      "trigger": "Unfavorable ASN opinion on 80-year extensions; EPR2 delay; refusal by EDF/suppliers to sign long-term contracts at 30 TWh/year at the targeted prices.",
+      "probability": 0.35,
+      "severity": 0.6,
+      "reasoning": "Halting public support for new renewables removes a safety net; a nuclear delay combined with lower renewable availability would lead to volatile wholesale prices contrary to the -10% target on industrial prices.",
+      "supported_by": [
+        "gpt-5.5-thinking",
+        "claude-opus-4-7"
+      ],
+      "dissenters": []
+    }
+  ],
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "40 Md€ d'allègements ciblés (cotisations + impôts de production)",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "30 Md€ d'économies via réforme assurance chômage et plafonnement aides non contributives à 70% SMIC",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Absence de trajectoire pluriannuelle chiffrée de déficit/dette publique",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Suppression du ZAN, du principe de précaution (révision constitutionnelle référendaire) et arrêt des soutiens publics aux nouvelles capacités ENR",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Objectif 400 TWh/an de nucléaire avec contrats long terme à 30 TWh/an pour les électro-intensifs",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Aucune trajectoire chiffrée d'émissions de gaz à effet de serre",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Silence des sources sur la santé, le logement résidentiel, l'éducation générale et la défense",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Cumul emploi-retraite rénové et exonération anticipée pour seniors ayant validé tous leurs trimestres",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Création du Revenu d'incitation à l'activité (RIA, fusion RSA + prime d'activité + ASS) avec dégressivité 30%",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Réorientation des aides à l'apprentissage vers infra-Bac+2 et industrie",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Réautorisation de néonicotinoïdes (acétamipride) et inscription de l'agriculture comme intérêt fondamental",
+        "models": [
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      },
+      {
+        "claim_id": "Recentrage du Code du travail sur 50 principes indépassables et autorité indépendante de veto sur les normes",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro"
+        ]
+      },
+      {
+        "claim_id": "Absence de réforme paramétrique des retraites; étage de capitalisation volontaire seul levier sur le long terme",
+        "models": [
+          "gpt-5.5-thinking",
+          "claude-opus-4-7",
+          "deepseek-manual",
+          "gemini-3-pro",
+          "qwen3.6"
+        ]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "Position sur l'axe social/culturel",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "score 1 — moderate right, based on welfare conditionality without an explicit identity turn"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "score 2 — assertive right, strong welfare conditionality"
+          },
+          {
+            "model": "deepseek-manual",
+            "position": "score 3 — traditional right, conditionality and inscription of fundamental interests"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "score 3 — traditional right structured around work"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "score 2 — moderate social conservatism, no explicit cultural agenda"
+          }
+        ]
+      },
+      {
+        "claim_id": "Direction du transfert intergénérationnel net",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "mixed — gains for active seniors and workers doing overtime, debt deferred"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "mixed — benefits concentrated on active seniors and workers, climate debt deferred"
+          },
+          {
+            "model": "deepseek-manual",
+            "position": "mixed — not globally quantifiable; gains for active seniors vs. deferred climate debt"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "young_to_old — senior exemptions and the reduction of higher-education apprenticeship subsidies prevail"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "mixed — diffuse gains with adaptation costs deferred onto young people"
+          }
+        ]
+      },
+      {
+        "claim_id": "Magnitude du transfert intergénérationnel",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "qualitative + case-types in €/year, no global magnitude"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "+€500/year on overtime hours; -€410/month for precarious households capped by CSU; no aggregation"
+          },
+          {
+            "model": "deepseek-manual",
+            "position": "not quantifiable at the macroeconomic level for lack of closure"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "magnitude described as variable, with no central estimate"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "order of magnitude ~€800/person/year for net beneficiaries, no aggregation"
+          }
+        ]
+      },
+      {
+        "claim_id": "Note de la dimension institutionnelle/démocratique",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "C — institutional lock-in is risky but coherent"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "C — referendum-based constitutional revisions raise a rigidification risk"
+          },
+          {
+            "model": "deepseek-manual",
+            "position": "D — the cumulation of constitutional revisions and the independent authority creates a democratic risk"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "B — procedural clarity and referendum mandates are deemed democratic"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "C — balance between clarity and concentration of regulatory power"
+          }
+        ]
+      },
+      {
+        "claim_id": "Note de la dimension sécurité/souveraineté",
+        "positions": [
+          {
+            "model": "gpt-5.5-thinking",
+            "position": "B — energy and industrial sovereignty well articulated"
+          },
+          {
+            "model": "claude-opus-4-7",
+            "position": "C — sovereignty pillar coherent but customs at constant headcount"
+          },
+          {
+            "model": "deepseek-manual",
+            "position": "C — productive sovereignty strengthened but blind spots on defense and immigration"
+          },
+          {
+            "model": "gemini-3-pro",
+            "position": "C — defense and police absent"
+          },
+          {
+            "model": "qwen3.6",
+            "position": "B — reciprocity and nuclear power form a solid sovereignty framework"
+          }
+        ]
+      }
+    ],
+    "coverage": {
+      "gpt-5.5-thinking": "complete",
+      "claude-opus-4-7": "complete",
+      "deepseek-manual": "complete",
+      "gemini-3-pro": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [
+          3,
+          4
+        ],
+        "modal": 3,
+        "dissent_count": 1
+      },
+      "social_cultural": {
+        "interval": [
+          1,
+          3
+        ],
+        "modal": null,
+        "dissent_count": 5
+      },
+      "sovereignty": {
+        "interval": [
+          2,
+          3
+        ],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [
+          -1,
+          2
+        ],
+        "modal": 1,
+        "dissent_count": 2
+      },
+      "ecological": {
+        "interval": [
+          -4,
+          -2
+        ],
+        "modal": -2,
+        "dissent_count": 2
+      },
+      "overall_spectrum": {
+        "modal_label": "droite",
+        "distribution": {
+          "droite": 5
+        },
+        "dissent_count": 0
+      }
+    }
+  },
+  "coverage_warning": false,
+  "flagged_for_review": [
+    {
+      "claim": "The deepseek-manual.json raw-output file declares model.provider='anthropic' and model.version='claude-opus-4-7', identical to the metadata of claude-manual.json.",
+      "claimed_by": [
+        "deepseek-manual"
+      ],
+      "issue": "Manual attestation error: two raw-outputs share the same model identifier, which would prevent unique-identifier coverage. The aggregation uses the identifier 'deepseek-manual' (inferred from the file name) to preserve the separation of contributions and avoid a collision in agreement_map.coverage.",
+      "suggested_action": "The operator must re-attest the deepseek raw-output with the correct metadata (provider='deepseek', effective version of the model used) before re-ingestion.",
+      "resolution": "approved",
+      "reviewed_at": "2026-04-26T01:56:28.102Z",
+      "reviewer_id": "benoit"
+    }
+  ]
+}

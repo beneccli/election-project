@@ -1,0 +1,378 @@
+{
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "Gains nets concentrés sur seniors actifs (~+3 600 €/an via cumul emploi-retraite) et actifs faisant des heures supplémentaires (~+500 €/an); 25 ans bénéficient marginalement (zéro cotisation au-delà de 1 623 h, étage capitalisation volontaire) mais héritent d'une dette climatique et d'un déficit de logement non traités; aucune trajectoire chiffrée d'émissions ni de dette n'est fournie.",
+      "units": "€/personne/an et qualitatif (trajectoires non quantifiées)",
+      "confidence": 0.4,
+      "caveats": "Magnitudes individuelles documentées uniquement via cas-types; effets macroéconomiques d'équilibre général (dette, climat, logement) qualitatifs faute de bouclage chiffré dans les sources."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Allègements de cotisations salariales/patronales sur heures supplémentaires (zéro cotisation au-delà de 1 623 h) bénéficient aux jeunes actifs; absence de trajectoire de dette publique reporte le coût budgétaire sur les générations futures.",
+        "quantified": "+~500 €/an sur cas-type heures supplémentaires; ~10 Md€ d'écart non bouclé entre 40 Md€ d'allègements et 30 Md€ d'économies"
+      },
+      "housing": {
+        "summary": "Aucune politique d'offre ou d'accès au logement n'est formulée; le plafonnement à 70% du SMIC du Compte Social Unique peut réduire les APL des ménages cumulant aides, sans alternative côté offre.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Pas de réforme paramétrique du régime par répartition; ouverture d'un étage de capitalisation volontaire dont les bénéfices se matérialiseraient à très long terme sans engagement de l'employeur.",
+        "quantified": "socle de capital évoqué ~1 000 Md€ à terme (non chiffré pour le 25 ans)"
+      },
+      "labor_market": {
+        "summary": "Recentrage de l'apprentissage vers infra-Bac+2 et industrie réduit les aides aux apprentis du supérieur; RIA conditionne l'aide à l'activité avec dégressivité 30%; effet net dépend de l'insertion dans les filières réorientées.",
+        "quantified": "RIA: socle 300 €/insertion 250 €, dégressivité 30%; baisse des aides apprentissage Bac+2 et plus"
+      },
+      "environmental_debt": {
+        "summary": "Suppression du ZAN, arrêt des soutiens publics aux nouvelles capacités solaires/éoliennes et révision constitutionnelle du principe de précaution reportent l'effort de décarbonation et accroissent les coûts d'adaptation futurs.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un actif de 25 ans en 2027, le programme apporte un gain net mesurable sur les heures supplémentaires et l'emploi des seniors avec qui il cohabite, mais reporte sur lui une dette climatique et budgétaire non chiffrée, un marché du logement non adressé et une réforme des retraites laissée à un mécanisme volontaire de capitalisation."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Cumul emploi-retraite rénové et exonération anticipée pour seniors ayant tous leurs trimestres améliorent significativement le revenu net des seniors actifs souhaitant prolonger leur activité.",
+        "quantified": "cas-type Michel: +17 500 € sur 2 ans; ~+300 €/mois net pour 65 ans cumulant emploi et retraite"
+      },
+      "pension": {
+        "summary": "Pensions actuelles préservées sans réforme paramétrique; pouvoir d'achat des retraités non actifs inchangé hors effets indirects (énergie, fiscalité de transmission).",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Programme silencieux sur l'organisation et le financement du système de santé; la santé reste mentionnée comme dépense couverte par cotisations sans réforme spécifique.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un retraité de 65 ans en 2027, le programme renforce les incitations à prolonger l'activité (gains nets cas-type de plusieurs centaines d'euros par mois) et préserve les pensions existantes, mais ne traite pas la santé ni les enjeux de dépendance."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Pas de réforme paramétrique du régime par répartition; cumul emploi-retraite rénové et étage de capitalisation volontaire produisent des gains progressifs sans changer l'équilibre du système.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [0, 1],
+            "note": "Effets immédiats limités: cumul emploi-retraite incite seniors avec tous trimestres mais montée en charge graduelle; capitalisation volontaire à peine amorcée.",
+            "supported_by": ["deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Senior-work exemptions raise income for those still working after full contribution quarters." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Cumul emploi-retraite rénové incite seniors avec tous trimestres à prolonger; effet limité." },
+              { "model": "deepseek-manual", "score": 0, "note": "Effet très limité, seuls les départs en cumul emploi-retraite augmentent progressivement." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Near-term effect focuses on senior tax exemptions." },
+              { "model": "qwen3.6", "score": 0, "note": "Limited near-term effect as behavioral adjustment takes time." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [0, 1],
+            "note": "Montée en charge de l'épargne retraite individuelle et hausse du taux d'emploi des seniors; effets visibles mais conditionnés à l'adoption.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["deepseek-manual"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Voluntary retirement savings can accumulate, but required contributions are not specified." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Montée en charge progressive de l'épargne retraite individuelle; effet sur taux d'emploi seniors." },
+              { "model": "deepseek-manual", "score": 0, "note": "Pas de modification des paramètres de la répartition; capitalisation volontaire commence à peine à produire des effets." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Capitalization layer begins building assets." },
+              { "model": "qwen3.6", "score": 1, "note": "Extended careers increase contribution base and delay payouts." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [1, 1],
+            "note": "Socle de capital productif (~1 000 Md€ à terme) et amélioration du ratio de dépendance via emploi des seniors; effet sur soutenabilité non chiffré.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 1, "note": "Long saving stock may matter, but replacement-rate impact remains unquantified." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Constitution d'un socle de capital productif ~1 000 Md€ à terme évoquée; effet sur soutenabilité non chiffré." },
+              { "model": "deepseek-manual", "score": 1, "note": "L'étage par capitalisation, si largement adopté, pourrait fournir un complément de revenu aux futurs retraités." },
+              { "model": "gemini-1.5-pro", "score": 1, "note": "Capitalization supplements baseline pensions." },
+              { "model": "qwen3.6", "score": 1, "note": "Structural improvement in dependency ratio if uptake sustains." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "40 Md€ d'allègements gagés sur 30 Md€ d'économies sans bouclage explicite; aucune trajectoire pluriannuelle de déficit ni de dette n'est fournie; effet long terme conditionné aux gains de croissance.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": null,
+            "score_interval": [-2, 0],
+            "note": "Coût initial des allègements (40 Md€) non entièrement compensé par les économies (30 Md€); risque de creusement du déficit en phase de mise en place.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Savings and restitution are both stated; net deficit path is not specified." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Écart non explicité de ~10 Md€ entre allègements et économies dans la phase de mise en place." },
+              { "model": "deepseek-manual", "score": -2, "note": "Coût initial des exonérations et baisses d'impôts non entièrement compensé; risque de creusement du déficit." },
+              { "model": "gemini-1.5-pro", "score": -1, "note": "€40bn tax cut risks expanding deficit if €30bn savings underperform." },
+              { "model": "qwen3.6", "score": 0, "note": "Transitional deficit pressure before savings materialize." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -1,
+            "score_interval": [-1, 0],
+            "note": "Effet conditionné aux gains de croissance (heures sup., retour à l'emploi); risque de perte permanente de recettes si hypothèses non vérifiées.",
+            "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Permanent tax cuts create debt risk if savings and growth disappoint." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Effet conditionné aux gains de croissance attendus (2% PIB via heures supplémentaires)." },
+              { "model": "deepseek-manual", "score": -1, "note": "Si la croissance revient grâce aux réformes, l'impact négatif pourrait s'atténuer." },
+              { "model": "gemini-1.5-pro", "score": -1, "note": "Structural revenue loss persists." },
+              { "model": "qwen3.6", "score": -1, "note": "Savings and growth effects begin to stabilize debt path." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "Trajectoire long terme non spécifiée; effet dépend des hypothèses de productivité et de la matérialisation des effets de second tour absents du programme.",
+            "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+            "dissenters": ["gpt-5.5-thinking", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Long-run debt effect remains exposed to growth and rate assumptions absent from the text." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Trajectoire long terme non spécifiée; dépend de la matérialisation des effets de second tour." },
+              { "model": "deepseek-manual", "score": 0, "note": "À long terme, les effets sur la dette dépendent de la réalisation des hypothèses de croissance et des économies." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Long-term effect depends heavily on industrial capacity rebuild." },
+              { "model": "qwen3.6", "score": -1, "note": "Debt trajectory improves if productivity gains persist." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Pas de trajectoire d'émissions; nucléaire renforcé (400 TWh/an, contrats long terme 30 TWh/an) mais arrêt soutiens ENR, suppression ZAN, néonicotinoïdes réautorisés.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [-2, -1],
+            "note": "Arrêt soutiens nouvelles ENR et report des projets ralentissent la décarbonation; suppression ZAN et néonicotinoïdes pèsent immédiatement.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "qwen3.6"],
+            "dissenters": ["deepseek-manual", "gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Wind and solar support stops while nuclear gains take longer to materialize." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Arrêt soutiens nouveaux ENR et report de projets autorisés ralentissent la trajectoire de décarbonation." },
+              { "model": "deepseek-manual", "score": -2, "note": "Fin du ZAN, reprise des néonicotinoïdes, arrêt des subventions ENR: augmentation des émissions et de l'artificialisation." },
+              { "model": "gemini-1.5-pro", "score": -2, "note": "Stops renewable deployment, reauthorizes pesticides." },
+              { "model": "qwen3.6", "score": -1, "note": "Near-term slowdown in capacity additions." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": -2,
+            "score_interval": [-2, -1],
+            "note": "Cumul de l'arrêt des ENR et de la suppression des contraintes normatives prolonge la trajectoire défavorable, partiellement atténuée par le mix nucléaire.",
+            "supported_by": ["deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": ["gpt-5.5-thinking", "claude-opus-4-7"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "Lower renewable build-out is partly offset by nuclear and carbon-border policy." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Si prolongation nucléaire 80 ans actée, mix électrique reste décarboné; sobriété foncière dégradée par suppression ZAN." },
+              { "model": "deepseek-manual", "score": -2, "note": "L'absence de contraintes normatives prolonge la trajectoire défavorable, même si le nucléaire atténue partiellement." },
+              { "model": "gemini-1.5-pro", "score": -2, "note": "Cumulative effect of suppressed ZAN and halted renewables." },
+              { "model": "qwen3.6", "score": -2, "note": "Cumulative gap in decarbonization trajectory widens." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": -2,
+            "score_interval": [-2, -1],
+            "note": "Décennies sans politique climatique ambitieuse aggravent l'écart aux engagements européens; coûts d'adaptation concentrés sur l'horizon long.",
+            "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "qwen3.6"],
+            "dissenters": ["claude-opus-4-7", "gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -2, "note": "Weaker constraints and slower non-nuclear build-out compound without an emissions path." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Décalage de la transition concentrera les coûts d'adaptation sur l'horizon long." },
+              { "model": "deepseek-manual", "score": -2, "note": "L'effet cumulé de décennies sans politique climatique ambitieuse aggrave l'écart aux engagements européens." },
+              { "model": "gemini-1.5-pro", "score": -1, "note": "Nuclear expansion (if successful) eventually begins to cap emissions." },
+              { "model": "qwen3.6", "score": -2, "note": "Long-term adaptation costs increase without early mitigation." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "health",
+        "dimension_note": "Programme silencieux sur l'organisation et le financement du système de santé; la santé est mentionnée comme dépense couverte par cotisations sans réforme spécifique.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucune mesure n'est spécifiée sur l'organisation des soins, l'hôpital, les déserts médicaux ou la dépendance.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No healthcare measure is specified." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne traite pas explicitement de l'organisation des soins sur cet horizon." },
+              { "model": "deepseek-manual", "score": 0, "note": "Programme ne spécifie pas de mesure sur la santé." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on health over this horizon." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Absence de réforme structurelle de la santé; aucun cadrage du financement face au vieillissement.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No healthcare financing or access path is provided." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Aucune mesure sur déserts médicaux, hôpital ou dépendance." },
+              { "model": "deepseek-manual", "score": 0, "note": "Programme ne spécifie pas de mesure sur la santé." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on health over this horizon." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Vieillissement et dépenses de santé associées non adressés sur l'horizon long.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Ageing-related health spending is not addressed." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne précise pas de réforme structurelle de la santé sur cet horizon." },
+              { "model": "deepseek-manual", "score": 0, "note": "Programme ne spécifie pas de mesure sur la santé." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on health over this horizon." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "education",
+        "dimension_note": "Réorientation de l'apprentissage vers infra-Bac+2 et industrie, hausse de 30% de l'enseignement agricole; éducation primaire/secondaire et universitaire généraliste non traitées.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 0,
+            "score_interval": [-1, 0],
+            "note": "Réallocation des aides apprentissage produit gagnants (filières infra-Bac+2) et perdants (apprentissage du supérieur); effet net incertain à court terme.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "qwen3.6"],
+            "dissenters": ["deepseek-manual", "gemini-1.5-pro"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No school or university package is specified." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Réorientation des aides apprentissage progressive; effets nets sur insertion mesurables à moyen terme." },
+              { "model": "deepseek-manual", "score": -1, "note": "Réallocation des aides à l'apprentissage peut réduire les places en supérieur tertiaire, affectant certains étudiants." },
+              { "model": "gemini-1.5-pro", "score": -1, "note": "Immediate reduction in subsidies for higher education apprenticeships." },
+              { "model": "qwen3.6", "score": 0, "note": "Governance shift and aid reallocation take effect." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [0, 1],
+            "note": "Hausse 30% effectifs enseignement agricole et meilleure adéquation formation-emploi pour les filières industrielles; aucune action sur l'éducation générale.",
+            "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "gemini-1.5-pro"],
+            "dissenters": ["claude-opus-4-7", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No education investment or attainment target is supplied." },
+              { "model": "claude-opus-4-7", "score": 1, "note": "Hausse 30% effectifs enseignement agricole et formations industrielles ciblées." },
+              { "model": "deepseek-manual", "score": 0, "note": "Effet net incertain, dépend de l'amélioration de l'insertion des jeunes via les filières réorientées." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Equilibrium reached in vocational pathways." },
+              { "model": "qwen3.6", "score": 1, "note": "Better alignment of training with industrial needs." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 1],
+            "note": "À long terme, gain possible de capital humain technique mais aucune trajectoire d'éducation générale; effet long terme conditionné à la réussite du recentrage.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+            "dissenters": ["deepseek-manual", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No long-run human-capital trajectory is provided." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme silencieux sur l'éducation générale sur cet horizon." },
+              { "model": "deepseek-manual", "score": 1, "note": "À long terme, une meilleure adéquation formation-emploi pourrait renforcer le capital humain technique." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Long-term effect stabilizes." },
+              { "model": "qwen3.6", "score": 1, "note": "Sustained improvement in technical skill supply." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Logement résidentiel non traité; APL et logement social inclus dans le plafond CSU à 70% SMIC; suppression du ZAN libère le foncier rural mais sans politique d'offre urbaine.",
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": -1,
+            "score_interval": [-1, 0],
+            "note": "Plafonnement CSU peut réduire les APL pour ménages cumulant aides; aucune mesure d'offre ou d'accès au logement n'est formulée.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+            "dissenters": ["gemini-1.5-pro", "qwen3.6"],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": -1, "note": "APL-like aid can be capped for non-working adults; supply is not addressed." },
+              { "model": "claude-opus-4-7", "score": -1, "note": "Plafonnement CSU peut réduire APL pour ménages cumulant aides; aucune mesure d'offre." },
+              { "model": "deepseek-manual", "score": -1, "note": "Plafonnement CSU réduit potentiellement les APL pour les ménages les plus dépendants." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on urban housing access." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Aucune stratégie d'offre de logement à moyen terme; pas de politique urbaine ni de mesure sur les prix.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "No housing supply or price policy is specified." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme ne propose pas de stratégie d'offre de logement sur cet horizon." },
+              { "model": "deepseek-manual", "score": 0, "note": "Pas de mesure structurelle sur l'offre ou la demande de logement." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on urban housing access." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [0, 0],
+            "note": "Affordabilité long terme non adressée; aucune trajectoire d'offre de logement structurel.",
+            "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+            "dissenters": [],
+            "per_model": [
+              { "model": "gpt-5.5-thinking", "score": 0, "note": "Long-run affordability is not addressed." },
+              { "model": "claude-opus-4-7", "score": 0, "note": "Programme silencieux sur le logement long terme." },
+              { "model": "deepseek-manual", "score": 0, "note": "Pas de mesure structurelle sur l'offre ou la demande de logement." },
+              { "model": "gemini-1.5-pro", "score": 0, "note": "Program does not specify measures on urban housing access." },
+              { "model": "qwen3.6", "score": 0, "note": "No material change from counterfactual." }
+            ]
+          }
+        },
+        "row_supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "row_dissenters": []
+      }
+    ],
+    "reasoning": "Quatre modèles sur cinq concluent à un effet intergénérationnel mixte: gains nets pour seniors actifs prolongeant leur activité (cumul emploi-retraite, exonération anticipée) et bénéfices marginaux pour jeunes actifs (heures supplémentaires, capitalisation volontaire), compensés par une dette climatique et budgétaire reportée sur les générations futures. Gemini-1.5-pro est le seul modèle à conclure à un transfert young_to_old, en pondérant davantage les exonérations seniors et la réduction des aides à l'apprentissage du supérieur. Les magnitudes ne sont chiffrées qu'au niveau des cas-types individuels; aucune trajectoire macroéconomique de dette, d'émissions ou de logement n'est fournie, rendant impossible une quantification globale du transfert net.",
+    "source_refs": [
+      "sources.md#proposition-1-zero-cotisation",
+      "sources.md#proposition-2-ria",
+      "sources.md#proposition-3-seniors",
+      "sources.md#proposition-4-csu",
+      "sources.md#proposition-5-prelevements",
+      "sources.md#proposition-6-electricite",
+      "sources.md#proposition-9-formation",
+      "sources.md#proposition-10",
+      "sources.md#proposition-11-transmission-capital",
+      "sources.md#proposition-12-epargne",
+      "sources.md#travail-gagnant",
+      "sources.md#produire-plus",
+      "sources.md#re-armer-notre-agriculture"
+    ],
+    "confidence": 0.55,
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        {
+          "model": "gemini-1.5-pro",
+          "view": "Transfert young_to_old: les exonérations seniors et la réduction des aides à l'apprentissage du supérieur l'emportent sur les gains diffus dont bénéficient les jeunes actifs."
+        }
+      ]
+    }
+  }
+}

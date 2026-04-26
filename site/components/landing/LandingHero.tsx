@@ -6,24 +6,12 @@
 // spec §2 and §3.2).
 
 import { CONTEXT_STATS, CONTEXT_SERIES } from "@/lib/landing-context";
-import { t, type Lang } from "@/lib/i18n";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 import StakesAreaChart from "./StakesAreaChart";
 
 interface Props {
   lang: Lang;
 }
-
-// Local copy strings. Consolidated into UI_STRINGS in task 0116.
-const HERO_TITLE_LEAD = { fr: "Que proposent", en: "What are the candidates" };
-const HERO_TITLE_EM = { fr: "vraiment", en: "actually" };
-const HERO_TITLE_TAIL = {
-  fr: "les candidats à l\u2019Élysée\u00a0?",
-  en: "proposing for France\u00a0?",
-};
-const HERO_BODY = {
-  fr: "Chaque programme analysé par 4 à 5 grands modèles d\u2019IA sur des dimensions identiques. Les désaccords entre modèles sont préservés. Les sources, prompts et sorties brutes sont publics. L\u2019objectif\u00a0: l\u2019analyse, pas l\u2019advocacy.",
-  en: "Every programme analysed by 4–5 frontier AI models on identical dimensions. Disagreement between models preserved. Sources, prompts and raw outputs are public. The goal: analysis, not advocacy.",
-};
 
 export default function LandingHero({
   lang,
@@ -36,18 +24,18 @@ export default function LandingHero({
           {/* Left: title + body */}
           <div className="flex flex-col gap-5">
             <p className="uppercase text-xs font-semibold tracking-widest text-accent">
-              {lang === "fr" ? "Présidentielle française" : "French presidential election"}
+              {t(UI_STRINGS.HERO_KICKER, lang)}
             </p>
             <h1 className=" max-w-[640px] font-display text-4xl md:text-[clamp(38px,6vw,68px)] font-bold leading-[1.05] tracking-tight text-[color:var(--text)]">
-              {t(HERO_TITLE_LEAD, lang)}
+              {t(UI_STRINGS.HERO_TITLE_LEAD, lang)}
               <br />
               <em className="font-semibold italic text-[color:var(--accent)]">
-                {t(HERO_TITLE_EM, lang)}
+                {t(UI_STRINGS.HERO_TITLE_EM, lang)}
               </em>{" "}
-              {t(HERO_TITLE_TAIL, lang)}
+              {t(UI_STRINGS.HERO_TITLE_TAIL, lang)}
             </h1>
             <p className="max-w-prose max-w-[580px] text-base md:text-lg text-[color:var(--text-secondary)] leading-relaxed">
-              {t(HERO_BODY, lang)}
+              {t(UI_STRINGS.HERO_BODY, lang)}
             </p>
           </div>
 

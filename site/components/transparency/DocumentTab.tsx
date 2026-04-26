@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Components } from "react-markdown";
 import { slugify } from "@/lib/slug";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { useLang } from "@/lib/lang-context";
 
 type FetchState =
   | { phase: "loading" }
@@ -22,6 +24,7 @@ export function DocumentTab({
   humanReviewCompleted: boolean;
   anchor: string | undefined;
 }) {
+  const { lang } = useLang();
   const fileUrl = `/candidates/${id}/${versionDate}/sources.md`;
   const [state, setState] = React.useState<FetchState>({ phase: "loading" });
 
@@ -66,6 +69,7 @@ export function DocumentTab({
       versionDate={versionDate}
       humanReviewCompleted={humanReviewCompleted}
       state={state}
+      lang={lang}
     />
   );
 }
@@ -79,11 +83,13 @@ export function DocumentTabView({
   versionDate,
   humanReviewCompleted,
   state,
+  lang = "fr",
 }: {
   fileUrl: string;
   versionDate: string;
   humanReviewCompleted: boolean;
   state: FetchState;
+  lang?: Lang;
 }) {
   return (
     <div className="flex flex-col gap-4">
@@ -92,22 +98,23 @@ export function DocumentTabView({
         versionDate={versionDate}
         humanReviewCompleted={humanReviewCompleted}
         sha256={state.phase === "loaded" ? state.sha256 : undefined}
+        lang={lang}
       />
       {state.phase === "loading" ? (
         <p className="rounded-md border border-rule bg-bg-subtle px-4 py-6 text-center text-xs text-text-tertiary">
-          Chargement du document consolidé…
+          {t(UI_STRINGS.LOADING_CONSOLIDATED_DOC, lang)}
         </p>
       ) : null}
       {state.phase === "error" ? (
         <p className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-xs text-amber-950">
-          Échec du chargement du document consolidé ({state.message}).{" "}
+          {format(t(UI_STRINGS.DOCUMENT_LOAD_FAILED_INLINE, lang), { message: state.message })}{" "}
           <a
             href={fileUrl}
             target="_blank"
             rel="noreferrer noopener"
             className="underline decoration-dotted underline-offset-2"
           >
-            Ouvrir le fichier brut
+            {t(UI_STRINGS.RESULTS_OPEN_RAW_FILE, lang)}
           </a>
           .
         </p>
@@ -135,42 +142,44 @@ function DocumentHeader({
   versionDate,
   humanReviewCompleted,
   sha256,
+  lang,
 }: {
   fileUrl: string;
   versionDate: string;
   humanReviewCompleted: boolean;
   sha256: string | undefined;
+  lang: Lang;
 }) {
   return (
     <header className="rounded-md border border-rule bg-bg-subtle px-4 py-3 text-xs">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
           <div className="text-[10.5px] font-semibold uppercase tracking-wider text-text-tertiary">
-            Document consolidé
+            {t(UI_STRINGS.DOCUMENT_TAB_TITLE, lang)}
           </div>
           <div className="mt-0.5 font-mono text-text">
             sources.md · {versionDate}
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <ReviewBadge completed={humanReviewCompleted} />
+          <ReviewBadge completed={humanReviewCompleted} lang={lang} />
           <a
             href={fileUrl}
             download
             className="rounded-sm border border-rule bg-bg px-2 py-1 hover:bg-bg-subtle"
           >
-            Télécharger
+            {t(UI_STRINGS.RESULTS_DOWNLOAD, lang)}
           </a>
         </div>
       </div>
       <div className="mt-2 break-all font-mono text-[10.5px] text-text-secondary">
-        sha256 : <span className="text-text">{sha256 ?? "…"}</span>
+        {t(UI_STRINGS.PROMPTS_SHA256_LABEL, lang)} <span className="text-text">{sha256 ?? "…"}</span>
       </div>
     </header>
   );
 }
 
-function ReviewBadge({ completed }: { completed: boolean }) {
+function ReviewBadge({ completed, lang }: { completed: boolean; lang: Lang }) {
   return (
     <span
       className={
@@ -180,7 +189,7 @@ function ReviewBadge({ completed }: { completed: boolean }) {
           : "border-amber-300 bg-amber-50 text-amber-900")
       }
     >
-      {completed ? "Revue humaine ✓" : "Revue non validée"}
+      {completed ? t(UI_STRINGS.TRANSPARENCY_REVIEW_DONE_BADGE, lang) : t(UI_STRINGS.TRANSPARENCY_REVIEW_NOT_VALIDATED, lang)}
     </span>
   );
 }

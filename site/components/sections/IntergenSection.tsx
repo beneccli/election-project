@@ -11,40 +11,47 @@ import { Drawer } from "@/components/chrome/Drawer";
 import { IntergenSplitPanel } from "@/components/widgets/IntergenSplitPanel";
 import { IntergenHorizonTable } from "@/components/widgets/IntergenHorizonTable";
 import { SourceRef } from "@/components/widgets/SourceRef";
+import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
-const DIRECTION_LABELS: Record<string, string> = {
-  young_to_old: "Des jeunes vers les aînés",
-  old_to_young: "Des aînés vers les jeunes",
-  neutral: "Neutre",
-  mixed: "Effets contrastés",
-};
+function directionLabel(key: string, lang: Lang): string {
+  switch (key) {
+    case "young_to_old":
+      return t(UI_STRINGS.INTERGEN_DIRECTION_YOUNG_TO_OLD, lang);
+    case "old_to_young":
+      return t(UI_STRINGS.INTERGEN_DIRECTION_OLD_TO_YOUNG, lang);
+    case "neutral":
+      return t(UI_STRINGS.INTERGEN_DIRECTION_NEUTRAL, lang);
+    case "mixed":
+      return t(UI_STRINGS.INTERGEN_DIRECTION_MIXED, lang);
+    default:
+      return key;
+  }
+}
 
 export function IntergenSection({
   aggregated,
 }: {
   aggregated: AggregatedOutput;
 }) {
+  const { lang } = useLang();
   const ig = aggregated.intergenerational;
-  const direction =
-    DIRECTION_LABELS[ig.net_transfer_direction] ?? ig.net_transfer_direction;
+  const direction = directionLabel(ig.net_transfer_direction, lang);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const sectionLabel = t(UI_STRINGS.INTERGEN_SECTION, lang);
 
   return (
     <section
       id="intergen"
-      data-screen-label="Impact intergénérationnel"
+      data-screen-label={sectionLabel}
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
-      <SectionHead label="Impact intergénérationnel" />
+      <SectionHead label={sectionLabel} />
       <p className="mb-6 max-w-3xl text-base leading-[1.6] text-text-secondary">
-        Effet net estimé du programme sur chaque domaine, à trois horizons
-        budgétaires. Les scores sont ordinaux (de −3 à +3) et mesurent la
-        direction de l&apos;impact, pas son caractère désirable. Les
-        libellés de cohortes sont des repères narratifs approximatifs
-        qui recouvrent imparfaitement les horizons calendaires.
+        {t(UI_STRINGS.INTERGEN_SECTION_INTRO, lang)}
       </p>
 
-      <IntergenHorizonTable matrix={ig.horizon_matrix} />
+      <IntergenHorizonTable matrix={ig.horizon_matrix} lang={lang} />
 
       <div className="mt-6 flex justify-start">
         <button
@@ -52,7 +59,7 @@ export function IntergenSection({
           onClick={() => setDrawerOpen(true)}
           className="inline-flex items-center gap-2 rounded-sm border border-rule bg-bg px-4 py-2 text-sm font-semibold text-text transition-colors hover:bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
-          Voir la comparaison individuelle
+          {t(UI_STRINGS.INTERGEN_DRAWER_OPEN, lang)}
           <span aria-hidden="true">›</span>
         </button>
       </div>
@@ -61,13 +68,13 @@ export function IntergenSection({
         open={drawerOpen}
         onOpenChange={setDrawerOpen}
         size="xl"
-        eyebrow="Impact intergénérationnel"
-        title="Comparaison individuelle"
-        description="Projection du programme sur deux cohortes individuelles typiques : personne de 25 ans et personne de 65 ans."
+        eyebrow={sectionLabel}
+        title={t(UI_STRINGS.INTERGEN_DRAWER_TITLE, lang)}
+        description={t(UI_STRINGS.INTERGEN_DRAWER_DESCRIPTION, lang)}
       >
         <div className="mb-6 rounded-md border border-rule-light bg-bg-subtle p-4">
           <div className="mb-1 text-xs font-bold uppercase tracking-wider text-text-tertiary">
-            Transfert net
+            {t(UI_STRINGS.INTERGEN_NET_TRANSFER_LABEL, lang)}
           </div>
           <div className="flex flex-wrap items-baseline gap-3">
             <span className="font-display text-lg font-semibold text-text">
@@ -87,7 +94,7 @@ export function IntergenSection({
           ) : null}
         </div>
 
-        <IntergenSplitPanel intergen={ig} />
+        <IntergenSplitPanel intergen={ig} lang={lang} />
 
         {ig.reasoning ? (
           <p className="mt-6 text-sm leading-[1.6] text-text-secondary [text-wrap:pretty]">
@@ -98,7 +105,7 @@ export function IntergenSection({
         {ig.source_refs.length > 0 ? (
           <div className="mt-4">
             <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-text-tertiary">
-              Sources ({ig.source_refs.length})
+              {t(UI_STRINGS.INTERGEN_SOURCES_LABEL, lang)} ({ig.source_refs.length})
             </div>
             <ul className="m-0 flex flex-wrap list-none gap-1 p-0">
               {ig.source_refs.map((ref, i) => (

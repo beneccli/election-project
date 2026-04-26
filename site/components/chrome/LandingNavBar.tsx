@@ -22,7 +22,7 @@ export function LandingNavBar({ lang = "fr" }: { lang?: Lang } = {}) {
         </span>
         <div className="flex-1" />
         <LanguageToggle />
-        <ThemeToggle />
+        <ThemeToggle lang={lang} />
       </div>
     </header>
   );

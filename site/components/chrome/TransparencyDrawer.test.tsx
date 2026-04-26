@@ -4,7 +4,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
-import { TransparencyDrawerChrome } from "./TransparencyDrawer";
+import {
+  TransparencyDrawerChrome,
+  TranslationSubsection,
+} from "./TransparencyDrawer";
 import {
   AggregatedOutputSchema,
   VersionMetadataSchema,
@@ -90,5 +93,50 @@ describe("TransparencyDrawerChrome", () => {
         />,
       ),
     ).not.toThrow();
+  });
+});
+
+// See docs/specs/website/i18n.md §3.3 (per-locale provenance)
+describe("TranslationSubsection — translation provenance", () => {
+  function render(
+    lang: "fr" | "en",
+    versionMeta: VersionMetadata,
+  ): string {
+    return renderToStaticMarkup(
+      <TranslationSubsection versionMeta={versionMeta} lang={lang} />,
+    );
+  }
+
+  it("native_fr: renders nothing when lang=fr", () => {
+    const { versionMeta } = loadFixtures();
+    // test-omega's metadata.json carries a translations.en block, but
+    // the FR canonical view must never surface it.
+    expect(versionMeta.translations?.en).toBeDefined();
+    const html = render("fr", versionMeta);
+    expect(html).toBe("");
+  });
+
+  it("available: renders provenance fields when lang=en and translations.en is present", () => {
+    const { versionMeta } = loadFixtures();
+    const entry = versionMeta.translations?.en;
+    expect(entry).toBeDefined();
+    const html = render("en", versionMeta);
+    expect(html).toContain("transparency-translation");
+    expect(html).toContain("Translation");
+    expect(html).toContain(entry!.attested_model_version);
+    expect(html).toContain(entry!.prompt_sha256);
+    expect(html).toContain(entry!.ingested_at);
+    if (entry!.human_review_completed) {
+      expect(html).toContain("Human review complete");
+    } else {
+      expect(html).toContain("Human review pending");
+    }
+  });
+
+  it("missing: renders nothing when lang=en but translations.<lang> is absent", () => {
+    const { versionMeta } = loadFixtures();
+    const meta: VersionMetadata = { ...versionMeta, translations: undefined };
+    const html = render("en", meta);
+    expect(html).toBe("");
   });
 });

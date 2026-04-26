@@ -1,0 +1,949 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "openai",
+    "version": "gpt-5.5-thinking"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-26T00:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Le programme fourni est centré sur la production, le travail, la baisse des prélèvements, la simplification normative, la réforme des aides sociales et la souveraineté industrielle, énergétique et agricole. Il contient plusieurs chiffrages sur le coût du travail, l'assurance chômage, la fiscalité des entreprises, l'énergie et l'agriculture, mais ne fournit pas de trajectoire complète de déficit, de dette, de santé, de logement, d'éducation ou d'émissions.",
+  "positioning": {
+    "economic": {
+      "score": 3,
+      "anchor_comparison": "Proche de Fillon 2017 sur la baisse des prélèvements, la libéralisation du travail et la déréglementation; un peu moins pur marché en raison du pilotage industriel et énergétique par l'État.",
+      "evidence": [
+        {
+          "quote": "Nous proposons de libérer le temps de travail en supprimant toutes les cotisations sociales au-delà de 1 623 heures par an.",
+          "source_ref": "sources.md#travail-gagnant"
+        },
+        {
+          "quote": "Dès l’entame du quinquennat, nous réduirons de 40 milliards d’euros notre handicap fiscal évalué à 67 milliards d’euros, soit une baisse de 60 %.",
+          "source_ref": "sources.md#produire-plus"
+        }
+      ],
+      "confidence": 0.82,
+      "reasoning": "Les propositions baissent le coût du travail, réduisent les impôts de production, flexibilisent le droit du travail et durcissent les incitations au retour à l'emploi. Le score n'est pas +4 car l'État conserve un rôle fort dans l'électricité, la stratégie industrielle et l'organisation des filières."
+    },
+    "social_cultural": {
+      "score": 3,
+      "anchor_comparison": "Plus conservateur que LR 2022 sur l'assistance et l'obligation de retour au travail; inférieur à Reconquête 2022 car les sources ne couvrent pas immigration, identité ou questions sociétales.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#travail-gagnant"
+        },
+        {
+          "quote": "L’idée est simple : l’allocation chômage doit être un filet de sécurité, pas un choix de vie.",
+          "source_ref": "sources.md#travail-gagnant"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "Le contenu fourni porte surtout sur aide sociale, chômage et valeur travail. Il justifie un score conservateur, mais la confiance reste limitée car le corpus ne traite pas les autres sujets culturels."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "Plus souverainiste que LR 2022 sur l'électricité, la production, la réciprocité commerciale et l'agriculture; inférieur au RN 2022 car il ne propose pas de rupture européenne générale.",
+      "evidence": [
+        {
+          "quote": "Enfin, nous refuserons résolument toute évolution européenne conduisant à diluer l’avantage comparatif de la France en matière électrique.",
+          "source_ref": "sources.md#produire-plus"
+        },
+        {
+          "quote": "La souveraineté alimentaire est une condition vitale de l’indépendance nationale.",
+          "source_ref": "sources.md#re-armer-notre-agriculture"
+        }
+      ],
+      "confidence": 0.82,
+      "reasoning": "La souveraineté est structurante: énergie nucléaire nationale, contrôle des importations, clauses de réciprocité, réindustrialisation, épargne productive et agriculture. Le cadre reste néanmoins compatible avec une stratégie d'influence européenne plutôt qu'une sortie."
+    },
+    "institutional": {
+      "score": 1,
+      "anchor_comparison": "Plus centralisateur et anti-bureaucratique que Macron 2017, mais loin des ancrages populistes RN/LFI car les sources ne refondent pas élections, justice, médias ou référendum.",
+      "evidence": [
+        {
+          "quote": "Toute règle nouvelle ayant un impact économique sera soumise à une évaluation préalable opposable : étude d’impact indépendante, test PME systématique, et mesure chiffrée de son coût pour les entreprises.",
+          "source_ref": "sources.md#produire-plus"
+        },
+        {
+          "quote": "L’agriculture ne peut plus être gouvernée par des agences et des administrations qui, au fil des années, ont parfois dérivé vers un militantisme idéologique.",
+          "source_ref": "sources.md#re-armer-notre-agriculture"
+        }
+      ],
+      "confidence": 0.62,
+      "reasoning": "Le programme transfère une partie du pouvoir normatif vers des mécanismes de veto, d'évaluation et de primauté politique sur les agences. Il ne décrit pas une réforme complète des contre-pouvoirs démocratiques."
+    },
+    "ecological": {
+      "score": -2,
+      "anchor_comparison": "Plus productiviste que LR 2022; moins anti-écologique que RN 2022 car il maintient le nucléaire bas-carbone et l'ajustement carbone aux frontières.",
+      "evidence": [
+        {
+          "quote": "Les considérations environnementales ne pourront plus constituer un frein automatique à la réalisation des projets industriels.",
+          "source_ref": "sources.md#produire-plus"
+        },
+        {
+          "quote": "Nous mettrons fin aux soutiens publics aux nouvelles capacités solaires et éoliennes et reporterons les projets déjà autorisés lorsque la situation de surcapacité l’exigera",
+          "source_ref": "sources.md#produire-plus"
+        }
+      ],
+      "confidence": 0.78,
+      "reasoning": "Les mesures diminuent plusieurs contraintes environnementales, mettent fin aux soutiens publics aux nouvelles capacités solaires et éoliennes et priorisent production, eau agricole et industrie. Le nucléaire et l'ajustement carbone limitent le score négatif."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Nous proposons de libérer le temps de travail en supprimant toutes les cotisations sociales au-delà de 1 623 heures par an.",
+          "source_ref": "sources.md#travail-gagnant"
+        },
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#travail-gagnant"
+        },
+        {
+          "quote": "Enfin, nous refuserons résolument toute évolution européenne conduisant à diluer l’avantage comparatif de la France en matière électrique.",
+          "source_ref": "sources.md#produire-plus"
+        }
+      ],
+      "confidence": 0.66,
+      "reasoning": "Le placement résulte d'une combinaison libérale-conservatrice: baisse des prélèvements, flexibilisation du travail, conditionnalité sociale, souveraineté productive et écologie subordonnée à la production."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Programme économique très structuré sur travail, entreprises et production, mais sans trajectoire de déficit consolidée.",
+      "summary": "Le corpus traite directement coût du travail, heures supplémentaires, chômage, aides sociales, fiscalité productive, énergie industrielle, épargne longue et normes. Plusieurs ordres de grandeur sont fournis, mais l'équilibre budgétaire repose sur économies et croissance attendues sans tableau pluriannuel complet.",
+      "problems_addressed": [
+        {
+          "problem": "Coût du travail et heures travaillées",
+          "approach": "Supprimer les cotisations sociales au-delà de 1 623 heures par an et maintenir l'exonération d'impôt sur le revenu pour les heures supplémentaires.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ],
+          "reasoning": "La mesure indique le seuil annuel, le mécanisme et l'effet annoncé sur le coût horaire au-delà du seuil."
+        },
+        {
+          "problem": "Handicap fiscal des entreprises",
+          "approach": "Réduire de 40 Md€ le handicap fiscal, dont 25 Md€ sur le coût du travail et près de 15 Md€ sur les impôts de production.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Les postes de baisse sont chiffrés et reliés à C3S, CVAE, CFE, forfait social et cotisations."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire dette/PIB 2027-2032",
+          "significance": "Le diagnostic cite dette et déficit, mais aucun sentier de dette publique, charge d'intérêt ou solde primaire n'est fourni.",
+          "source_refs": []
+        },
+        {
+          "problem": "Incidence redistributive par décile",
+          "significance": "Les exemples chiffrent certains ménages et salariés, mais pas l'impact net par revenu, patrimoine, âge et statut d'emploi.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Risque budgétaire si les économies comportementales ne se matérialisent pas",
+          "mechanism": "Les économies chômage/CSU sont restituées en pouvoir d'achat et compétitivité, tandis que les allègements d'entreprise atteignent 40 Md€.",
+          "severity": 0.55,
+          "source_refs": [
+            "sources.md#travail-gagnant",
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La cohérence dépend des recettes de croissance, de l'emploi et des économies effectives, non démontrées par une maquette budgétaire complète."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Économies Unédic et CSU inférieures aux annonces.",
+          "probability": 0.45,
+          "severity": 0.6,
+          "reasoning": "Les montants annoncés dépendent des comportements de retour à l'emploi, des contrôles et de l'intégration réelle des aides.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Seuil zéro cotisation au-delà de 1 623 heures",
+          "source_ref": "sources.md#travail-gagnant",
+          "quantified": true,
+          "magnitude": "1 623 heures/an; coût horaire au-delà du seuil -35 % annoncé"
+        },
+        {
+          "measure": "Allègements de fiscalité productive",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "40 Md€ au total, dont 25 Md€ coût du travail et près de 15 Md€ impôts de production"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Plusieurs économies sont chiffrées mais le solde public net n'est pas consolidé.",
+          "source_refs": [
+            "sources.md#travail-gagnant",
+            "sources.md#produire-plus"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Réformes fiscales, sociales, Unédic et droit du travail demandent coordination législative et administrative.",
+          "source_refs": [
+            "sources.md#travail-gagnant",
+            "sources.md#produire-plus"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de la réaction des employeurs, salariés, chômeurs, collectivités et partenaires européens.",
+          "source_refs": [
+            "sources.md#travail-gagnant",
+            "sources.md#produire-plus"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les baisses d'impôts et règles sociales sont réversibles par lois ultérieures mais créent des attentes fortes.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      },
+      "confidence": 0.76
+    },
+    "social_demographic": {
+      "grade": "C",
+      "headline": "Réforme sociale centrée sur incitation au travail; santé, logement, école et dépendance restent peu traités.",
+      "summary": "La partie sociale porte surtout sur RIA, Compte social unique, plafonnement des aides, réforme chômage et maintien en emploi des seniors. Le programme ne détaille pas de réponse globale à la santé, à l'éducation, au logement, à la dépendance ou aux inégalités patrimoniales.",
+      "problems_addressed": [
+        {
+          "problem": "Trappes à inactivité et effets de seuil",
+          "approach": "Fusionner RSA, prime d'activité et ASS dans un RIA dont l'allocation baisse de 30 % du salaire repris.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ],
+          "reasoning": "La règle de cumul salaire-allocation est explicitée et vise le retour progressif à l'emploi."
+        },
+        {
+          "problem": "Cumul non consolidé des aides sociales",
+          "approach": "Créer un Compte social unique et plafonner le cumul des aides non contributives à 70 % du SMIC net par adulte.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ],
+          "reasoning": "Le mécanisme est défini et illustré par un foyer type."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Accès aux soins, hôpital et déserts médicaux",
+          "significance": "Aucune réforme de santé n'apparaît dans les sources fournies.",
+          "source_refs": []
+        },
+        {
+          "problem": "Logement des jeunes et ménages modestes",
+          "significance": "Le logement apparaît surtout comme aide sociale plafonnable, sans politique d'offre, loyers ou crédit.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Revenu disponible de ménages sans emploi cumulant plusieurs aides",
+          "mechanism": "Le plafond d'aides à 70 % du SMIC net par adulte réduit certains cumuls; l'exemple fourni indique -410 €/mois.",
+          "severity": 0.5,
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ],
+          "reasoning": "Le programme assume une baisse de transferts pour rendre l'emploi relativement plus rémunérateur."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Le CSU peut être difficile à fiabiliser avec aides locales, tarifs sociaux et situations familiales.",
+          "probability": 0.45,
+          "severity": 0.45,
+          "reasoning": "La mesure agrège plusieurs niveaux d'aides et suppose une donnée sociale unifiée.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Revenu d'incitation à l'activité",
+          "source_ref": "sources.md#travail-gagnant",
+          "quantified": true,
+          "magnitude": "RSA + prime d'activité + ASS; allocation diminuée de 30 % du salaire repris"
+        },
+        {
+          "measure": "Travail des seniors ayant tous leurs trimestres",
+          "source_ref": "sources.md#travail-gagnant",
+          "quantified": true,
+          "magnitude": "+300 €/mois net au salaire médian; -450 €/mois coût employeur"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Le bloc est présenté comme générateur d'économies mais sans incidence complète par ménages.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Fusion d'aides, plafonds, chômage et contrôle exigent systèmes sociaux et règles unifiés.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend de France Travail, Unédic, CAF, collectivités, employeurs et marché local du travail.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Durées, plafonds et règles d'indemnisation peuvent être modifiés par loi ou convention chômage.",
+          "source_refs": [
+            "sources.md#travail-gagnant"
+          ]
+        }
+      },
+      "confidence": 0.68
+    },
+    "security_sovereignty": {
+      "grade": "B",
+      "headline": "Souveraineté productive, électrique et alimentaire détaillée; défense et sécurité intérieure absentes du corpus.",
+      "summary": "Le programme développe une stratégie de souveraineté industrielle, énergétique et agricole: nucléaire, réciprocité, contrôles d'importation, production nationale, capital productif et transmission agricole. Il ne traite pas défense, police, justice pénale, renseignement ou immigration dans les sources fournies.",
+      "problems_addressed": [
+        {
+          "problem": "Prix et stabilité de l'électricité industrielle",
+          "approach": "Créer des contrats nucléaires de quinze ans jusqu'à 30 TWh/an et viser une baisse jusqu'à 10 % du prix moyen de fourniture industrielle.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La mesure précise durée, volume, indexation et cible de prix."
+        },
+        {
+          "problem": "Dépendance alimentaire et transmission agricole",
+          "approach": "Réarmer l'agriculture par accès à l'eau, moyens de production, réciprocité, PAC orientée vers l'actif et reprise politique du pilotage.",
+          "strength": 0.6,
+          "source_refs": [
+            "sources.md#re-armer-notre-agriculture"
+          ],
+          "reasoning": "Le diagnostic chiffre la disparition d'exploitations et les transmissions à venir."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Capacités militaires et industrie de défense",
+          "significance": "Aucune trajectoire défense ou format d'armée n'est fourni.",
+          "source_refs": []
+        },
+        {
+          "problem": "Sécurité intérieure et justice pénale",
+          "significance": "Les sources ne présentent pas de mesures police, justice, prison ou immigration.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Dépendance accrue au parc nucléaire existant",
+          "mechanism": "L'avantage de prix repose sur prolongation du parc si la sûreté le permet et sur une production vers 400 TWh/an.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Tout aléa technique, réglementaire ou financier d'EDF peut réduire l'effet souveraineté-prix."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Les contrats électriques peuvent être contraints par régulation, coûts EDF et disponibilité nucléaire.",
+          "probability": 0.4,
+          "severity": 0.55,
+          "reasoning": "Le dispositif dépend d'EDF, fournisseurs alternatifs volontaires, contribution initiale et contrôle de répercussion.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Contrats nucléaires long terme",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "15 ans; jusqu'à 30 TWh/an; prix moyen de fourniture industrielle -10 % objectif"
+        },
+        {
+          "measure": "Reconquête agricole",
+          "source_ref": "sources.md#re-armer-notre-agriculture",
+          "quantified": true,
+          "magnitude": "200 000 exploitations à transmettre; 60 % des agriculteurs proches de la retraite d'ici 2030"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Prix électrique, eau, agriculture et réindustrialisation impliquent coûts publics ou régulés non consolidés.",
+          "source_refs": [
+            "sources.md#produire-plus",
+            "sources.md#re-armer-notre-agriculture"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nécessite EDF, régulateurs, contrôles commerciaux, PAC, agences, eau et transmissions agricoles.",
+          "source_refs": [
+            "sources.md#produire-plus",
+            "sources.md#re-armer-notre-agriculture"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépend du nucléaire, du droit européen, des marchés d'énergie, de la PAC et des exploitants.",
+          "source_refs": [
+            "sources.md#produire-plus",
+            "sources.md#re-armer-notre-agriculture"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les règles peuvent changer, mais contrats longs et investissements créent une inertie.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      },
+      "confidence": 0.74
+    },
+    "institutional_democratic": {
+      "grade": "C",
+      "headline": "Réforme de l'État régulateur et des normes, sans réforme démocratique complète.",
+      "summary": "Le programme vise la simplification normative: cinquante règles supprimées, Code du travail recentré sur cinquante principes, règle un-pour-un en valeur, études d'impact opposables et autorité indépendante de veto. Il ne traite pas réforme électorale, Parlement, justice, médias, participation citoyenne ou architecture générale des contre-pouvoirs.",
+      "problems_addressed": [
+        {
+          "problem": "Inflation normative",
+          "approach": "Supprimer cinquante règles bloquantes et imposer évaluation, test PME et règle un pour un en valeur.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Le programme chiffre le stock normatif et décrit un mécanisme de blocage du coût réglementaire."
+        },
+        {
+          "problem": "Rigidité du droit du travail",
+          "approach": "Limiter le socle indépassable à cinquante principes et rendre le reste supplétif hors accord collectif.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La hiérarchie entre principes, accords collectifs, branche et règle supplétive est explicitée."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Participation citoyenne et réforme électorale",
+          "significance": "Aucune mesure de scrutin, référendum ou rôle du Parlement n'est fournie.",
+          "source_refs": []
+        },
+        {
+          "problem": "Garanties judiciaires et contre-pouvoirs",
+          "significance": "Le programme parle d'office du juge dans le travail mais pas d'indépendance judiciaire générale.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Réduction possible de garanties uniformes en droit du travail",
+          "mechanism": "Hors cinquante principes indépassables, l'accord collectif pourrait déroger à de nombreuses règles actuelles.",
+          "severity": 0.45,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La liste exacte des cinquante principes n'est pas fournie dans le corpus."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "La refonte du Code du travail peut déplacer les litiges vers la définition du socle indépassable.",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "La sécurité juridique dépendra de la précision des principes et de l'interprétation par les juges.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression de cinquante règles bloquantes",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 règles; exemples seuil 50 salariés, CSE, BDESE, AGEC/PFAS, ICPE"
+        },
+        {
+          "measure": "Code du travail sur cinquante principes",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 principes indépassables; reste supplétif hors accord collectif"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Peu de coût direct annoncé, mais coûts de transition administrative non chiffrés.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Réécriture juridique, autorité de veto, accords collectifs et contrôles demandent une forte capacité administrative.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Dépend des administrations, partenaires sociaux, entreprises, juges et droit européen.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les règles supprimées peuvent être rétablies, mais les accords et pratiques créent inertie.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      },
+      "confidence": 0.67
+    },
+    "environmental_long_term": {
+      "grade": "D",
+      "headline": "Programme productiviste avec nucléaire et carbone aux frontières, mais recul des soutiens renouvelables et contraintes vertes.",
+      "summary": "L'environnement est surtout traité comme contrainte productive à réduire: fin des soutiens publics aux nouvelles capacités solaires et éoliennes, moratoire sur certaines interdictions, suppression de règles environnementales nationales et priorité à l'eau agricole. Le nucléaire et l'ajustement carbone aux frontières apportent un volet bas-carbone, mais aucune trajectoire d'émissions ou de biodiversité n'est fournie.",
+      "problems_addressed": [
+        {
+          "problem": "Électricité pilotable bas-carbone",
+          "approach": "Prolonger le parc nucléaire lorsque la sûreté le permet et viser 400 TWh/an.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "Le nucléaire existant peut réduire l'intensité carbone de l'électricité tout en soutenant l'industrie."
+        },
+        {
+          "problem": "Fuite carbone à l'import",
+          "approach": "Étendre le mécanisme d'ajustement carbone aux frontières aux produits transformés.",
+          "strength": 0.45,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La proposition cible les importations mais dépend de décisions européennes."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire émissions 2030-2040",
+          "significance": "Aucun budget carbone sectoriel ou scénario de réduction d'émissions n'est fourni.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversité, sols et adaptation climatique",
+          "significance": "Le corpus ne détaille pas de plan biodiversité, artificialisation, pesticides, chaleur, inondations ou adaptation.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Déploiement d'électricité renouvelable non nucléaire",
+          "mechanism": "Fin des soutiens publics aux nouvelles capacités solaires et éoliennes et report de projets autorisés en cas de surcapacité.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#produire-plus"
+          ],
+          "reasoning": "La mesure réduit explicitement un canal de capacité bas-carbone."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Les suppressions de règles environnementales peuvent produire contentieux nationaux ou européens.",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "L'alignement au droit européen et la suppression de règles nationales devront rester juridiquement compatibles.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Fin des soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": false,
+          "magnitude": "report possible de projets déjà autorisés en situation de surcapacité"
+        },
+        {
+          "measure": "Production nucléaire accrue",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "vers 400 TWh/an; prolongation possible jusqu'à 80 ans si sûreté"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Coûts nucléaires, réseaux et adaptation ne sont pas consolidés.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Modifie normes, projets, réseaux, nucléaire, eau et importations.",
+          "source_refs": [
+            "sources.md#produire-plus",
+            "sources.md#re-armer-notre-agriculture"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépend de sûreté nucléaire, droit européen, marchés de l'énergie, hydrologie et arbitrages locaux.",
+          "source_refs": [
+            "sources.md#produire-plus",
+            "sources.md#re-armer-notre-agriculture"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Les soutiens renouvelables et règles nationales peuvent être rétablis, mais les contrats et investissements créent inertie.",
+          "source_refs": [
+            "sources.md#produire-plus"
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "not quantifiable from sources.md; annual envelopes include at least €30bn of work/social gains and €40bn of business tax and contribution reductions",
+      "units": "qualitative with €/year policy envelopes",
+      "confidence": 0.45,
+      "caveats": "Sources do not provide a lifetime incidence model by cohort, debt path, housing prices, pension replacement rates, healthcare spending or climate damages."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "An employed 25-year-old can gain from the stated €500/year median-wage restitution and lower hiring costs; debt effect is not consolidated.",
+        "quantified": "about €500/year median; up to €3,500/year in the stated extra-hours example"
+      },
+      "housing": {
+        "summary": "No housing supply, rent, mortgage or first-home policy is specified; housing aid can enter the CSU cap for non-working adults.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "A voluntary retirement savings account is proposed for active workers, but replacement rates and required contributions are not specified.",
+        "quantified": "target stock about €1,000bn of productive capital at term"
+      },
+      "labor_market": {
+        "summary": "Lower employer costs and more flexible hours may help hiring, while stricter unemployment and aid rules increase downside for unstable workers.",
+        "quantified": "25 Md€ labor-cost allègements; RIA taper at 30% of salary"
+      },
+      "environmental_debt": {
+        "summary": "Climate trajectory is not quantified; new wind and solar support is reduced while nuclear output is increased.",
+        "quantified": "400 TWh/year nuclear target; no emissions path"
+      },
+      "narrative_summary": "A 25-year-old in stable work may see higher net pay and better hiring incentives, while a young adult outside stable work faces tighter aid and unemployment rules; housing, debt and climate remain under-specified."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "A 65-year-old still working after full contribution quarters gains from contribution exemptions; passive retirees are not directly addressed.",
+        "quantified": "+€300/month net at median wage; -€450/month employer cost"
+      },
+      "pension": {
+        "summary": "Cumul emploi-retraite is renovated with partial pension reduction equal to 30% of activity income; indexation of existing pensions is not specified.",
+        "quantified": "pension reduced by 30% of activity income in the renovated cumul"
+      },
+      "healthcare": {
+        "summary": "No healthcare access, long-term care, hospital capacity or age-related health spending measure is specified.",
+        "quantified": null
+      },
+      "narrative_summary": "A 65-year-old who continues working can gain financially; non-working retirees and health-related ageing costs are not substantially addressed in the provided corpus."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Senior-work incentives and individual retirement savings are present, but replacement-rate math is absent.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Senior-work exemptions raise income for those still working after full contribution quarters.",
+            "source_refs": [
+              "sources.md#travail-gagnant"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Voluntary retirement savings can accumulate, but required contributions are not specified.",
+            "source_refs": [
+              "sources.md#produire-plus"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long saving stock may matter, but replacement-rate impact remains unquantified.",
+            "source_refs": [
+              "sources.md#produire-plus"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Debt and deficit diagnosis is present, but no binding debt-ratio path is supplied.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Savings and restitution are both stated; net deficit path is not specified.",
+            "source_refs": [
+              "sources.md#travail-gagnant",
+              "sources.md#produire-plus"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Permanent tax cuts create debt risk if savings and growth disappoint.",
+            "source_refs": [
+              "sources.md#travail-gagnant",
+              "sources.md#produire-plus"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Long-run debt effect remains exposed to growth and rate assumptions absent from the text.",
+            "source_refs": [
+              "sources.md#travail-gagnant"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Nuclear and carbon-border measures coexist with weaker environmental constraints and lower renewables support.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Wind and solar support stops while nuclear gains take longer to materialize.",
+            "source_refs": [
+              "sources.md#produire-plus"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Lower renewable build-out is partly offset by nuclear and carbon-border policy.",
+            "source_refs": [
+              "sources.md#produire-plus"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -2,
+            "note": "Weaker constraints and slower non-nuclear build-out compound without an emissions path.",
+            "source_refs": [
+              "sources.md#produire-plus",
+              "sources.md#re-armer-notre-agriculture"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Healthcare policy is not specified in the provided corpus.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "No healthcare measure is specified.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "No healthcare financing or access path is provided.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Ageing-related health spending is not addressed.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Education is not a core policy block; skills are treated through work, industry and agriculture.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "No school or university package is specified.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "No education investment or attainment target is supplied.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "No long-run human-capital trajectory is provided.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Housing supply and affordability are not specified; some housing aid may be capped through CSU.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "APL-like aid can be capped for non-working adults; supply is not addressed.",
+            "source_refs": [
+              "sources.md#travail-gagnant"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "No housing supply or price policy is specified.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-run affordability is not addressed.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "The program reallocates toward workers, productive capital, senior employment and firms, while capping some non-working household transfers. Because savings are largely restituted and no full debt, pension, housing or climate path is supplied, the net cohort transfer is mixed.",
+    "source_refs": [
+      "sources.md#travail-gagnant",
+      "sources.md#produire-plus",
+      "sources.md#re-armer-notre-agriculture"
+    ],
+    "confidence": 0.54
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "The sources describe a status quo of high deficit, debt around 116% of GDP, weak production, industrial trade deficit above €80bn/year and a near-zero agricultural trade balance in 2025.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "healthcare",
+      "housing",
+      "education_policy"
+    ],
+    "reasoning": "The program would materially change labor incentives, business taxation, regulation, electricity pricing, trade reciprocity and agricultural governance. It does not specify complete trajectories for debt, health, housing, education or emissions.",
+    "confidence": 0.7
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Public debt and deficit consolidation path",
+      "why_unsolved": "No multi-year fiscal table with net revenue, spending, interest-rate and growth assumptions is provided.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Healthcare access and ageing costs",
+      "why_unsolved": "The sources do not include hospital, primary care, long-term care or health-insurance measures.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Housing affordability",
+      "why_unsolved": "No policy is specified on housing supply, rents, land, credit, taxation of property or young-worker accommodation.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Climate and biodiversity quantified trajectory",
+      "why_unsolved": "The program includes nuclear, carbon-border and deregulation measures but no quantified emissions, biodiversity or adaptation pathway.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Savings from unemployment reform and CSU underperform while tax and contribution cuts are implemented.",
+      "trigger": "Actual annual savings fall materially below the announced 28.5-31.7 Md€ range.",
+      "probability": 0.38,
+      "severity": 0.75,
+      "reasoning": "The fiscal balance depends on behavioral responses, administrative recoupment and growth effects not fully modeled in the sources."
+    },
+    {
+      "scenario": "Industrial electricity price reduction is not delivered.",
+      "trigger": "EDF costs, nuclear availability, regulation or supplier participation prevent 30 TWh/year long-term contracts at targeted prices.",
+      "probability": 0.32,
+      "severity": 0.55,
+      "reasoning": "The price objective depends on technical, regulatory and contractual conditions beyond a single budget law."
+    },
+    {
+      "scenario": "Aid caps reduce household income without rapid employment absorption.",
+      "trigger": "Labor demand or childcare, transport and health constraints prevent affected households from increasing worked hours.",
+      "probability": 0.42,
+      "severity": 0.55,
+      "reasoning": "The example of -410 €/month assumes the relative attractiveness of work leads to employment adjustment; outcomes differ if jobs or constraints block that adjustment."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "positioning.social_cultural.score",
+        "critique": "The +3 score relies on welfare and work-value proposals, while immigration, bioethics, family law and secularism are absent from the corpus.",
+        "alternative_interpretation": "A stricter reading could score social_cultural at +2 with lower confidence."
+      },
+      {
+        "claim_location": "intergenerational.horizon_matrix[2].cells.h_2038_2047",
+        "critique": "The climate score of -2 extrapolates from lower renewables support and weaker constraints without an emissions model.",
+        "alternative_interpretation": "A model giving larger credit to nuclear output and carbon-border extension could score long-run climate at -1 or 0."
+      },
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_worsened[0]",
+        "critique": "The budgetary downside treats allègements and restituted social gains as exposure, while the program presents them as funded by savings and growth.",
+        "alternative_interpretation": "If the announced savings and activity gains are accepted at face value, the fiscal severity would be limited rather than moderate."
+      }
+    ],
+    "potential_bias": "The analysis may overweight fiscal-consolidation and climate-accounting gaps because the schema emphasizes long-horizon debt and environmental accounting while the source program is primarily a work-and-production platform.",
+    "evidence_gaps": "The thinnest areas are cohort incidence, healthcare, education, housing, pension replacement rates, emissions, EU-law feasibility and net public-finance tables.",
+    "confidence_in_critique": 0.72
+  },
+  "confidence_self_assessment": 0.68
+}

@@ -1,4 +1,5 @@
 // See docs/specs/website/nextjs-architecture.md §2
+// See docs/specs/website/i18n.md §4 (locale-aware loader)
 import fs from "node:fs";
 import path from "node:path";
 import { ZodError, type ZodIssue } from "zod";
@@ -10,6 +11,8 @@ import {
   type CandidateMetadata,
   type VersionMetadata,
 } from "./schema";
+import { collectParityIssues } from "@pipeline/parity";
+import type { Lang } from "./i18n";
 
 // ---------------------------------------------------------------------------
 // Public types
@@ -23,6 +26,10 @@ export interface CandidateIndexEntry {
   isFictional: boolean;
   versionDate: string;
   updatedAt: string;
+  /** Locales that have a published `aggregated.<lang>.json` file in
+   *  the candidate's `current/` directory. FR is always included
+   *  (it is the canonical source). */
+  availableLocales: Lang[];
 }
 
 export interface RawModelSummary {
@@ -34,11 +41,24 @@ export interface RawModelSummary {
   executionMode: string;
 }
 
+/**
+ * Translation status surfaced on the bundle. Pages branch on this to
+ * render a "translation missing" banner when the requested locale
+ * does not have a published file. See spec §6.
+ */
+export type TranslationStatus =
+  | { lang: "fr"; status: "native_fr" }
+  | { lang: Exclude<Lang, "fr">; status: "available" | "missing" };
+
 export interface CandidateBundle {
   meta: CandidateMetadata;
   versionMeta: VersionMetadata;
+  /** The aggregated payload to render. For non-FR locales this is the
+   *  translation file when present, or the FR canonical file as
+   *  fallback. The shape is identical (same schema_version 1.2). */
   aggregated: AggregatedOutput;
   rawSummaries: RawModelSummary[];
+  translation: TranslationStatus;
 }
 
 // ---------------------------------------------------------------------------
@@ -129,6 +149,8 @@ export function listCandidates(): CandidateIndexEntry[] {
       }
     }
 
+    const availableLocales = discoverAvailableLocales(currentDir);
+
     entries.push({
       id: meta.id,
       displayName: meta.display_name,
@@ -137,17 +159,43 @@ export function listCandidates(): CandidateIndexEntry[] {
       isFictional: meta.is_fictional === true,
       versionDate,
       updatedAt: meta.updated,
+      availableLocales,
     });
   }
 
   return entries;
 }
 
+/**
+ * Scan a candidate's `current/` directory for published translation
+ * files (`aggregated.<lang>.json`). FR is always present implicitly
+ * via the canonical `aggregated.json`.
+ */
+function discoverAvailableLocales(currentDir: string): Lang[] {
+  const locales: Lang[] = ["fr"];
+  if (!fs.existsSync(currentDir)) return locales;
+  const re = /^aggregated\.([a-z]{2})\.json$/;
+  for (const name of fs.readdirSync(currentDir)) {
+    const m = re.exec(name);
+    if (!m) continue;
+    const code = m[1];
+    if (code === "fr") continue;
+    // Narrow to known Lang values; ignore unknown codes silently.
+    if (code === "en" && !locales.includes("en")) {
+      locales.push("en");
+    }
+  }
+  return locales;
+}
+
 // ---------------------------------------------------------------------------
 // loadCandidate
 // ---------------------------------------------------------------------------
 
-export function loadCandidate(id: string): CandidateBundle {
+export function loadCandidate(
+  id: string,
+  lang: Lang = "fr",
+): CandidateBundle {
   const root = resolveCandidatesDir();
   const candidateDir = path.join(root, id);
   if (!fs.existsSync(candidateDir)) {
@@ -170,7 +218,11 @@ export function loadCandidate(id: string): CandidateBundle {
       message: "aggregated.json not found",
     });
   }
-  const aggregated = parseOrThrow(aggregatedPath, AggregatedOutputSchema, id);
+  const aggregatedFr = parseOrThrow(
+    aggregatedPath,
+    AggregatedOutputSchema,
+    id,
+  );
 
   const versionMetaPath = path.join(currentDir, "metadata.json");
   // TODO(website): add a future task to make VersionMetadata validation
@@ -184,7 +236,60 @@ export function loadCandidate(id: string): CandidateBundle {
   );
 
   const rawSummaries = buildRawSummaries(versionMeta);
-  return { meta, versionMeta, aggregated, rawSummaries };
+
+  // FR (canonical): no translation lookup, no parity check.
+  if (lang === "fr") {
+    return {
+      meta,
+      versionMeta,
+      aggregated: aggregatedFr,
+      rawSummaries,
+      translation: { lang: "fr", status: "native_fr" },
+    };
+  }
+
+  // Non-FR: try to resolve the published translation; fall back to FR
+  // canonical content when missing. See spec §4.1, §6.
+  const translatedPath = path.join(currentDir, `aggregated.${lang}.json`);
+  if (!fs.existsSync(translatedPath)) {
+    return {
+      meta,
+      versionMeta,
+      aggregated: aggregatedFr,
+      rawSummaries,
+      translation: { lang, status: "missing" },
+    };
+  }
+
+  const aggregatedTr = parseOrThrow(
+    translatedPath,
+    AggregatedOutputSchema,
+    id,
+  );
+
+  // Build-time WARNING (not an error): surface parity drift without
+  // breaking the build. The CLI validator (`npm run validate-translation`)
+  // is the gating check before publication.
+  const issues = collectParityIssues(aggregatedFr, aggregatedTr);
+  if (issues.length > 0) {
+    console.warn(
+      `[i18n] parity drift in ${id} (${lang}): ${issues.length} issue(s)`,
+    );
+    for (const issue of issues.slice(0, 10)) {
+      console.warn(`  - [${issue.kind}] ${issue.path}: ${issue.message}`);
+    }
+    if (issues.length > 10) {
+      console.warn(`  … and ${issues.length - 10} more`);
+    }
+  }
+
+  return {
+    meta,
+    versionMeta,
+    aggregated: aggregatedTr,
+    rawSummaries,
+    translation: { lang, status: "available" },
+  };
 }
 
 function parseOrThrow<T>(

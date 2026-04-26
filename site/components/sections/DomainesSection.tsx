@@ -13,14 +13,23 @@ import { ConfidenceBar } from "@/components/widgets/ConfidenceBar";
 import { Tooltip } from "@/components/widgets/Tooltip";
 import { SourceRef } from "@/components/widgets/SourceRef";
 import type { GradeLetter } from "@/lib/grade-color";
+import { useLang } from "@/lib/lang-context";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
-const DIMENSION_LABELS: Record<DimensionKey, string> = {
-  economic_fiscal: "Économique & fiscal",
-  social_demographic: "Social & démographique",
-  security_sovereignty: "Sécurité & souveraineté",
-  institutional_democratic: "Institutionnel & démocratique",
-  environmental_long_term: "Environnemental & long terme",
-};
+function dimensionLabel(key: DimensionKey, lang: Lang): string {
+  switch (key) {
+    case "economic_fiscal":
+      return t(UI_STRINGS.DIMENSION_LABEL_ECONOMIC_FISCAL, lang);
+    case "social_demographic":
+      return t(UI_STRINGS.DIMENSION_LABEL_SOCIAL_DEMOGRAPHIC, lang);
+    case "security_sovereignty":
+      return t(UI_STRINGS.DIMENSION_LABEL_SECURITY_SOVEREIGNTY, lang);
+    case "institutional_democratic":
+      return t(UI_STRINGS.DIMENSION_LABEL_INSTITUTIONAL_DEMOCRATIC, lang);
+    case "environmental_long_term":
+      return t(UI_STRINGS.DIMENSION_LABEL_ENVIRONMENTAL_LONG_TERM, lang);
+  }
+}
 
 const MAX_ITEMS = 5;
 
@@ -29,6 +38,7 @@ export function DomainesSection({
 }: {
   aggregated: AggregatedOutput;
 }) {
+  const { lang } = useLang();
   const [expanded, setExpanded] = useState<Set<DimensionKey>>(
     () => new Set(),
   );
@@ -69,10 +79,10 @@ export function DomainesSection({
   return (
     <section
       id="dimensions"
-      data-screen-label="Domaines"
+      data-screen-label={t(UI_STRINGS.DOMAINES_SECTION, lang)}
       className="scroll-mt-[calc(var(--nav-h)+var(--section-nav-h))] border-t border-rule py-14"
     >
-      <SectionHead label="Analyse par domaine" />
+      <SectionHead label={t(UI_STRINGS.DOMAINES_SECTION_HEAD, lang)} />
       <ul className="m-0 flex list-none flex-col p-0">
         {DIMENSION_KEYS.map((key) => {
           const dim = aggregated.dimensions[key];
@@ -81,13 +91,14 @@ export function DomainesSection({
             <li key={key} className="border-b border-rule last:border-b-0">
               <DimensionRow
                 dimKey={key}
-                label={DIMENSION_LABELS[key]}
+                label={dimensionLabel(key, lang)}
                 dim={dim}
                 isOpen={isOpen}
                 onToggle={() => toggle(key)}
+                lang={lang}
               />
               {isOpen ? (
-                <DimensionDeepDive dimKey={key} dim={dim} />
+                <DimensionDeepDive dimKey={key} dim={dim} lang={lang} />
               ) : null}
             </li>
           );
@@ -103,12 +114,14 @@ function DimensionRow({
   dim,
   isOpen,
   onToggle,
+  lang,
 }: {
   dimKey: DimensionKey;
   label: string;
   dim: AggregatedOutput["dimensions"][DimensionKey];
   isOpen: boolean;
   onToggle: () => void;
+  lang: Lang;
 }) {
   const consensus = dim.grade.consensus;
   const dissentEntries = Object.entries(dim.grade.dissent);
@@ -140,11 +153,12 @@ function DimensionRow({
                   <GradeDissentList
                     consensus={consensus}
                     dissent={dim.grade.dissent}
+                    lang={lang}
                   />
                 }
               >
                 <span className="px-1.5 text-[10px] font-bold uppercase tracking-wider text-risk-red">
-                  ⚡ DISSENT
+                  {t(UI_STRINGS.DOMAINES_DISSENT_BADGE, lang)}
                 </span>
               </Tooltip>
             </span>
@@ -156,7 +170,7 @@ function DimensionRow({
       </div>
 
       <div className="flex flex-wrap items-center gap-4 text-xs text-text-tertiary">
-        <ConfidenceBar value={dim.confidence} label="confiance" />
+        <ConfidenceBar value={dim.confidence} label={t(UI_STRINGS.DOMAINES_CONFIDENCE, lang)} />
         {/* <ModelGradeRow
           consensus={consensus}
           dissent={dim.grade.dissent}
@@ -217,15 +231,17 @@ function _ModelGradeRow({
 function GradeDissentList({
   consensus,
   dissent,
+  lang,
 }: {
   consensus: GradeLetter;
   dissent: Record<string, GradeLetter>;
+  lang: Lang;
 }) {
   const rows = Object.entries(dissent).sort(([a], [b]) => a.localeCompare(b));
   return (
     <div className="space-y-1">
       <div className="mb-1 text-[10px] font-bold uppercase tracking-wider opacity-70">
-        Notes par modèle
+        {t(UI_STRINGS.DOMAINES_PER_MODEL_GRADES, lang)}
       </div>
       <div className="flex items-center justify-between gap-3">
         <span className="font-mono text-[11px] opacity-70">consensus</span>
@@ -252,9 +268,11 @@ function GradeDissentList({
 function DimensionDeepDive({
   dimKey,
   dim,
+  lang,
 }: {
   dimKey: DimensionKey;
   dim: AggregatedOutput["dimensions"][DimensionKey];
+  lang: Lang;
 }) {
   const modelGrades = Object.entries(dim.grade.dissent);
   return (
@@ -270,8 +288,8 @@ function DimensionDeepDive({
         <ProblemBlock
           icon="✓"
           color="oklch(0.42 0.16 145)"
-          heading="Problèmes adressés"
-          empty="Aucun problème identifié comme adressé."
+          heading={t(UI_STRINGS.DOMAINES_PROBLEMS_ADDRESSED, lang)}
+          empty={t(UI_STRINGS.DOMAINES_PROBLEMS_ADDRESSED_EMPTY, lang)}
           items={dim.problems_addressed.slice(0, MAX_ITEMS).map((p) => ({
             text: p.problem,
             supportedBy: p.supported_by,
@@ -279,12 +297,13 @@ function DimensionDeepDive({
             sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_addressed.length - MAX_ITEMS}
+          lang={lang}
         />
         <ProblemBlock
           icon="—"
           color="var(--text-tertiary)"
-          heading="Problèmes non adressés"
-          empty="Aucun problème identifié comme ignoré par les modèles."
+          heading={t(UI_STRINGS.DOMAINES_PROBLEMS_IGNORED, lang)}
+          empty={t(UI_STRINGS.DOMAINES_PROBLEMS_IGNORED_EMPTY, lang)}
           items={dim.problems_ignored.slice(0, MAX_ITEMS).map((p) => ({
             text: p.problem,
             supportedBy: p.supported_by,
@@ -292,12 +311,13 @@ function DimensionDeepDive({
             sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_ignored.length - MAX_ITEMS}
+          lang={lang}
         />
         <ProblemBlock
           icon="⚠"
           color="var(--risk-red)"
-          heading="Problèmes aggravés"
-          empty="Aucun aggravement identifié par les modèles."
+          heading={t(UI_STRINGS.DOMAINES_PROBLEMS_WORSENED, lang)}
+          empty={t(UI_STRINGS.DOMAINES_PROBLEMS_WORSENED_EMPTY, lang)}
           items={dim.problems_worsened.slice(0, MAX_ITEMS).map((p) => ({
             text: p.problem,
             supportedBy: p.supported_by,
@@ -305,13 +325,14 @@ function DimensionDeepDive({
             sourceRefs: p.source_refs,
           }))}
           overflow={dim.problems_worsened.length - MAX_ITEMS}
+          lang={lang}
         />
       </div>
 
       {dim.execution_risks.length > 0 ? (
         <div className="mb-6">
           <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
-            Risques d&apos;exécution
+            {t(UI_STRINGS.DOMAINES_EXECUTION_RISKS, lang)}
           </div>
           <ul className="m-0 flex list-none flex-col gap-2 p-0">
             {dim.execution_risks.map((r, i) => (
@@ -321,10 +342,10 @@ function DimensionDeepDive({
               >
                 <span className="flex-1 min-w-[12rem]">{r.risk}</span>
                 <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
-                  Prob. <ConfidenceDots value={r.probability} label="Probabilité" />
+                  {t(UI_STRINGS.DOMAINES_PROB_SHORT, lang)} <ConfidenceDots value={r.probability} label={t(UI_STRINGS.DOMAINES_PROB_LONG, lang)} />
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
-                  Sév. <ConfidenceDots value={r.severity} label="Sévérité" />
+                  {t(UI_STRINGS.DOMAINES_SEV_SHORT, lang)} <ConfidenceDots value={r.severity} label={t(UI_STRINGS.DOMAINES_SEV_LONG, lang)} />
                 </span>
               </li>
             ))}
@@ -335,7 +356,7 @@ function DimensionDeepDive({
       {dim.key_measures.length > 0 ? (
         <div className="mb-6">
           <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
-            Mesures clés
+            {t(UI_STRINGS.DOMAINES_KEY_MEASURES, lang)}
           </div>
           <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
             {dim.key_measures.map((m, i) => (
@@ -347,7 +368,7 @@ function DimensionDeepDive({
                 <span className="ml-2 text-xs text-text-tertiary">
                   {m.quantified && m.magnitude
                     ? `— ${m.magnitude}`
-                    : "— non quantifié"}
+                    : t(UI_STRINGS.DOMAINES_NOT_QUANTIFIED_INLINE, lang)}
                 </span>
               </li>
             ))}
@@ -357,11 +378,11 @@ function DimensionDeepDive({
 
       <div>
         <div className="mb-2 text-xs font-bold uppercase tracking-wider text-text-secondary">
-          Notes par modèle
+          {t(UI_STRINGS.DOMAINES_PER_MODEL_GRADES, lang)}
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
           <span className="rounded-sm border border-accent/30 bg-accent-subtle px-2 py-1 font-semibold text-accent">
-            Consensus → {dim.grade.consensus}
+            {t(UI_STRINGS.DOMAINES_CONSENSUS_PREFIX, lang)} {dim.grade.consensus}
           </span>
           {modelGrades.map(([model, g]) => (
             <span
@@ -389,6 +410,7 @@ function ProblemBlock({
   empty,
   items,
   overflow,
+  lang,
 }: {
   icon: string;
   color: string;
@@ -401,6 +423,7 @@ function ProblemBlock({
     sourceRefs: readonly string[];
   }[];
   overflow: number;
+  lang: Lang;
 }) {
   return (
     <div>
@@ -428,11 +451,11 @@ function ProblemBlock({
               <span>{item.text}</span>
               <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-text-tertiary">
                 {item.supportedBy.length > 0 ? (
-                  <span>Soutenu par {item.supportedBy.join(", ")}</span>
+                  <span>{t(UI_STRINGS.DOMAINES_SUPPORTED_BY, lang)} {item.supportedBy.join(", ")}</span>
                 ) : null}
                 {item.dissenters.length > 0 ? (
                   <span className="text-risk-red">
-                    · désaccord : {item.dissenters.join(", ")}
+                    · {t(UI_STRINGS.DOMAINES_DISSENTERS_PREFIX, lang)} {item.dissenters.join(", ")}
                   </span>
                 ) : null}
                 {item.sourceRefs.length > 0 ? (
@@ -448,7 +471,7 @@ function ProblemBlock({
           ))}
           {overflow > 0 ? (
             <li className="cursor-not-allowed text-xs italic text-text-tertiary">
-              + {overflow} autre{overflow > 1 ? "s" : ""}
+              {format(t(UI_STRINGS.DOMAINES_PROBLEMS_OVERFLOW, lang), { n: overflow, s: overflow > 1 ? "s" : "" })}
             </li>
           ) : null}
         </ul>

@@ -82,6 +82,43 @@ An always-visible summary row beneath the tabs (pulled from
 <n> modèles · <k> succès / <m> échecs · revue humaine <✓|✗> par <reviewer> le <date>
 ```
 
+### 3.bis Translation provenance subsection (locale-conditional)
+
+When the active locale is **not** FR (e.g. `/en/candidat/<id>`)
+**and** `metadata.json` carries a `translations.<lang>` block, the
+drawer renders a small additional subsection between the summary
+row and the tablist. It exposes the per-locale provenance:
+
+| Field | Source |
+|---|---|
+| Target locale | URL segment / `useLang()` |
+| Attested model | `versionMeta.translations[<lang>].attested_model_version` |
+| Prompt SHA256 | `versionMeta.translations[<lang>].prompt_sha256` |
+| Ingested at | `versionMeta.translations[<lang>].ingested_at` |
+| Human review flag | `versionMeta.translations[<lang>].human_review_completed` (+ optional `reviewer`) |
+
+Rendering rules:
+
+- **`lang === "fr"`** — never render the subsection. FR is canonical
+  and has no translator provenance to surface.
+- **Translation missing** (`translations.<lang>` undefined while the
+  page is on a non-FR locale) — never render the subsection inside
+  the drawer. The page-level "Translation pending" banner already
+  carries that signal; duplicating it inside the drawer would be
+  noisy and asymmetric with the other locale-fallback affordances.
+- **Translation available** — render the subsection. The drawer
+  itself continues to link to FR canonical artifacts (sources, raw
+  outputs, FR `aggregated.json`) regardless of current locale —
+  transparency is locale-agnostic, only the surface prose is
+  translated.
+
+This is symmetric with the analysis and aggregation provenance
+already rendered in the Prompts and Results tabs: every translated
+publication carries the same evidence trail (prompt file, hash,
+attested model version, ingest timestamp, review flag) as the
+underlying analyses. See [`i18n.md`](i18n.md) §3.3 for the storage
+schema.
+
 ---
 
 ## 4. Tab 1 — Sources
@@ -381,7 +418,10 @@ testing — belongs to `M_Accessibility`.
 - Schema changes (none — M_Transparency is pure UI)
 - Consolidation prompt metadata in `metadata.json` (remains optional)
 - Full WCAG 2.1 AA audit (→ M_Accessibility)
-- English translations of drawer copy (FR canonical; placeholders)
+- ~~English translations of drawer copy~~ — **shipped in M_I18n**:
+  the drawer chrome is bilingual (`UI_STRINGS`), and the new
+  per-locale provenance subsection (§3.bis) surfaces the translator
+  prompt, hash, and review flag.
 - Comment / discussion / social share features (explicit non-goals)
 
 ---

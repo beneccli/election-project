@@ -91,5 +91,17 @@
     "human_review_completed": true,
     "reviewer": "benoit",
     "reviewed_at": "2026-04-25T04:59:06.134Z"
+  },
+  "translations": {
+    "en": {
+      "prompt_file": "prompts/translate-aggregated.md",
+      "prompt_sha256": "e2b8acf86b5c671a2b1e7211e9d2bb341f8b8f8dd1c3b220fb64902b74579892",
+      "prompt_version": "1.0",
+      "execution_mode": "copilot-agent",
+      "attested_model_version": "claude-opus-4-7",
+      "ingested_at": "2026-04-25T16:08:02.257Z",
+      "human_review_completed": false,
+      "reviewer": "benoit"
+    }
   }
 }

@@ -4,13 +4,20 @@ import Link from "next/link";
 import type { CandidateMetadata } from "@/lib/schema";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
-export function NavBar({ meta }: { meta: CandidateMetadata }) {
+export function NavBar({
+  meta,
+  lang = "fr",
+}: {
+  meta: CandidateMetadata;
+  lang?: Lang;
+}) {
   return (
     <header className="sticky top-0 z-[80] flex h-nav-h items-center border-b border-rule bg-bg">
       <div className="mx-auto flex w-full max-w-content items-center gap-4 px-8">
         <Link
-          href="/"
+          href={lang === "fr" ? "/" : `/${lang}`}
           className="flex-shrink-0 font-display text-2xl font-bold tracking-[-0.01em] text-accent no-underline"
         >
           é<span className="font-normal">lection</span> 2027
@@ -23,12 +30,12 @@ export function NavBar({ meta }: { meta: CandidateMetadata }) {
         <a
           href="#transparence=document"
           className="flex-shrink-0 text-xs font-medium text-text-secondary underline decoration-dotted underline-offset-4 hover:text-text"
-          title="Ouvrir la transparence complète"
+          title={t(UI_STRINGS.NAV_OPEN_TRANSPARENCY, lang)}
         >
-          Transparence
+          {t(UI_STRINGS.NAV_TRANSPARENCE, lang)}
         </a>
         <LanguageToggle />
-        <ThemeToggle />
+        <ThemeToggle lang={lang} />
       </div>
     </header>
   );

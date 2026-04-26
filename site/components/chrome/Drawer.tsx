@@ -8,6 +8,8 @@
 // small uppercase eyebrow above the title.
 import * as Dialog from "@radix-ui/react-dialog";
 import * as React from "react";
+import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS } from "@/lib/i18n";
 
 const SIZE_WIDTHS = {
   sm: "min(92vw, 400px)",
@@ -35,6 +37,7 @@ export function Drawer({
   size?: "sm" | "md" | "lg" | "xl";
   children: React.ReactNode;
 }) {
+  const { lang } = useLang();
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
@@ -65,7 +68,7 @@ export function Drawer({
             </div>
             <Dialog.Close
               className="flex-shrink-0 bg-transparent p-1 text-[22px] leading-none text-text-secondary transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-              aria-label="Fermer"
+              aria-label={t(UI_STRINGS.A11Y_DRAWER_CLOSE, lang)}
             >
               ✕
             </Dialog.Close>

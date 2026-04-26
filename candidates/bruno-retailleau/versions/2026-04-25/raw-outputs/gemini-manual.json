@@ -1,0 +1,838 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "bruno-retailleau",
+  "version_date": "2026-04-25",
+  "model": {
+    "provider": "google",
+    "version": "gemini-3-pro"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-26T02:56:05Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "The program centers on supply-side economic reforms, proposing €40 billion in tax and contribution cuts for businesses, funded by €30 billion in reduced social spending and unemployment benefits. It emphasizes deregulation across labor, industry, and agriculture, including the constitutional suppression of the precautionary principle and a halt to wind and solar energy subsidies in favor of nuclear expansion.",
+  "positioning": {
+    "economic": {
+      "score": 4,
+      "anchor_comparison": "More market-oriented than Fillon 2017, heavily focused on deregulation, tax cuts, and reducing social spending.",
+      "evidence": [
+        {
+          "quote": "Dès l’entame du quinquennat, nous réduirons de 40 milliards d’euros notre handicap fiscal",
+          "source_ref": "sources.md#5-reduire-franchement-les-prelevements-obligatoires"
+        },
+        {
+          "quote": "Refonder le code du travail sur 50 principes, renvoyer le reste à la négociation collective",
+          "source_ref": "sources.md#2-refonder-le-code-du-travail-sur-50-principes"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Proposes massive reduction in production taxes, strict limits on welfare, and fundamental deregulation of labor laws in favor of enterprise-level agreements."
+    },
+    "social_cultural": {
+      "score": 3,
+      "anchor_comparison": "More conservative than LR 2022, placing strict conditionality on social safety nets and targeting welfare dependency.",
+      "evidence": [
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#troisieme-principe-sortir-du-piege-de-lassistance"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Rhetoric and policies actively target 'assistanat', severely capping benefits and introducing strict conditions for unemployment and welfare."
+    },
+    "sovereignty": {
+      "score": 3,
+      "anchor_comparison": "More sovereigntist than LR 2022, asserting national preference in agriculture and demanding strict border reciprocity.",
+      "evidence": [
+        {
+          "quote": "nous nous opposerons à l’intégration de l’Ukraine au marché agricole européen.",
+          "source_ref": "sources.md#10-reequilibrer-la-chaine-de-valeur-et-assurer-la-reciprocite-commerciale"
+        },
+        {
+          "quote": "Même marché, même règles : interdiction des sur-transpositions.",
+          "source_ref": "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Rejects EU agricultural enlargement regarding Ukraine, insists on aggressive border checks, and constitutionally forbids EU over-transposition."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Higher illiberal/populist score than traditional pre-2017 baseline due to explicit subordination of scientific agencies and constitutional rollbacks.",
+      "evidence": [
+        {
+          "quote": "Réaffirmer la primauté du pouvoir politique sur les agences administratives",
+          "source_ref": "sources.md#2-reprendre-la-main-sur-letat-et-ses-agences"
+        },
+        {
+          "quote": "supprimerons toute subvention publique accordée à des structures qui pratiquent l’agribashing",
+          "source_ref": "sources.md#7-proteger-les-agriculteurs-en-finir-avec-lagribashing"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Proposes modifying the Constitution to bypass environmental review, defunding critical NGOs, and placing scientific agencies (ANSES) under direct political control."
+    },
+    "ecological": {
+      "score": -4,
+      "anchor_comparison": "Highly productivist, similar to RN 2022, actively dismantling existing environmental constraints.",
+      "evidence": [
+        {
+          "quote": "Le zéro artificialisation nette (ZAN)... sera supprimé.",
+          "source_ref": "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+        },
+        {
+          "quote": "Nous mettrons fin aux soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+        }
+      ],
+      "confidence": 0.9,
+      "reasoning": "Explicitly halts renewable energy deployment, suppresses soil artificialization limits (ZAN) for agriculture, reauthorizes banned pesticides, and removes the precautionary principle."
+    },
+    "overall_spectrum": {
+      "label": "droite",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "ecological"
+      ],
+      "evidence": [
+        {
+          "quote": "Dès l’entame du quinquennat, nous réduirons de 40 milliards d’euros notre handicap fiscal",
+          "source_ref": "sources.md#5-reduire-franchement-les-prelevements-obligatoires"
+        },
+        {
+          "quote": "Notre système social ne doit plus permettre de s’installer durablement dans l’assistance.",
+          "source_ref": "sources.md#troisieme-principe-sortir-du-piege-de-lassistance"
+        },
+        {
+          "quote": "Le zéro artificialisation nette (ZAN)... sera supprimé.",
+          "source_ref": "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Massive supply-side tax cuts, strict welfare caps, deregulation of labor, and a highly productivist/anti-regulatory stance on the environment place the program firmly on the right wing."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "B",
+      "headline": "Baisse de 40 Md€ des prélèvements sur les entreprises et déréglementation du temps de travail.",
+      "summary": "The program cuts production taxes and employer contributions by €40 billion, compensates with €30 billion in social/unemployment savings, and eliminates taxes on overtime beyond 1,623 hours.",
+      "problems_addressed": [
+        {
+          "problem": "Cost of labor and production taxes",
+          "approach": "Eliminate C3S, CVAE, and component of CFE; reduce employer contributions.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#5-reduire-franchement-les-prelevements-obligatoires"
+          ],
+          "reasoning": "Identifies specific taxes to eliminate with quantified targets (€15bn production taxes, €25bn social contributions)."
+        },
+        {
+          "problem": "Capital transmission friction",
+          "approach": "Zero tax on transmitting productive capital if the business remains active.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#11-liberer-la-transmission-du-capital-productif"
+          ],
+          "reasoning": "Mechanism explicitly defers taxation indefinitely unless assets are liquidated."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Macroeconomic deficit trajectory",
+          "significance": "Program redistributes €30bn in savings but cuts €40bn in taxes, leaving a €10bn gap unexplained in the provided fiscal balance.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Wealth inequality",
+          "mechanism": "Elimination of capital transmission taxes for businesses heavily favors current asset owners.",
+          "severity": 0.6,
+          "source_refs": [
+            "sources.md#11-liberer-la-transmission-du-capital-productif"
+          ],
+          "reasoning": "Removes a primary mechanism for taxing intergenerational wealth transfer."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Revenue shortfall if growth does not materialize",
+          "probability": 0.5,
+          "severity": 0.7,
+          "reasoning": "Program assumes €4bn mechanically generated by increased corporate tax receipts.",
+          "source_refs": [
+            "sources.md#les-mesures-proposees-genereront-au-moins-30-milliards-deuros"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Exonération totale de cotisations au-delà de 1 623 heures",
+          "source_ref": "sources.md#la-solution-instaurer-un-seuil-zero-cotisation",
+          "quantified": true,
+          "magnitude": "35% reduction in employer cost per overtime hour"
+        },
+        {
+          "measure": "Suppression CVAE, C3S, CFE industrielle",
+          "source_ref": "sources.md#5-reduire-franchement-les-prelevements-obligatoires",
+          "quantified": true,
+          "magnitude": "€15bn/year"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Tax cuts (€40bn) exceed explicit savings (€30bn); relies on dynamic growth effects.",
+          "source_refs": [
+            "sources.md#les-mesures-proposees-genereront-au-moins-30-milliards-deuros",
+            "sources.md#5-reduire-franchement-les-prelevements-obligatoires"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Requires heavy legislative overhaul of the Labor Code (50 principles).",
+          "source_refs": [
+            "sources.md#2-refonder-le-code-du-travail-sur-50-principes"
+          ]
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Most fiscal and labor levers are purely domestic.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Tax cuts and code modifications can be reversed by future majorities.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.8
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Plafonnement des aides sociales à 70% du SMIC et durcissement de l'assurance chômage.",
+      "summary": "Consolidates welfare into a unified account capped at 70% of minimum wage, creates a new in-work benefit (RIA) with a 30% taper, and heavily restricts unemployment eligibility.",
+      "problems_addressed": [
+        {
+          "problem": "Welfare traps",
+          "approach": "Merge RSA/ASS/Prime into RIA; apply strict 70% SMIC cap on total benefits.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu"
+          ],
+          "reasoning": "Creates a hard ceiling and a mathematical taper (30%) to ensure work pays more than benefits."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Healthcare access and hospital funding",
+          "significance": "Program is entirely silent on healthcare, a major social demographic issue.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Poverty among the structurally unemployed",
+          "mechanism": "Hard cap at 70% SMIC and stricter unemployment rules reduce safety net floors.",
+          "severity": 0.7,
+          "source_refs": [
+            "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu",
+            "sources.md#5-reformer-lassurance-chomage-pour-accelerer-le-retour-a-lemploi"
+          ],
+          "reasoning": "Mechanisms explicitly reduce total transfer volumes to inactive populations."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "IT failure in CSU creation",
+          "probability": 0.6,
+          "severity": 0.8,
+          "reasoning": "Consolidating all state, municipal, and CAF aids into a single real-time ledger is administratively highly complex.",
+          "source_refs": [
+            "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Compte social unique (CSU)",
+          "source_ref": "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu",
+          "quantified": true,
+          "magnitude": "Max 70% of net SMIC per adult"
+        },
+        {
+          "measure": "Réforme de l'assurance chômage",
+          "source_ref": "sources.md#5-reformer-lassurance-chomage-pour-accelerer-le-retour-a-lemploi",
+          "quantified": true,
+          "magnitude": "€12.5bn to €15.7bn in savings"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Measures are designed entirely to generate savings.",
+          "source_refs": [
+            "sources.md#les-mesures-proposees-genereront-au-moins-30-milliards-deuros"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "CSU requires unifying data across fragmented national and local agencies.",
+          "source_refs": [
+            "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Relies on local authorities (mairies, départements) complying with the CSU.",
+          "source_refs": [
+            "sources.md#4-reduire-lassistance-grace-au-compte-social-unique-csu"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Benefit caps can be lifted by subsequent legislation.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Souveraineté énergétique axée sur le nucléaire et protectionnisme agricole/industriel.",
+      "summary": "Internal security is not addressed. Sovereignty focuses on energy (nuclear long-term contracts), trade reciprocity, and redirecting customs controls toward imports.",
+      "problems_addressed": [
+        {
+          "problem": "Industrial electricity costs",
+          "approach": "Long-term contracts for nuclear output directly to alternative suppliers/industry.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+          ],
+          "reasoning": "Replaces ARENH with 15-year contracts to secure baseline pricing."
+        },
+        {
+          "problem": "Unfair import competition",
+          "approach": "Redirect 50% of regulatory controls to imported goods.",
+          "strength": 0.5,
+          "source_refs": [
+            "sources.md#7-rompre-avec-plusieurs-decennies-de-naivete-en-retablissant-une-concurrence-equitable"
+          ],
+          "reasoning": "Shifts administrative burden, but absolute control rate (0.008%) limits macro impact."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Internal security and policing",
+          "significance": "Program is silent on police, justice, and defense spending.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "EU trade relations",
+          "mechanism": "Unilateral imposition of reciprocity clauses and rejection of Ukraine agricultural access.",
+          "severity": 0.4,
+          "source_refs": [
+            "sources.md#7-rompre-avec-plusieurs-decennies-de-naivete-en-retablissant-une-concurrence-equitable",
+            "sources.md#10-reequilibrer-la-chaine-de-valeur-et-assurer-la-reciprocite-commerciale"
+          ],
+          "reasoning": "Creates friction with EU single market and trade frameworks."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "EU blocks unilateral reciprocity",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Trade is an exclusive EU competence; unilateral French rules risk infringement proceedings.",
+          "source_refs": [
+            "sources.md#7-rompre-avec-plusieurs-decennies-de-naivete-en-retablissant-une-concurrence-equitable"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Contrats long terme nucléaire (15 ans)",
+          "source_ref": "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif",
+          "quantified": true,
+          "magnitude": "Up to 30 TWh annually"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Energy contracts transfer risk to EDF and industrial buyers.",
+          "source_refs": [
+            "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Reallocating 50% of customs/DGCCRF controls requires significant operational shift.",
+          "source_refs": [
+            "sources.md#7-rompre-avec-plusieurs-decennies-de-naivete-en-retablissant-une-concurrence-equitable"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Trade reciprocity heavily dependent on European Commission alignment.",
+          "source_refs": [
+            "sources.md#7-rompre-avec-plusieurs-decennies-de-naivete-en-retablissant-une-concurrence-equitable"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Customs directives can be easily reversed; long-term energy contracts are binding.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.7
+    },
+    "institutional_democratic": {
+      "grade": "B",
+      "headline": "Réforme constitutionnelle supprimant le principe de précaution et primauté du politique sur les agences.",
+      "summary": "Proposes modifying the Constitution to elevate agricultural interests and delete the precautionary principle, while asserting direct political control over scientific agencies.",
+      "problems_addressed": [
+        {
+          "problem": "Normative inflation",
+          "approach": "Delete 50 major regulations immediately, implement 1-in-1-out rule.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#1-supprimer-des-le-lendemain-de-lelection-les-50-regles"
+          ],
+          "reasoning": "Establishes structural mechanisms to halt regulatory growth."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Democratic representation and voting systems",
+          "significance": "Program does not mention electoral reform or parliament's role.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Independence of scientific expertise",
+          "mechanism": "Explicitly places ANSES under political control to prevent bans on agricultural chemicals.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#2-reprendre-la-main-sur-letat-et-ses-agences"
+          ],
+          "reasoning": "Overrides scientific agency autonomy in favor of production goals."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Constitutional referendum fails",
+          "probability": 0.5,
+          "severity": 0.9,
+          "reasoning": "Suppressing the precautionary principle requires a successful referendum.",
+          "source_refs": [
+            "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression du principe de précaution",
+          "source_ref": "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Inscription de l'agriculture comme intérêt fondamental de la Nation",
+          "source_ref": "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Institutional changes do not carry structural costs.",
+          "source_refs": []
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Requires Constitutional amendment and referendum.",
+          "source_refs": [
+            "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Constitutional changes require parliamentary supermajority or public referendum.",
+          "source_refs": [
+            "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture"
+          ]
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Constitutional changes are highly resistant to reversal.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.85
+    },
+    "environmental_long_term": {
+      "grade": "D",
+      "headline": "Moratoire écologique, relance du nucléaire exclusif et réautorisation de pesticides.",
+      "summary": "Program systematically dismantles ecological regulations (ZAN, precautionary principle, wind/solar subsidies) to prioritize short-term industrial and agricultural production.",
+      "problems_addressed": [
+        {
+          "problem": "Land scarcity for industry/farming",
+          "approach": "Suppress ZAN (Zéro Artificialisation Nette) for farm buildings and industrial extensions.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#8-restaurer-notre-souverainete-industrielle-et-technologique",
+            "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+          ],
+          "reasoning": "Directly removes the cap on land artificialization to allow physical expansion."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Climate adaptation and biodiversity loss",
+          "significance": "Program views environmental constraints purely as economic hurdles, ignoring physical climate risks.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Chemical pollution",
+          "mechanism": "Reauthorizing neonicotinoids (acetamiprid) and halting 50% reduction goals for phytosanitary products.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#1-rompre-avec-un-cadre-juridique-devenu-hostile-a-lagriculture",
+            "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+          ],
+          "reasoning": "Explicit rollback of pesticide reduction policies."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "EU sanctions for violating environmental directives",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "Unilaterally relaxing ICPE thresholds and reauthorizing certain chemicals risks clashing with EU baseline frameworks.",
+          "source_refs": [
+            "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression du ZAN",
+          "source_ref": "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Fin des soutiens éolien/solaire",
+          "source_ref": "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Halting renewable subsidies generates state savings.",
+          "source_refs": [
+            "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+          ]
+        },
+        "implementation": {
+          "level": "limited",
+          "note": "Stopping programs is administratively simpler than building them.",
+          "source_refs": [
+            "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Reauthorizing chemicals depends on interpretations of EU mutual recognition.",
+          "source_refs": [
+            "sources.md#2-reprendre-la-main-sur-letat-et-ses-agences"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Subsidies can be reinstated, though lost time in renewable deployment is permanent.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.9
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "Variable based on apprenticeship/welfare status",
+      "units": "€/person/year",
+      "confidence": 0.5,
+      "caveats": "Difficult to aggregate given exact mix of apprenticeship cuts vs overtime gains."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Loss of subsidies for higher-ed apprenticeships; gain if working high overtime.",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "No urban housing measures; affordability unchanged.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Mandatory capitalized savings layer added; baseline system strained by senior tax exemptions.",
+        "quantified": null
+      },
+      "labor_market": {
+        "summary": "Entry-level welfare (unemployment) restricted; pressure to accept lower-quality jobs via RIA taper.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Significant worsening due to deregulation, pesticide reauthorization, and halted renewable deployment.",
+        "quantified": null
+      },
+      "narrative_summary": "Net negative due to cuts in youth welfare/education subsidies and increased environmental debt."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Highly incentivized to continue working tax-free.",
+        "quantified": "+€3,400/year (for median wage anticipating retirement)"
+      },
+      "pension": {
+        "summary": "Cumul emploi-retraite allows partial pension retention (minus 30% of wage) with zero social contributions.",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Silent.",
+        "quantified": null
+      },
+      "narrative_summary": "Net positive, heavily incentivizing and rewarding senior employment while protecting accumulated capital transmission."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Incentivizes seniors to work longer, plus adds capitalization layer.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Near-term effect focuses on senior tax exemptions.",
+            "source_refs": [
+              "sources.md#3-liberer-le-travail-des-seniors-qui-ont-tous-leurs-trimestres"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Capitalization layer begins building assets.",
+            "source_refs": [
+              "sources.md#12-encourager-lepargne-a-soutenir-le-financement-de-leconomie"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Capitalization supplements baseline pensions.",
+            "source_refs": [
+              "sources.md#12-encourager-lepargne-a-soutenir-le-financement-de-leconomie"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Massive near-term tax cuts with uncertain macroeconomic feedback.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "€40bn tax cut risks expanding deficit if €30bn savings underperform.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes-1"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Structural revenue loss persists.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes-1"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-term effect depends heavily on industrial capacity rebuild.",
+            "source_refs": [
+              "sources.md#impact-sur-les-finances-publiques-et-prochaines-etapes-1"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Explicitly pauses/reverses transition efforts.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -2,
+            "note": "Stops renewable deployment, reauthorizes pesticides.",
+            "source_refs": [
+              "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif",
+              "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -2,
+            "note": "Cumulative effect of suppressed ZAN and halted renewables.",
+            "source_refs": [
+              "sources.md#3-aligner-nos-regles-sur-leurope-pas-au-dela"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Nuclear expansion (if successful) eventually begins to cap emissions.",
+            "source_refs": [
+              "sources.md#6-garantir-un-prix-de-lelectricite-durablement-competitif"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Program does not specify measures on health.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on health over this horizon.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on health over this horizon.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on health over this horizon.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Redirection of apprenticeship funds away from higher education.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Immediate reduction in subsidies for higher education apprenticeships.",
+            "source_refs": [
+              "sources.md#9-remettre-notre-systeme-de-formation-au-service-de-lemploi"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Equilibrium reached in vocational pathways.",
+            "source_refs": [
+              "sources.md#9-remettre-notre-systeme-de-formation-au-service-de-lemploi"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Long-term effect stabilizes.",
+            "source_refs": [
+              "sources.md#9-remettre-notre-systeme-de-formation-au-service-de-lemploi"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Silent on urban/general housing; removes limits on rural building.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on urban housing access.",
+            "source_refs": []
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on urban housing access.",
+            "source_refs": []
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on urban housing access.",
+            "source_refs": []
+          }
+        }
+      }
+    ],
+    "reasoning": "Program explicitly redirects funds away from higher-ed youth apprenticeships, severely restricts the welfare net for early-career volatility, and slashes taxes on senior labor and inherited capital.",
+    "source_refs": [
+      "sources.md#9-remettre-notre-systeme-de-formation-au-service-de-lemploi",
+      "sources.md#3-liberer-le-travail-des-seniors-qui-ont-tous-leurs-trimestres",
+      "sources.md#11-liberer-la-transmission-du-capital-productif"
+    ],
+    "confidence": 0.75
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Continued regulatory expansion on environmental issues, persistent production tax burden, and structural deficits.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "environmental_long_term",
+      "institutional_democratic",
+      "social_demographic"
+    ],
+    "dimensions_unchanged": [
+      "security_sovereignty"
+    ],
+    "reasoning": "Sharply reverses environmental regulations and fundamentally alters welfare and taxation structure, but makes no major shifts on internal policing or defense.",
+    "confidence": 0.85
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Healthcare and hospital capacity",
+      "why_unsolved": "Program is entirely silent on healthcare funding and medical deserts.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Global warming physical risks",
+      "why_unsolved": "Program explicitly rolls back environmental adaptation frameworks.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Massive social unrest due to welfare caps.",
+      "trigger": "Implementation of the 70% SMIC cap via the CSU.",
+      "probability": 0.6,
+      "severity": 0.8,
+      "reasoning": "The hard cap mathematically reduces incomes for highly precarious multi-benefit households."
+    },
+    {
+      "scenario": "EU infringement procedures.",
+      "trigger": "Unilateral reauthorization of restricted pesticides and suspension of EU trade rules.",
+      "probability": 0.7,
+      "severity": 0.5,
+      "reasoning": "The program openly states intent to violate or ignore EU harmonization in agriculture."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.risk_profile.budgetary",
+        "critique": "Rating budgetary risk as 'high' might underestimate the behavioral growth response to a €40bn tax cut.",
+        "alternative_interpretation": "Supply-side shock could theoretically finance the gap faster than anticipated."
+      }
+    ],
+    "potential_bias": "The analysis of the environmental section heavily flags rollbacks as negative ('worsened'), reflecting a consensus-science baseline, which the program actively disputes.",
+    "evidence_gaps": "The exact mechanism of the €10bn gap between €40bn tax cuts and €30bn savings is thinly sourced in the text.",
+    "confidence_in_critique": 0.8
+  },
+  "confidence_self_assessment": 0.85
+}

@@ -20,7 +20,7 @@ export default function LandingFooter({ lang }: { lang: Lang }) {
           </p>
         </div>
         <nav
-          aria-label={lang === "fr" ? "Liens bas de page" : "Footer links"}
+          aria-label={t(UI_STRINGS.A11Y_LANDING_FOOTER_LINKS, lang)}
           className="flex flex-wrap gap-5 text-xs text-text-secondary"
         >
           <Link

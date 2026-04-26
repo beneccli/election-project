@@ -3,6 +3,8 @@
 import * as React from "react";
 import type { VersionMetadata } from "@/lib/schema";
 import { githubHistoryUrl } from "@/lib/config";
+import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { useLang } from "@/lib/lang-context";
 
 type PromptRole = "consolidation" | "analysis" | "aggregation";
 
@@ -27,11 +29,12 @@ export function PromptsTab({
   versionMeta: VersionMetadata;
   highlightedSha: string | undefined;
 }) {
-  const cards = buildCards(versionMeta);
+  const { lang } = useLang();
+  const cards = buildCards(versionMeta, lang);
   if (cards.length === 0) {
     return (
       <p className="rounded-md border border-rule bg-bg-subtle px-4 py-6 text-sm text-text-secondary">
-        Aucun prompt enregistré pour cette version.
+        {t(UI_STRINGS.PROMPTS_NONE, lang)}
       </p>
     );
   }
@@ -42,6 +45,7 @@ export function PromptsTab({
           key={card.role + "-" + card.promptSha256}
           card={card}
           highlighted={card.promptSha256 === highlightedSha}
+          lang={lang}
         />
       ))}
     </div>
@@ -52,13 +56,13 @@ export function PromptsTab({
 // Inputs
 // ---------------------------------------------------------------------------
 
-export function buildCards(versionMeta: VersionMetadata): PromptCardInput[] {
+export function buildCards(versionMeta: VersionMetadata, lang: Lang = "fr"): PromptCardInput[] {
   const out: PromptCardInput[] = [];
   const consolidation = versionMeta.sources;
   if (consolidation?.consolidation_prompt_sha256) {
     out.push({
       role: "consolidation",
-      label: "Prompt de consolidation",
+      label: t(UI_STRINGS.PROMPTS_CONSOLIDATION_LABEL, lang),
       // The schema does not record a consolidation prompt *file* yet
       // (only method + sha + version). The canonical location in the
       // repo is stable; fall back to it until the schema carries the
@@ -71,7 +75,7 @@ export function buildCards(versionMeta: VersionMetadata): PromptCardInput[] {
   if (versionMeta.analysis) {
     out.push({
       role: "analysis",
-      label: "Prompt d’analyse",
+      label: t(UI_STRINGS.PROMPTS_ANALYSIS_LABEL, lang),
       promptFile: versionMeta.analysis.prompt_file,
       promptVersion: versionMeta.analysis.prompt_version,
       promptSha256: versionMeta.analysis.prompt_sha256,
@@ -80,7 +84,7 @@ export function buildCards(versionMeta: VersionMetadata): PromptCardInput[] {
   if (versionMeta.aggregation) {
     out.push({
       role: "aggregation",
-      label: "Prompt d’agrégation",
+      label: t(UI_STRINGS.PROMPTS_AGGREGATION_LABEL, lang),
       promptFile: versionMeta.aggregation.prompt_file,
       promptVersion: versionMeta.aggregation.prompt_version,
       promptSha256: versionMeta.aggregation.prompt_sha256,
@@ -96,9 +100,11 @@ export function buildCards(versionMeta: VersionMetadata): PromptCardInput[] {
 function PromptCard({
   card,
   highlighted,
+  lang,
 }: {
   card: PromptCardInput;
   highlighted: boolean;
+  lang: Lang;
 }) {
   const [state, setState] = React.useState<FetchState>({ phase: "loading" });
   const ref = React.useRef<HTMLElement>(null);
@@ -147,6 +153,7 @@ function PromptCard({
       card={card}
       state={state}
       highlighted={highlighted}
+      lang={lang}
     />
   );
 }
@@ -157,8 +164,9 @@ export const PromptCardView = React.forwardRef<
     card: PromptCardInput;
     state: FetchState;
     highlighted: boolean;
+    lang?: Lang;
   }
->(function PromptCardView({ card, state, highlighted }, ref) {
+>(function PromptCardView({ card, state, highlighted, lang = "fr" }, ref) {
   const cls =
     "rounded-md border bg-bg " +
     (highlighted
@@ -183,11 +191,11 @@ export const PromptCardView = React.forwardRef<
           </div>
         </div>
         <div className="mt-2 break-all font-mono text-[10.5px] text-text-secondary">
-          sha256 : <span className="text-text">{card.promptSha256}</span>
+          {t(UI_STRINGS.PROMPTS_SHA256_LABEL, lang)} <span className="text-text">{card.promptSha256}</span>
         </div>
       </header>
       <div className="px-4 py-3">
-        <PromptBody card={card} state={state} />
+        <PromptBody card={card} state={state} lang={lang} />
       </div>
     </section>
   );
@@ -196,24 +204,24 @@ export const PromptCardView = React.forwardRef<
 function PromptBody({
   card,
   state,
+  lang,
 }: {
   card: PromptCardInput;
   state: FetchState;
+  lang: Lang;
 }) {
   if (state.phase === "loading") {
-    return <p className="text-xs text-text-tertiary">Chargement…</p>;
+    return <p className="text-xs text-text-tertiary">{t(UI_STRINGS.RESULTS_LOADING_INLINE, lang)}</p>;
   }
   if (state.phase === "missing") {
     return (
       <div className="flex flex-col gap-2">
         <div className="rounded-sm border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-950">
           <span className="font-semibold uppercase tracking-wider">
-            Prompt non disponible dans l’état courant du dépôt
+            {t(UI_STRINGS.PROMPTS_UNAVAILABLE_TITLE, lang)}
           </span>
           <p className="mt-1 text-[11.5px] leading-snug">
-            Le fichier {card.promptFile} a changé depuis l’exécution de
-            cette version (ou n’existe plus à cette empreinte). Le SHA
-            enregistré reste la preuve d’intégrité historique.
+            {format(t(UI_STRINGS.PROMPTS_UNAVAILABLE_BODY, lang), { file: card.promptFile })}
           </p>
         </div>
         <a
@@ -222,7 +230,7 @@ function PromptBody({
           rel="noreferrer noopener"
           className="self-start text-xs underline decoration-dotted underline-offset-2"
         >
-          Voir l’historique git de {card.promptFile}
+          {format(t(UI_STRINGS.PROMPTS_GIT_HISTORY, lang), { file: card.promptFile })}
         </a>
       </div>
     );
@@ -230,7 +238,7 @@ function PromptBody({
   if (state.phase === "error") {
     return (
       <p className="text-xs text-text-tertiary">
-        Échec du chargement : {state.message}
+        {format(t(UI_STRINGS.RESULTS_LOADING_FAILED_INLINE, lang), { message: state.message })}
       </p>
     );
   }
@@ -240,23 +248,23 @@ function PromptBody({
       {digestOk ? null : (
         <div className="rounded-sm border border-rose-400 bg-rose-50 px-3 py-2 text-xs text-rose-950">
           <span className="font-semibold uppercase tracking-wider">
-            Empreinte SHA256 divergente
+            {t(UI_STRINGS.PROMPTS_HASH_MISMATCH_TITLE, lang)}
           </span>
           <p className="mt-1 font-mono text-[11px] leading-snug">
-            attendue : {card.promptSha256}
+            {format(t(UI_STRINGS.PROMPTS_EXPECTED_HASH, lang), { hash: card.promptSha256 })}
             <br />
-            calculée : {state.computedSha256}
+            {format(t(UI_STRINGS.PROMPTS_COMPUTED_HASH, lang), { hash: state.computedSha256 })}
           </p>
         </div>
       )}
       <div className="flex gap-2">
-        <CopyButton text={state.body} />
+        <CopyButton text={state.body} lang={lang} />
         <a
           href={`/prompts/${card.promptSha256}.md`}
           download={`${card.promptFile.replace(/^.*\//, "")}.${card.promptSha256.slice(0, 7)}.md`}
           className="rounded-sm border border-rule px-2 py-1 text-xs hover:bg-bg-subtle"
         >
-          Télécharger
+          {t(UI_STRINGS.RESULTS_DOWNLOAD, lang)}
         </a>
       </div>
       <pre className="max-h-[500px] overflow-auto rounded-sm border border-rule bg-bg-subtle p-3 text-[11px] leading-snug text-text whitespace-pre-wrap">
@@ -266,7 +274,7 @@ function PromptBody({
   );
 }
 
-function CopyButton({ text }: { text: string }) {
+function CopyButton({ text, lang }: { text: string; lang: Lang }) {
   const [copied, setCopied] = React.useState(false);
   return (
     <button
@@ -279,7 +287,7 @@ function CopyButton({ text }: { text: string }) {
       }}
       className="rounded-sm border border-rule px-2 py-1 text-xs hover:bg-bg-subtle"
     >
-      {copied ? "Copié ✓" : "Copier"}
+      {copied ? t(UI_STRINGS.PROMPTS_COPIED, lang) : t(UI_STRINGS.PROMPTS_COPY, lang)}
     </button>
   );
 }

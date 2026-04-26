@@ -22,6 +22,7 @@ const CARDS: LandingCard[] = [
     updatedAt: "2026-04-01",
     modelsCount: 4,
     isFictional: false,
+    translation: { lang: "fr", status: "native_fr" },
   },
   {
     id: "b",
@@ -34,6 +35,7 @@ const CARDS: LandingCard[] = [
     declaredDate: null,
     updatedAt: "2026-03-01",
     isFictional: false,
+    translation: { lang: "fr", status: "native_fr" },
   },
   {
     id: "c",
@@ -46,6 +48,7 @@ const CARDS: LandingCard[] = [
     declaredDate: null,
     updatedAt: "2026-02-01",
     isFictional: false,
+    translation: { lang: "fr", status: "native_fr" },
   },
 ];
 

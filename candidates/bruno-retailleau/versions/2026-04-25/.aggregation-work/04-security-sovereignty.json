@@ -1,0 +1,225 @@
+{
+  "dimensions": {
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "C",
+        "dissent": { "gpt-5.5-thinking": "B", "qwen3.6": "B" }
+      },
+      "headline": {
+        "text": "Souveraineté productive, énergétique et alimentaire détaillée; défense, police, justice et immigration absentes des sources.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Souveraineté productive, électrique et alimentaire détaillée; défense et sécurité intérieure absentes du corpus." },
+          { "model": "claude-opus-4-7", "text": "Souveraineté économique forte (énergie nucléaire, réciprocité commerciale, sept secteurs stratégiques); défense, sécurité intérieure et immigration absentes des sources." },
+          { "model": "deepseek-manual", "text": "Forte insistance sur la souveraineté agricole et industrielle, mais absence de propositions sur la défense, la sécurité intérieure et l'immigration." },
+          { "model": "gemini-1.5-pro", "text": "Souveraineté énergétique axée sur le nucléaire et protectionnisme agricole/industriel." },
+          { "model": "qwen3.6", "text": "Priorité à la souveraineté économique et alimentaire via réciprocité commerciale, contrôle des importations et refus de la concurrence déloyale." }
+        ]
+      },
+      "summary": "Le programme construit une souveraineté productive (réindustrialisation, 7 secteurs stratégiques, Fonds France Production 600 M€/an), énergétique (contrats nucléaires long terme 15 ans/30 TWh, prolongation des réacteurs jusqu'à 80 ans, arrêt des soutiens aux nouvelles ENR solaires/éoliennes) et alimentaire (inscription constitutionnelle de l'agriculture comme intérêt fondamental, refonte de la PAC, refus d'élargissement Ukraine). La dimension commerciale est marquée par les clauses de réciprocité systématiques, la réorientation de 50% des contrôles douaniers/sanitaires vers les importations et l'extension du MACF. Les volets défense, dissuasion, sécurité intérieure, justice pénale, terrorisme, immigration et politique migratoire ne sont pas traités dans les sources fournies — absence majeure relevée par les cinq modèles.",
+      "problems_addressed": [
+        {
+          "problem": "Prix et stabilité de l'électricité industrielle",
+          "approach": "Substitution de l'ARENH/Versement Nucléaire Universel par des contrats long terme (15 ans, jusqu'à 30 TWh/an) inspirés d'Exeltium, prolongation des réacteurs à 80 ans, objectif 400 TWh/an, arrêt des soutiens aux nouvelles ENR.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#produire-plus"],
+          "reasoning": "Architecture contractuelle précise (durée, volume, indexation), objectif chiffré -10% sur le prix industriel; cinq modèles confirment.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté alimentaire et renouvellement agricole",
+          "approach": "Inscription constitutionnelle de l'agriculture comme intérêt fondamental, refonte de la PAC orientée vers l'actif, accès à l'eau (stockage), réciprocité aux frontières, objectifs chiffrés par filière dans le PSN, refus d'intégration agricole de l'Ukraine.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#proposition-1-cadre-juridique", "sources.md#proposition-9-pac", "sources.md#proposition-10-reciprocite", "sources.md#re-armer-notre-agriculture"],
+          "reasoning": "Diagnostic factuel (déficit commercial agricole, 50% poulet importé, 200 000 exploitations à transmettre, 60% des agriculteurs proches de la retraite d'ici 2030); levier institutionnel inédit.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Concurrence déloyale et contrôle des importations",
+          "approach": "Réorientation de 50% des contrôles douaniers/DGCCRF/sanitaires vers les importations (à effectifs constants), clauses de réciprocité systématiques dans les accords commerciaux, extension du MACF.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#proposition-7-concurrence", "sources.md#proposition-10-reciprocite"],
+          "reasoning": "Cinq modèles convergent: déplacement de la charge administrative vers le point d'entrée; toutefois Gemini relève que le taux absolu de contrôle (0,008%) limite l'impact macro.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Souveraineté technologique et industrielle",
+          "approach": "Concentration des financements publics sur 7 secteurs stratégiques (énergies du futur, IA, biotechs, matériaux/batteries, microélectronique, cybersécurité, quantique), sanctuarisation du CIR, Fonds France Production 600 M€/an, baisse des impôts de production de 15 Md€.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#proposition-10-anticipation", "sources.md#proposition-8-investissement", "sources.md#proposition-5-prelevements"],
+          "reasoning": "Liste explicite alignée sur stratégies européennes; financement non chiffré au-delà du Fonds.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Politique de défense, dissuasion et industrie de défense",
+          "significance": "Aucune trajectoire défense, format d'armée, LPM, cybersécurité opérationnelle ou positionnement OTAN dans les sources fournies, malgré le contexte géopolitique post-Ukraine.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Sécurité intérieure, police, justice pénale et lutte contre le narcotrafic",
+          "significance": "Absente du périmètre des sources malgré la fonction antérieure de l'auteur (ancien ministre de l'Intérieur). Aucune mesure police, justice, prison.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Immigration, asile, intégration et contrôle des flux de personnes",
+          "significance": "Le programme traite de la circulation des marchandises et des produits, pas des personnes — absence notable au regard des positions publiques du candidat.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Tensions avec l'UE et avec le marché unique",
+          "mechanism": "Imposition unilatérale de clauses de réciprocité, refus d'élargissement agricole Ukraine, réorientation des contrôles, contrat nucléaire long terme: chacun expose la France à des procédures d'infraction ou à un risque d'aide d'État.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#proposition-7-concurrence", "sources.md#proposition-10-reciprocite", "sources.md#proposition-6-electricite"],
+          "reasoning": "Le commerce est une compétence européenne exclusive; l'aide d'État sur le contrat nucléaire doit être sécurisée. Quatre modèles le relèvent comme risque actif.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Marge de manœuvre du mix électrique en cas de retard nucléaire",
+          "mechanism": "Arrêt des soutiens aux nouvelles capacités solaires et éoliennes, prolongation/renouvellement nucléaire au calendrier tendu (EPR2): toute aléa technique ou financier d'EDF réduit l'effet souveraineté-prix et la résilience du mix.",
+          "severity": 0.45,
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#produire-plus"],
+          "reasoning": "Le programme assume ce pari; deux modèles l'identifient comme aggravation potentielle.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Accord européen sur la réciprocité systématique et le MACF étendu",
+          "probability": 0.7,
+          "severity": 0.55,
+          "reasoning": "Demande un alignement de 26 partenaires aux intérêts commerciaux divergents; le commerce est une compétence exclusive de l'UE et l'unilatéralisme expose à des procédures d'infraction.",
+          "source_refs": ["sources.md#proposition-7-concurrence", "sources.md#proposition-10-reciprocite"],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Compatibilité européenne du contrat nucléaire long terme (aide d'État)",
+          "probability": 0.45,
+          "severity": 0.55,
+          "reasoning": "Le dispositif dépend d'EDF, de fournisseurs alternatifs volontaires, d'une contribution initiale et d'un contrôle de répercussion; compatibilité avec règles concurrence européenne à sécuriser.",
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#produire-plus"],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Contrats nucléaires long terme EDF/fournisseurs alternatifs",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": true,
+          "magnitude": "15 ans; jusqu'à 30 TWh/an; objectif -10% prix moyen de fourniture industrielle",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Réorientation de 50% des contrôles administratifs vers les importations",
+          "source_ref": "sources.md#proposition-7-concurrence",
+          "quantified": true,
+          "magnitude": "50% à effectifs constants",
+          "supported_by": ["claude-opus-4-7", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Inscription constitutionnelle de l'agriculture comme intérêt fondamental",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "measure": "Reconquête agricole et renouvellement des exploitations",
+          "source_ref": "sources.md#re-armer-notre-agriculture",
+          "quantified": true,
+          "magnitude": "200 000 exploitations à transmettre; 60% des agriculteurs proches de la retraite d'ici 2030",
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Opposition à l'intégration agricole de l'Ukraine au marché européen",
+          "source_ref": "sources.md#proposition-10-reciprocite",
+          "quantified": false,
+          "magnitude": "Veto politique",
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "moderate"],
+          "note": "Coûts publics ou régulés non consolidés (prix électrique, eau, agriculture); 15 Md€ d'impôts de production non gagés à court terme; transfert de risque à EDF et industriels.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+          "dissenters": ["gemini-1.5-pro", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Prix électrique, eau, agriculture et réindustrialisation impliquent coûts publics ou régulés non consolidés." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Fonds France Production 600 M€/an et CIR sanctuarisé; coût du contrat nucléaire long terme dépend du prix négocié." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Les baisses d'impôts de production (15 Md€) ne sont pas gagées à court terme sur des économies équivalentes." },
+            { "model": "gemini-1.5-pro", "level": "limited", "note": "Energy contracts transfer risk to EDF and industrial buyers." },
+            { "model": "qwen3.6", "level": "low", "note": "Control reallocation operates at constant staffing; minimal direct fiscal impact." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Contrôles réorientés à effectifs constants, négociation UE (réciprocité, MACF), révisions constitutionnelles, suppression OFB, pilotage EDF: chantiers cumulés.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+          "dissenters": ["gemini-1.5-pro", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Nécessite EDF, régulateurs, contrôles commerciaux, PAC, agences, eau et transmissions agricoles." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Réorientation à effectifs constants des contrôles, négociation européenne, révision constitutionnelle." },
+            { "model": "deepseek-manual", "level": "high", "note": "La révision constitutionnelle et la suppression d'agences (OFB) exigent des majorités qualifiées et des chantiers législatifs complexes." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Reallocating 50% of customs/DGCCRF controls requires significant operational shift." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Requires inter-agency coordination and EU notification for control doctrine shifts." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Réciprocité commerciale et MACF étendu dépendent d'un accord à 27 et de l'OMC; nucléaire dépend d'EDF, du droit européen et des marchés d'énergie; agriculture dépend de la PAC.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["deepseek-manual"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Dépend du nucléaire, du droit européen, des marchés d'énergie, de la PAC et des exploitants." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Réciprocité commerciale et MACF étendu dépendent d'un accord à 27 et de négociations OMC." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Dépend de la capacité à faire accepter les dérogations aux règles européennes (PAC, commerce) et à renégocier des traités." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Trade reciprocity heavily dependent on European Commission alignment." },
+            { "model": "qwen3.6", "level": "high", "note": "Reciprocity and market access rules depend on EU negotiation outcomes." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": null,
+          "level_interval": ["low", "moderate"],
+          "note": "Inscription constitutionnelle exige Congrès/référendum; contrats nucléaires de 15 ans et infrastructures industrielles longues; règles douanières administrativement ajustables.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Les règles peuvent changer, mais contrats longs et investissements créent une inertie." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Inscription constitutionnelle exige référendum/Congrès, contrats nucléaires de 15 ans, infrastructures industrielles longues." },
+            { "model": "deepseek-manual", "level": "low", "note": "Une révision constitutionnelle est difficile à revenir; les baisses d'impôts peuvent être réintroduites par une loi de finances ultérieure." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Customs directives can be easily reversed; long-term energy contracts are binding." },
+            { "model": "qwen3.6", "level": "limited", "note": "Trade doctrine shifts are politically sticky but administratively adjustable." }
+          ]
+        }
+      },
+      "confidence": 0.65
+    }
+  }
+}

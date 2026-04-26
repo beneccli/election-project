@@ -33,6 +33,7 @@ function makeProjection(
     updatedAt: "2026-01-01T00:00:00Z",
     versionDate: "2026-01-01",
     isFictional: true,
+    translation: { lang: "fr", status: "native_fr" },
     analyzable: true,
     overallGrade: "C",
     overallGradeModifier: null,

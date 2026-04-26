@@ -2,6 +2,7 @@
 
 // See docs/specs/website/nextjs-architecture.md §5.3
 import { useEffect, useState } from "react";
+import { t, UI_STRINGS, type Lang } from "@/lib/i18n";
 
 type Theme = "light" | "dark";
 const STORAGE_KEY = "e27-theme";
@@ -12,7 +13,7 @@ function readInitial(): Theme {
   return attr === "dark" ? "dark" : "light";
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({ lang = "fr" }: { lang?: Lang }) {
   const [theme, setTheme] = useState<Theme>(readInitial);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export function ThemeToggle() {
   }, [theme]);
 
   const next = theme === "dark" ? "light" : "dark";
-  const label = theme === "dark" ? "Mode clair" : "Mode sombre";
+  const label = theme === "dark" ? t(UI_STRINGS.TOGGLE_THEME_LIGHT, lang) : t(UI_STRINGS.TOGGLE_THEME_DARK, lang);
 
   return (
     <button

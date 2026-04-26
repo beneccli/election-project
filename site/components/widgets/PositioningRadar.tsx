@@ -12,7 +12,7 @@ import type { RadarShape } from "@/lib/derived/positioning-shape";
 import { AXES } from "@/lib/anchors";
 import { AXIS_KEYS } from "@/lib/derived/keys";
 import type { Lang } from "@/lib/i18n";
-import { t } from "@/lib/i18n";
+import { format, t, UI_STRINGS } from "@/lib/i18n";
 import { modelColor } from "@/lib/model-color";
 import { Tooltip } from "./Tooltip";
 
@@ -76,7 +76,12 @@ export function PositioningRadar({
   });
 
   const ariaSummary = shape.axes
-    .map((ax, i) => `${axisLabels[i]}: ${ax.interval[0]} à ${ax.interval[1]}${ax.hasDissent ? " (désaccord)" : ""}`)
+    .map((ax, i) => {
+      const tail = ax.hasDissent
+        ? t(UI_STRINGS.RADAR_AXIS_INTERVAL_TAIL_DISSENT, lang)
+        : "";
+      return `${axisLabels[i]}: ${ax.interval[0]} – ${ax.interval[1]}${tail}`;
+    })
     .join(". ");
 
   // Pre-compute label coordinates — reused for label text AND for
@@ -97,7 +102,7 @@ export function PositioningRadar({
       height={SIZE}
       viewBox={`0 0 ${SIZE} ${SIZE}`}
       role="img"
-      aria-label={`Positionnement politique. ${ariaSummary}`}
+      aria-label={format(t(UI_STRINGS.RADAR_CHART_LABEL, lang), { summary: ariaSummary })}
       style={{ overflow: "visible" }}
     >
       {/* Concentric grid */}
@@ -262,24 +267,30 @@ export function PositioningRadar({
                   {axisLabels[i]}
                 </div>
                 <div>
-                  Intervalle de consensus : {formatSigned(ax.interval[0])} à{" "}
-                  {formatSigned(ax.interval[1])}
+                  {format(t(UI_STRINGS.RADAR_CONSENSUS_INTERVAL, lang), { lo: formatSigned(ax.interval[0]), hi: formatSigned(ax.interval[1]) })}
                 </div>
                 {ax.modal !== null ? (
-                  <div>Valeur modale : {formatSigned(ax.modal)}</div>
+                  <div>{format(t(UI_STRINGS.RADAR_MODAL_VALUE, lang), { value: formatSigned(ax.modal) })}</div>
                 ) : (
-                  <div>Valeur modale : non résolue (milieu d&apos;intervalle)</div>
+                  <div>{t(UI_STRINGS.RADAR_MODAL_UNRESOLVED, lang)}</div>
                 )}
                 <div>
                   {ax.hasDissent
-                    ? `Désaccord : ${ax.dissentCount} modèle${ax.dissentCount > 1 ? "s" : ""}`
-                    : "Consensus"}
+                    ? format(t(UI_STRINGS.RADAR_DISSENT_DETAIL, lang), { n: ax.dissentCount, s: ax.dissentCount > 1 ? "s" : "" })
+                    : t(UI_STRINGS.RADAR_CONSENSUS_LABEL, lang)}
                 </div>
               </div>
             }
           >
             <span
-              aria-label={`${axisLabels[i]}: intervalle ${formatSigned(ax.interval[0])} à ${formatSigned(ax.interval[1])}${ax.hasDissent ? `, désaccord ${ax.dissentCount} modèles` : ", consensus"}`}
+              aria-label={format(t(UI_STRINGS.RADAR_AXIS_INTERVAL_LABEL, lang), {
+                label: axisLabels[i],
+                lo: formatSigned(ax.interval[0]),
+                hi: formatSigned(ax.interval[1]),
+                tail: ax.hasDissent
+                  ? `, ${format(t(UI_STRINGS.RADAR_DISSENT_DETAIL, lang), { n: ax.dissentCount, s: ax.dissentCount > 1 ? "s" : "" })}`
+                  : `, ${t(UI_STRINGS.RADAR_CONSENSUS_LABEL, lang).toLowerCase()}`,
+              })}
               className="block h-full w-full"
             />
           </Tooltip>

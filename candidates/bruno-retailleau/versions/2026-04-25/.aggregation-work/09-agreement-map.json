@@ -1,0 +1,157 @@
+{
+  "agreement_map": {
+    "high_confidence_claims": [
+      {
+        "claim_id": "40 Md€ d'allègements ciblés (cotisations + impôts de production)",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "30 Md€ d'économies via réforme assurance chômage et plafonnement aides non contributives à 70% SMIC",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Absence de trajectoire pluriannuelle chiffrée de déficit/dette publique",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Suppression du ZAN, du principe de précaution (révision constitutionnelle référendaire) et arrêt des soutiens publics aux nouvelles capacités ENR",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Objectif 400 TWh/an de nucléaire avec contrats long terme à 30 TWh/an pour les électro-intensifs",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Aucune trajectoire chiffrée d'émissions de gaz à effet de serre",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Silence des sources sur la santé, le logement résidentiel, l'éducation générale et la défense",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Cumul emploi-retraite rénové et exonération anticipée pour seniors ayant validé tous leurs trimestres",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Création du Revenu d'incitation à l'activité (RIA, fusion RSA + prime d'activité + ASS) avec dégressivité 30%",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Réorientation des aides à l'apprentissage vers infra-Bac+2 et industrie",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Réautorisation de néonicotinoïdes (acétamipride) et inscription de l'agriculture comme intérêt fondamental",
+        "models": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      },
+      {
+        "claim_id": "Recentrage du Code du travail sur 50 principes indépassables et autorité indépendante de veto sur les normes",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"]
+      },
+      {
+        "claim_id": "Absence de réforme paramétrique des retraites; étage de capitalisation volontaire seul levier sur le long terme",
+        "models": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"]
+      }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "Position sur l'axe social/culturel",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "score 1 — droite modérée, fondé sur conditionnalité de l'assistance sans virage identitaire explicite" },
+          { "model": "claude-opus-4-7", "position": "score 2 — droite affirmée, conditionnalité forte de l'assistance" },
+          { "model": "deepseek-manual", "position": "score 3 — droite traditionnelle, conditionnalité et inscription d'intérêts fondamentaux" },
+          { "model": "gemini-1.5-pro", "position": "score 3 — droite traditionnelle structurée autour du travail" },
+          { "model": "qwen3.6", "position": "score 2 — conservatisme social modéré, pas d'agenda culturel explicite" }
+        ]
+      },
+      {
+        "claim_id": "Direction du transfert intergénérationnel net",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "mixed — gains pour seniors actifs et actifs faisant des heures sup., dette différée" },
+          { "model": "claude-opus-4-7", "position": "mixed — bénéfices concentrés sur seniors actifs et actifs, dette climatique reportée" },
+          { "model": "deepseek-manual", "position": "mixed — non quantifiable globalement; gains seniors actifs vs dette climatique différée" },
+          { "model": "gemini-1.5-pro", "position": "young_to_old — exonérations seniors et baisse aides apprentissage du supérieur l'emportent" },
+          { "model": "qwen3.6", "position": "mixed — gains diffus avec coûts d'adaptation différés sur les jeunes" }
+        ]
+      },
+      {
+        "claim_id": "Magnitude du transfert intergénérationnel",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "qualitative + cas-types €/an, pas de magnitude globale" },
+          { "model": "claude-opus-4-7", "position": "+500 €/an sur heures sup; -410 €/mois pour ménages précaires plafonnés CSU; pas d'agrégation" },
+          { "model": "deepseek-manual", "position": "non quantifiable au niveau macroéconomique faute de bouclage" },
+          { "model": "gemini-1.5-pro", "position": "magnitude qualifiée de variable, sans estimation centrale" },
+          { "model": "qwen3.6", "position": "ordre de grandeur ~800 €/personne/an pour les bénéficiaires nets, sans agrégation" }
+        ]
+      },
+      {
+        "claim_id": "Note de la dimension institutionnelle/démocratique",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "C — verrouillage institutionnel risqué mais cohérent" },
+          { "model": "claude-opus-4-7", "position": "C — révisions constitutionnelles référendaires posent risque de rigidification" },
+          { "model": "deepseek-manual", "position": "D — cumul des révisions constitutionnelles et de l'autorité indépendante crée un risque démocratique" },
+          { "model": "gemini-1.5-pro", "position": "B — clarté procédurale et mandats référendaires sont jugés démocratiques" },
+          { "model": "qwen3.6", "position": "C — équilibre entre clarté et concentration du pouvoir normatif" }
+        ]
+      },
+      {
+        "claim_id": "Note de la dimension sécurité/souveraineté",
+        "positions": [
+          { "model": "gpt-5.5-thinking", "position": "B — souveraineté énergétique et industrielle bien articulée" },
+          { "model": "claude-opus-4-7", "position": "C — cohérence du volet souveraineté mais douanes à effectifs constants" },
+          { "model": "deepseek-manual", "position": "C — souveraineté productive renforcée mais zones d'ombre sur défense et immigration" },
+          { "model": "gemini-1.5-pro", "position": "C — défense et police absentes" },
+          { "model": "qwen3.6", "position": "B — réciprocité et nucléaire forment un cadre de souveraineté solide" }
+        ]
+      }
+    ],
+    "coverage": {
+      "gpt-5.5-thinking": "complete",
+      "claude-opus-4-7": "complete",
+      "deepseek-manual": "complete",
+      "gemini-1.5-pro": "complete",
+      "qwen3.6": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [3, 4],
+        "modal": 3,
+        "dissent_count": 1
+      },
+      "social_cultural": {
+        "interval": [1, 3],
+        "modal": null,
+        "dissent_count": 5
+      },
+      "sovereignty": {
+        "interval": [2, 3],
+        "modal": 3,
+        "dissent_count": 2
+      },
+      "institutional": {
+        "interval": [-1, 2],
+        "modal": 1,
+        "dissent_count": 2
+      },
+      "ecological": {
+        "interval": [-4, -2],
+        "modal": -2,
+        "dissent_count": 2
+      },
+      "overall_spectrum": {
+        "modal_label": "droite",
+        "distribution": { "droite": 5 },
+        "dissent_count": 0
+      }
+    }
+  },
+  "flagged_for_review": [
+    {
+      "claim": "Le fichier raw-output deepseek-manual.json déclare model.provider='anthropic' et model.version='claude-opus-4-7', identique aux métadonnées de claude-manual.json.",
+      "claimed_by": ["deepseek-manual"],
+      "issue": "Erreur d'attestation manuelle: deux raw-outputs partagent le même identifiant modèle, ce qui empêcherait une coverage par identifiant unique. L'agrégation utilise l'identifiant 'deepseek-manual' (déduit du nom de fichier) pour préserver la séparation des contributions et éviter une collision dans agreement_map.coverage.",
+      "suggested_action": "L'opérateur doit ré-attester le raw-output deepseek avec les métadonnées correctes (provider='deepseek', version effective du modèle utilisé) avant ré-ingestion."
+    }
+  ]
+}

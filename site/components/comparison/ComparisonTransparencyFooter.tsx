@@ -8,6 +8,7 @@
 
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
 import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS } from "@/lib/i18n";
 import { useComparison } from "./ComparisonBody";
 
 export function ComparisonTransparencyFooter() {
@@ -22,18 +23,14 @@ export function ComparisonTransparencyFooter() {
     <footer className="mt-24 border-t border-rule bg-bg-subtle">
       <div className="mx-auto max-w-content px-8 py-10 text-sm text-text-secondary">
         <div className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent">
-          {lang === "en" ? "Transparency" : "Transparence"}
+          {t(UI_STRINGS.COMPARISON_TRANSPARENCY_TITLE, lang)}
         </div>
         <p className="mb-6 max-w-prose text-base text-text">
-          {lang === "en"
-            ? "This page renders the aggregated analyses already published on each candidate page — no new analysis is produced here. Open a candidate page for the full run (models, prompts, sources, raw outputs)."
-            : "Cette page affiche les analyses agrégées déjà publiées sur chaque fiche candidat — aucune analyse supplémentaire n'est produite ici. Ouvrez une fiche candidat pour consulter le run complet (modèles, prompts, sources, sorties brutes)."}
+          {t(UI_STRINGS.COMPARISON_FOOTER_BODY_LONG, lang)}
         </p>
         {selected.length === 0 ? (
           <p className="text-text-tertiary">
-            {lang === "en"
-              ? "No candidate selected."
-              : "Aucun candidat sélectionné."}
+            {t(UI_STRINGS.COMPARISON_NO_CANDIDATES_SELECTED, lang)}
           </p>
         ) : (
           <ul className="flex flex-wrap gap-2">

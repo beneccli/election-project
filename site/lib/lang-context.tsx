@@ -1,10 +1,9 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+// See docs/specs/website/i18n.md §4 (URL is the source of truth)
+import { createContext, useContext, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { Lang } from "./i18n";
-
-const STORAGE_KEY = "e27-lang";
 
 type LangContextValue = {
   lang: Lang;
@@ -13,31 +12,22 @@ type LangContextValue = {
 
 const LangContext = createContext<LangContextValue | null>(null);
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  // SSR/static export renders in FR; client may update post-hydration.
-  const [lang, setLangState] = useState<Lang>("fr");
-
-  useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (stored === "fr" || stored === "en") setLangState(stored);
-    } catch {
-      // localStorage blocked — keep default.
-    }
-  }, []);
+/**
+ * Provider seeded by the route segment (`/` → fr, `/en/...` → en).
+ * No localStorage read — the URL is canonical. The toggle (task 0126)
+ * navigates to the sibling URL rather than mutating client state.
+ */
+export function LangProvider({
+  initial,
+  children,
+}: {
+  initial: Lang;
+  children: ReactNode;
+}) {
+  const [lang, setLangState] = useState<Lang>(initial);
 
   const value = useMemo<LangContextValue>(
-    () => ({
-      lang,
-      setLang: (next) => {
-        setLangState(next);
-        try {
-          window.localStorage.setItem(STORAGE_KEY, next);
-        } catch {
-          // ignore
-        }
-      },
-    }),
+    () => ({ lang, setLang: setLangState }),
     [lang],
   );
 
@@ -47,8 +37,8 @@ export function LangProvider({ children }: { children: ReactNode }) {
 export function useLang(): LangContextValue {
   const ctx = useContext(LangContext);
   if (!ctx) {
-    // Safe fallback when consumer is rendered outside the provider (e.g.
-    // server-side rendering of unit test). Treated as read-only FR.
+    // Safe fallback when a consumer renders outside the provider (e.g.
+    // unit-test rendering of a leaf component). Treated as read-only FR.
     return { lang: "fr", setLang: () => {} };
   }
   return ctx;

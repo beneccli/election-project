@@ -20,6 +20,7 @@ import {
   CandidateDataError,
   loadCandidate,
   type CandidateBundle,
+  type TranslationStatus,
 } from "./candidates";
 import { deriveComparisonProjection } from "./derived/comparison-projection";
 import { AXIS_KEYS } from "./derived/keys";
@@ -28,6 +29,7 @@ import type {
   TopGradeLetter,
   GradeModifier,
 } from "./derived/top-level-grade";
+import type { Lang } from "./i18n";
 
 // ---------------------------------------------------------------------------
 // Public types
@@ -65,6 +67,10 @@ export interface LandingCardAnalyzed {
   /** Number of successful per-model analyses underpinning the aggregate. */
   modelsCount: number;
   isFictional: boolean;
+  /** Locale provenance for this card. When `status === "missing"`,
+   *  the card uses FR fallback content and the UI renders an `FR`
+   *  chip (see spec §6). */
+  translation: TranslationStatus;
 }
 
 export interface LandingCardPending {
@@ -78,6 +84,11 @@ export interface LandingCardPending {
   declaredDate: string | null;
   updatedAt: string;
   isFictional: boolean;
+  /** Pending cards are language-agnostic (no aggregated content) but
+   *  we surface translation provenance for symmetry with analyzed
+   *  rows. Status is always "native_fr" for FR or "missing" for EN
+   *  (no per-card translation file by definition). */
+  translation: TranslationStatus;
 }
 
 export type LandingCard = LandingCardAnalyzed | LandingCardPending;
@@ -204,11 +215,16 @@ function buildAnalyzed(
     updatedAt: projection.updatedAt,
     modelsCount: countSuccessfulModels(bundle),
     isFictional: projection.isFictional,
+    translation: bundle.translation,
   };
 }
 
-function buildPending(meta: CandidateMetadata): LandingCardPending {
+function buildPending(meta: CandidateMetadata, lang: Lang): LandingCardPending {
   const family = deriveFamilyBucket("absent", null, meta.family_override);
+  const translation: TranslationStatus =
+    lang === "fr"
+      ? { lang: "fr", status: "native_fr" }
+      : { lang, status: "missing" };
   return {
     id: meta.id,
     status: "pending",
@@ -222,6 +238,7 @@ function buildPending(meta: CandidateMetadata): LandingCardPending {
     declaredDate: meta.declared_candidate_date ?? null,
     updatedAt: meta.updated,
     isFictional: meta.is_fictional === true,
+    translation,
   };
 }
 
@@ -237,7 +254,7 @@ function buildPending(meta: CandidateMetadata): LandingCardPending {
  *
  * Ordered by `updatedAt` desc, `displayName` asc tie-breaker.
  */
-export function listLandingCards(): LandingCard[] {
+export function listLandingCards(lang: Lang = "fr"): LandingCard[] {
   const root = resolveCandidatesDir();
   if (!fs.existsSync(root)) return [];
 
@@ -261,18 +278,18 @@ export function listLandingCards(): LandingCard[] {
 
     const aggregatedPath = path.join(candidateDir, "current", "aggregated.json");
     if (!fs.existsSync(aggregatedPath)) {
-      cards.push(buildPending(meta));
+      cards.push(buildPending(meta, lang));
       continue;
     }
 
     try {
-      const bundle = loadCandidate(meta.id);
+      const bundle = loadCandidate(meta.id, lang);
       cards.push(buildAnalyzed(meta, bundle));
     } catch (err) {
       // Broken bundle → pending fallback. Never fail the build for one
       // candidate. See spec §3.1 "Safe-fallback".
       if (err instanceof CandidateDataError || err instanceof Error) {
-        cards.push(buildPending(meta));
+        cards.push(buildPending(meta, lang));
         continue;
       }
       throw err;

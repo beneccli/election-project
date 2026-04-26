@@ -13,6 +13,7 @@ import {
 import { GradeBadge } from "@/components/widgets/GradeBadge";
 import type { ComparisonProjection } from "@/lib/derived/comparison-projection";
 import { useLang } from "@/lib/lang-context";
+import { t, UI_STRINGS } from "@/lib/i18n";
 import { useComparison } from "./ComparisonBody";
 
 function firstName(name: string): string {
@@ -35,9 +36,7 @@ export function SelectedHeader() {
     >
       <ul
         role="list"
-        aria-label={
-          lang === "en" ? "Selected candidates" : "Candidats sélectionnés"
-        }
+        aria-label={t(UI_STRINGS.COMPARISON_SELECTED_HEADER, lang)}
         className="flex flex-wrap items-center gap-3"
       >
         {selected.map((c, slot) => {

@@ -1,5 +1,96 @@
 {
   "candidate_id": "bruno-retailleau",
   "version_date": "2026-04-25",
-  "schema_version": "1.0"
+  "schema_version": "1.0",
+  "analysis": {
+    "prompt_file": "prompts/analyze-candidate.md",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "prompt_version": "0.1",
+    "models": {
+      "gemini-manual": {
+        "provider": "manual",
+        "exact_version": "gemini-3-pro",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:01:45.063Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "gemini-3-pro",
+        "provider_metadata_available": false
+      },
+      "qwen-manual": {
+        "provider": "manual",
+        "exact_version": "qwen3.6-Max-Preview-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:02:50.123Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "qwen3.6-Max-Preview-thinking",
+        "provider_metadata_available": false
+      },
+      "claude-manual": {
+        "provider": "manual",
+        "exact_version": "claude-opus-4.7",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:03:52.997Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "claude-opus-4.7",
+        "provider_metadata_available": false
+      },
+      "deepseek-manual": {
+        "provider": "manual",
+        "exact_version": "deepseek-thinking",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:07:23.415Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "deepseek-thinking",
+        "provider_metadata_available": false
+      },
+      "chatgpt-manual": {
+        "provider": "manual",
+        "exact_version": "chatgpt-5.5-thinking-extended",
+        "temperature": 0,
+        "run_at": "2026-04-25T19:10:04.727Z",
+        "status": "success",
+        "execution_mode": "manual-webchat",
+        "attested_by": "benoit",
+        "attested_model_version": "chatgpt-5.5-thinking-extended",
+        "provider_metadata_available": false
+      }
+    }
+  },
+  "aggregation": {
+    "prompt_file": "prompts/aggregate-analyses.md",
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "0.1",
+    "aggregator_model": {
+      "provider": "copilot",
+      "exact_version": "claude-opus-4-7",
+      "run_at": "2026-04-26T01:56:17.261Z",
+      "execution_mode": "copilot-agent",
+      "attested_by": "copilot-aggregator",
+      "attested_model_version": "claude-opus-4-7",
+      "provider_metadata_available": false
+    },
+    "human_review_completed": true,
+    "reviewer": "benoit",
+    "reviewed_at": "2026-04-26T01:56:28.122Z"
+  },
+  "translations": {
+    "en": {
+      "prompt_file": "prompts/translate-aggregated.md",
+      "prompt_sha256": "e2b8acf86b5c671a2b1e7211e9d2bb341f8b8f8dd1c3b220fb64902b74579892",
+      "prompt_version": "1.0",
+      "execution_mode": "copilot-agent",
+      "attested_model_version": "claude-opus-4-7",
+      "ingested_at": "2026-04-26T03:05:03.132Z",
+      "human_review_completed": false,
+      "reviewer": "benoit"
+    }
+  }
 }

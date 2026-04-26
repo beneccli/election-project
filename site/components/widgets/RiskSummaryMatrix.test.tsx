@@ -62,11 +62,11 @@ describe("RiskSummaryMatrix", () => {
       <RiskSummaryMatrix dimensions={buildDimensions()} />,
     );
     for (const label of [
-      "Économique &amp; fiscal",
-      "Social &amp; démographique",
+      "Économie &amp; finances",
+      "Social &amp; démographie",
       "Sécurité &amp; souveraineté",
-      "Institutionnel &amp; démocratique",
-      "Environnemental &amp; long terme",
+      "Institutions &amp; démocratie",
+      "Environnement &amp; long terme",
     ]) {
       expect(html).toContain(label);
     }

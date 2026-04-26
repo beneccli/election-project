@@ -50,7 +50,13 @@ function loadOmegaBundle(): CandidateBundle {
   const versionMeta: VersionMetadata = VersionMetadataSchema.parse(
     JSON.parse(fs.readFileSync(path.join(OMEGA_ROOT, "metadata.json"), "utf8")),
   );
-  return { meta, versionMeta, aggregated, rawSummaries: [] };
+  return {
+    meta,
+    versionMeta,
+    aggregated,
+    rawSummaries: [],
+    translation: { lang: "fr", status: "native_fr" },
+  };
 }
 
 function cloneAgg(agg: AggregatedOutput): AggregatedOutput {
@@ -207,6 +213,7 @@ describe("buildComparisonEntries", () => {
       party: "Parti Test",
       partyId: "test",
       isFictional: true,
+    availableLocales: ["fr"],
       versionDate: "2027-11-01",
       updatedAt: bundle.meta.updated,
     },
@@ -216,6 +223,7 @@ describe("buildComparisonEntries", () => {
       party: "Parti Test",
       partyId: "test",
       isFictional: true,
+    availableLocales: ["fr"],
       versionDate: "2027-11-01",
       updatedAt: bundle.meta.updated,
     },

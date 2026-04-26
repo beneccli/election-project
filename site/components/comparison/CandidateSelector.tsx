@@ -73,9 +73,24 @@ export function CandidateSelector() {
                 }`}
                 style={selected ? { border: `2px solid ${color}` } : undefined}
               >
-                <div className="flex justify-between gap-3">
+                <div className="flex w-full justify-between gap-3">
                   <div style={{ width:6, height:6, borderRadius:"50%", background: selected ? color : 'black', marginTop:2, flexShrink:0 }} />
-                  {selected && <GradeBadge grade={grade} size="xs" />}
+                  <div className="flex items-center gap-1">
+                    {entry.translation.status === "missing" ? (
+                      <span
+                        className="rounded border border-rule px-1 py-[1px] text-[9px] font-semibold uppercase tracking-wider text-text-tertiary"
+                        data-fr-chip
+                        title={
+                          lang === "en"
+                            ? "Translation pending — French content shown"
+                            : "Traduction à venir — contenu en français"
+                        }
+                      >
+                        FR
+                      </span>
+                    ) : null}
+                    {selected && <GradeBadge grade={grade} size="xs" />}
+                  </div>
                 </div>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-medium">

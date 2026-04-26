@@ -18,6 +18,7 @@ import {
   deriveComparisonProjection,
   type ComparisonEntry,
 } from "./derived/comparison-projection";
+import type { Lang } from "./i18n";
 
 /**
  * Pure core: given a list of index rows and a bundle loader, build the
@@ -45,6 +46,10 @@ export function buildComparisonEntries(
   return out;
 }
 
-export function listComparisonProjections(): ComparisonEntry[] {
-  return buildComparisonEntries(listCandidates(), loadCandidate);
+export function listComparisonProjections(
+  lang: Lang = "fr",
+): ComparisonEntry[] {
+  return buildComparisonEntries(listCandidates(), (id) =>
+    loadCandidate(id, lang),
+  );
 }

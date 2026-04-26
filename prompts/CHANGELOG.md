@@ -3,6 +3,45 @@
 All changes to files in `prompts/` are recorded here. See
 [`prompts/README.md`](README.md) for the versioning rules.
 
+## 2026-04-25 — translate-aggregated.md 1.0
+
+**Change:** New prompt — versioned translator that converts an
+aggregated FR analysis to a target locale while preserving all
+numeric values, IDs, and array lengths byte-for-byte.
+
+- Operator workflow: `prepare-manual-translation` builds the
+  copy-pasteable bundle (FR aggregated payload + verbatim prompt with
+  target language substituted), the operator pastes into any chat UI,
+  the reply is ingested by `ingest-translation` which stamps a
+  `translations.<lang>` provenance block in `metadata.json` (prompt
+  file, SHA256, version, attested model, ingest timestamp,
+  `human_review_completed: false`).
+- Editorial rails: translates **prose only** (summaries, headlines,
+  narratives, key_measures, intergenerational dimension notes,
+  counterfactual, unsolved_problems, downside_scenarios,
+  agreement_map text, flagged_for_review). Never edits scores,
+  spectrum labels, IDs, source_refs, model identifiers, or array
+  lengths. The denylist (`sacrifice`, `betray`, `steal`, `crush`,
+  `rescue`) blocks advocacy language regressions.
+- Site integration: the Transparency drawer renders a "Translation"
+  subsection (target locale, attested model, prompt SHA256, ingest
+  timestamp, review flag) whenever `versionMeta.translations[<lang>]`
+  is present and the current locale ≠ FR. FR canonical pages never
+  surface this block. See
+  [`docs/specs/website/i18n.md`](../docs/specs/website/i18n.md) §3.3
+  and [`docs/specs/website/transparency.md`](../docs/specs/website/transparency.md)
+  §3.
+
+**Why:** M_I18n — close the locale loop by giving the operator a
+zero-API path to publish an English translation that is provably
+parity-clean against the FR canonical artifact, with full provenance
+exposed to the reader.
+
+**Impact:** Additive. FR-only candidates and existing aggregated
+artifacts are unaffected. The new prompt and tooling are required
+only when publishing a translation; absence of a translation is a
+first-class state surfaced by the "Translation pending" banner.
+
 ## 2026-04-22 — aggregate-analyses.md 1.2
 
 **Change:** Additive aggregation rules for the categorical

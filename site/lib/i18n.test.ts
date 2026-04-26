@@ -24,6 +24,39 @@ describe("UI_STRINGS", () => {
     }
   });
 
+  it("no entry uses [EN] placeholders or matches the FR string verbatim where translation is meaningful", () => {
+    // Allowlist of keys whose EN value is intentionally identical to FR
+    // (proper nouns, numerals, symbols-only labels, etc.).
+    const SAME_BY_DESIGN: ReadonlySet<string> = new Set([
+      "COMPARISON_DOMAINES_DIMENSION_LABEL", // "Dimension" identical FR/EN
+      "COMPARISON_TRANSPARENCY_TITLE", // "Transparence"/"Transparency" — duplicate of NAV
+      "DOMAINES_CONSENSUS_BADGE", // Latin-rooted lowercase, identical
+      "DOMAINES_CONSENSUS_PREFIX", // "Consensus" identical with arrow
+      "DOMAINES_DISSENT_BADGE", // Symbol + uppercase loanword
+      "DOMAINES_PROB_SHORT", // "Prob." abbreviation identical
+      "INTERGEN_HORIZON_COHORT_2028_2037", // legacy alias for 2031_2037
+      "INTERGEN_HORIZON_COHORT_2031_2037", // duplicates 2028_2037 alias
+      "INTERGEN_HORIZON_NOTE_LABEL", // "Note" identical
+      "INTERGEN_SOURCES_LABEL", // "Sources" identical in FR/EN
+      "INTERGEN_SPLIT_FISCAL", // "Fiscal" identical
+      "PROMPTS_COPIED",
+      "RADAR_CONSENSUS_LABEL", // "Consensus" identical FR/EN
+      "SPECTRUM_LABEL_CENTRE",
+      "TRANSPARENCY_SUMMARY_VERSION", // "Version" identical in FR/EN
+      "TRANSPARENCY_TAB_PROMPTS", // "Prompts" identical
+      "TRANSPARENCY_TAB_SOURCES", // "Sources" identical
+    ]);
+    for (const [key, value] of Object.entries(UI_STRINGS)) {
+      expect(value.en, `${key}.en starts with "[EN] "`).not.toMatch(/^\[EN\]\s/);
+      if (!SAME_BY_DESIGN.has(key)) {
+        expect(
+          value.en,
+          `${key}.en is identical to fr — write a real translation or add to allowlist`,
+        ).not.toBe(value.fr);
+      }
+    }
+  });
+
   it("keys are sorted alphabetically (enforces deterministic diffs)", () => {
     const keys = Object.keys(UI_STRINGS);
     const sorted = [...keys].sort();

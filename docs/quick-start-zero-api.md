@@ -43,11 +43,11 @@ Pick a throwaway ID prefixed with `test-`:
 
 ```bash
 npm run scaffold-candidate -- \
-  --id test-omega \
-  --name "Omega Synthétique" \
-  --party "Parti Placeholder-Ω" \
-  --party-id test-omega \
-  --date 2027-11-01 \
+  --id bruno-retailleau \
+  --name "Bruno Retailleau" \
+  --party "Les Républicains" \
+  --party-id les-republicains \
+  --date 2026-04-24 \
   --is-fictional
 ```
 
@@ -89,8 +89,8 @@ reusable across every chat UI you drive:
 
 ```bash
 npm run prepare-manual-analysis -- \
-  --candidate test-omega \
-  --version 2027-11-01
+  --candidate bruno-retailleau \
+  --version 2026-04-25
 ```
 
 This writes `candidates/test-omega/versions/2027-11-01/_manual/`
@@ -163,8 +163,8 @@ Bundle the aggregation prompt + the three raw outputs:
 
 ```bash
 npm run prepare-manual-aggregation -- \
-  --candidate test-omega \
-  --version 2027-11-01
+  --candidate jeanluc-melanchon \
+  --version 2026-04-24
 ```
 
 This writes
@@ -175,13 +175,13 @@ in Copilot. It will produce `aggregated.draft.json`. Then ingest:
 
 ```bash
 npm run ingest-aggregated -- \
-  --candidate test-omega \
-  --version 2027-11-01 \
+  --candidate bruno-retailleau \
+  --version 2026-04-25 \
   --mode copilot-agent \
-  --attested-version claude-opus-4-1 \
+  --attested-version claude-opus-4-7 \
   --attested-by copilot-aggregator \
   --already-written \
-  --file candidates/test-omega/versions/2027-11-01/aggregated.draft.json
+  --file candidates/bruno-retailleau/versions/2026-04-25/aggregated.draft.json
 ```
 
 ---
@@ -190,8 +190,8 @@ npm run ingest-aggregated -- \
 
 ```bash
 npm run review -- \
-  --candidate test-omega \
-  --version 2027-11-01 \
+  --candidate bruno-retailleau \
+  --version 2026-04-25 \
   --reviewer "$(whoami)"
 ```
 
@@ -206,7 +206,7 @@ Walk through flagged items. When done, the CLI renames
 First attempt **without** the override:
 
 ```bash
-npm run publish -- --candidate test-omega --version 2027-11-01
+npm run publish -- --candidate bruno-retailleau --version 2026-04-25
 ```
 
 Expected: the publish command refuses because
@@ -233,6 +233,142 @@ Delete the fictional candidate folder when you are done:
 ```bash
 rm -rf candidates/test-omega
 ```
+
+---
+
+## 9. (Optional) Translate the aggregated analysis to English
+
+> **Spec:** [`specs/website/i18n.md`](specs/website/i18n.md)
+> **Prompt:** [`prompts/translate-aggregated.md`](../prompts/translate-aggregated.md)
+
+The site is locale-aware: when a candidate has a published
+`aggregated.<lang>.json`, the locale toggle surfaces the translated
+prose; otherwise the page falls back to the FR canonical artifact
+with a "Translation pending" banner. Translations are produced
+manually (no API mode in v1) and gated by human review, exactly
+like consolidation and aggregation.
+
+You have **two execution modes** to produce the translation, both
+zero-API:
+
+- **9.A — `manual-webchat`**: build a copy-pasteable bundle, paste
+  into any chat UI, save the reply, ingest. Best when you want to
+  drive a specific provider's web chat (Claude.ai, ChatGPT, Le Chat).
+- **9.B — `copilot-agent`**: drive the Copilot agent in this editor
+  via [`.github/prompts/translate-aggregated-via-copilot.prompt.md`](../.github/prompts/translate-aggregated-via-copilot.prompt.md).
+  Best when you are already in the Copilot loop and want the agent
+  to seed the draft and apply translations in place.
+
+Both paths converge at the human-review gate (§9.3) and produce the
+same artifacts (`aggregated.<lang>.draft.json` + a
+`translations.<lang>` provenance block in `metadata.json`).
+
+### 9.A — Path 1: manual web chat
+
+#### 9.A.1 Prepare a copy-pasteable bundle
+
+```bash
+npm run prepare-manual-translation -- \
+  --candidate test-omega \
+  --version 2027-11-01 \
+  --lang en
+```
+
+This writes `candidates/test-omega/versions/2027-11-01/_translation/en/`
+containing:
+
+- `prompt-bundle.txt` — the verbatim translate-aggregated prompt with
+  the FR `aggregated.json` payload pre-pasted and the target language
+  substituted in.
+- `README.md` — exact next-step commands (re-displayed below for
+  convenience).
+
+#### 9.A.2 Paste into a chat UI, save the reply
+
+Open any chat UI (Claude.ai, ChatGPT, Le Chat, …) and paste the
+contents of `prompt-bundle.txt`. The model returns a single JSON
+object: same schema as the FR aggregated, but with translatable prose
+fields rewritten in English. Save the reply as e.g.
+`~/Downloads/aggregated.en.json`.
+
+> ⚠️ The translator must keep all numeric values, IDs, and array
+> lengths byte-for-byte identical to the FR canonical file. The
+> ingest step below validates this with the same parity checker that
+> guards the published artifacts.
+
+#### 9.A.3 Ingest the translation
+
+```bash
+npm run ingest-translation -- \
+  --candidate test-omega \
+  --version 2027-11-01 \
+  --lang en \
+  --mode manual-webchat \
+  --attested-version "<exact model string from the chat UI>" \
+  --input ~/Downloads/aggregated.en.json
+```
+
+This writes `aggregated.en.draft.json` next to the FR canonical file
+and stamps a `translations.en` provenance block in `metadata.json`
+(prompt SHA256, prompt version, attested model, ingest timestamp,
+`human_review_completed: false`).
+
+### 9.B — Path 2: Copilot agent
+
+Open [`.github/prompts/translate-aggregated-via-copilot.prompt.md`](../.github/prompts/translate-aggregated-via-copilot.prompt.md)
+as a Copilot prompt file. Provide the candidate ID, version, target
+locale, attested model version (the exact model string Copilot
+reports), and your operator handle.
+
+The agent will:
+
+1. Load the FR `aggregated.json` and the translate prompt.
+2. `cp` the FR file to `aggregated.<lang>.draft.json` so every
+   non-prose byte starts identical.
+3. Apply targeted `str_replace` edits — one prose field at a time —
+   to translate the allowlisted paths in place.
+4. Run `npm run validate-translation` to confirm parity.
+5. Run `npm run ingest-translation -- --mode copilot-agent ...` to
+   stamp the `translations.<lang>` provenance block.
+
+The in-place-edit workflow (rather than regenerating the JSON
+end-to-end) is a deliberate parity-safety choice: copy first,
+translate prose only, never re-type a number or an identifier.
+
+### 9.3 Human review gate (both paths)
+
+Open the draft, skim the prose, and check that:
+
+- No advocacy verbs (`sacrifice`, `betray`, `steal`, `crush`,
+  `rescue`) leaked in — translations report tradeoffs, never moral
+  verdicts.
+- French proper nouns (party names, institutions) are kept
+  untranslated where appropriate (e.g. *Assemblée nationale*).
+- The schema parses (`schema_version` and structure are unchanged).
+
+When satisfied, promote the draft and flip the review flag:
+
+```bash
+mv candidates/test-omega/versions/2027-11-01/aggregated.en.draft.json \
+   candidates/test-omega/versions/2027-11-01/aggregated.en.json
+```
+
+Then edit `metadata.json` to set
+`translations.en.human_review_completed: true` and add `reviewer`
++ `reviewed_at` (ISO 8601).
+
+### 9.4 Verify in the site build
+
+```bash
+npm run validate-translation -- --candidate test-omega --version 2027-11-01 --lang en
+npm run site:build
+```
+
+The `/en/candidat/test-omega` page now serves the EN prose, and the
+Transparency drawer's "Translation" subsection surfaces the prompt
+SHA256, attested model, ingest timestamp, and the human-review
+flag — exactly the same provenance shape as the analysis and
+aggregation blocks.
 
 ---
 

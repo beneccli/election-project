@@ -1,0 +1,241 @@
+{
+  "dimensions": {
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {}
+      },
+      "headline": {
+        "text": "Productivisme assumé: arrêt soutiens ENR, suppression ZAN/principe de précaution, néonicotinoïdes; nucléaire prolongé, MACF étendu.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Programme productiviste avec nucléaire et carbone aux frontières, mais recul des soutiens renouvelables et contraintes vertes." },
+          { "model": "claude-opus-4-7", "text": "Productivisme assumé: arrêt soutien renouvelables, suppression ZAN et principe de précaution, réautorisation néonicotinoïdes; nucléaire prolongé et MACF étendu." },
+          { "model": "deepseek-manual", "text": "Démantèlement des normes environnementales, soutien au nucléaire, pas d'objectif climatique ni de protection de la biodiversité." },
+          { "model": "gemini-1.5-pro", "text": "Moratoire écologique, relance du nucléaire exclusif et réautorisation de pesticides." },
+          { "model": "qwen3.6", "text": "Subordination des normes environnementales à la production, arrêt des subventions éoliennes/solaires et suppression du principe de précaution." }
+        ]
+      },
+      "summary": "L'environnement est traité comme variable d'ajustement de la production. Le nucléaire est consolidé (prolongation à 80 ans, contrat long terme, objectif 400 TWh/an) et le MACF étendu aux produits transformés. À l'inverse: arrêt des soutiens publics aux nouvelles capacités solaires et éoliennes, suppression du ZAN, suppression du principe de précaution (révision constitutionnelle), réautorisation de l'acétamipride, abandon de la trajectoire Ecophyto -50%, allègement des BCAE, suppression de l'OFB. Aucune trajectoire SNBC, aucun budget carbone sectoriel, aucun objectif national chiffré de réduction des émissions, aucune mention de Fit for 55 ou de la neutralité 2050; aucun plan biodiversité, adaptation (PNACC) ou mobilités décarbonées dans les sources fournies.",
+      "problems_addressed": [
+        {
+          "problem": "Décarbonation par le nucléaire et stabilité du prix de l'électricité bas-carbone",
+          "approach": "Prolongation des réacteurs jusqu'à 80 ans (sous réserve ASN), objectif 400 TWh/an, contrat nucléaire long terme (15 ans, 30 TWh/an) pour stabiliser le prix industriel.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#produire-plus"],
+          "reasoning": "Cinq modèles confirment: nucléaire largement décarboné, calendrier industriel ambitieux mais cohérent avec la stratégie de souveraineté.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Fuite carbone à l'import et dumping environnemental",
+          "approach": "Renforcement et extension du MACF aux produits transformés.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#proposition-7-concurrence", "sources.md#produire-plus"],
+          "reasoning": "Outil européen existant à élargir; mise en œuvre dépend de la Commission.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Foncier disponible pour l'industrie et l'agriculture",
+          "approach": "Suppression du ZAN pour les bâtiments agricoles et les extensions industrielles, accès à l'eau (stockage), dérogations pour la réindustrialisation (25 000 ha).",
+          "strength": 0.7,
+          "source_refs": ["sources.md#proposition-3-aligner-europe", "sources.md#proposition-8-souverainete-industrielle"],
+          "reasoning": "Lève la contrainte quantitative à l'expansion physique; trois modèles le notent comme adressage d'un problème productif (les autres comme aggravation environnementale — voir problems_worsened).",
+          "supported_by": ["deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de réduction des émissions de gaz à effet de serre (SNBC, Fit for 55, neutralité 2050)",
+          "significance": "Aucun objectif national chiffré, aucun budget carbone sectoriel, aucune mention des engagements européens ou de la neutralité 2050. Les cinq modèles relèvent cette absence majeure.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Adaptation au changement climatique (PNACC) hors agriculture",
+          "significance": "L'adaptation est traitée seulement par le levier eau agricole; transports, urbanisme côtier, vagues de chaleur, infrastructures, ressource en eau potable absents.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Stratégie biodiversité positive (au-delà du conflit avec l'agriculture)",
+          "significance": "La biodiversité n'est abordée qu'à travers la suppression de l'OFB, la réautorisation de néonicotinoïdes et la fin du ZAN; aucune mesure de conservation ou stratégie positive.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Mobilités et transports décarbonés",
+          "significance": "Aucune mention des transports (ferroviaire, urbain, aérien, automobile) hors mention véhicules industriels.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Sobriété foncière et artificialisation des sols",
+          "mechanism": "Suppression du ZAN (plafond 125 000 ha 2021-2031) et exonération des bâtiments agricoles, couplée à une réindustrialisation consommatrice de foncier (25 000 ha) sans dispositif de compensation.",
+          "severity": 0.65,
+          "source_refs": ["sources.md#proposition-3-aligner-europe", "sources.md#proposition-8-souverainete-industrielle"],
+          "reasoning": "Le ZAN est l'instrument central de limitation de l'artificialisation; sa suppression sans équivalent dégrade la trajectoire de protection des sols et des écosystèmes.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Diversification du mix électrique et déploiement bas-carbone non nucléaire",
+          "mechanism": "Fin des soutiens publics aux nouvelles capacités solaires et éoliennes, report possible de projets déjà autorisés en cas de surcapacité.",
+          "severity": 0.55,
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#produire-plus"],
+          "reasoning": "La mesure réduit explicitement un canal de capacité bas-carbone et accroît la dépendance au calendrier nucléaire (EPR2, prolongations).",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Pression chimique sur la biodiversité agricole et pollinisateurs",
+          "mechanism": "Réautorisation de l'acétamipride (néonicotinoïde), abandon de l'objectif Ecophyto -50%, allègement des BCAE, fin de l'approche de précaution.",
+          "severity": 0.65,
+          "source_refs": ["sources.md#proposition-3-aligner-europe", "sources.md#proposition-1-cadre-juridique"],
+          "reasoning": "Effets sur pollinisateurs documentés; le programme assume l'arbitrage en faveur de la production. Risque d'augmentation des intrants chimiques et des résidus.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Conformité avec la trajectoire climatique européenne (Green Deal, Fit for 55)",
+          "mechanism": "L'arrêt des subventions ENR et la suppression du principe de précaution diffèrent les investissements de transition et accroissent la dépendance au prolongement nucléaire.",
+          "severity": 0.65,
+          "source_refs": ["sources.md#proposition-6-electricite", "sources.md#proposition-1-cadre-juridique"],
+          "reasoning": "Tension structurelle avec les engagements européens; expose la France à des contentieux de conformité.",
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Contentieux européens pour non-respect des directives environnementales (eau, biodiversité, ZAN, ICPE)",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "La suppression du ZAN, le relèvement des seuils ICPE et la réautorisation de substances peuvent contrevenir au droit de l'UE et déclencher des procédures d'infraction; aides d'État et subventions ENR concernées.",
+          "source_refs": ["sources.md#proposition-3-aligner-europe", "sources.md#proposition-6-electricite"],
+          "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Calendrier de prolongation nucléaire à 80 ans conditionné aux avis de l'ASN",
+          "probability": 0.5,
+          "severity": 0.55,
+          "reasoning": "Chaque prolongation décennale est un examen distinct; industrie nucléaire sous tension (EPR2, soudures, recrutement).",
+          "source_refs": ["sources.md#proposition-6-electricite"],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Arrêt des soutiens publics aux nouvelles capacités solaires et éoliennes",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": false,
+          "magnitude": "Report possible de projets déjà autorisés en situation de surcapacité",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Prolongation des réacteurs nucléaires jusqu'à 80 ans, objectif 400 TWh/an",
+          "source_ref": "sources.md#proposition-6-electricite",
+          "quantified": true,
+          "magnitude": "400 TWh/an; prolongation possible jusqu'à 80 ans si sûreté",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression du ZAN et exonération des bâtiments agricoles",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": true,
+          "magnitude": "Plafond 125 000 ha 2021-2031 supprimé",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Réautorisation de l'acétamipride et abandon de l'objectif Ecophyto -50%",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression du principe de précaution (révision constitutionnelle)",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": "Voie référendaire",
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": null,
+          "level_interval": ["low", "moderate"],
+          "note": "Économies sur soutiens ENR et abrogations sans coût direct, mais CAPEX nucléaire reporté sur tarif/clients industriels; pertes de recettes non évaluées.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Coûts nucléaires, réseaux et adaptation ne sont pas consolidés." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Économies sur soutiens renouvelables; coûts CAPEX nucléaire reportés sur tarif et clients industriels." },
+            { "model": "deepseek-manual", "level": "low", "note": "Les mesures consistent principalement en abrogations, sans coût direct, mais la perte de recettes liée à l'absence de fiscalité carbone ou à la renégociation de la PAC est non évaluée." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Halting renewable subsidies generates state savings." },
+            { "model": "qwen3.6", "level": "limited", "note": "Subsidy halt reduces direct spending but may increase grid balancing costs." }
+          ]
+        },
+        "implementation": {
+          "modal_level": null,
+          "level_interval": ["limited", "high"],
+          "note": "Industrie nucléaire sous tension (EPR2, soudures, recrutement) et révision constitutionnelle complexes; abrogations en revanche administrativement simples.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Modifie normes, projets, réseaux, nucléaire, eau et importations." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Industrie nucléaire sous tension (EPR2, soudures, recrutement); calendrier 2027-2035 serré." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Les abrogations par voie réglementaire ou législative sont relativement simples, mais la révision constitutionnelle est complexe." },
+            { "model": "gemini-1.5-pro", "level": "limited", "note": "Stopping programs is administratively simpler than building them." },
+            { "model": "qwen3.6", "level": "high", "note": "Constitutional and regulatory rollbacks face legal, political, and EU compliance barriers." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Forte dépendance à la sûreté nucléaire (ASN), au droit européen (MACF, marché électrique, environnement), aux marchés de l'énergie, à l'hydrologie et aux tribunaux.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "qwen3.6"],
+          "dissenters": ["gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Dépend de sûreté nucléaire, droit européen, marchés de l'énergie, hydrologie et arbitrages locaux." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Validation ASN, accords commerciaux européens (MACF, marché électrique), tribunaux (recours associatifs)." },
+            { "model": "deepseek-manual", "level": "high", "note": "Forte dépendance à la compatibilité avec le droit européen de l'environnement et à l'absence de contentieux." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Reauthorizing chemicals depends on interpretations of EU mutual recognition." },
+            { "model": "qwen3.6", "level": "high", "note": "Energy and environmental trajectories depend on EU regulatory tolerance and nuclear performance." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["low", "high"],
+          "note": "Soutiens ENR et règles nationales rétablissables; suppression ZAN et révision constitutionnelle dures à défaire; temps perdu sur ENR partiellement irréversible.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro"],
+          "dissenters": ["deepseek-manual", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Les soutiens renouvelables et règles nationales peuvent être rétablis, mais les contrats et investissements créent inertie." },
+            { "model": "claude-opus-4-7", "level": "moderate", "note": "Soutiens renouvelables réversibles par décret; suppression ZAN nécessite voie législative." },
+            { "model": "deepseek-manual", "level": "low", "note": "Le rétablissement des normes est possible par un futur gouvernement mais politiquement difficile." },
+            { "model": "gemini-1.5-pro", "level": "moderate", "note": "Subsidies can be reinstated, though lost time in renewable deployment is permanent." },
+            { "model": "qwen3.6", "level": "high", "note": "Moratoriums and deregulation can be rapidly reinstated by subsequent majority or EU mandate." }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  }
+}

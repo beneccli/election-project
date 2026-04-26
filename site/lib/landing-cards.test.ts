@@ -51,6 +51,8 @@ describe("sortLandingCards", () => {
     partyColor: "",
     family: null,
     isFictional: false,
+    availableLocales: ["fr"],
+    translation: { lang: "fr", status: "native_fr" },
   } as const;
 
   it("orders by updatedAt desc then displayName asc", () => {
@@ -200,5 +202,94 @@ describe("listLandingCards (filesystem)", () => {
     } finally {
       delete process.env.EXCLUDE_FICTIONAL;
     }
+  });
+});
+
+describe("listLandingCards (locale-aware)", () => {
+  let tmpDir: string;
+  const OLD_ENV = process.env.CANDIDATES_DIR;
+
+  beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "landing-cards-locale-"));
+    process.env.CANDIDATES_DIR = tmpDir;
+  });
+
+  afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+    if (OLD_ENV === undefined) delete process.env.CANDIDATES_DIR;
+    else process.env.CANDIDATES_DIR = OLD_ENV;
+  });
+
+  function seedOmega(id: string): string {
+    const dir = path.join(tmpDir, id);
+    fs.mkdirSync(path.join(dir, "current"), { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, "metadata.json"),
+      JSON.stringify({
+        id,
+        display_name: "Omega",
+        party: "Parti Synthétique",
+        party_id: "synth",
+        created: "2025-01-01",
+        updated: "2026-05-01",
+        is_fictional: true,
+      }),
+    );
+    for (const entry of fs.readdirSync(path.join(OMEGA_ROOT, "current"))) {
+      // Locale-aware tests seed a baseline FR-only candidate; skip any
+      // committed translation artifacts so the "missing" scenario is real.
+      if (/^aggregated\.[a-z]{2}\.json$/.test(entry)) continue;
+      const src = path.join(OMEGA_ROOT, "current", entry);
+      const dst = path.join(dir, "current", entry);
+      const stat = fs.statSync(src);
+      if (stat.isDirectory()) fs.cpSync(src, dst, { recursive: true });
+      else fs.copyFileSync(src, dst);
+    }
+    return dir;
+  }
+
+  it("defaults to native_fr translation status when lang is fr", () => {
+    seedOmega("omega-fr");
+    const cards = listLandingCards("fr");
+    expect(cards).toHaveLength(1);
+    expect(cards[0].translation).toEqual({ lang: "fr", status: "native_fr" });
+  });
+
+  it("marks translation as missing when no aggregated.<lang>.json exists", () => {
+    seedOmega("omega-en-missing");
+    const cards = listLandingCards("en");
+    expect(cards).toHaveLength(1);
+    expect(cards[0].translation).toEqual({ lang: "en", status: "missing" });
+  });
+
+  it("marks translation as available when aggregated.<lang>.json exists", () => {
+    const dir = seedOmega("omega-en-available");
+    fs.copyFileSync(
+      path.join(dir, "current", "aggregated.json"),
+      path.join(dir, "current", "aggregated.en.json"),
+    );
+    const cards = listLandingCards("en");
+    expect(cards).toHaveLength(1);
+    expect(cards[0].translation).toEqual({ lang: "en", status: "available" });
+  });
+
+  it("propagates lang to pending rows", () => {
+    const dir = path.join(tmpDir, "pending-only");
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, "metadata.json"),
+      JSON.stringify({
+        id: "pending-only",
+        display_name: "Pending",
+        party: "Parti Test",
+        party_id: "test",
+        created: "2025-01-01",
+        updated: "2026-04-01",
+      }),
+    );
+    const cards = listLandingCards("en");
+    expect(cards).toHaveLength(1);
+    expect(cards[0].status).toBe("pending");
+    expect(cards[0].translation).toEqual({ lang: "en", status: "missing" });
   });
 });

@@ -1,0 +1,120 @@
+{
+  "counterfactual": {
+    "status_quo_trajectory": "Dette publique à 116% du PIB et en hausse, déficit ~175 Md€, désindustrialisation continue (industrie <10% du PIB, déficit commercial industriel >80 Md€/an), déficit commercial agricole proche de zéro, taux d'emploi seniors à 36% vs 60% en Europe, expansion réglementaire environnementale, accès au logement de plus en plus difficile pour les jeunes.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "healthcare",
+      "housing",
+      "general_education",
+      "defense"
+    ],
+    "reasoning": "Les cinq modèles convergent sur une bifurcation mixte: réorientation structurelle de la fiscalité de production, du marché du travail (RIA, CSU, seuil zéro cotisation), de la souveraineté industrielle/agricole et de la trajectoire environnementale (arrêt soutiens ENR, suppression ZAN, néonicotinoïdes), avec verrouillage institutionnel (révisions constitutionnelles référendaires, autorité indépendante des normes, recentrage du Code du travail). Les dimensions où le silence des sources implique un quasi statu quo sont la santé, le logement résidentiel, l'éducation générale et la défense. Sur le climat, la trajectoire est explicitement infléchie à la baisse par rapport au cadre actuel, ce qui constitue un changement net même s'il n'améliore pas la situation.",
+    "confidence": 0.7,
+    "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+    "dissenters": []
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Trajectoire de retour à l'équilibre des finances publiques",
+      "why_unsolved": "Le programme constate la dette à 116% du PIB et le déficit à 175 Md€ mais ne fournit ni calendrier ni cible chiffrée de réduction du déficit; les 30 Md€ d'économies sont restitués sous forme d'allègements plutôt qu'affectés à la réduction de la dette.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual"],
+      "dissenters": []
+    },
+    {
+      "problem": "Soutenabilité long terme du régime de retraites par répartition",
+      "why_unsolved": "Aucune réforme paramétrique (âge, durée de cotisation, taux) n'est proposée; l'étage de capitalisation est volontaire et ne traite pas le déficit structurel du régime par répartition.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7"],
+      "dissenters": []
+    },
+    {
+      "problem": "Accès aux soins, déserts médicaux et financement du système de santé",
+      "why_unsolved": "Les sources sont entièrement silencieuses sur l'organisation des soins, la démographie médicale, le financement hospitalier, la prévention et la dépendance.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Crise du logement et accès au logement pour les jeunes et ménages modestes",
+      "why_unsolved": "Aucune politique d'offre, de régulation des loyers, d'accession ou de logement social n'est formulée; le plafonnement CSU peut au contraire réduire les APL pour certains ménages.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Trajectoire chiffrée d'émissions de gaz à effet de serre et adaptation climatique",
+      "why_unsolved": "Aucun objectif national d'émissions n'est fourni; les mesures freinent les ENR et la sobriété foncière sans contrepartie quantifiée sur transports, bâtiments ou agriculture; l'adaptation aux risques physiques est explicitement reportée.",
+      "severity_if_unsolved": "high",
+      "source_refs": [],
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Éducation générale (école primaire, collège, lycée, université)",
+      "why_unsolved": "Le programme ne traite que de la formation professionnelle et de l'apprentissage; l'éducation générale n'est pas adressée.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7", "deepseek-manual", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "problem": "Politique de défense et budget militaire",
+      "why_unsolved": "Aucune mention dans les sources fournies, alors que la dimension régalienne est mise en avant par ailleurs.",
+      "severity_if_unsolved": "medium",
+      "source_refs": [],
+      "supported_by": ["claude-opus-4-7"],
+      "dissenters": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Le seuil zéro cotisation et les économies attendues ne se matérialisent pas: les heures supplémentaires/économies réelles tombent sous les hypothèses, creusant le déficit sans gain de production.",
+      "trigger": "Croissance du PIB faible ou récession; élasticité de l'offre de travail inférieure à 1; économies effectives en deçà de la fourchette annoncée 28,5–31,7 Md€.",
+      "probability": 0.4,
+      "severity": 0.7,
+      "reasoning": "Le bouclage du programme repose sur une augmentation moyenne de ~120 h/an pour les salariés sans heures supplémentaires et sur des comportements de retour à l'emploi non modélisés; en cas d'atonie de la demande ou de comportements moins élastiques, les exonérations creusent le déficit sans matérialiser les recettes attendues.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Tensions sociales majeures liées au plafonnement CSU à 70% du SMIC et à la réforme du chômage; éventuel blocage parlementaire ou censure constitutionnelle.",
+      "trigger": "Mouvements sociaux d'ampleur; saisine du Conseil constitutionnel; recours sur la Convention européenne des droits de l'homme.",
+      "probability": 0.5,
+      "severity": 0.75,
+      "reasoning": "Le plafonnement mathématique réduit le revenu de ménages très précaires cumulant aides (exemples cités: jusqu'à -410 €/mois); l'absorption suppose une hausse rapide de l'emploi non garantie. Le périmètre des recours environnementaux et l'office du juge sont également exposés à censure conventionnelle européenne.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Procédure d'infraction européenne pour non-respect des directives environnementales et des règles du marché unique.",
+      "trigger": "Suppression unilatérale du ZAN, abrogation de normes ICPE, réautorisation des néonicotinoïdes et clauses de réciprocité commerciale incompatibles avec le droit de l'UE; réorientation douanière hors cadre harmonisé.",
+      "probability": 0.45,
+      "severity": 0.55,
+      "reasoning": "Le programme assume publiquement de remettre en cause certaines règles harmonisées européennes (agriculture, douanes, normes); la Commission peut engager des contentieux conduisant à des sanctions financières et à un retour partiel en arrière des mesures.",
+      "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+      "dissenters": []
+    },
+    {
+      "scenario": "Calendrier nucléaire en retard sans relais ENR; objectif de baisse des prix industriels de l'électricité non atteint.",
+      "trigger": "Avis ASN défavorable sur les prolongations à 80 ans; retard EPR2; refus EDF/fournisseurs de signer des contrats long terme à 30 TWh/an aux prix ciblés.",
+      "probability": 0.35,
+      "severity": 0.6,
+      "reasoning": "L'arrêt des soutiens publics aux nouvelles ENR retire un filet de sécurité; un retard nucléaire combiné à une moindre disponibilité ENR conduirait à des prix de gros volatils contraires à l'objectif de -10% sur les prix industriels.",
+      "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7"],
+      "dissenters": []
+    }
+  ]
+}

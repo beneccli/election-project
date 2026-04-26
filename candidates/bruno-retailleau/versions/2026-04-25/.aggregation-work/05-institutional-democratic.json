@@ -1,0 +1,283 @@
+{
+  "dimensions": {
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "C",
+        "dissent": { "deepseek-manual": "D", "gemini-1.5-pro": "B" }
+      },
+      "headline": {
+        "text": "Révisions constitutionnelles ciblées, autorité de veto sur les normes, primauté sur les agences; pas de réforme démocratique d'ensemble.",
+        "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "gpt-5.5-thinking", "text": "Réforme de l'État régulateur et des normes, sans réforme démocratique complète." },
+          { "model": "claude-opus-4-7", "text": "Révision constitutionnelle référendaire (suppression principe de précaution, intérêt fondamental agricole), restriction des recours associatifs, autorité indépendante de contrôle des normes." },
+          { "model": "deepseek-manual", "text": "Réformes institutionnelles ponctuelles pour l'agriculture et la dérégulation, mais pas de vision d'ensemble de la gouvernance démocratique." },
+          { "model": "gemini-1.5-pro", "text": "Réforme constitutionnelle supprimant le principe de précaution et primauté du politique sur les agences." },
+          { "model": "qwen3.6", "text": "Déréglementation massive et refonte du Code du travail autour de 50 principes, avec transfert du reste à la négociation collective." }
+        ]
+      },
+      "summary": "Le programme concentre l'arbitrage politique sur les normes et l'expertise: suppression de 50 règles bloquantes, règle un-pour-un en valeur, autorité indépendante de contrôle préalable avec pouvoir de veto (modèle néerlandais), loi organique interdisant la sur-transposition (modèle italien), primauté politique sur les agences (suppression OFB, audit ANSES), refonte supplétive du Code du travail (50 principes indépassables). Plusieurs révisions constitutionnelles ciblées sont proposées par référendum: suppression du principe de précaution et inscription de l'agriculture comme intérêt fondamental. L'office du juge environnemental est restreint et l'agrément des associations limité. L'architecture institutionnelle générale (mode de scrutin, Parlement, Sénat, Conseil constitutionnel, décentralisation au-delà des champs ciblés) n'est pas réformée.",
+      "problems_addressed": [
+        {
+          "problem": "Inflation normative et complexité administrative",
+          "approach": "Suppression de 50 règles bloquantes (seuil 50 salariés, CSE, BDESE, AGEC/PFAS, ICPE), règle un-pour-un en valeur, autorité indépendante avec pouvoir de veto inspirée des Pays-Bas (-25% de charges depuis 2003), évaluation préalable opposable et test PME.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#proposition-3-stopper-surproduction", "sources.md#produire-plus"],
+          "reasoning": "Cinq modèles convergent: mécanisme structurel chiffré, inspiré d'un précédent international cité.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Refonte du droit du travail et rigidité du Code",
+          "approach": "Limitation du socle indépassable à 50 principes; le reste du Code devient supplétif hors accord collectif, transférant l'arbitrage à la branche et à l'entreprise.",
+          "strength": 0.65,
+          "source_refs": ["sources.md#produire-plus"],
+          "reasoning": "Hiérarchie entre principes, accords collectifs, branche et règle supplétive explicitée.",
+          "supported_by": ["gpt-5.5-thinking", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "problem": "Articulation droit français / droit européen et sur-transposition",
+          "approach": "Loi organique interdisant la sur-transposition (modèle italien), cellule de veille à Bruxelles.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#proposition-3-aligner-europe"],
+          "reasoning": "Référence à un précédent national; portée juridique d'une loi organique sur ce sujet à confirmer.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Renforcement du pouvoir politique sur les agences administratives",
+          "approach": "Suppression de l'OFB (retour à AFB+ONCFS), audit général des agences, primauté politique sur l'ANSES via reconnaissance mutuelle automatique européenne.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#proposition-2-agences"],
+          "reasoning": "Mesures concrètes mais focalisées sur le périmètre agricole et environnemental.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Blocage des projets agricoles et industriels par les normes et contentieux",
+          "approach": "Inscription de l'agriculture comme intérêt fondamental dans la Constitution, suppression du principe de précaution (référendum), limitation des recours associatifs et de l'office du juge.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#proposition-1-cadre-juridique", "sources.md#proposition-7-agribashing"],
+          "reasoning": "Modification substantielle de l'équilibre entre protection environnementale et intérêts productifs au niveau constitutionnel; trois modèles classent cela comme adressage, deux comme aggravation (cf problems_worsened).",
+          "supported_by": ["deepseek-manual"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Mode de scrutin, représentation parlementaire et participation citoyenne",
+          "significance": "Aucune réforme du scrutin législatif ou présidentiel, ni proportionnelle, ni cumul des mandats, ni rôle du Parlement, ni référendum d'initiative citoyenne.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Garanties judiciaires, indépendance de la justice et État de droit général",
+          "significance": "Le programme parle d'office du juge dans le travail et de restriction des recours environnementaux, mais ne traite pas de l'indépendance judiciaire générale, des libertés publiques ou de la lutte contre la corruption.",
+          "source_refs": [],
+          "supported_by": ["gpt-5.5-thinking", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Réforme du Sénat, du Conseil constitutionnel ou du CESE",
+          "significance": "Aucune mention.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Décentralisation au-delà de l'économique et du formatif (mille-feuille territorial)",
+          "significance": "Le programme renforce les régions sur des champs ciblés (orientation, lycées professionnels, Fonds France Production) mais ne refonde pas le mille-feuille territorial.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual"],
+          "dissenters": []
+        },
+        {
+          "problem": "Mécanismes de redevabilité de l'autorité indépendante de veto",
+          "significance": "L'autorité de veto sur les normes est créée sans modalités explicites de contrôle parlementaire ou démocratique.",
+          "source_refs": [],
+          "supported_by": ["qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Équilibre entre contrôle juridictionnel et action administrative",
+          "mechanism": "Restriction explicite de l'office du juge (« contrôle limité à l'erreur manifeste d'appréciation »), raccourcissement des délais de recours, retrait d'agrément associatif sur des motifs incluant les « recours abusifs ».",
+          "severity": 0.6,
+          "source_refs": ["sources.md#proposition-7-agribashing"],
+          "reasoning": "Concentre l'arbitrage côté administration; conformité à la convention d'Aarhus et à la CEDH à vérifier.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Cadre constitutionnel de protection environnementale",
+          "mechanism": "Suppression du principe de précaution dans la Charte de l'environnement par référendum.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#proposition-1-cadre-juridique"],
+          "reasoning": "Modifie l'équilibre entre objectifs environnementaux et productifs au niveau constitutionnel.",
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "problem": "Indépendance de l'expertise scientifique",
+          "mechanism": "Mise sous contrôle politique direct de l'ANSES pour empêcher les interdictions de produits phytosanitaires; suppression de l'OFB et audit pour « dérive militante ».",
+          "severity": 0.7,
+          "source_refs": ["sources.md#proposition-2-agences"],
+          "reasoning": "Subordonne l'autonomie scientifique aux objectifs de production; réduit les contre-pouvoirs administratifs.",
+          "supported_by": ["deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "problem": "Garanties uniformes en droit du travail",
+          "mechanism": "Hors 50 principes indépassables, l'accord collectif peut déroger à de nombreuses règles actuelles; les PME peuvent manquer de capacité de négociation, créant une fragmentation.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#produire-plus"],
+          "reasoning": "La liste exacte des 50 principes n'est pas fournie dans le corpus, créant une zone d'incertitude juridique transitoire.",
+          "supported_by": ["gpt-5.5-thinking", "qwen3.6"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Adoption des révisions constitutionnelles (3/5 du Congrès ou référendum)",
+          "probability": 0.7,
+          "severity": 0.7,
+          "reasoning": "Plusieurs révisions cumulatives requises (précaution, agriculture intérêt fondamental); arithmétique parlementaire incertaine, opposition probable de la gauche et des écologistes.",
+          "source_refs": ["sources.md#proposition-1-cadre-juridique", "sources.md#proposition-4-agri"],
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "risk": "Contentieux européen et conventionnel sur restriction des recours associatifs",
+          "probability": 0.55,
+          "severity": 0.5,
+          "reasoning": "Convention d'Aarhus et CEDH garantissent l'accès au juge environnemental; les restrictions proposées peuvent être censurées.",
+          "source_refs": ["sources.md#proposition-7-agribashing"],
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "risk": "Sécurité juridique pendant la refonte du Code du travail",
+          "probability": 0.45,
+          "severity": 0.5,
+          "reasoning": "La refonte peut déplacer les litiges vers la définition du socle indépassable; la précision des principes et l'interprétation des juges déterminent la stabilité.",
+          "source_refs": ["sources.md#produire-plus"],
+          "supported_by": ["gpt-5.5-thinking"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Suppression de 50 règles bloquantes et règle un-pour-un en valeur",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 règles supprimées; exemples: seuil 50 salariés, CSE, BDESE, AGEC/PFAS, ICPE",
+          "supported_by": ["gpt-5.5-thinking", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Refonte du Code du travail autour de 50 principes indépassables",
+          "source_ref": "sources.md#produire-plus",
+          "quantified": true,
+          "magnitude": "50 principes; reste supplétif hors accord collectif",
+          "supported_by": ["gpt-5.5-thinking", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Autorité indépendante de contrôle préalable des normes avec pouvoir de veto",
+          "source_ref": "sources.md#proposition-3-stopper-surproduction",
+          "quantified": false,
+          "magnitude": "Modèle néerlandais; veto sur normes à fort impact économique",
+          "supported_by": ["claude-opus-4-7", "qwen3.6"],
+          "dissenters": []
+        },
+        {
+          "measure": "Loi organique interdisant la sur-transposition européenne",
+          "source_ref": "sources.md#proposition-3-aligner-europe",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        },
+        {
+          "measure": "Révision constitutionnelle: suppression du principe de précaution et inscription de l'agriculture comme intérêt fondamental",
+          "source_ref": "sources.md#proposition-1-cadre-juridique",
+          "quantified": false,
+          "magnitude": "Voie référendaire ou 3/5 du Congrès",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": []
+        },
+        {
+          "measure": "Suppression de l'OFB (retour AFB + ONCFS) et primauté politique sur les agences",
+          "source_ref": "sources.md#proposition-2-agences",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["claude-opus-4-7"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Réformes essentiellement organiques; coûts de transition administrative non chiffrés mais marginaux.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": ["gpt-5.5-thinking"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "limited", "note": "Peu de coût direct annoncé, mais coûts de transition administrative non chiffrés." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Mesures essentiellement organiques sans coût direct significatif." },
+            { "model": "deepseek-manual", "level": "low", "note": "Les réformes institutionnelles n'ont pas d'impact budgétaire direct significatif." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Institutional changes do not carry structural costs." },
+            { "model": "qwen3.6", "level": "low", "note": "Institutional reforms have minimal direct budgetary footprint." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Multiples révisions constitutionnelles, lois organiques, autorités à créer simultanément, refonte du Code du travail: complexité législative et procédurale élevée.",
+          "supported_by": ["gpt-5.5-thinking", "claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro", "qwen3.6"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "high", "note": "Réécriture juridique, autorité de veto, accords collectifs et contrôles demandent une forte capacité administrative." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Multiples révisions constitutionnelles, lois organiques et nouvelles autorités à créer simultanément." },
+            { "model": "deepseek-manual", "level": "high", "note": "La révision constitutionnelle requiert une majorité très large ou une campagne référendaire à haut risque." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Requires Constitutional amendment and referendum." },
+            { "model": "qwen3.6", "level": "high", "note": "Labor code overhaul and constitutional changes face legislative and procedural hurdles." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Conformité au droit UE (Aarhus, droits fondamentaux), arithmétique parlementaire, validation Conseil constitutionnel, engagement des partenaires sociaux.",
+          "supported_by": ["gpt-5.5-thinking", "deepseek-manual", "qwen3.6"],
+          "dissenters": ["claude-opus-4-7", "gemini-1.5-pro"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Dépend des administrations, partenaires sociaux, entreprises, juges et droit européen." },
+            { "model": "claude-opus-4-7", "level": "high", "note": "Conformité au droit européen (Aarhus, droits fondamentaux) et arithmétique parlementaire pour révisions." },
+            { "model": "deepseek-manual", "level": "moderate", "note": "Dépend du soutien parlementaire et de la validation par le Conseil constitutionnel de la conformité de la révision." },
+            { "model": "gemini-1.5-pro", "level": "high", "note": "Constitutional changes require parliamentary supermajority or public referendum." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Relies on parliamentary majorities and union engagement for collective bargaining shift." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "Révisions constitutionnelles très difficiles à défaire (nouvelle révision nécessaire); contrats et pratiques administratives créent inertie. Code du travail réversible par loi.",
+          "supported_by": ["claude-opus-4-7", "deepseek-manual", "gemini-1.5-pro"],
+          "dissenters": ["gpt-5.5-thinking", "qwen3.6"],
+          "per_model": [
+            { "model": "gpt-5.5-thinking", "level": "moderate", "note": "Les règles supprimées peuvent être rétablies, mais les accords et pratiques créent inertie." },
+            { "model": "claude-opus-4-7", "level": "low", "note": "Révisions constitutionnelles très difficiles à défaire par majorité simple suivante." },
+            { "model": "deepseek-manual", "level": "low", "note": "Une fois constitutionnalisé, le changement est difficile à défaire; une nouvelle révision serait nécessaire." },
+            { "model": "gemini-1.5-pro", "level": "low", "note": "Constitutional changes are highly resistant to reversal." },
+            { "model": "qwen3.6", "level": "moderate", "note": "Constitutional changes are sticky; labor code defaults can be legislatively restored." }
+          ]
+        }
+      },
+      "confidence": 0.65
+    }
+  }
+}

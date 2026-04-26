@@ -1,0 +1,129 @@
+{
+  "positioning": {
+    "economic": {
+      "consensus_interval": [3, 4],
+      "modal_score": 3,
+      "anchor_narrative": "Quatre modèles sur cinq placent l'axe économique à +3 (LR/Fillon 2017), gemini-1.5-pro à +4. La concentration porte sur 40 Md€ d'allègements (coût du travail ~25 Md€, impôts de production ~15 Md€), le seuil zéro cotisation au-delà de 1 623 heures, le plafonnement des aides à 70% du SMIC net et la refonte supplétive du Code du travail.",
+      "evidence": [
+        { "quote": "Plus de 25 milliards d'euros d'allègements porteront sur le coût du travail, en combinant la mise en place du seuil « zéro cotisation »", "source_ref": "sources.md#proposition-5-prelevements" },
+        { "quote": "Dès l'entame du quinquennat, nous réduirons de 40 milliards d'euros notre handicap fiscal évalué à 67 milliards d'euros, soit une baisse de 60 %.", "source_ref": "sources.md#produire-plus" },
+        { "quote": "le total des aides ne devrait jamais dépasser 70 % du SMIC net par adulte", "source_ref": "sources.md#proposition-4-csu" }
+      ],
+      "confidence": 0.82,
+      "dissent": [
+        { "model": "gemini-1.5-pro", "position": 4, "reasoning": "Proposes massive reduction in production taxes, strict limits on welfare, and fundamental deregulation of labor laws in favor of enterprise-level agreements." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 3, "reasoning": "Les propositions baissent le coût du travail, réduisent les impôts de production, flexibilisent le droit du travail et durcissent les incitations au retour à l'emploi. Le score n'est pas +4 car l'État conserve un rôle fort dans l'électricité, la stratégie industrielle et l'organisation des filières." },
+        { "model": "claude-opus-4-7", "score": 3, "reasoning": "Le programme propose 40 Md€ d'allègements fiscaux concentrés sur les entreprises (suppression CVAE, C3S, CFE industrielle), un plafonnement strict des aides sociales, et une refonte supplétive du Code du travail. L'orientation pro-marché est explicite et chiffrée." },
+        { "model": "deepseek-manual", "score": 3, "reasoning": "Le programme propose des baisses d'impôts de production de près de 15 Md€, une exonération massive de cotisations sur les heures supplémentaires, un plafonnement strict des aides sociales et une déréglementation profonde du droit du travail et des normes économiques, ce qui correspond à une orientation très favorable au marché." },
+        { "model": "gemini-1.5-pro", "score": 4, "reasoning": "Proposes massive reduction in production taxes, strict limits on welfare, and fundamental deregulation of labor laws in favor of enterprise-level agreements." },
+        { "model": "qwen3.6", "score": 3, "reasoning": "Structural reduction of labor costs, production tax cuts, and labor code flexibility indicate a strong market-oriented, supply-side framework." }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [1, 3],
+      "modal_score": null,
+      "anchor_narrative": "Pas de mode unique: deux modèles à +3, deux à +2, un à +1. La dispersion reflète l'absence de matériau direct sur l'immigration, la laïcité, la famille ou les questions sociétales dans les sources fournies; les positions reposent sur la conditionnalité des aides et la valorisation du travail. Voir contested_claims.",
+      "evidence": [
+        { "quote": "Notre système social ne doit plus permettre de s'installer durablement dans l'assistance.", "source_ref": "sources.md#travail-gagnant" },
+        { "quote": "L'allocation chômage doit être un filet de sécurité, pas un choix de vie.", "source_ref": "sources.md#travail-gagnant" }
+      ],
+      "confidence": 0.45,
+      "dissent": [
+        { "model": "gpt-5.5-thinking", "position": 3, "reasoning": "Le contenu fourni porte surtout sur aide sociale, chômage et valeur travail. Il justifie un score conservateur, mais la confiance reste limitée car le corpus ne traite pas les autres sujets culturels." },
+        { "model": "claude-opus-4-7", "position": 1, "reasoning": "Le programme ne traite pas explicitement de l'immigration, de la laïcité, des questions familiales ou de l'identité, qui sont absentes des sources fournies. Les indices conservateurs viennent de la valorisation patrimoniale (récit national, paysannerie, transmission), insuffisants pour un score plus élevé." },
+        { "model": "deepseek-manual", "position": 2, "reasoning": "Le programme insiste sur la responsabilité individuelle, la rigueur des conditions d'indemnisation et la primauté du travail sur l'assistance, sans aborder les questions de mœurs ou de laïcité, mais l'orientation sociale est nettement conservatrice." },
+        { "model": "gemini-1.5-pro", "position": 3, "reasoning": "Rhetoric and policies actively target 'assistanat', severely capping benefits and introducing strict conditions for unemployment and welfare." },
+        { "model": "qwen3.6", "position": 2, "reasoning": "Welfare consolidation, strict unemployment eligibility, and anti-assistanat framing reflect a conservative, responsibility-focused social model." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 3, "reasoning": "Le contenu fourni porte surtout sur aide sociale, chômage et valeur travail. Il justifie un score conservateur, mais la confiance reste limitée car le corpus ne traite pas les autres sujets culturels." },
+        { "model": "claude-opus-4-7", "score": 1, "reasoning": "Le programme ne traite pas explicitement de l'immigration, de la laïcité, des questions familiales ou de l'identité, qui sont absentes des sources fournies. Les indices conservateurs viennent de la valorisation patrimoniale (récit national, paysannerie, transmission), insuffisants pour un score plus élevé." },
+        { "model": "deepseek-manual", "score": 2, "reasoning": "Le programme insiste sur la responsabilité individuelle, la rigueur des conditions d'indemnisation et la primauté du travail sur l'assistance, sans aborder les questions de mœurs ou de laïcité, mais l'orientation sociale est nettement conservatrice." },
+        { "model": "gemini-1.5-pro", "score": 3, "reasoning": "Rhetoric and policies actively target 'assistanat', severely capping benefits and introducing strict conditions for unemployment and welfare." },
+        { "model": "qwen3.6", "score": 2, "reasoning": "Welfare consolidation, strict unemployment eligibility, and anti-assistanat framing reflect a conservative, responsibility-focused social model." }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [2, 3],
+      "modal_score": 3,
+      "anchor_narrative": "Trois modèles à +3, deux à +2. Souveraineté productive, électrique et alimentaire structurante (réciprocité commerciale, refus d'élargissement Ukraine, contrats nucléaires long terme, contrôles d'importation à 50% des effectifs) sans rupture européenne; comparable à LR 2022 dans la lecture haute, plus souverainiste que Macron 2017 dans la lecture basse.",
+      "evidence": [
+        { "quote": "nous nous opposerons à l'intégration de l'Ukraine au marché agricole européen", "source_ref": "sources.md#proposition-10-reciprocite" },
+        { "quote": "imposition systématique de clauses de réciprocité dans tous les accords commerciaux", "source_ref": "sources.md#proposition-7-concurrence" },
+        { "quote": "Enfin, nous refuserons résolument toute évolution européenne conduisant à diluer l'avantage comparatif de la France en matière électrique.", "source_ref": "sources.md#produire-plus" }
+      ],
+      "confidence": 0.75,
+      "dissent": [
+        { "model": "claude-opus-4-7", "position": 2, "reasoning": "Souveraineté économique forte (réciprocité, anti-sur-transposition, refus d'élargissement Ukraine), mais maintien dans le cadre européen et défense d'une PAC européenne. Pas de remise en cause des traités." },
+        { "model": "deepseek-manual", "position": 2, "reasoning": "Forte insistance sur la souveraineté productive et agricole, le refus de la surtransposition européenne, la défense du nucléaire et la réciprocité commerciale, mais sans remise en cause de l'appartenance à l'UE." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 3, "reasoning": "La souveraineté est structurante: énergie nucléaire nationale, contrôle des importations, clauses de réciprocité, réindustrialisation, épargne productive et agriculture. Le cadre reste néanmoins compatible avec une stratégie d'influence européenne plutôt qu'une sortie." },
+        { "model": "claude-opus-4-7", "score": 2, "reasoning": "Souveraineté économique forte (réciprocité, anti-sur-transposition, refus d'élargissement Ukraine), mais maintien dans le cadre européen et défense d'une PAC européenne. Pas de remise en cause des traités." },
+        { "model": "deepseek-manual", "score": 2, "reasoning": "Forte insistance sur la souveraineté productive et agricole, le refus de la surtransposition européenne, la défense du nucléaire et la réciprocité commerciale, mais sans remise en cause de l'appartenance à l'UE." },
+        { "model": "gemini-1.5-pro", "score": 3, "reasoning": "Rejects EU agricultural enlargement regarding Ukraine, insists on aggressive border checks, and constitutionally forbids EU over-transposition." },
+        { "model": "qwen3.6", "score": 3, "reasoning": "Strong emphasis on trade reciprocity, import controls, and opposition to Ukrainian agricultural integration signals economic nationalism within EU frameworks." }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [-1, 2],
+      "modal_score": 1,
+      "anchor_narrative": "Trois modèles à +1, gemini à +2, deepseek à -1. Concentration de l'arbitrage politique sur les normes (autorité indépendante de veto, règle un-pour-un, primauté politique sur les agences), révisions constitutionnelles ciblées (agriculture, principe de précaution), restriction de l'office du juge environnemental, sans réforme électorale ou parlementaire générale.",
+      "evidence": [
+        { "quote": "Réaffirmer la primauté du pouvoir politique sur les agences administratives", "source_ref": "sources.md#proposition-2-agences" },
+        { "quote": "nous assumons de le supprimer tel qu'il figure aujourd'hui dans la Charte de l'environnement. Cette décision impliquera une révision constitutionnelle soumise au référendum", "source_ref": "sources.md#proposition-1-cadre-juridique" },
+        { "quote": "Le juge exercera un contrôle limité à l'erreur manifeste d'appréciation", "source_ref": "sources.md#proposition-7-agribashing" }
+      ],
+      "confidence": 0.6,
+      "dissent": [
+        { "model": "deepseek-manual", "position": -1, "reasoning": "Le programme propose une révision constitutionnelle pour l'agriculture, une suppression du principe de précaution par référendum, et un renforcement de l'exécutif face aux agences, mais ne développe pas de réforme institutionnelle globale ni d'atteinte aux contre-pouvoirs démocratiques." },
+        { "model": "gemini-1.5-pro", "position": 2, "reasoning": "Proposes modifying the Constitution to bypass environmental review, defunding critical NGOs, and placing scientific agencies (ANSES) under direct political control." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": 1, "reasoning": "Le programme transfère une partie du pouvoir normatif vers des mécanismes de veto, d'évaluation et de primauté politique sur les agences. Il ne décrit pas une réforme complète des contre-pouvoirs démocratiques." },
+        { "model": "claude-opus-4-7", "score": 1, "reasoning": "Le programme propose une révision constitutionnelle pour inscrire l'agriculture comme intérêt fondamental, supprimer le principe de précaution, restreindre l'agrément des associations environnementales, et limiter l'office du juge. Ces mesures concentrent l'arbitrage politique au détriment du contrôle juridictionnel et associatif, sans aller jusqu'aux propositions illibérales caractérisées." },
+        { "model": "deepseek-manual", "score": -1, "reasoning": "Le programme propose une révision constitutionnelle pour l'agriculture, une suppression du principe de précaution par référendum, et un renforcement de l'exécutif face aux agences, mais ne développe pas de réforme institutionnelle globale ni d'atteinte aux contre-pouvoirs démocratiques." },
+        { "model": "gemini-1.5-pro", "score": 2, "reasoning": "Proposes modifying the Constitution to bypass environmental review, defunding critical NGOs, and placing scientific agencies (ANSES) under direct political control." },
+        { "model": "qwen3.6", "score": 1, "reasoning": "Shifts regulatory power to collective bargaining and political executive, reduces agency autonomy, and proposes constitutional changes for agricultural priority." }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [-4, -2],
+      "modal_score": -2,
+      "anchor_narrative": "Trois modèles à -2, qwen à -3, gemini à -4. Productivisme assumé: arrêt des soutiens aux nouvelles capacités solaires et éoliennes, suppression du ZAN et du principe de précaution, réautorisation de l'acétamipride, abandon de l'objectif Ecophyto -50%. Le nucléaire prolongé (objectif 400 TWh/an, 80 ans) et le MACF étendu limitent le score le plus négatif chez certains modèles.",
+      "evidence": [
+        { "quote": "Nous mettrons fin aux soutiens publics aux nouvelles capacités solaires et éoliennes", "source_ref": "sources.md#proposition-6-electricite" },
+        { "quote": "Le zéro artificialisation nette (ZAN) [...] sera supprimé", "source_ref": "sources.md#proposition-3-aligner-europe" },
+        { "quote": "Nous autoriserons de nouveau l'usage de certains néonicotinoïdes, dont l'acétamipride", "source_ref": "sources.md#proposition-3-aligner-europe" }
+      ],
+      "confidence": 0.78,
+      "dissent": [
+        { "model": "gemini-1.5-pro", "position": -4, "reasoning": "Explicitly halts renewable energy deployment, suppresses soil artificialization limits (ZAN) for agriculture, reauthorizes banned pesticides, and removes the precautionary principle." },
+        { "model": "qwen3.6", "position": -3, "reasoning": "Suppression of precautionary principle, halt to renewable subsidies, and deregulation of environmental assessments place the program firmly on the productivist pole." }
+      ],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "score": -2, "reasoning": "Les mesures diminuent plusieurs contraintes environnementales, mettent fin aux soutiens publics aux nouvelles capacités solaires et éoliennes et priorisent production, eau agricole et industrie. Le nucléaire et l'ajustement carbone limitent le score négatif." },
+        { "model": "claude-opus-4-7", "score": -2, "reasoning": "Le productivisme est explicite : priorité à la production agricole et industrielle, recul sur les contraintes environnementales (ZAN, principe de précaution, BCAE, phytosanitaires), arrêt des soutiens aux renouvelables. Le nucléaire et le mécanisme carbone aux frontières évitent un score plus négatif." },
+        { "model": "deepseek-manual", "score": -2, "reasoning": "Le programme supprime des contraintes environnementales majeures (ZAN, principe de précaution, Ecophyto, OFB, normes AGEC), met fin aux soutiens publics aux ENR solaires/éoliens et privilégie explicitement la production sur la protection de l'environnement." },
+        { "model": "gemini-1.5-pro", "score": -4, "reasoning": "Explicitly halts renewable energy deployment, suppresses soil artificialization limits (ZAN) for agriculture, reauthorizes banned pesticides, and removes the precautionary principle." },
+        { "model": "qwen3.6", "score": -3, "reasoning": "Suppression of precautionary principle, halt to renewable subsidies, and deregulation of environmental assessments place the program firmly on the productivist pole." }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "droite",
+      "label_distribution": { "droite": 5 },
+      "anchor_narrative": "Les cinq modèles convergent sur droite. Combinaison libérale-conservatrice: baisse des prélèvements, flexibilisation du travail, conditionnalité des aides, souveraineté productive et écologie subordonnée à la production. L'absence d'extrémisme institutionnel et le maintien dans le cadre européen écartent extreme_droite chez tous.",
+      "confidence": 0.66,
+      "dissent": [],
+      "per_model": [
+        { "model": "gpt-5.5-thinking", "label": "droite", "reasoning": "Le placement résulte d'une combinaison libérale-conservatrice: baisse des prélèvements, flexibilisation du travail, conditionnalité sociale, souveraineté productive et écologie subordonnée à la production." },
+        { "model": "claude-opus-4-7", "label": "droite", "reasoning": "Économie pro-marché marquée (+3), productivisme assumé (-2 écologique) et souverainisme modéré (+2) convergent sur l'anchor LR 2022 / Fillon 2017. L'absence d'extrémisme institutionnel et le maintien dans le cadre européen excluent extreme_droite." },
+        { "model": "deepseek-manual", "label": "droite", "reasoning": "Un programme économique libéral (score +3), socialement conservateur (+2) et souverainiste modéré (+2) le place clairement à droite de l'échiquier politique français, sans atteindre l'extrême droite." },
+        { "model": "gemini-1.5-pro", "label": "droite", "reasoning": "Massive supply-side tax cuts, strict welfare caps, deregulation of labor, and a highly productivist/anti-regulatory stance on the environment place the program firmly on the right wing." },
+        { "model": "qwen3.6", "label": "droite", "reasoning": "Strong market orientation, welfare conditionality, and economic sovereignty place the program firmly on the right; ecological productivism reinforces this placement." }
+      ]
+    }
+  }
+}
