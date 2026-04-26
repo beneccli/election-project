@@ -11,6 +11,7 @@
 //    defensively.
 import type { VersionMetadata } from "@/lib/schema";
 import { format, t, UI_STRINGS, type Lang } from "@/lib/i18n";
+import { localePath } from "@/lib/locale-path";
 
 export function TransparencyFooter({
   id,
@@ -180,7 +181,7 @@ export function TransparencyFooter({
             <p>{t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_BODY_HASH, lang)}</p>
             <p>
               <a
-                href="/methodologie"
+                href={localePath("/methodologie", lang)}
                 className="text-accent underline-offset-2 hover:underline"
               >
                 {t(UI_STRINGS.TRANSPARENCY_METHODOLOGY_FULL_LINK, lang)}
