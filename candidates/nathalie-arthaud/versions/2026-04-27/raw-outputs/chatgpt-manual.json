@@ -1,0 +1,1058 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "nathalie-arthaud",
+  "version_date": "2026-04-27",
+  "model": {
+    "provider": "openai",
+    "version": "gpt-5.5-thinking"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-27T00:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Nathalie Arthaud's 2027 line is presented as a class campaign rather than a conventional governing program. The source material centers on wage indexation, a ban on profitable-firm layoffs, expropriation of major capital, retirement at 60, public-service hiring, open-border migration policy, anti-NATO internationalism, and ecological planning without consumer carbon taxes.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "More state-interventionist than Mélenchon 2022 because it combines nationalization with expropriation without compensation, worker control, planning, and a public banking monopoly.",
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#iv-nationalisations-et-economie"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "The program rejects market allocation for major sectors and proposes worker control, planned production, bank nationalization, wage indexation, and restrictions on layoffs."
+    },
+    "social_cultural": {
+      "score": -4,
+      "anchor_comparison": "More progressive than EELV 2022 on migration status and voting rights; less specified than some progressive programs on family-law institutional design.",
+      "evidence": [
+        {
+          "quote": "Régularisation immédiate, sans condition et sans tri, de tous les sans-papiers présents sur le territoire.",
+          "source_ref": "sources.md#vi-immigration-et-egalite-des-droits"
+        }
+      ],
+      "confidence": 0.82,
+      "reasoning": "The program supports unconditional regularization, freedom of movement, voting rights for foreign residents, abortion and contraception access, and workplace gender-pay control."
+    },
+    "sovereignty": {
+      "score": -2,
+      "anchor_comparison": "Less EU-institutional than Place publique or Macron, but much less nationalist than LR or RN because it rejects national withdrawal as the solution.",
+      "evidence": [
+        {
+          "quote": "Pas de Frexit revendiqué : la solution est dans la lutte de classe internationale, pas dans le retour aux frontières nationales",
+          "source_ref": "sources.md#xi-union-europeenne"
+        }
+      ],
+      "confidence": 0.72,
+      "reasoning": "The program criticizes the EU as a capital framework but rejects national retreat, supports cross-border worker demands, opposes Fortress Europe, and proposes NATO exit."
+    },
+    "institutional": {
+      "score": 2,
+      "anchor_comparison": "Close to LFI referendum-framing on anti-presidentialism and direct democracy, but with a workplace-class rather than electoral-constitutional mechanism.",
+      "evidence": [
+        {
+          "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués",
+          "source_ref": "sources.md#viii-institutions-democratie-justice"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "The source rejects presidentialism and emphasizes revocable delegates, workplace assemblies, and extra-parliamentary organization, while also supporting public liberties."
+    },
+    "ecological": {
+      "score": 2,
+      "anchor_comparison": "More ecologist than Macron 2017 through anti-waste planning and public transport, less than EELV 2022 because it does not set phase-out or emissions targets.",
+      "evidence": [
+        {
+          "quote": "Refus de toute mesure « écologique » qui pèse sur la consommation populaire (taxes carbone, péages urbains, hausse des prix de l'énergie ou des carburants).",
+          "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature"
+        }
+      ],
+      "confidence": 0.7,
+      "reasoning": "The program identifies capitalist production as the ecological mechanism and proposes planning, anti-waste measures, mass public transport, thermal renovation, and no consumer carbon taxes."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "institutional"
+      ],
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#iv-nationalisations-et-economie"
+        },
+        {
+          "quote": "Régularisation immédiate, sans condition et sans tri, de tous les sans-papiers présents sur le territoire.",
+          "source_ref": "sources.md#vi-immigration-et-egalite-des-droits"
+        },
+        {
+          "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués",
+          "source_ref": "sources.md#viii-institutions-democratie-justice"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "The economic axis is anti-capitalist and expropriatory, the social axis is strongly progressive on migration and rights, and the institutional axis uses revolutionary workplace democracy rather than normal executive reform."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "C",
+      "headline": "Programme économique centré sur salaires, emploi, expropriation et retraites, sans trajectoire budgétaire chiffrée.",
+      "summary": "The program covers wages, employment, pensions, housing, taxation, capital ownership, banking, and public services. It does not provide a deficit path, macroeconomic transition plan, or quantified fiscal table, partly because the source states that LO is not offering a conventional governing program.",
+      "problems_addressed": [
+        {
+          "problem": "Low wages and price erosion of household income",
+          "approach": "Index wages, pensions, allowances, and minima on real price increases, with a stated 2022 reference of €2,000 net minimum and higher implied after inflation.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#i-salaires-emploi-et-conditions-de-travail"
+          ],
+          "reasoning": "The mechanism directly links nominal income to observed cost-of-living changes and covers workers, pensioners, and benefit recipients."
+        },
+        {
+          "problem": "Layoffs in profitable firms and unemployment",
+          "approach": "Ban layoffs in profitable or dividend-paying firms, requisition firms closing profitable sites, and share work without wage loss.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#i-salaires-emploi-et-conditions-de-travail"
+          ],
+          "reasoning": "The source names profitable-firm layoffs and subcontracting chains as targets, but does not quantify employment effects or firm-level enforcement capacity."
+        },
+        {
+          "problem": "Capital-income concentration and private control of investment",
+          "approach": "Expropriate major capital, nationalize banks without compensation, create a public banking monopoly, and plan production by human needs.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#iv-nationalisations-et-economie"
+          ],
+          "reasoning": "The measure set directly changes ownership and investment allocation, making it structurally larger than tax-only redistribution."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Debt-service sensitivity and deficit path",
+          "significance": "The source gives no debt, deficit, interest-rate, or multi-year budget arithmetic for the proposed wage, pension, housing, and public-service changes.",
+          "source_refs": []
+        },
+        {
+          "problem": "Transition management for credit, investment, and trade after expropriations",
+          "significance": "The program names a public banking monopoly and foreign-trade monopoly but does not specify the transition sequence, compensation litigation path, or payment-system continuity.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibility with private investment and existing ownership law",
+          "mechanism": "Expropriation without compensation and dividend limits would reduce the value of private ownership rights in affected sectors.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#iv-nationalisations-et-economie"
+          ],
+          "reasoning": "The source explicitly proposes expropriation without buyout and worker control over large firms and banks."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Funding gap if capital-profit taxation and expropriation yields do not cover recurring spending",
+          "probability": 0.65,
+          "severity": 0.75,
+          "reasoning": "The program funds pensions and public services from profits, dividends, capital income, and employer contributions, but gives no annual revenue envelope.",
+          "source_refs": [
+            "sources.md#ii-retraites",
+            "sources.md#iii-services-publics-sante-et-education",
+            "sources.md#iv-nationalisations-et-economie"
+          ]
+        },
+        {
+          "risk": "Implementation blockage through firm resistance, courts, EU law, or administrative capacity",
+          "probability": 0.7,
+          "severity": 0.8,
+          "reasoning": "The program requires bank nationalization, expropriation, worker access to accounts, and a foreign-trade monopoly, each requiring extensive enforcement capacity.",
+          "source_refs": [
+            "sources.md#iv-nationalisations-et-economie"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Index wages, pensions, allowances, and minima on real price increases",
+          "source_ref": "sources.md#i-salaires-emploi-et-conditions-de-travail",
+          "quantified": false,
+          "magnitude": "2022 reference: €2,000 net minimum; current amount not fixed in sources.md"
+        },
+        {
+          "measure": "Return to retirement at 60 with 37.5 contribution years",
+          "source_ref": "sources.md#ii-retraites",
+          "quantified": true,
+          "magnitude": "legal age 60; 37.5 annuities"
+        },
+        {
+          "measure": "Corporate tax at at least 50% for large groups",
+          "source_ref": "sources.md#iv-nationalisations-et-economie",
+          "quantified": true,
+          "magnitude": "minimum 50% rate for large groups"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Large recurring spending and lower retirement age are proposed without a fiscal table.",
+          "source_refs": [
+            "sources.md#ii-retraites",
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Requires expropriation, worker account access, planning, and public banking reorganization.",
+          "source_refs": [
+            "sources.md#iv-nationalisations-et-economie"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Depends on worker mobilization and compliance by firms, banks, and public administrations.",
+          "source_refs": [
+            "sources.md#conclusion"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Statutory tax and wage-indexing rules are reversible; expropriations would be harder to unwind.",
+          "source_refs": [
+            "sources.md#iv-nationalisations-et-economie"
+          ]
+        }
+      },
+      "confidence": 0.72
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Santé, école, jeunesse, droits des femmes et immigrés sont couverts, avec peu de chiffrage d'effectifs.",
+      "summary": "The program addresses healthcare capacity, education staffing, inequality, youth precarity, gender pay, care work, abortion access, immigration status, and social cohesion. The main analytical limit is the absence of quantified staffing, training, and financing schedules.",
+      "problems_addressed": [
+        {
+          "problem": "Hospital, EHPAD, and local healthcare capacity",
+          "approach": "Mass recruitment of care staff, reopening beds and services, ending local hospital closures, and covering dependency through public provision.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ],
+          "reasoning": "The source directly targets staffing, beds, proximity care, franchises, sick-leave waiting days, and dependency care."
+        },
+        {
+          "problem": "Education staffing and class-size pressure in lower-income districts",
+          "approach": "Hire tens of thousands of teachers, prioritize popular districts, expand early nursery access, and reject social selection in higher education.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ],
+          "reasoning": "The program specifies teacher hiring and priority allocation but does not give a year-by-year recruitment target."
+        },
+        {
+          "problem": "Youth precarity and student living costs",
+          "approach": "Full-time CDI from the first job, student autonomy allowance indexed to living costs, public student housing, and free higher education.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#xii-jeunesse"
+          ],
+          "reasoning": "The source links employment status, student income, housing, and education access for young cohorts."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Medical training pipeline and time-to-staffing",
+          "significance": "The source calls for recruitment but does not specify how many doctors, nurses, or teachers can be trained or redeployed by year.",
+          "source_refs": []
+        },
+        {
+          "problem": "Family policy beyond income, education, and care services",
+          "significance": "The source does not set out a detailed childcare, parental-leave, fertility, or family-benefit architecture.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Staffing targets exceed available trained personnel in the first legislature",
+          "probability": 0.6,
+          "severity": 0.6,
+          "reasoning": "The program relies on mass recruitment in health, EHPADs, schools, public transport, and housing services without a training timeline.",
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        },
+        {
+          "risk": "Uniform wage and status changes create short-run budget and payroll coordination constraints",
+          "probability": 0.55,
+          "severity": 0.65,
+          "reasoning": "The source combines salary indexation, care-job revaluation, public hiring, and social minima alignment across sectors.",
+          "source_refs": [
+            "sources.md#i-salaires-emploi-et-conditions-de-travail",
+            "sources.md#ix-droits-des-femmes"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Mass hiring of hospital and EHPAD personnel",
+          "source_ref": "sources.md#iii-services-publics-sante-et-education",
+          "quantified": false,
+          "magnitude": "number of hires not specified"
+        },
+        {
+          "measure": "Hire tens of thousands of teachers",
+          "source_ref": "sources.md#iii-services-publics-sante-et-education",
+          "quantified": true,
+          "magnitude": "dizaines de milliers"
+        },
+        {
+          "measure": "Student autonomy allowance indexed to living costs",
+          "source_ref": "sources.md#xii-jeunesse",
+          "quantified": false,
+          "magnitude": "amount not specified"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Mass hiring and full public coverage are recurrent costs without a total envelope.",
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Health, EHPAD, school, housing, and social-service staffing must scale simultaneously.",
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Depends mainly on domestic staffing, training, and public-service management capacity.",
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Hiring and reopened services can be reduced later, but employment contracts slow reversal.",
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education"
+          ]
+        }
+      },
+      "confidence": 0.74
+    },
+    "security_sovereignty": {
+      "grade": "C",
+      "headline": "Souveraineté traitée par internationalisme, sortie OTAN, refus du réarmement et contrôle public de secteurs clés.",
+      "summary": "The program addresses migration, military alignment, war policy, EU sovereignty, energy, banking, industrial control, and food-distribution power. Internal security receives limited attention and is framed mainly through employment, wages, liberties, and proximity policing.",
+      "problems_addressed": [
+        {
+          "problem": "Legal status of undocumented residents and border controls",
+          "approach": "Immediate regularization of all undocumented residents, freedom of movement and settlement, end to deportations, and voting rights for foreign residents.",
+          "strength": 0.82,
+          "source_refs": [
+            "sources.md#vi-immigration-et-egalite-des-droits"
+          ],
+          "reasoning": "The source gives concrete legal-status and political-rights measures rather than a discretionary case-by-case approach."
+        },
+        {
+          "problem": "Military budget expansion and alliance commitments",
+          "approach": "Oppose increases in military spending, refuse troop or arms deployments in imperialist conflicts, and leave NATO.",
+          "strength": 0.72,
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix"
+          ],
+          "reasoning": "The source sets a clear defense posture, but does not specify replacement defense capabilities or alliance-transition planning."
+        },
+        {
+          "problem": "Private control of energy, banks, and strategic industry",
+          "approach": "Nationalize energy, banks, finance, and strategic industries without compensation under worker and population control.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#iii-services-publics-sante-et-education",
+            "sources.md#iv-nationalisations-et-economie"
+          ],
+          "reasoning": "The measure changes ownership and control of sectors that the source treats as strategic."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Operational defense model after NATO exit",
+          "significance": "The source states exit from NATO and refusal of rearmament but does not describe force structure, deterrence, procurement, or territorial-defense doctrine.",
+          "source_refs": []
+        },
+        {
+          "problem": "Detailed internal-security staffing and crime-response policy",
+          "significance": "The source mentions proximity policing but does not make security a major axis or provide policing, justice, or prison capacity measures.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Alliance and defense coordination during transition",
+          "mechanism": "Immediate NATO exit and refusal of arms or troop deployment would reduce existing alliance integration before any alternative framework is specified.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix"
+          ],
+          "reasoning": "The source specifies exit and refusal but not a replacement security architecture."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Diplomatic and military transition risk after NATO exit",
+          "probability": 0.55,
+          "severity": 0.7,
+          "reasoning": "Leaving NATO and refusing rearmament would require rapid revision of military planning, procurement, and alliance commitments.",
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix"
+          ]
+        },
+        {
+          "risk": "Administrative overload from immediate universal regularization",
+          "probability": 0.5,
+          "severity": 0.5,
+          "reasoning": "The source estimates about 700,000 undocumented people and proposes immediate regularization without conditions.",
+          "source_refs": [
+            "sources.md#i-salaires-emploi-et-conditions-de-travail",
+            "sources.md#vi-immigration-et-egalite-des-droits"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Immediate regularization of all undocumented residents",
+          "source_ref": "sources.md#vi-immigration-et-egalite-des-droits",
+          "quantified": true,
+          "magnitude": "about 700,000 people cited in sources.md"
+        },
+        {
+          "measure": "Exit from NATO",
+          "source_ref": "sources.md#x-international-guerre-et-paix",
+          "quantified": false,
+          "magnitude": "immediate timing stated; fiscal magnitude not specified"
+        },
+        {
+          "measure": "Public control of energy and strategic industries",
+          "source_ref": "sources.md#iv-nationalisations-et-economie",
+          "quantified": false,
+          "magnitude": "sector perimeter stated; balance-sheet value not quantified"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Defense spending would fall, but industrial and migration administration costs are unquantified.",
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix",
+            "sources.md#vi-immigration-et-egalite-des-droits"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Requires NATO exit, regularization, sector control, and new administrative procedures.",
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix",
+            "sources.md#vi-immigration-et-egalite-des-droits"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Depends on NATO partners, EU rules, firms, banks, and migration administrations.",
+          "source_refs": [
+            "sources.md#x-international-guerre-et-paix",
+            "sources.md#xi-union-europeenne"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Regularization and alliance withdrawal can be reversed only with legal and diplomatic costs.",
+          "source_refs": [
+            "sources.md#vi-immigration-et-egalite-des-droits",
+            "sources.md#x-international-guerre-et-paix"
+          ]
+        }
+      },
+      "confidence": 0.69
+    },
+    "institutional_democratic": {
+      "grade": "D",
+      "headline": "Institutions abordées par anti-présidentialisme et démocratie ouvrière, pas par une réforme constitutionnelle détaillée.",
+      "summary": "The program rejects presidentialism and emphasizes workplace assemblies, revocable delegates, limited elected-official pay, public liberties, and the right to strike. It does not set out a complete constitutional, electoral, judicial, or decentralization architecture for governing.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration of executive and representative power",
+          "approach": "Reject presidentialism, limit and revoke mandates, and pay elected officials at the level of an average qualified worker wage.",
+          "strength": 0.55,
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ],
+          "reasoning": "The program names mechanisms to reduce political professionalization, but not the constitutional procedure to install them."
+        },
+        {
+          "problem": "Worker control over workplace decisions",
+          "approach": "Use sovereign workplace assemblies and revocable delegates, with worker access to company accounts and veto power over strategic decisions.",
+          "strength": 0.68,
+          "source_refs": [
+            "sources.md#i-salaires-emploi-et-conditions-de-travail",
+            "sources.md#viii-institutions-democratie-justice"
+          ],
+          "reasoning": "The source gives a concrete workplace-democracy mechanism, though its relation to national institutions is not specified."
+        },
+        {
+          "problem": "Restrictions on strikes, demonstrations, and union action",
+          "approach": "Reinforce public liberties, reject criminalization of union action and strikes, and oppose security laws and surveillance.",
+          "strength": 0.62,
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ],
+          "reasoning": "The source states the direction of rights policy but does not give a statute-by-statute repeal list."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Full constitutional design for the Fifth Republic or a successor regime",
+          "significance": "The source says institutional reform is not a major axis and does not specify chamber structure, electoral rules, judicial appointments, or decentralization.",
+          "source_refs": []
+        },
+        {
+          "problem": "State capacity for implementing revolutionary workplace control through existing agencies",
+          "significance": "The program relies on worker organization and a balance of forces, not an administrative implementation manual.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Predictability of legal authority during transition",
+          "mechanism": "A shift from existing representative institutions toward workplace assemblies and class organization leaves the legal hierarchy unspecified.",
+          "severity": 0.65,
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice",
+            "sources.md#conclusion"
+          ],
+          "reasoning": "The source describes autonomous worker organization and eventual capitalist-system overthrow without a detailed interim institutional map."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Mismatch between presidential election mechanism and non-presidential implementation theory",
+          "probability": 0.75,
+          "severity": 0.7,
+          "reasoning": "The source states that the candidacy is a tribune for class consciousness, not a program to implement from the Élysée.",
+          "source_refs": [
+            "sources.md#avertissement-methodologique",
+            "sources.md#conclusion"
+          ]
+        },
+        {
+          "risk": "Low specificity for judicial and constitutional implementation",
+          "probability": 0.7,
+          "severity": 0.55,
+          "reasoning": "The institutional section gives principles and workplace mechanisms, not detailed procedures for courts, elections, or constitutional change.",
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Revocable delegates and sovereign workplace assemblies",
+          "source_ref": "sources.md#viii-institutions-democratie-justice",
+          "quantified": false,
+          "magnitude": "institutional scope not quantified"
+        },
+        {
+          "measure": "Elected officials paid at the average qualified-worker wage",
+          "source_ref": "sources.md#viii-institutions-democratie-justice",
+          "quantified": false,
+          "magnitude": "wage reference specified; amount not quantified"
+        },
+        {
+          "measure": "Refusal of criminalization of strikes and union action",
+          "source_ref": "sources.md#viii-institutions-democratie-justice",
+          "quantified": false,
+          "magnitude": "statute list not specified"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "limited",
+          "note": "Institutional changes have limited direct budget data; elected-official pay may reduce costs.",
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Workplace democracy and revocable mandates require legal and organizational redesign.",
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Source says implementation depends on a favorable balance of forces from strikes and organization.",
+          "source_refs": [
+            "sources.md#conclusion"
+          ]
+        },
+        "reversibility": {
+          "level": "moderate",
+          "note": "Mandate rules are reversible; workplace-control institutions may create durable conflicts.",
+          "source_refs": [
+            "sources.md#viii-institutions-democratie-justice"
+          ]
+        }
+      },
+      "confidence": 0.66
+    },
+    "environmental_long_term": {
+      "grade": "C",
+      "headline": "Écologie structurée autour de la planification, transports publics et rénovation, sans trajectoire carbone chiffrée.",
+      "summary": "The program links ecological damage to capitalist production and proposes anti-waste planning, mass public transport, thermal renovation, rejection of consumer energy taxes, criticism of carbon markets, and safety-centered nuclear oversight. It lacks quantified emissions, biodiversity, water, infrastructure, and energy-mix targets.",
+      "problems_addressed": [
+        {
+          "problem": "Cost incidence of carbon and energy taxes on households",
+          "approach": "Reject carbon taxes, urban tolls, and energy or fuel price increases that fall on popular consumption.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ],
+          "reasoning": "The program clearly specifies which price-based instruments it rejects and why."
+        },
+        {
+          "problem": "Industrial waste and obsolescence",
+          "approach": "Use planned production, anti-obsolescence action, and anti-waste measures to reduce resource use.",
+          "strength": 0.58,
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ],
+          "reasoning": "The source identifies mechanisms but does not quantify material savings or enforcement standards."
+        },
+        {
+          "problem": "Transport and building emissions",
+          "approach": "Develop free or very low-cost public transport and finance thermal renovation of housing from profits rather than households.",
+          "strength": 0.65,
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ],
+          "reasoning": "The measures address two major emitting sectors, but the source does not set volume, timing, or emissions targets."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "National emissions trajectory and carbon budget",
+          "significance": "The source does not specify annual emissions targets, sector budgets, or a 2030/2040 decarbonization pathway.",
+          "source_refs": []
+        },
+        {
+          "problem": "Biodiversity, water, and adaptation infrastructure",
+          "significance": "The source discusses ecology and agriculture but does not give detailed water, biodiversity, flood, heat, or adaptation measures.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Climate outcomes under-specified without quantified targets",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "The program names planning, transport, renovation, and anti-waste measures but not measurable emissions milestones.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        },
+        {
+          "risk": "Financing and delivery bottlenecks for thermal renovation and public transport",
+          "probability": 0.58,
+          "severity": 0.55,
+          "reasoning": "The source says renovation is financed by profits and public transport is developed massively, without project pipeline details.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Free or very low-cost mass public transport",
+          "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature",
+          "quantified": false,
+          "magnitude": "coverage and cost not quantified"
+        },
+        {
+          "measure": "Thermal renovation of housing financed by profits",
+          "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature",
+          "quantified": false,
+          "magnitude": "number of dwellings not specified"
+        },
+        {
+          "measure": "Reject carbon markets and consumer energy taxes",
+          "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature",
+          "quantified": false,
+          "magnitude": "tax-rate impact not quantified"
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "moderate",
+          "note": "Transport and renovation costs are large but assigned to profits without an envelope.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        },
+        "implementation": {
+          "level": "moderate",
+          "note": "Planning, renovation, transport buildout, and anti-waste enforcement require project capacity.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        },
+        "dependency": {
+          "level": "moderate",
+          "note": "Depends on public operators, construction capacity, firms, and energy-system management.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        },
+        "reversibility": {
+          "level": "limited",
+          "note": "Tax refusals are reversible; completed transport and renovation assets persist.",
+          "source_refs": [
+            "sources.md#vii-ecologie-et-rapport-a-la-nature"
+          ]
+        }
+      },
+      "confidence": 0.68
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "not quantifiable from sources.md",
+      "units": "not specified",
+      "confidence": 0.35,
+      "caveats": "The source gives wage, pension, housing, education, and public-service directions but no cohort balance sheet, tax incidence model, debt path, or emissions pathway."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Fiscal incidence depends on whether capital taxes, profit levies, and expropriations cover recurring spending.",
+        "quantified": null
+      },
+      "housing": {
+        "summary": "Rent control, requisition of empty homes, social housing, and public student housing increase access if implemented.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Retirement at 60, 37.5 annuities, and pension indexation increase statutory pension rights relative to later-retirement baselines.",
+        "quantified": "retirement age 60; 37.5 annuities"
+      },
+      "labor_market": {
+        "summary": "CDI from first job, layoff bans, work-sharing without wage loss, and wage indexation increase formal job protections.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Public transport, thermal renovation, and anti-waste planning reduce some long-run exposures, but emissions targets are not specified.",
+        "quantified": null
+      },
+      "narrative_summary": "For a 25-year-old in 2027, the program shifts the stated policy mix toward job status, housing access, free education, earlier pension rights, and public services, with unquantified fiscal and implementation incidence."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension and consumption support improves if higher pensions and TVA reduction are implemented; financing is assigned to capital and profits.",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "Pensions are revalued, indexed on real living costs, and no pension is below the minimum wage-aligned threshold.",
+        "quantified": null
+      },
+      "healthcare": {
+        "summary": "Hospital hiring, reopened services, removal of franchise increases, and public dependency care increase service access if staffed.",
+        "quantified": null
+      },
+      "narrative_summary": "For a 65-year-old in 2027, the program concentrates benefits in pension indexation, minimum pension levels, healthcare access, and dependency coverage, with financing and staffing constraints not quantified."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Retirement age, annuity count, indexation, and minimum pensions change statutory pension rights.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Retirement at 60 and pension indexation would materially change near-term pension rules.",
+            "source_refs": [
+              "sources.md#ii-retraites"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Earlier retirement and 37.5 annuities continue to affect contribution and benefit timing.",
+            "source_refs": [
+              "sources.md#ii-retraites"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run effect remains positive for rights, but financing path is not quantified.",
+            "source_refs": [
+              "sources.md#ii-retraites"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Large spending and ownership changes are proposed without a debt or deficit trajectory.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -1,
+            "note": "Near-term spending rises; source assigns financing to capital but gives no deficit path.",
+            "source_refs": [
+              "sources.md#ii-retraites",
+              "sources.md#iii-services-publics-sante-et-education",
+              "sources.md#iv-nationalisations-et-economie"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Recurring pension, wage, housing, and service costs remain unquantified.",
+            "source_refs": [
+              "sources.md#i-salaires-emploi-et-conditions-de-travail",
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "No long-run debt, interest, or tax-yield model is specified.",
+            "source_refs": []
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Climate policy uses planning, transport, renovation, and anti-waste measures but no emissions budget.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Public transport and renovation measures could start reducing transport and housing emissions.",
+            "source_refs": [
+              "sources.md#vii-ecologie-et-rapport-a-la-nature"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Anti-waste planning and renovation could accumulate effects, without quantified targets.",
+            "source_refs": [
+              "sources.md#vii-ecologie-et-rapport-a-la-nature"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run climate impact remains bounded by absent emissions and energy-mix targets.",
+            "source_refs": [
+              "sources.md#vii-ecologie-et-rapport-a-la-nature"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Health impact comes from hospital and EHPAD hiring, beds, proximity hospitals, and dependency coverage.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Hiring, reopened beds, and removal of franchise increases would change access quickly if staffed.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Proximity health services and dependency coverage would affect medium-term access.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run effect depends on workforce pipeline not specified in sources.md.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Education effect comes from teacher hiring, early nursery access, professional education, and free higher education.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Tens of thousands of teachers and priority districts would affect class capacity if recruited.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Early nursery, free higher education, and no selection affect medium-term access.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education",
+              "sources.md#xii-jeunesse"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run gains depend on sustained staffing and financing not quantified.",
+            "source_refs": [
+              "sources.md#iii-services-publics-sante-et-education"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Housing effect comes from requisition, rent control, social construction, rehabilitation, and student housing.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Rent control and requisition can affect access before new construction scales.",
+            "source_refs": [
+              "sources.md#v-logement"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 2,
+            "note": "Mass social housing and rehabilitation would increase supply if delivered.",
+            "source_refs": [
+              "sources.md#v-logement"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-run effect persists through public stock but construction volume is not quantified.",
+            "source_refs": [
+              "sources.md#v-logement",
+              "sources.md#xii-jeunesse"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "The intergenerational effect is mixed because both younger cohorts and retirees receive explicit gains: young adults through jobs, education, and housing; older cohorts through pensions and healthcare. The source does not provide a cohort fiscal account, so the magnitude and net-transfer direction cannot be estimated numerically.",
+    "source_refs": [
+      "sources.md#i-salaires-emploi-et-conditions-de-travail",
+      "sources.md#ii-retraites",
+      "sources.md#iii-services-publics-sante-et-education",
+      "sources.md#v-logement",
+      "sources.md#xii-jeunesse",
+      "sources.md#vii-ecologie-et-rapport-a-la-nature"
+    ],
+    "confidence": 0.55
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "The counterfactual is continued market allocation with existing pension-age, wage-setting, housing, NATO, EU, and carbon-pricing debates left to future governments; sources.md does not quantify that baseline.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [
+      "quantified_public_debt_path",
+      "quantified_emissions_path",
+      "detailed_constitutional_design"
+    ],
+    "reasoning": "The program materially changes ownership, wages, pensions, migration, alliance policy, public-service staffing, and ecological instruments, but leaves several measurable trajectories unspecified.",
+    "confidence": 0.62
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Full multi-year public-finance balance",
+      "why_unsolved": "Program does not provide a spending total, tax-yield estimate, debt path, or interest-rate sensitivity for its recurring commitments.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Administrative transition for expropriation, public banking, and foreign-trade monopoly",
+      "why_unsolved": "Program gives the end-state ownership model but not the legal, operational, or payment-system transition sequence.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Quantified climate, biodiversity, water, and adaptation targets",
+      "why_unsolved": "Program names ecological mechanisms but does not specify emissions budgets, biodiversity targets, water measures, or adaptation infrastructure.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    },
+    {
+      "problem": "Defense capability model after NATO exit",
+      "why_unsolved": "Program specifies NATO exit and refusal of rearmament but not replacement force structure, deterrence doctrine, or procurement planning.",
+      "severity_if_unsolved": "medium",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Capital-control and credit-disruption transition",
+      "trigger": "Rapid expropriation of banks and large groups without an operational payments and credit plan.",
+      "probability": 0.55,
+      "severity": 0.85,
+      "reasoning": "The program changes ownership and banking structure at system scale while sources.md does not specify transition mechanics."
+    },
+    {
+      "scenario": "Recurring spending exceeds realized capital-tax and profit-levy receipts",
+      "trigger": "Mass hiring, pension changes, wage indexation, and housing programs begin before durable revenue capture is achieved.",
+      "probability": 0.6,
+      "severity": 0.75,
+      "reasoning": "The source assigns financing to profits, dividends, capital income, and employer contributions but gives no annual yield estimate."
+    },
+    {
+      "scenario": "Alliance and defense-policy discontinuity",
+      "trigger": "Immediate NATO exit and refusal of rearmament without a substitute defense framework.",
+      "probability": 0.45,
+      "severity": 0.7,
+      "reasoning": "The defense line is clear on withdrawal and spending refusal but does not define replacement capability or coordination."
+    },
+    {
+      "scenario": "Public-service recruitment shortfall",
+      "trigger": "Hospital, EHPAD, school, transport, housing, and dependency-care staffing targets exceed available trained workforce.",
+      "probability": 0.58,
+      "severity": 0.6,
+      "reasoning": "The program relies on mass recruitment across multiple sectors while training and hiring pipelines are not quantified."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "positioning.institutional.score",
+        "critique": "A score of +2 may overstate illiberal content because the program also stresses public liberties and opposition to surveillance and repression.",
+        "alternative_interpretation": "The institutional score could be +1: anti-presidential and extra-parliamentary, but not comparable to programs that weaken courts or media independence."
+      },
+      {
+        "claim_location": "intergenerational.horizon_matrix[1].cells.h_2027_2030.impact_score",
+        "critique": "The -1 public-debt score relies on inference from uncosted spending rather than a stated debt mechanism in sources.md.",
+        "alternative_interpretation": "A 0 score could be used because the program claims financing through profits and capital, while sources.md lacks enough data to estimate net debt impact."
+      },
+      {
+        "claim_location": "dimensions.environmental_long_term.grade",
+        "critique": "A C grade may penalize the absence of quantified emissions targets more than the schema requires for a non-governmental campaign line.",
+        "alternative_interpretation": "A B-leaning interpretation could emphasize the clear mechanisms on transport, renovation, anti-waste planning, and anti-carbon-market positioning."
+      }
+    ],
+    "potential_bias": "The analysis may lean toward conventional public-finance and administrative-implementation scrutiny because the schema asks for budgetary, dependency, and execution risks, which weighs against a source that explicitly rejects a conventional government-program format.",
+    "evidence_gaps": "Thin evidence affects the fiscal magnitude, public-debt horizon scores, defense replacement model, staffing feasibility, and climate impact estimates. The source is strong on political direction and weak on quantitative budget, emissions, and implementation timetables.",
+    "confidence_in_critique": 0.74
+  },
+  "confidence_self_assessment": 0.68
+}

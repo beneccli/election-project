@@ -1,0 +1,208 @@
+{
+  "dimensions": {
+    "institutional_democratic": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {
+          "deepseek-expert-thinking": "C",
+          "gemini-3-pro": "C",
+          "mistral-thinking": "F"
+        }
+      },
+      "headline": {
+        "text": "Refus du présidentialisme, démocratie directe en entreprise et mandats révocables ; aucune architecture institutionnelle post-révolutionnaire n'est spécifiée.",
+        "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "chatgpt-5.5-thinking-extended", "text": "Refus du présidentialisme et de la Ve République ; démocratie directe en entreprise comme alternative ; pas de modèle institutionnel de remplacement." },
+          { "model": "claude-opus-4.7", "text": "Présidence symbolique de témoignage, refus assumé du jeu institutionnel ; aucune réforme constitutionnelle proposée." },
+          { "model": "deepseek-expert-thinking", "text": "Pratique d'opposition cohérente : refus présidentialisme, mandats révocables, indemnité au salaire ouvrier qualifié, AG souveraines en entreprise." },
+          { "model": "gemini-3-pro", "text": "Démocratie ouvrière directe et révocable : alternative articulée au présidentialisme, mais sans cadre institutionnel formalisé." },
+          { "model": "mistral-thinking", "text": "Programme strictement déclaratif sur le plan institutionnel : aucune architecture de remplacement à la Ve République." },
+          { "model": "qwen3.6-max-preview-thinking", "text": "Refus du présidentialisme avec contre-proposition (démocratie directe en entreprise) mais sans plan de transition institutionnel." }
+        ]
+      },
+      "summary": "Le programme institutionnel articule un refus du présidentialisme et de la Ve République (la candidature de Nathalie Arthaud est explicitement « de témoignage », outil de propagande des idées communistes révolutionnaires) avec une contre-proposition centrée sur la démocratie directe en entreprise : assemblées générales souveraines des travailleurs, élus indemnisés au niveau du salaire ouvrier qualifié, mandats impératifs et révocables à tout moment, contrôle ouvrier sur la production et les comptes. Le programme renforce les libertés publiques (fin des contrôles au faciès, opposition aux dispositifs de surveillance, défense du droit de manifester et de grève, liberté d'expression et de presse) et étend les droits politiques aux résidents étrangers (droit de vote universel pour tous les résidents). DeepSeek et Gemini gradent C en notant la cohérence interne et la radicalité opérationnelle de la démocratie directe ; les autres gradent D en relevant l'absence de toute architecture institutionnelle post-révolutionnaire (parlement, exécutif, justice) et de toute feuille de route de transition entre l'état actuel et la « société démocratique des travailleurs » revendiquée ; mistral grade F en soulignant le caractère strictement déclaratif du dispositif. Le droit de vote universel pour les résidents étrangers entre en conflit direct avec l'article 3 de la Constitution (réserve de citoyenneté française pour le vote national), conflit non traité par le programme.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du pouvoir présidentiel et délégitimation des contre-pouvoirs",
+          "approach": "Refus assumé du présidentialisme ; candidature présidentielle utilisée comme tribune ; contre-proposition de démocratie directe en entreprise (AG souveraines, mandats révocables, indemnité ouvrière).",
+          "strength": 0.6,
+          "source_refs": ["sources.md#i-positionnement-general-et-strategie", "sources.md#viii-democratie-et-libertes"],
+          "reasoning": "Cinq modèles reconnaissent la cohérence de la critique du présidentialisme et de la contre-proposition opérationnelle au niveau de l'entreprise.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "problem": "Restriction des libertés publiques et surveillance des classes populaires",
+          "approach": "Fin des contrôles au faciès ; abrogation des dispositifs de surveillance de masse ; défense du droit de manifester, du droit de grève, de la liberté d'expression et de la presse ; opposition aux interdictions de manifestations.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#viii-democratie-et-libertes"],
+          "reasoning": "Six modèles convergent sur l'identification d'un cadre cohérent de défense des libertés publiques associées aux mobilisations populaires.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Exclusion politique des résidents étrangers",
+          "approach": "Droit de vote universel pour tous les résidents (dont étrangers extra-UE) à toutes les élections ; régularisation de tous les sans-papiers ; abrogation des lois immigration.",
+          "strength": 0.55,
+          "source_refs": ["sources.md#vi-immigration-et-egalite-des-droits"],
+          "reasoning": "Mesure forte d'élargissement du corps électoral mais entre en conflit avec l'article 3 de la Constitution non traité par le programme.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Architecture institutionnelle post-révolutionnaire (parlement, exécutif, justice, contrôle constitutionnel)",
+          "significance": "Le programme appelle à une « société démocratique des travailleurs » sans préciser l'organisation des pouvoirs publics, le mode de désignation des représentants nationaux, la séparation des pouvoirs ou le contrôle constitutionnel.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Mode de transition entre l'état actuel et la société visée",
+          "significance": "Le programme repose sur une dynamique de « lutte de classe » sans préciser comment articuler cette dynamique avec les institutions existantes (élections, gouvernement, parlement) pendant la phase de transition.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"]
+        },
+        {
+          "problem": "Garanties pour les droits des minorités politiques dans le cadre proposé",
+          "significance": "La démocratie directe en entreprise, fondée sur AG souveraines et mandats révocables, ne traite pas des garanties pour les minorités politiques ou syndicales, ni des protections individuelles contre les décisions majoritaires.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Légitimité constitutionnelle des mesures phares",
+          "mechanism": "Plusieurs mesures (expropriation sans rachat, droit de vote des étrangers à toutes les élections, indexation imposée des salaires) entrent en conflit direct avec la Constitution actuelle (articles 3, 17, 34) sans que le programme propose de procédure de révision constitutionnelle ou ne traite la question de la légalité institutionnelle de la transition.",
+          "severity": 0.7,
+          "source_refs": ["sources.md#iv-nationalisations-et-economie", "sources.md#vi-immigration-et-egalite-des-droits", "sources.md#iii-pouvoir-d-achat-et-salaires"],
+          "reasoning": "Quatre modèles identifient le risque d'incompatibilité constitutionnelle non traitée comme un facteur de fragilité institutionnelle.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Vide institutionnel post-rupture en l'absence d'architecture de remplacement",
+          "probability": 0.7,
+          "severity": 0.75,
+          "reasoning": "L'appel à une « société démocratique des travailleurs » sans architecture institutionnelle (parlement, exécutif, justice) crée un risque de vide en cas de mise en œuvre, avec dépendance entière à l'auto-organisation revendiquée.",
+          "source_refs": ["sources.md#i-positionnement-general-et-strategie"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"]
+        },
+        {
+          "risk": "Blocage constitutionnel des mesures phares",
+          "probability": 0.85,
+          "severity": 0.65,
+          "reasoning": "Expropriation, droit de vote universel pour les résidents étrangers, indexation forcée — autant de dispositifs qui requièrent au minimum une révision constitutionnelle non envisagée par le programme.",
+          "source_refs": ["sources.md#iv-nationalisations-et-economie", "sources.md#vi-immigration-et-egalite-des-droits"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Refus du présidentialisme ; candidature de témoignage utilisée comme tribune",
+          "source_ref": "sources.md#i-positionnement-general-et-strategie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Démocratie directe en entreprise : assemblées générales souveraines, mandats impératifs et révocables, élus indemnisés au salaire ouvrier qualifié",
+          "source_ref": "sources.md#iv-nationalisations-et-economie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Renforcement des libertés publiques : fin des contrôles au faciès, défense du droit de manifester et de grève, opposition à la surveillance de masse",
+          "source_ref": "sources.md#viii-democratie-et-libertes",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Droit de vote universel pour tous les résidents à toutes les élections",
+          "source_ref": "sources.md#vi-immigration-et-egalite-des-droits",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Les mesures institutionnelles sont essentiellement procédurales et symboliques ; aucun coût budgétaire significatif n'est identifié.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "low", "note": "Pas de coût direct ; mesures procédurales." },
+            { "model": "claude-opus-4.7", "level": "low", "note": "Coût budgétaire direct négligeable." },
+            { "model": "deepseek-expert-thinking", "level": "low", "note": "Mesures organisationnelles sans coût significatif." },
+            { "model": "gemini-3-pro", "level": "low", "note": "Coût budgétaire négligeable." },
+            { "model": "mistral-thinking", "level": "limited", "note": "Coûts indirects de réorganisation institutionnelle envisageables." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "low", "note": "Mesures procédurales sans coût budgétaire significatif." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Plusieurs mesures phares supposent une révision constitutionnelle non envisagée ; l'architecture post-rupture n'est pas spécifiée ; la démocratie directe en entreprise nécessite des dispositifs juridiques inexistants.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Révision constitutionnelle requise non envisagée." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Conflit direct avec articles 3, 17, 34 de la Constitution." },
+            { "model": "deepseek-expert-thinking", "level": "high", "note": "Architecture institutionnelle de remplacement non spécifiée." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Mise en œuvre demande révision constitutionnelle majeure." },
+            { "model": "mistral-thinking", "level": "high", "note": "Aucun cadre juridique de transition opérationnalisable." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Multiples révisions constitutionnelles requises." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "La cohérence du dispositif suppose une mobilisation populaire et une auto-organisation des travailleurs hors du contrôle de l'État, dynamique non assurée par l'action gouvernementale.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Dépend d'une mobilisation populaire massive." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Auto-organisation des travailleurs non garantie par l'État." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Programme actionnable au sein de l'entreprise indépendamment." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Cohérence du dispositif requiert mobilisations transnationales." },
+            { "model": "mistral-thinking", "level": "high", "note": "Tout dépend de l'auto-organisation revendiquée." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Démocratie directe en entreprise actionnable indépendamment." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Une révision constitutionnelle est en théorie réversible mais politiquement coûteuse ; la démocratie directe en entreprise instaurée par loi pourrait être abrogée par majorité ultérieure.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["gemini-3-pro", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "moderate", "note": "Réversibilité par loi nouvelle." },
+            { "model": "claude-opus-4.7", "level": "moderate", "note": "Réversibilité par majorité ultérieure mais effets durables." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Mesures défaisables par majorité ultérieure." },
+            { "model": "gemini-3-pro", "level": "limited", "note": "Combinaison expropriation + révision constitutionnelle crée trajectoire durable." },
+            { "model": "mistral-thinking", "level": "limited", "note": "Effets institutionnels durables une fois mis en place." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Réversibilité par législation ultérieure." }
+          ]
+        }
+      },
+      "confidence": 0.65
+    }
+  }
+}

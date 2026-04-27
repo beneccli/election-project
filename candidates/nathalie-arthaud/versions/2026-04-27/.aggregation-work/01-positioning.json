@@ -1,0 +1,139 @@
+{
+  "positioning": {
+    "economic": {
+      "consensus_interval": [-5, -5],
+      "modal_score": -5,
+      "anchor_narrative": "Unanimité absolue à -5 : programme anti-capitaliste explicite, plus interventionniste que tout autre programme évalué (LFI 2022 anchor à -4 dépassé). Expropriation sans rachat ni indemnité des banques et grands groupes, planification de la production sur la base des besoins humains réels et non du marché, monopole public du commerce extérieur, suppression progressive de la TVA, IS minimum 50% pour les grands groupes, interdiction des licenciements dans les entreprises bénéficiaires, indexation automatique des salaires sur les prix réels, contrôle ouvrier sur les comptes. Aucun espace résiduel pour le secteur privé n'est préservé dans l'économie décrite.",
+      "evidence": [
+        { "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.", "source_ref": "sources.md#iv-nationalisations-et-economie" },
+        { "quote": "Planification de la production sur la base des besoins humains réels, et non du marché.", "source_ref": "sources.md#iv-nationalisations-et-economie" },
+        { "quote": "Interdiction effective des licenciements dans toute entreprise qui réalise des profits ou qui verse des dividendes, sans exception.", "source_ref": "sources.md#i-salaires-emploi-et-conditions-de-travail" }
+      ],
+      "confidence": 0.9,
+      "dissent": [],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "score": -5, "reasoning": "Allocation marchande rejetée pour les grands secteurs ; contrôle ouvrier, planification, monopole bancaire public, indexation et restriction des licenciements." },
+        { "model": "claude-opus-4.7", "score": -5, "reasoning": "Expropriation sans indemnité, planification centrale, interdiction des licenciements en entreprise bénéficiaire, monopole sur le commerce extérieur, fiscalité confiscatoire ; chaque mesure dépasse l'ancrage LFI 2022." },
+        { "model": "deepseek-expert-thinking", "score": -5, "reasoning": "Le programme exige planification totale, expropriation du capital et abolition du marché ; aucun espace pour le secteur privé." },
+        { "model": "gemini-3-pro", "score": -5, "reasoning": "Engagement explicite à exproprier le secteur bancaire et les grandes industries sans compensation, sortant le programme du spectre de l'économie de marché conventionnelle." },
+        { "model": "mistral-thinking", "score": -5, "reasoning": "Programme rejette explicitement les solutions de marché, plaidant pour l'expropriation complète du capital et l'abolition des structures économiques bourgeoises." },
+        { "model": "qwen3.6-max-preview-thinking", "score": -5, "reasoning": "Expropriation sans compensation, veto ouvrier sur la stratégie d'entreprise, abolition de la TVA, fiscalité confiscatoire — extrême statiste de l'axe." }
+      ]
+    },
+    "social_cultural": {
+      "consensus_interval": [-5, -3],
+      "modal_score": -4,
+      "anchor_narrative": "Modal -4 (chatgpt, deepseek, qwen) ; gemini abaisse à -5 sur la base de l'ouverture inconditionnelle des frontières et du droit de vote universel des étrangers ; claude et mistral relèvent à -3 en notant que LO subordonne explicitement les politiques identitaires-culturelles à la lutte de classe et rejette les cadrages identitaires divisifs, ce qui rapproche le programme de la tradition de gauche progressiste sans le placer au pôle maximal.",
+      "evidence": [
+        { "quote": "Régularisation immédiate, sans condition et sans tri, de tous les sans-papiers présents sur le territoire.", "source_ref": "sources.md#vi-immigration-et-egalite-des-droits" },
+        { "quote": "Liberté de circulation et d'installation : ouverture des frontières.", "source_ref": "sources.md#vi-immigration-et-egalite-des-droits" },
+        { "quote": "Droit de vote à toutes les élections (locales, nationales, européennes) pour tous les résidents étrangers, quels que soient leur origine, leur nationalité ou leur statut juridique.", "source_ref": "sources.md#vi-immigration-et-egalite-des-droits" }
+      ],
+      "confidence": 0.8,
+      "dissent": [
+        { "model": "claude-opus-4.7", "position": -3, "reasoning": "Frontières ouvertes, droit de vote universel des résidents et accès inconditionnel à l'IVG placent le programme fermement progressiste, mais la subordination explicite du sociétal au classisme et le rejet des cadrages identitaires divisifs le maintiennent en deçà du pôle maximal." },
+        { "model": "gemini-3-pro", "position": -5, "reasoning": "Régularisation inconditionnelle, frontières ouvertes et droit de vote pour tous les résidents quel que soit leur statut indiquent une posture progressiste maximaliste." },
+        { "model": "mistral-thinking", "position": -3, "reasoning": "Le programme avance des revendications progressistes (égalité de genre, antiracisme) mais les cadre strictement dans la lutte de classe, rejetant l'identitaire libéral au profit de l'internationalisme prolétarien." }
+      ],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "score": -4, "reasoning": "Régularisation inconditionnelle, liberté de circulation, droit de vote des résidents étrangers, accès à l'IVG/contraception et contrôle salarial paritaire en entreprise." },
+        { "model": "claude-opus-4.7", "score": -3, "reasoning": "Frontières ouvertes et droit de vote universel posés ; LO subordonne explicitement le sociétal-culturel au classisme et rejette les cadrages identitaires divisifs, d'où -3 plutôt que -4." },
+        { "model": "deepseek-expert-thinking", "score": -4, "reasoning": "Positions extrêmement progressistes sur immigration, droits des femmes, antiracisme et internationalisme. Aucune concession conservatrice." },
+        { "model": "gemini-3-pro", "score": -5, "reasoning": "Régularisation inconditionnelle, ouverture des frontières et droit de vote pour tous les résidents indiquent une posture progressiste maximaliste." },
+        { "model": "mistral-thinking", "score": -3, "reasoning": "Revendications progressistes (genre, antiracisme) cadrées dans la lutte de classe ; rejet de l'identitaire libéral au profit de l'internationalisme prolétarien." },
+        { "model": "qwen3.6-max-preview-thinking", "score": -4, "reasoning": "Régularisation inconditionnelle, frontières ouvertes, droit de vote pour tous les résidents et droits forts féministes/du travail placent le programme au pôle progressiste." }
+      ]
+    },
+    "sovereignty": {
+      "consensus_interval": [-5, 0],
+      "modal_score": -2,
+      "anchor_narrative": "Désaccord fort sur la lecture de l'internationalisme prolétarien comme position d'axe : claude (0) le qualifie d'orthogonal aux ancres souverainistes/européistes (rejet à la fois de l'UE et du Frexit) ; deepseek (-1) et chatgpt/qwen (-2) y voient une posture pro-intégration faible mais sans adhésion institutionnelle ; mistral (-4) lit la sortie de l'OTAN et le rejet de l'UE actuelle comme un alignement souverainiste-internationaliste ; gemini (-5) prend le rejet explicite des frontières et de la patrie comme placement maximaliste anti-souverainiste. Modal -2 (chatgpt, qwen) reflète la formulation médiane.",
+      "evidence": [
+        { "quote": "Pas de Frexit revendiqué : la solution est dans la lutte de classe internationale, pas dans le retour aux frontières nationales", "source_ref": "sources.md#xi-union-europeenne" },
+        { "quote": "Sortie immédiate de l'OTAN", "source_ref": "sources.md#x-international-guerre-et-paix" },
+        { "quote": "Internationalisme prolétarien : les travailleurs n'ont pas de patrie, leurs intérêts les unissent par-delà les frontières", "source_ref": "sources.md#x-international-guerre-et-paix" }
+      ],
+      "confidence": 0.55,
+      "dissent": [
+        { "model": "claude-opus-4.7", "position": 0, "reasoning": "Internationalisme prolétarien rejette à la fois le fédéralisme UE et le souverainisme national comme constructions bourgeoises. Sortie OTAN tire vers le souverainisme, ouverture des frontières et rejet des barrières commerciales tirent à l'opposé. Score neutre par mesure, pas par ambiguïté." },
+        { "model": "deepseek-expert-thinking", "position": -1, "reasoning": "La position rejette à la fois l'UE actuelle et le nationalisme, visant une solidarité de classe transnationale, légèrement du côté de l'intégration sans adhésion institutionnelle." },
+        { "model": "gemini-3-pro", "position": -5, "reasoning": "Tout en critiquant l'UE comme structure capitaliste, le programme rejette explicitement le souverainisme, les frontières nationales et le protectionnisme, s'ancrant sur l'internationalisme prolétarien." },
+        { "model": "mistral-thinking", "position": -4, "reasoning": "Sortie immédiate de l'OTAN et rejet de l'UE comme instrument capitaliste, dans un cadre anti-impérialiste internationaliste révolutionnaire." }
+      ],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "score": -2, "reasoning": "Critique de l'UE-cadre du capital mais rejet du repli national ; soutien aux revendications ouvrières transfrontières et sortie OTAN." },
+        { "model": "claude-opus-4.7", "score": 0, "reasoning": "Internationalisme prolétarien orthogonal aux ancres : rejette à la fois fédéralisme UE et souverainisme national. Mesure neutre, pas ambiguïté." },
+        { "model": "deepseek-expert-thinking", "score": -1, "reasoning": "Solidarité de classe transnationale légèrement pro-intégration sans adhésion institutionnelle." },
+        { "model": "gemini-3-pro", "score": -5, "reasoning": "Rejet explicite du souverainisme, des frontières nationales et du protectionnisme ; ancrage sur l'internationalisme prolétarien." },
+        { "model": "mistral-thinking", "score": -4, "reasoning": "Sortie OTAN et rejet UE comme instrument capitaliste, internationalisme révolutionnaire anti-impérialiste." },
+        { "model": "qwen3.6-max-preview-thinking", "score": -2, "reasoning": "Opposition OTAN et UE capitaliste, rejet explicite de la souveraineté nationale au profit de la solidarité de classe transfrontière." }
+      ]
+    },
+    "institutional": {
+      "consensus_interval": [0, 5],
+      "modal_score": 3,
+      "anchor_narrative": "Modal +3 (deepseek, mistral, qwen) ; claude (0) note que LO rejette la Vᵉ République mais propose des libertés publiques renforcées et la démocratie directe en entreprise — anti-autoritaire sur droits civils, anti-parlementaire sur la forme — laissant l'architecture post-révolutionnaire indéterminée ; chatgpt (+2) lit cela comme proche de LFI sur l'anti-présidentialisme ; gemini (+5) prend le démantèlement complet de la Vᵉ République comme rupture maximale avec la démocratie libérale. Le score reflète moins le degré d'anti-libéralisme que la lecture de la rupture révolutionnaire comme « hors cadre » versus « contre cadre ».",
+      "evidence": [
+        { "quote": "Refus du présidentialisme et des « hommes providentiels »", "source_ref": "sources.md#viii-institutions-democratie-justice" },
+        { "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués", "source_ref": "sources.md#viii-institutions-democratie-justice" },
+        { "quote": "Renforcement des libertés publiques face au glissement autoritaire (lois sécuritaires, surveillance, répression des manifestations)", "source_ref": "sources.md#viii-institutions-democratie-justice" }
+      ],
+      "confidence": 0.55,
+      "dissent": [
+        { "model": "chatgpt-5.5-thinking-extended", "position": 2, "reasoning": "Anti-présidentialisme et démocratie directe au travail proches de LFI, mais avec un mécanisme classiste plutôt que constitutionnel-électoral." },
+        { "model": "claude-opus-4.7", "position": 0, "reasoning": "Rejet de la Vᵉ République, mais libertés publiques renforcées et démocratie directe en entreprise — anti-autoritaire civils / anti-parlementaire forme — laissant l'architecture post-révolutionnaire indéterminée." },
+        { "model": "gemini-3-pro", "position": 5, "reasoning": "Rejet explicite de la démocratie parlementaire et du présidentialisme, remplacés par contrôle direct des travailleurs et mandats révocables — rupture complète avec les institutions démocratiques libérales." }
+      ],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "score": 2, "reasoning": "Rejet du présidentialisme, délégués révocables, assemblées en entreprise et organisation extra-parlementaire ; soutien aux libertés publiques." },
+        { "model": "claude-opus-4.7", "score": 0, "reasoning": "Anti-autoritaire sur les libertés publiques mais anti-parlementaire sur la forme représentative ; architecture constitutionnelle post-révolutionnaire non spécifiée — confiance maintenue à 0,55." },
+        { "model": "deepseek-expert-thinking", "score": 3, "reasoning": "Aucune réforme dans le cadre de la Vᵉ République ; abolition par révolution prolétarienne, hors cadre démocratique libéral." },
+        { "model": "gemini-3-pro", "score": 5, "reasoning": "Démantèlement complet de la Vᵉ République et remplacement par contrôle ouvrier direct ; rupture maximale avec la démocratie libérale." },
+        { "model": "mistral-thinking", "score": 3, "reasoning": "Rejet des institutions libérales en faveur du contrôle ouvrier direct ; mandats révocables et indemnités d'élus alignées sur l'ouvrier qualifié — réformes institutionnelles illibérales-populistes." },
+        { "model": "qwen3.6-max-preview-thinking", "score": 3, "reasoning": "Institutions Vᵉ République qualifiées d'outils bourgeois ; assemblées de lieu de travail, mandats révocables et alignement des indemnités élues sur les salaires ouvriers." }
+      ]
+    },
+    "ecological": {
+      "consensus_interval": [-2, 2],
+      "modal_score": null,
+      "anchor_narrative": "Égalité de plurialité entre 0 (claude, mistral) et +2 (chatgpt, qwen) ; modal_score null pour refléter l'absence de pluralité. gemini (-2) lit le refus des taxes carbone et le maintien du nucléaire géré par les multinationales comme productivisme net ; deepseek (+1) voit la planification anti-gaspillage comme légèrement positive ; chatgpt/qwen (+2) ajoutent les transports gratuits, la rénovation thermique et la critique structurelle du capitalisme comme orientation positive ; claude/mistral (0) notent que LO rejette à la fois le climato-scepticisme et l'arsenal écologiste classique (taxe carbone, marchés du carbone, sortie du nucléaire), sans cible chiffrée d'émissions, ce qui place le programme à l'origine de l'axe.",
+      "evidence": [
+        { "quote": "Refus de toute mesure « écologique » qui pèse sur la consommation populaire (taxes carbone, péages urbains, hausse des prix de l'énergie ou des carburants).", "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature" },
+        { "quote": "Développement massif des transports en commun gratuits ou à très bas coût", "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature" },
+        { "quote": "Planification rationnelle de la production en choisissant à chaque fois les solutions les moins coûteuses en travail humain et en ressources naturelles", "source_ref": "sources.md#vii-ecologie-et-rapport-a-la-nature" }
+      ],
+      "confidence": 0.5,
+      "dissent": [
+        { "model": "claude-opus-4.7", "position": 0, "reasoning": "LO reconnaît la crise écologique comme structurelle au capitalisme mais rejette tous les instruments concrets de décarbonation des programmes écologistes (tarification carbone, taxes carburant, sorties sectorielles) ; aucune trajectoire d'émissions ou plan sectoriel spécifié — score neutre, pas négatif, car le productivisme est aussi rejeté." },
+        { "model": "deepseek-expert-thinking", "position": 1, "reasoning": "Discours écologique présent mais subordonné à la lutte de classes ; aucune cible de réduction d'émissions ; propositions concrètes (transports, planification anti-gaspillage) limitées." },
+        { "model": "gemini-3-pro", "position": -2, "reasoning": "Rejet des mécanismes écologiques de marché et des limites de consommation individuelle, en faveur de la planification industrielle et de la défense du pouvoir d'achat ouvrier sur la décarbonation immédiate." },
+        { "model": "mistral-thinking", "position": 0, "reasoning": "Programme oppose l'austérité écologique mais manque de propositions concrètes au-delà d'une planification vague de la production. La lutte de classes éclipse les préoccupations écologiques." }
+      ],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "score": 2, "reasoning": "Production capitaliste identifiée comme mécanisme écologique ; planification, anti-gaspillage, transports en masse, rénovation thermique et absence de taxes carbone consommateurs." },
+        { "model": "claude-opus-4.7", "score": 0, "reasoning": "Reconnaissance structurelle mais rejet des outils de décarbonation classiques ; aucune trajectoire d'émissions ; score neutre car productivisme également rejeté." },
+        { "model": "deepseek-expert-thinking", "score": 1, "reasoning": "Discours écologique subordonné à la lutte de classes ; aucune cible chiffrée ; propositions concrètes limitées." },
+        { "model": "gemini-3-pro", "score": -2, "reasoning": "Rejet des mécanismes écologiques de marché et des contraintes individuelles, en faveur de la planification et de la défense du pouvoir d'achat ouvrier sur la décarbonation immédiate." },
+        { "model": "mistral-thinking", "score": 0, "reasoning": "Opposition à l'austérité écologique sans propositions concrètes au-delà d'une planification vague ; lutte de classes éclipse l'écologie." },
+        { "model": "qwen3.6-max-preview-thinking", "score": 2, "reasoning": "Crise écologique attribuée à l'accumulation capitaliste ; rejet des taxes carbone ménages, transports publics et rénovation thermique financés par les profits." }
+      ]
+    },
+    "overall_spectrum": {
+      "modal_label": "extreme_gauche",
+      "label_distribution": {
+        "extreme_gauche": 6
+      },
+      "anchor_narrative": "Unanimité sur extreme_gauche (6/6). Économie anti-capitaliste expropriatrice, social-progressisme maximal sur immigration et droits, rejet des institutions de la Vᵉ République et internationalisme prolétarien convergent vers le pôle révolutionnaire. Aucun modèle ne classe le programme « gauche » classique : la combinaison expropriation sans rachat + planification + démocratie d'entreprise + ouverture inconditionnelle des frontières franchit le seuil même pour les modèles plus conservateurs sur les axes individuels (claude, mistral).",
+      "confidence": 0.85,
+      "dissent": [],
+      "per_model": [
+        { "model": "chatgpt-5.5-thinking-extended", "label": "extreme_gauche", "reasoning": "Axe économique anti-capitaliste expropriatoire ; axe social fortement progressiste sur migration et droits ; axe institutionnel par démocratie ouvrière révolutionnaire plutôt que réforme exécutive." },
+        { "model": "claude-opus-4.7", "label": "extreme_gauche", "reasoning": "Trajectoire anti-capitaliste explicite (expropriation, planification, monopole bancaire) combinée à un progressisme social-migratoire maximaliste et à un horizon révolutionnaire trotskiste assumé." },
+        { "model": "deepseek-expert-thinking", "label": "extreme_gauche", "reasoning": "Économie anti-capitaliste, progressisme migratoire intégral et rejet des institutions Vᵉ République convergent vers le pôle extrême-gauche révolutionnaire." },
+        { "model": "gemini-3-pro", "label": "extreme_gauche", "reasoning": "Économie d'expropriation sans compensation et internationalisme prolétarien explicite plus rejet du cadre constitutionnel libéral situent le programme au pôle révolutionnaire." },
+        { "model": "mistral-thinking", "label": "extreme_gauche", "reasoning": "Cadre marxiste-révolutionnaire de Lutte Ouvrière : rejet du réformisme incrémental, expropriation anti-capitaliste, démantèlement systémique des institutions bourgeoises." },
+        { "model": "qwen3.6-max-preview-thinking", "label": "extreme_gauche", "reasoning": "Combinaison économie anti-capitaliste dure + progressisme social inconditionnel + rejet de la démocratie représentative libérale, orthogonale aux cadres réformistes ou centristes." }
+      ]
+    }
+  }
+}

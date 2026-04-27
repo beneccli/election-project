@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "nathalie-arthaud",
+  "version_date": "2026-04-27",
+  "source_models": [
+    { "provider": "openai", "version": "chatgpt-5.5-thinking-extended" },
+    { "provider": "anthropic", "version": "claude-opus-4.7" },
+    { "provider": "deepseek", "version": "deepseek-expert-thinking" },
+    { "provider": "google", "version": "gemini-3-pro" },
+    { "provider": "mistralai", "version": "mistral-thinking" },
+    { "provider": "qwen", "version": "qwen3.6-max-preview-thinking" }
+  ],
+  "aggregation_method": {
+    "type": "meta_llm",
+    "model": { "provider": "anthropic", "version": "claude-opus-4-7" },
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "1.2",
+    "run_at": "2026-04-27T12:00:00Z"
+  },
+  "summary": "Candidature de Lutte Ouvrière revendiquée comme « campagne de classe » et non comme programme de gouvernement : refus explicite de présenter une trajectoire applicable depuis l'Élysée et appel à la lutte collective des travailleurs comme seul levier transformateur. Les six modèles convergent unanimement sur un placement extrême-gauche (label_distribution : extreme_gauche=6) et sur un score économique au minimum de l'échelle (-5/-5 unanime) : expropriation sans rachat ni indemnité du grand capital (banques, énergie, multinationales), interdiction des licenciements dans les entreprises bénéficiaires, indexation automatique des salaires sur les prix réels, retraite à 60 ans avec 37,5 annuités, monopole public du commerce extérieur et planification selon les besoins humains. Volet social-progressiste maximal : régularisation immédiate sans tri d'environ 700 000 sans-papiers, ouverture des frontières, droit de vote pour tous les résidents étrangers à toutes les élections, abrogation des lois immigration. Volet international : sortie immédiate de l'OTAN, opposition à toute hausse du budget militaire, refus de toute taxe carbone ou écologique pesant sur les ménages populaires. Les modèles divergent fortement sur la praticabilité et sur les axes : (i) grade économie — C/D/F sans pluralité, (ii) souveraineté de -5 (gemini, lecture rupturiste maximale) à 0 (claude, lecture internationaliste sans Frexit), (iii) institutionnel de 0 (claude) à +5 (gemini) selon la lecture de la critique radicale des institutions versus l'absence de programme constitutionnel formel, (iv) écologique tie 0/+2 entre lecture « refus de l'écologie punitive = neutralité » et lecture « planification anti-gaspillage = orientation positive », (v) climat horizon long terme inversion de signe par mistral. Mistral et qwen attribuent F à la dimension économique en raison de l'absence revendiquée de chiffrage et de la dépendance affichée à un soulèvement révolutionnaire ; chatgpt/claude/gemini grade entre C et D pour les mêmes raisons mais soulignent la cohérence interne et la crédibilité testimoniale du discours.",
+  "summary_agreement": 0.72,
+  "coverage_warning": false
+}

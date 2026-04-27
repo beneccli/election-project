@@ -1,0 +1,205 @@
+{
+  "dimensions": {
+    "environmental_long_term": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {
+          "chatgpt-5.5-thinking-extended": "C",
+          "gemini-3-pro": "C",
+          "mistral-thinking": "NOT_ADDRESSED"
+        }
+      },
+      "headline": {
+        "text": "Critique structurelle du capitalisme productiviste, transports gratuits, rénovation thermique massive ; aucune cible d'émissions, refus explicite des taxes carbone et marchés du carbone.",
+        "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "dissenters": ["mistral-thinking"],
+        "per_model": [
+          { "model": "chatgpt-5.5-thinking-extended", "text": "Mesures concrètes (transports gratuits, rénovation thermique) cohérentes mais sans architecture de transition climatique chiffrée." },
+          { "model": "claude-opus-4.7", "text": "Critique du productivisme capitaliste comme cause structurelle ; rejet des dispositifs de marché ; pas de cible d'émissions ni de calendrier." },
+          { "model": "deepseek-expert-thinking", "text": "Approche classiste : refus des taxes carbone qui pèsent sur les ménages, transition par socialisation des moyens de production." },
+          { "model": "gemini-3-pro", "text": "Articulation systémique de la critique : capitalisme productiviste = cause environnementale ; mesures concrètes mais sans plan d'émissions." },
+          { "model": "mistral-thinking", "text": "Aucun traitement substantiel de la dimension environnementale long-terme dans le programme analysé." },
+          { "model": "qwen3.6-max-preview-thinking", "text": "Cohérence idéologique avec critique anticapitaliste mais absence de feuille de route opérationnelle de transition." }
+        ]
+      },
+      "summary": "L'approche environnementale long terme du programme repose sur une thèse structurelle : la cause des destructions écologiques est le capitalisme productiviste, organisé pour le profit privé et incompatible avec une planification rationnelle des ressources. Les leviers concrets sont : (i) gratuité des transports publics urbains et développement massif du rail (fret et voyageurs) au détriment de la route et du transport routier des marchandises ; (ii) plan de rénovation thermique massif des logements financé par l'État, intégré dans le grand programme d'embauches publiques ; (iii) refus explicite des taxes carbone, des marchés du carbone et des dispositifs de tarification dont LO considère qu'ils font porter la charge de la transition aux classes populaires ; (iv) opposition aux grands projets nuisibles (mégabassines, A69, autoroutes) ; (v) socialisation des moyens de production posée comme condition d'une planification écologique. Le programme ne contient aucune cible d'émissions chiffrée, aucun calendrier de neutralité carbone, aucune trajectoire énergétique précise (mix électrique, position sur le nucléaire), aucun plan de financement chiffré de la rénovation thermique. ChatGPT et Gemini gradent C en notant la cohérence interne et la concrétude des mesures opérationnelles ; trois modèles (claude, deepseek, qwen) gradent D en relevant l'absence d'architecture de transition chiffrée ; mistral indique NOT_ADDRESSED en jugeant que la dimension long-terme n'est pas substantiellement traitée. Aucun modèle ne note un effet positif chiffré attendu sur les émissions.",
+      "problems_addressed": [
+        {
+          "problem": "Transports carbonés et accès aux mobilités pour les classes populaires",
+          "approach": "Gratuité des transports publics urbains ; développement massif du fret ferroviaire au détriment du transport routier ; embauches dans le ferroviaire et la maintenance.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#vii-environnement-et-transports"],
+          "reasoning": "Mesure concrète, opérationnalisable, articulée à un plan d'embauches publiques ; effet attendu sur la part modale ferroviaire et sur l'accès aux mobilités.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "problem": "Précarité énergétique et passoires thermiques",
+          "approach": "Plan de rénovation thermique massif des logements financé par l'État ; embauches massives dans le bâtiment ; prise en charge publique pour les ménages modestes.",
+          "strength": 0.6,
+          "source_refs": ["sources.md#v-services-publics-et-emplois", "sources.md#vii-environnement-et-transports"],
+          "reasoning": "Levier identifié comme prioritaire avec articulation au plan d'embauches publiques ; absence toutefois de chiffrage du nombre de logements à rénover.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "problem": "Charge de la transition écologique pesant sur les classes populaires",
+          "approach": "Refus explicite des taxes carbone, des marchés du carbone et des dispositifs de tarification individuelle ; financement de la transition par l'expropriation et la socialisation des moyens de production.",
+          "strength": 0.5,
+          "source_refs": ["sources.md#vii-environnement-et-transports"],
+          "reasoning": "Cadrage classiste cohérent ; dispense les ménages modestes de la charge tarifaire mais sans mécanisme alternatif chiffré pour orienter les comportements.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Cibles d'émissions et calendrier de neutralité carbone",
+          "significance": "Le programme ne contient aucune cible quantifiée d'émissions de gaz à effet de serre, aucun calendrier de neutralité carbone, aucune articulation avec les engagements européens (Fit for 55) ou internationaux (Accord de Paris).",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "problem": "Mix énergétique et position sur le nucléaire",
+          "significance": "Le programme ne précise pas la stratégie sur le mix électrique, ne se positionne pas explicitement sur la prolongation des réacteurs existants, sur les EPR2 ou sur le développement des renouvelables.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "problem": "Adaptation et résilience aux aléas climatiques",
+          "significance": "Le programme ne traite pas l'adaptation aux changements climatiques en cours (vagues de chaleur, sécheresses, inondations, montée des eaux) ni la planification de la résilience des infrastructures et des territoires.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"]
+        },
+        {
+          "problem": "Biodiversité, sols et ressources non énergétiques",
+          "significance": "Le programme aborde l'environnement essentiellement par le climat-énergie ; biodiversité, sols agricoles, ressources en eau, pollution chimique sont peu ou pas traités.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"]
+        }
+      ],
+      "problems_worsened": [],
+      "execution_risks": [
+        {
+          "risk": "Absence de signal-prix pour orienter la demande",
+          "probability": 0.7,
+          "severity": 0.55,
+          "reasoning": "Le refus explicite des taxes carbone et des marchés du carbone, combiné à l'absence de cible quantifiée, prive le dispositif d'instruments d'orientation de la demande dans les secteurs diffus (transport routier, chauffage, industrie).",
+          "source_refs": ["sources.md#vii-environnement-et-transports"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"]
+        },
+        {
+          "risk": "Mise en œuvre des mesures concrètes conditionnée à la rupture systémique",
+          "probability": 0.7,
+          "severity": 0.6,
+          "reasoning": "La transition écologique est subordonnée à la « socialisation des moyens de production » : les leviers concrets (transports gratuits, rénovation thermique) restent applicables hors rupture mais leur ampleur revendiquée présuppose le contrôle de la production.",
+          "source_refs": ["sources.md#vii-environnement-et-transports"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Gratuité des transports publics urbains",
+          "source_ref": "sources.md#vii-environnement-et-transports",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "measure": "Développement massif du fret ferroviaire au détriment du transport routier",
+          "source_ref": "sources.md#vii-environnement-et-transports",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "measure": "Plan de rénovation thermique massif des logements financé par l'État",
+          "source_ref": "sources.md#v-services-publics-et-emplois",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        },
+        {
+          "measure": "Refus explicite des taxes carbone et des marchés du carbone",
+          "source_ref": "sources.md#vii-environnement-et-transports",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Rénovation thermique massive et gratuité des transports génèrent un coût significatif non chiffré ; financement renvoyé à la rupture systémique.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Plan de rénovation et gratuité transports significativement coûteux." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Coût budgétaire majeur non chiffré." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Coût absorbé par l'expropriation de la grande propriété." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Mesures coûteuses sans plan de financement spécifique." },
+            { "model": "mistral-thinking", "level": "moderate", "note": "Dimension peu traitée — coût non évaluable." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Coût important non chiffré." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Absence de cible chiffrée, de calendrier, de trajectoire énergétique ; les mesures concrètes (rénovation, transports) sont opérationnalisables mais à grande échelle elles supposent la rupture revendiquée.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Pas de feuille de route chiffrée ni de calendrier." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Absence de trajectoire énergétique et d'objectifs d'émissions." },
+            { "model": "deepseek-expert-thinking", "level": "high", "note": "Transition subordonnée à la rupture systémique." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Difficulté de mise à l'échelle sans cibles ni instruments d'orientation." },
+            { "model": "mistral-thinking", "level": "moderate", "note": "Dimension peu traitée — peu d'éléments à exécuter." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Aucun plan opérationnel de transition long terme." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "La transition à la hauteur revendiquée dépend de la socialisation des moyens de production, dynamique non assurée ; les mesures partielles (transports, rénovation) sont moins dépendantes.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Dépend de la rupture revendiquée pour aller au bout." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Subordonné à la socialisation des moyens de production." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Mesures partielles actionnables hors rupture." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Contexte international et énergétique non maîtrisé." },
+            { "model": "mistral-thinking", "level": "moderate", "note": "Dimension peu traitée." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Forte dépendance à la transition systémique." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Les infrastructures (rénovation, ferroviaire) ont une certaine inertie ; leur abandon serait possible mais coûteux ; en l'absence de cible juridique contraignante, la trajectoire reste défaisable.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["gemini-3-pro", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "moderate", "note": "Trajectoire défaisable par abandon des plans." },
+            { "model": "claude-opus-4.7", "level": "moderate", "note": "Effets d'infrastructure persistent ; politique défaisable." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Plans abandonnables par majorité ultérieure." },
+            { "model": "gemini-3-pro", "level": "limited", "note": "Investissements infrastructurels créent inertie longue." },
+            { "model": "mistral-thinking", "level": "limited", "note": "Effets durables une fois engagés." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Trajectoire défaisable par révision des plans." }
+          ]
+        }
+      },
+      "confidence": 0.6
+    }
+  }
+}

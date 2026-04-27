@@ -1,0 +1,217 @@
+{
+  "agreement_map": {
+    "high_confidence_claims": [
+      { "claim_id": "extreme_gauche_overall_spectrum", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "expropriation_sans_rachat_grands_groupes", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "retraite_60_ans_375_annuites", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "smic_2200_net_indexation_automatique_salaires_prix", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "regularisation_700k_sans_papiers_ouverture_frontieres", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "droit_vote_universel_residents_etrangers", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "sortie_immediate_otan", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "opposition_hausse_budget_militaire", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "refus_taxes_carbone_marches_carbone", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "gratuite_transports_publics_urbains", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "developpement_fret_ferroviaire_au_detriment_routier", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "100pct_securite_sociale", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "embauches_massives_services_publics", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "abolition_parcoursup_gratuite_enseignement_superieur", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "requisition_logements_vacants_gel_loyers", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "interdiction_licenciements_entreprises_beneficiaires", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "monopole_public_commerce_exterieur", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "refus_remboursement_dette_publique", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "candidature_temoignage_refus_presidentialisme", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] },
+      { "claim_id": "democratie_directe_entreprise_mandats_revocables", "models": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"] }
+    ],
+    "contested_claims": [
+      {
+        "claim_id": "economic_fiscal_grade",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "C — cohérence interne forte, refus assumé du chiffrage" },
+          { "model": "claude-opus-4.7", "position": "D — cohérence partielle ; absence de mécanisme actuariel et de protection contre les fuites de capitaux" },
+          { "model": "deepseek-expert-thinking", "position": "D — programme cohérent en ses propres termes mais conditionné à la rupture systémique" },
+          { "model": "gemini-3-pro", "position": "C — radicalité assumée, lecture testimoniale crédible" },
+          { "model": "mistral-thinking", "position": "F — absence revendiquée de chiffrage et dépendance à un soulèvement révolutionnaire" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "F — absence d'opérationnalisation et de plan de financement détaillé" }
+        ]
+      },
+      {
+        "claim_id": "social_demographic_grade",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "B — cadre cohérent et radical de défense des droits sociaux" },
+          { "model": "claude-opus-4.7", "position": "C — radicalité maximale ; tensions constitutionnelles non traitées" },
+          { "model": "deepseek-expert-thinking", "position": "B — cadre articulé et opérationnel sur les libertés et l'égalité des droits" },
+          { "model": "gemini-3-pro", "position": "B — programme de droits sociaux cohérent" },
+          { "model": "mistral-thinking", "position": "B — cadre social robuste" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "C — absence de chiffrage budgétaire des droits sociaux étendus" }
+        ]
+      },
+      {
+        "claim_id": "security_sovereignty_grade",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "C — ligne stable et cohérente, sans doctrine alternative articulée" },
+          { "model": "claude-opus-4.7", "position": "C — internationalisme prolétarien cohérent ; vide de doctrine de défense" },
+          { "model": "deepseek-expert-thinking", "position": "C — ligne anti-impérialiste articulée historiquement" },
+          { "model": "gemini-3-pro", "position": "C — cadre cohérent mais absence de plan opérationnel" },
+          { "model": "mistral-thinking", "position": "F — absence totale de doctrine de défense alternative" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "D — anti-OTAN sans plan stratégique" }
+        ]
+      },
+      {
+        "claim_id": "institutional_democratic_grade",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "D — refus du présidentialisme sans architecture de remplacement" },
+          { "model": "claude-opus-4.7", "position": "D — candidature de témoignage, conflit constitutionnel non traité" },
+          { "model": "deepseek-expert-thinking", "position": "C — démocratie directe en entreprise opérationnellement articulée" },
+          { "model": "gemini-3-pro", "position": "C — alternative articulée au présidentialisme" },
+          { "model": "mistral-thinking", "position": "F — programme strictement déclaratif sur l'institutionnel" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "D — absence de plan de transition institutionnel" }
+        ]
+      },
+      {
+        "claim_id": "environmental_long_term_grade",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "C — mesures concrètes (transports, rénovation) avec effet net positif probable" },
+          { "model": "claude-opus-4.7", "position": "D — absence de cibles d'émissions et de trajectoire chiffrée" },
+          { "model": "deepseek-expert-thinking", "position": "D — cadre classiste cohérent mais sans calendrier de transition" },
+          { "model": "gemini-3-pro", "position": "C — articulation systémique avec mesures concrètes" },
+          { "model": "mistral-thinking", "position": "NOT_ADDRESSED — la dimension long terme n'est pas substantiellement traitée" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "D — cohérence idéologique mais pas de feuille de route opérationnelle" }
+        ]
+      },
+      {
+        "claim_id": "social_cultural_axis_score",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "-4 : programme socioculturel maximaliste sur libertés et droits" },
+          { "model": "claude-opus-4.7", "position": "-3 : lecture mesurée du cadre socioculturel, à distance de positions sociétales très progressistes émergentes" },
+          { "model": "deepseek-expert-thinking", "position": "-4 : ouverture maximale sur les droits civiques et l'antiracisme" },
+          { "model": "gemini-3-pro", "position": "-5 : maximum d'ouverture culturelle sur tous les sous-axes" },
+          { "model": "mistral-thinking", "position": "-3 : focus classiste classique, pas d'extension explicite sur tous les axes culturels" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "-4 : ouverture culturelle marquée" }
+        ]
+      },
+      {
+        "claim_id": "sovereignty_axis_score",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "-2 : internationalisme prolétarien, ouverture frontières, sans Frexit revendiqué" },
+          { "model": "claude-opus-4.7", "position": "0 : rejet symétrique du fédéralisme UE et du souverainisme national, lecture neutre" },
+          { "model": "deepseek-expert-thinking", "position": "-1 : ouverture internationaliste sans Frexit" },
+          { "model": "gemini-3-pro", "position": "-5 : rejet maximaliste du cadre national, ouverture frontières" },
+          { "model": "mistral-thinking", "position": "-4 : sortie OTAN et rejet UE comme instruments capitalistes" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "-2 : anti-OTAN, anti-impérialisme, sans Frexit" }
+        ]
+      },
+      {
+        "claim_id": "institutional_axis_score",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "+2 : critique radicale des institutions sans plan formel" },
+          { "model": "claude-opus-4.7", "position": "0 : refus du jeu institutionnel sans réforme constitutionnelle proposée" },
+          { "model": "deepseek-expert-thinking", "position": "+3 : démocratie directe articulée comme alternative" },
+          { "model": "gemini-3-pro", "position": "+5 : alternative démocratique radicale" },
+          { "model": "mistral-thinking", "position": "+3 : critique radicale du présidentialisme" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "+3 : démocratie directe en entreprise comme contre-modèle" }
+        ]
+      },
+      {
+        "claim_id": "ecological_axis_score",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "+2 : mesures concrètes pro-rail et rénovation" },
+          { "model": "claude-opus-4.7", "position": "0 : pas de cible ; lecture neutre" },
+          { "model": "deepseek-expert-thinking", "position": "+1 : critique anticapitaliste avec mesures positives" },
+          { "model": "gemini-3-pro", "position": "-2 : refus dispositifs de tarification jugés régressifs" },
+          { "model": "mistral-thinking", "position": "0 : dimension peu traitée" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "+2 : cohérence anticapitaliste positive sur l'environnement" }
+        ]
+      },
+      {
+        "claim_id": "intergenerational_climate_long_term_sign",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "Score 0 long terme — trajectoire indéterminée" },
+          { "model": "claude-opus-4.7", "position": "Score 0 long terme — sans cible, indéterminé" },
+          { "model": "deepseek-expert-thinking", "position": "Score +2 long terme — trajectoire structurellement positive post-rupture" },
+          { "model": "gemini-3-pro", "position": "Score -1 long terme — absence de cible compromet l'horizon long" },
+          { "model": "mistral-thinking", "position": "Score -2 long terme — dimension non traitée" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "Score 0 long terme — long terme indéterminé" }
+        ]
+      },
+      {
+        "claim_id": "intergenerational_net_transfer_magnitude",
+        "positions": [
+          { "model": "chatgpt-5.5-thinking-extended", "position": "Mixte avec amplitude qualitative ; pas de chiffrage" },
+          { "model": "claude-opus-4.7", "position": "Mixte ; amplitude conditionnée à la rupture systémique" },
+          { "model": "deepseek-expert-thinking", "position": "Old-to-young à long terme post-rupture" },
+          { "model": "gemini-3-pro", "position": "Mixte avec dette implicite croissante non chiffrée" },
+          { "model": "mistral-thinking", "position": "Bilan négatif net en l'absence de mécanisme actuariel" },
+          { "model": "qwen3.6-max-preview-thinking", "position": "Mixte qualitatif" }
+        ]
+      }
+    ],
+    "coverage": {
+      "chatgpt-5.5-thinking-extended": "complete",
+      "claude-opus-4.7": "complete",
+      "deepseek-expert-thinking": "complete",
+      "gemini-3-pro": "complete",
+      "mistral-thinking": "partial",
+      "qwen3.6-max-preview-thinking": "complete"
+    },
+    "positioning_consensus": {
+      "economic": {
+        "interval": [-5, -5],
+        "modal": -5,
+        "dissent_count": 0
+      },
+      "social_cultural": {
+        "interval": [-5, -3],
+        "modal": -4,
+        "dissent_count": 3
+      },
+      "sovereignty": {
+        "interval": [-5, 0],
+        "modal": -2,
+        "dissent_count": 4
+      },
+      "institutional": {
+        "interval": [0, 5],
+        "modal": 3,
+        "dissent_count": 3
+      },
+      "ecological": {
+        "interval": [-2, 2],
+        "modal": null,
+        "dissent_count": 4
+      },
+      "overall_spectrum": {
+        "modal_label": "extreme_gauche",
+        "distribution": {
+          "extreme_gauche": 6
+        },
+        "dissent_count": 0
+      }
+    }
+  },
+  "flagged_for_review": [
+    {
+      "claim": "Anomalie de métadonnées dans le fichier raw deepseek (provider/version) versus identification du modèle dans la catégorisation",
+      "claimed_by": ["deepseek-expert-thinking"],
+      "issue": "Le fichier raw `deepseek-manual.json` présente des champs de métadonnées modèle qui ne correspondent pas au nom du fichier ni à la liste canonique des modèles ; rappel à effectuer pour cohérence transparence.",
+      "suggested_action": "Vérifier la métadonnée du fichier raw deepseek lors du prochain run et corriger soit le fichier raw, soit la liste de modèles canoniques."
+    },
+    {
+      "claim": "Axe écologique sans pluralité (modal_score à null) en raison d'une distribution éclatée -2/0/0/+1/+2/+2",
+      "claimed_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "issue": "Aucune pluralité majoritaire sur l'axe écologique : les modèles divergent fortement entre lecture « refus de l'écologie punitive comme neutralité » et lecture « planification anticapitaliste comme orientation pro-environnementale ».",
+      "suggested_action": "Réviseur humain : choisir entre conserver modal=null (signaler le caractère contesté) ou éditer manuellement vers une valeur médiane (+1) avec justification."
+    },
+    {
+      "claim": "Note environnementale long terme avec NOT_ADDRESSED partiel (mistral)",
+      "claimed_by": ["mistral-thinking"],
+      "issue": "Mistral grade NOT_ADDRESSED sur la dimension environmental_long_term, en désaccord avec les cinq autres modèles qui gradent de C à D. La note de couverture mistral est marquée « partial » de ce fait.",
+      "suggested_action": "Réviseur humain : confirmer si le programme couvre suffisamment la dimension long terme pour justifier une note (consensus retenu : D) ou si NOT_ADDRESSED reflète mieux la réalité (signal de dimension peu traitée)."
+    },
+    {
+      "claim": "Conflit constitutionnel des mesures phares non traité par le programme",
+      "claimed_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+      "issue": "Plusieurs mesures phares (expropriation sans indemnité, droit de vote universel des résidents étrangers, indexation forcée des salaires) entrent en tension avec la Constitution actuelle (articles 3, 17, 34) sans que le programme propose de procédure de révision constitutionnelle.",
+      "suggested_action": "Réviseur humain : vérifier si la mention de ce conflit doit être renforcée dans le résumé global et dans la dimension institutional_democratic."
+    }
+  ]
+}

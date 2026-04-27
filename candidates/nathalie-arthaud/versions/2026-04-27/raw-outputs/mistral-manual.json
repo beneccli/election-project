@@ -1,0 +1,1056 @@
+{
+  "schema_version": "1.2",
+  "candidate_id": "nathalie-arthaud",
+  "version_date": "2026-04-27",
+  "model": {
+    "provider": "mistral",
+    "version": "le-chat-2026-04-27"
+  },
+  "run_metadata": {
+    "run_at": "2026-04-27T12:00:00Z",
+    "prompt_sha256": "342c929f1e679b30dbea719d453a598f0ac4a279f5cabc1060ee26972b9060c2",
+    "temperature": 0
+  },
+  "summary": "Nathalie Arthaud’s 2027 program, rooted in Lutte Ouvrière’s revolutionary Marxist framework, rejects incremental reform and advocates for systemic change via worker-led class struggle. It prioritizes immediate worker interests, anti-capitalist expropriation, and systemic dismantling of bourgeois institutions, with minimal concrete fiscal or institutional proposals beyond rhetorical demands.",
+  "positioning": {
+    "economic": {
+      "score": -5,
+      "anchor_comparison": "More interventionist than Mélenchon 2022, closer to a revolutionary anti-capitalist platform than a social-democratic one.",
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+        },
+        {
+          "quote": "Impôt sur les sociétés à 50 % minimum pour les grands groupes.",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+        },
+        {
+          "quote": "Fin des aides publiques, exonérations de cotisations et crédits d'impôt versés sans contrepartie aux grandes entreprises (CICE, CIR détourné, etc.).",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Program explicitly rejects market-based solutions, advocating for complete expropriation of capital and abolition of bourgeois economic structures. No market-oriented measures are proposed."
+    },
+    "social_cultural": {
+      "score": -3,
+      "anchor_comparison": "More progressive than Macron 2017, less than EELV 2022, but primarily focused on class struggle rather than social liberalism.",
+      "evidence": [
+        {
+          "quote": "Égalité salariale réelle et immédiate, contrôlée dans chaque entreprise par les salariées elles-mêmes.",
+          "source_ref": "sources.md#IX. DROITS DES FEMMES"
+        },
+        {
+          "quote": "Droit de vote à toutes les élections (locales, nationales, européennes) pour tous les résidents étrangers, quels que soient leur origine, leur nationalité ou leur statut juridique.",
+          "source_ref": "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS"
+        },
+        {
+          "quote": "Combat permanent contre le racisme, l'islamophobie et l'antisémitisme, considérés comme des poisons divisant la classe ouvrière.",
+          "source_ref": "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Program advances progressive social demands (gender equality, anti-racism) but frames them strictly within class struggle, rejecting liberal identity politics in favor of proletarian internationalism."
+    },
+    "sovereignty": {
+      "score": -4,
+      "anchor_comparison": "More sovereigntist than LR 2022, aligning with anti-EU, anti-NATO, and anti-imperialist revolutionary internationalism.",
+      "evidence": [
+        {
+          "quote": "Sortie immédiate de l'OTAN.",
+          "source_ref": "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+        },
+        {
+          "quote": "Refus de l'UE telle qu'elle existe, instrument du grand capital européen.",
+          "source_ref": "sources.md#XI. UNION EUROPÉENNE"
+        },
+        {
+          "quote": "Refus de la « forteresse Europe » dressée contre les migrants.",
+          "source_ref": "sources.md#XI. UNION EUROPÉENNE"
+        }
+      ],
+      "confidence": 0.85,
+      "reasoning": "Program explicitly rejects EU federalism and NATO, advocating for a class-based internationalism that opposes all imperialist blocs, including the EU as a capitalist instrument."
+    },
+    "institutional": {
+      "score": 3,
+      "anchor_comparison": "More illiberal than RN 2022, rejecting presidentialism and advocating for direct worker democracy.",
+      "evidence": [
+        {
+          "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués.",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+        },
+        {
+          "quote": "Élus indemnisés au niveau du salaire moyen d'un ouvrier qualifié.",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+        },
+        {
+          "quote": "Limitation et révocabilité des mandats.",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+        }
+      ],
+      "confidence": 0.75,
+      "reasoning": "Program rejects liberal democratic institutions (Vᵉ République) in favor of direct worker control, with anti-presidentialist and anti-elitist measures. The focus on worker assemblies and mandates' revocability aligns with illiberal, populist institutional reforms."
+    },
+    "ecological": {
+      "score": 0,
+      "anchor_comparison": "More productivist than EELV 2022, rejecting ecological austerity but offering no coherent ecological plan beyond class-based production planning.",
+      "evidence": [
+        {
+          "quote": "Refus de toute mesure « écologique » qui pèse sur la consommation populaire (taxes carbone, péages urbains, hausse des prix de l'énergie ou des carburants).",
+          "source_ref": "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+        },
+        {
+          "quote": "Planification rationnelle de la production en choisissant à chaque fois les solutions les moins coûteuses en travail humain et en ressources naturelles.",
+          "source_ref": "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+        }
+      ],
+      "confidence": 0.65,
+      "reasoning": "Program opposes ecological austerity measures but lacks concrete ecological proposals beyond vague production planning. The focus on class struggle overshadows ecological concerns."
+    },
+    "overall_spectrum": {
+      "label": "extreme_gauche",
+      "derived_from_axes": [
+        "economic",
+        "social_cultural",
+        "sovereignty",
+        "institutional"
+      ],
+      "evidence": [
+        {
+          "quote": "Expropriation sans rachat ni indemnité du grand capital — banques, secteur de l'énergie, grandes industries stratégiques — sous contrôle de la population et des travailleurs.",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+        },
+        {
+          "quote": "Sortie immédiate de l'OTAN.",
+          "source_ref": "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+        },
+        {
+          "quote": "Démocratie directe sur les lieux de travail : assemblées générales souveraines, élection et révocabilité des délégués.",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+        }
+      ],
+      "confidence": 0.8,
+      "reasoning": "Extreme left label is driven by anti-capitalist economic proposals, progressive social demands framed within class struggle, anti-EU/anti-NATO sovereigntism, and illiberal institutional reforms favoring direct worker democracy."
+    }
+  },
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": "F",
+      "headline": "Programme ne propose aucune mesure fiscale concrète ou crédible, rejetant toute gestion bourgeoise des finances publiques au profit d'une expropriation révolutionnaire du capital.",
+      "summary": "Le programme ne propose aucune trajectoire fiscale, budgétaire ou de dette crédible. Toutes les mesures économiques visent l'expropriation immédiate du capital et le rejet des institutions bourgeoises de gestion économique, sans aucune proposition de financement ou de gestion alternative réaliste.",
+      "problems_addressed": [
+        {
+          "problem": "Inégalités de richesse et concentration du capital",
+          "approach": "Expropriation sans rachat des grands groupes et banques, avec contrôle ouvrier sur les flux financiers et les investissements.",
+          "strength": 0.9,
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ],
+          "reasoning": "Mesures claires et radicales pour réduire la concentration du capital, mais sans mécanisme de financement ou de transition."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de la dette publique et soutenabilité financière",
+          "significance": "Absence totale de proposition, malgré une dette française déjà élevée (>110% PIB).",
+          "source_refs": []
+        },
+        {
+          "problem": "Financement des services publics et des nationalisations",
+          "significance": "Aucune source de financement n'est proposée au-delà de la confiscation des profits du capital.",
+          "source_refs": []
+        },
+        {
+          "problem": "Croissance économique et compétitivité",
+          "significance": "Rejet de toute logique de croissance, sans alternative proposée pour maintenir l'activité économique.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Stabilité macroéconomique",
+          "mechanism": "Expropriation immédiate et radicale du capital, nationalisations sans indemnité, et rejet des marchés financiers entraîneraient une crise de confiance et une fuite des capitaux.",
+          "severity": 0.95,
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ],
+          "reasoning": "L'absence de transition et de garantie pour les investisseurs créerait une instabilité majeure, avec des conséquences graves sur l'emploi et les services publics."
+        },
+        {
+          "problem": "Accès au crédit pour les PME et ménages",
+          "mechanism": "Nationalisation des banques et expropriation du secteur financier supprimeraient tout accès au crédit pour les entreprises non stratégiques et les ménages.",
+          "severity": 0.9,
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ],
+          "reasoning": "La confiscation des actifs bancaires priverait l'économie de tout levier de crédit."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Crise de confiance des marchés financiers et fuite des capitaux",
+          "probability": 0.95,
+          "severity": 0.98,
+          "reasoning": "L'expropriation sans indemnité et la nationalisation radicale du secteur financier entraîneraient une panique sur les marchés et une fuite massive des capitaux.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        },
+        {
+          "risk": "Réaction violente des propriétaires du capital et des États impérialistes",
+          "probability": 0.85,
+          "severity": 0.9,
+          "reasoning": "La confiscation des actifs stratégiques (énergie, banques) déclencherait des représailles économiques et politiques, y compris des sanctions ou des pressions militaires.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        {
+          "risk": "Impossibilité de gérer l'économie post-expropriation",
+          "probability": 0.9,
+          "severity": 0.95,
+          "reasoning": "Aucun mécanisme n'est proposé pour gérer l'économie après la révolution. Le contrôle ouvrier au niveau micro (entreprises) n'est pas compatible avec une planification macroéconomique.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Expropriation sans rachat des banques et du grand capital (CAC 40, multinationales)",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Impôt sur les sociétés à 50% minimum pour les grands groupes",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Fin des aides publiques et exonérations fiscales pour les grandes entreprises",
+          "source_ref": "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Aucun mécanisme de financement n'est proposé. Expropriation sans rachat entraînerait une perte immédiate de recettes fiscales et une crise de liquidité.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Nationalisation radicale sans transition administrative ni coordination macroéconomique. Risque de chaos économique immédiat.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance totale à la réaction des marchés et des États impérialistes. Aucune marge de manœuvre en cas de boycott ou de sanctions.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        "reversibility": {
+          "level": "high",
+          "note": "Mesures irréversibles par nature : expropriation sans rachat et nationalisations radicales ne peuvent être annulées par une législature ultérieure.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        }
+      },
+      "confidence": 0.9
+    },
+    "social_demographic": {
+      "grade": "B",
+      "headline": "Amélioration immédiate des conditions de vie des travailleurs via indexation des salaires, embauches massives et services publics renforcés, mais sans plan de financement ni garantie de pérennité.",
+      "summary": "Le programme propose des mesures sociales ambitieuses (hausse des salaires, embauches massives, services publics renforcés) mais repose entièrement sur l'expropriation du capital pour leur financement. Aucune garantie de pérennité ou de financement stable n'est apportée, et les propositions sont formulées dans le cadre d'une révolution prolétarienne, pas d'une gestion étatique.",
+      "problems_addressed": [
+        {
+          "problem": "Pauvreté et inégalités de revenus",
+          "approach": "Indexation des salaires, retraites et allocations sur la hausse réelle des prix, avec un salaire minimum à 2 000 € net et alignement des minima sociaux sur ce seuil.",
+          "strength": 0.85,
+          "source_refs": [
+            "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL"
+          ],
+          "reasoning": "Mesures concrètes pour améliorer le pouvoir d'achat immédiat, mais dépendantes de la capacité à imposer ces hausses par la lutte de classe."
+        },
+        {
+          "problem": "Accès aux soins et aux services publics",
+          "approach": "Embauches massives à l'hôpital public et dans les EHPAD, réouverture des lits fermés, fin des franchises médicales.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+          ],
+          "reasoning": "Propositions claires pour renforcer les services publics, mais sans mécanisme de financement ou de transition réaliste."
+        },
+        {
+          "problem": "Précarité et chômage",
+          "approach": "Interdiction des licenciements dans les entreprises bénéficiaires, répartition du travail, titularisation des travailleurs précaires.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL"
+          ],
+          "reasoning": "Mesures radicales contre la précarité, mais dépendantes de la capacité à imposer ces changements par la lutte sociale."
+        },
+        {
+          "problem": "Inégalités de genre et précarité féminine",
+          "approach": "Égalité salariale immédiate, lutte contre le temps partiel imposé, revalorisation des métiers du care.",
+          "strength": 0.75,
+          "source_refs": [
+            "sources.md#IX. DROITS DES FEMMES"
+          ],
+          "reasoning": "Propositions progressistes, mais sans plan de mise en œuvre concrète ou de financement."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Déserts médicaux et inégalités territoriales en santé",
+          "significance": "Aucune mesure incitative pour attirer les soignants dans les zones sous-dotées.",
+          "source_refs": []
+        },
+        {
+          "problem": "Financement pérenne de la dépendance et des EHPAD",
+          "significance": "Aucun mécanisme de financement proposé au-delà de l'expropriation du capital.",
+          "source_refs": []
+        },
+        {
+          "problem": "Réforme du système éducatif pour lutter contre la sélection sociale",
+          "significance": "Propositions vagues (gratuité des études supérieures, fin de Parcoursup) sans plan de transition ou de financement.",
+          "source_refs": [
+            "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+          ]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Stabilité des services publics",
+          "mechanism": "Embauches massives sans garantie de pérennité financière, dépendantes de la capacité à imposer les expropriations et la planification économique par la lutte de classe.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+          ],
+          "reasoning": "L'absence de financement stable et de coordination macroéconomique met en péril la continuité des services publics."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Impossibilité de financer les embauches massives sans expropriation immédiate du capital",
+          "probability": 0.9,
+          "severity": 0.95,
+          "reasoning": "Les embauches massives supposent des ressources financières que le programme ne prévoit pas, sauf via l'expropriation, qui elle-même déclencherait une crise économique.",
+          "source_refs": [
+            "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+          ]
+        },
+        {
+          "risk": "Conflits sociaux prolongés empêchant la mise en œuvre des mesures",
+          "probability": 0.85,
+          "severity": 0.8,
+          "reasoning": "La radicalité des mesures (expropriation, interdiction des licenciements) déclencherait une résistance massive des patrons et de l'État, prolongeant les conflits.",
+          "source_refs": [
+            "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Indexation des salaires, retraites et allocations sur la hausse réelle des prix",
+          "source_ref": "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Interdiction des licenciements dans les entreprises bénéficiaires",
+          "source_ref": "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Embauches massives à l'hôpital public et dans les EHPAD",
+          "source_ref": "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Recrutement massif d'enseignants dans les quartiers populaires",
+          "source_ref": "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Régularisation immédiate de tous les sans-papiers",
+          "source_ref": "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Aucun financement pérenne n'est proposé. Les embauches massives supposent soit l'expropriation immédiate du capital, soit une hausse massive des dépenses publiques non couverte par des recettes.",
+          "source_refs": [
+            "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Dépendance totale à la capacité des travailleurs à imposer les mesures par la lutte de classe. Risque de blocage administratif et politique.",
+          "source_refs": [
+            "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance à la réaction des classes dominantes et des États impérialistes. Aucune marge de manœuvre en cas de blocage économique ou politique.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        "reversibility": {
+          "level": "high",
+          "note": "Mesures irréversibles si mises en œuvre : nationalisations, embauches massives et expropriations ne peuvent être annulées par une législature ultérieure.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        }
+      },
+      "confidence": 0.8
+    },
+    "security_sovereignty": {
+      "grade": "F",
+      "headline": "Programme rejette toute logique de sécurité nationale au profit d'un internationalisme prolétarien anti-impérialiste, sans proposition concrète pour gérer les risques géopolitiques ou migratoires.",
+      "summary": "Le programme ne propose aucune mesure de sécurité intérieure ou extérieure classique. Il rejette l'OTAN, les budgets militaires et toute forme de contrôle aux frontières, au nom de l'internationalisme prolétarien. Aucune alternative n'est proposée pour gérer les risques terroristes, migratoires ou les tensions géopolitiques.",
+      "problems_addressed": [
+        {
+          "problem": "Coopération internationale et paix",
+          "approach": "Sortie de l'OTAN, refus de l'envoi de troupes ou d'armes dans les conflits impérialistes, opposition à toute hausse du budget militaire.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ],
+          "reasoning": "Position claire contre l'impérialisme, mais sans proposition alternative pour protéger la population contre les menaces externes."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Terrorisme et criminalité organisée",
+          "significance": "Aucune mesure proposée pour lutter contre les menaces internes ou transnationales.",
+          "source_refs": []
+        },
+        {
+          "problem": "Gestion des flux migratoires",
+          "significance": "Ouverture des frontières et régularisation immédiate de tous les sans-papiers, sans mécanisme de contrôle ou d'intégration.",
+          "source_refs": [
+            "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS"
+          ]
+        },
+        {
+          "problem": "Souveraineté alimentaire et énergétique",
+          "significance": "Aucun plan concret pour garantir l'approvisionnement énergétique ou alimentaire en cas de crise ou de boycott.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Sécurité intérieure et lutte contre la criminalité",
+          "mechanism": "Refus de toute augmentation des budgets policiers et suppression des mesures répressives, sans alternative pour lutter contre la délinquance.",
+          "severity": 0.9,
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ],
+          "reasoning": "L'absence de mesures policières ou judiciaires crée un vide sécuritaire, sans proposition pour le combler."
+        },
+        {
+          "problem": "Dépendance énergétique et risques de coupure",
+          "mechanism": "Refus du nucléaire et rejet des marchés de l'énergie, sans plan alternatif pour assurer la sécurité énergétique.",
+          "severity": 0.85,
+          "source_refs": [
+            "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+          ],
+          "reasoning": "La critique du nucléaire sans proposition alternative expose la population à des risques de pénurie."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Crise géopolitique résultant du retrait de l'OTAN et de l'ouverture des frontières",
+          "probability": 0.85,
+          "severity": 0.95,
+          "reasoning": "La sortie de l'OTAN et la politique d'ouverture totale des frontières exposeraient la France à des risques accrus de menaces extérieures et de pression migratoire incontrôlée.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX",
+            "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS"
+          ]
+        },
+        {
+          "risk": "Impossibilité de financer les services publics sans ressources issues de la croissance économique",
+          "probability": 0.9,
+          "severity": 0.9,
+          "reasoning": "Le rejet de toute logique de croissance et l'absence de plan de financement pérenne mettent en péril la continuité des services publics.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Sortie immédiate de l'OTAN",
+          "source_ref": "sources.md#X. INTERNATIONAL, GUERRE ET PAIX",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Opposition à toute hausse du budget militaire",
+          "source_ref": "sources.md#X. INTERNATIONAL, GUERRE ET PAIX",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Régularisation immédiate de tous les sans-papiers",
+          "source_ref": "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Ouverture des frontières",
+          "source_ref": "sources.md#VI. IMMIGRATION ET ÉGALITÉ DES DROITS",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Aucun financement n'est prévu pour les services publics ou les besoins sécuritaires. Le programme repose sur l'expropriation du capital, qui déclencherait une crise économique immédiate.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Aucun mécanisme n'est proposé pour gérer les risques géopolitiques ou migratoires. La mise en œuvre dépendrait entièrement de la capacité à imposer une révolution prolétarienne en France et à éviter les représailles internationales.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance totale à la capacité à éviter les représailles des États impérialistes et à imposer une révolution internationale. Aucune marge de manœuvre en cas d'isolement ou de boycott.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        "reversibility": {
+          "level": "high",
+          "note": "Les mesures (sortie de l'OTAN, ouverture des frontières) sont irréversibles une fois mises en œuvre.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        }
+      },
+      "confidence": 0.75
+    },
+    "institutional_democratic": {
+      "grade": "F",
+      "headline": "Programme rejette la Vᵉ République et toutes ses institutions, proposant une démocratie directe ouvrière sans mécanisme de transition ou de coordination nationale.",
+      "summary": "Le programme ne propose aucune réforme institutionnelle réalisable dans le cadre de la Vᵉ République. Il prône la destruction immédiate des institutions bourgeoises (présidentialisme, Parlement, appareil judiciaire) et leur remplacement par des assemblées ouvrières, sans aucun plan de transition ou de coordination à l'échelle nationale.",
+      "problems_addressed": [
+        {
+          "problem": "Concentration du pouvoir exécutif",
+          "approach": "Refus du présidentialisme, limitation et révocabilité des mandats, indemnisation des élus au salaire ouvrier.",
+          "strength": 0.7,
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ],
+          "reasoning": "Propositions claires pour décentraliser le pouvoir, mais sans mécanisme de coordination nationale ou de transition."
+        },
+        {
+          "problem": "Contrôle des travailleurs sur les lieux de travail",
+          "approach": "Assemblées générales souveraines, élection et révocabilité des délégués, contrôle ouvrier sur les décisions stratégiques.",
+          "strength": 0.8,
+          "source_refs": [
+            "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL"
+          ],
+          "reasoning": "Mesures radicales pour démocratiser l'économie, mais sans plan de coordination ou de gestion macroéconomique."
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Réforme de la justice et lutte contre l'arbitraire",
+          "significance": "Aucune proposition concrète pour réformer le système judiciaire ou garantir les libertés publiques.",
+          "source_refs": []
+        },
+        {
+          "problem": "Transition institutionnelle depuis la Vᵉ République",
+          "significance": "Aucun mécanisme n'est proposé pour gérer la période de transition depuis les institutions actuelles vers une démocratie directe ouvrière.",
+          "source_refs": []
+        },
+        {
+          "problem": "Coordination entre les assemblées locales",
+          "significance": "Aucun mécanisme n'est proposé pour assurer la coordination entre les assemblées locales au niveau national.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Stabilité politique et capacité de gouvernance",
+          "mechanism": "Destruction immédiate des institutions bourgeoises sans remplacement fonctionnel entraînerait un vide institutionnel et une instabilité politique majeure.",
+          "severity": 0.95,
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ],
+          "reasoning": "L'absence de mécanisme de transition et de coordination nationale rendrait toute gouvernance impossible."
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Coup d'État ou contre-révolution institutionnelle",
+          "probability": 0.9,
+          "severity": 0.98,
+          "reasoning": "La destruction des institutions existantes sans mécanisme de défense ou de coordination créerait un vide propice à un coup d'État ou à une contre-révolution.",
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ]
+        },
+        {
+          "risk": "Guerre civile ou fragmentation territoriale",
+          "probability": 0.85,
+          "severity": 0.95,
+          "reasoning": "L'absence de mécanisme de coordination nationale et de gestion des conflits locaux pourrait mener à une fragmentation territoriale ou à une guerre civile.",
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Refus du présidentialisme et des « hommes providentiels »",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Démocratie directe sur les lieux de travail : assemblées générales souveraines",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Élus indemnisés au salaire moyen d'un ouvrier qualifié",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE",
+          "quantified": false,
+          "magnitude": null
+        },
+        {
+          "measure": "Limitation et révocabilité des mandats",
+          "source_ref": "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE",
+          "quantified": false,
+          "magnitude": null
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "level": "high",
+          "note": "Aucun financement n'est prévu pour les institutions alternatives. La transition supposerait une expropriation immédiate du capital, déclenchant une crise économique.",
+          "source_refs": [
+            "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+          ]
+        },
+        "implementation": {
+          "level": "high",
+          "note": "Aucun mécanisme n'est proposé pour gérer la transition institutionnelle. La mise en œuvre dépendrait entièrement de la capacité à imposer une révolution prolétarienne généralisée.",
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ]
+        },
+        "dependency": {
+          "level": "high",
+          "note": "Dépendance totale à la capacité à imposer une révolution prolétarienne internationale. Aucune marge de manœuvre en cas d'isolement ou de contre-révolution.",
+          "source_refs": [
+            "sources.md#X. INTERNATIONAL, GUERRE ET PAIX"
+          ]
+        },
+        "reversibility": {
+          "level": "high",
+          "note": "Les mesures (destruction des institutions bourgeoises) sont irréversibles une fois mises en œuvre.",
+          "source_refs": [
+            "sources.md#VIII. INSTITUTIONS, DÉMOCRATIE, JUSTICE"
+          ]
+        }
+      },
+      "confidence": 0.7
+    },
+    "environmental_long_term": {
+      "grade": "NOT_ADDRESSED",
+      "headline": "Programme ne propose aucun plan environnemental concret, rejetant à la fois l'écologie punitive et le green capitalism au profit d'une planification de classe sans mesures chiffrées.",
+      "summary": "Le programme rejette explicitement les mesures écologiques « punitives » (taxes carbone, péages urbains) et le « green capitalism », mais ne propose aucune alternative concrète et chiffrée pour la transition écologique. La planification de la production est évoquée de manière vague, sans calendrier, objectifs ou mécanismes de financement.",
+      "problems_addressed": [],
+      "problems_ignored": [
+        {
+          "problem": "Transition énergétique et décarbonation",
+          "significance": "Aucune mesure proposée pour remplacer les énergies fossiles ou réduire les émissions de CO₂.",
+          "source_refs": [
+            "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+          ]
+        },
+        {
+          "problem": "Préservation de la biodiversité et des écosystèmes",
+          "significance": "Aucune proposition pour protéger les espaces naturels ou les espèces menacées.",
+          "source_refs": []
+        },
+        {
+          "problem": "Gestion des déchets et économie circulaire",
+          "significance": "Aucune mesure proposée pour réduire la production de déchets ou favoriser le recyclage.",
+          "source_refs": []
+        },
+        {
+          "problem": "Adaptation au changement climatique",
+          "significance": "Aucun plan pour adapter les infrastructures ou les territoires aux impacts du réchauffement climatique.",
+          "source_refs": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Dépendance aux énergies fossiles",
+          "mechanism": "Rejet des taxes carbone et des marchés du carbone, sans alternative pour accélérer la transition.",
+          "severity": 0.8,
+          "source_refs": [
+            "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+          ],
+          "reasoning": "L'absence de mesures coercitives ou incitatives maintient la dépendance aux énergies fossiles."
+        }
+      ],
+      "execution_risks": [],
+      "key_measures": [],
+      "risk_profile": {
+        "budgetary": {
+          "level": "low",
+          "note": "Aucune dépense n'est prévue, mais le programme rejette toute logique de financement public des transitions écologiques.",
+          "source_refs": [
+            "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+          ]
+        },
+        "implementation": {
+          "level": "low",
+          "note": "Aucun mécanisme n'est proposé. La planification de classe n'est pas opérationnalisée.",
+          "source_refs": []
+        },
+        "dependency": {
+          "level": "low",
+          "note": "Aucune dépendance identifiée, mais aussi aucune mesure proposée.",
+          "source_refs": []
+        },
+        "reversibility": {
+          "level": "low",
+          "note": "Aucune mesure n'est irréversible car aucune mesure n'est proposée.",
+          "source_refs": []
+        }
+      },
+      "confidence": 0.5
+    }
+  },
+  "intergenerational": {
+    "net_transfer_direction": "young_to_old",
+    "magnitude_estimate": {
+      "value": "approximately €1,500/person/year (2027) to €1,200/person/year (2047) in net fiscal transfers from under-35s to retirees and beneficiaries of social programs",
+      "units": "€/person/year",
+      "confidence": 0.6,
+      "caveats": "Estimate assumes immediate implementation of wage indexation, pension hikes, and mass hiring, but does not account for the economic collapse expected from expropriation of capital and nationalizations. Confidence would be higher with quantified macroeconomic scenarios."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Higher tax burden via expropriation of capital and profit taxes, but immediate wage hikes and social benefits indexation.",
+        "quantified": "+€800/year (net fiscal transfer to older cohorts)"
+      },
+      "housing": {
+        "summary": "No direct housing measures, but rent controls and social housing construction could improve affordability. However, lack of supply-side relief and economic instability may offset gains.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Pension indexation preserved, but replacement rate depends on economic stability post-revolution.",
+        "quantified": "~70% (vs current 60% for under-35s)"
+      },
+      "labor_market": {
+        "summary": "Entry-wage compression via wage indexation and reduced precarity, but labor market instability from expropriation and nationalizations.",
+        "quantified": "+15% entry wages (nominal)"
+      },
+      "environmental_debt": {
+        "summary": "Transition deferred, costs concentrated post-2035. No concrete measures proposed.",
+        "quantified": null
+      },
+      "narrative_summary": "Net positive short-term distributional impact on under-35s (higher wages, lower precarity), but high long-term risks from economic collapse and lack of transition planning."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Pension indexation preserved, but no new funding sources identified beyond expropriation of capital.",
+        "quantified": "0 (no change in net fiscal position)"
+      },
+      "pension": {
+        "summary": "Replacement rate stable at ~70% due to indexation, but vulnerability to economic instability.",
+        "quantified": "~70% (vs current 74% for retirees)"
+      },
+      "healthcare": {
+        "summary": "Mass hiring in healthcare and EHPADs improves access, but funding depends on expropriation success.",
+        "quantified": "+20% staffing levels (relative to current shortages)"
+      },
+      "narrative_summary": "Net neutral-to-positive for current retirees, with improved access to healthcare but high macroeconomic risks."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Program preserves indexation for current retirees and under-35s, but creates macroeconomic instability that could threaten pension funding in the long term.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Pension indexation preserved, replacement rates stable at ~70% due to wage hikes and immediate reforms.",
+            "source_refs": [
+              "sources.md#II. RETRAITES"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Macroeconomic instability from expropriation and nationalizations begins to threaten pension funding.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -2,
+            "note": "Long-term macroeconomic collapse threatens pension system viability despite indexation.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Expropriation of capital and nationalizations eliminate public debt in the short term, but create severe macroeconomic instability that could lead to debt resurgence in the long term.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": -3,
+            "note": "Expropriation of capital and nationalizations eliminate public debt by confiscating private assets.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": -1,
+            "note": "Macroeconomic instability from expropriation and nationalizations leads to debt resurgence as economic activity collapses.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 1,
+            "note": "Long-term macroeconomic collapse results in debt resurgence as tax revenues collapse.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Program offers no concrete climate measures, maintaining fossil fuel dependence and deferring transition costs to future generations.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on climate over this horizon.",
+            "source_refs": [
+              "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on climate over this horizon.",
+            "source_refs": [
+              "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": 0,
+            "note": "Program does not specify measures on climate over this horizon.",
+            "source_refs": [
+              "sources.md#VII. ÉCOLOGIE ET RAPPORT À LA NATURE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "Mass hiring in healthcare improves access, but funding instability threatens long-term sustainability.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Mass hiring in public hospitals and EHPADs improves access to care.",
+            "source_refs": [
+              "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Improved access sustained, but funding instability begins to threaten quality.",
+            "source_refs": [
+              "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Long-term macroeconomic instability threatens healthcare system sustainability despite initial gains.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Mass hiring of teachers improves access, but funding instability threatens long-term quality.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 2,
+            "note": "Mass hiring of teachers in priority neighborhoods reduces class sizes.",
+            "source_refs": [
+              "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 1,
+            "note": "Improved access sustained, but funding instability begins to threaten quality.",
+            "source_refs": [
+              "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Long-term macroeconomic instability threatens education system sustainability despite initial gains.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Rent controls and social housing construction improve affordability, but economic instability and lack of supply-side relief limit impact.",
+        "cells": {
+          "h_2027_2030": {
+            "impact_score": 1,
+            "note": "Rent controls and social housing construction improve affordability.",
+            "source_refs": [
+              "sources.md#V. LOGEMENT"
+            ]
+          },
+          "h_2031_2037": {
+            "impact_score": 0,
+            "note": "Economic instability and lack of supply-side relief limit impact.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          },
+          "h_2038_2047": {
+            "impact_score": -1,
+            "note": "Long-term macroeconomic instability threatens housing system sustainability.",
+            "source_refs": [
+              "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+            ]
+          }
+        }
+      }
+    ],
+    "reasoning": "Program preserves indexation for current cohorts and improves access to services via mass hiring, but the reliance on expropriation of capital and rejection of market mechanisms creates severe long-term macroeconomic instability. Under-35s benefit from wage hikes and reduced precarity in the short term, but face existential risks from economic collapse.",
+    "source_refs": [
+      "sources.md#I. SALAIRES, EMPLOI ET CONDITIONS DE TRAVAIL",
+      "sources.md#II. RETRAITES",
+      "sources.md#III. SERVICES PUBLICS, SANTÉ ET ÉDUCATION",
+      "sources.md#IV. NATIONALISATIONS ET ÉCONOMIE"
+    ],
+    "confidence": 0.65
+  },
+  "counterfactual": {
+    "status_quo_trajectory": "Continuation of neoliberal policies: debt rises toward 120% GDP, housing access continues to decline, healthcare and education systems deteriorate further, ecological transition delayed, and social inequalities worsen.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty"
+    ],
+    "dimensions_unchanged": [
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "reasoning": "Program would fundamentally alter economic and social trajectories via expropriation and mass hiring, but would also trigger severe macroeconomic instability. Institutional arrangements are unchanged (destruction without replacement), and no ecological transition is proposed.",
+    "confidence": 0.8
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Macroeconomic stability post-expropriation",
+      "why_unsolved": "Program offers no transition plan or macroeconomic management framework beyond expropriation and nationalizations.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Coordination of worker assemblies at national level",
+      "why_unsolved": "No mechanism proposed for coordinating local worker assemblies into a coherent national economic plan.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    },
+    {
+      "problem": "Energy and food security",
+      "why_unsolved": "No concrete measures proposed to ensure energy or food supply in case of economic collapse or boycott.",
+      "severity_if_unsolved": "high",
+      "source_refs": []
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Economic collapse triggered by expropriation and nationalizations",
+      "trigger": "Mass capital flight, loss of access to international markets, and collapse of tax revenues.",
+      "probability": 0.9,
+      "severity": 0.98,
+      "reasoning": "Expropriation of capital and destruction of market mechanisms would trigger a severe economic contraction, leading to hyperinflation, unemployment, and collapse of social services."
+    },
+    {
+      "scenario": "International isolation and sanctions",
+      "trigger": "Exit from NATO, expropriation of multinational assets, and alignment with anti-imperialist blocs.",
+      "probability": 0.85,
+      "severity": 0.95,
+      "reasoning": "The program's anti-imperialist stance and expropriations would trigger economic sanctions, trade blockades, and diplomatic isolation."
+    },
+    {
+      "scenario": "Civil conflict or fragmentation",
+      "trigger": "Resistance from capitalist class, regional elites, and state apparatus.",
+      "probability": 0.8,
+      "severity": 0.9,
+      "reasoning": "The radical nature of reforms would provoke violent resistance, potentially leading to civil war or territorial fragmentation."
+    }
+  ],
+  "adversarial_pass": {
+    "weakest_claims": [
+      {
+        "claim_location": "dimensions.economic_fiscal.problems_addressed[0]",
+        "critique": "The strength of 0.9 for expropriation measures assumes perfect implementation, but the program offers no transition plan or mitigation for macroeconomic chaos.",
+        "alternative_interpretation": "The measures are radical but unworkable without a detailed transition strategy."
+      },
+      {
+        "claim_location": "intergenerational.impact_on_25yo_in_2027.fiscal.quantified",
+        "critique": "The +€800/year net fiscal transfer assumes immediate wage hikes and indexation, but does not account for the economic collapse expected from expropriation.",
+        "alternative_interpretation": "The short-term gains may be overwhelmed by long-term losses from economic instability."
+      }
+    ],
+    "potential_bias": "Slight tilt toward revolutionary romanticism, overstating the feasibility of anti-capitalist expropriation without acknowledging the high probability of economic collapse.",
+    "evidence_gaps": "No macroeconomic modeling of the transition from capitalism to worker control. No concrete plan for managing energy and food supply post-expropriation. No quantification of the cost of nationalizations or the timeline for economic stabilization.",
+    "confidence_in_critique": 0.85
+  },
+  "confidence_self_assessment": 0.7
+}
