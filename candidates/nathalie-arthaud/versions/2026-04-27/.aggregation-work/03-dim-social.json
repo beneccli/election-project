@@ -1,0 +1,209 @@
+{
+  "dimensions": {
+    "social_demographic": {
+      "grade": {
+        "consensus": "B",
+        "dissent": {
+          "claude-opus-4.7": "C",
+          "qwen3.6-max-preview-thinking": "C"
+        }
+      },
+      "headline": {
+        "text": "Régularisation immédiate de ~700 000 sans-papiers, frontières ouvertes, embauches massives santé/éducation et alignement minima/SMIC ; couverture sociale large et cohérente.",
+        "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "chatgpt-5.5-thinking-extended", "text": "Régularisation immédiate, embauches massives santé/éducation, alignement minima sur SMIC, prise en charge intégrale par la Sécu." },
+          { "model": "claude-opus-4.7", "text": "Régularisation inconditionnelle, ouverture des frontières, droit de vote universel des résidents, embauches massives santé/éducation ; cohérence forte mais financement non spécifié." },
+          { "model": "deepseek-expert-thinking", "text": "Programme social-progressiste cohérent : régularisation, ouverture des frontières, embauches massives, 100% Sécurité sociale, droits des femmes étendus." },
+          { "model": "gemini-3-pro", "text": "Refonte complète du modèle social : ouverture des frontières, régularisation inconditionnelle, embauches massives services publics, droits des femmes, anti-racisme structurel." },
+          { "model": "mistral-thinking", "text": "Demandes sociales-progressistes radicales (régularisation, frontières ouvertes, droits des femmes) cadrées dans la lutte de classes plutôt que dans l'identitaire libéral." },
+          { "model": "qwen3.6-max-preview-thinking", "text": "Régularisation inconditionnelle ~700k, droit de vote universel des résidents, embauches massives services publics ; financement par expropriation non chiffré." }
+        ]
+      },
+      "summary": "Le volet social-démographique est l'un des plus développés du programme. Cinq leviers structurants : (i) régularisation immédiate, sans condition ni tri, de l'ensemble des travailleurs sans-papiers (estimés à environ 700 000, dont 40-62 % des effectifs en Île-de-France dans l'aide à domicile, le BTP, l'hôtellerie-restauration, le nettoyage), abrogation de toutes les lois immigration, maintien et renforcement du droit du sol, droit de vote pour tous les résidents étrangers à toutes les élections ; (ii) reconstruction du service public de santé via embauches massives à l'hôpital et en EHPAD à hauteur des besoins recensés par les soignants, réouverture des lits/services/maternités fermés, prise en charge intégrale par la Sécurité sociale financée par cotisations patronales accrues, prise en charge publique de la dépendance ; (iii) refonte de l'éducation par recrutement massif d'enseignants en priorité dans les quartiers populaires, accueil des enfants dès 2 ans en maternelle, refus de la sélection sociale dans le supérieur, abolition Parcoursup ; (iv) droits des femmes : égalité salariale réelle contrôlée par les salariées, défense inconditionnelle de l'IVG et de la contraception, moyens massifs contre les violences sexistes, revalorisation des métiers du « care » ; (v) jeunesse : CDI à temps plein dès le premier emploi, allocation d'autonomie étudiante, gratuité réelle des études, fin de Parcoursup. Quatre modèles (chatgpt, deepseek, gemini, mistral) gradent B en notant la cohérence interne, la centralité du dispositif sécurité sociale et l'articulation explicite avec le volet salarial ; claude et qwen gradent C en soulignant l'absence de chiffrage des embauches, du coût du 100 % Sécu et des conditions d'application aux résidents étrangers.",
+      "problems_addressed": [
+        {
+          "problem": "Précarité administrative et exploitation des travailleurs sans-papiers",
+          "approach": "Régularisation immédiate, sans condition ni tri, de l'ensemble des travailleurs sans-papiers (~700 000) ; ouverture des frontières ; abrogation de toutes les lois immigration successives ; arrêt immédiat des expulsions ; droit de vote pour tous les résidents étrangers.",
+          "strength": 0.85,
+          "source_refs": ["sources.md#vi-immigration-et-egalite-des-droits"],
+          "reasoning": "Mécanisme explicite, ciblé et chiffré (estimation 700 000) ; les six modèles convergent sur l'identification de la mesure phare et sur sa cohérence avec le cadre internationaliste prolétarien.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Effondrement du service public de santé et déserts médicaux",
+          "approach": "Embauches massives à l'hôpital public et en EHPAD à hauteur des besoins recensés par les soignants ; réouverture des lits, services et maternités fermés ; suppression du doublement des franchises médicales ; 100% Sécu sur tous les soins prescrits ; prise en charge publique de la dépendance ; service public de santé de proximité contre les déserts médicaux.",
+          "strength": 0.8,
+          "source_refs": ["sources.md#iii-services-publics-sante-et-education"],
+          "reasoning": "Le mécanisme cible directement la cause identifiée (sous-effectifs, désengagement public) ; financement par cotisations patronales accrues plutôt que par hausses d'impôts directs.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Reproduction des inégalités scolaires et sélection sociale dans le supérieur",
+          "approach": "Recrutement massif d'enseignants en priorité dans les quartiers populaires ; accueil des enfants dès 2 ans en maternelle avec embauches d'ATSEM correspondantes ; abolition de Parcoursup ; refus de la sélection sociale dans le supérieur ; gratuité réelle des études ; allocation d'autonomie pour les étudiants.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#iii-services-publics-sante-et-education", "sources.md#xii-jeunesse"],
+          "reasoning": "Combinaison réduction des effectifs par classe + dispositifs financiers d'autonomie ; effet d'égalisation du capital humain étalé sur le long terme, non quantifié.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Violences faites aux femmes et inégalités salariales",
+          "approach": "Égalité salariale réelle et immédiate contrôlée dans chaque entreprise par les salariées elles-mêmes ; combat contre le temps partiel imposé ; revalorisation des métiers du care ; défense inconditionnelle du droit à l'IVG et à la contraception, accès gratuit et de proximité ; moyens massifs pour associations, hébergements et justice.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#ix-droits-des-femmes"],
+          "reasoning": "Approche structurelle articulant lutte salariale, lutte contre la précarité féminisée et droits reproductifs ; chiffrage des moyens absent.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Soutenabilité actuarielle long terme du système de santé et de retraite face au vieillissement",
+          "significance": "L'expansion du périmètre Sécu (100% prescrits, dépendance publique) et la retraite à 60 ans avec 37,5 annuités sont posées sans modélisation actuarielle ; la dérive démographique pourrait dépasser les recettes additionnelles attendues du capital exproprié.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Capacités d'accueil et flux migratoires sous régime d'ouverture des frontières",
+          "significance": "Le programme pose l'ouverture des frontières comme principe sans traiter explicitement des capacités d'accueil (logement, écoles, santé) ni des effets sur le marché du travail à court terme ; absence d'estimation chiffrée des flux attendus.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibilité avec le droit communautaire en matière de droit de vote et de circulation",
+          "mechanism": "Le droit de vote universel des résidents étrangers à toutes les élections (incluant les nationales) est juridiquement incompatible avec la Constitution actuelle ; sa mise en œuvre suppose une révision constitutionnelle non spécifiée par le programme.",
+          "severity": 0.5,
+          "source_refs": ["sources.md#vi-immigration-et-egalite-des-droits"],
+          "reasoning": "Quatre modèles relèvent l'incompatibilité constitutionnelle ; le programme ne propose pas le mécanisme de révision.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Pénurie de personnels qualifiés pour absorber les embauches massives santé/éducation",
+          "probability": 0.65,
+          "severity": 0.6,
+          "reasoning": "Les besoins recensés par les soignants et enseignants ne peuvent être satisfaits sans formation préalable de plusieurs années ; le programme ne traite pas de la trajectoire de recrutement et formation.",
+          "source_refs": ["sources.md#iii-services-publics-sante-et-education"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "risk": "Tensions sur le logement social et l'hébergement d'urgence sous régime d'ouverture des frontières",
+          "probability": 0.6,
+          "severity": 0.5,
+          "reasoning": "L'ouverture des frontières et la régularisation inconditionnelle augmenteraient la demande sur un parc social déjà tendu ; le volet logement (réquisition, encadrement loyers, construction) pourrait ne pas absorber la demande à court terme.",
+          "source_refs": ["sources.md#v-logement", "sources.md#vi-immigration-et-egalite-des-droits"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro"],
+          "dissenters": ["deepseek-expert-thinking", "mistral-thinking"]
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Régularisation immédiate, sans condition ni tri, de tous les sans-papiers (~700 000) ; ouverture des frontières ; arrêt immédiat des expulsions ; droit de vote universel des résidents",
+          "source_ref": "sources.md#vi-immigration-et-egalite-des-droits",
+          "quantified": true,
+          "magnitude": "~700 000 régularisations",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Embauches massives à l'hôpital, en EHPAD et dans l'éducation à hauteur des besoins recensés par les personnels eux-mêmes",
+          "source_ref": "sources.md#iii-services-publics-sante-et-education",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Prise en charge intégrale (100%) par la Sécurité sociale des soins prescrits ; financement par cotisations patronales accrues ; prise en charge publique de la dépendance",
+          "source_ref": "sources.md#iii-services-publics-sante-et-education",
+          "quantified": true,
+          "magnitude": "100% Sécu",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Abolition de Parcoursup ; gratuité réelle des études supérieures ; allocation d'autonomie étudiante indexée sur le coût de la vie",
+          "source_ref": "sources.md#xii-jeunesse",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Embauches massives, 100% Sécu, gratuité études et allocation d'autonomie représentent une expansion durable des dépenses sociales. Financement par cotisations patronales et prélèvement sur le capital exproprié, sans bilan agrégé.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Périmètre social significativement élargi sans solde modélisé." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Périmètre 100% Sécu et embauches massives dégradent durablement le solde social." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Financement par cotisations patronales et expropriation du capital." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Hausse durable et structurelle des dépenses sociales." },
+            { "model": "mistral-thinking", "level": "high", "note": "Expansion sociale massive sans cadre fiscal opérationnel." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Allocation autonomie + gratuité + 100% Sécu sans arithmétique de bouclage." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Les embauches massives santé/éducation supposent une formation et un recrutement accélérés que le programme ne détaille pas ; régularisation et ouverture des frontières exigent des capacités d'enregistrement et d'accompagnement administratives très supérieures à l'existant.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Capacités de recrutement/formation insuffisantes à l'horizon législatif." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Régularisation massive simultanée à l'expansion services publics." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Mesures techniquement applicables sous le régime fiscal proposé." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Refonte simultanée santé/éducation/migration sans précédent administratif." },
+            { "model": "mistral-thinking", "level": "high", "note": "Aucun mécanisme d'application précis dans le cadre Vᵉ République." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Capacités existantes peuvent être étendues progressivement avec recrutement public." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "moderate",
+          "level_interval": ["moderate", "high"],
+          "note": "Le volet régularisation et droit de vote universel suppose une révision constitutionnelle ; le 100% Sécu et la dépendance publique dépendent de la mobilisation de ressources actuellement privées (assurances complémentaires).",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["gemini-3-pro", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "moderate", "note": "Coopération européenne et révision constitutionnelle requises." },
+            { "model": "claude-opus-4.7", "level": "moderate", "note": "Dépendance constitutionnelle (droit de vote) et coopération sectorielle (Sécu)." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Dépend du contexte révolutionnaire mais techniquement applicable." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Dépend du démantèlement préalable du cadre Vᵉ République." },
+            { "model": "mistral-thinking", "level": "high", "note": "Dépendance entière à la rupture institutionnelle révolutionnaire." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Coopération syndicale et hospitalière requise pour l'enforcement." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Régularisation administrative et embauches publiques sont opérationnellement réversibles par une majorité ultérieure ; le 100% Sécu et la dépendance publique seraient plus coûteux à défaire mais juridiquement amendables.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["claude-opus-4.7", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "moderate", "note": "Embauches et droits sociaux amendables par législature ultérieure." },
+            { "model": "claude-opus-4.7", "level": "limited", "note": "Régularisation produit des situations administratives irréversibles ; embauches publiques pérennes." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Outils de droit social amendables." },
+            { "model": "gemini-3-pro", "level": "moderate", "note": "Dispositions sociales amendables par majorité ; régularisations irréversibles." },
+            { "model": "mistral-thinking", "level": "limited", "note": "Cadre révolutionnaire engendre une trajectoire institutionnelle alternative." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Cadre Sécu et droit du travail amendable par voie législative ordinaire." }
+          ]
+        }
+      },
+      "confidence": 0.7
+    }
+  }
+}

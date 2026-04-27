@@ -1,0 +1,190 @@
+{
+  "dimensions": {
+    "security_sovereignty": {
+      "grade": {
+        "consensus": "C",
+        "dissent": {
+          "mistral-thinking": "F",
+          "qwen3.6-max-preview-thinking": "D"
+        }
+      },
+      "headline": {
+        "text": "Sortie immédiate de l'OTAN, opposition au réarmement, internationalisme prolétarien sans Frexit ; aucune doctrine de défense de remplacement n'est articulée.",
+        "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "chatgpt-5.5-thinking-extended", "text": "Sortie OTAN, opposition au budget militaire, refus des conflits impérialistes ; rejet du repli national et des barrières douanières." },
+          { "model": "claude-opus-4.7", "text": "Sortie OTAN immédiate, refus du réarmement et de la guerre commerciale ; rejet symétrique du fédéralisme UE et du souverainisme national, sans doctrine de défense alternative." },
+          { "model": "deepseek-expert-thinking", "text": "Internationalisme prolétarien anti-impérialiste : sortie OTAN, refus envoi de troupes, opposition guerres en cours, sans Frexit ni protectionnisme." },
+          { "model": "gemini-3-pro", "text": "Rejet maximaliste du cadre national : sortie OTAN, ouverture des frontières, refus des barrières douanières, internationalisme prolétarien comme principe d'action." },
+          { "model": "mistral-thinking", "text": "Sortie OTAN et rejet UE comme instrument capitaliste sans contrepartie de défense ; aucune doctrine sécuritaire opérationnelle." },
+          { "model": "qwen3.6-max-preview-thinking", "text": "Anti-OTAN, anti-impérialisme et rejet du réarmement ; absence d'analyse stratégique sur l'autonomie de défense post-OTAN." }
+        ]
+      },
+      "summary": "Sur les questions de sécurité et de souveraineté, le programme articule trois lignes constantes de Lutte Ouvrière : (i) opposition stricte à toute hausse du budget militaire et au sacrifice des budgets sociaux au profit de l'armement (porte-avions, équipements), avec sortie immédiate de l'OTAN, refus de l'envoi de troupes ou d'armes dans les conflits impérialistes, position constante contre la guerre menée par Israël à Gaza (sans alignement sur le Hamas), critique frontale de l'impérialisme américain (Venezuela, Syrie, Nigeria) et français (Afrique) ; (ii) internationalisme prolétarien revendiqué comme cadre — « les travailleurs n'ont pas de patrie » — combiné au rejet symétrique de l'UE actuelle (instrument du grand capital européen) et du repli national/souverainiste considéré comme une impasse pour les travailleurs : pas de Frexit revendiqué, combat pour des revendications ouvrières harmonisées par le haut à l'échelle européenne ; (iii) refus de la guerre commerciale et des barrières douanières considérées comme pesant sur les classes populaires des deux côtés. Quatre modèles (chatgpt, claude, deepseek, gemini) gradent C en notant la cohérence interne et la stabilité historique de la ligne (constante depuis Laguiller) ; mistral grade F et qwen D en soulignant l'absence de toute doctrine de défense de remplacement après sortie OTAN, l'absence de plan budgétaire militaire et l'absence d'articulation avec les engagements internationaux existants (ONU, défense européenne).",
+      "problems_addressed": [
+        {
+          "problem": "Sacrifice des budgets sociaux au profit du réarmement et de l'OTAN",
+          "approach": "Opposition à toute hausse du budget militaire ; refus du financement par compression des budgets santé, école, transports ; sortie immédiate de l'OTAN ; refus de l'envoi de troupes ou d'armes dans les conflits impérialistes.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#x-international-guerre-et-paix"],
+          "reasoning": "Le programme articule un arbitrage budgétaire explicite entre militaire et social ; les six modèles convergent sur l'identification du levier.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Division des classes populaires par les politiques migratoires sécuritaires",
+          "approach": "Combat permanent contre le racisme, l'islamophobie et l'antisémitisme considérés comme « poisons divisant la classe ouvrière » ; fin des contrôles au faciès et de la surveillance policière des quartiers populaires ; abrogation des lois immigration successives.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#vi-immigration-et-egalite-des-droits"],
+          "reasoning": "Cadrage classiste de la sécurité intérieure : la « sécurité » durable est posée comme dérivée de l'emploi et des salaires plutôt que des dispositifs policiers.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Doctrine de défense alternative après sortie OTAN",
+          "significance": "Le programme propose une sortie immédiate de l'OTAN sans articuler une doctrine de défense nationale ou européenne de remplacement ; les questions de dissuasion, de coopération militaire et de garanties de sécurité ne sont pas traitées.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Articulation avec les engagements internationaux existants (ONU, accords bilatéraux)",
+          "significance": "Le programme rejette l'OTAN et critique l'UE mais ne précise pas la position envers les engagements ONU, les accords de défense bilatéraux (avec l'Allemagne, le Royaume-Uni notamment) ni la doctrine d'usage des forces nucléaires.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+        },
+        {
+          "problem": "Sécurité intérieure et lutte contre la criminalité organisée",
+          "significance": "LO note que la sécurité durable passe par l'emploi et les salaires mais ne traite pas la question de la criminalité organisée, du trafic et de la sécurité des quartiers populaires comme problèmes spécifiques.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["claude-opus-4.7", "deepseek-expert-thinking", "mistral-thinking"]
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Position européenne et alliances stratégiques",
+          "mechanism": "La sortie unilatérale de l'OTAN combinée au rejet de l'UE et à la rupture économique annoncée placerait la France en isolement diplomatique et stratégique majeur ; effets non traités par le programme.",
+          "severity": 0.7,
+          "source_refs": ["sources.md#x-international-guerre-et-paix", "sources.md#xi-union-europeenne"],
+          "reasoning": "Quatre modèles relèvent l'effet d'isolement diplomatique comme intrinsèque à la trajectoire choisie.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Vide de garantie de sécurité après sortie OTAN",
+          "probability": 0.85,
+          "severity": 0.7,
+          "reasoning": "La sortie unilatérale de l'OTAN, sans doctrine alternative articulée, créerait un vide de garantie de sécurité collective auquel le programme ne fournit pas de réponse opérationnelle.",
+          "source_refs": ["sources.md#x-international-guerre-et-paix"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"]
+        },
+        {
+          "risk": "Sanctions diplomatiques et économiques sur sortie unilatérale et expropriation simultanée",
+          "probability": 0.7,
+          "severity": 0.65,
+          "reasoning": "La conjonction sortie OTAN + expropriation sans indemnité + ouverture des frontières exposerait la France à des contre-mesures coordonnées des partenaires occidentaux.",
+          "source_refs": ["sources.md#x-international-guerre-et-paix", "sources.md#iv-nationalisations-et-economie"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Sortie immédiate de l'OTAN",
+          "source_ref": "sources.md#x-international-guerre-et-paix",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Opposition à toute hausse du budget militaire ; refus du financement par compression des budgets sociaux",
+          "source_ref": "sources.md#x-international-guerre-et-paix",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Refus de l'UE actuelle sans Frexit ; combat pour revendications ouvrières harmonisées par le haut à l'échelle européenne",
+          "source_ref": "sources.md#xi-union-europeenne",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["gemini-3-pro"]
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "low",
+          "level_interval": ["low", "moderate"],
+          "note": "L'opposition au réarmement réduit la pression budgétaire sur cette ligne ; économies attendues sur le budget militaire redirigées vers les services publics.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "low", "note": "Économies budgétaires attendues sur le militaire." },
+            { "model": "claude-opus-4.7", "level": "low", "note": "Réorientation des budgets militaires vers le social allège la pression budgétaire." },
+            { "model": "deepseek-expert-thinking", "level": "low", "note": "Pas de hausse de dépense ; économies revendiquées." },
+            { "model": "gemini-3-pro", "level": "low", "note": "Refus du réarmement contient la dépense militaire." },
+            { "model": "mistral-thinking", "level": "moderate", "note": "Sortie OTAN génère des coûts de transition non chiffrés (autonomie défense)." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "low", "note": "Réduction du budget de défense revendiquée." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "Sortie OTAN nécessite une procédure formelle longue ; absence de doctrine de défense alternative complique la mise en œuvre opérationnelle ; rejet de l'UE actuelle sans cadre de remplacement laisse les outils de coopération en suspens.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Sortie OTAN sans doctrine de défense alternative." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Articulation entre rejet OTAN, rejet UE et internationalisme non opérationnalisée." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Sortie OTAN procédurale ; reste internationalisme déclaratif." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Rupture diplomatique simultanée avec OTAN et UE." },
+            { "model": "mistral-thinking", "level": "high", "note": "Aucune feuille de route opérationnelle de transition diplomatique." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Procédure de sortie OTAN connue ; reste de la doctrine déclaratif." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["moderate", "high"],
+          "note": "La cohérence du dispositif (sortie OTAN + rejet UE + internationalisme + ouverture frontières) suppose une dynamique internationale (mouvements ouvriers transnationaux) qui n'est pas dans le pouvoir d'un État seul.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Dépend de dynamiques transnationales hors contrôle." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Dépendance à un mouvement ouvrier européen non concrétisé." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Sortie OTAN unilatérale possible ; reste dépendant du contexte." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Cohérence du dispositif requiert mobilisations transnationales." },
+            { "model": "mistral-thinking", "level": "high", "note": "Dépendance entière à la lutte de classe internationale." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Sortie OTAN actionnable seule ; reste subordonné au cadre révolutionnaire." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "moderate",
+          "level_interval": ["limited", "moderate"],
+          "note": "Sortie OTAN est procéduralement réversible (réintégration possible mais coûteuse politiquement) ; l'effet d'isolement diplomatique pendant la période de rupture pourrait laisser des traces durables.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["gemini-3-pro", "mistral-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "moderate", "note": "Sortie OTAN réversible avec coût politique." },
+            { "model": "claude-opus-4.7", "level": "moderate", "note": "Sortie OTAN procéduralement réversible ; effets de réputation durables." },
+            { "model": "deepseek-expert-thinking", "level": "moderate", "note": "Sortie OTAN réversible par décision politique ultérieure." },
+            { "model": "gemini-3-pro", "level": "limited", "note": "Combinaison sortie OTAN + ouverture frontières crée une trajectoire alternative durable." },
+            { "model": "mistral-thinking", "level": "limited", "note": "Rupture diplomatique simultanée laisse des traces durables." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "moderate", "note": "Sortie OTAN procéduralement réversible." }
+          ]
+        }
+      },
+      "confidence": 0.6
+    }
+  }
+}

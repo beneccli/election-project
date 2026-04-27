@@ -74,5 +74,22 @@
         "provider_metadata_available": false
       }
     }
+  },
+  "aggregation": {
+    "prompt_file": "prompts/aggregate-analyses.md",
+    "prompt_sha256": "991efdf765d3c782c996d12ece86b73111814022c06ac798852c31772d2747be",
+    "prompt_version": "0.1",
+    "aggregator_model": {
+      "provider": "copilot",
+      "exact_version": "claude-opus-4-7",
+      "run_at": "2026-04-26T18:11:33.521Z",
+      "execution_mode": "copilot-agent",
+      "attested_by": "benoit",
+      "attested_model_version": "claude-opus-4-7",
+      "provider_metadata_available": false
+    },
+    "human_review_completed": true,
+    "reviewer": "beneccli@gmail.com",
+    "reviewed_at": "2026-04-27T01:02:08.475Z"
   }
 }

@@ -1,0 +1,393 @@
+{
+  "intergenerational": {
+    "net_transfer_direction": "mixed",
+    "magnitude_estimate": {
+      "value": "qualitatif — non chiffré dans le programme",
+      "units": "n/a (pas de chiffrage agrégé du transfert net intergénérationnel)",
+      "confidence": 0.4,
+      "caveats": "Le programme combine des transferts pro-jeunes massifs (logement, éducation, services publics, rénovation thermique) et des transferts pro-âgés massifs (retraite à 60 ans avec 37,5 annuités, 100 % Sécurité sociale, indexation), tous financés par expropriation sans rachat et refus de remboursement de la dette publique ; la soutenabilité actuarielle des engagements de retraite n'est pas démontrée et l'absence de cibles climat ne permet pas d'évaluer la dette environnementale léguée."
+    },
+    "impact_on_25yo_in_2027": {
+      "fiscal": {
+        "summary": "Hausse du salaire net via SMIC 2 200 € net et indexation ; impôt sur le revenu inchangé pour les bas salaires ; suppression progressive de la TVA finançable par expropriation. Le 25 ans salarié au SMIC bénéficierait directement.",
+        "quantified": "+~700 €/mois brut au niveau SMIC selon revendication (passage de ~1 770 € à 2 200 € net)"
+      },
+      "housing": {
+        "summary": "Réquisition des logements vacants, encadrement strict et gel des loyers, plan massif de logements sociaux ; effet attendu fortement positif sur l'accès au logement des jeunes actifs et étudiants.",
+        "quantified": null
+      },
+      "pension_outlook": {
+        "summary": "Retraite à 60 ans avec 37,5 annuités garantie : pour un 25 ans entré tôt sur le marché du travail, retraite à taux plein dès 60 ans ; pour les autres, allongement effectif de la phase d'activité après les annuités. Soutenabilité actuarielle non démontrée.",
+        "quantified": "60 ans / 37,5 annuités garantis"
+      },
+      "labor_market": {
+        "summary": "Embauches massives dans les services publics (santé, éducation, ferroviaire, rénovation thermique) ; partage du temps de travail sans baisse de salaire ; interdiction des licenciements dans les entreprises bénéficiaires. Effet attendu positif sur l'emploi des jeunes mais conditionné à la rupture systémique.",
+        "quantified": null
+      },
+      "environmental_debt": {
+        "summary": "Refus des taxes carbone et absence de cibles d'émissions ; rénovation thermique massive et report modal vers le rail ; effet net sur la dette environnementale léguée incertain en l'absence de trajectoire chiffrée.",
+        "quantified": null
+      },
+      "narrative_summary": "Pour un 25 ans en 2027, le programme combine des gains immédiats massifs (salaire, logement, accès aux services publics, perspective de retraite anticipée) avec une dépendance forte à la rupture systémique pour leur financement. La dette environnementale léguée reste indéterminée faute de cibles d'émissions ; la soutenabilité actuarielle des engagements de retraite n'est pas démontrée."
+    },
+    "impact_on_65yo_in_2027": {
+      "fiscal": {
+        "summary": "Suppression progressive de la TVA et indexation des pensions sur les prix : effet positif sur le pouvoir d'achat des retraités modestes ; pas d'augmentation des prélèvements sur les pensions.",
+        "quantified": null
+      },
+      "pension": {
+        "summary": "Indexation des pensions sur l'inflation réelle ; opposition à toute baisse ou gel ; minimum vieillesse aligné sur le SMIC revendiqué (2 200 € net) — hausse forte pour les retraites les plus basses.",
+        "quantified": "minimum vieillesse au SMIC = 2 200 € net"
+      },
+      "healthcare": {
+        "summary": "Remboursement à 100 % par la Sécurité sociale, embauches massives à l'hôpital, gratuité des médicaments essentiels : effet attendu fortement positif sur l'accès aux soins des seniors.",
+        "quantified": "100 % de remboursement Sécurité sociale revendiqué"
+      },
+      "narrative_summary": "Pour un 65 ans en 2027, le programme propose une amélioration matérielle nette : pensions indexées et revalorisées, accès aux soins étendu, fiscalité indirecte allégée. La soutenabilité de ces engagements repose sur l'expropriation et le refus de remboursement de la dette publique, dont la faisabilité n'est pas démontrée."
+    },
+    "horizon_matrix": [
+      {
+        "row": "pensions",
+        "dimension_note": "Retraite à 60 ans / 37,5 annuités + indexation pleine + minimum vieillesse au SMIC : transferts pro-âgés massifs ; soutenabilité actuarielle non démontrée et refus de toute hausse des cotisations salariales.",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [1, 3],
+            "note": "Court terme : revalorisation immédiate des pensions et retour aux 60 ans pour les plus anciens cotisants ; effet positif fort pour les retraités existants.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 2, "note": "Retour 60 ans + indexation : effet immédiat positif." },
+              { "model": "claude-opus-4.7", "score": 2, "note": "Revalorisation immédiate ; pas d'effet de financement court terme." },
+              { "model": "deepseek-expert-thinking", "score": 3, "note": "Mesure phare avec effet immédiat fort sur les pensions." },
+              { "model": "gemini-3-pro", "score": 2, "note": "Effet positif à court terme évident." },
+              { "model": "mistral-thinking", "score": 1, "note": "Effet limité par le coût budgétaire à venir." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 2, "note": "Court terme positif, soutenabilité non garantie." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [-2, 2],
+            "note": "Moyen terme : tension entre engagements pro-âgés massifs et soutenabilité actuarielle non démontrée ; dépend du financement par expropriation.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro"],
+            "dissenters": ["deepseek-expert-thinking", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 0, "note": "Tension actuarielle apparaît." },
+              { "model": "claude-opus-4.7", "score": 0, "note": "Bilan dépend de la rupture systémique." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Financement par expropriation soutient le système." },
+              { "model": "gemini-3-pro", "score": -1, "note": "Soutenabilité non démontrée." },
+              { "model": "mistral-thinking", "score": -2, "note": "Fragilisation actuarielle." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Maintien sous condition de rupture." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": -1,
+            "score_interval": [-3, 1],
+            "note": "Long terme : engagements de retraite très généreux non couverts par un mécanisme actuariel articulé ; risque d'érosion réelle ou de rupture si la rupture revendiquée n'advient pas.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+            "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": -1, "note": "Dette implicite croissante non traitée." },
+              { "model": "claude-opus-4.7", "score": -1, "note": "Pression actuarielle long terme." },
+              { "model": "deepseek-expert-thinking", "score": 1, "note": "Système soutenable post-rupture." },
+              { "model": "gemini-3-pro", "score": -2, "note": "Soutenabilité long terme non démontrée." },
+              { "model": "mistral-thinking", "score": -3, "note": "Risque structurel important." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 0, "note": "Long terme indéterminé." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "public_debt",
+        "dimension_note": "Refus de remboursement de la dette publique et expropriation des grands groupes : transfert massif des créanciers vers les classes populaires ; le programme efface la dette financière mais ne traite pas la dette implicite (retraites, climat).",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Court terme : effacement de la dette financière allège la charge d'intérêt mais provoque une rupture sur les marchés ; bilan ambigu pour les jeunes générations.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Allègement immédiat de la charge d'intérêt." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Effet positif court terme amorti par rupture marchés." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Libération budgétaire forte." },
+              { "model": "gemini-3-pro", "score": -1, "note": "Choc de marché négatif." },
+              { "model": "mistral-thinking", "score": -1, "note": "Rupture financière coûteuse." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif net à court terme." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 0,
+            "score_interval": [-2, 2],
+            "note": "Moyen terme : effets du défaut souverain sur le crédit public ; les jeunes actifs subissent la perte d'accès aux marchés mais bénéficient de l'absence de service de la dette.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 0, "note": "Effets contradictoires se compensent." },
+              { "model": "claude-opus-4.7", "score": 0, "note": "Bilan mixte." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Marges budgétaires libérées." },
+              { "model": "gemini-3-pro", "score": -1, "note": "Coût d'emprunt durablement dégradé." },
+              { "model": "mistral-thinking", "score": -2, "note": "Rupture financière prolongée." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 0, "note": "Bilan ambigu." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": -1,
+            "score_interval": [-3, 1],
+            "note": "Long terme : dette implicite (retraites, climat) non chiffrée croît à l'arrière-plan ; les jeunes générations héritent des engagements non couverts.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+            "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": -1, "note": "Dette implicite croissante." },
+              { "model": "claude-opus-4.7", "score": -1, "note": "Engagements non couverts pèsent à long terme." },
+              { "model": "deepseek-expert-thinking", "score": 1, "note": "Reconfiguration soutenable post-rupture." },
+              { "model": "gemini-3-pro", "score": -2, "note": "Charges implicites non traitées." },
+              { "model": "mistral-thinking", "score": -3, "note": "Soutenabilité long terme compromise." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 0, "note": "Indéterminé." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "climate",
+        "dimension_note": "Mesures concrètes (transports gratuits, fret ferroviaire, rénovation thermique) avec effet net positif probable mais sans cibles d'émissions ni calendrier ; refus explicite des taxes carbone et marchés du carbone.",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 1,
+            "score_interval": [0, 2],
+            "note": "Court terme : effet positif des mesures concrètes (gratuité transports, plan rénovation amorcé) ; ampleur conditionnée au déploiement opérationnel.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Effet positif modéré attendu." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Mesures concrètes engagées." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Effet positif fort attendu." },
+              { "model": "gemini-3-pro", "score": 1, "note": "Effet net positif amorcé." },
+              { "model": "mistral-thinking", "score": 0, "note": "Dimension peu traitée." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif modéré." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Moyen terme : l'absence de cibles et de signal-prix limite la portée systémique ; effet positif des infrastructures concrètes mais inertie dans les secteurs diffus.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Bilan modéré." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Bilan partiel." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Effet structurant maintenu." },
+              { "model": "gemini-3-pro", "score": 0, "note": "Limites du dispositif s'expriment." },
+              { "model": "mistral-thinking", "score": -1, "note": "Dimension non traitée — effet incertain." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif persistant." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 0,
+            "score_interval": [-2, 2],
+            "note": "Long terme : sans cibles ni instruments d'orientation, la trajectoire d'émissions reste indéterminée ; la dette environnementale léguée n'est pas mesurable.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["deepseek-expert-thinking", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 0, "note": "Long terme indéterminé." },
+              { "model": "claude-opus-4.7", "score": 0, "note": "Trajectoire long terme non chiffrée." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Trajectoire structurellement positive post-rupture." },
+              { "model": "gemini-3-pro", "score": -1, "note": "Absence de cible compromet le long terme." },
+              { "model": "mistral-thinking", "score": -2, "note": "Dimension non traitée." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 0, "note": "Long terme indéterminé." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "health",
+        "dimension_note": "100 % Sécurité sociale, embauches massives à l'hôpital, gratuité des médicaments essentiels : effet positif fort attendu pour toutes les classes d'âge, particulièrement pour les seniors et les classes populaires jeunes.",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [1, 3],
+            "note": "Court terme : embauches massives et 100 % Sécu produisent un effet immédiat sur l'accès aux soins.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 2, "note": "Effet immédiat positif fort." },
+              { "model": "claude-opus-4.7", "score": 2, "note": "Amélioration immédiate de l'accès." },
+              { "model": "deepseek-expert-thinking", "score": 3, "note": "Effet majeur attendu." },
+              { "model": "gemini-3-pro", "score": 2, "note": "Effet immédiat positif." },
+              { "model": "mistral-thinking", "score": 1, "note": "Effet positif sous réserve de financement." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 2, "note": "Amélioration substantielle." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [0, 2],
+            "note": "Moyen terme : maintien des effets positifs si financement assuré ; tension actuarielle avec le coût croissant.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Effets positifs persistants." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Maintien sous condition de financement." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Système consolidé." },
+              { "model": "gemini-3-pro", "score": 1, "note": "Effet positif maintenu." },
+              { "model": "mistral-thinking", "score": 0, "note": "Tension financière." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif maintenu." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Long terme : robustesse du système conditionnée à la rupture systémique ; sinon dégradation possible avec vieillissement démographique.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Maintien sous condition." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Tenable sous rupture." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Système robuste post-rupture." },
+              { "model": "gemini-3-pro", "score": 0, "note": "Pression démographique." },
+              { "model": "mistral-thinking", "score": -1, "note": "Soutenabilité fragile." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif persistant." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "education",
+        "dimension_note": "Embauches massives dans l'éducation, abolition Parcoursup, gratuité de l'enseignement supérieur, allocation d'autonomie pour les jeunes : transferts pro-jeunes massifs avec effet structurant attendu.",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [1, 3],
+            "note": "Court terme : embauches massives, abolition Parcoursup, gratuité ; effet immédiat fort pour les jeunes.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 2, "note": "Mesures concrètes pro-jeunes immédiates." },
+              { "model": "claude-opus-4.7", "score": 2, "note": "Investissement massif annoncé." },
+              { "model": "deepseek-expert-thinking", "score": 3, "note": "Transformation structurante." },
+              { "model": "gemini-3-pro", "score": 2, "note": "Effet positif fort." },
+              { "model": "mistral-thinking", "score": 1, "note": "Effet positif sous réserve." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 2, "note": "Investissement substantiel." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 2,
+            "score_interval": [0, 2],
+            "note": "Moyen terme : effet structurant maintenu si effectifs et financements consolidés.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 2, "note": "Effet structurant durable." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Effet positif maintenu." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Système consolidé." },
+              { "model": "gemini-3-pro", "score": 2, "note": "Effet structurant." },
+              { "model": "mistral-thinking", "score": 0, "note": "Tension de soutenabilité." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 2, "note": "Effet positif persistant." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Long terme : effet structurant sur le capital humain conditionné à la rupture ; sinon retour aux logiques d'efficience budgétaire.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Effet positif persistant." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Tenable sous rupture." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Capital humain consolidé." },
+              { "model": "gemini-3-pro", "score": 0, "note": "Pression budgétaire long terme." },
+              { "model": "mistral-thinking", "score": -1, "note": "Soutenabilité fragile." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif maintenu." }
+            ]
+          }
+        }
+      },
+      {
+        "row": "housing",
+        "dimension_note": "Réquisition des logements vacants, encadrement strict et gel des loyers, plan massif de logement social : transferts pro-jeunes massifs avec effet attendu fort sur l'accès au logement des nouvelles générations.",
+        "row_supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+        "row_dissenters": ["mistral-thinking"],
+        "cells": {
+          "h_2027_2030": {
+            "modal_score": 2,
+            "score_interval": [0, 3],
+            "note": "Court terme : encadrement et gel produisent un effet immédiat sur la solvabilité ; réquisitions accroissent l'offre disponible.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 2, "note": "Effet immédiat fort." },
+              { "model": "claude-opus-4.7", "score": 2, "note": "Solvabilité accrue immédiatement." },
+              { "model": "deepseek-expert-thinking", "score": 3, "note": "Transformation structurante." },
+              { "model": "gemini-3-pro", "score": 2, "note": "Accès amélioré rapidement." },
+              { "model": "mistral-thinking", "score": 0, "note": "Effet incertain compte tenu des frictions." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 2, "note": "Effet positif marqué." }
+            ]
+          },
+          "h_2031_2037": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Moyen terme : risque de réduction de l'offre privée locative ; effet positif maintenu si plan logement social consolidé.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Effets contradictoires se compensent." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Tension entre accès et offre." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Plan logement consolidé." },
+              { "model": "gemini-3-pro", "score": 0, "note": "Réduction offre privée probable." },
+              { "model": "mistral-thinking", "score": -1, "note": "Frictions de marché significatives." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif persistant." }
+            ]
+          },
+          "h_2038_2047": {
+            "modal_score": 1,
+            "score_interval": [-1, 2],
+            "note": "Long terme : effet positif si l'investissement public dans le logement social compense la sortie d'investisseurs privés ; sinon érosion du parc.",
+            "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "qwen3.6-max-preview-thinking"],
+            "dissenters": ["gemini-3-pro", "mistral-thinking"],
+            "per_model": [
+              { "model": "chatgpt-5.5-thinking-extended", "score": 1, "note": "Effet positif persistant si rupture." },
+              { "model": "claude-opus-4.7", "score": 1, "note": "Tenable sous condition." },
+              { "model": "deepseek-expert-thinking", "score": 2, "note": "Parc public consolidé." },
+              { "model": "gemini-3-pro", "score": 0, "note": "Risque d'érosion du parc." },
+              { "model": "mistral-thinking", "score": -1, "note": "Soutenabilité long terme fragile." },
+              { "model": "qwen3.6-max-preview-thinking", "score": 1, "note": "Effet positif maintenu." }
+            ]
+          }
+        }
+      }
+    ],
+    "agreement": {
+      "direction_consensus": false,
+      "magnitude_consensus": "contested",
+      "dissenting_views": [
+        {
+          "model": "mistral-thinking",
+          "view": "Estime que la dimension long terme (climat, environnement) n'est pas substantiellement traitée et juge le bilan intergénérationnel net plus négatif que les autres modèles, notamment du fait de l'absence de mécanisme actuariel sur les retraites et de la rupture financière induite par le défaut souverain."
+        },
+        {
+          "model": "deepseek-expert-thinking",
+          "view": "Considère que la rupture systémique revendiquée (expropriation, refus de la dette) rend cohérent le financement des engagements pro-jeunes ET pro-âgés à long terme, et grade donc l'horizon long plus positivement que la majorité."
+        }
+      ]
+    },
+    "reasoning": "Le programme combine des transferts pro-jeunes massifs (logement, éducation, services publics, salaires) et des transferts pro-âgés massifs (retraite à 60 ans, indexation, 100 % Sécu) financés par expropriation et refus de remboursement de la dette publique. À court terme, l'effet net pour toutes les classes d'âge est positif sur les dimensions matérielles concrètes. À moyen-long terme, la soutenabilité dépend entièrement de la rupture systémique revendiquée : si elle advient, le système est cohérent ; si elle n'advient pas, les engagements de retraite et la dette implicite environnementale créent une charge non couverte transmise aux générations suivantes. L'absence de cibles climat empêche d'évaluer la dette environnementale léguée. Les modèles convergent sur la direction qualitative (mixte) mais divergent fortement sur l'amplitude et la soutenabilité long terme.",
+    "source_refs": [
+      "sources.md#ii-retraites",
+      "sources.md#iii-pouvoir-d-achat-et-salaires",
+      "sources.md#iv-nationalisations-et-economie",
+      "sources.md#v-services-publics-et-emplois",
+      "sources.md#vi-immigration-et-egalite-des-droits",
+      "sources.md#vii-environnement-et-transports"
+    ],
+    "confidence": 0.55
+  }
+}

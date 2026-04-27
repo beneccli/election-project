@@ -1,0 +1,227 @@
+{
+  "dimensions": {
+    "economic_fiscal": {
+      "grade": {
+        "consensus": "D",
+        "dissent": {
+          "chatgpt-5.5-thinking-extended": "C",
+          "gemini-3-pro": "C",
+          "mistral-thinking": "F",
+          "qwen3.6-max-preview-thinking": "F"
+        }
+      },
+      "headline": {
+        "text": "Expropriation sans rachat, indexation des salaires, retraite à 60 ans avec 37,5 annuités ; aucun chiffrage budgétaire — campagne de classe assumée.",
+        "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+        "dissenters": [],
+        "per_model": [
+          { "model": "chatgpt-5.5-thinking-extended", "text": "Programme économique centré sur salaires, emploi, expropriation et retraites, sans trajectoire budgétaire chiffrée." },
+          { "model": "claude-opus-4.7", "text": "Expropriation sans indemnité du grand capital, planification, monopole bancaire public ; absence revendiquée de chiffrage et de mécanisme de mise en œuvre dans la Vᵉ République." },
+          { "model": "deepseek-expert-thinking", "text": "Programme cohérent avec la perspective révolutionnaire (expropriation, planification, abolition de la TVA) mais sans aucun chiffrage ni trajectoire budgétaire." },
+          { "model": "gemini-3-pro", "text": "Expropriation sans rachat des banques et grandes industries, indexation des salaires, retraite à 60 ans ; cadre macro-fiscal explicitement rejeté au profit d'une économie planifiée." },
+          { "model": "mistral-thinking", "text": "Demandes anti-capitalistes radicales sans aucun cadre fiscal opérationnel, transition financière, ou architecture institutionnelle de mise en œuvre." },
+          { "model": "qwen3.6-max-preview-thinking", "text": "Expropriation sans compensation, abolition TVA, indexation des salaires et retraite à 60 ans ; financement par prélèvement sur le capital, sans bilan budgétaire publié." }
+        ]
+      },
+      "summary": "Le programme économique de Lutte Ouvrière s'articule autour de cinq leviers : (i) augmentation massive et indexation automatique des salaires, retraites, pensions et minima sociaux sur la hausse réelle des prix (échelle mobile) avec un seuil minimum revendiqué de 2 000 € net en 2022, désormais supérieur compte tenu de l'inflation ; (ii) interdiction des licenciements dans toutes les entreprises bénéficiaires ou versant des dividendes, avec réquisition des sites fermés pour délocalisation ; (iii) expropriation sans rachat ni indemnité des banques et des grands groupes capitalistes (CAC 40, multinationales) avec mise en place d'un service public bancaire unique et d'un monopole public du commerce extérieur ; (iv) refonte fiscale par suppression progressive de la TVA, IS minimum 50 % pour les grands groupes, forte progressivité de l'IR jusqu'à confiscation des revenus du capital, fin des aides publiques aux grandes entreprises (CICE, CIR) ; (v) retour à la retraite à 60 ans avec 37,5 annuités, financée par prélèvement sur les profits et dividendes, non par hausses de cotisations salariales. Le programme est assumé comme « campagne de classe » et non comme programme de gouvernement : aucune trajectoire de solde public, aucun calendrier de mise en œuvre, aucun mécanisme de transition n'est fourni. Trois modèles (chatgpt, claude, deepseek/gemini) gradent C–D en notant la cohérence interne et la crédibilité testimoniale du discours malgré l'absence de chiffrage ; deux modèles (mistral, qwen) gradent F en concluant que l'absence de mécanisme institutionnel de mise en œuvre disqualifie le programme comme proposition économique évaluable.",
+      "problems_addressed": [
+        {
+          "problem": "Stagnation salariale et érosion du pouvoir d'achat",
+          "approach": "Indexation automatique des salaires, retraites, pensions et minima sociaux sur la hausse réelle des prix (échelle mobile constatée par les travailleurs eux-mêmes), seuil minimum de 2 000 € net (2022), alignement minimum vieillesse / pensions / minima sociaux sur le SMIC.",
+          "strength": 0.75,
+          "source_refs": ["sources.md#i-salaires-emploi-et-conditions-de-travail"],
+          "reasoning": "Mécanisme directement lié à l'observation citoyenne de l'inflation et couvrant tous les revenus de transfert ; les six modèles convergent sur la cohérence du dispositif salarial.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Licenciements en entreprise bénéficiaire et précarisation",
+          "approach": "Interdiction des licenciements dans toutes les entreprises bénéficiaires, réquisition des sites fermés pour délocalisation, remplacement des CDD/intérim/sous-traitance en cascade par des CDI à temps plein, titularisation des sous-traitants.",
+          "strength": 0.7,
+          "source_refs": ["sources.md#i-salaires-emploi-et-conditions-de-travail"],
+          "reasoning": "Outil structurel ciblant explicitement les chaînes de sous-traitance dans le BTP, la logistique, le nettoyage ; effet d'application non quantifié.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Concentration du capital et contrôle privé de l'investissement",
+          "approach": "Expropriation sans rachat ni indemnité des banques, du secteur de l'énergie et des grandes industries stratégiques ; monopole public du commerce extérieur ; planification de la production sur la base des besoins humains réels, et non du marché.",
+          "strength": 0.85,
+          "source_refs": ["sources.md#iv-nationalisations-et-economie"],
+          "reasoning": "Le programme nomme l'ensemble du dispositif — nationalisation sans indemnité, planification, monopole bancaire — ce qui est cohérent avec la perspective révolutionnaire revendiquée. Les six modèles convergent sur l'identification du levier.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Régressivité fiscale et taxation indirecte sur la consommation populaire",
+          "approach": "Suppression progressive de la TVA, remplacée par une taxation fortement progressive sur les revenus du capital, les patrimoines et les bénéfices ; IS minimum 50 % pour les grands groupes ; fin des aides publiques sans contrepartie (CICE, CIR détourné).",
+          "strength": 0.7,
+          "source_refs": ["sources.md#iv-nationalisations-et-economie"],
+          "reasoning": "Levier de redistribution explicite ciblant les bas revenus ; effet de bouclage budgétaire de la suppression TVA non chiffré.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "problems_ignored": [
+        {
+          "problem": "Trajectoire de solde public et bouclage macroéconomique de la transition",
+          "significance": "Le programme ne fournit aucune trajectoire de solde public, aucune analyse de transition, aucun calendrier de mise en œuvre — choix politique assumé (campagne de classe, non programme de gouvernement) mais qui rend l'évaluation budgétaire impossible.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "problem": "Réaction des marchés financiers et fuite des capitaux face à l'expropriation sans indemnité",
+          "significance": "L'expropriation sans rachat ni indemnité du capital bancaire et industriel déclencherait des contentieux internationaux (TCE, accords bilatéraux), une fuite massive des capitaux et un repricing du risque souverain. Le programme ne traite pas de ces effets de second tour.",
+          "source_refs": [],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"]
+        },
+        {
+          "problem": "Mécanisme institutionnel de mise en œuvre dans le cadre constitutionnel existant",
+          "significance": "Le programme rejette explicitement la possibilité que les mesures soient appliquées par voie présidentielle ou législative ; la mise en œuvre suppose un renversement révolutionnaire dont les conditions et étapes ne sont pas spécifiées.",
+          "source_refs": [],
+          "supported_by": ["claude-opus-4.7", "deepseek-expert-thinking", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        }
+      ],
+      "problems_worsened": [
+        {
+          "problem": "Compatibilité avec le cadre juridique et financier européen",
+          "mechanism": "L'expropriation sans indemnité du secteur bancaire et industriel viole les principes fondamentaux du marché intérieur et de la libre circulation des capitaux ; déclencherait des procédures d'infraction immédiates et des sanctions financières lourdes que le programme ne traite pas.",
+          "severity": 0.85,
+          "source_refs": ["sources.md#iv-nationalisations-et-economie", "sources.md#xi-union-europeenne"],
+          "reasoning": "Les modèles convergent sur le mécanisme : la rupture est revendiquée, donc l'incompatibilité juridique européenne est intrinsèque à la trajectoire choisie, pas un effet de bord.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        }
+      ],
+      "execution_risks": [
+        {
+          "risk": "Fuite des capitaux et crise de refinancement souverain",
+          "probability": 0.8,
+          "severity": 0.85,
+          "reasoning": "L'annonce d'expropriation sans indemnité déclencherait un repricing immédiat du risque souverain, une fuite des capitaux non couverte par les contrôles annoncés et une difficulté de refinancement des engagements existants ; aucun outil de stabilisation prévu.",
+          "source_refs": ["sources.md#iv-nationalisations-et-economie"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["deepseek-expert-thinking"]
+        },
+        {
+          "risk": "Absence de mécanisme constitutionnel de mise en œuvre",
+          "probability": 0.9,
+          "severity": 0.7,
+          "reasoning": "Le programme refuse explicitement d'être appliqué par voie présidentielle ; aucune feuille de route institutionnelle n'est fournie, ce qui rend l'évaluation de la praticabilité politique impossible.",
+          "source_refs": ["sources.md#introduction"],
+          "supported_by": ["claude-opus-4.7", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "risk": "Sanctions et procédures d'infraction européennes",
+          "probability": 0.85,
+          "severity": 0.65,
+          "reasoning": "Expropriation sans indemnité, monopole sur le commerce extérieur et abolition TVA contreviennent aux règles fondamentales du marché unique ; sanctions financières et gel de fonds européens probables.",
+          "source_refs": ["sources.md#xi-union-europeenne"],
+          "supported_by": ["chatgpt-5.5-thinking-extended", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": []
+        }
+      ],
+      "key_measures": [
+        {
+          "measure": "Indexation automatique des salaires, retraites, pensions et minima sociaux sur la hausse réelle des prix (échelle mobile) ; minimum revendiqué 2 000 € net (2022)",
+          "source_ref": "sources.md#i-salaires-emploi-et-conditions-de-travail",
+          "quantified": true,
+          "magnitude": "2 000 € net (2022), supérieur aujourd'hui",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Interdiction des licenciements dans toute entreprise bénéficiaire ou versant des dividendes",
+          "source_ref": "sources.md#i-salaires-emploi-et-conditions-de-travail",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "Expropriation sans rachat ni indemnité des banques et des grands groupes capitalistes ; service public bancaire unique ; monopole public du commerce extérieur",
+          "source_ref": "sources.md#iv-nationalisations-et-economie",
+          "quantified": false,
+          "magnitude": null,
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": []
+        },
+        {
+          "measure": "IS minimum 50 % pour les grands groupes ; suppression progressive de la TVA ; fin des aides publiques sans contrepartie (CICE, CIR détourné)",
+          "source_ref": "sources.md#iv-nationalisations-et-economie",
+          "quantified": true,
+          "magnitude": "IS ≥ 50 %",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+          "dissenters": ["mistral-thinking"]
+        }
+      ],
+      "risk_profile": {
+        "budgetary": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Hausse récurrente massive de la dépense publique (services publics, retraites, embauches) sans solde modélisé ; financement adossé à une expropriation et une rupture monétaire-fiscale dont les rendements ne sont pas démontrés.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Hausse durable de la dépense sans cadre budgétaire chiffré." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Expansion fiscale massive (services, retraites, embauches massives) sans bilan budgétaire publié." },
+            { "model": "deepseek-expert-thinking", "level": "high", "note": "Recettes attendues du capital exproprié ; aucun modèle macro publié." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Hypothèses très lourdes sur les recettes du capital ; absence d'analyse de transition." },
+            { "model": "mistral-thinking", "level": "high", "note": "Aucune trajectoire fiscale, aucun chiffrage agrégé — soutenabilité indéterminable." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Suppression TVA et embauches massives sans arithmétique de bouclage." }
+          ]
+        },
+        "implementation": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Expropriation sans indemnité, monopole bancaire public, planification de la production et embauches massives simultanées exigent une capacité administrative incompatible avec l'État existant. LO l'admet : la mise en œuvre suppose un renversement, non une réforme.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Restructuration administrative complète." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Aucune feuille de route institutionnelle dans le cadre Vᵉ République." },
+            { "model": "deepseek-expert-thinking", "level": "high", "note": "Mise en œuvre par renversement révolutionnaire, hors cadre constitutionnel." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Démantèlement institutionnel complet préalable." },
+            { "model": "mistral-thinking", "level": "high", "note": "Aucun mécanisme institutionnel concret de mise en œuvre." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Réquisitions, expropriation et planification simultanées dépassent toute capacité administrative existante." }
+          ]
+        },
+        "dependency": {
+          "modal_level": "high",
+          "level_interval": ["high", "high"],
+          "note": "Mise en œuvre conditionnée à un soulèvement de la classe ouvrière revendiqué comme préalable politique ; sans cela, le programme reste, par construction, non appliqué. Forte dépendance également à la rupture juridique avec l'UE.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+          "dissenters": [],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "high", "note": "Dépend d'une rupture institutionnelle et internationale." },
+            { "model": "claude-opus-4.7", "level": "high", "note": "Dépendance assumée à un renversement révolutionnaire ; absence d'alternative institutionnelle." },
+            { "model": "deepseek-expert-thinking", "level": "high", "note": "Conditionné à la révolution prolétarienne ; dépendance maximale." },
+            { "model": "gemini-3-pro", "level": "high", "note": "Dépend du démantèlement préalable du cadre Vᵉ République et UE." },
+            { "model": "mistral-thinking", "level": "high", "note": "Dépendance entière à un soulèvement révolutionnaire non programmable." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "high", "note": "Repose sur l'auto-organisation ouvrière comme préalable de mise en œuvre." }
+          ]
+        },
+        "reversibility": {
+          "modal_level": "low",
+          "level_interval": ["low", "limited"],
+          "note": "Expropriation sans indemnité et abolition TVA seraient extrêmement coûteuses à défaire ; les nationalisations bancaires et industrielles, accompagnées de la rupture avec l'UE, créeraient une trajectoire institutionnelle difficilement réversible par une majorité ultérieure.",
+          "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "mistral-thinking"],
+          "dissenters": ["qwen3.6-max-preview-thinking"],
+          "per_model": [
+            { "model": "chatgpt-5.5-thinking-extended", "level": "low", "note": "Réversibilité très limitée des expropriations sans indemnité." },
+            { "model": "claude-opus-4.7", "level": "low", "note": "Expropriation sans rachat et rupture avec l'UE difficiles à inverser." },
+            { "model": "deepseek-expert-thinking", "level": "low", "note": "Mesures révolutionnaires par construction non réformables." },
+            { "model": "gemini-3-pro", "level": "limited", "note": "Démantèlement Vᵉ République crée une trajectoire alternative durable." },
+            { "model": "mistral-thinking", "level": "low", "note": "Renversement institutionnel par construction non réformable." },
+            { "model": "qwen3.6-max-preview-thinking", "level": "limited", "note": "Outils fiscaux et SMIC amendables ; expropriation difficilement réversible." }
+          ]
+        }
+      },
+      "confidence": 0.65
+    }
+  }
+}

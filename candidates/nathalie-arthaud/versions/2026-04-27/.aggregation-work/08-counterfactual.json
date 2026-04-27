@@ -1,0 +1,133 @@
+{
+  "counterfactual": {
+    "status_quo_trajectory": "Sous le scénario de continuation, la France poursuit la trajectoire en cours : retraites repoussées, déficit social aggravé, déréglementation graduelle du marché du travail, financiarisation accentuée, précarisation de l'emploi non qualifié, tension persistante sur le pouvoir d'achat des classes populaires, accentuation des inégalités intergénérationnelles (logement, retraites, dette environnementale léguée), érosion progressive des services publics, intégration européenne et OTAN comme cadres structurants de la politique étrangère.",
+    "does_program_change_trajectory": true,
+    "direction_of_change": "mixed",
+    "dimensions_changed": [
+      "economic_fiscal",
+      "social_demographic",
+      "security_sovereignty",
+      "institutional_democratic",
+      "environmental_long_term"
+    ],
+    "dimensions_unchanged": [],
+    "reasoning": "Le programme propose une rupture systémique articulée (expropriation sans rachat, indexation automatique, retraite à 60 ans avec 37,5 annuités, sortie OTAN, refus du remboursement de la dette publique, refus du présidentialisme) qui modifierait la trajectoire sur les cinq dimensions analysées. La direction du changement est jugée « mixte » par cinq des six modèles : positive pour les classes populaires et les bénéficiaires immédiats des mesures sociales et redistributives, négative pour la stabilité institutionnelle, financière et diplomatique en l'absence de doctrine de transition. Le facteur déterminant est la dépendance entière du programme à un « soulèvement révolutionnaire » revendiqué : si la rupture systémique advient, le dispositif est cohérent en ses propres termes ; si elle n'advient pas, les mesures phares restent essentiellement déclaratives et la trajectoire effective serait peu modifiée par rapport au statu quo. Le caractère testimonial assumé de la candidature (« campagne de classe ») rend l'évaluation contrefactuelle structurellement difficile : le programme refuse la posture du gouvernement applicable depuis l'Élysée.",
+    "confidence": 0.6,
+    "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+    "dissenters": ["mistral-thinking"]
+  },
+  "unsolved_problems": [
+    {
+      "problem": "Mécanisme actuariel de financement des retraites pleines à 60 ans / 37,5 annuités",
+      "why_unsolved": "Le programme garantit la retraite à 60 ans avec 37,5 annuités et l'indexation pleine sans présenter de mécanisme actuariel de financement (taux de cotisation, ratio démographique cible, équilibre du régime), renvoyant la soutenabilité à l'expropriation et au refus de remboursement de la dette publique.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#ii-retraites"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "problem": "Mécanique opérationnelle de l'expropriation sans rachat et défense face aux réactions de marché",
+      "why_unsolved": "Le programme revendique l'expropriation sans rachat ni indemnité des grands groupes (banques, énergie, multinationales) sans préciser la procédure juridique (révision constitutionnelle, lois d'expropriation), la protection contre les fuites de capitaux ni les contre-mesures attendues des marchés et des partenaires.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#iv-nationalisations-et-economie"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "problem": "Doctrine de défense et architecture de sécurité collective après sortie de l'OTAN",
+      "why_unsolved": "La sortie immédiate de l'OTAN n'est pas accompagnée d'une doctrine de défense alternative (autonomie nationale, défense européenne, accords bilatéraux), ni d'une articulation avec la dissuasion nucléaire ou avec les engagements ONU.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#x-international-guerre-et-paix"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "problem": "Architecture institutionnelle post-rupture (parlement, exécutif, justice, contrôle constitutionnel)",
+      "why_unsolved": "La « société démocratique des travailleurs » revendiquée n'est pas spécifiée au plan institutionnel : aucune description de l'organisation des pouvoirs publics, du mode de désignation des représentants nationaux, ni de la séparation des pouvoirs.",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#i-positionnement-general-et-strategie"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "problem": "Cibles d'émissions et trajectoire énergétique long terme",
+      "why_unsolved": "Le programme rejette les taxes carbone et les marchés du carbone sans proposer de cibles d'émissions chiffrées, de calendrier de neutralité carbone, ni de stratégie sur le mix électrique (nucléaire, renouvelables).",
+      "severity_if_unsolved": "high",
+      "source_refs": ["sources.md#vii-environnement-et-transports"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "deepseek-expert-thinking", "gemini-3-pro", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["mistral-thinking"]
+    },
+    {
+      "problem": "Conflit constitutionnel des mesures phares non traité",
+      "why_unsolved": "Plusieurs mesures (expropriation sans indemnité, droit de vote des étrangers à toutes les élections, indexation forcée des salaires) entrent en tension directe avec la Constitution actuelle (articles 3, 17, 34) sans procédure de révision proposée.",
+      "severity_if_unsolved": "medium",
+      "source_refs": ["sources.md#iv-nationalisations-et-economie", "sources.md#vi-immigration-et-egalite-des-droits"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+      "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+    },
+    {
+      "problem": "Trajectoire de transition entre l'état actuel et la rupture revendiquée",
+      "why_unsolved": "Le programme repose sur un soulèvement collectif comme condition de mise en œuvre, sans préciser les étapes ni les leviers gouvernementaux mobilisables avant cette rupture.",
+      "severity_if_unsolved": "medium",
+      "source_refs": ["sources.md#i-positionnement-general-et-strategie"],
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    }
+  ],
+  "downside_scenarios": [
+    {
+      "scenario": "Fuite de capitaux et rupture financière à l'annonce d'expropriation sans rachat",
+      "trigger": "Annonce ou perception de l'imminence d'une expropriation sans rachat des grands groupes financiers et énergétiques.",
+      "probability": 0.85,
+      "severity": 0.85,
+      "reasoning": "L'absence de mécanisme de protection des capitaux et de coordination internationale rendrait quasi certaine une fuite massive et une rupture des marchés financiers, déclenchant à son tour des contre-mesures sur les paiements internationaux.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "scenario": "Sanctions UE et isolement diplomatique après sortie unilatérale OTAN + rupture commerciale",
+      "trigger": "Conjonction de la sortie OTAN, du refus de remboursement de la dette publique et de l'expropriation des grands groupes étrangers.",
+      "probability": 0.7,
+      "severity": 0.75,
+      "reasoning": "L'enchaînement de ruptures simultanées avec les principaux partenaires économiques et stratégiques exposerait le pays à des contre-mesures coordonnées (gel des avoirs, sanctions, suspension d'accords), sans que le programme propose de doctrine de réponse.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+      "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+    },
+    {
+      "scenario": "Blocage constitutionnel et juridiction supérieure des mesures phares",
+      "trigger": "Tentative de mise en œuvre de l'expropriation, de l'indexation forcée et du droit de vote universel sans révision constitutionnelle préalable.",
+      "probability": 0.85,
+      "severity": 0.65,
+      "reasoning": "Les principales mesures requièrent au minimum une révision constitutionnelle ; sans procédure proposée, leur mise en œuvre serait bloquée par le Conseil constitutionnel, le Conseil d'État et les juridictions européennes.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+      "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+    },
+    {
+      "scenario": "Tension sur l'offre de logement privé suite à la combinaison réquisition + gel des loyers",
+      "trigger": "Mise en œuvre simultanée du gel des loyers, de l'encadrement strict et de la réquisition des logements vacants sans plan public massif compensatoire opérationnel.",
+      "probability": 0.65,
+      "severity": 0.55,
+      "reasoning": "La sortie d'investisseurs privés sans rampe de montée en charge du logement social public produirait une contraction de l'offre, un report sur le parc social saturé et un effet pervers sur l'accès au logement à moyen terme.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking"],
+      "dissenters": ["deepseek-expert-thinking", "qwen3.6-max-preview-thinking"]
+    },
+    {
+      "scenario": "Échec du « plan B » faute de soulèvement collectif et retour aux contraintes du statu quo",
+      "trigger": "Absence de mobilisation populaire à l'échelle requise par le programme dans les premières années.",
+      "probability": 0.7,
+      "severity": 0.5,
+      "reasoning": "Le programme posant le « soulèvement » comme condition de réalisation, l'absence de cette dynamique laisserait l'administration face à des engagements non finançables, déclenchant un retour de fait à des arbitrages de gestion contraints.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    },
+    {
+      "scenario": "Vide de garantie de sécurité après sortie OTAN sans doctrine alternative",
+      "trigger": "Sortie effective de l'OTAN sans accord de défense alternatif négocié.",
+      "probability": 0.6,
+      "severity": 0.7,
+      "reasoning": "L'absence de doctrine de remplacement (autonomie, défense européenne, partenariats bilatéraux) exposerait la France à un vide de garantie de sécurité collective auquel le programme ne fournit pas de réponse opérationnelle.",
+      "supported_by": ["chatgpt-5.5-thinking-extended", "claude-opus-4.7", "gemini-3-pro", "mistral-thinking", "qwen3.6-max-preview-thinking"],
+      "dissenters": ["deepseek-expert-thinking"]
+    }
+  ]
+}

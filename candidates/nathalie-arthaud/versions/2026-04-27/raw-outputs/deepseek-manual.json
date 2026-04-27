@@ -3,8 +3,8 @@
   "candidate_id": "nathalie-arthaud",
   "version_date": "2026-04-27",
   "model": {
-    "provider": "anthropic",
-    "version": "claude-opus-4-7"
+    "provider": "deepseek",
+    "version": "deepseek-expert-thinking"
   },
   "run_metadata": {
     "run_at": "2026-04-27T12:00:00Z",
